@@ -10,3 +10,7 @@ The root [README](../README.md) makes the product argument. The root [PROCESS](.
 - [Storage ADR](decisions/001-storage-and-deployment.md), [shared-state ADR](decisions/002-shared-state.md), [media ADR](decisions/003-media-and-voice.md): retrospective alternatives and costs.
 
 The [earlier README](archive/README-before-portfolio.md), [development log](archive/PROCESS-development-log.md) and [original Crit 8 text](archive/crit-8-original.md) are preserved as historical material. Their feature counts, provisional identity model and technical claims may be superseded. They are not the current submission account.
+
+## Watch-room feedback
+
+See [FEEDBACK.md](FEEDBACK.md) for the 3 October sharing/playback repair, failure cases, browser checks and limits.
