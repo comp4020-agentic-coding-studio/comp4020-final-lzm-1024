@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-02",
+  "fixturePosters": 1000,
+  "identicalDisplayText": true,
+  "reference": {
+    "samples": 20,
+    "p50ms": 219.67,
+    "p95ms": 298.2
+  },
+  "optimized": {
+    "samples": 20,
+    "p50ms": 6.93,
+    "p95ms": 11.11
+  },
+  "guestModules": [
+    "app.js",
+    "canvas-model.js",
+    "chat-ui.js",
+    "chat.js",
+    "email-utils.js",
+    "event-utils.js",
+    "motion.js",
+    "photo-posters.js",
+    "poster-design.js",
+    "ui-utils.js"
+  ],
+  "deferredModules": [
+    "community.js",
+    "voice-calls.js",
+    "voice-transport.js"
+  ],
+  "deferredRawBytes": 62574,
+  "deferredEditorStylesheetBytes": 6393,
+  "notes": "CPU timing compares exact pre-change date calls with current formatters. Deferred module bytes use current source files and the eager-loading reference graph; they are not measured browser transfer bytes or load times."
+}

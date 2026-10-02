@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-02",
+  "runtime": "v24.18.0",
+  "environment": "Local Windows, isolated SQLite fixture, HTTP loopback",
+  "baseline": {
+    "label": "baseline",
+    "syntheticPosters": 1000,
+    "wall": {
+      "samples": 20,
+      "bytes": 684992,
+      "p50ms": 45.84,
+      "p95ms": 64.2
+    },
+    "filteredWall": {
+      "samples": 20,
+      "bytes": 645395,
+      "p50ms": 32.42,
+      "p95ms": 47.8
+    },
+    "clubs": {
+      "samples": 20,
+      "bytes": 3346,
+      "p50ms": 15.53,
+      "p95ms": 17.24
+    },
+    "asset": {
+      "samples": 20,
+      "bytes": 55637,
+      "p50ms": 14.99,
+      "p95ms": 16.61,
+      "compressedEncoding": null,
+      "compressedBytes": null,
+      "conditionalStatus": 200
+    }
+  },
+  "optimized": {
+    "label": "final",
+    "syntheticPosters": 1000,
+    "wall": {
+      "samples": 20,
+      "bytes": 685021,
+      "p50ms": 14.36,
+      "p95ms": 16.47
+    },
+    "filteredWall": {
+      "samples": 20,
+      "bytes": 645395,
+      "p50ms": 16,
+      "p95ms": 21
+    },
+    "clubs": {
+      "samples": 20,
+      "bytes": 3346,
+      "p50ms": 15.54,
+      "p95ms": 18.58
+    },
+    "asset": {
+      "samples": 20,
+      "bytes": 55916,
+      "p50ms": 15.34,
+      "p95ms": 17.86,
+      "compressedEncoding": "br",
+      "compressedBytes": 15989,
+      "conditionalStatus": 304
+    }
+  }
+}

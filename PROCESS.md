@@ -1,20 +1,43 @@
-# Process overview
+# CampusWall — process account
 
-<!-- TEMPLATE: replace everything in this file with your own account, this
-     comment included --- `pnpm check:evidence` fails while it's still here. -->
+> AI-assisted process account, grounded in the working tree and recorded checks on 2 October 2026. The student must review the argument and personal attribution before submission. File references show the present implementation; they do not establish when a decision was made.
 
-How you got from the brief to the harness, agentic workflow and stack behind
-this app, told however suits the work. The
-[final project brief](https://comp.anu.edu.au/courses/comp4020-agentic-coding-studio/assessments/final-project/#what-you-submit)
-says what it covers and how long it runs.
+## From a feature request to a quality standard
 
-Markers follow the links you give them; they don't trawl the repo for evidence
-you didn't point at. A link to the record is one whose text is the commit hash,
-and it can sit anywhere in a sentence:
-[`a1b2c3d`](https://github.com/YOUR-ORG/YOUR-REPO/commit/a1b2c3d) for one
-commit, or
-[`a1b2c3d...e4f5a6b`](https://github.com/YOUR-ORG/YOUR-REPO/compare/a1b2c3d...e4f5a6b)
-for a range.
+CampusWall developed from a campus poster tool into a place where students discover an activity, contact its organiser and coordinate with others. The important product distinction is between reading and contributing. Browsing a published wall needs no account; editing a private draft requires an authorised identity. That boundary gives the multi-user brief a concrete purpose: the same notice can be a public invitation and the product of private collaboration.
 
-`pnpm check:evidence` checks that this comment is gone and that every commit you
-link exists in this repo. Whether the account is any good is the marker's call.
+The [README](README.md) defines quality through approachable participation, dependable shared work and truthful feedback. Satyal's [small-web essay](https://neustadt.fr/essays/the-small-web/) supplies a useful alternative to engagement-led discovery. Its individual-site model does not settle permissions for a shared service, however. Campus separation, explicit publishing and source-labelled demonstrations are project decisions, translated into [CLAUDE.md](CLAUDE.md) and the [claim-to-check map](docs/CLAIMS.md). This makes the definition actionable without treating testable correctness as the whole of quality.
+
+## Why this stack fits the deployment
+
+The course provides one small Fly machine and one persistent volume. Node.js serves HTTP and browser modules, SQLite stores durable records beneath `/data`, and WebSockets deliver room updates. The choice avoids administering a separate database service. SQLite's [appropriate-use guidance](https://www.sqlite.org/whentouse.html) supports embedded application storage, but does not guarantee this application's capacity. Synchronous database calls and a single writer remain constraints; multiple application machines would require a different persistence and broadcast design.
+
+The earlier JSON pilot was inadequate for authenticated ownership, relational membership and concurrent writes. [Additive migrations](migrations/001-campuswall.sql) retain existing data rather than resetting it. [Initialization](initialize-database.mjs) applies thirteen migrations and preserves unassignable legacy drafts as archive records. Password hashes and session-token hashes replace browser-chosen identity. Smaller domain modules make private messaging, games, screenings and voice calls inspectable. [ADR 001](docs/decisions/001-storage-and-deployment.md) records the alternatives and costs of the current stack, retrospectively rather than claiming a contemporaneous decision record.
+
+## The agent workflow and its limits
+
+The visible working conversation contains concrete requests and corrections: campus-specific themes, direct organiser contact, fixed school affiliation, richer collaboration, and a player that unexpectedly paused. The agent investigated code, implemented changes, ran isolated checks and inspected actual browser states. [Curated prompts](docs/PROMPTS.md) retain selected user instructions and explain their consequences. They are excerpts from this conversation, not a fabricated complete transcript or evidence of unrecorded student reasoning.
+
+The useful control was a repeatable loop: identify the intended behaviour, locate its permission boundary, implement it, verify failure cases, then inspect the deployed result. Anthropic's [practitioner guidance](https://www.anthropic.com/engineering/building-effective-agents) recommends simple structures and environmental feedback; here that means executable tests and observed interfaces, not trust in a completion message. The same agent often wrote code and tests, so correlated blind spots remain. Tests were supplemented with server-rejected requests, independent clients, real media transport and browser interaction. Student judgement still has to decide whether the accumulated features support the central journey.
+
+## Corrections that changed the harness
+
+A school selector originally allowed signed-in students to browse and post elsewhere. The correction moved the boundary into both HTTP and WebSocket access, with immutable account affiliation and exact email-domain matching. [Campus tests](scripts/campus-access.integration.mjs) cover bypass attempts and migration; [email tests](scripts/email-campus.integration.mjs) reject lookalike domains. Hiding a selector alone would have left the underlying error intact.
+
+Whiteboard collaboration required operations rather than complete browser document replacements. Different objects and properties merge; conflicting properties follow server acceptance order. Expected-value undo guards protect intervening edits. [Whiteboard tests](scripts/whiteboard.integration.mjs) exercise two sockets, retries, revoked access and restarts. [ADR 002](docs/decisions/002-shared-state.md) explains why this bounded design was chosen over a full CRDT and acknowledges that it has no offline merge queue.
+
+An embedded YouTube Play action could disagree with the room's saved paused state, causing the sync loop to pause the video again. The correction publishes actual host actions while suppressing echoes from synchronisation commands. Buffering does not repeatedly seek the host. [Playback regressions](scripts/watch-player.test.mjs) exercise many timer ticks and delayed acknowledgements. This is evidence of a particular repair, not a guarantee about every provider or live-stream delay.
+
+Voice verification separates signalling from audio. Participant/device checks prevent another tab taking over, while ordered negotiation queues early ICE candidates. A [real WebRTC fixture](scripts/voice-audio.e2e.mjs) exchanges non-silent synthetic audio without recording a person's microphone. UI checks verify permission denial and late cancellation cleanup. TURN remains unconfigured; working signalling cannot establish that every campus firewall permits a call. [ADR 003](docs/decisions/003-media-and-voice.md) makes that limitation explicit.
+
+## Evidence of performance and usability
+
+The [performance record](data/PERFORMANCE.md) reports isolated loopback measurements: one-query poster lists, bounded statement reuse and compressed public assets reduce work without caching authorisation decisions. Those measurements are not production response-time promises. [Cache regressions](scripts/performance.test.mjs) ensure fresh writes and revoked permissions remain visible. Local screenshots show whiteboard collaboration, organiser discovery and the revised inbox. They use disposable fixtures, not a study with recruited students.
+
+The recorded full run passed TypeScript and nineteen top-level checks; nested scenarios use a different counting level. [Verification instructions](docs/VERIFICATION.md) explain how to reproduce the run. Readability, keyboard operation and usefulness need direct judgement, especially at both marking viewports. A beautiful interface and an absence of horizontal overflow do not establish accessibility compliance or social value.
+
+## What the record cannot prove yet
+
+The Git audit found only the [dcbb64f](https://github.com/comp4020-agentic-coding-studio/comp4020-final-lzm-1024/commit/dcbb64f80dbafbfd9e257526d37c155e7a9eb38c) initial commit. Application changes currently exist in the working tree. Therefore file references and archived deployment notes cannot substitute for the incremental commit trail the course requests. Creating retrospective commits would not recover missing history. Subsequent work should be committed when it occurs, with actual hashes cited after verification.
+
+The earlier [development log](docs/archive/PROCESS-development-log.md) remains available, labelled historical. The three reflections and research argument distinguish documented implementation from interpretations; they do not establish that future crit demonstrations or personal learning have already occurred. In particular, Crit 10's structured action logging and blind demonstration remain outstanding. The [submission checklist](docs/SUBMISSION.md) distinguishes working software, mechanical checks and evidence still requiring the student's own account.

@@ -1,0 +1,4589 @@
+{
+  "universityId": "unsw",
+  "sourceName": "Arc UNSW clubs directory",
+  "sourceUrl": "https://www.arc.unsw.edu.au/clubs/find-a-club",
+  "retrievedAt": "2026-10-01T09:17:20.166Z",
+  "embeddedUrl": "https://campus.hellorubric.com/search?country=AU&state=New+South+Wales&type=societies&universityid=5&iframe=true&showall=true&borderRadius=square&bodyFontFamily=Arial&headingFontFamily=Arial",
+  "clubs": [
+    {
+      "id": "arc-12416",
+      "universityId": "unsw",
+      "name": "180 Degrees Consulting",
+      "categories": [
+        "Professional & Networking"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12416",
+      "imageUrl": "https://graph.facebook.com/180DegreesConsultingUNSW/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12417",
+      "universityId": "unsw",
+      "name": "Accounting and Taxation Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12417",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/32e886e9-2a64-40d2-ad45-cecc38141b84.png"
+    },
+    {
+      "id": "arc-12418",
+      "universityId": "unsw",
+      "name": "Actuarial Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12418",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/73ebe9e0-ddc4-4b6d-bbce-71451199367f.png"
+    },
+    {
+      "id": "arc-6396",
+      "universityId": "unsw",
+      "name": "Adventist Students on Campus",
+      "categories": [
+        "Spirituality & Faith"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6396",
+      "imageUrl": "https://resources.getqpay.com/images/63b4df2ecc2fb_.png"
+    },
+    {
+      "id": "arc-12420",
+      "universityId": "unsw",
+      "name": "Adventure Society",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12420",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/5402ef93-130e-4008-b473-9b7241ed6d85.png"
+    },
+    {
+      "id": "arc-12421",
+      "universityId": "unsw",
+      "name": "Advertising & Public Relations Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12421",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/c4d10f96-451a-4d54-affc-33d35a81cb41.png"
+    },
+    {
+      "id": "arc-12422",
+      "universityId": "unsw",
+      "name": "Aerospace Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12422",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/56e8ec33-a63e-4a89-98d1-e9962cc88c15.png"
+    },
+    {
+      "id": "arc-6345",
+      "universityId": "unsw",
+      "name": "African Students Union",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6345",
+      "imageUrl": "https://resources.getqpay.com/images/63a1882b7fc23_.png"
+    },
+    {
+      "id": "arc-6363",
+      "universityId": "unsw",
+      "name": "AgriCycle UNSW",
+      "categories": [
+        "Technology & Projects"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6363",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/21b947bb-7371-4609-83a8-4271ea25a9f6.png"
+    },
+    {
+      "id": "arc-12424",
+      "universityId": "unsw",
+      "name": "AhlulBayt Islamic Society UNSW",
+      "categories": [
+        "Spirituality & Faith"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12424",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/5ed6150e-1627-4d4d-8bde-565570ae1464.png"
+    },
+    {
+      "id": "arc-12425",
+      "universityId": "unsw",
+      "name": "AIESEC",
+      "categories": [
+        "Professional & Networking"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12425",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/6155bb14-10e6-4e6f-bd65-8d2d33d9a172.png"
+    },
+    {
+      "id": "arc-4990",
+      "universityId": "unsw",
+      "name": "Albury Wodonga Medical Students' Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4990",
+      "imageUrl": "https://graph.facebook.com/UNSW.AWMSS/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-6942",
+      "universityId": "unsw",
+      "name": "Allied Health Society UNSW",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6942",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/7ad4736e-d3ea-4032-bb2e-a1bd7d768714.png"
+    },
+    {
+      "id": "arc-12428",
+      "universityId": "unsw",
+      "name": "Alt Protein Project",
+      "categories": [
+        "Charity & Social Impact"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12428",
+      "imageUrl": "https://graph.facebook.com/unswaltprotein/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12430",
+      "universityId": "unsw",
+      "name": "Alternative Investment Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12430",
+      "imageUrl": "https://graph.facebook.com/unswais/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12431",
+      "universityId": "unsw",
+      "name": "Ancient Languages & Culture Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12431",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/30398cd2-34da-41fb-a744-b3f4fce4c51e.png"
+    },
+    {
+      "id": "arc-12432",
+      "universityId": "unsw",
+      "name": "Anime UNSW",
+      "categories": [
+        "Games & Animation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12432",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/0661ae43-d5bd-4b2f-8fea-7598788acea2.png"
+    },
+    {
+      "id": "arc-12433",
+      "universityId": "unsw",
+      "name": "Anjali Tamil Society",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12433",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/e8b37e54-b685-41ea-940e-8aca7f388bae.png"
+    },
+    {
+      "id": "arc-12434",
+      "universityId": "unsw",
+      "name": "Antique Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12434",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/c161472b-661d-4423-942f-3b9a029ce361.png"
+    },
+    {
+      "id": "arc-12436",
+      "universityId": "unsw",
+      "name": "Arab Society",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12436",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/14a0ef9c-5f8f-411e-8f69-15a86ecc22dc.png"
+    },
+    {
+      "id": "arc-4754",
+      "universityId": "unsw",
+      "name": "Arc Canberra",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4754",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/97fa0016-c958-4e49-9317-231afe61c23a.png"
+    },
+    {
+      "id": "arc-11457",
+      "universityId": "unsw",
+      "name": "Arc Clubs Team",
+      "categories": [
+        "Charity & Social Impact"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=11457",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/7b5b7f9e-4104-41c2-9270-ddd4a2a9a06b.png"
+    },
+    {
+      "id": "arc-11602",
+      "universityId": "unsw",
+      "name": "Arc Sport Test",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=11602",
+      "imageUrl": ""
+    },
+    {
+      "id": "arc-15436",
+      "universityId": "unsw",
+      "name": "ArtBridge Curatorial Club",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15436",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/9515746f-3ebd-448d-9c4c-b008bd82245a.png"
+    },
+    {
+      "id": "arc-12437",
+      "universityId": "unsw",
+      "name": "Artificial Intelligence Society",
+      "categories": [
+        "Technology & Projects"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12437",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/999e9f39-2d18-4583-9d70-a927d5cfcf93.png"
+    },
+    {
+      "id": "arc-12438",
+      "universityId": "unsw",
+      "name": "Arts, Design & Architecture Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12438",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/48f7c0a6-1203-4680-8de1-941cb60ae3cf.png"
+    },
+    {
+      "id": "arc-12440",
+      "universityId": "unsw",
+      "name": "Asia Australia Youth Association UNSW",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12440",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/9066aab2-d7e8-4da2-b31b-176a38a704d3.png"
+    },
+    {
+      "id": "arc-14963",
+      "universityId": "unsw",
+      "name": "Asian Medical Students' Association",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14963",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/f74efa54-1dc1-4537-b4a8-40f351774258.png"
+    },
+    {
+      "id": "arc-14042",
+      "universityId": "unsw",
+      "name": "Asian Studies Association",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14042",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/dbc191f6-ed35-4d9f-9609-6456bdbbbbec.png"
+    },
+    {
+      "id": "arc-14001",
+      "universityId": "unsw",
+      "name": "Association of Population Health",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14001",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/230bc72e-bfbe-4203-bd93-24a99c06138b.png"
+    },
+    {
+      "id": "arc-12441",
+      "universityId": "unsw",
+      "name": "Assyrian Students' Association",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12441",
+      "imageUrl": "https://graph.facebook.com/asaunsw/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-14984",
+      "universityId": "unsw",
+      "name": "Astrobiology Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14984",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/9051f1a1-0cc5-4cf9-8f19-3d6ba473c3a7.png"
+    },
+    {
+      "id": "arc-15052",
+      "universityId": "unsw",
+      "name": "Astronomy Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15052",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/4d2dc166-d09f-44ed-ad18-8dc119320abd.png"
+    },
+    {
+      "id": "arc-12442",
+      "universityId": "unsw",
+      "name": "AtomCraft Society",
+      "categories": [
+        "Technology & Projects"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12442",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/6e6608b4-f78c-4f86-a465-f67156b340a0.png"
+    },
+    {
+      "id": "arc-12443",
+      "universityId": "unsw",
+      "name": "Australasian Union of Jewish Students",
+      "categories": [
+        "Spirituality & Faith"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12443",
+      "imageUrl": "https://graph.facebook.com/unswaujs/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12444",
+      "universityId": "unsw",
+      "name": "Australia Awards Scholars Society",
+      "categories": [
+        "Professional & Networking"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12444",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/848a4804-8bf3-4917-b065-fc1b0f147323.png"
+    },
+    {
+      "id": "arc-12653",
+      "universityId": "unsw",
+      "name": "Australia China Youth Association",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12653",
+      "imageUrl": "https://graph.facebook.com/acyaunsw/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12445",
+      "universityId": "unsw",
+      "name": "Australia-Japan Career Society",
+      "categories": [
+        "Professional & Networking"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12445",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/f7be387e-44a2-438f-86bc-b9fc1f8c6d25.png"
+    },
+    {
+      "id": "arc-12446",
+      "universityId": "unsw",
+      "name": "Australian Wall Street at UNSW",
+      "categories": [
+        "Professional & Networking"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12446",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/a7c78d56-458b-4e04-aab8-aa01d48fcc30.png"
+    },
+    {
+      "id": "arc-12447",
+      "universityId": "unsw",
+      "name": "Australian Youth Climate Coalition (AYCC) UNSW",
+      "categories": [
+        "Political"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12447",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/91dda346-55d3-4d33-b872-9c14779c6b56.png"
+    },
+    {
+      "id": "arc-12449",
+      "universityId": "unsw",
+      "name": "Barbell Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12449",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/03fb240b-43dd-43ff-8b4e-101a320d2aa2.png"
+    },
+    {
+      "id": "arc-13443",
+      "universityId": "unsw",
+      "name": "Barrels and Beyond",
+      "categories": [
+        "Food & Drink"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13443",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/0d8cfb27-7b82-4dc0-a12c-c4bf505f9c05.png"
+    },
+    {
+      "id": "arc-12450",
+      "universityId": "unsw",
+      "name": "Basser College",
+      "categories": [
+        "Residential"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12450",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/deeacc6a-b79e-4d81-952b-e89dc81d37a5.png"
+    },
+    {
+      "id": "arc-13447",
+      "universityId": "unsw",
+      "name": "Beverage Society",
+      "categories": [
+        "Food & Drink"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13447",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/6f2d59de-4e79-445c-b14e-9907698c760c.png"
+    },
+    {
+      "id": "arc-15426",
+      "universityId": "unsw",
+      "name": "Bhutanese Society",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15426",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/1d45aead-8094-479c-8fe9-9907226b218b.png"
+    },
+    {
+      "id": "arc-12455",
+      "universityId": "unsw",
+      "name": "Bioinformatics Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12455",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/75a25680-86c6-444d-919a-df10961e976d.png"
+    },
+    {
+      "id": "arc-12456",
+      "universityId": "unsw",
+      "name": "Biomedical Engineering Students' Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12456",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/8c66511b-7ff9-4f4d-ae97-fa9340d130a7.png"
+    },
+    {
+      "id": "arc-4865",
+      "universityId": "unsw",
+      "name": "Biotechnology and Biomolecular Sciences Student Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4865",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_4865.png"
+    },
+    {
+      "id": "arc-12458",
+      "universityId": "unsw",
+      "name": "Birds Observation Club",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12458",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/800a6c7a-6469-4c7b-bf1f-ffbeade693ed.png"
+    },
+    {
+      "id": "arc-12459",
+      "universityId": "unsw",
+      "name": "BITSA UNSW",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12459",
+      "imageUrl": "https://graph.facebook.com/unswissociety/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12461",
+      "universityId": "unsw",
+      "name": "Bluesat",
+      "categories": [
+        "Technology & Projects"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12461",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/49401952-0b8e-4b5c-8de3-04df81de60ed.png"
+    },
+    {
+      "id": "arc-14971",
+      "universityId": "unsw",
+      "name": "Boba Society UNSW",
+      "categories": [
+        "Food & Drink"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14971",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/79f42070-6f5f-485b-8a84-38a06f119a4c.png"
+    },
+    {
+      "id": "arc-12463",
+      "universityId": "unsw",
+      "name": "Bonding Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12463",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/b2308bf0-a258-4565-971b-e1c133615c97.png"
+    },
+    {
+      "id": "arc-14885",
+      "universityId": "unsw",
+      "name": "Bowling Society",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14885",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/6ee8457e-c682-47f5-8a78-0234b9ab7450.png"
+    },
+    {
+      "id": "arc-12465",
+      "universityId": "unsw",
+      "name": "Boys and Girls Love Media Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12465",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/317a8510-0aa8-4c6d-ae3e-ad46733f2665.png"
+    },
+    {
+      "id": "arc-13434",
+      "universityId": "unsw",
+      "name": "Brawl Stars Society",
+      "categories": [
+        "Games & Animation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13434",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/f5670f80-c7c9-4fc5-b95f-783ca5477fbb.png"
+    },
+    {
+      "id": "arc-157",
+      "universityId": "unsw",
+      "name": "Built Environment Student Association",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=157",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_157.png"
+    },
+    {
+      "id": "arc-12468",
+      "universityId": "unsw",
+      "name": "Business Analytics Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12468",
+      "imageUrl": "https://graph.facebook.com/UNSWBASOC/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12469",
+      "universityId": "unsw",
+      "name": "Business Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12469",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/58dd4a75-5819-4079-82c6-4e1f5cf748f6.png"
+    },
+    {
+      "id": "arc-14036",
+      "universityId": "unsw",
+      "name": "Business Sustainability and Social Impact Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14036",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/42f28605-2a63-431b-80cc-8dada0a0bfa3.png"
+    },
+    {
+      "id": "arc-12654",
+      "universityId": "unsw",
+      "name": "BusinessONE UNSW",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12654",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/d320ec5a-6069-4c9c-94ac-69e6a6ea19dd.png"
+    },
+    {
+      "id": "arc-12470",
+      "universityId": "unsw",
+      "name": "Calisthenics Society",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12470",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/c684dcf8-a56f-4991-8bab-954665606aa0.png"
+    },
+    {
+      "id": "arc-12471",
+      "universityId": "unsw",
+      "name": "Cambodian Society",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12471",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/cb582670-e5b6-430c-b264-cfde02be6995.png"
+    },
+    {
+      "id": "arc-12472",
+      "universityId": "unsw",
+      "name": "Campus Runners",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12472",
+      "imageUrl": "https://graph.facebook.com/unswrunsoc/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12473",
+      "universityId": "unsw",
+      "name": "Cantonese Christian Fellowship",
+      "categories": [
+        "Spirituality & Faith"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12473",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/c657f3ef-5460-4aeb-803a-5df1df6e9a1a.png"
+    },
+    {
+      "id": "arc-14061",
+      "universityId": "unsw",
+      "name": "Capital Markets Association",
+      "categories": [
+        "Professional & Networking"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14061",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/803affff-7b81-41d9-8906-2d220b2236a3.png"
+    },
+    {
+      "id": "arc-12474",
+      "universityId": "unsw",
+      "name": "Car Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12474",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/452c7973-86c5-4ac2-9e58-e82f3f0d76d2.png"
+    },
+    {
+      "id": "arc-12475",
+      "universityId": "unsw",
+      "name": "Cardiology Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12475",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/6ae4da1a-1aaf-47d1-bea6-9e3c21f06e0d.png"
+    },
+    {
+      "id": "arc-12477",
+      "universityId": "unsw",
+      "name": "Catholic Society",
+      "categories": [
+        "Spirituality & Faith"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12477",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/b9c34e34-064e-4fe7-b672-765374fb1bc3.png"
+    },
+    {
+      "id": "arc-13450",
+      "universityId": "unsw",
+      "name": "Chem E Car",
+      "categories": [
+        "Technology & Projects"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13450",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/46a80dbc-c7c0-4b48-83ac-425d0d83fceb.png"
+    },
+    {
+      "id": "arc-12480",
+      "universityId": "unsw",
+      "name": "Chinese Creative Arts Club",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12480",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/ab82177a-b60d-4f64-857e-e9c6958b79e4.png"
+    },
+    {
+      "id": "arc-12481",
+      "universityId": "unsw",
+      "name": "Chinese Debating Club",
+      "categories": [
+        "Professional & Networking"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12481",
+      "imageUrl": "https://graph.facebook.com/351286701702281/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12482",
+      "universityId": "unsw",
+      "name": "Chinese Musician Society",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12482",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/b6408a71-2678-4e80-bf30-aab792ec0086.png"
+    },
+    {
+      "id": "arc-12483",
+      "universityId": "unsw",
+      "name": "Chinese Student Association",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12483",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/fecf0bd5-2291-4296-811c-d4633209698b.png"
+    },
+    {
+      "id": "arc-12485",
+      "universityId": "unsw",
+      "name": "Christian Union",
+      "categories": [
+        "Spirituality & Faith"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12485",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/50391a93-3391-43ee-8d6a-eebd3cb2400f.png"
+    },
+    {
+      "id": "arc-12486",
+      "universityId": "unsw",
+      "name": "Civil & Environmental Engineering Research Student Association",
+      "categories": [
+        "Postgraduate"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12486",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/3aa91033-b76f-4dab-b313-6d7e72ceb804.png"
+    },
+    {
+      "id": "arc-12655",
+      "universityId": "unsw",
+      "name": "Civil and Environmental Engineering Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12655",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/24d89345-bba9-4355-acc6-0c32ad660a89.png"
+    },
+    {
+      "id": "arc-12487",
+      "universityId": "unsw",
+      "name": "Civil and Environmental Postgraduate Coursework Association",
+      "categories": [
+        "Postgraduate"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12487",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/61f4f95d-7bcc-45c6-ac2b-b889acb9f2c5.png"
+    },
+    {
+      "id": "arc-13246",
+      "universityId": "unsw",
+      "name": "Clash Royale Society",
+      "categories": [
+        "Games & Animation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13246",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/bb91b924-a6ea-4647-9894-c42fb3005c50.png"
+    },
+    {
+      "id": "arc-12500",
+      "universityId": "unsw",
+      "name": "Co-op Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12500",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/2144ff63-d2fa-4f3a-bf42-56dcfdef40cc.png"
+    },
+    {
+      "id": "arc-13449",
+      "universityId": "unsw",
+      "name": "Cocktail Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13449",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/f2eebbb7-18b3-4d7a-b9ee-45e1d7ecdfa5.png"
+    },
+    {
+      "id": "arc-12491",
+      "universityId": "unsw",
+      "name": "Coffs Harbour Undergraduate Medical Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12491",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/d5289717-3126-45c6-b098-3f1870e24af1.png"
+    },
+    {
+      "id": "arc-14961",
+      "universityId": "unsw",
+      "name": "Coin Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14961",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/be9a0af6-d538-4fae-bda1-9983dafc1de9.png"
+    },
+    {
+      "id": "arc-12492",
+      "universityId": "unsw",
+      "name": "Collectibles Club",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12492",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/31ac54dc-a840-4f34-ae47-f3aacbb8fbf7.png"
+    },
+    {
+      "id": "arc-12493",
+      "universityId": "unsw",
+      "name": "Colombo House Residents Club",
+      "categories": [
+        "Residential"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12493",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/7904d423-737a-4b37-9cd6-bf7953d6666a.png"
+    },
+    {
+      "id": "arc-12494",
+      "universityId": "unsw",
+      "name": "Commerce (International) Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12494",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/bafb0650-baed-495d-b9f5-9faeaa640e0a.png"
+    },
+    {
+      "id": "arc-12496",
+      "universityId": "unsw",
+      "name": "Comp Club",
+      "categories": [
+        "Technology & Projects"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12496",
+      "imageUrl": "https://graph.facebook.com/CompClubUNSW/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12495",
+      "universityId": "unsw",
+      "name": "Compassion UNSW",
+      "categories": [
+        "Charity & Social Impact"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12495",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/c5546de2-83dc-4e78-9f6a-8aeb5678f8aa.png"
+    },
+    {
+      "id": "arc-12497",
+      "universityId": "unsw",
+      "name": "Competitive Programming and Mathematics Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12497",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/3a217407-72cb-4106-b8a5-c3335dc8b570.png"
+    },
+    {
+      "id": "arc-15041",
+      "universityId": "unsw",
+      "name": "Computer Engineering Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15041",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/3f1c9adc-86f8-424b-b5ac-ad7b3f5c4a4b.png"
+    },
+    {
+      "id": "arc-12498",
+      "universityId": "unsw",
+      "name": "Computer Graphics Society",
+      "categories": [
+        "Technology & Projects"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12498",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/701c6132-7238-4362-9b0a-62e0c4beaf56.png"
+    },
+    {
+      "id": "arc-12499",
+      "universityId": "unsw",
+      "name": "Computer Science and Engineering Revue Society",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12499",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/d393022b-97e9-40b7-a4a0-c3d9418d8d3e.png"
+    },
+    {
+      "id": "arc-14944",
+      "universityId": "unsw",
+      "name": "Connect Society",
+      "categories": [
+        "Community & Inclusion"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14944",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/bfc4469b-0816-48db-a01d-995262319574.png"
+    },
+    {
+      "id": "arc-12501",
+      "universityId": "unsw",
+      "name": "Coptic Society",
+      "categories": [
+        "Spirituality & Faith"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12501",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/56ab30a3-b06c-4d81-bc3a-91a9c19ac9f5.png"
+    },
+    {
+      "id": "arc-11077",
+      "universityId": "unsw",
+      "name": "Craft Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=11077",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/008fc205-a9e8-49e1-b546-7b49de85165b.png"
+    },
+    {
+      "id": "arc-12502",
+      "universityId": "unsw",
+      "name": "CREATE NSW Inc.",
+      "categories": [
+        "Technology & Projects"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12502",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/d09676ce-e83e-43f3-97d8-873f1fb9162c.png"
+    },
+    {
+      "id": "arc-12503",
+      "universityId": "unsw",
+      "name": "Creston College Student Society",
+      "categories": [
+        "Residential"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12503",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/d7f83c50-dbc4-498e-9b95-19a83c265c9c.png"
+    },
+    {
+      "id": "arc-13593",
+      "universityId": "unsw",
+      "name": "Criminology Society",
+      "categories": [
+        "Professional & Networking"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13593",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/cdcb5c27-275f-4e45-836b-6571233d1118.png"
+    },
+    {
+      "id": "arc-12504",
+      "universityId": "unsw",
+      "name": "CSE Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12504",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/dbf2bcaa-a1e8-4e61-9246-1c3def3ca7e8.png"
+    },
+    {
+      "id": "arc-12505",
+      "universityId": "unsw",
+      "name": "CueSports Society",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12505",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/8bfb37c6-eddd-4dca-8450-372208362dec.png"
+    },
+    {
+      "id": "arc-12506",
+      "universityId": "unsw",
+      "name": "D2MG Hip Hop Society",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12506",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/741ee0dd-59d0-4047-b94a-8074d22eee84.png"
+    },
+    {
+      "id": "arc-12507",
+      "universityId": "unsw",
+      "name": "Daily Delight Disrupt",
+      "categories": [
+        "Charity & Social Impact"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12507",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/86eabb92-9af4-414c-b764-cebc30bb8516.png"
+    },
+    {
+      "id": "arc-12508",
+      "universityId": "unsw",
+      "name": "Data Science Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12508",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/1c91959c-ae72-4240-a9b3-a71c99ac6e97.png"
+    },
+    {
+      "id": "arc-14951",
+      "universityId": "unsw",
+      "name": "Day Trading Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14951",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/d8e7e0c0-981d-4423-84ff-61ca2793593b.png"
+    },
+    {
+      "id": "arc-12509",
+      "universityId": "unsw",
+      "name": "Debating Society",
+      "categories": [
+        "Professional & Networking"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12509",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/b2b9e35f-3574-4006-a46e-76ef33c45e74.png"
+    },
+    {
+      "id": "arc-13887",
+      "universityId": "unsw",
+      "name": "Defence Technologies Society",
+      "categories": [
+        "Technology & Projects"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13887",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/3f8c6db5-ae3e-4fbc-bba0-b21f4235e4eb.png"
+    },
+    {
+      "id": "arc-4986",
+      "universityId": "unsw",
+      "name": "Design Society UNSW",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4986",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/0a458b2a-1211-4020-922d-1f414bc9fae6.png"
+    },
+    {
+      "id": "arc-12511",
+      "universityId": "unsw",
+      "name": "Dessert and Street Food Society",
+      "categories": [
+        "Food & Drink"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12511",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/96d071d9-6a5b-4559-91ab-2903ea1422e8.png"
+    },
+    {
+      "id": "arc-14686",
+      "universityId": "unsw",
+      "name": "Diabolo Club",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14686",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/1262bbd5-bb9a-48c6-860f-a7cb16057d14.png"
+    },
+    {
+      "id": "arc-13325",
+      "universityId": "unsw",
+      "name": "Disability Inclusion and Accessibility Society",
+      "categories": [
+        "Community & Inclusion"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13325",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/1df0eee2-2dc8-488d-acb1-d37e6d0d67c0.png"
+    },
+    {
+      "id": "arc-12514",
+      "universityId": "unsw",
+      "name": "Dodgeball UNSW",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12514",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/5fcfb93a-68b3-44ef-9742-29b6e8ac1709.png"
+    },
+    {
+      "id": "arc-12515",
+      "universityId": "unsw",
+      "name": "Dog Appreciation Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12515",
+      "imageUrl": "https://graph.facebook.com/unswdogsoc/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-15007",
+      "universityId": "unsw",
+      "name": "Downhill Mountain Bike Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15007",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/9efdd386-8ed4-4882-9c96-bacb269ea0d7.png"
+    },
+    {
+      "id": "arc-4935",
+      "universityId": "unsw",
+      "name": "Drawing Society",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4935",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/507f58cc-c9bd-42ff-aa03-385a17620f67.png"
+    },
+    {
+      "id": "arc-14780",
+      "universityId": "unsw",
+      "name": "E-Commerce Society",
+      "categories": [
+        "Professional & Networking"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14780",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/c408b541-1dae-4e11-84db-6789d3ad356d.png"
+    },
+    {
+      "id": "arc-12517",
+      "universityId": "unsw",
+      "name": "Economics Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12517",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/d7d3bd39-02e9-4648-b367-f1f4c37fe749.png"
+    },
+    {
+      "id": "arc-12518",
+      "universityId": "unsw",
+      "name": "Education Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12518",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/ab14f021-ec42-49d2-acb7-848a15f77b0d.png"
+    },
+    {
+      "id": "arc-15954",
+      "universityId": "unsw",
+      "name": "Effective Altruism UNSW",
+      "categories": [
+        "Charity & Social Impact"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15954",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/5ad50269-8a9b-4c2e-8fb6-5569a352fe83.png"
+    },
+    {
+      "id": "arc-4180",
+      "universityId": "unsw",
+      "name": "Electrical Engineering & Telecommunications Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4180",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/f1a67172-d22d-4022-860a-e67fc6c0d0f4.png"
+    },
+    {
+      "id": "arc-12521",
+      "universityId": "unsw",
+      "name": "EMU Robotics",
+      "categories": [
+        "Technology & Projects"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12521",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/76ef3daa-1132-4310-8260-18fdba033122.png"
+    },
+    {
+      "id": "arc-12656",
+      "universityId": "unsw",
+      "name": "Enactus UNSW",
+      "categories": [
+        "Professional & Networking"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12656",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/b243f922-34ee-47f3-b212-54b4ae0d4521.png"
+    },
+    {
+      "id": "arc-14834",
+      "universityId": "unsw",
+      "name": "Engineering Project and Innovation Society",
+      "categories": [
+        "Technology & Projects"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14834",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/263533f8-5e3b-4585-ae9f-a007148786b9.png"
+    },
+    {
+      "id": "arc-1865",
+      "universityId": "unsw",
+      "name": "Engineers Without Borders UNSW",
+      "categories": [
+        "Charity & Social Impact"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1865",
+      "imageUrl": "https://graph.facebook.com/ewbunswchapter/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12523",
+      "universityId": "unsw",
+      "name": "English & Creative Writing Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12523",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/bd616dd0-7f5c-4b8b-9676-b0aac7221ef4.png"
+    },
+    {
+      "id": "arc-12524",
+      "universityId": "unsw",
+      "name": "Enrich Mandarin Bible Study",
+      "categories": [
+        "Spirituality & Faith"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12524",
+      "imageUrl": "https://graph.facebook.com/unsw.embs/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12525",
+      "universityId": "unsw",
+      "name": "Entrepreneurs' Society",
+      "categories": [
+        "Professional & Networking"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12525",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/800a869d-b29b-4d46-b3c3-c838b11fb119.png"
+    },
+    {
+      "id": "arc-12526",
+      "universityId": "unsw",
+      "name": "Environmental Management Club",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12526",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/f54a4480-c2b7-43d6-8299-607df1ffe5c0.png"
+    },
+    {
+      "id": "arc-13448",
+      "universityId": "unsw",
+      "name": "Esoteric Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13448",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/ec453746-69a6-48e8-9f9f-0ac45fafff05.png"
+    },
+    {
+      "id": "arc-12527",
+      "universityId": "unsw",
+      "name": "ESports Club",
+      "categories": [
+        "Games & Animation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12527",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/b2b0fd72-695a-49bf-b889-05311c55d3fd.png"
+    },
+    {
+      "id": "arc-12528",
+      "universityId": "unsw",
+      "name": "Exchange Society",
+      "categories": [
+        "Professional & Networking"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12528",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/7f85d9d6-d1f2-4c2e-b307-6f9b82652b60.png"
+    },
+    {
+      "id": "arc-12529",
+      "universityId": "unsw",
+      "name": "Exotic Beer Society",
+      "categories": [
+        "Food & Drink"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12529",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/4c218302-5de0-48da-8abf-985ba12f4e5f.png"
+    },
+    {
+      "id": "arc-12530",
+      "universityId": "unsw",
+      "name": "Faculty of Engineering Student Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12530",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/b71d220d-a2b1-42dd-aba2-e037efb77f9d.png"
+    },
+    {
+      "id": "arc-14149",
+      "universityId": "unsw",
+      "name": "Femboy Society",
+      "categories": [
+        "Community & Inclusion"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14149",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/f27f28dd-d995-46ec-bd0e-1df4c9a0b3d1.png"
+    },
+    {
+      "id": "arc-12532",
+      "universityId": "unsw",
+      "name": "Fig Tree Hall College",
+      "categories": [
+        "Residential"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12532",
+      "imageUrl": "https://graph.facebook.com/figtreehall/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12533",
+      "universityId": "unsw",
+      "name": "Fighting Games Society UNSW",
+      "categories": [
+        "Games & Animation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12533",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/947a853f-6506-47d4-be8e-1e774d82f300.png"
+    },
+    {
+      "id": "arc-12534",
+      "universityId": "unsw",
+      "name": "Filipino Students' Society",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12534",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/fccb949c-20e0-4af6-8c04-f2a92ae8fad9.png"
+    },
+    {
+      "id": "arc-12535",
+      "universityId": "unsw",
+      "name": "Film Production Society",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12535",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/1d3b2e8a-bfd6-4c86-987e-56d6349a8098.png"
+    },
+    {
+      "id": "arc-12537",
+      "universityId": "unsw",
+      "name": "Finance and Banking Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12537",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/541bb842-ba49-4418-a6a1-0d62b0942c62.png"
+    },
+    {
+      "id": "arc-12538",
+      "universityId": "unsw",
+      "name": "Financial Management Association of Australia",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12538",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/bc06ae29-8d8d-43de-88c5-6ae3dd961c78.png"
+    },
+    {
+      "id": "arc-12539",
+      "universityId": "unsw",
+      "name": "Financial Planning Student Group",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12539",
+      "imageUrl": "https://graph.facebook.com/FPSGUNSW/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12540",
+      "universityId": "unsw",
+      "name": "Financial Technology Society",
+      "categories": [
+        "Technology & Projects"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12540",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/785945eb-d99c-4acf-b411-4da78b295a3d.png"
+    },
+    {
+      "id": "arc-12543",
+      "universityId": "unsw",
+      "name": "First Nations Engineering and Science Society",
+      "categories": [
+        "Community & Inclusion"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12543",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/5f56b4b2-2da0-4e10-b8f4-e3f5ef94af5b.png"
+    },
+    {
+      "id": "arc-14921",
+      "universityId": "unsw",
+      "name": "Fishing Society UNSW",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14921",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/6a13dc7c-9702-4080-af6e-8eb2bb827c8a.png"
+    },
+    {
+      "id": "arc-12547",
+      "universityId": "unsw",
+      "name": "Fred Hollows Society",
+      "categories": [
+        "Charity & Social Impact"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12547",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/b414399c-c8e7-4a4b-8143-e25cf898f6e7.png"
+    },
+    {
+      "id": "arc-14855",
+      "universityId": "unsw",
+      "name": "French Society",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14855",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/89f0e165-b304-4f8e-886d-d86e281fafd1.png"
+    },
+    {
+      "id": "arc-15132",
+      "universityId": "unsw",
+      "name": "Fried Chicken Society",
+      "categories": [
+        "Food & Drink"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15132",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/bb1c9a14-87c3-4110-8d04-bbd8fefe2f54.png"
+    },
+    {
+      "id": "arc-14245",
+      "universityId": "unsw",
+      "name": "Froyo Society",
+      "categories": [
+        "Food & Drink"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14245",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/edb9c1a6-7c15-4cce-a05f-c8bbdcd8e96d.png"
+    },
+    {
+      "id": "arc-15061",
+      "universityId": "unsw",
+      "name": "Futures Society UNSW",
+      "categories": [
+        "Professional & Networking"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15061",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/6d0420ca-f909-4bfe-9d49-336eee9d721d.png"
+    },
+    {
+      "id": "arc-12549",
+      "universityId": "unsw",
+      "name": "Game Making Society",
+      "categories": [
+        "Technology & Projects"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12549",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/204eba9e-2480-4ea6-bec6-17469d114df6.png"
+    },
+    {
+      "id": "arc-12550",
+      "universityId": "unsw",
+      "name": "Game Theory Society",
+      "categories": [
+        "Professional & Networking"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12550",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/fff8610a-6fbe-438a-9829-d80248a05fc7.png"
+    },
+    {
+      "id": "arc-12551",
+      "universityId": "unsw",
+      "name": "General Practice Students' Network UNSW",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12551",
+      "imageUrl": "https://graph.facebook.com/gpsnunsw/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12552",
+      "universityId": "unsw",
+      "name": "Geoguessr Society",
+      "categories": [
+        "Games & Animation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12552",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/d71e746c-08a5-47f8-881a-65eb2d500f14.png"
+    },
+    {
+      "id": "arc-12553",
+      "universityId": "unsw",
+      "name": "Geoscience Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12553",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/1d1f83c5-0bab-4bfc-8175-32253c9c6bae.png"
+    },
+    {
+      "id": "arc-12555",
+      "universityId": "unsw",
+      "name": "Goldstein College",
+      "categories": [
+        "Residential"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12555",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/64db14a1-7f21-4e6f-9c7d-305f2ecbb40a.png"
+    },
+    {
+      "id": "arc-12556",
+      "universityId": "unsw",
+      "name": "Greens on Campus UNSW",
+      "categories": [
+        "Political"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12556",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/14912c6b-d137-47e3-b039-13e6219ff859.png"
+    },
+    {
+      "id": "arc-14106",
+      "universityId": "unsw",
+      "name": "H2 Engineering UNSW",
+      "categories": [
+        "Technology & Projects"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14106",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/a0626915-6ae2-48a0-9c89-999432785706.png"
+    },
+    {
+      "id": "arc-12557",
+      "universityId": "unsw",
+      "name": "Health Science Student Association",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12557",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/460f03eb-14f2-4e76-ab10-b92a7794ffd7.png"
+    },
+    {
+      "id": "arc-6348",
+      "universityId": "unsw",
+      "name": "Hillsong On Campus UNSW society",
+      "categories": [
+        "Spirituality & Faith"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6348",
+      "imageUrl": "https://resources.getqpay.com/images/63a2651626293_.png"
+    },
+    {
+      "id": "arc-12560",
+      "universityId": "unsw",
+      "name": "History Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12560",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/4923be48-3f8d-46e1-b5eb-95626d06ce52.png"
+    },
+    {
+      "id": "arc-12561",
+      "universityId": "unsw",
+      "name": "Hong Kong and Macau Medical Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12561",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/fe59adcd-f57b-4b10-a714-5130133ac9d7.png"
+    },
+    {
+      "id": "arc-12563",
+      "universityId": "unsw",
+      "name": "Hoyoverse Society",
+      "categories": [
+        "Games & Animation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12563",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/b73e833c-24a1-4be6-a011-8887e8bfb062.png"
+    },
+    {
+      "id": "arc-15883",
+      "universityId": "unsw",
+      "name": "Human Resources Student Association",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15883",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/967bb2ce-9e42-42a2-9eb9-7a9253682f34.png"
+    },
+    {
+      "id": "arc-12564",
+      "universityId": "unsw",
+      "name": "Ice Hockey Appreciation Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12564",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/7cfe02ef-d5d1-4723-9c0f-bb6a6aed3674.png"
+    },
+    {
+      "id": "arc-15875",
+      "universityId": "unsw",
+      "name": "Indie Games Society",
+      "categories": [
+        "Games & Animation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15875",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/f4657ee2-697f-48fc-a7e7-824186e3ed5f.png"
+    },
+    {
+      "id": "arc-12566",
+      "universityId": "unsw",
+      "name": "Indonesian Students Association",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12566",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/70412f61-0bb9-4dcd-b866-37765c078b64.png"
+    },
+    {
+      "id": "arc-12569",
+      "universityId": "unsw",
+      "name": "International House Residents' Society",
+      "categories": [
+        "Residential"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12569",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/f01ea8a7-c0ea-4118-a6e2-631882948cbf.png"
+    },
+    {
+      "id": "arc-12570",
+      "universityId": "unsw",
+      "name": "International Law Students Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12570",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/fe70f0b7-8b2f-4204-9b46-84dd863b5e13.png"
+    },
+    {
+      "id": "arc-13444",
+      "universityId": "unsw",
+      "name": "International Psychology Students Association",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13444",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/290520f7-ed88-4fbb-b568-ad2a53dc0169.png"
+    },
+    {
+      "id": "arc-12571",
+      "universityId": "unsw",
+      "name": "International Students Association",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12571",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/b4ccc817-cbe1-4b09-8c76-01e788792061.png"
+    },
+    {
+      "id": "arc-12572",
+      "universityId": "unsw",
+      "name": "Investing for Charity",
+      "categories": [
+        "Charity & Social Impact"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12572",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/830b5f86-af1a-4f5a-9553-c6677a6e11c6.png"
+    },
+    {
+      "id": "arc-12573",
+      "universityId": "unsw",
+      "name": "Iranian Student Association",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12573",
+      "imageUrl": "https://graph.facebook.com/IransaSydney/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12574",
+      "universityId": "unsw",
+      "name": "ISOC Students",
+      "categories": [
+        "Spirituality & Faith"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12574",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/1ffa24ab-ec73-4b7e-a797-45b6ec28a7d5.png"
+    },
+    {
+      "id": "arc-12575",
+      "universityId": "unsw",
+      "name": "Jam In A Jar Charity Concert",
+      "categories": [
+        "Charity & Social Impact"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12575",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/8af17526-1b8c-426f-b026-b42e1d009072.png"
+    },
+    {
+      "id": "arc-12576",
+      "universityId": "unsw",
+      "name": "Journal Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12576",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/db72e5a4-e0da-4c5f-836d-fed44b79e605.png"
+    },
+    {
+      "id": "arc-12579",
+      "universityId": "unsw",
+      "name": "Kabaddi Society",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12579",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/6f065830-ed20-471d-aa5a-8c48bc5bb562.png"
+    },
+    {
+      "id": "arc-13441",
+      "universityId": "unsw",
+      "name": "Kannada Society",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13441",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/609418fc-f127-400a-a096-d57fd0e789fe.png"
+    },
+    {
+      "id": "arc-12581",
+      "universityId": "unsw",
+      "name": "KDrama Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12581",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/47c5e0d2-f796-4d6b-adba-9128e7f68f54.png"
+    },
+    {
+      "id": "arc-12584",
+      "universityId": "unsw",
+      "name": "Labor Club",
+      "categories": [
+        "Political"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12584",
+      "imageUrl": "https://graph.facebook.com/UNSWLaborclub/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-182",
+      "universityId": "unsw",
+      "name": "Latin Dance Society UNSW",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=182",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/00181821-e1af-4251-9d10-71afd58270e3.png"
+    },
+    {
+      "id": "arc-12587",
+      "universityId": "unsw",
+      "name": "Law Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12587",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/6dcced87-d939-4e47-bcaa-1d4fc99dbea6.png"
+    },
+    {
+      "id": "arc-12588",
+      "universityId": "unsw",
+      "name": "Left Students Society",
+      "categories": [
+        "Political"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12588",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/bfa6cbe1-ed67-448f-b201-72af3cde849d.png"
+    },
+    {
+      "id": "arc-12589",
+      "universityId": "unsw",
+      "name": "Legends of the Three Kingdoms",
+      "categories": [
+        "Games & Animation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12589",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/82260e0f-a157-47f0-8705-26b4b5f8858b.png"
+    },
+    {
+      "id": "arc-12590",
+      "universityId": "unsw",
+      "name": "Liberal Club",
+      "categories": [
+        "Political"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12590",
+      "imageUrl": "https://graph.facebook.com/UNSWLiberalClub/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12591",
+      "universityId": "unsw",
+      "name": "Linux Society",
+      "categories": [
+        "Technology & Projects"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12591",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/d19c05df-44a8-4213-a736-cd075324d788.png"
+    },
+    {
+      "id": "arc-12593",
+      "universityId": "unsw",
+      "name": "Little Sister, Big Sister",
+      "categories": [
+        "Community & Inclusion"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12593",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/ca59d56f-c733-4772-a0a4-6e1171d70b63.png"
+    },
+    {
+      "id": "arc-12594",
+      "universityId": "unsw",
+      "name": "lo-fi society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12594",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/2c2b888c-fb3e-47c1-a599-0794ea63ac61.png"
+    },
+    {
+      "id": "arc-14816",
+      "universityId": "unsw",
+      "name": "Lynx Racing UNSW",
+      "categories": [
+        "Technology & Projects"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14816",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/a058824a-983b-49b3-8d2e-9b68219ecc06.png"
+    },
+    {
+      "id": "arc-14139",
+      "universityId": "unsw",
+      "name": "Magic and Cardistry Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14139",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/ec4d3a2b-6c2a-492d-8be4-890898c92f4e.png"
+    },
+    {
+      "id": "arc-8420",
+      "universityId": "unsw",
+      "name": "Malaysian Students' Organisation",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=8420",
+      "imageUrl": "https://resources.getqpay.com/images/65d6f29f4d2a9_.png"
+    },
+    {
+      "id": "arc-12596",
+      "universityId": "unsw",
+      "name": "Marketing Analytics Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12596",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/05633729-b489-484a-828a-0de89f2a5602.png"
+    },
+    {
+      "id": "arc-2561",
+      "universityId": "unsw",
+      "name": "Marketing Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2561",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/5b6c6378-64d0-4550-b81c-da29d8417f24.png"
+    },
+    {
+      "id": "arc-13446",
+      "universityId": "unsw",
+      "name": "Masters of International Business Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13446",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/06697227-932e-48cf-93c5-904f67053daf.png"
+    },
+    {
+      "id": "arc-13442",
+      "universityId": "unsw",
+      "name": "Matcha Society",
+      "categories": [
+        "Food & Drink"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13442",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/0f11d4db-75de-40d3-b5b3-936d4198e7a9.png"
+    },
+    {
+      "id": "arc-12598",
+      "universityId": "unsw",
+      "name": "Materials Science and Engineering Postgraduate Society",
+      "categories": [
+        "Postgraduate"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12598",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/62ab9bb7-98ec-4756-be7b-dec219ff62e1.png"
+    },
+    {
+      "id": "arc-12599",
+      "universityId": "unsw",
+      "name": "Materials Science and Engineering Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12599",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/6bba0327-f51e-4f15-8f52-b6815dcf269a.png"
+    },
+    {
+      "id": "arc-12600",
+      "universityId": "unsw",
+      "name": "Mathematics Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12600",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/3670e7e4-fefe-4dac-8346-63f24c43e3c8.png"
+    },
+    {
+      "id": "arc-12601",
+      "universityId": "unsw",
+      "name": "Mature Age Students Society",
+      "categories": [
+        "Community & Inclusion"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12601",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/4ebb81cb-7fe1-4ecd-aa05-e3ed037b1c93.png"
+    },
+    {
+      "id": "arc-15072",
+      "universityId": "unsw",
+      "name": "Mechanical Engineering Postgraduate Society",
+      "categories": [
+        "Postgraduate"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15072",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/b10c223e-76d0-4490-be16-ff00a5abbf01.png"
+    },
+    {
+      "id": "arc-12602",
+      "universityId": "unsw",
+      "name": "Mechanical Keyboards Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12602",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/4be11e54-71fb-47d6-ad75-76b35442ca0f.png"
+    },
+    {
+      "id": "arc-12603",
+      "universityId": "unsw",
+      "name": "Media Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12603",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/92630303-cb89-4fb5-b0b2-4860a24f75b3.png"
+    },
+    {
+      "id": "arc-12604",
+      "universityId": "unsw",
+      "name": "Medical Outreachers Australia",
+      "categories": [
+        "Charity & Social Impact"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12604",
+      "imageUrl": "https://graph.facebook.com/medicaloutreachersaustralia/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-1760",
+      "universityId": "unsw",
+      "name": "Medical Science Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1760",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/47e3f66c-a95f-451c-accb-56b718ea5a1a.png"
+    },
+    {
+      "id": "arc-12606",
+      "universityId": "unsw",
+      "name": "Medical Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12606",
+      "imageUrl": "https://graph.facebook.com/unsw.medical.society/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12607",
+      "universityId": "unsw",
+      "name": "Medical Students' Aid Project",
+      "categories": [
+        "Charity & Social Impact"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12607",
+      "imageUrl": "https://graph.facebook.com/msapunsw/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-14238",
+      "universityId": "unsw",
+      "name": "Medshow UNSW",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14238",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/e2d08e05-8247-47a7-9073-e44bf511d970.png"
+    },
+    {
+      "id": "arc-15031",
+      "universityId": "unsw",
+      "name": "MEREly Researchers",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15031",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/7e80351f-4fd2-47eb-8cf5-31822d02c476.png"
+    },
+    {
+      "id": "arc-12609",
+      "universityId": "unsw",
+      "name": "Minecraft Society",
+      "categories": [
+        "Games & Animation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12609",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/1c152ef3-0bd5-4090-9d0b-415362e3ef76.png"
+    },
+    {
+      "id": "arc-12610",
+      "universityId": "unsw",
+      "name": "Minerals and Energy Resources Engineering Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12610",
+      "imageUrl": "https://graph.facebook.com/UNSWMERESOC/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12611",
+      "universityId": "unsw",
+      "name": "Ministry of Dance Society",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12611",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/b74dc318-8882-4ed2-a1f4-8b53480a329b.png"
+    },
+    {
+      "id": "arc-12613",
+      "universityId": "unsw",
+      "name": "Motorcycle Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12613",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/91b61cc2-4a75-41aa-9573-f3272996aa67.png"
+    },
+    {
+      "id": "arc-12614",
+      "universityId": "unsw",
+      "name": "Music Society of UNSW",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12614",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/001bdc01-6cf9-4dc8-8b0d-940ce1c19235.png"
+    },
+    {
+      "id": "arc-12615",
+      "universityId": "unsw",
+      "name": "Musical Theatre Society",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12615",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/520ca9f0-dc6f-4f3b-b2fd-11f7229b5c06.png"
+    },
+    {
+      "id": "arc-12616",
+      "universityId": "unsw",
+      "name": "Myanmar Students' Society",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12616",
+      "imageUrl": "https://graph.facebook.com/mssunsw/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12618",
+      "universityId": "unsw",
+      "name": "Neuroscience Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12618",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/49c014f7-96fd-497e-95e6-990feef62bee.png"
+    },
+    {
+      "id": "arc-12619",
+      "universityId": "unsw",
+      "name": "New College Student Association",
+      "categories": [
+        "Residential"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12619",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/c0a0aba3-bc46-461d-bc12-9a90684da6a7.png"
+    },
+    {
+      "id": "arc-12620",
+      "universityId": "unsw",
+      "name": "New South Wales Uni Theatrical Society",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12620",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/09bba1e4-fba9-4663-ba97-44228d2e07c4.png"
+    },
+    {
+      "id": "arc-12621",
+      "universityId": "unsw",
+      "name": "Nintendo Society",
+      "categories": [
+        "Games & Animation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12621",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/738e42e1-13a2-453b-aca6-d855ac75d94e.png"
+    },
+    {
+      "id": "arc-2089",
+      "universityId": "unsw",
+      "name": "Nippon Students Association",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2089",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/9ebf2f0e-9563-4078-ac1d-12a941122f76.png"
+    },
+    {
+      "id": "arc-14045",
+      "universityId": "unsw",
+      "name": "No-Code Society",
+      "categories": [
+        "Technology & Projects"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14045",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/549dd1d1-c162-4f4e-8fd0-7566044f7461.png"
+    },
+    {
+      "id": "arc-15075",
+      "universityId": "unsw",
+      "name": "North American Society (NAS)",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15075",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/78d49fa3-a506-49ba-8029-99287ce7501c.png"
+    },
+    {
+      "id": "arc-12624",
+      "universityId": "unsw",
+      "name": "Nutrition, Dietetics & Food Innovation Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12624",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/8a4846a5-b66f-4f2a-9863-0adcb745ee3e.png"
+    },
+    {
+      "id": "arc-13897",
+      "universityId": "unsw",
+      "name": "Omani Society",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13897",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/44bcf148-6f01-4fd1-8e12-2573fc52a2a6.png"
+    },
+    {
+      "id": "arc-12626",
+      "universityId": "unsw",
+      "name": "One Piece Society",
+      "categories": [
+        "Games & Animation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12626",
+      "imageUrl": "https://graph.facebook.com/onepiecesociety/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-918",
+      "universityId": "unsw",
+      "name": "Organisation of Planning Students",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=918",
+      "imageUrl": "https://graph.facebook.com/unswoops/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-6654",
+      "universityId": "unsw",
+      "name": "Overseas Christian Fellowship",
+      "categories": [
+        "Spirituality & Faith"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6654",
+      "imageUrl": "https://resources.getqpay.com/images/63e09366ab1a4_.png"
+    },
+    {
+      "id": "arc-16255",
+      "universityId": "unsw",
+      "name": "Paddington Campus Society",
+      "categories": [
+        "Community & Inclusion"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=16255",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/a123d8c8-483f-4780-aef7-ed3ddd68b960.png"
+    },
+    {
+      "id": "arc-16451",
+      "universityId": "unsw",
+      "name": "Parallel Press Club",
+      "categories": [
+        "Postgraduate"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=16451",
+      "imageUrl": ""
+    },
+    {
+      "id": "arc-12629",
+      "universityId": "unsw",
+      "name": "Pasifika Society",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12629",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/7d22f0cd-d9c5-4f5c-bf6d-0f137eafb31f.png"
+    },
+    {
+      "id": "arc-12631",
+      "universityId": "unsw",
+      "name": "PCSoc: Computers and Tech",
+      "categories": [
+        "Games & Animation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12631",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/f10d9132-2901-4193-9126-c53226a965f5.png"
+    },
+    {
+      "id": "arc-12632",
+      "universityId": "unsw",
+      "name": "Personal Finance Club",
+      "categories": [
+        "Professional & Networking"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12632",
+      "imageUrl": "https://graph.facebook.com/unswpfc/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12633",
+      "universityId": "unsw",
+      "name": "Personalised English Language Enhancement Society",
+      "categories": [
+        "Professional & Networking"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12633",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/2c3ccd7d-fc4c-40de-9ef7-256bcd232365.png"
+    },
+    {
+      "id": "arc-12657",
+      "universityId": "unsw",
+      "name": "Philip Baxter College",
+      "categories": [
+        "Residential"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12657",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/2f4d1dbe-0f87-4aa3-bd9d-7a26851fadf5.png"
+    },
+    {
+      "id": "arc-12637",
+      "universityId": "unsw",
+      "name": "Physiotherapy & Exercise Physiology Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12637",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/330d059a-840b-4e28-b3e8-346c2bb52931.png"
+    },
+    {
+      "id": "arc-12638",
+      "universityId": "unsw",
+      "name": "Piano Society UNSW",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12638",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/102c1333-17f2-44b3-b92a-7b8787da53b5.png"
+    },
+    {
+      "id": "arc-12639",
+      "universityId": "unsw",
+      "name": "Pickleball Society",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12639",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/694e7c88-5c55-4c64-87fe-bff35627ed03.png"
+    },
+    {
+      "id": "arc-12641",
+      "universityId": "unsw",
+      "name": "Plastic Model Kit Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12641",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/09c9f0bd-9300-423a-b45b-f821513a025a.png"
+    },
+    {
+      "id": "arc-12642",
+      "universityId": "unsw",
+      "name": "Pokemon Society",
+      "categories": [
+        "Games & Animation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12642",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/4ba2198a-cb01-49aa-93e5-c8f58e43fe95.png"
+    },
+    {
+      "id": "arc-10917",
+      "universityId": "unsw",
+      "name": "Poker Society UNSW",
+      "categories": [
+        "Games & Animation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=10917",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/2f31f220-548a-4dac-9bdc-4e82f14f05ee.png"
+    },
+    {
+      "id": "arc-4943",
+      "universityId": "unsw",
+      "name": "Politics, Philosophy, and Economics Society UNSW",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4943",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/e33e8dbf-cb42-4aeb-8a79-a59570f62960.png"
+    },
+    {
+      "id": "arc-12647",
+      "universityId": "unsw",
+      "name": "Postgraduate Business Society",
+      "categories": [
+        "Postgraduate"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12647",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/d8af4b50-81a9-49c7-aef4-d12dc2ac17f6.png"
+    },
+    {
+      "id": "arc-2206",
+      "universityId": "unsw",
+      "name": "Project Hope UNSW",
+      "categories": [
+        "Charity & Social Impact"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2206",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/284acad2-287f-4c1e-8a21-72fa3b7fde93.png"
+    },
+    {
+      "id": "arc-12652",
+      "universityId": "unsw",
+      "name": "Quadball Society",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12652",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/1b4d5a1a-e797-49f9-900f-037d7c4ea3d9.png"
+    },
+    {
+      "id": "arc-12658",
+      "universityId": "unsw",
+      "name": "Quantitative Finance and Trading Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12658",
+      "imageUrl": "https://graph.facebook.com/unswquantsoc/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12659",
+      "universityId": "unsw",
+      "name": "Quantum Engineering Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12659",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/c321b119-a67a-4303-9701-827608e25b78.png"
+    },
+    {
+      "id": "arc-12660",
+      "universityId": "unsw",
+      "name": "Queer Students in STEM",
+      "categories": [
+        "Community & Inclusion"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12660",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/f5d7b37c-b9dc-4547-adc0-c39d47965389.png"
+    },
+    {
+      "id": "arc-12662",
+      "universityId": "unsw",
+      "name": "Railway & Transit Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12662",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/b963bd77-13e6-4dd5-aef5-8142ed39cb1b.png"
+    },
+    {
+      "id": "arc-12663",
+      "universityId": "unsw",
+      "name": "Rap, R&B and Hip Hop Appreciation Society",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12663",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/b4a71db5-4069-455f-9db4-dc8376d6a0bb.png"
+    },
+    {
+      "id": "arc-12664",
+      "universityId": "unsw",
+      "name": "Real Estate Investment Student Association",
+      "categories": [
+        "Professional & Networking"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12664",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/4923c010-3593-4096-94ae-2bae3f5d8b47.png"
+    },
+    {
+      "id": "arc-12665",
+      "universityId": "unsw",
+      "name": "Real Estate Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12665",
+      "imageUrl": "https://graph.facebook.com/unswrealsoc/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12666",
+      "universityId": "unsw",
+      "name": "Redback Racing",
+      "categories": [
+        "Technology & Projects"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12666",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/4037235a-eb9b-4b46-97a6-7e0932304c6d.png"
+    },
+    {
+      "id": "arc-12667",
+      "universityId": "unsw",
+      "name": "Reformed Evangelical Fellowship",
+      "categories": [
+        "Spirituality & Faith"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12667",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/7340b00f-6834-4f48-b35a-8b0b46648166.png"
+    },
+    {
+      "id": "arc-12668",
+      "universityId": "unsw",
+      "name": "Rehabilitation Engineering Society",
+      "categories": [
+        "Charity & Social Impact"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12668",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/11477eb6-c62c-4941-9f01-2fb8a0c64f79.png"
+    },
+    {
+      "id": "arc-12669",
+      "universityId": "unsw",
+      "name": "Renewable Energy Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12669",
+      "imageUrl": "https://graph.facebook.com/RESOC.UNSW/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12670",
+      "universityId": "unsw",
+      "name": "Research Seminar Association",
+      "categories": [
+        "Professional & Networking"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12670",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/e1e417a4-07ce-415d-b0d1-2c385566be33.png"
+    },
+    {
+      "id": "arc-12671",
+      "universityId": "unsw",
+      "name": "Retro Games Society",
+      "categories": [
+        "Games & Animation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12671",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/fbe54601-c3ff-42ef-841a-558496232fba.png"
+    },
+    {
+      "id": "arc-15016",
+      "universityId": "unsw",
+      "name": "Revelations and Quests Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15016",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/af809b24-ec8b-41f5-a8e0-e7dd2b16ef89.png"
+    },
+    {
+      "id": "arc-12672",
+      "universityId": "unsw",
+      "name": "Rhythm Games Society",
+      "categories": [
+        "Games & Animation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12672",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/995fb3b9-c12f-45ba-b4e9-a9e777aca7cc.png"
+    },
+    {
+      "id": "arc-12674",
+      "universityId": "unsw",
+      "name": "Roblox Society",
+      "categories": [
+        "Games & Animation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12674",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/30ff2b1a-7add-4ea8-9c95-7661f0ee7d2d.png"
+    },
+    {
+      "id": "arc-12675",
+      "universityId": "unsw",
+      "name": "Robogals",
+      "categories": [
+        "Charity & Social Impact"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12675",
+      "imageUrl": "https://graph.facebook.com/robogalsunsw/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12676",
+      "universityId": "unsw",
+      "name": "Robotics and Mechatronics Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12676",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/d94a96dc-620d-4458-bc01-e070ac4eb6e8.png"
+    },
+    {
+      "id": "arc-12677",
+      "universityId": "unsw",
+      "name": "Rock Music Society",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12677",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/38a05213-538b-435d-ba53-091c5345b773.png"
+    },
+    {
+      "id": "arc-12678",
+      "universityId": "unsw",
+      "name": "Rocketry Society UNSW",
+      "categories": [
+        "Technology & Projects"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12678",
+      "imageUrl": "https://graph.facebook.com/UNSWRocketry/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12680",
+      "universityId": "unsw",
+      "name": "Rubik Society",
+      "categories": [
+        "Games & Animation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12680",
+      "imageUrl": "https://graph.facebook.com/UNSWRubikSoc/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12681",
+      "universityId": "unsw",
+      "name": "Rural Allied Health and Medical Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12681",
+      "imageUrl": "https://graph.facebook.com/rahmsunsw/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12683",
+      "universityId": "unsw",
+      "name": "Samuel Griffiths Society",
+      "categories": [
+        "Political"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12683",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/1edd38f7-f8e4-4dcf-b6f7-872b3d67fcd0.png"
+    },
+    {
+      "id": "arc-12684",
+      "universityId": "unsw",
+      "name": "Sanrio Lovers Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12684",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/fad4186e-ae20-4d6a-a857-f43c21c70dcd.png"
+    },
+    {
+      "id": "arc-14916",
+      "universityId": "unsw",
+      "name": "Saudi Student Association",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14916",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/72dabb3b-0e34-43a0-bd16-92e807a43432.png"
+    },
+    {
+      "id": "arc-6398",
+      "universityId": "unsw",
+      "name": "Save the Children Australia UNSW",
+      "categories": [
+        "Charity & Social Impact"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6398",
+      "imageUrl": "https://resources.getqpay.com/images/63b50fb6e2f2d_.png"
+    },
+    {
+      "id": "arc-12686",
+      "universityId": "unsw",
+      "name": "Security Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12686",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/9830cf02-17b2-412a-80ae-c88f2dd821f7.png"
+    },
+    {
+      "id": "arc-12687",
+      "universityId": "unsw",
+      "name": "SEGA Society",
+      "categories": [
+        "Games & Animation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12687",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/a94ff377-8fdb-4705-bed1-aa9f254befa5.png"
+    },
+    {
+      "id": "arc-12688",
+      "universityId": "unsw",
+      "name": "Shalom College Residents Society",
+      "categories": [
+        "Residential"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12688",
+      "imageUrl": "https://graph.facebook.com/shalom.college.unsw/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12689",
+      "universityId": "unsw",
+      "name": "Shark Tank Society",
+      "categories": [
+        "Professional & Networking"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12689",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/a0963be8-0301-46b3-9592-ed38fd8f3de4.png"
+    },
+    {
+      "id": "arc-15134",
+      "universityId": "unsw",
+      "name": "Side Quest UNSW",
+      "categories": [
+        "Community & Inclusion"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15134",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/1304f33a-c2ab-45f1-8b05-6f771c02c9a0.png"
+    },
+    {
+      "id": "arc-12692",
+      "universityId": "unsw",
+      "name": "Singapore Medical Society of UNSW",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12692",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/621cbc07-11f4-4502-a661-fa83d8f96e4c.png"
+    },
+    {
+      "id": "arc-12693",
+      "universityId": "unsw",
+      "name": "Singapore Students' Association",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12693",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/f2a94615-879c-4445-9588-61feefe2533e.png"
+    },
+    {
+      "id": "arc-12694",
+      "universityId": "unsw",
+      "name": "Skate Society",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12694",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/3a8c2095-44f9-4b5c-8a21-6fc67e79d899.png"
+    },
+    {
+      "id": "arc-12695",
+      "universityId": "unsw",
+      "name": "Skylabs UNSW",
+      "categories": [
+        "Technology & Projects"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12695",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/edf3434a-6e2b-4fa5-a78c-37788bd50f3f.png"
+    },
+    {
+      "id": "arc-12696",
+      "universityId": "unsw",
+      "name": "Slavic Society",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12696",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/d36f2041-9c1a-4a39-8abb-6c392bedf17f.png"
+    },
+    {
+      "id": "arc-12697",
+      "universityId": "unsw",
+      "name": "Smash Brothers",
+      "categories": [
+        "Games & Animation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12697",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/d1ee3f10-a6a0-473f-8803-4bcc597f0e34.png"
+    },
+    {
+      "id": "arc-12698",
+      "universityId": "unsw",
+      "name": "Social Cricket Society",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12698",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/e16520ed-6a1b-4c60-952f-25760d770076.png"
+    },
+    {
+      "id": "arc-14985",
+      "universityId": "unsw",
+      "name": "Social Football Society",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14985",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/7292c437-6632-4326-829d-b08131e5e6e1.png"
+    },
+    {
+      "id": "arc-12699",
+      "universityId": "unsw",
+      "name": "Social Sciences Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12699",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/1956054a-82ac-4a8b-bd98-38f251772899.png"
+    },
+    {
+      "id": "arc-12701",
+      "universityId": "unsw",
+      "name": "Society of Orchestra and Pipers",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12701",
+      "imageUrl": "https://graph.facebook.com/UNSWSOAP/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12702",
+      "universityId": "unsw",
+      "name": "Society of Telecommunications and Electrical Engineers for Postgraduates",
+      "categories": [
+        "Postgraduate"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12702",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/743ea1a3-83e0-43a4-a5f6-39957c3505a8.png"
+    },
+    {
+      "id": "arc-12703",
+      "universityId": "unsw",
+      "name": "Society of Vietnamese International Students at UNSW",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12703",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/7559148a-c5ef-4874-a086-42854bead500.png"
+    },
+    {
+      "id": "arc-12704",
+      "universityId": "unsw",
+      "name": "Socratic Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12704",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/e1b2a789-b9b3-4ce2-b552-b1ea405e7ae8.png"
+    },
+    {
+      "id": "arc-12705",
+      "universityId": "unsw",
+      "name": "SOFIA UNSW Orthodox Christian Fellowship",
+      "categories": [
+        "Spirituality & Faith"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12705",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/ee1079b0-9eb9-456f-9b1d-6c46164aa378.png"
+    },
+    {
+      "id": "arc-12706",
+      "universityId": "unsw",
+      "name": "Software Development Society (Dev Soc)",
+      "categories": [
+        "Technology & Projects"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12706",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/05d70f2b-eaf4-484f-a948-0e22c5d65162.png"
+    },
+    {
+      "id": "arc-14670",
+      "universityId": "unsw",
+      "name": "Souls Society",
+      "categories": [
+        "Games & Animation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14670",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/ba7abcc1-9cc4-4360-aa2e-603a24d2eb44.png"
+    },
+    {
+      "id": "arc-12707",
+      "universityId": "unsw",
+      "name": "Spanish & Latin American Society UNSW",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12707",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/50b31297-3b97-4d2d-bce2-7259d5f74f3a.png"
+    },
+    {
+      "id": "arc-13874",
+      "universityId": "unsw",
+      "name": "SpikeSoc (Roundnet)",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13874",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/35217b90-fe3d-46c5-ac50-ecfb651e30ca.png"
+    },
+    {
+      "id": "arc-12708",
+      "universityId": "unsw",
+      "name": "St John Ambulance Student Society",
+      "categories": [
+        "Charity & Social Impact"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12708",
+      "imageUrl": "https://graph.facebook.com/StJohnAmbulanceAustraliaUNSWDivision/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12709",
+      "universityId": "unsw",
+      "name": "Stand-Up Comedy Club",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12709",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/46e5c74d-0f44-449d-a383-3d28021c9e98.png"
+    },
+    {
+      "id": "arc-12710",
+      "universityId": "unsw",
+      "name": "StartUp Link",
+      "categories": [
+        "Technology & Projects"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12710",
+      "imageUrl": "https://graph.facebook.com/startuplinkunsw/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12712",
+      "universityId": "unsw",
+      "name": "Student Energy UNSW",
+      "categories": [
+        "Charity & Social Impact"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12712",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/3644afa7-d428-48b0-948f-d533ebc345f7.png"
+    },
+    {
+      "id": "arc-14197",
+      "universityId": "unsw",
+      "name": "Student Legal Education Group (SLEG)",
+      "categories": [
+        "Charity & Social Impact"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14197",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/56c9f75f-c987-4175-874d-d5ed03f1758e.png"
+    },
+    {
+      "id": "arc-12713",
+      "universityId": "unsw",
+      "name": "Student Outreach to the World",
+      "categories": [
+        "Spirituality & Faith"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12713",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/c9bc9ab3-3d02-488e-9fde-c89a7994b1d7.png"
+    },
+    {
+      "id": "arc-12714",
+      "universityId": "unsw",
+      "name": "Students for Palestine UNSW",
+      "categories": [
+        "Political"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12714",
+      "imageUrl": "https://graph.facebook.com/sfpunsw/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12715",
+      "universityId": "unsw",
+      "name": "Students of Chemistry Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12715",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/8887ad15-6af3-4e35-9a58-3bd51943e84e.png"
+    },
+    {
+      "id": "arc-15437",
+      "universityId": "unsw",
+      "name": "Students Of Korean Studies",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15437",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/824b63ed-2552-4b72-817d-6d972bee5902.png"
+    },
+    {
+      "id": "arc-3539",
+      "universityId": "unsw",
+      "name": "Surgical Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3539",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_3539.png"
+    },
+    {
+      "id": "arc-12717",
+      "universityId": "unsw",
+      "name": "Tabletop Games Society",
+      "categories": [
+        "Games & Animation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12717",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/f3613c22-a145-44da-87bb-fbb26268f0f8.png"
+    },
+    {
+      "id": "arc-12718",
+      "universityId": "unsw",
+      "name": "TEDxUNSW",
+      "categories": [
+        "Professional & Networking"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12718",
+      "imageUrl": "https://graph.facebook.com/TEDxUNSW/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12719",
+      "universityId": "unsw",
+      "name": "TeoChew Students Association",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12719",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/7cfabfdb-fed9-4020-8754-871290683811.png"
+    },
+    {
+      "id": "arc-8886",
+      "universityId": "unsw",
+      "name": "Thai Students Society",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=8886",
+      "imageUrl": "https://resources.getqpay.com/images/669f7a967e350_.png"
+    },
+    {
+      "id": "arc-12720",
+      "universityId": "unsw",
+      "name": "The New Zealand Society",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12720",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/bc00fb5a-270c-4362-ad05-a55d159db54f.png"
+    },
+    {
+      "id": "arc-15067",
+      "universityId": "unsw",
+      "name": "The Open Gavel Project Australia",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15067",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/450eb9d6-3418-452e-8fbc-5ac40b8762f8.png"
+    },
+    {
+      "id": "arc-4529",
+      "universityId": "unsw",
+      "name": "The School of Mechanical and Manufacturing Engineering Student Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4529",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/fbea50a1-36c8-408c-864f-a4f9ecc66aba.png"
+    },
+    {
+      "id": "arc-12721",
+      "universityId": "unsw",
+      "name": "The University of New South Wales Buddhist Society",
+      "categories": [
+        "Spirituality & Faith"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12721",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/33a3bfa2-783b-4bdd-84b1-4dd90b7e0141.png"
+    },
+    {
+      "id": "arc-12722",
+      "universityId": "unsw",
+      "name": "The Women in Electrical Engineering and Telecommunications",
+      "categories": [
+        "Community & Inclusion"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12722",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/b87ffc1f-cce9-4c43-b577-f3572bd08401.png"
+    },
+    {
+      "id": "arc-12725",
+      "universityId": "unsw",
+      "name": "Touhou Project Society",
+      "categories": [
+        "Games & Animation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12725",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/c8da0b0e-fd75-497d-a837-c760d621c316.png"
+    },
+    {
+      "id": "arc-15010",
+      "universityId": "unsw",
+      "name": "Trivia Society UNSW",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15010",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/7883326f-c410-43df-9849-0d7d1533ef94.png"
+    },
+    {
+      "id": "arc-12726",
+      "universityId": "unsw",
+      "name": "Turkish Society",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12726",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/5ece3d60-dee6-4f8c-afdb-e5d4084c0d49.png"
+    },
+    {
+      "id": "arc-12728",
+      "universityId": "unsw",
+      "name": "United Nations Society",
+      "categories": [
+        "Professional & Networking"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12728",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/d965ebb2-434b-4403-97cf-d2f0844d1710.png"
+    },
+    {
+      "id": "arc-12729",
+      "universityId": "unsw",
+      "name": "University Network for Cryptocurrency and Blockchain UNSW",
+      "categories": [
+        "Technology & Projects"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12729",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/4dede22a-2f5b-4a24-9ade-783b31431a1c.png"
+    },
+    {
+      "id": "arc-12730",
+      "universityId": "unsw",
+      "name": "University Network for Investing & Trading",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12730",
+      "imageUrl": "https://graph.facebook.com/UNIT.UNSW/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-13349",
+      "universityId": "unsw",
+      "name": "University of New South Wales AFL",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13349",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/78faba59-bbeb-4aac-b42f-8f40e3b3944b.png"
+    },
+    {
+      "id": "arc-15014",
+      "universityId": "unsw",
+      "name": "UNSW Aikido",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15014",
+      "imageUrl": "https://graph.facebook.com/AikidoUNSW/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12429",
+      "universityId": "unsw",
+      "name": "UNSW Alternative Fashion Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12429",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/d79f83b2-f893-4698-b424-e4d0e9fbef8b.png"
+    },
+    {
+      "id": "arc-3360",
+      "universityId": "unsw",
+      "name": "UNSW Archery Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3360",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/5ccf1d59-792f-4671-b60f-3429d58f43c6.png"
+    },
+    {
+      "id": "arc-868",
+      "universityId": "unsw",
+      "name": "UNSW Architecture Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=868",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/0a964bc9-4404-4bb2-996e-477b5c6162c9.png"
+    },
+    {
+      "id": "arc-6461",
+      "universityId": "unsw",
+      "name": "UNSW Asean society",
+      "categories": [
+        "Professional & Networking"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6461",
+      "imageUrl": "https://graph.facebook.com/ASEANSocUNSW/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12634",
+      "universityId": "unsw",
+      "name": "UNSW Association of Pharmacy Students",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12634",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/964a9725-aa1b-41ce-9700-3ada305d2986.png"
+    },
+    {
+      "id": "arc-14466",
+      "universityId": "unsw",
+      "name": "UNSW Athletics Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14466",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/ffdf15e2-c28e-4399-b7e9-785679ae0dcb.png"
+    },
+    {
+      "id": "arc-15921",
+      "universityId": "unsw",
+      "name": "UNSW Aussie Handball",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15921",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/99e6da4b-8de9-413e-a413-45c515fbaa47.png"
+    },
+    {
+      "id": "arc-586",
+      "universityId": "unsw",
+      "name": "UNSW Aviation Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=586",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/24159400-a42c-4d4f-8588-9d0306e29604.png"
+    },
+    {
+      "id": "arc-4372",
+      "universityId": "unsw",
+      "name": "UNSW Bangladeshi Society",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4372",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_4372.png"
+    },
+    {
+      "id": "arc-14250",
+      "universityId": "unsw",
+      "name": "UNSW Basketball Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14250",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/26248a5b-4d86-47f6-b88f-cf9d0b072bfe.png"
+    },
+    {
+      "id": "arc-12457",
+      "universityId": "unsw",
+      "name": "UNSW Biological and Ecological Sciences Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12457",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/8f073721-d54e-4d7e-a3b2-657d1bbf147c.png"
+    },
+    {
+      "id": "arc-12608",
+      "universityId": "unsw",
+      "name": "UNSW Bionic Heart (UBH)",
+      "categories": [
+        "Technology & Projects"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12608",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/2b6d749f-f5ee-420b-a1d3-85a6c59fa5ab.png"
+    },
+    {
+      "id": "arc-13951",
+      "universityId": "unsw",
+      "name": "UNSW Bloom Collective",
+      "categories": [
+        "Community & Inclusion"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13951",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/cc0aa30d-ba1c-4fd1-ad3e-0c5f64ef1353.png"
+    },
+    {
+      "id": "arc-4908",
+      "universityId": "unsw",
+      "name": "UNSW Bookworm Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4908",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/3d3ac9aa-d48e-42a8-b8ea-929619efb394.png"
+    },
+    {
+      "id": "arc-8625",
+      "universityId": "unsw",
+      "name": "UNSW Bouldering Society",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=8625",
+      "imageUrl": "https://resources.getqpay.com/images/660e210533ca0_.png"
+    },
+    {
+      "id": "arc-14633",
+      "universityId": "unsw",
+      "name": "UNSW Boxing & Muay Thai",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14633",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/01bde26c-69c5-426b-b38a-a077c557ede4.png"
+    },
+    {
+      "id": "arc-12733",
+      "universityId": "unsw",
+      "name": "UNSW Brazilian Jiu-Jitsu and Wrestling Society",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12733",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/55501335-2c45-4e4f-8962-c7b5ef7f91f1.png"
+    },
+    {
+      "id": "arc-12734",
+      "universityId": "unsw",
+      "name": "UNSW Bridge Society",
+      "categories": [
+        "Games & Animation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12734",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/8d3667e0-f47c-46ed-a123-f1463e98449d.png"
+    },
+    {
+      "id": "arc-6362",
+      "universityId": "unsw",
+      "name": "UNSW Cat Appreciation Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6362",
+      "imageUrl": "https://graph.facebook.com/unswcatsoc/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-3845",
+      "universityId": "unsw",
+      "name": "UNSW Cheer and Dance Society",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3845",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_3845.png"
+    },
+    {
+      "id": "arc-4599",
+      "universityId": "unsw",
+      "name": "UNSW Chemical Engineering Research Society",
+      "categories": [
+        "Postgraduate"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4599",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/9a3b6c3b-8a97-4bec-9125-98ef83adc1ff.png"
+    },
+    {
+      "id": "arc-613",
+      "universityId": "unsw",
+      "name": "UNSW Chemical Engineering Undergraduate Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=613",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_613.png"
+    },
+    {
+      "id": "arc-6344",
+      "universityId": "unsw",
+      "name": "UNSW Chess Club",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6344",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/e393e3dd-0d37-4904-8725-65e4aa85b4fe.png"
+    },
+    {
+      "id": "arc-12735",
+      "universityId": "unsw",
+      "name": "UNSW Christian Students",
+      "categories": [
+        "Spirituality & Faith"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12735",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/c6e01e65-3fef-45f1-99db-c96775456dc0.png"
+    },
+    {
+      "id": "arc-13937",
+      "universityId": "unsw",
+      "name": "UNSW Collegiate Sports Association",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13937",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/98a4b2a0-db84-43c8-be6b-f2e264e5959d.png"
+    },
+    {
+      "id": "arc-12737",
+      "universityId": "unsw",
+      "name": "UNSW Consulting Club",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12737",
+      "imageUrl": "https://graph.facebook.com/unswconsultingclub/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12738",
+      "universityId": "unsw",
+      "name": "UNSW Cooking Society",
+      "categories": [
+        "Food & Drink"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12738",
+      "imageUrl": "https://graph.facebook.com/unswcooksoc/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-14470",
+      "universityId": "unsw",
+      "name": "UNSW Cricket Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14470",
+      "imageUrl": ""
+    },
+    {
+      "id": "arc-14122",
+      "universityId": "unsw",
+      "name": "UNSW Cycling and Triathlon Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14122",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/b84bb893-e65b-4bb6-8985-0e5e4c3dba02.png"
+    },
+    {
+      "id": "arc-6334",
+      "universityId": "unsw",
+      "name": "UNSW Digital Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6334",
+      "imageUrl": "https://graph.facebook.com/unswdigitalsociety/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12739",
+      "universityId": "unsw",
+      "name": "UNSW European Society",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12739",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/ced6ff4f-2b62-4fc0-a6be-eecfdee239c6.png"
+    },
+    {
+      "id": "arc-4350",
+      "universityId": "unsw",
+      "name": "UNSW Fashion and Beauty Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4350",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/6877675b-ac23-41c2-9b33-5c8a40008cd6.png"
+    },
+    {
+      "id": "arc-13371",
+      "universityId": "unsw",
+      "name": "UNSW Fencing Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13371",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/b1db1132-f8d8-41e4-a705-d406b9441759.png"
+    },
+    {
+      "id": "arc-3869",
+      "universityId": "unsw",
+      "name": "UNSW Film Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3869",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/32698958-885a-42b0-a582-f07a569a35aa.png"
+    },
+    {
+      "id": "arc-12740",
+      "universityId": "unsw",
+      "name": "UNSW First Nations Business Society",
+      "categories": [
+        "Community & Inclusion"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12740",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/43522575-7f6d-4df9-8e9d-a639e5b95273.png"
+    },
+    {
+      "id": "arc-2718",
+      "universityId": "unsw",
+      "name": "UNSW Food For All",
+      "categories": [
+        "Charity & Social Impact"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2718",
+      "imageUrl": "https://graph.facebook.com/FFAUNSW/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-1829",
+      "universityId": "unsw",
+      "name": "UNSW Food Lovers Society",
+      "categories": [
+        "Food & Drink"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1829",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/746de00d-2601-4278-b764-e43b6c9fc1fd.png"
+    },
+    {
+      "id": "arc-855",
+      "universityId": "unsw",
+      "name": "UNSW Food Science Association",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=855",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/2ae023fc-0ebe-4cf3-90bb-c66a75766102.png"
+    },
+    {
+      "id": "arc-14148",
+      "universityId": "unsw",
+      "name": "UNSW Football Club Incorporated",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14148",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/0ad7c044-597a-418e-abf5-7690c12c9121.png"
+    },
+    {
+      "id": "arc-11310",
+      "universityId": "unsw",
+      "name": "UNSW Forex Association",
+      "categories": [
+        "Professional & Networking"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=11310",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/37569988-cd42-4bd2-bfcd-cc2aec2b8524.png"
+    },
+    {
+      "id": "arc-12548",
+      "universityId": "unsw",
+      "name": "UNSW Furry Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12548",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/6122f993-317f-4340-b65e-8a27d72eb179.png"
+    },
+    {
+      "id": "arc-6340",
+      "universityId": "unsw",
+      "name": "UNSW Giving Sight Society",
+      "categories": [
+        "Charity & Social Impact"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6340",
+      "imageUrl": "https://graph.facebook.com/givingsightunsw/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-15915",
+      "universityId": "unsw",
+      "name": "UNSW Go Soc",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15915",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/49a2efa4-ae6b-4430-baa6-33e04bd9f9e6.png"
+    },
+    {
+      "id": "arc-12741",
+      "universityId": "unsw",
+      "name": "UNSW Hall",
+      "categories": [
+        "Residential"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12741",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/0a249f72-1096-400f-893f-8fa9f2823d6b.png"
+    },
+    {
+      "id": "arc-14663",
+      "universityId": "unsw",
+      "name": "UNSW Hard Dance Society",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14663",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/91e17a8f-90bd-4dfc-ad41-967e4bfe17d3.png"
+    },
+    {
+      "id": "arc-380",
+      "universityId": "unsw",
+      "name": "UNSW Hellenic Society",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=380",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/529f4cee-331b-4e59-963a-f6336498be5d.png"
+    },
+    {
+      "id": "arc-4847",
+      "universityId": "unsw",
+      "name": "UNSW Hindu Society",
+      "categories": [
+        "Spirituality & Faith"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4847",
+      "imageUrl": "https://graph.facebook.com/UNSWHinduSoc/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-14135",
+      "universityId": "unsw",
+      "name": "UNSW Hockey Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14135",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/a2c9eeda-87fc-479b-ad49-9d084695e836.png"
+    },
+    {
+      "id": "arc-1127",
+      "universityId": "unsw",
+      "name": "UNSW Hong Kong Student Association",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1127",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/bd5bb6f7-281d-4d9d-a62f-21708cb4f4d3.png"
+    },
+    {
+      "id": "arc-12742",
+      "universityId": "unsw",
+      "name": "UNSW Honour of Kings Society",
+      "categories": [
+        "Games & Animation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12742",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/0ab6d5a3-0e4d-4d3e-81e3-286f95dad975.png"
+    },
+    {
+      "id": "arc-6369",
+      "universityId": "unsw",
+      "name": "UNSW Ice Skating Society",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6369",
+      "imageUrl": "https://resources.getqpay.com/images/63a58ece09cda_.png"
+    },
+    {
+      "id": "arc-1807",
+      "universityId": "unsw",
+      "name": "UNSW Indian Society",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1807",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_1807.png"
+    },
+    {
+      "id": "arc-15019",
+      "universityId": "unsw",
+      "name": "UNSW Judo Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15019",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/9ec2ea4c-db96-40e7-abe8-a01d051a6381.png"
+    },
+    {
+      "id": "arc-14155",
+      "universityId": "unsw",
+      "name": "UNSW Karate Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14155",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/91b82f0c-eb9b-4126-8529-fe6cff8e0d8b.png"
+    },
+    {
+      "id": "arc-14137",
+      "universityId": "unsw",
+      "name": "UNSW Kendo Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14137",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/05d1476c-ac07-4079-a289-82adcadb09af.png"
+    },
+    {
+      "id": "arc-2476",
+      "universityId": "unsw",
+      "name": "UNSW Korean Student's Association",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2476",
+      "imageUrl": "https://resources.getqpay.com/images/669fadcc412ba_.png"
+    },
+    {
+      "id": "arc-6658",
+      "universityId": "unsw",
+      "name": "UNSW KOSTA",
+      "categories": [
+        "Spirituality & Faith"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6658",
+      "imageUrl": "https://resources.getqpay.com/images/63e0aba75181d_.png"
+    },
+    {
+      "id": "arc-2628",
+      "universityId": "unsw",
+      "name": "UNSW Kpop Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2628",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/c183ef5d-81d9-4af6-a828-52f6ea28ae20.png"
+    },
+    {
+      "id": "arc-12743",
+      "universityId": "unsw",
+      "name": "UNSW Labor Left",
+      "categories": [
+        "Political"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12743",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/9ed1506e-8bde-4519-9721-d8f05a94e5d9.png"
+    },
+    {
+      "id": "arc-13906",
+      "universityId": "unsw",
+      "name": "UNSW Lacrosse Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13906",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/3c29a8d5-8d03-4467-af60-177eac271015.png"
+    },
+    {
+      "id": "arc-14051",
+      "universityId": "unsw",
+      "name": "UNSW Liberty Club",
+      "categories": [
+        "Political"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14051",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/527d5dc9-9f04-44fd-95b2-7924aedde70e.png"
+    },
+    {
+      "id": "arc-12592",
+      "universityId": "unsw",
+      "name": "UNSW Lion Dance Club",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12592",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/401de73e-d785-44e8-818a-e4bdf4780e3b.png"
+    },
+    {
+      "id": "arc-12744",
+      "universityId": "unsw",
+      "name": "UNSW Mahjong and Chinese Boardgame Society",
+      "categories": [
+        "Games & Animation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12744",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/c6e4e659-b603-46ad-a75b-ccba3bfbc756.png"
+    },
+    {
+      "id": "arc-9031",
+      "universityId": "unsw",
+      "name": "Unsw Malayalee Society",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=9031",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/512ba9ec-e989-4c7b-a378-ca02c37032e5.png"
+    },
+    {
+      "id": "arc-2009",
+      "universityId": "unsw",
+      "name": "UNSW Management Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2009",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/ce5ee180-a092-4e87-956b-b2f2dcdd70a9.png"
+    },
+    {
+      "id": "arc-11082",
+      "universityId": "unsw",
+      "name": "UNSW Motorsport Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=11082",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/bc24a15b-9cb8-44ed-951e-771bb0dd61ca.png"
+    },
+    {
+      "id": "arc-6361",
+      "universityId": "unsw",
+      "name": "UNSW Muslim Students' Association",
+      "categories": [
+        "Spirituality & Faith"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6361",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/bcca712a-68be-448a-9b8d-0fab65ae0bc5.png"
+    },
+    {
+      "id": "arc-11297",
+      "universityId": "unsw",
+      "name": "UNSW Naach",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=11297",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/898dc5a9-fb6a-4fe5-a3c1-7702d0a166f9.png"
+    },
+    {
+      "id": "arc-10056",
+      "universityId": "unsw",
+      "name": "UNSW Nepalese Society",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=10056",
+      "imageUrl": "https://resources.hellorubric.com/images/6725803d5ccb6_.png"
+    },
+    {
+      "id": "arc-14409",
+      "universityId": "unsw",
+      "name": "UNSW Netball Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14409",
+      "imageUrl": ""
+    },
+    {
+      "id": "arc-12745",
+      "universityId": "unsw",
+      "name": "UNSW Nuclear Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12745",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/b1ba70c2-6f94-4265-a1fa-43b8866a1d5a.png"
+    },
+    {
+      "id": "arc-14119",
+      "universityId": "unsw",
+      "name": "UNSW Outdoors Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14119",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/0c7216e8-7579-4a5a-8f48-096c5866e901.png"
+    },
+    {
+      "id": "arc-14173",
+      "universityId": "unsw",
+      "name": "UNSW Oztag Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14173",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/a47c62bc-2ab7-4c8c-bdd1-64c3fe056f17.png"
+    },
+    {
+      "id": "arc-8022",
+      "universityId": "unsw",
+      "name": "UNSW Pakistani Students Society",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=8022",
+      "imageUrl": "https://resources.getqpay.com/images/666a5e0a02df2_.png"
+    },
+    {
+      "id": "arc-6384",
+      "universityId": "unsw",
+      "name": "UNSW Philosophy Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6384",
+      "imageUrl": "https://resources.getqpay.com/images/63b0d2351ca87_.png"
+    },
+    {
+      "id": "arc-12746",
+      "universityId": "unsw",
+      "name": "UNSW Photography Society",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12746",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/cedf3675-407e-48db-8dee-f90c1a93a880.png"
+    },
+    {
+      "id": "arc-6349",
+      "universityId": "unsw",
+      "name": "UNSW Physics Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6349",
+      "imageUrl": "https://resources.getqpay.com/images/63a27ac5089dc_.png"
+    },
+    {
+      "id": "arc-2647",
+      "universityId": "unsw",
+      "name": "UNSW Psychology Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2647",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/0c41d9ad-aa65-489f-b67a-b7725e923ca7.png"
+    },
+    {
+      "id": "arc-15439",
+      "universityId": "unsw",
+      "name": "UNSW Public Policy Society",
+      "categories": [
+        "Charity & Social Impact"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15439",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/10f24adf-2116-4499-bf7c-517f87a44a62.png"
+    },
+    {
+      "id": "arc-8810",
+      "universityId": "unsw",
+      "name": "UNSW Punjabi Society",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=8810",
+      "imageUrl": "https://resources.getqpay.com/images/6682bd9feb48a_.png"
+    },
+    {
+      "id": "arc-4745",
+      "universityId": "unsw",
+      "name": "UNSW Puzzle Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4745",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/7ddd0b53-2ddb-467c-ab66-ea8b3c2a9a69.png"
+    },
+    {
+      "id": "arc-16939",
+      "universityId": "unsw",
+      "name": "UNSW Red Herring Period Society",
+      "categories": [
+        "Charity & Social Impact"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=16939",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/e10b4c86-fff7-4c1d-917d-f907fb46cc9c.png"
+    },
+    {
+      "id": "arc-6335",
+      "universityId": "unsw",
+      "name": "UNSW Riot Games Society",
+      "categories": [
+        "Games & Animation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6335",
+      "imageUrl": "https://resources.getqpay.com/images/639c73aeab64e_.png"
+    },
+    {
+      "id": "arc-14212",
+      "universityId": "unsw",
+      "name": "UNSW Robotics Competition Club",
+      "categories": [
+        "Technology & Projects"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14212",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/184da0bc-a373-43a8-a600-04b25936963f.png"
+    },
+    {
+      "id": "arc-14182",
+      "universityId": "unsw",
+      "name": "UNSW Rowing Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14182",
+      "imageUrl": ""
+    },
+    {
+      "id": "arc-14175",
+      "universityId": "unsw",
+      "name": "UNSW Rugby Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14175",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/a009f543-efc4-44df-9c3c-1b2681e00e1e.png"
+    },
+    {
+      "id": "arc-10647",
+      "universityId": "unsw",
+      "name": "UNSW Sapphic Society",
+      "categories": [
+        "Community & Inclusion"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=10647",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/2f2f7409-9b51-4631-b3a7-c4d43a23f7e6.png"
+    },
+    {
+      "id": "arc-407",
+      "universityId": "unsw",
+      "name": "UNSW Science Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=407",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/4615bc94-6f06-428c-9b8d-cd71402a46ea.png"
+    },
+    {
+      "id": "arc-12748",
+      "universityId": "unsw",
+      "name": "UNSW Sign Language Society",
+      "categories": [
+        "Charity & Social Impact"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12748",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/d6e5de44-c085-4432-8027-f526b4c57c2b.png"
+    },
+    {
+      "id": "arc-12749",
+      "universityId": "unsw",
+      "name": "UNSW Singing Society",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12749",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/ae8dfb2a-c293-4778-95a4-a957287ff048.png"
+    },
+    {
+      "id": "arc-4920",
+      "universityId": "unsw",
+      "name": "UNSW Ski and Board Society",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4920",
+      "imageUrl": "https://resources.getqpay.com/images/6440bd9222924_.png"
+    },
+    {
+      "id": "arc-5209",
+      "universityId": "unsw",
+      "name": "UNSW Social Golf Society",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=5209",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/dccb1dff-520d-488a-b0bb-266f9fbe2252.png"
+    },
+    {
+      "id": "arc-6383",
+      "universityId": "unsw",
+      "name": "UNSW Social Work Student Association",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6383",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/f5c6d387-630a-4bf3-90a7-1821bcbf9ec6.png"
+    },
+    {
+      "id": "arc-12750",
+      "universityId": "unsw",
+      "name": "UNSW Socialists",
+      "categories": [
+        "Political"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12750",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/c4b14bdf-7551-4232-a41d-594ab9b5f0a4.png"
+    },
+    {
+      "id": "arc-14140",
+      "universityId": "unsw",
+      "name": "UNSW Squash",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14140",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/220bb88a-f23d-459a-aaec-203cc872fb30.png"
+    },
+    {
+      "id": "arc-2066",
+      "universityId": "unsw",
+      "name": "UNSW Sri Lankan Society",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2066",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/5892358d-e4f1-4190-9db9-1368b94bc02d.png"
+    },
+    {
+      "id": "arc-14199",
+      "universityId": "unsw",
+      "name": "UNSW Stage",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14199",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/0d68cf6d-2770-42a3-91ad-ebed4445d1f5.png"
+    },
+    {
+      "id": "arc-6360",
+      "universityId": "unsw",
+      "name": "UNSW String Ensemble",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6360",
+      "imageUrl": "https://resources.getqpay.com/images/63d39d1280273_.png"
+    },
+    {
+      "id": "arc-6353",
+      "universityId": "unsw",
+      "name": "UNSW Surveying Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6353",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/64319189-6f78-41ee-b828-81e331a401a7.png"
+    },
+    {
+      "id": "arc-14176",
+      "universityId": "unsw",
+      "name": "UNSW Swimming",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14176",
+      "imageUrl": ""
+    },
+    {
+      "id": "arc-3152",
+      "universityId": "unsw",
+      "name": "UNSW Table Tennis Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3152",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/a4446c36-d38d-4208-969f-17a7a634832f.png"
+    },
+    {
+      "id": "arc-14150",
+      "universityId": "unsw",
+      "name": "UNSW Taekwondo",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14150",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/be32084d-8167-433a-b445-ce149766f89a.png"
+    },
+    {
+      "id": "arc-14121",
+      "universityId": "unsw",
+      "name": "UNSW Taido Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14121",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/9a232d36-b3db-4383-bb52-e4b1e5ed16ce.png"
+    },
+    {
+      "id": "arc-541",
+      "universityId": "unsw",
+      "name": "UNSW Taiwanese Students Association",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=541",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_541.png"
+    },
+    {
+      "id": "arc-14402",
+      "universityId": "unsw",
+      "name": "UNSW Target Rifle Society",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14402",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/93bdfc43-1e0e-4354-be70-eb03a872bdf9.png"
+    },
+    {
+      "id": "arc-111",
+      "universityId": "unsw",
+      "name": "UNSW Tea & Coffee Society",
+      "categories": [
+        "Food & Drink"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=111",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/1bbe3e84-d1d3-41ef-a253-c59743dd087b.png"
+    },
+    {
+      "id": "arc-14939",
+      "universityId": "unsw",
+      "name": "UNSW Telugu Society",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14939",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/949fcb7a-7de2-439d-9b18-9e25ec36f6a0.png"
+    },
+    {
+      "id": "arc-13990",
+      "universityId": "unsw",
+      "name": "UNSW Tennis Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13990",
+      "imageUrl": "https://graph.facebook.com/unswtennisclub/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12751",
+      "universityId": "unsw",
+      "name": "UNSW Tetris Society",
+      "categories": [
+        "Games & Animation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12751",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/25076e6f-3d63-4cc2-925b-331b27b0417e.png"
+    },
+    {
+      "id": "arc-14128",
+      "universityId": "unsw",
+      "name": "UNSW Ultimate",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14128",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/d0bdb6c6-4b56-4872-b04f-688557dd130f.png"
+    },
+    {
+      "id": "arc-14081",
+      "universityId": "unsw",
+      "name": "UNSW Underwater Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14081",
+      "imageUrl": ""
+    },
+    {
+      "id": "arc-14912",
+      "universityId": "unsw",
+      "name": "UNSW Underwater Rugby Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14912",
+      "imageUrl": ""
+    },
+    {
+      "id": "arc-14246",
+      "universityId": "unsw",
+      "name": "UNSW Volleyball Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14246",
+      "imageUrl": ""
+    },
+    {
+      "id": "arc-14120",
+      "universityId": "unsw",
+      "name": "UNSW Waterski & Wakeboard Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14120",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/bebdaa97-5725-4419-8b5b-1386d3979874.png"
+    },
+    {
+      "id": "arc-14600",
+      "universityId": "unsw",
+      "name": "UNSW Wests Water Polo Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14600",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/f6e43d11-4719-4805-a1f4-dd15763be72e.png"
+    },
+    {
+      "id": "arc-11608",
+      "universityId": "unsw",
+      "name": "UNSW-Rabbitohs Touch Football Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=11608",
+      "imageUrl": ""
+    },
+    {
+      "id": "arc-1104",
+      "universityId": "unsw",
+      "name": "Vietnamese Students Association",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1104",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/fe966357-969a-4ca1-9322-50243cbbe79b.png"
+    },
+    {
+      "id": "arc-14891",
+      "universityId": "unsw",
+      "name": "Visual Novel Club",
+      "categories": [
+        "Games & Animation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14891",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/2f0ec360-42bb-486e-835f-e325da262930.png"
+    },
+    {
+      "id": "arc-12753",
+      "universityId": "unsw",
+      "name": "Vocallective",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12753",
+      "imageUrl": "https://graph.facebook.com/unswvocallective/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "arc-12754",
+      "universityId": "unsw",
+      "name": "VR Society UNSW",
+      "categories": [
+        "Games & Animation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12754",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/7e6753e5-de52-4099-b535-449063547563.png"
+    },
+    {
+      "id": "arc-12755",
+      "universityId": "unsw",
+      "name": "Wagga Wagga Rural Undergraduate Medical Society",
+      "categories": [
+        "Faculty & Constituent"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12755",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/8759a84f-64df-4885-803e-0fb8bec8eb5c.png"
+    },
+    {
+      "id": "arc-12756",
+      "universityId": "unsw",
+      "name": "Wandering Society",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12756",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/ed7160a3-9745-47cf-b8af-7de2e0453fd7.png"
+    },
+    {
+      "id": "arc-12757",
+      "universityId": "unsw",
+      "name": "Warhammer Club",
+      "categories": [
+        "Games & Animation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12757",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/7d5797e5-2e8f-423f-9da8-cac6d0fc67b9.png"
+    },
+    {
+      "id": "arc-12758",
+      "universityId": "unsw",
+      "name": "Warrane College",
+      "categories": [
+        "Residential"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12758",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/9e82a7f7-b3b9-478a-89a7-f7d15eaccf6b.png"
+    },
+    {
+      "id": "arc-14946",
+      "universityId": "unsw",
+      "name": "Watch Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14946",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/2807e26f-4ce7-4e00-a5d0-4746e67c99c3.png"
+    },
+    {
+      "id": "arc-12759",
+      "universityId": "unsw",
+      "name": "We The Free - Animal Rights UNSW",
+      "categories": [
+        "Charity & Social Impact"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12759",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/4a75fbcc-e1fb-4e87-94d2-dcdb11c8624b.png"
+    },
+    {
+      "id": "arc-12760",
+      "universityId": "unsw",
+      "name": "Web3 Club",
+      "categories": [
+        "Technology & Projects"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12760",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/327d251f-0ec1-4ce9-93d4-3d27e45fbaa0.png"
+    },
+    {
+      "id": "arc-13445",
+      "universityId": "unsw",
+      "name": "Webcomic Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13445",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/43155f37-85fd-4a32-9378-ac7392df5682.png"
+    },
+    {
+      "id": "arc-12761",
+      "universityId": "unsw",
+      "name": "Western Sydney Society",
+      "categories": [
+        "Hobby & Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12761",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/da6c284d-4225-4b86-8a26-c5aa38a0602c.png"
+    },
+    {
+      "id": "arc-14588",
+      "universityId": "unsw",
+      "name": "Windsurfing, Sailing Surfing Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14588",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/ee6dc815-5614-46f8-b99c-fb42ae701869.png"
+    },
+    {
+      "id": "arc-12763",
+      "universityId": "unsw",
+      "name": "Women in Aviation Society",
+      "categories": [
+        "Community & Inclusion"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12763",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/6e50b498-285c-4352-b9d8-27e08fcfb4a6.png"
+    },
+    {
+      "id": "arc-5054",
+      "universityId": "unsw",
+      "name": "Women In Consulting",
+      "categories": [
+        "Community & Inclusion"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=5054",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_5054.png"
+    },
+    {
+      "id": "arc-13996",
+      "universityId": "unsw",
+      "name": "Women in Economics Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13996",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/995bb1ed-9509-4186-9e6a-da8b04e845cd.png"
+    },
+    {
+      "id": "arc-12764",
+      "universityId": "unsw",
+      "name": "Women in Engineering",
+      "categories": [
+        "Community & Inclusion"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12764",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/3e144f60-5e25-4073-b2cc-937ee65fd7bc.png"
+    },
+    {
+      "id": "arc-12765",
+      "universityId": "unsw",
+      "name": "Women In Management",
+      "categories": [
+        "Community & Inclusion"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12765",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/39fcad88-05ee-4ba1-aa15-0595d4accc5d.png"
+    },
+    {
+      "id": "arc-5091",
+      "universityId": "unsw",
+      "name": "Women In Science Society UNSW",
+      "categories": [
+        "Community & Inclusion"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=5091",
+      "imageUrl": "https://resources.getqpay.com/images/63dc8279ddd46_.png"
+    },
+    {
+      "id": "arc-4749",
+      "universityId": "unsw",
+      "name": "Women in Technology",
+      "categories": [
+        "Community & Inclusion"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4749",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/9109bfc2-6f7e-48c1-b51d-90a8ac42c096.png"
+    },
+    {
+      "id": "arc-5011",
+      "universityId": "unsw",
+      "name": "Young Australian Lebanese Association",
+      "categories": [
+        "International & Cultural"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=5011",
+      "imageUrl": "https://resources.getqpay.com/images/63a260dc32183_.png"
+    },
+    {
+      "id": "arc-12768",
+      "universityId": "unsw",
+      "name": "Young Entrepreneurs Program",
+      "categories": [
+        "Charity & Social Impact"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12768",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/4b017118-a7fe-41a8-a018-23d0bf7ff448.png"
+    },
+    {
+      "id": "arc-12769",
+      "universityId": "unsw",
+      "name": "Youth Music Mission",
+      "categories": [
+        "Spirituality & Faith"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12769",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/ebeb1ede-2167-451d-b5bb-bbe8ad789c4d.png"
+    }
+  ]
+}

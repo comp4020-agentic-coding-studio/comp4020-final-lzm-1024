@@ -3,13 +3,18 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "start": "node server.mjs",
+    "smoke:deploy": "node scripts/deployment-smoke.mjs",
+    "benchmark": "node scripts/benchmark-performance.mjs",
     "prepare": "git rev-parse --git-dir >/dev/null 2>&1 && git config core.hooksPath .githooks || true",
     "typecheck": "tsc --noEmit",
     "check": "pnpm typecheck && pnpm test",
     "check:evidence": "node scripts/check-evidence.ts",
+    "docs:check": "node scripts/check-docs.mjs",
     "test": "vitest run"
   },
   "devDependencies": {
+    "@roamhq/wrtc": "0.10.0",
     "@types/jsdom": "^30.0.0",
     "@types/node": "^24.0.0",
     "jsdom": "^30.1.0",
@@ -18,5 +23,13 @@
   },
   "engines": {
     "pnpm": ">=11"
+  },
+  "dependencies": {
+    "chess.js": "^1.4.0",
+    "hls.js": "^1.7.3",
+    "leaflet": "1.9.4",
+    "qrcode": "^1.5.4",
+    "sharp": "^0.35.5",
+    "ws": "^8.22.0"
   }
 }

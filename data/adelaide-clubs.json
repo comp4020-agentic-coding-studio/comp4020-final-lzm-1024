@@ -1,0 +1,1698 @@
+{
+  "universityId": "adelaide",
+  "sourceName": "AUSA clubs directory",
+  "sourceUrl": "https://www.ausaadelaide.com.au/community/clubs-societies/clubslist/",
+  "retrievedAt": "2026-10-01T12:17:01.672Z",
+  "clubs": [
+    {
+      "id": "ausa-6040",
+      "universityId": "adelaide",
+      "name": "180 Degrees Consulting - Branch",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/180dc/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6058",
+      "universityId": "adelaide",
+      "name": "Activate Student Ministry",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/activateministry/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6076",
+      "universityId": "adelaide",
+      "name": "Adelaide Business Students’ Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6076/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6085",
+      "universityId": "adelaide",
+      "name": "Adelaide Chinese Debating Union",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6085/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6319",
+      "universityId": "adelaide",
+      "name": "Adelaide Criminology Students Association",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6319/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6103",
+      "universityId": "adelaide",
+      "name": "Adelaide Fashion Collective",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/fashion/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-8227",
+      "universityId": "adelaide",
+      "name": "Adelaide Hindu Youth Society (AHYS)",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/hinduyouthsociety/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6121",
+      "universityId": "adelaide",
+      "name": "Adelaide Indian Student Association (AISA)",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/indianstudents/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6130",
+      "universityId": "adelaide",
+      "name": "Adelaide Medical Students’ Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/amss/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6139",
+      "universityId": "adelaide",
+      "name": "Adelaide MedTech Hackathon",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6139/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6157",
+      "universityId": "adelaide",
+      "name": "Adelaide Nepalese Students Society",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6157/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7660",
+      "universityId": "adelaide",
+      "name": "Adelaide Psychology Students Association (APSA)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/apsa/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6202",
+      "universityId": "adelaide",
+      "name": "Adelaide Sri Lankan Students Association",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/aslsa/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6211",
+      "universityId": "adelaide",
+      "name": "Adelaide Student Managed Fund",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6211/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6220",
+      "universityId": "adelaide",
+      "name": "Adelaide Students Society of Critical Care",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6220/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6643",
+      "universityId": "adelaide",
+      "name": "Adelaide University Agriculture Students Association",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6643/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6670",
+      "universityId": "adelaide",
+      "name": "Adelaide University Anime Club",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6670/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6067",
+      "universityId": "adelaide",
+      "name": "Adelaide University Bangladeshi Students Society (AUBSS)",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/bangladeshi/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-8504",
+      "universityId": "adelaide",
+      "name": "Adelaide University Biomedical and Health Science Association",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/aubsa/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6778",
+      "universityId": "adelaide",
+      "name": "Adelaide University Biosciences Network",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6778/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-8110",
+      "universityId": "adelaide",
+      "name": "Adelaide University Book Club",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/8110/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6265",
+      "universityId": "adelaide",
+      "name": "Adelaide University Cardiovascular Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6265/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6274",
+      "universityId": "adelaide",
+      "name": "Adelaide University Catholic Society",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6274/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6859",
+      "universityId": "adelaide",
+      "name": "Adelaide University Chemical Engineering Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/chemicaleng/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6283",
+      "universityId": "adelaide",
+      "name": "Adelaide University Chess Club",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6283/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6292",
+      "universityId": "adelaide",
+      "name": "Adelaide University Chinese Students Association (AUCSA)",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6292/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6301",
+      "universityId": "adelaide",
+      "name": "Adelaide University Choral Society",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6301/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6958",
+      "universityId": "adelaide",
+      "name": "Adelaide University Computer Science Club",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6958/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-8468",
+      "universityId": "adelaide",
+      "name": "Adelaide University Creator Hub",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/8468/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6094",
+      "universityId": "adelaide",
+      "name": "Adelaide University Cybersecurity Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6094/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6328",
+      "universityId": "adelaide",
+      "name": "Adelaide University Debating Society",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6328/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6337",
+      "universityId": "adelaide",
+      "name": "Adelaide University Dermatology and Plastics Society",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6337/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6985",
+      "universityId": "adelaide",
+      "name": "Adelaide University Design Build Fly (AUDBF)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6985/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6346",
+      "universityId": "adelaide",
+      "name": "Adelaide University Economics Students’ Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/auess/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6364",
+      "universityId": "adelaide",
+      "name": "Adelaide University Engineering Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/aues/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-8523",
+      "universityId": "adelaide",
+      "name": "Adelaide University Entrepreneur’s Club (AUEC)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/8523/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7111",
+      "universityId": "adelaide",
+      "name": "Adelaide University Fellowship of Overseas Christian University Students",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/focusadl/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6373",
+      "universityId": "adelaide",
+      "name": "Adelaide University Filipino Club",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6373/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6382",
+      "universityId": "adelaide",
+      "name": "Adelaide University Film Society",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6382/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6391",
+      "universityId": "adelaide",
+      "name": "Adelaide University Foosball Club",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6391/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7183",
+      "universityId": "adelaide",
+      "name": "Adelaide University French Club",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7183/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7210",
+      "universityId": "adelaide",
+      "name": "Adelaide University Geography and Development Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7210/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-8128",
+      "universityId": "adelaide",
+      "name": "Adelaide University Greek Club",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/8128/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6400",
+      "universityId": "adelaide",
+      "name": "Adelaide University Greens Club",
+      "categories": [
+        "Social Justice"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6400/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7336",
+      "universityId": "adelaide",
+      "name": "Adelaide University Italian Club",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/auitalianclub/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6418",
+      "universityId": "adelaide",
+      "name": "Adelaide University Jewish Students Society",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6418/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-8495",
+      "universityId": "adelaide",
+      "name": "Adelaide University Korean Society Club",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/auksc/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6427",
+      "universityId": "adelaide",
+      "name": "Adelaide University Law Students’ Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6427/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6436",
+      "universityId": "adelaide",
+      "name": "Adelaide University Liberal Club",
+      "categories": [
+        "Social Justice"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6436/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6445",
+      "universityId": "adelaide",
+      "name": "ADELAIDE UNIVERSITY MALAYSIAN MEDICAL STUDENTS ASSOCIATION (AUMMSA)",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6445/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6454",
+      "universityId": "adelaide",
+      "name": "Adelaide University Malaysian Students Association",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6454/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7444",
+      "universityId": "adelaide",
+      "name": "Adelaide University Mathematics Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/aums/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6472",
+      "universityId": "adelaide",
+      "name": "Adelaide University Media Association",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6472/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6481",
+      "universityId": "adelaide",
+      "name": "Adelaide University Medical Orchestra",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6481/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-8047",
+      "universityId": "adelaide",
+      "name": "Adelaide University Occupational Therapy Student Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/8047/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7570",
+      "universityId": "adelaide",
+      "name": "Adelaide University Palaeontologists",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7570/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7966",
+      "universityId": "adelaide",
+      "name": "Adelaide University Philosophy Society",
+      "categories": [
+        "Social Justice"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7966/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-8389",
+      "universityId": "adelaide",
+      "name": "Adelaide University Photography Society",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/8389/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-8056",
+      "universityId": "adelaide",
+      "name": "Adelaide University Physiotherapy Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/8056/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7606",
+      "universityId": "adelaide",
+      "name": "Adelaide University Politics and International Relations Association",
+      "categories": [
+        "Social Justice"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/adlunipira/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6499",
+      "universityId": "adelaide",
+      "name": "Adelaide University Psychiatry Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6499/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-8083",
+      "universityId": "adelaide",
+      "name": "Adelaide University Queer Collective",
+      "categories": [
+        "Social Justice"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/auqc/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6526",
+      "universityId": "adelaide",
+      "name": "Adelaide University Rural Health Alliance (AURHA)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6526/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7759",
+      "universityId": "adelaide",
+      "name": "Adelaide University Salsa Mania Club",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7759/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-8477",
+      "universityId": "adelaide",
+      "name": "Adelaide University Satellite and Telemetry",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/ausat/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6535",
+      "universityId": "adelaide",
+      "name": "Adelaide University Sciences Association",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6535/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6544",
+      "universityId": "adelaide",
+      "name": "Adelaide University Social Science Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6544/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6553",
+      "universityId": "adelaide",
+      "name": "Adelaide University Society of Architecture and Built Environment (AUSABE)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6553/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6562",
+      "universityId": "adelaide",
+      "name": "Adelaide University Space Society",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6562/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6571",
+      "universityId": "adelaide",
+      "name": "Adelaide University Spanish Club",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6571/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-8191",
+      "universityId": "adelaide",
+      "name": "Adelaide University Theatre Guild Student Society",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/tgss/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6598",
+      "universityId": "adelaide",
+      "name": "Adelaide University Video Games Association",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6598/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-8281",
+      "universityId": "adelaide",
+      "name": "Adelaide University Vietnamese Society - AUVS",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/auvs/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-8200",
+      "universityId": "adelaide",
+      "name": "Adelaide University Wine Club",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/8200/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-8218",
+      "universityId": "adelaide",
+      "name": "Adelaide University Writers’ Club",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/auwritersclub/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6607",
+      "universityId": "adelaide",
+      "name": "Adelaide Veterinary Students Association",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6607/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6616",
+      "universityId": "adelaide",
+      "name": "Advent Campus Connect",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6616/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6661",
+      "universityId": "adelaide",
+      "name": "AI & ML Student Club",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/aiml/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7939",
+      "universityId": "adelaide",
+      "name": "Aquatic Animal Special Interest Group",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7939/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6688",
+      "universityId": "adelaide",
+      "name": "Arab Club",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6688/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6697",
+      "universityId": "adelaide",
+      "name": "Architecture & Interior Architecture Club",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6697/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6706",
+      "universityId": "adelaide",
+      "name": "Artists, Gamers, Programmers United",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6706/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6751",
+      "universityId": "adelaide",
+      "name": "Australia-China Youth Association (ACYA) Adelaide Chapter",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6751/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6787",
+      "universityId": "adelaide",
+      "name": "Books and Banter Book Club",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6787/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6823",
+      "universityId": "adelaide",
+      "name": "Capture the Flag Club",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6823/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6841",
+      "universityId": "adelaide",
+      "name": "CardBoard Games Club",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/cardboard/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6850",
+      "universityId": "adelaide",
+      "name": "Career Ready Club",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6850/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6868",
+      "universityId": "adelaide",
+      "name": "Chinese Boardgame Club",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6868/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6877",
+      "universityId": "adelaide",
+      "name": "Chinese Students and Scholars Club of UniSA",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6877/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6895",
+      "universityId": "adelaide",
+      "name": "Civil Engineering Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6895/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6904",
+      "universityId": "adelaide",
+      "name": "Classics and Ancient History Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6904/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6913",
+      "universityId": "adelaide",
+      "name": "Clinical Exercise Physiology Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6913/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6940",
+      "universityId": "adelaide",
+      "name": "Companion Animal Special Interest Group (CASIG)",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/casig/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6949",
+      "universityId": "adelaide",
+      "name": "Competitive Programming Club",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/adelaidecpc/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6967",
+      "universityId": "adelaide",
+      "name": "Dental Students’ Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6967/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6994",
+      "universityId": "adelaide",
+      "name": "Disability Collective",
+      "categories": [
+        "Social Justice"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6994/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7012",
+      "universityId": "adelaide",
+      "name": "Drawing Club",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7012/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7021",
+      "universityId": "adelaide",
+      "name": "Education Students Club",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7021/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7039",
+      "universityId": "adelaide",
+      "name": "Elder Conservatorium Music Theatre Association inc. (ECMTA)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7039/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7048",
+      "universityId": "adelaide",
+      "name": "Electrical and Electronic Engineering Society (EEESAU)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/eeesau/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7066",
+      "universityId": "adelaide",
+      "name": "Engineers Without Borders - University of Adelaide",
+      "categories": [
+        "Social Justice"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7066/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7084",
+      "universityId": "adelaide",
+      "name": "Equine Special Interest Group (ESIG)",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7084/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7093",
+      "universityId": "adelaide",
+      "name": "Evangelical Students",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/evangelicalstudents/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7129",
+      "universityId": "adelaide",
+      "name": "Filipino Student Society",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7129/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7156",
+      "universityId": "adelaide",
+      "name": "Financial Planning Club",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7156/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7165",
+      "universityId": "adelaide",
+      "name": "Food and Nutrition Student Association (FANSA)",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7165/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7174",
+      "universityId": "adelaide",
+      "name": "Formosa International Student Society",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7174/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7192",
+      "universityId": "adelaide",
+      "name": "GAMES Club",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7192/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-8486",
+      "universityId": "adelaide",
+      "name": "Garba club",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/8486/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7201",
+      "universityId": "adelaide",
+      "name": "General Practice Student Network (GPSN) Adelaide",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7201/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7219",
+      "universityId": "adelaide",
+      "name": "Geological Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7219/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7228",
+      "universityId": "adelaide",
+      "name": "German Club",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7228/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-8002",
+      "universityId": "adelaide",
+      "name": "Graphic Communication Design Student’s Club",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/proof/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-6886",
+      "universityId": "adelaide",
+      "name": "Gro-PBS (Graduate Researchers of Pharmacy and Biomedical Science)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/6886/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7264",
+      "universityId": "adelaide",
+      "name": "Health and Wellbeing Society",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7264/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7273",
+      "universityId": "adelaide",
+      "name": "Health Science Postgraduate Association (HeSPA)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7273/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-8137",
+      "universityId": "adelaide",
+      "name": "HONG KONG MACAU SOCIETY",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/8137/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7282",
+      "universityId": "adelaide",
+      "name": "Illustration and Animation Gradshow",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7282/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7300",
+      "universityId": "adelaide",
+      "name": "Indonesian Students Association of University of Adelaide",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7300/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7309",
+      "universityId": "adelaide",
+      "name": "Insight Global Health Group",
+      "categories": [
+        "Social Justice"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7309/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7318",
+      "universityId": "adelaide",
+      "name": "Islamic Society UniSA",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7318/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7327",
+      "universityId": "adelaide",
+      "name": "Islamic Students Society of the University of Adelaide",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7327/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7345",
+      "universityId": "adelaide",
+      "name": "Japanese Club",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7345/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7363",
+      "universityId": "adelaide",
+      "name": "Jazz Students Association",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7363/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7372",
+      "universityId": "adelaide",
+      "name": "Karaoke Club",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7372/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7390",
+      "universityId": "adelaide",
+      "name": "Labor Club",
+      "categories": [
+        "Social Justice"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7390/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7435",
+      "universityId": "adelaide",
+      "name": "Master’s in Technology Students Association",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7435/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7453",
+      "universityId": "adelaide",
+      "name": "Mature Students Association",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/adelaidemsa/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7462",
+      "universityId": "adelaide",
+      "name": "Mechanical Engineering Student Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7462/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7471",
+      "universityId": "adelaide",
+      "name": "MEDRADical",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/medradical/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-8514",
+      "universityId": "adelaide",
+      "name": "MESH Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/mesh/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7489",
+      "universityId": "adelaide",
+      "name": "Midwifery Student Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7489/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7507",
+      "universityId": "adelaide",
+      "name": "Novauni",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7507/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7516",
+      "universityId": "adelaide",
+      "name": "Nursing Student Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7516/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7543",
+      "universityId": "adelaide",
+      "name": "Overseas Christian Fellowship",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7543/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7552",
+      "universityId": "adelaide",
+      "name": "Paediatrics Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7552/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7561",
+      "universityId": "adelaide",
+      "name": "Pakistani Students’ Association",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7561/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7597",
+      "universityId": "adelaide",
+      "name": "Pig Club",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7597/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7633",
+      "universityId": "adelaide",
+      "name": "PRODUCT + INDUSTRIAL DESIGN CLUB",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7633/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7642",
+      "universityId": "adelaide",
+      "name": "Production Animal Special Interest Group",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7642/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7651",
+      "universityId": "adelaide",
+      "name": "Project Management Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7651/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-8458",
+      "universityId": "adelaide",
+      "name": "Public Health Student Society (PHSS)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/8458/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7687",
+      "universityId": "adelaide",
+      "name": "Robogals Adelaide",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7687/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7696",
+      "universityId": "adelaide",
+      "name": "Roseworthy Agricultural College Student Union Association",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7696/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7705",
+      "universityId": "adelaide",
+      "name": "Roseworthy Alumni and Postgraduate Students Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7705/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7723",
+      "universityId": "adelaide",
+      "name": "Roseworthy International Student Association",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7723/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7732",
+      "universityId": "adelaide",
+      "name": "Roseworthy Steer Club",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7732/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7804",
+      "universityId": "adelaide",
+      "name": "Singapore Association",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7804/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7813",
+      "universityId": "adelaide",
+      "name": "Singapore Medical Society of Adelaide",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7813/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7822",
+      "universityId": "adelaide",
+      "name": "Socialist Alternative Adelaide",
+      "categories": [
+        "Social Justice"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7822/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7831",
+      "universityId": "adelaide",
+      "name": "Society For Creative Anachronism",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/ausca/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7840",
+      "universityId": "adelaide",
+      "name": "Society for Quantitative Analysis and Data (SQUAD)",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7840/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7858",
+      "universityId": "adelaide",
+      "name": "Society of Petroleum Engineers- Adelaide University Chapter",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7858/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7876",
+      "universityId": "adelaide",
+      "name": "South Australia Students Comedy Club (SASCC)",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7876/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7777",
+      "universityId": "adelaide",
+      "name": "South Australian Pharmacy Students’ Association",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7777/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7768",
+      "universityId": "adelaide",
+      "name": "South Australian Podiatry Students’ Association",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7768/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-8092",
+      "universityId": "adelaide",
+      "name": "Speechie Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/8092/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7903",
+      "universityId": "adelaide",
+      "name": "Student and Trainee Orthopaedic Collaboration",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7903/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7912",
+      "universityId": "adelaide",
+      "name": "Surgical Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7912/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7930",
+      "universityId": "adelaide",
+      "name": "Tabletop Role Playing Games Club",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7930/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7921",
+      "universityId": "adelaide",
+      "name": "The Adelaide University Swing Dancing Club",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7921/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7948",
+      "universityId": "adelaide",
+      "name": "The Biology Society of South Australia",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7948/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7975",
+      "universityId": "adelaide",
+      "name": "UniCast",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/7975/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-8209",
+      "universityId": "adelaide",
+      "name": "University of Adelaide Women’s Collective",
+      "categories": [
+        "Social Justice"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/8209/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-8254",
+      "universityId": "adelaide",
+      "name": "Urban Planning Student Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/upss/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-8182",
+      "universityId": "adelaide",
+      "name": "UVAGAI – The Tamil Student Society",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/8182/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-7615",
+      "universityId": "adelaide",
+      "name": "Waite Social Club (WSC)",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/waitesocialclub/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-8326",
+      "universityId": "adelaide",
+      "name": "Wildlife and Exotics Special Interest Group",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/8326/",
+      "imageUrl": ""
+    },
+    {
+      "id": "ausa-8353",
+      "universityId": "adelaide",
+      "name": "Women in STEM Society (WISTEMS)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://www.ausaadelaide.com.au/organisation/8353/",
+      "imageUrl": ""
+    }
+  ]
+}

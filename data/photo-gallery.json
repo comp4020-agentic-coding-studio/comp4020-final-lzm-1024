@@ -1,0 +1,714 @@
+{
+  "edition": 1,
+  "retrievedAt": "2026-10-02",
+  "license": "https://www.pexels.com/license/",
+  "note": "24 fictional photographic poster designs per campus. Official sources verify venue existence only, never event scheduling or endorsement. Pexels images are illustrative stock photography, not campus photographs.",
+  "venues": {
+    "anu": [
+      {
+        "name": "Kambri Lawn",
+        "campus": "Acton campus",
+        "source": "https://services.anu.edu.au/news-events/hosting-an-event-at-kambri-faq"
+      },
+      {
+        "name": "Manning Clark Hall, Kambri",
+        "campus": "Acton campus",
+        "source": "https://services.anu.edu.au/news-events/hosting-an-event-at-kambri-faq"
+      },
+      {
+        "name": "Marie Reay Teaching Centre",
+        "campus": "Acton campus",
+        "source": "https://services.anu.edu.au/news-events/hosting-an-event-at-kambri-faq"
+      },
+      {
+        "name": "Kambri Amphitheatre",
+        "campus": "Acton campus",
+        "source": "https://www.anu.edu.au/maps/kambri-precinct"
+      }
+    ],
+    "usyd": [
+      {
+        "name": "The Quadrangle",
+        "campus": "Camperdown campus",
+        "source": "https://www.sydney.edu.au/news-opinion/news/2026/09/30/celebrating-60-years-of-the-quadrangle.html"
+      },
+      {
+        "name": "Great Hall",
+        "campus": "Camperdown campus",
+        "source": "https://www.sydney.edu.au/content/dam/corporate/documents/study/guides/2025-info-day-program.pdf.coredownload.pdf"
+      },
+      {
+        "name": "Fisher Library",
+        "campus": "Camperdown campus",
+        "source": "https://www.library.sydney.edu.au/visit/fisher-library"
+      },
+      {
+        "name": "The Quadrangle",
+        "campus": "Camperdown campus",
+        "source": "https://www.sydney.edu.au/news-opinion/news/2026/09/30/celebrating-60-years-of-the-quadrangle.html"
+      }
+    ],
+    "unsw": [
+      {
+        "name": "Scientia Lawn",
+        "campus": "Kensington campus",
+        "source": "https://www.estate.unsw.edu.au/sites/default/files/documents/Kensington%20Campus%20Map%20V2023.pdf"
+      },
+      {
+        "name": "Roundhouse",
+        "campus": "Kensington campus",
+        "source": "https://www.estate.unsw.edu.au/sites/default/files/documents/Kensington%20Campus%20Map%20V2023.pdf"
+      },
+      {
+        "name": "Main Library",
+        "campus": "Kensington campus",
+        "source": "https://www.estate.unsw.edu.au/sites/default/files/documents/Kensington%20Campus%20Map%20V2023.pdf"
+      },
+      {
+        "name": "Library Lawn",
+        "campus": "Kensington campus",
+        "source": "https://www.estate.unsw.edu.au/sites/default/files/documents/Kensington%20Campus%20Map%20V2023.pdf"
+      }
+    ],
+    "unimelb": [
+      {
+        "name": "South Lawn",
+        "campus": "Parkville campus",
+        "source": "https://services.unimelb.edu.au/__data/assets/pdf_file/0004/3791245/Southlawn_Areas_v2.pdf"
+      },
+      {
+        "name": "Old Quad",
+        "campus": "Parkville campus",
+        "source": "https://www.unimelb.edu.au/old-quad"
+      },
+      {
+        "name": "Arts West Gallery",
+        "campus": "Parkville campus",
+        "source": "https://arts.unimelb.edu.au/about/arts-west-gallery"
+      },
+      {
+        "name": "South Lawn",
+        "campus": "Parkville campus",
+        "source": "https://www.unimelb.edu.au/filming-on-campus/gallery/building-exteriors-1850-1900"
+      }
+    ],
+    "monash": [
+      {
+        "name": "Campus Centre",
+        "campus": "Clayton campus",
+        "source": "https://www.monash.edu/__data/assets/pdf_file/0005/4166204/Clayton-campus-map-CTTU-TBM-DiGs-2026.pdf"
+      },
+      {
+        "name": "Learning and Teaching Building",
+        "campus": "Clayton campus",
+        "source": "https://www.monash.edu/learning-teaching/priorities/learning-spaces/ltb"
+      },
+      {
+        "name": "Matheson Library",
+        "campus": "Clayton campus",
+        "source": "https://www.monash.edu/library/libraries/locations-and-opening-hours/matheson"
+      },
+      {
+        "name": "Campus Centre",
+        "campus": "Clayton campus",
+        "source": "https://www.monash.edu/__data/assets/pdf_file/0005/4166204/Clayton-campus-map-CTTU-TBM-DiGs-2026.pdf"
+      }
+    ],
+    "uq": [
+      {
+        "name": "Great Court",
+        "campus": "St Lucia campus",
+        "source": "https://about.uq.edu.au/profile-rankings/history/great-court"
+      },
+      {
+        "name": "Dr Mary Mahoney AO Amphitheatre",
+        "campus": "St Lucia campus",
+        "source": "https://about.uq.edu.au/campuses-facilities/campuses-locations/st-lucia"
+      },
+      {
+        "name": "Duhig Tower",
+        "campus": "St Lucia campus",
+        "source": "https://campuses.uq.edu.au/files/2777/01-st-lucia-campus-map-brochure.pdf"
+      },
+      {
+        "name": "UQ Lakes",
+        "campus": "St Lucia campus",
+        "source": "https://about.uq.edu.au/campuses-facilities/campuses-locations/st-lucia"
+      }
+    ],
+    "uwa": [
+      {
+        "name": "Oak Lawn",
+        "campus": "Crawley campus",
+        "source": "https://www.uwa.edu.au/about/locations/campus-tours"
+      },
+      {
+        "name": "Winthrop Hall",
+        "campus": "Crawley campus",
+        "source": "https://www.uwa.edu.au/about/locations/campus-tours"
+      },
+      {
+        "name": "Reid Library",
+        "campus": "Crawley campus",
+        "source": "https://www.uwa.edu.au/about/locations/campus-tours"
+      },
+      {
+        "name": "Guild Village",
+        "campus": "Crawley campus",
+        "source": "https://www.uwa.edu.au/about/locations/campus-tours"
+      }
+    ],
+    "adelaide": [
+      {
+        "name": "Hub Central",
+        "campus": "Adelaide City campus East",
+        "source": "https://adelaide.edu.au/students/manage-study/enrolment/enrolment-hubs/"
+      },
+      {
+        "name": "Bonython Hall",
+        "campus": "Adelaide City campus East",
+        "source": "https://adelaide.edu.au/life-at-adelaide/campus-services/venue-hire/city-campus-east/bonython-hall/"
+      },
+      {
+        "name": "Barr Smith Library",
+        "campus": "Adelaide City campus East",
+        "source": "https://adelaide.edu.au/library/library-locations/barr-smith-library/"
+      },
+      {
+        "name": "Hub Central",
+        "campus": "Adelaide City campus East",
+        "source": "https://adelaide.edu.au/students/manage-study/enrolment/enrolment-hubs/"
+      }
+    ]
+  },
+  "events": [
+    {
+      "key": "afterglow",
+      "title": "Afterglow",
+      "subtitle": "A little louder. A little later.",
+      "category": "Arts",
+      "layout": "cover",
+      "palette": {
+        "bg": "#161426",
+        "fg": "#fff5ea",
+        "accent": "#d8ff64"
+      },
+      "series": "LIVE SESSIONS",
+      "venue": 1,
+      "time": "19:00",
+      "photo": {
+        "id": 16549249,
+        "credit": "Isabella Mendes",
+        "alt": "A concert crowd beneath bright stage lights.",
+        "source": "https://www.pexels.com/photo/lights-over-crowd-at-concert-16549249/"
+      },
+      "description": "A fictional evening of student bands, warm lights and a shared love of live music."
+    },
+    {
+      "key": "slow-sunday",
+      "title": "Slow Sunday",
+      "subtitle": "Good coffee. Better company.",
+      "category": "Social",
+      "layout": "editorial",
+      "palette": {
+        "bg": "#f4ebdd",
+        "fg": "#402f26",
+        "accent": "#c35d33"
+      },
+      "series": "THE SLOW CLUB",
+      "venue": 0,
+      "time": "10:30",
+      "photo": {
+        "id": 6205634,
+        "credit": "Tim Douglas",
+        "alt": "Milk being poured into a cup of coffee.",
+        "source": "https://www.pexels.com/photo/cup-of-coffee-with-latte-art-6205634/"
+      },
+      "description": "An imaginary coffee catch-up with a relaxed conversation corner and a latte-art mood."
+    },
+    {
+      "key": "field-notes",
+      "title": "Field Notes",
+      "subtitle": "Find the extraordinary in the everyday.",
+      "category": "Arts",
+      "layout": "frame",
+      "palette": {
+        "bg": "#f1eacb",
+        "fg": "#243b32",
+        "accent": "#815c24"
+      },
+      "series": "PHOTO WALK / VOL. 01",
+      "venue": 0,
+      "time": "16:00",
+      "photo": {
+        "id": 14866206,
+        "credit": "Bo Ponomari",
+        "alt": "A vintage film camera against a mustard background.",
+        "source": "https://www.pexels.com/photo/vintage-camera-14866206/"
+      },
+      "description": "A fictional photography walk exploring light, small details and fresh ways to see campus."
+    },
+    {
+      "key": "long-table",
+      "title": "The Long Table",
+      "subtitle": "Bring a blanket. Imagine a feast.",
+      "category": "Social",
+      "layout": "arch",
+      "palette": {
+        "bg": "#e8f0dc",
+        "fg": "#233b32",
+        "accent": "#476447"
+      },
+      "series": "OUTDOOR SOCIAL",
+      "venue": 0,
+      "time": "12:00",
+      "photo": {
+        "id": 8367704,
+        "credit": "August de Richelieu",
+        "alt": "A picnic spread with fruit and bread beside a lake.",
+        "source": "https://www.pexels.com/photo/food-on-picnic-blanket-8367704/"
+      },
+      "description": "An imaginary shared picnic with a colourful spread, conversation cards and a place for everyone."
+    },
+    {
+      "key": "one-more-move",
+      "title": "One More Move",
+      "subtitle": "Small boards. Big ideas.",
+      "category": "Clubs",
+      "layout": "split",
+      "palette": {
+        "bg": "#182d39",
+        "fg": "#fff4da",
+        "accent": "#e5bf76"
+      },
+      "series": "STRATEGY SOCIETY",
+      "venue": 2,
+      "time": "17:30",
+      "photo": {
+        "id": 7688982,
+        "credit": "KoolShooters",
+        "alt": "Chess pieces on a wooden board in warm lighting.",
+        "source": "https://www.pexels.com/photo/chess-pieces-on-chess-board-7688982/"
+      },
+      "description": "A fictional chess social for beginners, patient thinkers and those who enjoy one more game."
+    },
+    {
+      "key": "side-a",
+      "title": "Side A",
+      "subtitle": "Drop the needle. Stay a while.",
+      "category": "Arts",
+      "layout": "ticket",
+      "palette": {
+        "bg": "#edb04d",
+        "fg": "#26221d",
+        "accent": "#26221d"
+      },
+      "series": "LISTENING ROOM",
+      "venue": 1,
+      "time": "18:00",
+      "photo": {
+        "id": 4492786,
+        "credit": "Maria Clara Rufino",
+        "alt": "A vinyl record playing on a vintage turntable.",
+        "source": "https://www.pexels.com/photo/vinyl-record-on-a-a-turntable-4492786/"
+      },
+      "description": "An imaginary vinyl listening session with album discoveries and conversations about favourite tracks."
+    },
+    {
+      "key": "clay-days",
+      "title": "Clay Days",
+      "subtitle": "Make something with your hands.",
+      "category": "Arts",
+      "layout": "editorial",
+      "palette": {
+        "bg": "#ebd3c5",
+        "fg": "#482c29",
+        "accent": "#ac4a37"
+      },
+      "series": "MAKER SERIES",
+      "venue": 2,
+      "time": "14:00",
+      "photo": {
+        "id": 17846719,
+        "credit": "Elizabeth Gartside",
+        "alt": "An artisan shaping wet clay on a pottery wheel.",
+        "source": "https://www.pexels.com/photo/potter-hands-working-on-clay-17846719/"
+      },
+      "description": "A fictional ceramic-making workshop celebrating texture, imperfect shapes and slow creativity."
+    },
+    {
+      "key": "under-the-stars",
+      "title": "Under the Stars",
+      "subtitle": "Look up. There is more out there.",
+      "category": "Academic",
+      "layout": "cover",
+      "palette": {
+        "bg": "#101526",
+        "fg": "#eef0fc",
+        "accent": "#b8b9fb"
+      },
+      "series": "NIGHT SCHOOL",
+      "venue": 3,
+      "time": "20:00",
+      "photo": {
+        "id": 1146134,
+        "credit": "Felix Mittermeier",
+        "alt": "The Milky Way in a star-filled night sky.",
+        "source": "https://www.pexels.com/photo/galaxy-1146134/"
+      },
+      "description": "An imaginary introduction to the night sky, constellations and the questions that make us curious."
+    },
+    {
+      "key": "soft-start",
+      "title": "Soft Start",
+      "subtitle": "Find a little room to breathe.",
+      "category": "Sport",
+      "layout": "arch",
+      "palette": {
+        "bg": "#efe5d8",
+        "fg": "#3d4935",
+        "accent": "#687851"
+      },
+      "series": "MORNING RITUALS",
+      "venue": 0,
+      "time": "07:30",
+      "photo": {
+        "id": 7880207,
+        "credit": "MART PRODUCTION",
+        "alt": "A person unfolding a yoga mat in a park at sunrise.",
+        "source": "https://www.pexels.com/photo/a-man-exercising-at-a-park-7880207/"
+      },
+      "description": "A fictional gentle movement morning with breathing exercises and a quiet beginning to the day."
+    },
+    {
+      "key": "first-light",
+      "title": "First Light Run",
+      "subtitle": "A fresh morning. A friendly pace.",
+      "category": "Sport",
+      "layout": "sport",
+      "palette": {
+        "bg": "#e95532",
+        "fg": "#171c23",
+        "accent": "#fff2d8"
+      },
+      "series": "MOVE / TOGETHER",
+      "venue": 0,
+      "time": "07:00",
+      "photo": {
+        "id": 31756484,
+        "credit": "Sarawut Horpetch",
+        "alt": "Running shoes on an athletics track.",
+        "source": "https://www.pexels.com/photo/running-shoes-on-track-with-distances-marked-31756484/"
+      },
+      "description": "An imaginary social run with a walk-friendly option, a meeting point and a little early-morning energy."
+    },
+    {
+      "key": "noodle-notes",
+      "title": "Noodle Notes",
+      "subtitle": "A bowl of comfort. A world of stories.",
+      "category": "Social",
+      "layout": "ticket",
+      "palette": {
+        "bg": "#f3d04c",
+        "fg": "#40261b",
+        "accent": "#ab3427"
+      },
+      "series": "FOOD & FRIENDS",
+      "venue": 3,
+      "time": "18:30",
+      "photo": {
+        "id": 31302291,
+        "credit": "Emanuel Pedro",
+        "alt": "A bowl of ramen with traditional toppings and chopsticks.",
+        "source": "https://www.pexels.com/photo/authentic-japanese-ramen-bowl-with-chopsticks-31302291/"
+      },
+      "description": "A fictional food-culture conversation inspired by comforting bowls and the stories behind favourite recipes."
+    },
+    {
+      "key": "green-exchange",
+      "title": "Green Exchange",
+      "subtitle": "Little plants. New beginnings.",
+      "category": "Clubs",
+      "layout": "frame",
+      "palette": {
+        "bg": "#dde8d4",
+        "fg": "#18382a",
+        "accent": "#4c7542"
+      },
+      "series": "GROW SOMETHING",
+      "venue": 0,
+      "time": "11:00",
+      "photo": {
+        "id": 22610787,
+        "credit": "Kenneth Surillo",
+        "alt": "A hand holding a small potted succulent.",
+        "source": "https://www.pexels.com/photo/succulent-in-a-pot-22610787/"
+      },
+      "description": "An imaginary plant-swap afternoon about caring for cuttings, greener rooms and sharing growing tips."
+    },
+    {
+      "key": "colour-outside",
+      "title": "Colour Outside",
+      "subtitle": "No perfect lines required.",
+      "category": "Arts",
+      "layout": "split",
+      "palette": {
+        "bg": "#f1cbd1",
+        "fg": "#4e2839",
+        "accent": "#b22866"
+      },
+      "series": "OPEN STUDIO",
+      "venue": 2,
+      "time": "15:00",
+      "photo": {
+        "id": 6925031,
+        "credit": "Pavel Danilyuk",
+        "alt": "Paintbrushes beside a colourful watercolour palette.",
+        "source": "https://www.pexels.com/photo/watercolors-and-paintbrushes-6925031/"
+      },
+      "description": "A fictional watercolour workshop with colour experiments, sketchbook pages and space to try something new."
+    },
+    {
+      "key": "build-after-dark",
+      "title": "Build After Dark",
+      "subtitle": "Small teams. Bright ideas.",
+      "category": "Career",
+      "layout": "cover",
+      "palette": {
+        "bg": "#111d2d",
+        "fg": "#f0f6ff",
+        "accent": "#6ae3da"
+      },
+      "series": "CREATIVE TECH",
+      "venue": 2,
+      "time": "18:00",
+      "photo": {
+        "id": 9553905,
+        "credit": "Mikhail Fesenko",
+        "alt": "A programmer working at a laptop and desktop monitors.",
+        "source": "https://www.pexels.com/photo/man-writing-a-code-on-a-computer-and-laptop-9553905/"
+      },
+      "description": "An imaginary creative coding sprint with project prompts, peer feedback and a welcoming beginner table."
+    },
+    {
+      "key": "take-the-scenic",
+      "title": "Take the Scenic",
+      "subtitle": "The next adventure starts with a hello.",
+      "category": "Clubs",
+      "layout": "magazine",
+      "palette": {
+        "bg": "#dde7e8",
+        "fg": "#233b48",
+        "accent": "#dd783c"
+      },
+      "series": "OUTDOOR JOURNAL",
+      "venue": 0,
+      "time": "09:30",
+      "photo": {
+        "id": 7741753,
+        "credit": "ArtHouse Studio",
+        "alt": "A hiker looking across rolling hills at sunset.",
+        "source": "https://www.pexels.com/photo/person-hiking-in-mountains-on-sunset-7741753/"
+      },
+      "description": "A fictional outdoor-club introduction and route-planning discussion. The listed campus venue is a meeting point, not a mountain destination."
+    },
+    {
+      "key": "unplugged",
+      "title": "Unplugged",
+      "subtitle": "Six strings. A thousand stories.",
+      "category": "Arts",
+      "layout": "editorial",
+      "palette": {
+        "bg": "#ead9b4",
+        "fg": "#402f21",
+        "accent": "#a95528"
+      },
+      "series": "ACOUSTIC SESSIONS",
+      "venue": 1,
+      "time": "17:00",
+      "photo": {
+        "id": 4836388,
+        "credit": "James Ranieri",
+        "alt": "A close-up of an acoustic guitar and its strings.",
+        "source": "https://www.pexels.com/photo/close-up-of-acoustic-guitar-4836388/"
+      },
+      "description": "An imaginary acoustic circle with song-sharing, gentle performances and conversations about making music."
+    },
+    {
+      "key": "say-something",
+      "title": "Say Something",
+      "subtitle": "Your voice belongs in the room.",
+      "category": "Arts",
+      "layout": "cover",
+      "palette": {
+        "bg": "#252138",
+        "fg": "#fff0dd",
+        "accent": "#efad87"
+      },
+      "series": "OPEN MIC / WORDS & MUSIC",
+      "venue": 1,
+      "time": "19:30",
+      "photo": {
+        "id": 16595193,
+        "credit": "Clement Lepetit",
+        "alt": "A microphone on a stage with coloured lighting.",
+        "source": "https://www.pexels.com/photo/microphone-on-a-stage-16595193/"
+      },
+      "description": "A fictional open-mic programme combining poetry, short stories and original songs."
+    },
+    {
+      "key": "taste-of-together",
+      "title": "Taste of Together",
+      "subtitle": "Different flavours. Shared stories.",
+      "category": "Social",
+      "layout": "split",
+      "palette": {
+        "bg": "#eff1e2",
+        "fg": "#28382c",
+        "accent": "#b83e39"
+      },
+      "series": "CULTURE AT THE TABLE",
+      "venue": 3,
+      "time": "13:00",
+      "photo": {
+        "id": 343870,
+        "credit": "Jay Abrantes",
+        "alt": "A sushi platter with ginger, wasabi and soy sauce.",
+        "source": "https://www.pexels.com/photo/plate-of-sushi-343870/"
+      },
+      "description": "An imaginary conversation about food traditions and favourite dishes, with illustrative food photography."
+    },
+    {
+      "key": "roll-with-it",
+      "title": "Roll With It",
+      "subtitle": "Good moves. Great company.",
+      "category": "Clubs",
+      "layout": "sport",
+      "palette": {
+        "bg": "#7c64b1",
+        "fg": "#ffffff",
+        "accent": "#f6d977"
+      },
+      "series": "PLAY / SOCIAL",
+      "venue": 2,
+      "time": "16:30",
+      "photo": {
+        "id": 31916803,
+        "credit": "Berna",
+        "alt": "Dice being rolled during a tabletop board game.",
+        "source": "https://www.pexels.com/photo/close-up-of-dice-on-board-game-during-play-31916803/"
+      },
+      "description": "A fictional board-game meetup with cooperative games, friendly competition and a beginner-friendly table."
+    },
+    {
+      "key": "court-side",
+      "title": "Court Side",
+      "subtitle": "Meet the team before the game.",
+      "category": "Sport",
+      "layout": "sport",
+      "palette": {
+        "bg": "#f1a547",
+        "fg": "#222d3c",
+        "accent": "#263956"
+      },
+      "series": "CAMPUS SPORT",
+      "venue": 0,
+      "time": "16:00",
+      "photo": {
+        "id": 12993255,
+        "credit": "Caio",
+        "alt": "An orange basketball passing through an outdoor hoop.",
+        "source": "https://www.pexels.com/photo/orange-basketball-in-the-hoop-12993255/"
+      },
+      "description": "An imaginary basketball-club introduction and team social. The listed campus venue is a meeting point, not a booked basketball court."
+    },
+    {
+      "key": "between-pages",
+      "title": "Between Pages",
+      "subtitle": "One book. Many ways to read it.",
+      "category": "Academic",
+      "layout": "editorial",
+      "palette": {
+        "bg": "#e5e0ee",
+        "fg": "#393447",
+        "accent": "#776493"
+      },
+      "series": "READING ROOM",
+      "venue": 2,
+      "time": "14:30",
+      "photo": {
+        "id": 5503752,
+        "credit": "Tayssir Kadamany",
+        "alt": "A colourful stack of hardcover books on a table.",
+        "source": "https://www.pexels.com/photo/stack-of-books-5503752/"
+      },
+      "description": "A fictional reading circle with short passages, thoughtful questions and room for different perspectives."
+    },
+    {
+      "key": "cinema-after-hours",
+      "title": "Cinema After Hours",
+      "subtitle": "Stay for the conversation.",
+      "category": "Arts",
+      "layout": "ticket",
+      "palette": {
+        "bg": "#251b1c",
+        "fg": "#fff0dc",
+        "accent": "#df9b68"
+      },
+      "series": "THE FILM CLUB",
+      "venue": 1,
+      "time": "18:45",
+      "photo": {
+        "id": 7991126,
+        "credit": "Tima Miroshnichenko",
+        "alt": "Rows of red seats in an empty cinema.",
+        "source": "https://www.pexels.com/photo/empty-red-chairs-in-a-movie-theater-7991126/"
+      },
+      "description": "An imaginary film-club discussion about favourite scenes, visual storytelling and the magic of cinema. No film screening is scheduled."
+    },
+    {
+      "key": "two-wheels",
+      "title": "Two Wheels",
+      "subtitle": "A slower way to see the city.",
+      "category": "Sport",
+      "layout": "magazine",
+      "palette": {
+        "bg": "#d1e5ed",
+        "fg": "#182f45",
+        "accent": "#e76d39"
+      },
+      "series": "RIDE / EXPLORE",
+      "venue": 0,
+      "time": "10:00",
+      "photo": {
+        "id": 12689741,
+        "credit": "Erik Mclean",
+        "alt": "A bicycle resting against an urban wall at dusk.",
+        "source": "https://www.pexels.com/photo/black-bicycle-leaning-on-white-wall-12689741/"
+      },
+      "description": "A fictional cycling social and route-planning session. The real campus location is an illustrative meeting point; no ride is scheduled."
+    },
+    {
+      "key": "in-bloom",
+      "title": "In Bloom",
+      "subtitle": "Find beauty in the small things.",
+      "category": "Other",
+      "layout": "arch",
+      "palette": {
+        "bg": "#f0dedc",
+        "fg": "#49323d",
+        "accent": "#936075"
+      },
+      "series": "SLOW CRAFT",
+      "venue": 2,
+      "time": "11:30",
+      "photo": {
+        "id": 8370477,
+        "credit": "Jeff Vinluan",
+        "alt": "A person holding delicate white flowers beside lace curtains.",
+        "source": "https://www.pexels.com/photo/woman-holding-flowers-8370477/"
+      },
+      "description": "An imaginary floral-arranging and slow-craft session exploring texture, colour and seasonal inspiration."
+    }
+  ]
+}

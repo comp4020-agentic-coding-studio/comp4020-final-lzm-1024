@@ -25,6 +25,7 @@ dockerfile = "Dockerfile"
 
 [env]
 PORT = "8080"
+PUBLIC_BASE_URL = "https://comp4020-final-lzm-1024.fly.dev"
 
 [http_service]
 internal_port = 8080

@@ -1,0 +1,1889 @@
+{
+  "universityId": "uwa",
+  "sourceName": "UWA Student Guild clubs directory",
+  "sourceUrl": "https://www.uwastudentguild.com/clubs",
+  "retrievedAt": "2026-10-01T12:17:01.355Z",
+  "pageCount": 8,
+  "clubs": [
+    {
+      "id": "uwa-180-degrees-consulting",
+      "universityId": "uwa",
+      "name": "180 Degrees Consulting",
+      "categories": [
+        "business",
+        "volunteering"
+      ],
+      "keywords": "180DC",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/180-degrees-consulting",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tMTgwLWRlZ3JlZXMtdXdhLTE1Njc2NDkyODguanBn?w=80&h=80&fit=fit&s=ec0c521c840fa44cf06dc47d294669b2"
+    },
+    {
+      "id": "uwa-8-ball-club",
+      "universityId": "uwa",
+      "name": "8 Ball Club",
+      "categories": [
+        "hobby activities",
+        "sports and fitness"
+      ],
+      "keywords": "UWA EBC",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/8-ball-club",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9zaW1wbGUtMTYwMDkxNDI3Mi5wbmc=?w=80&h=80&fit=fit&s=eecafcf4410c4cc0484614ec222418f4"
+    },
+    {
+      "id": "uwa-aiesec",
+      "universityId": "uwa",
+      "name": "AIESEC",
+      "categories": [
+        "multicultural",
+        "volunteering"
+      ],
+      "keywords": "AIESEC",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/aiesec",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tYWllc2VjLTE1Njc2NDkyOTUuanBn?w=80&h=80&fit=fit&s=bfcdd276b61bc698bae689e0e10a4e66"
+    },
+    {
+      "id": "uwa-amnesty-international-uwa",
+      "universityId": "uwa",
+      "name": "Amnesty International UWA",
+      "categories": [
+        "volunteering"
+      ],
+      "keywords": "AIUWA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/amnesty-international-uwa",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9hbW5lc3R5LWludGVybmF0aW9uYWwtbG9nby5wbmc=?w=80&h=80&fit=fit&s=b93b6d51dd8f3d2a3d1a0cd5f08da36c"
+    },
+    {
+      "id": "uwa-anthropology-society-of-uwa",
+      "universityId": "uwa",
+      "name": "Anthropology Society of UWA",
+      "categories": [
+        "academic"
+      ],
+      "keywords": "AnthSoc",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/anthropology-society-of-uwa",
+      "imageUrl": ""
+    },
+    {
+      "id": "uwa-archaeological-society-of-wa",
+      "universityId": "uwa",
+      "name": "Archaeological Society of WA",
+      "categories": [
+        "academic",
+        "arts",
+        "science",
+        "social",
+        "volunteering"
+      ],
+      "keywords": "ARCHSOC",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/archaeological-society-of-wa",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9hcmNoc29jLWdyZWVuLWxvZ28ucG5n?w=80&h=80&fit=fit&s=1839c0136dd8185b7dffe750afc4dc0a"
+    },
+    {
+      "id": "uwa-architecture-landscape-visual-arts-student-society-of-uwa",
+      "universityId": "uwa",
+      "name": "Architecture, Landscape & Visual Arts Student Society of UWA",
+      "categories": [
+        "academic",
+        "arts",
+        "creative"
+      ],
+      "keywords": "ALVA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/architecture-landscape-visual-arts-student-society-of-uwa",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tYWx2YS1zdHVkZW50LXNvY2lldHktMTU2NzY0OTI5Ny5qcGc=?w=80&h=80&fit=fit&s=0b575688fe3a38fe56b814423f476cb7"
+    },
+    {
+      "id": "uwa-arts-union-of-uwa",
+      "universityId": "uwa",
+      "name": "Arts Union of UWA",
+      "categories": [
+        "arts"
+      ],
+      "keywords": "AU",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/arts-union-of-uwa",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9hcnRzLXVuaW9uLWxvZ28uanBn?w=80&h=80&fit=fit&s=55df2eb358e1af4bf45cb464f51f3733"
+    },
+    {
+      "id": "uwa-asia-australia-youth-association",
+      "universityId": "uwa",
+      "name": "Asia-Australia Youth Association",
+      "categories": [
+        "multicultural"
+      ],
+      "keywords": "AAYA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/asia-australia-youth-association",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy8xLWNvcHktMTc3MTU0NTIxMi5wbmc=?w=80&h=80&fit=fit&s=890bf29ba261f40c0e2d9fb4e8f12ee6"
+    },
+    {
+      "id": "uwa-asian-students-in-australia",
+      "universityId": "uwa",
+      "name": "Asian Students in Australia",
+      "categories": [
+        "multicultural",
+        "social"
+      ],
+      "keywords": "ASIA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/asian-students-in-australia",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tYXNpYS1zdHVkZW50cy0xNTY3NjQ5MzA1LmpwZw==?w=80&h=80&fit=fit&s=c2c4b766e15a1414c6bda0f5688fd0d9"
+    },
+    {
+      "id": "uwa-association-of-indonesian-postgraduate-students-and-scholars-in-australia",
+      "universityId": "uwa",
+      "name": "Association of Indonesian Postgraduate Students and Scholars in Australia",
+      "categories": [
+        "multicultural"
+      ],
+      "keywords": "AIPSSA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/association-of-indonesian-postgraduate-students-and-scholars-in-australia",
+      "imageUrl": ""
+    },
+    {
+      "id": "uwa-australasian-union-of-jewish-students",
+      "universityId": "uwa",
+      "name": "Australasian Union of Jewish Students",
+      "categories": [
+        "faith"
+      ],
+      "keywords": "AUJS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/australasian-union-of-jewish-students",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9zY3JlZW4tc2hvdC0yMDIxLTAxLTE4LWF0LTkuMjcuNTgtYW0ucG5n?w=80&h=80&fit=fit&s=c4ad5c800cd20432bc7a2f214f96a961"
+    },
+    {
+      "id": "uwa-australia-china-youth-association",
+      "universityId": "uwa",
+      "name": "Australia-China Youth Association",
+      "categories": [
+        "hobby activities",
+        "multicultural",
+        "social"
+      ],
+      "keywords": "ACYA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/australia-china-youth-association",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tYXVzdHJhbGlhbi1jaGluYS15b3V0aC1hc3NvY2lhdGlvbi0xNTY3NjQ5MzA3LmpwZw==?w=80&h=80&fit=fit&s=54103f33e29eb2341b3f69b394745020"
+    },
+    {
+      "id": "uwa-australian-youth-climate-coalition-uwa",
+      "universityId": "uwa",
+      "name": "Australian Youth Climate Coalition UWA",
+      "categories": [
+        "Uncategorised"
+      ],
+      "keywords": "AYCC UWA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/australian-youth-climate-coalition-uwa",
+      "imageUrl": ""
+    },
+    {
+      "id": "uwa-bachelor-of-philosophy-honours-union",
+      "universityId": "uwa",
+      "name": "Bachelor of Philosophy (Honours) Union",
+      "categories": [
+        "academic"
+      ],
+      "keywords": "Bachelor of Philosophy (Honours) Union",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/bachelor-of-philosophy-honours-union",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy8xNzg0MzY5ODNfMzc1MzM1MjQxODEyNzQ1MV82NzY5OTk2ODM5NjU1MzQ0MTQ2X24ucG5n?w=80&h=80&fit=fit&s=eee2b9575f57ccd117c06110262c9122"
+    },
+    {
+      "id": "uwa-bahai-society",
+      "universityId": "uwa",
+      "name": "Baha'i Society",
+      "categories": [
+        "faith"
+      ],
+      "keywords": "Baha'i Society",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/bahai-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tYmFoYV9pLXNvY2lldHktMTU2NzY0OTMxMS5qcGc=?w=80&h=80&fit=fit&s=92586f212db5b53d0f6164d8418d97b0"
+    },
+    {
+      "id": "uwa-biomedical-engineering-society-of-wa",
+      "universityId": "uwa",
+      "name": "Biomedical Engineering Society of WA",
+      "categories": [
+        "engineering"
+      ],
+      "keywords": "BES",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/biomedical-engineering-society-of-wa",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9iZXMtbG9nby1jb2xvdXJlZC1zbGlnaHQtYWx0ZXIucG5n?w=80&h=80&fit=fit&s=71064e26dd1bcbb289c3a2361694f2b1"
+    },
+    {
+      "id": "uwa-blackstone-society",
+      "universityId": "uwa",
+      "name": "Blackstone Society",
+      "categories": [
+        "culture",
+        "faculty societies"
+      ],
+      "keywords": "Blackstone Society",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/blackstone-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy93aGl0ZS1ic3RvbmUtbG9nby1zcXVhcmUtY29weS0xNzQxNTAxNTEwLnBuZw==?w=80&h=80&fit=fit&s=992d3d64795f6cff2b5de2f79febe701"
+    },
+    {
+      "id": "uwa-bloom-uwa",
+      "universityId": "uwa",
+      "name": "Bloom UWA",
+      "categories": [
+        "business"
+      ],
+      "keywords": "Bloom",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/bloom-uwa",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9zY3JlZW5zaG90LTIwMjMtMDUtMDgtYXQtOC41Ny4zOS1wbS5wbmc=?w=80&h=80&fit=fit&s=d3dc126ad0e5022e65db6cf460c6a049"
+    },
+    {
+      "id": "uwa-cheese-and-wine-appreciation-society",
+      "universityId": "uwa",
+      "name": "Cheese & Wine Appreciation Society",
+      "categories": [
+        "social"
+      ],
+      "keywords": "CAWA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/cheese-and-wine-appreciation-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9jYXdhLWxvZ28uanBn?w=80&h=80&fit=fit&s=315a2a7b3b43a4413f3449a01318c042"
+    },
+    {
+      "id": "uwa-chemical-and-process-engineering-club-the-cpec",
+      "universityId": "uwa",
+      "name": "Chemical & Process Engineering Club UWA",
+      "categories": [
+        "engineering"
+      ],
+      "keywords": "CPEC",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/chemical-and-process-engineering-club-the-cpec",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9maW5hbC0wNi5wbmc=?w=80&h=80&fit=fit&s=6684d49206b3c7ca923a1968986f509d"
+    },
+    {
+      "id": "uwa-chemnbio-molecular-sciences-club",
+      "universityId": "uwa",
+      "name": "CHeMnBiO Molecular Sciences Club",
+      "categories": [
+        "academic",
+        "science"
+      ],
+      "keywords": "CHeMnBiO",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/chemnbio-molecular-sciences-club",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tbmF2eS1ibHVlLW92ZXItd2hpdGUoMSkucG5n?w=80&h=80&fit=fit&s=8275eb78a7859fa6fc0c9a31b252bf40"
+    },
+    {
+      "id": "uwa-christian-healthcare-students",
+      "universityId": "uwa",
+      "name": "Christian Healthcare Students",
+      "categories": [
+        "faith"
+      ],
+      "keywords": "CHS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/christian-healthcare-students",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tY2hzLTE1Njc2NDkzMjQuanBn?w=80&h=80&fit=fit&s=9446efc34d1dc3444572cba04a1cc466"
+    },
+    {
+      "id": "uwa-coders-for-causes",
+      "universityId": "uwa",
+      "name": "Coders For Causes",
+      "categories": [
+        "volunteering"
+      ],
+      "keywords": "CFC",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/coders-for-causes",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tY29kZXJzLWZvci1jYXVzZXMtMTU2NzY0OTMyOS5qcGc=?w=80&h=80&fit=fit&s=350097698b4b5d85507c74c72707eba4"
+    },
+    {
+      "id": "uwa-computer-science-students-club",
+      "universityId": "uwa",
+      "name": "Computer Science Students’ Club",
+      "categories": [
+        "academic",
+        "guild",
+        "science",
+        "social"
+      ],
+      "keywords": "CSSC",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/computer-science-students-club",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLTE2NTMwMTQ3MTMucG5n?w=80&h=80&fit=fit&s=9e0327aac883ffa4b28303204e448a74"
+    },
+    {
+      "id": "uwa-cultural-society",
+      "universityId": "uwa",
+      "name": "Cultural Society",
+      "categories": [
+        "international"
+      ],
+      "keywords": "CS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/cultural-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tY2hpbmVzZS1zb2NpZXR5LTE1Njc2NDkzMjAuanBn?w=80&h=80&fit=fit&s=b49471080aea00e2805bc915772afdd4"
+    },
+    {
+      "id": "uwa-dance-uwa",
+      "universityId": "uwa",
+      "name": "Dance UWA",
+      "categories": [
+        "arts"
+      ],
+      "keywords": "dUWA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/dance-uwa",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy8xYmZjOWMxZC0wZDc5LTQzN2ItYjZjNy0yMzUyYjY0ZDIzOWUuanBlZw==?w=80&h=80&fit=fit&s=a5254caf95d9f2d8f2d745bc389d3610"
+    },
+    {
+      "id": "uwa-data-science-club-of-uwa",
+      "universityId": "uwa",
+      "name": "Data Science Club of UWA",
+      "categories": [
+        "academic"
+      ],
+      "keywords": "DSC",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/data-science-club-of-uwa",
+      "imageUrl": ""
+    },
+    {
+      "id": "uwa-desi-student-society",
+      "universityId": "uwa",
+      "name": "DESI Student Society",
+      "categories": [
+        "international"
+      ],
+      "keywords": "desi",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/desi-student-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tZGVzaS0xNTY3NjQ5MzM4LmpwZw==?w=80&h=80&fit=fit&s=fed9ce722c81f06064657e12f07a9f6c"
+    },
+    {
+      "id": "uwa-economics-and-commerce-students-society",
+      "universityId": "uwa",
+      "name": "Economics and Commerce Students' Society",
+      "categories": [
+        "business"
+      ],
+      "keywords": "ECOMS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/economics-and-commerce-students-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9lY29tcy1sb2dvLTEwMzB4MTAzMC5wbmc=?w=80&h=80&fit=fit&s=32020e2d30c79beb17ee1bbc2f258c2f"
+    },
+    {
+      "id": "uwa-effective-altruism-uwa",
+      "universityId": "uwa",
+      "name": "Effective Altruism UWA",
+      "categories": [
+        "academic",
+        "business",
+        "political",
+        "postgraduate",
+        "science",
+        "social",
+        "volunteering"
+      ],
+      "keywords": "EAUWA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/effective-altruism-uwa",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9jb3B5LW9mLWNvcHktb2Ytc29jaWFsLW1lZGlhLXByb2ZpbGUtKGRhcmspLShpbnN0YWdyYW0tcG9zdCkucG5n?w=80&h=80&fit=fit&s=d61c8dd1df1fb25d8070437ff07da582"
+    },
+    {
+      "id": "uwa-electrical-and-electronic-engineers-of-wa",
+      "universityId": "uwa",
+      "name": "Electrical and Electronic Engineers of WA",
+      "categories": [
+        "academic",
+        "engineering",
+        "guild",
+        "hobby activities",
+        "science",
+        "social"
+      ],
+      "keywords": "EEEWA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/electrical-and-electronic-engineers-of-wa",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tZWVld2EtbG9nby0xNTY3NjQ5MzQxLmpwZw==?w=80&h=80&fit=fit&s=55914ba19e14f4ba96a4a9d41544d499"
+    },
+    {
+      "id": "uwa-electronic-music-appreciation-society",
+      "universityId": "uwa",
+      "name": "Electronic Music Appreciation Society",
+      "categories": [
+        "music and performance"
+      ],
+      "keywords": "EMAS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/electronic-music-appreciation-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9iaWctZW1hcy1sb2dvLTE2NDUwODQ5MTkucG5n?w=80&h=80&fit=fit&s=0530c67919677c4f57c400596203bac1"
+    },
+    {
+      "id": "uwa-elucidate-uwa",
+      "universityId": "uwa",
+      "name": "Elucidate UWA",
+      "categories": [
+        "volunteering"
+      ],
+      "keywords": "Elucidate UWA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/elucidate-uwa",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9lbHVjaWRhdGUtYnVsYi5wbmc=?w=80&h=80&fit=fit&s=8b5b01cb5b2ba3f929cf0b81030a7e1d"
+    },
+    {
+      "id": "uwa-enactus-uwa",
+      "universityId": "uwa",
+      "name": "Enactus UWA",
+      "categories": [
+        "business"
+      ],
+      "keywords": "Enactus UWA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/enactus-uwa",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tZW5hY3R1cy1sb2dvLWhpcmVzLTE1Njc2NDkzNDUuanBn?w=80&h=80&fit=fit&s=c16821e8f990189a80ba4ed2a738421a"
+    },
+    {
+      "id": "uwa-engineers-without-borders-uwa",
+      "universityId": "uwa",
+      "name": "Engineers Without Borders UWA",
+      "categories": [
+        "engineering",
+        "volunteering"
+      ],
+      "keywords": "EWB",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/engineers-without-borders-uwa",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9ld2JfYXVzdHJhbGlhLmpwZw==?w=80&h=80&fit=fit&s=b81cbeb8f1d36119f631ff8c4c64fb1e"
+    },
+    {
+      "id": "uwa-focus-uwa",
+      "universityId": "uwa",
+      "name": "Fellowship of Orthodox Christian University Students UWA",
+      "categories": [
+        "faith"
+      ],
+      "keywords": "FOCUS UWA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/focus-uwa",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy8zLnBuZw==?w=80&h=80&fit=fit&s=e8adc6b259d79e3178ede5afe4d65a3b"
+    },
+    {
+      "id": "uwa-finance-association-of-western-australia",
+      "universityId": "uwa",
+      "name": "Finance Association of Western Australia",
+      "categories": [
+        "education & careers"
+      ],
+      "keywords": "FAWA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/finance-association-of-western-australia",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tZmF3YS0xNTY3NjQ5MzUwLmpwZw==?w=80&h=80&fit=fit&s=6db88572b4525b019b63839e04f2fc41"
+    },
+    {
+      "id": "uwa-game-development-uwa",
+      "universityId": "uwa",
+      "name": "Game Development UWA",
+      "categories": [
+        "arts",
+        "creative",
+        "engineering",
+        "hobby activities"
+      ],
+      "keywords": "GDU",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/game-development-uwa",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9nYW1lZGV2ZWxvcG1lbnR1d2Fsb2dvc21hbGwucG5n?w=80&h=80&fit=fit&s=300e7c1bf3e9a696424d234091bf5282"
+    },
+    {
+      "id": "uwa-grapevine-society",
+      "universityId": "uwa",
+      "name": "Grapevine Society",
+      "categories": [
+        "hobby activities"
+      ],
+      "keywords": "GVS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/grapevine-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy8zNDQzMDg4MDhfNjMwMjk2NjMxODc4NDIyXzcwNjA0Njc2MTU3Njg0Njg3MThfbi5qcGc=?w=80&h=80&fit=fit&s=4f881465695327e06af8a19ac6a37f20"
+    },
+    {
+      "id": "uwa-greek-students-association",
+      "universityId": "uwa",
+      "name": "Greek Students Association",
+      "categories": [
+        "multicultural"
+      ],
+      "keywords": "GSA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/greek-students-association",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy8yMDIxNDA5ODFfMTE0NDE4NzU4OTQyNjU5OV85MDgwODk5NTI1MzY1MjYxMDI4X24uanBn?w=80&h=80&fit=fit&s=0591fd8b6e9eb06c582bf305a913a710"
+    },
+    {
+      "id": "uwa-health-students-society",
+      "universityId": "uwa",
+      "name": "Health Students' Society",
+      "categories": [
+        "academic",
+        "science"
+      ],
+      "keywords": "HSS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/health-students-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0taGVhbHRoLXN0dWRlbnRzLTE1Njc2NDkzNTMuanBn?w=80&h=80&fit=fit&s=cbf2b929354174f269ccc18fccbdc3b4"
+    },
+    {
+      "id": "uwa-hindu-yuva-association",
+      "universityId": "uwa",
+      "name": "Hindu Yuva Association",
+      "categories": [
+        "multicultural",
+        "faith"
+      ],
+      "keywords": "HYA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/hindu-yuva-association",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9oaW5kdS15dXZhX2JsYWNrLnBuZw==?w=80&h=80&fit=fit&s=6d75f8a13dbb4b292a871fe27aa5c39e"
+    },
+    {
+      "id": "uwa-hong-kong-student-society",
+      "universityId": "uwa",
+      "name": "Hong Kong Student Society",
+      "categories": [
+        "international"
+      ],
+      "keywords": "HKSS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/hong-kong-student-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9oa3NzLWxvZ28uanBn?w=80&h=80&fit=fit&s=9a6520c24adf21a31010ccaf1cb86730"
+    },
+    {
+      "id": "uwa-ignite-mentoring-uwa",
+      "universityId": "uwa",
+      "name": "Ignite Mentoring UWA",
+      "categories": [
+        "volunteering"
+      ],
+      "keywords": "Ignite Mentoring UWA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/ignite-mentoring-uwa",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0taWduaXRlLW1lbnRvcmluZy0xNTY3NjQ5MzYzLmpwZw==?w=80&h=80&fit=fit&s=7893b2a9e8c20034b2e3634fca0db8ad"
+    },
+    {
+      "id": "uwa-indonesian-students-society",
+      "universityId": "uwa",
+      "name": "Indonesian Students Society",
+      "categories": [
+        "international"
+      ],
+      "keywords": "INDOSS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/indonesian-students-society",
+      "imageUrl": ""
+    },
+    {
+      "id": "uwa-institute-of-electrical-and-electronics-engineering",
+      "universityId": "uwa",
+      "name": "Institute of Electrical and Electronics Engineering",
+      "categories": [
+        "academic",
+        "engineering",
+        "guild"
+      ],
+      "keywords": "IEEE",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/institute-of-electrical-and-electronics-engineering",
+      "imageUrl": ""
+    },
+    {
+      "id": "uwa-institution-of-mechanical-engineers-uwa-student-chapter",
+      "universityId": "uwa",
+      "name": "Institution of Mechanical Engineers - UWA Student Chapter",
+      "categories": [
+        "engineering"
+      ],
+      "keywords": "IMechE UWA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/institution-of-mechanical-engineers-uwa-student-chapter",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy91d2EtKDEpLmpwZw==?w=80&h=80&fit=fit&s=35d7ad0af4e5522266000001aadba322"
+    },
+    {
+      "id": "uwa-it-girls-uwa",
+      "universityId": "uwa",
+      "name": "it girls UWA",
+      "categories": [
+        "academic",
+        "creative",
+        "hobby activities",
+        "multicultural",
+        "social",
+        "sports and fitness",
+        "volunteering"
+      ],
+      "keywords": "it girls",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/it-girls-uwa",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy95b3VyLXBhcmFncmFwaC10ZXh0LnBuZw==?w=80&h=80&fit=fit&s=55c18e2ed554db7f47412b54aa236fba"
+    },
+    {
+      "id": "uwa-korean-cultural-club",
+      "universityId": "uwa",
+      "name": "Korean Cultural Club",
+      "categories": [
+        "social"
+      ],
+      "keywords": "KCC",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/korean-cultural-club",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9wbmctaW1hZ2UucG5n?w=80&h=80&fit=fit&s=6a02eed67d35c85030123b54081e18ed"
+    },
+    {
+      "id": "uwa-malaysian-cultural-society",
+      "universityId": "uwa",
+      "name": "Malaysian Cultural Society",
+      "categories": [
+        "guild",
+        "hobby activities",
+        "multicultural",
+        "social"
+      ],
+      "keywords": "MCS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/malaysian-cultural-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9zY3JlZW5zaG90LTIwMjItMDEtMTktYXQtMTEuMTYuMTMtcG0ucG5n?w=80&h=80&fit=fit&s=161a4120b3e3b75dda0d61401783d9b0"
+    },
+    {
+      "id": "uwa-meeting-of-bruthas-and-sistas",
+      "universityId": "uwa",
+      "name": "Meeting of Bruthas and Sistas",
+      "categories": [
+        "Uncategorised"
+      ],
+      "keywords": "MOBS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/meeting-of-bruthas-and-sistas",
+      "imageUrl": ""
+    },
+    {
+      "id": "uwa-multicultural-students-union",
+      "universityId": "uwa",
+      "name": "Multicultural Students Union",
+      "categories": [
+        "international"
+      ],
+      "keywords": "MSU",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/multicultural-students-union",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tbXVsdGljdWx0dXJhbC1zdHVkZW50cy11bmlvbi0xNTY3NjQ5Mzg4LmpwZw==?w=80&h=80&fit=fit&s=2a6bdaa645ea30ce94ffa0d7e1e4f6ab"
+    },
+    {
+      "id": "uwa-music-students-society",
+      "universityId": "uwa",
+      "name": "Music Students' Society",
+      "categories": [
+        "faculty societies"
+      ],
+      "keywords": "MSS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/music-students-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9tc3MtbG9nby0yMDIwLWZpbmFsLW5vdGV4dC1iaWctc3BhY2VkLnBuZw==?w=80&h=80&fit=fit&s=78fad206811f47f70e68342f4d1ecb06"
+    },
+    {
+      "id": "uwa-optometry-students-western-australia",
+      "universityId": "uwa",
+      "name": "Optometry Students Western Australia",
+      "categories": [
+        "Uncategorised"
+      ],
+      "keywords": "OSWA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/optometry-students-western-australia",
+      "imageUrl": ""
+    },
+    {
+      "id": "uwa-overseas-christian-fellowship-perth",
+      "universityId": "uwa",
+      "name": "Overseas Christian Fellowship (Perth)",
+      "categories": [
+        "faith"
+      ],
+      "keywords": "OCF (Perth)",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/overseas-christian-fellowship-perth",
+      "imageUrl": ""
+    },
+    {
+      "id": "uwa-palestinian-cultural-society-uwa",
+      "universityId": "uwa",
+      "name": "Palestinian Cultural Society UWA",
+      "categories": [
+        "arts",
+        "guild",
+        "multicultural",
+        "music and performance",
+        "political",
+        "social"
+      ],
+      "keywords": "PCS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/palestinian-cultural-society-uwa",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9wY3N1d2EtbG9nby5wbmc=?w=80&h=80&fit=fit&s=b7f65f1a23c013a984eef6fc7682aee1"
+    },
+    {
+      "id": "uwa-perth-international-uwa",
+      "universityId": "uwa",
+      "name": "Perth International UWA",
+      "categories": [
+        "multicultural",
+        "social"
+      ],
+      "keywords": "PI",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/perth-international-uwa",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9oaWdoLXF1YWxpdHktcGktbG9nby5wbmc=?w=80&h=80&fit=fit&s=08c148b61745f759b0774a504824a495"
+    },
+    {
+      "id": "uwa-podiatric-medicine-students-society",
+      "universityId": "uwa",
+      "name": "Podiatric Medicine Students' Society",
+      "categories": [
+        "postgraduate"
+      ],
+      "keywords": "PMSS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/podiatric-medicine-students-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tcG1zcy0xNTY3NjQ5NDA3LmpwZw==?w=80&h=80&fit=fit&s=16e0ddd07fd012a64a0227e82cdac4f3"
+    },
+    {
+      "id": "uwa-population-health-postgraduate-society",
+      "universityId": "uwa",
+      "name": "Population Health Postgraduate Society",
+      "categories": [
+        "Uncategorised"
+      ],
+      "keywords": "PHPS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/population-health-postgraduate-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9waHBzLWxvZ28tMTcyMTAwNDQwNi5qcGc=?w=80&h=80&fit=fit&s=febb2da2108632adfebf20ca29c9fac1"
+    },
+    {
+      "id": "uwa-postgraduate-pathology-association",
+      "universityId": "uwa",
+      "name": "Postgraduate Pathology Association",
+      "categories": [
+        "postgraduate",
+        "science",
+        "social"
+      ],
+      "keywords": "PPa",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/postgraduate-pathology-association",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tcHBhLWxvZ28tMTU2NzY0OTQxMi5qcGc=?w=80&h=80&fit=fit&s=8b4e7d9e80a1e708550a84559242c59e"
+    },
+    {
+      "id": "uwa-progressive-energy-strategies",
+      "universityId": "uwa",
+      "name": "Progressive Energy Society",
+      "categories": [
+        "engineering",
+        "science"
+      ],
+      "keywords": "PES",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/progressive-energy-strategies",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy91bnRpdGxlZC1kZXNpZ24tKDEpLnBuZw==?w=80&h=80&fit=fit&s=81cc7da4d0a73c79efb2c5532dec5bc9"
+    },
+    {
+      "id": "uwa-punjabi-society-of-western-australia",
+      "universityId": "uwa",
+      "name": "Punjabi Society of Western Australia",
+      "categories": [
+        "multicultural"
+      ],
+      "keywords": "PBUWA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/punjabi-society-of-western-australia",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9iYW5uZXJzL3BidXdhLWxvZ28taGQucG5n?w=80&h=80&fit=fit&s=dc286b247d6e6a29ca247bc62dc041bd"
+    },
+    {
+      "id": "uwa-quantitative-finance-uwa",
+      "universityId": "uwa",
+      "name": "Quantitative Finance UWA",
+      "categories": [
+        "academic",
+        "business"
+      ],
+      "keywords": "QFIN UWA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/quantitative-finance-uwa",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9xZmluLWxvZ28ucG5n?w=80&h=80&fit=fit&s=8b87fdb6b5a0c0d01415fcf3934fd30c"
+    },
+    {
+      "id": "uwa-robogals-perth",
+      "universityId": "uwa",
+      "name": "Robogals Perth",
+      "categories": [
+        "culture"
+      ],
+      "keywords": "Robogals Perth",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/robogals-perth",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9wZXJ0aC5wbmc=?w=80&h=80&fit=fit&s=9a573578afa848813ffff2dfa31d778d"
+    },
+    {
+      "id": "uwa-sanskriti-association-for-indian-culture-and-student-support",
+      "universityId": "uwa",
+      "name": "Sanskriti-Association for Indian Culture and Student Support",
+      "categories": [
+        "multicultural"
+      ],
+      "keywords": "Sanskriti-Association for Indian Culture and Student Support",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/sanskriti-association-for-indian-culture-and-student-support",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy93aGF0c2FwcC1pbWFnZS0yMDI0LTA4LTE4LWF0LTIyLjExLjQyXzQ2MWMyNmU5LmpwZw==?w=80&h=80&fit=fit&s=ebdb18c64ca34b1c09258a90962951e7"
+    },
+    {
+      "id": "uwa-saudi-students-association-in-uwa",
+      "universityId": "uwa",
+      "name": "Saudi Students Association in UWA",
+      "categories": [
+        "Uncategorised"
+      ],
+      "keywords": "Saudi Students Association in UWA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/saudi-students-association-in-uwa",
+      "imageUrl": ""
+    },
+    {
+      "id": "uwa-science-union",
+      "universityId": "uwa",
+      "name": "Science Union",
+      "categories": [
+        "academic",
+        "science",
+        "social",
+        "volunteering"
+      ],
+      "keywords": "SU",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/science-union",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tX3NjaWVuY2UtdW5pb24tMTU2NzY0OTI4NC5qcGc=?w=80&h=80&fit=fit&s=4e09a31f0914f94bb9e1aabb77fd17a8"
+    },
+    {
+      "id": "uwa-sila-circles-uwa",
+      "universityId": "uwa",
+      "name": "Sila Circles UWA",
+      "categories": [
+        "Uncategorised"
+      ],
+      "keywords": "SCUWA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/sila-circles-uwa",
+      "imageUrl": ""
+    },
+    {
+      "id": "uwa-sober",
+      "universityId": "uwa",
+      "name": "Sober?",
+      "categories": [
+        "social"
+      ],
+      "keywords": "Sober?",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/sober",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLXNpbmdsZS1saW5lLXdoaXRlLW9uLXJlZC5wbmc=?w=80&h=80&fit=fit&s=25ef4d793e0df356bb0c135419928f2c"
+    },
+    {
+      "id": "uwa-social-work-student-association",
+      "universityId": "uwa",
+      "name": "Social Work Student Association",
+      "categories": [
+        "social",
+        "academic"
+      ],
+      "keywords": "SWSA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/social-work-student-association",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9zd3NhLWxvZ28uanBlZw==?w=80&h=80&fit=fit&s=1755b3fe8e13993c19a30ab48bd225b7"
+    },
+    {
+      "id": "uwa-socialist-alternative",
+      "universityId": "uwa",
+      "name": "Socialist Alternative",
+      "categories": [
+        "political"
+      ],
+      "keywords": "SA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/socialist-alternative",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tc29jaWFsaXN0LWFsdGVybmF0aXZlLTE1Njc2NDk0MjkuanBn?w=80&h=80&fit=fit&s=db9a60a911deecea0b27c88451cd9550"
+    },
+    {
+      "id": "uwa-society-of-petroleum-engineers-uwa-student-chapter-the",
+      "universityId": "uwa",
+      "name": "Society of Petroleum Engineers UWA Student Chapter, The",
+      "categories": [
+        "engineering"
+      ],
+      "keywords": "SPE UWA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/society-of-petroleum-engineers-uwa-student-chapter-the",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tc3BlLTE1Njc2NDk0MzQuanBn?w=80&h=80&fit=fit&s=4cd3438812fde6df3b33e1c2a9b197b3"
+    },
+    {
+      "id": "uwa-sri-lankan-australian-youth-association",
+      "universityId": "uwa",
+      "name": "Sri Lankan Australian Youth Association",
+      "categories": [
+        "multicultural"
+      ],
+      "keywords": "SLAYA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/sri-lankan-australian-youth-association",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9oZF9sb2dvLTIucG5n?w=80&h=80&fit=fit&s=d364bc2c153621a06de6d30ac9530b6d"
+    },
+    {
+      "id": "uwa-student-environmental-engineering-club",
+      "universityId": "uwa",
+      "name": "Student Environmental Engineering Club",
+      "categories": [
+        "engineering"
+      ],
+      "keywords": "SEEC",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/student-environmental-engineering-club",
+      "imageUrl": ""
+    },
+    {
+      "id": "uwa-students-for-palestine",
+      "universityId": "uwa",
+      "name": "Students for Palestine",
+      "categories": [
+        "Uncategorised"
+      ],
+      "keywords": "SFP",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/students-for-palestine",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9zZnAtbG9nby0yLnBuZw==?w=80&h=80&fit=fit&s=66a2551472fdc21e5d70b4d77a81654f"
+    },
+    {
+      "id": "uwa-students-for-refugees-uwa",
+      "universityId": "uwa",
+      "name": "Students for Refugees UWA",
+      "categories": [
+        "political"
+      ],
+      "keywords": "Students for Refugees UWA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/students-for-refugees-uwa",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9jb3B5LW9mLXN0dWRlbnRzLWZvci1yZWZ1Z2Vlcy1sb2dvLWZpbmFsLSgyKS5wbmc=?w=80&h=80&fit=fit&s=4c061c6da80950ef15fc4ea963e0d24e"
+    },
+    {
+      "id": "uwa-students-of-biological-sciences",
+      "universityId": "uwa",
+      "name": "Students of Biological Sciences",
+      "categories": [
+        "Uncategorised"
+      ],
+      "keywords": "SOBS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/students-of-biological-sciences",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLXNvYnMuanBn?w=80&h=80&fit=fit&s=cd1622b95c6c1c7616f36181e6f3908a"
+    },
+    {
+      "id": "uwa-students-of-natural-and-agricultural-sciences",
+      "universityId": "uwa",
+      "name": "Students of Natural and Agricultural Sciences",
+      "categories": [
+        "academic",
+        "science",
+        "social"
+      ],
+      "keywords": "SNAGS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/students-of-natural-and-agricultural-sciences",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9ncm91cC1jaGF0LWljb25zLS0tMjAyNC0oNCkucG5n?w=80&h=80&fit=fit&s=1b75480e859af4b1c9a62f8f05f7af8b"
+    },
+    {
+      "id": "uwa-teach-learn-grow-x-uwa",
+      "universityId": "uwa",
+      "name": "Teach Learn Grow x UWA",
+      "categories": [
+        "community"
+      ],
+      "keywords": "TLGxUWA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/teach-learn-grow-x-uwa",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy90bGctbG9nby13aXRob3V0LWNhcHRpb24tZ3JlZW4tKDMpLnBuZw==?w=80&h=80&fit=fit&s=fc20b7943dac00a0b80b2179ec98b94c"
+    },
+    {
+      "id": "uwa-tedxuwa",
+      "universityId": "uwa",
+      "name": "TEDxUWA",
+      "categories": [
+        "social"
+      ],
+      "keywords": "TEDxUWA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/tedxuwa",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tdGVkeHV3YS0xNTY3NjQ5NDQxLmpwZw==?w=80&h=80&fit=fit&s=812d78d220c58fc9d4c16078ad6da29a"
+    },
+    {
+      "id": "uwa-thai-cultural-association",
+      "universityId": "uwa",
+      "name": "Thai Cultural Association",
+      "categories": [
+        "multicultural"
+      ],
+      "keywords": "TCA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/thai-cultural-association",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy90Y2Etc3F1YXJlLWxvZ28ucG5n?w=80&h=80&fit=fit&s=88ca3ee1a85dadf3991896d180082a8a"
+    },
+    {
+      "id": "uwa-the-civil-society",
+      "universityId": "uwa",
+      "name": "The Civil Society",
+      "categories": [
+        "academic",
+        "engineering"
+      ],
+      "keywords": "TCS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/the-civil-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy90Y3MtMTY1NzY0NzUzOS5wbmc=?w=80&h=80&fit=fit&s=b30cf2a9d1f131b40698507f12b9ea1b"
+    },
+    {
+      "id": "uwa-the-japanese-studies-society-of-uwa",
+      "universityId": "uwa",
+      "name": "The Japanese Studies Society of UWA",
+      "categories": [
+        "culture",
+        "international"
+      ],
+      "keywords": "JSS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/the-japanese-studies-society-of-uwa",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9qc3MtbG9nby5wbmc=?w=80&h=80&fit=fit&s=25eed8534436a305cd34490b5b80248e"
+    },
+    {
+      "id": "uwa-the-philosophy-politics-and-economics-union-of-uwa",
+      "universityId": "uwa",
+      "name": "The Philosophy, Politics, and Economics Union of UWA",
+      "categories": [
+        "academic",
+        "social"
+      ],
+      "keywords": "PPE Union",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/the-philosophy-politics-and-economics-union-of-uwa",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sYXJnZS1wcGUtY3Jlc3QtLS1zdGFuZGFyZC1wbmcucG5n?w=80&h=80&fit=fit&s=b1dd6cc8e83c4cb15410ee55deac6b7b"
+    },
+    {
+      "id": "uwa-the-scicomm-collective",
+      "universityId": "uwa",
+      "name": "The SciComm Collective",
+      "categories": [
+        "Uncategorised"
+      ],
+      "keywords": "The SciComm Collective",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/the-scicomm-collective",
+      "imageUrl": ""
+    },
+    {
+      "id": "uwa-the-univeristy-human-resources-club",
+      "universityId": "uwa",
+      "name": "The University Human Resources Club",
+      "categories": [
+        "business"
+      ],
+      "keywords": "UHRC",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/the-univeristy-human-resources-club",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLi1ibHVlLWJnLXdpdGgtd2hpdGUtY29udG91ci0oMzAweDMwMCkucG5n?w=80&h=80&fit=fit&s=2fd9dd013677f94e8f3dfee0fe3c776b"
+    },
+    {
+      "id": "uwa-the-university-science-fiction-and-fantasy-association",
+      "universityId": "uwa",
+      "name": "The University Science Fiction and Fantasy Association",
+      "categories": [
+        "hobby activities",
+        "social"
+      ],
+      "keywords": "UniSFA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/the-university-science-fiction-and-fantasy-association",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tdW5pc2ZhLWxvZ28tdmVjdG9yLTIwMTktMTU2NzY0OTQ2MC5qcGc=?w=80&h=80&fit=fit&s=cf4913910efb4b75a50debeb6ec25899"
+    },
+    {
+      "id": "uwa-turkish-unity-and-recognition-of-kultur-club",
+      "universityId": "uwa",
+      "name": "Turkish Unity and Recognition of Kultur Club",
+      "categories": [
+        "multicultural"
+      ],
+      "keywords": "TURK",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/turkish-unity-and-recognition-of-kultur-club",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLTE3Nzg3Mzc4ODguanBn?w=80&h=80&fit=fit&s=667cd81ca878634ec77ef1da9bcaa887"
+    },
+    {
+      "id": "uwa-uni-camp-for-kids",
+      "universityId": "uwa",
+      "name": "Uni Camp for Kids",
+      "categories": [
+        "volunteering"
+      ],
+      "keywords": "UCFK",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uni-camp-for-kids",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tdW5pY2FtcC0xNTY3NjQ5NDU5LmpwZw==?w=80&h=80&fit=fit&s=7588a192c55006f91f88862dfbab2222"
+    },
+    {
+      "id": "uwa-unigames",
+      "universityId": "uwa",
+      "name": "Unigames",
+      "categories": [
+        "hobby activities",
+        "social"
+      ],
+      "keywords": "Unigames",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/unigames",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy8yMDI2LXN0aWNrZXItY2lyY2xlLnBuZw==?w=80&h=80&fit=fit&s=e0a91f0fe3872553f091b28d92aaae1b"
+    },
+    {
+      "id": "uwa-university-computer-club-the",
+      "universityId": "uwa",
+      "name": "University Computer Club, The",
+      "categories": [
+        "academic",
+        "engineering",
+        "science",
+        "social"
+      ],
+      "keywords": "UCC",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/university-computer-club-the",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy91Y2MtbG9nby5zdmcucG5n?w=80&h=80&fit=fit&s=0259c19aef3b1edf423b687738cfe1a6"
+    },
+    {
+      "id": "uwa-university-craft-brewers-association",
+      "universityId": "uwa",
+      "name": "University Craft Brewers' Association",
+      "categories": [
+        "social"
+      ],
+      "keywords": "UCBA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/university-craft-brewers-association",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9uZXctbG9nby5qcGc=?w=80&h=80&fit=fit&s=279601ec5fed04019672e62f00f89d68"
+    },
+    {
+      "id": "uwa-university-dental-students-society",
+      "universityId": "uwa",
+      "name": "University Dental Students' Society",
+      "categories": [
+        "faculty societies"
+      ],
+      "keywords": "UDSS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/university-dental-students-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tdWRzcy0xNTY3NjQ5NDU1LmpwZw==?w=80&h=80&fit=fit&s=9daa21620da985ab5d30c8b04c244585"
+    },
+    {
+      "id": "uwa-university-dramatic-society",
+      "universityId": "uwa",
+      "name": "University Dramatic Society",
+      "categories": [
+        "arts"
+      ],
+      "keywords": "UDS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/university-dramatic-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tdWRzX2xvZ28tMTU2NzY0OTQ1My5qcGc=?w=80&h=80&fit=fit&s=f11e8bdcfd04cfce546b54620a25a813"
+    },
+    {
+      "id": "uwa-university-engineers-club",
+      "universityId": "uwa",
+      "name": "University Engineers' Club",
+      "categories": [
+        "academic",
+        "engineering",
+        "postgraduate",
+        "science",
+        "social",
+        "volunteering"
+      ],
+      "keywords": "UEC",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/university-engineers-club",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tdW5pdmVyc3R5LWVuZ2luZWVycy1jbHViLTE1Njc2NDk0NjYuanBn?w=80&h=80&fit=fit&s=f8fed530206c7febccc51dffd63a33da"
+    },
+    {
+      "id": "uwa-university-nuclear-society-of-western-australia",
+      "universityId": "uwa",
+      "name": "University Nuclear Society of Western Australia",
+      "categories": [
+        "engineering",
+        "science"
+      ],
+      "keywords": "UNSWA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/university-nuclear-society-of-western-australia",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy91bnRpdGxlZC1kZXNpZ24tKDEwKS5wbmc=?w=80&h=80&fit=fit&s=78a68f78153fd071654ead51887d42bd"
+    },
+    {
+      "id": "uwa-university-physics-society",
+      "universityId": "uwa",
+      "name": "University Physics Society",
+      "categories": [
+        "academic",
+        "hobby activities",
+        "science",
+        "social"
+      ],
+      "keywords": "UPS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/university-physics-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy91cHNsb2dvdXdhLTE1ODE4NTE4ODQucG5n?w=80&h=80&fit=fit&s=cd762efa6e2587565949d8942dc97871"
+    },
+    {
+      "id": "uwa-uwa-accounting-association",
+      "universityId": "uwa",
+      "name": "UWA Accounting Association",
+      "categories": [
+        "business"
+      ],
+      "keywords": "UWA-AA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-accounting-association",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9hcnRib2FyZC0yLWNvcHktNS0zeC0tLWNvcHkucG5n?w=80&h=80&fit=fit&s=83c6f12a8f94e4cdd74d6569a1d7e5b3"
+    },
+    {
+      "id": "uwa-uwa-anime-club",
+      "universityId": "uwa",
+      "name": "UWA Anime Club",
+      "categories": [
+        "hobby activities",
+        "social"
+      ],
+      "keywords": "UWAnime",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-anime-club",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLW1lcmdlZC1zcGFjZWQucG5n?w=80&h=80&fit=fit&s=8779c2248ed3913e32bd8ea171d93c31"
+    },
+    {
+      "id": "uwa-uwa-artificial-intelligence-club",
+      "universityId": "uwa",
+      "name": "UWA Artificial Intelligence Club",
+      "categories": [
+        "science"
+      ],
+      "keywords": "UWA AI CLUB",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-artificial-intelligence-club",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9haS1jbHViLXNxdWFyZS1sb2dvLnBuZw==?w=80&h=80&fit=fit&s=22e1c4067fafb7649bd17593ea91f713"
+    },
+    {
+      "id": "uwa-uwa-astronomy-club",
+      "universityId": "uwa",
+      "name": "UWA Astronomy Club",
+      "categories": [
+        "Uncategorised"
+      ],
+      "keywords": "UWA Astronomy Club",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-astronomy-club",
+      "imageUrl": ""
+    },
+    {
+      "id": "uwa-uwa-audiology-society",
+      "universityId": "uwa",
+      "name": "UWA Audiology Society",
+      "categories": [
+        "academic"
+      ],
+      "keywords": "UWAAS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-audiology-society",
+      "imageUrl": ""
+    },
+    {
+      "id": "uwa-uwa-bouldering-club",
+      "universityId": "uwa",
+      "name": "UWA Bouldering Club",
+      "categories": [
+        "hobby activities",
+        "sports and fitness"
+      ],
+      "keywords": "BOC",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-bouldering-club",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9ib2MtbG9nby5qcGc=?w=80&h=80&fit=fit&s=da1d525bcbba64d2faf9d56349ef34f6"
+    },
+    {
+      "id": "uwa-bubble-tea-society",
+      "universityId": "uwa",
+      "name": "UWA Bubble Tea Society",
+      "categories": [
+        "social"
+      ],
+      "keywords": "UWA BBTS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/bubble-tea-society",
+      "imageUrl": ""
+    },
+    {
+      "id": "uwa-uwa-car-appreciation-society",
+      "universityId": "uwa",
+      "name": "UWA Car Appreciation Society",
+      "categories": [
+        "social"
+      ],
+      "keywords": "UCAS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-car-appreciation-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLTE1OTcyMjI3NjcucG5n?w=80&h=80&fit=fit&s=0195c7278464d18052cd765f1d823985"
+    },
+    {
+      "id": "uwa-uwa-catholic-society",
+      "universityId": "uwa",
+      "name": "UWA Catholic Society",
+      "categories": [
+        "faith"
+      ],
+      "keywords": "UCS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-catholic-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy8yNzU2MTE1OTNfMzg0MjA2OTkzNzA5ODE5XzY3NDExMDQ2MTIyODAwODEwM19uLnBuZw==?w=80&h=80&fit=fit&s=7329eac7aa2f7443804f07135ce0747f"
+    },
+    {
+      "id": "uwa-uwa-cheer-and-dance",
+      "universityId": "uwa",
+      "name": "UWA Cheer and Dance",
+      "categories": [
+        "creative",
+        "hobby activities",
+        "music and performance",
+        "sports and fitness"
+      ],
+      "keywords": "UWACAD",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-cheer-and-dance",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy84NTE4NDQzOV8yNTA1NjI1Nzg5NTQ5MDU5Xzc5MzI4NTcyNjkxOTA5MTgxNDRfbi5wbmc=?w=80&h=80&fit=fit&s=43564ce3211fcc924e4de8a4f2ec8a2a"
+    },
+    {
+      "id": "uwa-uwa-chess-association",
+      "universityId": "uwa",
+      "name": "UWA Chess Association",
+      "categories": [
+        "culture"
+      ],
+      "keywords": "UWA Chess Association",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-chess-association",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLnBuZw==?w=80&h=80&fit=fit&s=58af158f05fb6988a3bd5b6d63cb2498"
+    },
+    {
+      "id": "uwa-uwa-chinese-students-and-scholars-association",
+      "universityId": "uwa",
+      "name": "UWA Chinese Students and Scholars Association",
+      "categories": [
+        "international"
+      ],
+      "keywords": "UWA CSSA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-chinese-students-and-scholars-association",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tY2hpbmVzZS1zdHVkZW50cy1hbmQtc2Nob2xhcnMtYXNvb2NpYXRpb24tMTU2NzY0OTMyMi5qcGc=?w=80&h=80&fit=fit&s=ef63c5299f664ee53fbc5b3a6a85dc7f"
+    },
+    {
+      "id": "uwa-uwa-christian-union-the",
+      "universityId": "uwa",
+      "name": "UWA Christian Union, The",
+      "categories": [
+        "faith"
+      ],
+      "keywords": "CU",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-christian-union-the",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tY3UtbG9nby5qcGc=?w=80&h=80&fit=fit&s=cd023b59a578c83e40c5633e93aa72cd"
+    },
+    {
+      "id": "uwa-uwa-classics-and-ancient-history-society",
+      "universityId": "uwa",
+      "name": "UWA Classics and Ancient History Society",
+      "categories": [
+        "academic",
+        "arts",
+        "social"
+      ],
+      "keywords": "CLANSOC",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-classics-and-ancient-history-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy91bnRpdGxlZF9hcnR3b3JrLTUtKDIpLnBuZw==?w=80&h=80&fit=fit&s=39c68150a7c60cae8a79a6f0a37310c0"
+    },
+    {
+      "id": "uwa-uwa-consulting-society",
+      "universityId": "uwa",
+      "name": "UWA Consulting Society",
+      "categories": [
+        "business"
+      ],
+      "keywords": "UWACS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-consulting-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tY29uc3VsdGluZy1zb2NpZXR5LmpwZw==?w=80&h=80&fit=fit&s=71859d8afe1dff79418f3adc2b5d33f5"
+    },
+    {
+      "id": "uwa-uwa-craft-club",
+      "universityId": "uwa",
+      "name": "UWA Craft Club",
+      "categories": [
+        "hobby activities",
+        "creative"
+      ],
+      "keywords": "UWA Craft Club",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-craft-club",
+      "imageUrl": ""
+    },
+    {
+      "id": "uwa-uwa-debating-union",
+      "universityId": "uwa",
+      "name": "UWA Debating Union",
+      "categories": [
+        "sports & fitness"
+      ],
+      "keywords": "UWADU",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-debating-union",
+      "imageUrl": ""
+    },
+    {
+      "id": "uwa-uwa-master-of-pharmacy-society",
+      "universityId": "uwa",
+      "name": "UWA Doctor of Pharmacy Society",
+      "categories": [
+        "postgraduate",
+        "science"
+      ],
+      "keywords": "UDOPS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-master-of-pharmacy-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy8tbmV3LXV3YW1wcy1sb2dvLWZpbmFsLTE1NzE5NjMwNzguanBn?w=80&h=80&fit=fit&s=22b6200d3f8399ea593e6846647ab210"
+    },
+    {
+      "id": "uwa-uers",
+      "universityId": "uwa",
+      "name": "UWA E-Rideables Society",
+      "categories": [
+        "hobby activities"
+      ],
+      "keywords": "UERS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uers",
+      "imageUrl": ""
+    },
+    {
+      "id": "uwa-uwa-esports",
+      "universityId": "uwa",
+      "name": "UWA Esports",
+      "categories": [
+        "hobby activities",
+        "social",
+        "sports and fitness"
+      ],
+      "keywords": "UWAES",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-esports",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvXzIucG5n?w=80&h=80&fit=fit&s=d0f8030a3845319bcdb3b862033edae2"
+    },
+    {
+      "id": "uwa-uwa-filipino-australian-society",
+      "universityId": "uwa",
+      "name": "UWA Filipino-Australian Society",
+      "categories": [
+        "multicultural"
+      ],
+      "keywords": "Fil-Aus",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-filipino-australian-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9pbWdfNTYxMS0xNzY5NDkwMDIzLnBuZw==?w=80&h=80&fit=fit&s=d20fdc2b14fdc1bbb41c2b38258a952d"
+    },
+    {
+      "id": "uwa-uwa-film-society",
+      "universityId": "uwa",
+      "name": "UWA Film Society",
+      "categories": [
+        "arts",
+        "creative",
+        "hobby activities"
+      ],
+      "keywords": "UWA FilmSoc",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-film-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9ibGFjay1sb2dvLTcyZHBpLnBuZw==?w=80&h=80&fit=fit&s=26231d02b6bb106662ea5baecd0f9961"
+    },
+    {
+      "id": "uwa-uwa-french-club",
+      "universityId": "uwa",
+      "name": "UWA French Club",
+      "categories": [
+        "arts",
+        "multicultural"
+      ],
+      "keywords": "UWA French Club",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-french-club",
+      "imageUrl": ""
+    },
+    {
+      "id": "uwa-uwa-german-club",
+      "universityId": "uwa",
+      "name": "UWA German Club",
+      "categories": [
+        "arts",
+        "multicultural",
+        "social"
+      ],
+      "keywords": "UWAGC",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-german-club",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9uZXctc3RpY2tlci1kZXNpZ25zLWJpZy5wbmc=?w=80&h=80&fit=fit&s=034a0c4077926932fafd8dfb84fd1759"
+    },
+    {
+      "id": "uwa-uwa-harry-potter-society",
+      "universityId": "uwa",
+      "name": "UWA Harry Potter Society",
+      "categories": [
+        "hobby activities"
+      ],
+      "keywords": "uwahps",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-harry-potter-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tdXdhaHBzLWxvZ28uanBn?w=80&h=80&fit=fit&s=ce592a415d550b0d8826434ad4b98bf4"
+    },
+    {
+      "id": "uwa-uwa-international-law-society",
+      "universityId": "uwa",
+      "name": "UWA International Law Society",
+      "categories": [
+        "arts"
+      ],
+      "keywords": "ILS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-international-law-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9nbWFpbC1kcC5wbmc=?w=80&h=80&fit=fit&s=4b61fdb6318a5a70b6de12d6adc7e83c"
+    },
+    {
+      "id": "uwa-uwa-italian-club",
+      "universityId": "uwa",
+      "name": "UWA Italian Club",
+      "categories": [
+        "multicultural"
+      ],
+      "keywords": "UWA Italian Club",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-italian-club",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy83MDcyNDUyMl8yMjQ3ODc4MjMxOTc3ODMxXzgzNjE4NzE1MzY1MjQ2MjM4NzJfby5wbmc=?w=80&h=80&fit=fit&s=8a13204191879c9d2bd1122b35e8793f"
+    },
+    {
+      "id": "uwa-uwa-labor-club",
+      "universityId": "uwa",
+      "name": "UWA Labor Club",
+      "categories": [
+        "arts",
+        "political",
+        "social",
+        "volunteering"
+      ],
+      "keywords": "UWA Labor Club",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-labor-club",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tbG9nby11d2EtbGFib3IuanBn?w=80&h=80&fit=fit&s=751f13b39d63ad1606a6894f446e2eee"
+    },
+    {
+      "id": "uwa-uwa-leisure-club-inc",
+      "universityId": "uwa",
+      "name": "UWA Leisure Social Club Inc",
+      "categories": [
+        "social"
+      ],
+      "keywords": "Leisure",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-leisure-club-inc",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tbGVpc3VyZS5qcGc=?w=80&h=80&fit=fit&s=401ae7b117bfd85d581d24d794b0f492"
+    },
+    {
+      "id": "uwa-uwa-marketing-society",
+      "universityId": "uwa",
+      "name": "UWA Marketing Society",
+      "categories": [
+        "business",
+        "creative"
+      ],
+      "keywords": "UWAMS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-marketing-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy91d2Ftcy1sb2dvcy5qcGc=?w=80&h=80&fit=fit&s=fcbc3ef962db25b1cfe42c3151e6f457"
+    },
+    {
+      "id": "uwa-uwa-mathematics-union",
+      "universityId": "uwa",
+      "name": "UWA Mathematics Union",
+      "categories": [
+        "academic",
+        "engineering"
+      ],
+      "keywords": "MU",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-mathematics-union",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9tdWxvZ28ucG5n?w=80&h=80&fit=fit&s=1673f45f0be4e7f1cdb5453288ab64e2"
+    },
+    {
+      "id": "uwa-uwa-microbiology-and-pathology-society",
+      "universityId": "uwa",
+      "name": "UWA Microbiology and Pathology Society",
+      "categories": [
+        "academic",
+        "science",
+        "social"
+      ],
+      "keywords": "MAPS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-microbiology-and-pathology-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLTE2OTU2NDQ2MzkuanBn?w=80&h=80&fit=fit&s=e96d3c7799e6a71accbe0326e2cf83d2"
+    },
+    {
+      "id": "uwa-uwa-muslim-students-association",
+      "universityId": "uwa",
+      "name": "UWA Muslim Students Association",
+      "categories": [
+        "faith"
+      ],
+      "keywords": "UWA MSA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-muslim-students-association",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy8xMjYzMTMxN18xMTQ1MTk1MDA1NDkxMzY2XzYwNTA3MzUwNDAyNzUyMDg2MTlfbi5wbmc=?w=80&h=80&fit=fit&s=eb96745a39ff22c1b4a6c76feaa0e1cd"
+    },
+    {
+      "id": "uwa-uwa-nepali-club",
+      "universityId": "uwa",
+      "name": "UWA Nepali Club",
+      "categories": [
+        "Uncategorised"
+      ],
+      "keywords": "UWA Nepali Club",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-nepali-club",
+      "imageUrl": ""
+    },
+    {
+      "id": "uwa-uwa-pakistani-society",
+      "universityId": "uwa",
+      "name": "UWA Pakistani Society",
+      "categories": [
+        "multicultural"
+      ],
+      "keywords": "UWA PAKSOC",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-pakistani-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tcGFrLXNvYy5qcGc=?w=80&h=80&fit=fit&s=5783e32dfb75f2ed5f239df0829ec188"
+    },
+    {
+      "id": "uwa-uwa-vegan-club",
+      "universityId": "uwa",
+      "name": "UWA People for Animal Welfare",
+      "categories": [
+        "political",
+        "social",
+        "volunteering"
+      ],
+      "keywords": "UWA PAW",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-vegan-club",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy91d2EtcGF3LWxvZ28ucG5n?w=80&h=80&fit=fit&s=8c1a91ed63614304495e1fe0148e29be"
+    },
+    {
+      "id": "uwa-uwa-persian-club",
+      "universityId": "uwa",
+      "name": "UWA Persian Club",
+      "categories": [
+        "social"
+      ],
+      "keywords": "UWAPER",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-persian-club",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9wZXJzaWFuLWNsdWIuanBlZw==?w=80&h=80&fit=fit&s=bd0cb505f57c6347a2647b08b6161bcf"
+    },
+    {
+      "id": "uwa-uwa-photography-club",
+      "universityId": "uwa",
+      "name": "UWA Photography Club",
+      "categories": [
+        "arts",
+        "creative",
+        "hobby activities"
+      ],
+      "keywords": "UWAPC",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-photography-club",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tdXdhLXBob3RvZ3JhcGh5LWNsdWItbG9nby5qcGc=?w=80&h=80&fit=fit&s=1209990e147595b213769ca0122546d5"
+    },
+    {
+      "id": "uwa-uwa-programming-competition-society",
+      "universityId": "uwa",
+      "name": "UWA Programming Competition Society",
+      "categories": [
+        "academic"
+      ],
+      "keywords": "PCS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-programming-competition-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLTE1ODMwMzEwODMucG5n?w=80&h=80&fit=fit&s=714bfa20a99eddd8f4861444921b408a"
+    },
+    {
+      "id": "uwa-uwa-psychology-society",
+      "universityId": "uwa",
+      "name": "UWA Psychology Society",
+      "categories": [
+        "arts",
+        "science",
+        "social",
+        "volunteering"
+      ],
+      "keywords": "PsySoc",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-psychology-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tcHN5c29jLmpwZw==?w=80&h=80&fit=fit&s=52642dbc7a1c102209111bd5becf407d"
+    },
+    {
+      "id": "uwa-uwa-robotics-club",
+      "universityId": "uwa",
+      "name": "UWA Robotics Club",
+      "categories": [
+        "engineering"
+      ],
+      "keywords": "URC",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-robotics-club",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy8yLjIuLWxvZ28tLS11cmMtKGNpcmNsZSkucG5n?w=80&h=80&fit=fit&s=d06aa5527383e87412dcba621c7ff3ad"
+    },
+    {
+      "id": "uwa-uwa-rollerblading-club",
+      "universityId": "uwa",
+      "name": "UWA Rollerblading Club",
+      "categories": [
+        "sports and fitness"
+      ],
+      "keywords": "UWARC",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-rollerblading-club",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy91d2FyYy1sb2dvMjAyNS1uby1iYWNrZ3JvdW5kLnBuZw==?w=80&h=80&fit=fit&s=87e623d705ff40fa0bcb4921b9da6054"
+    },
+    {
+      "id": "uwa-uwa-sikh-society",
+      "universityId": "uwa",
+      "name": "UWA Sikh Society",
+      "categories": [
+        "multicultural",
+        "faith",
+        "volunteering"
+      ],
+      "keywords": "Sikh Soc",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-sikh-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9zaWtoLXNvYy1sb2dvLnBuZw==?w=80&h=80&fit=fit&s=6082a6e5c582244de4ee731ec42d7f68"
+    },
+    {
+      "id": "uwa-uwa-singapore-students-society",
+      "universityId": "uwa",
+      "name": "UWA Singapore Students Society",
+      "categories": [
+        "international"
+      ],
+      "keywords": "SSS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-singapore-students-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tc3NzLmpwZw==?w=80&h=80&fit=fit&s=bf7a5ea9bbdb3494d0ffc81abd4f40fd"
+    },
+    {
+      "id": "uwa-uwa-slavic-society",
+      "universityId": "uwa",
+      "name": "UWA Slavic Society",
+      "categories": [
+        "multicultural"
+      ],
+      "keywords": "SLAVSOC",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-slavic-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9zbWFsbC5qcGc=?w=80&h=80&fit=fit&s=85aa66276237cb8963fcb7a95c7ad1a7"
+    },
+    {
+      "id": "uwa-uwa-society-for-creative-anachronism-the",
+      "universityId": "uwa",
+      "name": "UWA Society for Creative Anachronism, The",
+      "categories": [
+        "arts",
+        "hobby activities"
+      ],
+      "keywords": "UWASCA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-society-for-creative-anachronism-the",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tdXdhc2NhLmpwZw==?w=80&h=80&fit=fit&s=1c865b69103b0eaba4f8167c74a55a0c"
+    },
+    {
+      "id": "uwa-uwa-society-of-bangladeshi-culture",
+      "universityId": "uwa",
+      "name": "UWA Society of Bangladeshi Culture",
+      "categories": [
+        "multicultural"
+      ],
+      "keywords": "USBC",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-society-of-bangladeshi-culture",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9zbWFsbC5wbmc=?w=80&h=80&fit=fit&s=d9024f142efa039adc11146ac6aed851"
+    },
+    {
+      "id": "uwa-uwa-spanish-club",
+      "universityId": "uwa",
+      "name": "UWA Spanish Club",
+      "categories": [
+        "academic",
+        "arts",
+        "hobby activities",
+        "multicultural",
+        "social"
+      ],
+      "keywords": "UWASpC",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-spanish-club",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy91d2FzcGNfaWNvbi5wbmc=?w=80&h=80&fit=fit&s=e3eb3a4b763132f685ddc079fb84dd81"
+    },
+    {
+      "id": "uwa-uwa-speakers-union",
+      "universityId": "uwa",
+      "name": "UWA Speaker's Union",
+      "categories": [
+        "academic",
+        "guild",
+        "social"
+      ],
+      "keywords": "USUC",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-speakers-union",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9zY3JlZW4tc2hvdC0yMDI1LTAxLTE2LWF0LTEuNDEuMzgtcG0tY29weS5wbmc=?w=80&h=80&fit=fit&s=b1b71fcd0bff2bcac8588dd8d2609a10"
+    },
+    {
+      "id": "uwa-uwa-student-managed-investment-fund",
+      "universityId": "uwa",
+      "name": "UWA Student Managed Investment Fund",
+      "categories": [
+        "business"
+      ],
+      "keywords": "SMIF",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-student-managed-investment-fund",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy80LnBuZw==?w=80&h=80&fit=fit&s=979a1dc560a14c2688be393b97ce4f42"
+    },
+    {
+      "id": "uwa-uwa-tamil-cultural-society",
+      "universityId": "uwa",
+      "name": "UWA Tamil Cultural Society",
+      "categories": [
+        "multicultural"
+      ],
+      "keywords": "UWATCS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-tamil-cultural-society",
+      "imageUrl": ""
+    },
+    {
+      "id": "uwa-uwa-teaching-society",
+      "universityId": "uwa",
+      "name": "UWA Teaching Society",
+      "categories": [
+        "academic"
+      ],
+      "keywords": "TSoc",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-teaching-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9pbWdfMjI0OS5qcGc=?w=80&h=80&fit=fit&s=7507e9b5aef5b04fd77a269a8510e6cd"
+    },
+    {
+      "id": "uwa-uwa-undergraduate-philosophy-society",
+      "universityId": "uwa",
+      "name": "UWA Undergraduate Philosophy Society",
+      "categories": [
+        "academic",
+        "arts"
+      ],
+      "keywords": "UPhilSoc",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-undergraduate-philosophy-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy91cGhpbHNvYy1ndWlsZC5wbmc=?w=80&h=80&fit=fit&s=a9467d9005ccb3cfc44ebf1303c43dc6"
+    },
+    {
+      "id": "uwa-uwa-vietnamese-students-association",
+      "universityId": "uwa",
+      "name": "UWA Vietnamese Students Association",
+      "categories": [
+        "multicultural"
+      ],
+      "keywords": "VSA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-vietnamese-students-association",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9maW5hbGxvZ28tMTY0MzM1NDc0Ni5wbmc=?w=80&h=80&fit=fit&s=6f00c44f7b95da6277c5bf81f96b8f48"
+    },
+    {
+      "id": "uwa-uwa-women-in-business",
+      "universityId": "uwa",
+      "name": "UWA Women in Business",
+      "categories": [
+        "business"
+      ],
+      "keywords": "UWA WIB",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-women-in-business",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0td2liLTE1Njc2NDk1NTMuanBn?w=80&h=80&fit=fit&s=a28542654185b8f6317208c3de91cbdf"
+    },
+    {
+      "id": "uwa-uwa-young-engineers",
+      "universityId": "uwa",
+      "name": "UWA Young Engineers",
+      "categories": [
+        "engineering",
+        "science"
+      ],
+      "keywords": "UWAYE",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwa-young-engineers",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0tdXdheWUtMTU2NzY0OTU0OS5qcGc=?w=80&h=80&fit=fit&s=a23a832bf06dead419ed53e8edfc4dba"
+    },
+    {
+      "id": "uwa-uwalt",
+      "universityId": "uwa",
+      "name": "UWAlt Music",
+      "categories": [
+        "music and performance"
+      ],
+      "keywords": "UWAlt",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/uwalt",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9jbHViLWxvZ28ucG5n?w=80&h=80&fit=fit&s=db3840d197575899ec24fb523c98db17"
+    },
+    {
+      "id": "uwa-wa-medical-students-orchestra",
+      "universityId": "uwa",
+      "name": "WA Medical Students Orchestra",
+      "categories": [
+        "arts"
+      ],
+      "keywords": "WAMSO",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/wa-medical-students-orchestra",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0td2Ftc28tMTU2NzY0OTU1MS5qcGc=?w=80&h=80&fit=fit&s=6e4c4fcf70a716b9cbc460d8ca473b02"
+    },
+    {
+      "id": "uwa-wa-medical-students-society",
+      "universityId": "uwa",
+      "name": "WA Medical Students' Society",
+      "categories": [
+        "faculty societies"
+      ],
+      "keywords": "WAMSS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/wa-medical-students-society",
+      "imageUrl": ""
+    },
+    {
+      "id": "uwa-western-australian-golf-association-of-uwa",
+      "universityId": "uwa",
+      "name": "Western Australian Golf Association of UWA",
+      "categories": [
+        "business",
+        "sports and fitness"
+      ],
+      "keywords": "WAGA",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/western-australian-golf-association-of-uwa",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy93YWdhLnBuZw==?w=80&h=80&fit=fit&s=7b82ddb7291fdc0c868d26401c01c60f"
+    },
+    {
+      "id": "uwa-women-in-engineering-mathematical-sciences",
+      "universityId": "uwa",
+      "name": "Women in Engineering & Mathematical Sciences",
+      "categories": [
+        "engineering"
+      ],
+      "keywords": "WiEMS",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/women-in-engineering-mathematical-sciences",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy9sb2dvLS0td29tZW4taW4tZW5naW5lZXJpbmctMTU2NzY0OTU1Ni5qcGc=?w=80&h=80&fit=fit&s=a6853520b237a8791c9209c813cf04aa"
+    },
+    {
+      "id": "uwa-woolnough-society",
+      "universityId": "uwa",
+      "name": "Woolnough Society",
+      "categories": [
+        "science"
+      ],
+      "keywords": "Woolnough Society",
+      "profileUrl": "https://www.uwastudentguild.com/clubs/woolnough-society",
+      "imageUrl": "https://www.uwastudentguild.com/img/asset/bWFpbi9jbHVicy9sb2dvcy91d2FfbWVzYS1kZS10cmFiYWpvLTEuanBn?w=80&h=80&fit=fit&s=c4343e0297132fda717ff3e30710952f"
+    }
+  ]
+}

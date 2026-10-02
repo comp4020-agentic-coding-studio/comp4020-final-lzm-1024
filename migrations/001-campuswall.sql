@@ -1,0 +1,10 @@
+BEGIN;
+    CREATE TABLE users (id TEXT PRIMARY KEY,name TEXT NOT NULL,email TEXT NOT NULL UNIQUE,passwordHash TEXT NOT NULL,createdAt TEXT NOT NULL);
+    CREATE TABLE universities (id TEXT PRIMARY KEY,slug TEXT NOT NULL UNIQUE,name TEXT NOT NULL,shortName TEXT NOT NULL);
+    CREATE TABLE sessions (tokenHash TEXT PRIMARY KEY,userId TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,expiresAt INTEGER NOT NULL);
+    CREATE TABLE posters (id TEXT PRIMARY KEY,ownerId TEXT NOT NULL REFERENCES users(id),universityId TEXT NOT NULL REFERENCES universities(id),slug TEXT NOT NULL UNIQUE,status TEXT NOT NULL CHECK(status IN ('DRAFT','PUBLISHED')),content TEXT NOT NULL,publicData TEXT,version INTEGER NOT NULL DEFAULT 0,createdAt TEXT NOT NULL,updatedAt TEXT NOT NULL,publishedAt TEXT);
+    CREATE TABLE collaborators (posterId TEXT NOT NULL REFERENCES posters(id) ON DELETE CASCADE,userId TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,role TEXT NOT NULL DEFAULT 'EDITOR',createdAt TEXT NOT NULL,PRIMARY KEY(posterId,userId));
+    CREATE TABLE comments (id TEXT PRIMARY KEY,posterId TEXT NOT NULL REFERENCES posters(id) ON DELETE CASCADE,authorId TEXT NOT NULL REFERENCES users(id),body TEXT NOT NULL,createdAt TEXT NOT NULL,updatedAt TEXT NOT NULL);
+    CREATE TABLE legacy_archive (id TEXT PRIMARY KEY,record TEXT NOT NULL);
+    CREATE INDEX wall ON posters(universityId,status);
+    CREATE INDEX comment_poster ON comments(posterId,createdAt);

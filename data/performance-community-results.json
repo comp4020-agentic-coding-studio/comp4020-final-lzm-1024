@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-02",
+  "fixturePosters": 200,
+  "identicalResponse": true,
+  "reference": {
+    "samples": 20,
+    "queriesPerRequest": 401,
+    "p50ms": 17.3,
+    "p95ms": 32.76
+  },
+  "optimized": {
+    "samples": 20,
+    "queriesPerRequest": 2,
+    "p50ms": 1.1,
+    "p95ms": 1.68
+  },
+  "notes": "In-memory SQLite and actual current community map handler. Reference preserves the pre-change full-row/per-poster query path. Authentication is a local fixture; this is not production HTTP latency."
+}

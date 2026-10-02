@@ -1,0 +1,34 @@
+/* Motion adds feedback without hiding content or delaying an action. */
+:root{--motion-ease:cubic-bezier(.22,1,.36,1)}
+.motion-enabled button,.motion-enabled a.button,.motion-enabled .button{transition:background-color .2s ease,color .2s ease,border-color .2s ease,box-shadow .25s ease,translate .22s var(--motion-ease)}
+.motion-enabled :is(button,a.button,.button):not(:disabled):active{translate:0 1px}
+.motion-enabled :is(input,textarea,select){transition:border-color .2s ease,box-shadow .25s ease,background-color .2s ease}
+.motion-enabled :is(input,textarea,select):focus-visible{box-shadow:0 0 0 4px var(--accent-soft);outline:2px solid var(--accent);outline-offset:2px}
+.motion-enabled :is(.poster-card,.club-card,.dm-person,.game-table,.template-option){transition:box-shadow .3s var(--motion-ease),border-color .2s ease,translate .3s var(--motion-ease)}
+@media(hover:hover) and (pointer:fine){
+ .motion-enabled :is(button.primary,a.button):not(:disabled):hover{translate:0 -2px;box-shadow:0 7px 18px color-mix(in srgb,var(--accent) 16%,transparent)}
+ .motion-enabled :is(.poster-card,.club-card,.game-table,.dm-person):hover{translate:0 -4px;box-shadow:0 16px 32px #0000000c;border-color:var(--accent)}
+ .motion-enabled .poster-card :is(.photographic-poster,.poster){transform:perspective(1000px) rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg));transition:transform .18s ease-out;transform-origin:center}
+}
+.motion-enabled #header nav a{position:relative}
+.motion-enabled #header nav a::after{content:'';position:absolute;height:1px;background:currentColor;bottom:-5px;left:0;right:0;transform:scaleX(0);transform-origin:left;transition:transform .3s var(--motion-ease)}
+.motion-enabled #header nav a:is(:hover,:focus-visible)::after{transform:scaleX(1)}
+.motion-ripple{position:fixed;z-index:1000;border-radius:50%;background:var(--accent);pointer-events:none;opacity:0}
+.motion-progress{position:fixed;z-index:1100;top:0;left:0;right:0;height:3px;overflow:hidden;pointer-events:none;transition:opacity .2s ease;background:var(--accent-soft)}
+.motion-progress[hidden]{display:none}
+.motion-progress::before{content:'';display:block;width:35%;height:100%;background:linear-gradient(90deg,var(--accent),var(--primary));animation:motion-travel 1s ease-in-out infinite}
+.motion-progress.complete{opacity:0}.motion-progress.complete::before{width:100%;animation:none;transform:none}
+@keyframes motion-travel{from{transform:translateX(-110%)}to{transform:translateX(390%)}}
+.motion-busy{position:relative;cursor:progress!important}
+.motion-busy::after{content:'';position:absolute;right:5px;top:5px;width:8px;height:8px;border:1.5px solid currentColor;border-right-color:transparent;border-radius:50%;animation:motion-spin .7s linear infinite;pointer-events:none}
+@keyframes motion-spin{to{transform:rotate(360deg)}}
+.motion-enabled .loading{min-height:180px;display:flex;align-items:center;justify-content:center;gap:12px}
+.motion-enabled .loading::before{content:'';height:14px;width:14px;border:2px solid var(--accent-soft);border-top-color:var(--accent);border-radius:50%;animation:motion-spin .8s linear infinite}
+.motion-enabled dialog::backdrop{animation:motion-backdrop .25s ease-out}
+@keyframes motion-backdrop{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){
+ .motion-enabled *,.motion-enabled *::before,.motion-enabled *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+ .motion-enabled :is(button,a.button,.poster-card,.club-card,.dm-person,.game-table){translate:none!important}
+ .motion-enabled .poster-card :is(.photographic-poster,.poster){transform:none!important}
+ .motion-ripple{display:none}.motion-progress::before{width:100%;transform:none}
+}

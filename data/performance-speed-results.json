@@ -1,0 +1,65 @@
+{
+  "before": {
+    "label": "speed-before",
+    "syntheticPosters": 1000,
+    "wall": {
+      "samples": 20,
+      "bytes": 684661,
+      "p50ms": 14.77,
+      "p95ms": 21.69
+    },
+    "filteredWall": {
+      "samples": 20,
+      "bytes": 645380,
+      "p50ms": 15.53,
+      "p95ms": 24.09
+    },
+    "clubs": {
+      "samples": 20,
+      "bytes": 3346,
+      "p50ms": 15.63,
+      "p95ms": 17.15
+    },
+    "asset": {
+      "samples": 20,
+      "bytes": 64829,
+      "p50ms": 15.5,
+      "p95ms": 16.53,
+      "compressedEncoding": "br",
+      "compressedBytes": 18015,
+      "conditionalStatus": 304
+    }
+  },
+  "after": {
+    "label": "speed-after",
+    "syntheticPosters": 1000,
+    "wall": {
+      "samples": 20,
+      "bytes": 684661,
+      "p50ms": 16.87,
+      "p95ms": 32.62
+    },
+    "filteredWall": {
+      "samples": 20,
+      "bytes": 645380,
+      "p50ms": 16.14,
+      "p95ms": 20.6
+    },
+    "clubs": {
+      "samples": 20,
+      "bytes": 3346,
+      "p50ms": 15.4,
+      "p95ms": 16.76
+    },
+    "asset": {
+      "samples": 20,
+      "bytes": 65355,
+      "p50ms": 15.9,
+      "p95ms": 17.1,
+      "compressedEncoding": "br",
+      "compressedBytes": 18150,
+      "conditionalStatus": 304
+    }
+  },
+  "notes": "Same isolated 1,000-poster HTTP fixture, twenty complete-body requests after three warmups. No whole-wall HTTP latency improvement is established by these samples. Renderer and community-handler measurements are separate local CPU fixtures."
+}

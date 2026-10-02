@@ -1,0 +1,2219 @@
+{
+  "universityId": "uq",
+  "sourceName": "UQ Union clubs directory",
+  "sourceUrl": "https://uqu.com.au/clubs-and-societies/",
+  "retrievedAt": "2026-10-01T12:16:33.030Z",
+  "embeddedUrl": "https://campus.hellorubric.com/search?country=AU&state=Queensland&type=societies&universityid=12&iframe=true&showall=true&borderRadius=rounded&bodyFontFamily=Arial&headingFontFamily=Arial",
+  "clubs": [
+    {
+      "id": "uqu-2409",
+      "universityId": "uq",
+      "name": "180 Degrees Consulting - The University of Queensland Branch",
+      "categories": [
+        "Faculty - BEL"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2409",
+      "imageUrl": "https://resources.getqpay.com/images/65d697f684fd9_.png"
+    },
+    {
+      "id": "uqu-1338",
+      "universityId": "uq",
+      "name": "Aus Legal Philosophy Students Assoc",
+      "categories": [
+        "Faculty - BEL"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1338",
+      "imageUrl": "https://resources.getqpay.com/images/65c1ecb5d8ddf_.png"
+    },
+    {
+      "id": "uqu-2232",
+      "universityId": "uq",
+      "name": "Australia-China Youth Association at UQ",
+      "categories": [
+        "International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2232",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/75b570ee-75da-4464-890c-26a803bc3e1f.png"
+    },
+    {
+      "id": "uqu-664",
+      "universityId": "uq",
+      "name": "Brisbane-Asian Student Association International Incorporated",
+      "categories": [
+        "International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=664",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_664.png"
+    },
+    {
+      "id": "uqu-2274",
+      "universityId": "uq",
+      "name": "BRUCE Architecture Society",
+      "categories": [
+        "Faculty - EAIT"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2274",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/cbfc51b6-caed-40ff-b4ff-a1883f0ec2f5.png"
+    },
+    {
+      "id": "uqu-2301",
+      "universityId": "uq",
+      "name": "Buddhist Education Society",
+      "categories": [
+        "Religious"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2301",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/97443f44-e1e4-467e-8cfd-e9f0e7c5bc65.png"
+    },
+    {
+      "id": "uqu-4225",
+      "universityId": "uq",
+      "name": "Business Analytics Networking Association",
+      "categories": [
+        "Faculty - BEL"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4225",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/cca4dbce-eafd-4d09-8021-9cbbe97b84ba.png"
+    },
+    {
+      "id": "uqu-6882",
+      "universityId": "uq",
+      "name": "CAI + AIBN student association",
+      "categories": [
+        "Faculty - EAIT"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6882",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/e82c770c-c023-4950-8f6b-6da204a8e348.png"
+    },
+    {
+      "id": "uqu-2415",
+      "universityId": "uq",
+      "name": "Campus Christian Movement",
+      "categories": [
+        "Religious"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2415",
+      "imageUrl": "https://resources.getqpay.com/images/63e4790744751_.png"
+    },
+    {
+      "id": "uqu-4157",
+      "universityId": "uq",
+      "name": "Catalyst Club",
+      "categories": [
+        "Religious"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4157",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/bac3ff86-079c-4b87-a4fe-c58f1aa3ea70.png"
+    },
+    {
+      "id": "uqu-2716",
+      "universityId": "uq",
+      "name": "Communication and Arts Postgraduate Society",
+      "categories": [
+        "Faculty - HASS"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2716",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_2716.png"
+    },
+    {
+      "id": "uqu-2414",
+      "universityId": "uq",
+      "name": "Engineers Without Borders UQ Chapter",
+      "categories": [
+        "Faculty - EAIT"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2414",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/5121ac66-55d5-49a4-bc3c-7f99cb87d7e8.png"
+    },
+    {
+      "id": "uqu-2251",
+      "universityId": "uq",
+      "name": "Every Nation Campus UQ",
+      "categories": [
+        "Religious"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2251",
+      "imageUrl": "https://graph.facebook.com/encbrisbane/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "uqu-6994",
+      "universityId": "uq",
+      "name": "Financial Management Association of Australia",
+      "categories": [
+        "Faculty - BEL"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6994",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/779d37bb-6f38-462c-ac42-7ccaf6f9f909.png"
+    },
+    {
+      "id": "uqu-2395",
+      "universityId": "uq",
+      "name": "Gatton International Student Association",
+      "categories": [
+        "Gatton Based"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2395",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/ddc05044-b9f9-4772-bf19-c3ee32abc824.png"
+    },
+    {
+      "id": "uqu-4430",
+      "universityId": "uq",
+      "name": "Handcraft & Art Club",
+      "categories": [
+        "Hobby"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4430",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/489e44f6-3484-47a2-9c09-b7bc0e9bb025.png"
+    },
+    {
+      "id": "uqu-3216",
+      "universityId": "uq",
+      "name": "Hope Brisbane Club",
+      "categories": [
+        "Religious"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3216",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/b5c2717a-e143-4509-ba58-f1c938d09f3b.png"
+    },
+    {
+      "id": "uqu-2701",
+      "universityId": "uq",
+      "name": "ILM Club",
+      "categories": [
+        "Religious"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2701",
+      "imageUrl": ""
+    },
+    {
+      "id": "uqu-4848",
+      "universityId": "uq",
+      "name": "Justice and the Law Society",
+      "categories": [
+        "Faculty - BEL"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4848",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_4848.png"
+    },
+    {
+      "id": "uqu-3395",
+      "universityId": "uq",
+      "name": "Marine Society UQ",
+      "categories": [
+        "Faculty - Science"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3395",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_3395.png"
+    },
+    {
+      "id": "uqu-2407",
+      "universityId": "uq",
+      "name": "Mathematics Students Society UQ",
+      "categories": [
+        "Faculty - Science"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2407",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_2407.png"
+    },
+    {
+      "id": "uqu-2511",
+      "universityId": "uq",
+      "name": "Muslim Students Association UQ",
+      "categories": [
+        "Religious"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2511",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/750a2144-9313-4014-a199-e3e32751c110.png"
+    },
+    {
+      "id": "uqu-2238",
+      "universityId": "uq",
+      "name": "Newman Catholic Society",
+      "categories": [
+        "Religious"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2238",
+      "imageUrl": "https://resources.getqpay.com/images/65a7109ad2c8b_.png"
+    },
+    {
+      "id": "uqu-2308",
+      "universityId": "uq",
+      "name": "Occupational Therapy Students Association",
+      "categories": [
+        "Faculty - HMBS"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2308",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/5a74a470-ace6-4655-9b42-68b73e3047f0.png"
+    },
+    {
+      "id": "uqu-2316",
+      "universityId": "uq",
+      "name": "Overseas Christian Fellowship",
+      "categories": [
+        "Religious"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2316",
+      "imageUrl": "https://graph.facebook.com/OCFUQ/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "uqu-1535",
+      "universityId": "uq",
+      "name": "PAIN - UQ Physics Club",
+      "categories": [
+        "Faculty - Science"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1535",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/8a138657-91ac-4cfe-a286-e61a07ca8d0c.png"
+    },
+    {
+      "id": "uqu-4123",
+      "universityId": "uq",
+      "name": "Power to Change",
+      "categories": [
+        "Religious"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4123",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/9d9b8ad2-e1f3-4648-9706-8c84e5e77d63.png"
+    },
+    {
+      "id": "uqu-1857",
+      "universityId": "uq",
+      "name": "Psychology Students' Association Inc",
+      "categories": [
+        "Faculty - HMBS"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1857",
+      "imageUrl": "https://resources.getqpay.com/images/63da1539b7b87_.png"
+    },
+    {
+      "id": "uqu-1835",
+      "universityId": "uq",
+      "name": "Public Health Association University of Queensland",
+      "categories": [
+        "Faculty - HMBS"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1835",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_1835.png"
+    },
+    {
+      "id": "uqu-1926",
+      "universityId": "uq",
+      "name": "QLD Physiotherapy Students Association",
+      "categories": [
+        "Faculty - HMBS"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1926",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/c6b9fca3-5065-442e-90bb-4817555da1f7.png"
+    },
+    {
+      "id": "uqu-3932",
+      "universityId": "uq",
+      "name": "Queensland Pharmacy Students' Association",
+      "categories": [
+        "Faculty - HMBS"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3932",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/924c4637-4c70-4c01-a289-68e0bf8afad2.png"
+    },
+    {
+      "id": "uqu-2294",
+      "universityId": "uq",
+      "name": "Queensland University Games Socierty",
+      "categories": [
+        "Hobby"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2294",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/48f7f250-e51d-4f66-b7bc-2a79e3366b1e.png"
+    },
+    {
+      "id": "uqu-6149",
+      "universityId": "uq",
+      "name": "Queensland University Musical Society",
+      "categories": [
+        "Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6149",
+      "imageUrl": "https://resources.getqpay.com/images/6476b8f7962ea_.png"
+    },
+    {
+      "id": "uqu-534",
+      "universityId": "uq",
+      "name": "QUEST Society Inc",
+      "categories": [
+        "International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=534",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/f2f2a262-09d4-426e-97a4-34f7c74a9972.png"
+    },
+    {
+      "id": "uqu-670",
+      "universityId": "uq",
+      "name": "R2P Student Coalition UQ",
+      "categories": [
+        "Social Justice"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=670",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_670.png"
+    },
+    {
+      "id": "uqu-8915",
+      "universityId": "uq",
+      "name": "Real Estate Investment Student Association UQ",
+      "categories": [
+        "Faculty - BEL"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=8915",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/95340434-182b-4a11-a152-aaeaa2a7dd7a.png"
+    },
+    {
+      "id": "uqu-4129",
+      "universityId": "uq",
+      "name": "SCMB Research Student Social Club",
+      "categories": [
+        "Faculty - Science"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4129",
+      "imageUrl": ""
+    },
+    {
+      "id": "uqu-5162",
+      "universityId": "uq",
+      "name": "Singapore Medical Association of Queensland",
+      "categories": [
+        "Herston Based"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=5162",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/0230ff89-691c-4f45-9c47-215f687f029a.png"
+    },
+    {
+      "id": "uqu-649",
+      "universityId": "uq",
+      "name": "Society of Fine Arts",
+      "categories": [
+        "Faculty - HASS"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=649",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_649.png"
+    },
+    {
+      "id": "uqu-7257",
+      "universityId": "uq",
+      "name": "Society of Lifesaving",
+      "categories": [
+        "Sporting"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=7257",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/4f0054de-d61d-49ab-a8ff-9234916eeb07.png"
+    },
+    {
+      "id": "uqu-4217",
+      "universityId": "uq",
+      "name": "Student Society of Frazer Institute",
+      "categories": [
+        "Faculty - HMBS"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4217",
+      "imageUrl": "https://resources.getqpay.com/images/63c0f2c7003cb_.png"
+    },
+    {
+      "id": "uqu-4572",
+      "universityId": "uq",
+      "name": "Students of IMB Association",
+      "categories": [
+        "Faculty - Science"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4572",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_4572.png"
+    },
+    {
+      "id": "uqu-2343",
+      "universityId": "uq",
+      "name": "Super Manga Anime Culture Kingdom",
+      "categories": [
+        "Hobby"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2343",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_2343.png"
+    },
+    {
+      "id": "uqu-2327",
+      "universityId": "uq",
+      "name": "Supporting Women In Medicine",
+      "categories": [
+        "Faculty - HMBS"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2327",
+      "imageUrl": "https://graph.facebook.com/uqswim/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "uqu-2229",
+      "universityId": "uq",
+      "name": "Taiwanese Australian International Student Association Incorporated",
+      "categories": [
+        "International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2229",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_2229.png"
+    },
+    {
+      "id": "uqu-102",
+      "universityId": "uq",
+      "name": "The Filipino-Australian Student Association of the University of Queensland",
+      "categories": [
+        "International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=102",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/598e542a-6be8-4990-bb9b-a1d60a42504d.png"
+    },
+    {
+      "id": "uqu-2299",
+      "universityId": "uq",
+      "name": "The University of Queensland Computing Society",
+      "categories": [
+        "Faculty - EAIT"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2299",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/1cd8d841-7767-451a-add4-de1f4286283d.png"
+    },
+    {
+      "id": "uqu-7963",
+      "universityId": "uq",
+      "name": "The University of Queensland Telugu Society",
+      "categories": [
+        "International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=7963",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/589858c8-68b4-41a5-a3a4-8e57cc5789fb.png"
+    },
+    {
+      "id": "uqu-3906",
+      "universityId": "uq",
+      "name": "The University of Queensland's Biomedical Engineering Society",
+      "categories": [
+        "Faculty - EAIT"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3906",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/823c799e-cac0-4f15-a1c3-acc3b30dc9b3.png"
+    },
+    {
+      "id": "uqu-1862",
+      "universityId": "uq",
+      "name": "The UQ Economics Society Inc",
+      "categories": [
+        "Faculty - BEL"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1862",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_1862.png"
+    },
+    {
+      "id": "uqu-3147",
+      "universityId": "uq",
+      "name": "The UQ Women's Network",
+      "categories": [
+        "Faculty - BEL"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3147",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_3147.png"
+    },
+    {
+      "id": "uqu-2305",
+      "universityId": "uq",
+      "name": "Towards International Medical Equity",
+      "categories": [
+        "Herston Based"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2305",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_2305.png"
+    },
+    {
+      "id": "uqu-2306",
+      "universityId": "uq",
+      "name": "Towards Rural and Outback Health Professionals in Queensland",
+      "categories": [
+        "Faculty - HMBS"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2306",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_2306.png"
+    },
+    {
+      "id": "uqu-1345",
+      "universityId": "uq",
+      "name": "Underground Theatre Company",
+      "categories": [
+        "Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1345",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/a23d1357-6f71-46f6-93c2-8010f99aacb2.png"
+    },
+    {
+      "id": "uqu-2291",
+      "universityId": "uq",
+      "name": "Uni Impact",
+      "categories": [
+        "Religious"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2291",
+      "imageUrl": "https://resources.getqpay.com/images/65d473b5494fa_.png"
+    },
+    {
+      "id": "uqu-2332",
+      "universityId": "uq",
+      "name": "University Network for Investing and Trading (UQ)",
+      "categories": [
+        "Faculty - BEL"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2332",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_2332.png"
+    },
+    {
+      "id": "uqu-165",
+      "universityId": "uq",
+      "name": "University of Queensland Business Association Inc.",
+      "categories": [
+        "Faculty - BEL"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=165",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_165.png"
+    },
+    {
+      "id": "uqu-3523",
+      "universityId": "uq",
+      "name": "University of Queensland Chinese Medical Association",
+      "categories": [
+        "Herston Based"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3523",
+      "imageUrl": "https://resources.hellorubric.com/images/670e4c562f35f_.png"
+    },
+    {
+      "id": "uqu-10681",
+      "universityId": "uq",
+      "name": "University of Queensland Dental Students Association Incorporated",
+      "categories": [
+        "Herston Based"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=10681",
+      "imageUrl": ""
+    },
+    {
+      "id": "uqu-4927",
+      "universityId": "uq",
+      "name": "University of Queensland Engineering Undergraduate Society Inc.",
+      "categories": [
+        "Faculty - EAIT"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4927",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/aab3f617-4cb8-4cc3-a1ad-e73ecf0c9214.png"
+    },
+    {
+      "id": "uqu-4125",
+      "universityId": "uq",
+      "name": "University of Queensland Evangelical Students Inc.",
+      "categories": [
+        "Religious"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4125",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/15eb4a0a-ca2c-405d-845b-ea9ef79fc11e.png"
+    },
+    {
+      "id": "uqu-1710",
+      "universityId": "uq",
+      "name": "University of Queensland French Society",
+      "categories": [
+        "International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1710",
+      "imageUrl": "https://resources.getqpay.com/images/6598a600c9af4_.png"
+    },
+    {
+      "id": "uqu-8995",
+      "universityId": "uq",
+      "name": "University of Queensland Golf Club",
+      "categories": [
+        "Sporting"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=8995",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/100a1fd8-64ad-4f27-8c2a-441ecf4fb21e.png"
+    },
+    {
+      "id": "uqu-900",
+      "universityId": "uq",
+      "name": "University of Queensland Innovation & Entrepreneurship Society Inc",
+      "categories": [
+        "Faculty - BEL"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=900",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_900.png"
+    },
+    {
+      "id": "uqu-57",
+      "universityId": "uq",
+      "name": "University of Queensland Law Society Inc.",
+      "categories": [
+        "Faculty - BEL"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=57",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_57.png"
+    },
+    {
+      "id": "uqu-6239",
+      "universityId": "uq",
+      "name": "University of Queensland Nepalese Club",
+      "categories": [
+        "International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6239",
+      "imageUrl": "https://resources.getqpay.com/images/645d07aed4254_.png"
+    },
+    {
+      "id": "uqu-7491",
+      "universityId": "uq",
+      "name": "University of Queensland Papua New Guinea Students Association",
+      "categories": [
+        "International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=7491",
+      "imageUrl": "https://resources.getqpay.com/images/66cc3fdf7a799_.png"
+    },
+    {
+      "id": "uqu-9955",
+      "universityId": "uq",
+      "name": "University of Queensland Pathology Interest Group",
+      "categories": [
+        "Herston Based"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=9955",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/5f9db764-069a-4497-9922-64a59ce172b3.png"
+    },
+    {
+      "id": "uqu-2275",
+      "universityId": "uq",
+      "name": "University of Queensland Persian Society",
+      "categories": [
+        "International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2275",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/04db00a5-1383-4dd1-8f0d-7bc7c37308fb.png"
+    },
+    {
+      "id": "uqu-2369",
+      "universityId": "uq",
+      "name": "University of Queensland Veterinary Students Association Inc.",
+      "categories": [
+        "Gatton Based"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2369",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_2369.png"
+    },
+    {
+      "id": "uqu-4479",
+      "universityId": "uq",
+      "name": "UQ Advanced Humanities Society",
+      "categories": [
+        "Faculty - HASS"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4479",
+      "imageUrl": "https://resources.getqpay.com/images/65d574067aaec_.png"
+    },
+    {
+      "id": "uqu-358",
+      "universityId": "uq",
+      "name": "UQ African Students Association",
+      "categories": [
+        "International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=358",
+      "imageUrl": "https://resources.getqpay.com/images/642f5e7100980_.png"
+    },
+    {
+      "id": "uqu-2365",
+      "universityId": "uq",
+      "name": "UQ Agribusiness Association",
+      "categories": [
+        "Faculty - BEL"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2365",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/a6d3123b-2d65-48a7-b2c3-da174aed4414.png"
+    },
+    {
+      "id": "uqu-4176",
+      "universityId": "uq",
+      "name": "UQ Agricultural Science Society",
+      "categories": [
+        "Faculty - Science"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4176",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_4176.png"
+    },
+    {
+      "id": "uqu-3714",
+      "universityId": "uq",
+      "name": "UQ Agrifood Research Student Association",
+      "categories": [
+        "Faculty - Science"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3714",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/758f5fa5-2869-46b6-900f-a4d2165d0261.png"
+    },
+    {
+      "id": "uqu-2211",
+      "universityId": "uq",
+      "name": "UQ ALP Club",
+      "categories": [
+        "Political"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2211",
+      "imageUrl": "https://resources.getqpay.com/images/63bd1e5f6487d_.png"
+    },
+    {
+      "id": "uqu-3219",
+      "universityId": "uq",
+      "name": "UQ Anthropology Society",
+      "categories": [
+        "Faculty - HASS"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3219",
+      "imageUrl": "https://resources.getqpay.com/images/63e21df733a8f_.png"
+    },
+    {
+      "id": "uqu-2953",
+      "universityId": "uq",
+      "name": "UQ Archaeological Society",
+      "categories": [
+        "Faculty - HASS"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2953",
+      "imageUrl": "https://resources.getqpay.com/images/65c034b1b2efc_.png"
+    },
+    {
+      "id": "uqu-1542",
+      "universityId": "uq",
+      "name": "UQ Association of Biomedical Students",
+      "categories": [
+        "Faculty - HMBS"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1542",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_1542.png"
+    },
+    {
+      "id": "uqu-4982",
+      "universityId": "uq",
+      "name": "UQ Backyard Sports Association",
+      "categories": [
+        "Sporting"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4982",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_4982.png"
+    },
+    {
+      "id": "uqu-7597",
+      "universityId": "uq",
+      "name": "UQ Bakeology",
+      "categories": [
+        "Hobby"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=7597",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/0de8f247-7455-4394-9c66-a15b4a67a516.png"
+    },
+    {
+      "id": "uqu-4581",
+      "universityId": "uq",
+      "name": "UQ Bangladesh Association",
+      "categories": [
+        "International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4581",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/a3fe28cf-62da-441a-af63-766e66dd03d9.png"
+    },
+    {
+      "id": "uqu-1664",
+      "universityId": "uq",
+      "name": "UQ Beer and Rum Society",
+      "categories": [
+        "Hobby"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1664",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/7e5ccf37-6e3d-4725-9674-62372b1bc00c.png"
+    },
+    {
+      "id": "uqu-3797",
+      "universityId": "uq",
+      "name": "UQ Biotechnology Society",
+      "categories": [
+        "Faculty - Science"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3797",
+      "imageUrl": "https://graph.facebook.com/UQBiotechnology/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "uqu-2270",
+      "universityId": "uq",
+      "name": "UQ Buddhist Society",
+      "categories": [
+        "Religious"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2270",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_2270.png"
+    },
+    {
+      "id": "uqu-352",
+      "universityId": "uq",
+      "name": "UQ Business School Postgraduate Association",
+      "categories": [
+        "Faculty - BEL"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=352",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/6cd2fd05-bf4a-428d-913a-d4e919b37485.png"
+    },
+    {
+      "id": "uqu-10371",
+      "universityId": "uq",
+      "name": "UQ Campus Democrats Club",
+      "categories": [
+        "Political"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=10371",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/66154c2a-fe50-4e0e-bb66-3bb7d400f080.png"
+    },
+    {
+      "id": "uqu-8835",
+      "universityId": "uq",
+      "name": "UQ Centre for Clinical Research Student Club",
+      "categories": [
+        "Herston Based"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=8835",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/f98acf62-a093-4f6a-86d5-5705f926f786.png"
+    },
+    {
+      "id": "uqu-456",
+      "universityId": "uq",
+      "name": "UQ Chemical Engineering Student Society",
+      "categories": [
+        "Faculty - EAIT"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=456",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_456.png"
+    },
+    {
+      "id": "uqu-593",
+      "universityId": "uq",
+      "name": "UQ Chemistry Club",
+      "categories": [
+        "Faculty - Science"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=593",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/e0f80d11-c599-4efd-a37b-0d4dd30cfa3c.png"
+    },
+    {
+      "id": "uqu-6895",
+      "universityId": "uq",
+      "name": "UQ Chess Club",
+      "categories": [
+        "Hobby"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6895",
+      "imageUrl": "https://resources.getqpay.com/images/664d31deaa38d_.png"
+    },
+    {
+      "id": "uqu-4068",
+      "universityId": "uq",
+      "name": "UQ Chile Association",
+      "categories": [
+        "International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4068",
+      "imageUrl": "https://resources.getqpay.com/images/641d061a85c08_.png"
+    },
+    {
+      "id": "uqu-10792",
+      "universityId": "uq",
+      "name": "UQ Chinese Cultural Dance Club",
+      "categories": [
+        "Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=10792",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/b1c10ab7-64e8-467f-9e0d-425ecd282272.png"
+    },
+    {
+      "id": "uqu-2392",
+      "universityId": "uq",
+      "name": "UQ Chinese Debating Association",
+      "categories": [
+        "Hobby"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2392",
+      "imageUrl": "https://resources.getqpay.com/images/65b700df2b731_.png"
+    },
+    {
+      "id": "uqu-3411",
+      "universityId": "uq",
+      "name": "UQ Chinese Painting and Calligraphy Club",
+      "categories": [
+        "Hobby"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3411",
+      "imageUrl": "https://resources.hellorubric.com/images/6730e39635979_.png"
+    },
+    {
+      "id": "uqu-2242",
+      "universityId": "uq",
+      "name": "UQ Christian Students",
+      "categories": [
+        "Religious"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2242",
+      "imageUrl": "https://resources.getqpay.com/images/65dc37ac51a6f_.png"
+    },
+    {
+      "id": "uqu-8449",
+      "universityId": "uq",
+      "name": "UQ Civil Engineering Student Association",
+      "categories": [
+        "Faculty - EAIT"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=8449",
+      "imageUrl": ""
+    },
+    {
+      "id": "uqu-683",
+      "universityId": "uq",
+      "name": "UQ Classics and Ancient History Society",
+      "categories": [
+        "Faculty - HASS"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=683",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/f9ee35d4-fe7c-4a48-844f-1d6162ef5019.png"
+    },
+    {
+      "id": "uqu-2219",
+      "universityId": "uq",
+      "name": "UQ Climate & Energy",
+      "categories": [
+        "Faculty - Science"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2219",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_2219.png"
+    },
+    {
+      "id": "uqu-2218",
+      "universityId": "uq",
+      "name": "UQ Comedy and Improv Club",
+      "categories": [
+        "Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2218",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/a1f971c3-d70d-487f-b5b1-76a54a036956.png"
+    },
+    {
+      "id": "uqu-10443",
+      "universityId": "uq",
+      "name": "UQ Community Orchestra",
+      "categories": [
+        "Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=10443",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/accb2a5d-9bcd-46d4-b573-5fef4a2420ac.png"
+    },
+    {
+      "id": "uqu-7404",
+      "universityId": "uq",
+      "name": "UQ Cosy Gamers Club",
+      "categories": [
+        "Hobby"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=7404",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/b175a1e9-7e5e-4175-b49a-fa2c80b51d6b.png"
+    },
+    {
+      "id": "uqu-262",
+      "universityId": "uq",
+      "name": "UQ Criminology & Criminal Justice Society",
+      "categories": [
+        "Faculty - HASS"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=262",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_262.png"
+    },
+    {
+      "id": "uqu-2040",
+      "universityId": "uq",
+      "name": "UQ Critical Care Interest Group",
+      "categories": [
+        "Herston Based"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2040",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/036cf4b7-6123-4916-8fba-ce17a75a3372.png"
+    },
+    {
+      "id": "uqu-4787",
+      "universityId": "uq",
+      "name": "UQ Cyber Squad",
+      "categories": [
+        "Faculty - EAIT"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4787",
+      "imageUrl": "https://resources.getqpay.com/images/65a3651e473ec_.png"
+    },
+    {
+      "id": "uqu-806",
+      "universityId": "uq",
+      "name": "UQ Dance",
+      "categories": [
+        "Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=806",
+      "imageUrl": "https://resources.getqpay.com/images/65cdb43e75bef_.png"
+    },
+    {
+      "id": "uqu-1332",
+      "universityId": "uq",
+      "name": "UQ Debating Society",
+      "categories": [
+        "Hobby"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1332",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_1332.png"
+    },
+    {
+      "id": "uqu-3444",
+      "universityId": "uq",
+      "name": "UQ Derm",
+      "categories": [
+        "Herston Based"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3444",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/76d5a9d7-a09e-42d4-b6ea-210543c61f19.png"
+    },
+    {
+      "id": "uqu-4688",
+      "universityId": "uq",
+      "name": "UQ Ecological Society",
+      "categories": [
+        "Faculty - Science"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4688",
+      "imageUrl": "https://resources.getqpay.com/images/64ca3c4c95979_.png"
+    },
+    {
+      "id": "uqu-1643",
+      "universityId": "uq",
+      "name": "UQ Education Society",
+      "categories": [
+        "Faculty - HASS"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1643",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_1643.png"
+    },
+    {
+      "id": "uqu-7215",
+      "universityId": "uq",
+      "name": "UQ Electrically Based Engineering Student Society",
+      "categories": [
+        "Faculty - EAIT"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=7215",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/71857a8f-8a65-4226-a170-d4499d6ef273.png"
+    },
+    {
+      "id": "uqu-3858",
+      "universityId": "uq",
+      "name": "UQ English and Literature Society",
+      "categories": [
+        "Faculty - HASS"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3858",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/c6adf46e-ec6e-4f83-a196-886bedde40de.png"
+    },
+    {
+      "id": "uqu-10957",
+      "universityId": "uq",
+      "name": "UQ Fellowship of Orthodox Christian University Students",
+      "categories": [
+        "Religious"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=10957",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/cac79f60-b3fc-484b-afb4-c9d345d302f3.png"
+    },
+    {
+      "id": "uqu-2225",
+      "universityId": "uq",
+      "name": "UQ Film Appreciation Society",
+      "categories": [
+        "Hobby"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2225",
+      "imageUrl": "https://resources.getqpay.com/images/65b759de92fc1_.png"
+    },
+    {
+      "id": "uqu-3804",
+      "universityId": "uq",
+      "name": "UQ Film Production Society",
+      "categories": [
+        "Faculty - HASS"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3804",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/b32b6771-eed1-43c0-a4ea-229f7173b5e9.png"
+    },
+    {
+      "id": "uqu-3911",
+      "universityId": "uq",
+      "name": "UQ Fintech Society",
+      "categories": [
+        "Faculty - Science"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3911",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/464cf1e3-c3cc-41a8-87c0-0688f91fbff9.png"
+    },
+    {
+      "id": "uqu-5729",
+      "universityId": "uq",
+      "name": "UQ Food Science Club",
+      "categories": [
+        "Faculty - Science"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=5729",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/a2403f1f-351f-4667-bd7e-5cae2b037bc2.png"
+    },
+    {
+      "id": "uqu-3443",
+      "universityId": "uq",
+      "name": "UQ Football Society Incorporated",
+      "categories": [
+        "Sporting"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3443",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_3443.png"
+    },
+    {
+      "id": "uqu-4235",
+      "universityId": "uq",
+      "name": "UQ Formula Racing Society",
+      "categories": [
+        "Hobby"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4235",
+      "imageUrl": "https://resources.getqpay.com/images/63e0409215eb6_.png"
+    },
+    {
+      "id": "uqu-3225",
+      "universityId": "uq",
+      "name": "UQ Gatton Student Association",
+      "categories": [
+        "Gatton Based"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3225",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/52fae795-af67-4495-ae3d-6c34d48ab8d4.png"
+    },
+    {
+      "id": "uqu-547",
+      "universityId": "uq",
+      "name": "UQ Geography and Environmental Management Society",
+      "categories": [
+        "Faculty - Science"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=547",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_547.png"
+    },
+    {
+      "id": "uqu-713",
+      "universityId": "uq",
+      "name": "UQ Geoscience Society",
+      "categories": [
+        "Faculty - Science"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=713",
+      "imageUrl": "https://resources.getqpay.com/images/643bdb25c8935_.png"
+    },
+    {
+      "id": "uqu-173",
+      "universityId": "uq",
+      "name": "UQ German Club",
+      "categories": [
+        "International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=173",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_173.png"
+    },
+    {
+      "id": "uqu-3314",
+      "universityId": "uq",
+      "name": "UQ Graduate Union of Taiwanese Students",
+      "categories": [
+        "International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3314",
+      "imageUrl": "https://resources.getqpay.com/images/654b23338ddfc_.png"
+    },
+    {
+      "id": "uqu-2652",
+      "universityId": "uq",
+      "name": "UQ Greens Club",
+      "categories": [
+        "Political"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2652",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/5403ff09-fcc8-40e8-bfef-55eb1e85bf25.png"
+    },
+    {
+      "id": "uqu-8785",
+      "universityId": "uq",
+      "name": "UQ Hindu Cultural Society",
+      "categories": [
+        "Religious"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=8785",
+      "imageUrl": "https://resources.hellorubric.com/images/66f90d571a80f_.png"
+    },
+    {
+      "id": "uqu-3135",
+      "universityId": "uq",
+      "name": "UQ History Society",
+      "categories": [
+        "Faculty - HASS"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3135",
+      "imageUrl": "https://resources.getqpay.com/images/63e73790b19c5_.png"
+    },
+    {
+      "id": "uqu-339",
+      "universityId": "uq",
+      "name": "UQ HMNS Student Society",
+      "categories": [
+        "Faculty - HMBS"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=339",
+      "imageUrl": "https://resources.getqpay.com/images/64586f6e7688b_.png"
+    },
+    {
+      "id": "uqu-1387",
+      "universityId": "uq",
+      "name": "UQ Hong Kong Students Association",
+      "categories": [
+        "International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1387",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_1387.png"
+    },
+    {
+      "id": "uqu-1499",
+      "universityId": "uq",
+      "name": "UQ Indian Student Club",
+      "categories": [
+        "International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1499",
+      "imageUrl": "https://resources.getqpay.com/images/660e71bcd7612_.png"
+    },
+    {
+      "id": "uqu-6249",
+      "universityId": "uq",
+      "name": "UQ Indonesian Student Association",
+      "categories": [
+        "International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6249",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/2804080f-f040-461e-8cb8-05e6e4d5dddc.png"
+    },
+    {
+      "id": "uqu-4177",
+      "universityId": "uq",
+      "name": "UQ Intercollegiate Meat Judging",
+      "categories": [
+        "Gatton Based"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4177",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/7298991d-299b-47a6-b7e1-082062853840.png"
+    },
+    {
+      "id": "uqu-7437",
+      "universityId": "uq",
+      "name": "UQ Internal Medicine Society",
+      "categories": [
+        "Herston Based"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=7437",
+      "imageUrl": "https://resources.getqpay.com/images/669523f8ead48_.png"
+    },
+    {
+      "id": "uqu-181",
+      "universityId": "uq",
+      "name": "UQ International Law Society",
+      "categories": [
+        "Faculty - BEL"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=181",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/11649d40-9196-4f3f-b703-0fe38711f6d0.png"
+    },
+    {
+      "id": "uqu-4126",
+      "universityId": "uq",
+      "name": "UQ International Students Engagement Association",
+      "categories": [
+        "International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4126",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_4126.png"
+    },
+    {
+      "id": "uqu-3867",
+      "universityId": "uq",
+      "name": "UQ International Students' Society",
+      "categories": [
+        "International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3867",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/57caac52-ad16-4528-8cc4-e01c3cf65692.png"
+    },
+    {
+      "id": "uqu-3039",
+      "universityId": "uq",
+      "name": "UQ Japan Society",
+      "categories": [
+        "International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3039",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/17f4eadd-234b-4dcf-8089-9a608e9743a7.png"
+    },
+    {
+      "id": "uqu-489",
+      "universityId": "uq",
+      "name": "UQ Journalism and Communication Society",
+      "categories": [
+        "Faculty - HASS"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=489",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/8861351b-d972-40d5-a47d-ba9ea42721dc.png"
+    },
+    {
+      "id": "uqu-3470",
+      "universityId": "uq",
+      "name": "UQ K-Nation",
+      "categories": [
+        "Hobby"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3470",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/b0864b07-f261-4b3f-81a2-8cb46bc35b3e.png"
+    },
+    {
+      "id": "uqu-4271",
+      "universityId": "uq",
+      "name": "UQ K-Pop Dance Club",
+      "categories": [
+        "Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4271",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/f97d1d56-44b6-4b1b-8ee9-925f9aea2dac.png"
+    },
+    {
+      "id": "uqu-3450",
+      "universityId": "uq",
+      "name": "UQ Karaoke Club",
+      "categories": [
+        "Hobby"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3450",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_3450.png"
+    },
+    {
+      "id": "uqu-233",
+      "universityId": "uq",
+      "name": "UQ Korean International Students Society",
+      "categories": [
+        "International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=233",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_233.png"
+    },
+    {
+      "id": "uqu-3180",
+      "universityId": "uq",
+      "name": "UQ Korean Medical Society",
+      "categories": [
+        "Faculty - HMBS"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3180",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_3180.png"
+    },
+    {
+      "id": "uqu-2213",
+      "universityId": "uq",
+      "name": "UQ Labor Club",
+      "categories": [
+        "Political"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2213",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/23b4c5bd-7188-4b02-a49e-c2211de5d6fa.png"
+    },
+    {
+      "id": "uqu-3220",
+      "universityId": "uq",
+      "name": "UQ Ladies in Technology",
+      "categories": [
+        "Faculty - EAIT"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3220",
+      "imageUrl": "https://resources.getqpay.com/images/65d4a9ca3dd03_.png"
+    },
+    {
+      "id": "uqu-177",
+      "universityId": "uq",
+      "name": "UQ Latin American Students Association",
+      "categories": [
+        "International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=177",
+      "imageUrl": "https://resources.getqpay.com/images/63f145ad22c17_.png"
+    },
+    {
+      "id": "uqu-2271",
+      "universityId": "uq",
+      "name": "UQ League of Legends",
+      "categories": [
+        "Hobby"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2271",
+      "imageUrl": "https://resources.getqpay.com/images/64008b49d61c2_.png"
+    },
+    {
+      "id": "uqu-8069",
+      "universityId": "uq",
+      "name": "UQ Liberal National Association",
+      "categories": [
+        "Political"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=8069",
+      "imageUrl": "https://resources.getqpay.com/images/66aae33402a68_.png"
+    },
+    {
+      "id": "uqu-871",
+      "universityId": "uq",
+      "name": "UQ Liberal National Club",
+      "categories": [
+        "Political"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=871",
+      "imageUrl": "https://resources.getqpay.com/images/6593d8c411355_.png"
+    },
+    {
+      "id": "uqu-2289",
+      "universityId": "uq",
+      "name": "UQ Mafia",
+      "categories": [
+        "Hobby"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2289",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/b111cce9-f6d9-4846-b3e2-7984c7eddc61.png"
+    },
+    {
+      "id": "uqu-7141",
+      "universityId": "uq",
+      "name": "UQ Mahjong Society",
+      "categories": [
+        "Hobby"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=7141",
+      "imageUrl": "https://resources.getqpay.com/images/64ede2f898f95_.png"
+    },
+    {
+      "id": "uqu-2220",
+      "universityId": "uq",
+      "name": "UQ Malaysian Students' Association",
+      "categories": [
+        "International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2220",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_2220.png"
+    },
+    {
+      "id": "uqu-186",
+      "universityId": "uq",
+      "name": "UQ Marketing & Advertising Society",
+      "categories": [
+        "Faculty - BEL"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=186",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/5095f6de-adb3-4241-bd9c-8a216163d447.png"
+    },
+    {
+      "id": "uqu-296",
+      "universityId": "uq",
+      "name": "UQ Mechanical Engineering Student Society",
+      "categories": [
+        "Faculty - EAIT"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=296",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_296.png"
+    },
+    {
+      "id": "uqu-3244",
+      "universityId": "uq",
+      "name": "UQ Mechatronics and Robotics Society Inc.",
+      "categories": [
+        "Faculty - EAIT"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3244",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/875bd898-867c-4d73-a875-906f2aaf1241.png"
+    },
+    {
+      "id": "uqu-10456",
+      "universityId": "uq",
+      "name": "UQ Medical Humanities Club",
+      "categories": [
+        "Herston Based"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=10456",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/36b91932-8681-4568-89e1-e799b8b99dca.png"
+    },
+    {
+      "id": "uqu-6147",
+      "universityId": "uq",
+      "name": "UQ Mining and Metallurgy Association",
+      "categories": [
+        "Faculty - EAIT"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6147",
+      "imageUrl": ""
+    },
+    {
+      "id": "uqu-4515",
+      "universityId": "uq",
+      "name": "UQ Minorities in Media",
+      "categories": [
+        "Hobby"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4515",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_4515.png"
+    },
+    {
+      "id": "uqu-4849",
+      "universityId": "uq",
+      "name": "UQ Monarchist League",
+      "categories": [
+        "Political"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4849",
+      "imageUrl": "https://resources.getqpay.com/images/64bf4da2a0d50_.png"
+    },
+    {
+      "id": "uqu-8899",
+      "universityId": "uq",
+      "name": "UQ Music Production Society",
+      "categories": [
+        "Hobby"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=8899",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/e4d13d5e-7eb1-4111-9f38-2abe974b4fa4.png"
+    },
+    {
+      "id": "uqu-921",
+      "universityId": "uq",
+      "name": "UQ Musicians Society",
+      "categories": [
+        "Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=921",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/6bba5eec-b592-4ed8-91da-9229a01e31d9.png"
+    },
+    {
+      "id": "uqu-1028",
+      "universityId": "uq",
+      "name": "UQ Muslimah Society",
+      "categories": [
+        "Religious"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1028",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/e7802692-c3b5-45ef-a87a-94216bd3869c.png"
+    },
+    {
+      "id": "uqu-7218",
+      "universityId": "uq",
+      "name": "UQ Naatak",
+      "categories": [
+        "Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=7218",
+      "imageUrl": "https://resources.getqpay.com/images/64bfdd3478d1f_.png"
+    },
+    {
+      "id": "uqu-6808",
+      "universityId": "uq",
+      "name": "UQ Neurological Society",
+      "categories": [
+        "Herston Based"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6808",
+      "imageUrl": "https://resources.getqpay.com/images/66d832c221b97_.png"
+    },
+    {
+      "id": "uqu-7008",
+      "universityId": "uq",
+      "name": "UQ NeuroTech",
+      "categories": [
+        "Faculty - EAIT"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=7008",
+      "imageUrl": "https://resources.getqpay.com/images/644a2c29e295d_.png"
+    },
+    {
+      "id": "uqu-164",
+      "universityId": "uq",
+      "name": "UQ Nursing and Midwifery Student Association",
+      "categories": [
+        "Faculty - HMBS"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=164",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/80d6c3c6-84f1-42d5-a65a-221992bda794.png"
+    },
+    {
+      "id": "uqu-3072",
+      "universityId": "uq",
+      "name": "UQ O&G Medicine",
+      "categories": [
+        "Herston Based"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3072",
+      "imageUrl": "https://resources.getqpay.com/images/63dad8dfe279f_.png"
+    },
+    {
+      "id": "uqu-4650",
+      "universityId": "uq",
+      "name": "UQ Oncology",
+      "categories": [
+        "Herston Based"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4650",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_4650.png"
+    },
+    {
+      "id": "uqu-2538",
+      "universityId": "uq",
+      "name": "UQ Opera Society",
+      "categories": [
+        "Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2538",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/80dec386-d36c-4f66-84cb-8800c628b942.png"
+    },
+    {
+      "id": "uqu-933",
+      "universityId": "uq",
+      "name": "UQ Organisation of Planning Students",
+      "categories": [
+        "Faculty - EAIT"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=933",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/52ee55bf-2242-4d00-96c6-d87b4dbb4ad0.png"
+    },
+    {
+      "id": "uqu-2348",
+      "universityId": "uq",
+      "name": "UQ Paediatric Society",
+      "categories": [
+        "Faculty - HMBS"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2348",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_2348.png"
+    },
+    {
+      "id": "uqu-2235",
+      "universityId": "uq",
+      "name": "UQ Photography Society",
+      "categories": [
+        "Hobby"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2235",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/17c2fac1-6c15-4a88-bbc1-291ec5b8c294.png"
+    },
+    {
+      "id": "uqu-4465",
+      "universityId": "uq",
+      "name": "UQ Political Science and International Relations Society Incorporated",
+      "categories": [
+        "Faculty - HASS"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4465",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_4465.png"
+    },
+    {
+      "id": "uqu-1307",
+      "universityId": "uq",
+      "name": "UQ Politics Philosophy and Economics Society",
+      "categories": [
+        "Faculty - BEL"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1307",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/85febdbc-281c-4247-ba60-b287d8b173cd.png"
+    },
+    {
+      "id": "uqu-468",
+      "universityId": "uq",
+      "name": "UQ Premedical Society",
+      "categories": [
+        "Faculty - HMBS"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=468",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_468.png"
+    },
+    {
+      "id": "uqu-6511",
+      "universityId": "uq",
+      "name": "UQ Psych MD",
+      "categories": [
+        "Herston Based"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6511",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/db1bd255-c3df-472d-a6a3-5790116f60e3.png"
+    },
+    {
+      "id": "uqu-10976",
+      "universityId": "uq",
+      "name": "UQ Punjabi Association",
+      "categories": [
+        "International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=10976",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/4a88272b-1c00-4131-9675-1fdbb7b17727.png"
+    },
+    {
+      "id": "uqu-1168",
+      "universityId": "uq",
+      "name": "UQ Quadball",
+      "categories": [
+        "Hobby"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1168",
+      "imageUrl": "https://resources.hellorubric.com/images/671f7984b3a92_.png"
+    },
+    {
+      "id": "uqu-4520",
+      "universityId": "uq",
+      "name": "UQ Radiology Interest Group",
+      "categories": [
+        "Herston Based"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4520",
+      "imageUrl": "https://resources.getqpay.com/images/642f6169b14a3_.png"
+    },
+    {
+      "id": "uqu-5809",
+      "universityId": "uq",
+      "name": "UQ Reality Labs",
+      "categories": [
+        "Faculty - EAIT"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=5809",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_5809.png"
+    },
+    {
+      "id": "uqu-1603",
+      "universityId": "uq",
+      "name": "UQ Red Cross Society",
+      "categories": [
+        "Social Justice"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1603",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/049920f7-79ea-4c9e-94a6-09ac87b729a3.png"
+    },
+    {
+      "id": "uqu-271",
+      "universityId": "uq",
+      "name": "UQ Refugee Tutoring Club",
+      "categories": [
+        "Social Justice"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=271",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_271.png"
+    },
+    {
+      "id": "uqu-2660",
+      "universityId": "uq",
+      "name": "UQ SBMS Student and Academic Social Society",
+      "categories": [
+        "Faculty - HMBS"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2660",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/21adb8c1-6a0c-40df-8b5a-0be8fb1e3157.png"
+    },
+    {
+      "id": "uqu-3803",
+      "universityId": "uq",
+      "name": "UQ School of the Environment Postgraduate Association",
+      "categories": [
+        "Faculty - Science"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3803",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/5d5416d8-b01c-4800-a11f-631a0f61a534.png"
+    },
+    {
+      "id": "uqu-2227",
+      "universityId": "uq",
+      "name": "UQ Sci-Fi Fantasy Society",
+      "categories": [
+        "Hobby"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2227",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_2227.png"
+    },
+    {
+      "id": "uqu-1547",
+      "universityId": "uq",
+      "name": "UQ Science Students Society",
+      "categories": [
+        "Faculty - Science"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1547",
+      "imageUrl": "https://resources.getqpay.com/images/656bd0e67611d_.png"
+    },
+    {
+      "id": "uqu-2520",
+      "universityId": "uq",
+      "name": "UQ Sikh Society",
+      "categories": [
+        "Religious"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2520",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/74dfb19c-810e-4650-9e01-a315800f091d.png"
+    },
+    {
+      "id": "uqu-1404",
+      "universityId": "uq",
+      "name": "UQ Singapore Students' Society",
+      "categories": [
+        "International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1404",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_1404.png"
+    },
+    {
+      "id": "uqu-2709",
+      "universityId": "uq",
+      "name": "UQ Ski & Snowsports Society Inc.",
+      "categories": [
+        "Sporting"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2709",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/cb5c79d4-2ddf-49ba-8bde-ae3ad3a50208.png"
+    },
+    {
+      "id": "uqu-1601",
+      "universityId": "uq",
+      "name": "UQ Skirts in Engineering",
+      "categories": [
+        "Faculty - EAIT"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1601",
+      "imageUrl": ""
+    },
+    {
+      "id": "uqu-2401",
+      "universityId": "uq",
+      "name": "UQ Slavic Society",
+      "categories": [
+        "International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2401",
+      "imageUrl": "https://graph.facebook.com/uqslavsoc/picture?app_id=1437959866423092&redirect=1&width=500&height=500"
+    },
+    {
+      "id": "uqu-8867",
+      "universityId": "uq",
+      "name": "UQ Social Lawn Bowls",
+      "categories": [
+        "Sporting"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=8867",
+      "imageUrl": "https://resources.getqpay.com/images/6695d3c86e9de_.png"
+    },
+    {
+      "id": "uqu-2224",
+      "universityId": "uq",
+      "name": "UQ Social Runners Club",
+      "categories": [
+        "Sporting"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2224",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_2224.png"
+    },
+    {
+      "id": "uqu-2397",
+      "universityId": "uq",
+      "name": "UQ Social Work Society",
+      "categories": [
+        "Faculty - HMBS"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2397",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/f461da90-1575-4e4a-a738-1d64ee729024.png"
+    },
+    {
+      "id": "uqu-13269",
+      "universityId": "uq",
+      "name": "UQ Socialist Alternative Club",
+      "categories": [
+        "Political"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13269",
+      "imageUrl": ""
+    },
+    {
+      "id": "uqu-8824",
+      "universityId": "uq",
+      "name": "UQ Society of Australia Awards Scholars",
+      "categories": [
+        "International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=8824",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/1bd9f5ae-5253-4866-ae80-310c44d58ce0.png"
+    },
+    {
+      "id": "uqu-8812",
+      "universityId": "uq",
+      "name": "UQ Society Of Creative Anachronism",
+      "categories": [
+        "Hobby"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=8812",
+      "imageUrl": "https://resources.getqpay.com/images/667a9fbcdfcb1_.png"
+    },
+    {
+      "id": "uqu-2428",
+      "universityId": "uq",
+      "name": "UQ South Pacific Islander Association",
+      "categories": [
+        "International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2428",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_2428.png"
+    },
+    {
+      "id": "uqu-1816",
+      "universityId": "uq",
+      "name": "UQ Speech Pathology and Audiology Student's Association",
+      "categories": [
+        "Faculty - HMBS"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1816",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_1816.png"
+    },
+    {
+      "id": "uqu-648",
+      "universityId": "uq",
+      "name": "UQ Sri Lankan Association",
+      "categories": [
+        "International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=648",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_648.png"
+    },
+    {
+      "id": "uqu-799",
+      "universityId": "uq",
+      "name": "UQ Street Groove Dance Society",
+      "categories": [
+        "Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=799",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/262a115a-215a-4697-b344-b9f1f13bf9f6.png"
+    },
+    {
+      "id": "uqu-2389",
+      "universityId": "uq",
+      "name": "UQ Student Philosophy Association",
+      "categories": [
+        "Faculty - HASS"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2389",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_2389.png"
+    },
+    {
+      "id": "uqu-5398",
+      "universityId": "uq",
+      "name": "UQ Sustainable Innovators Club",
+      "categories": [
+        "Hobby"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=5398",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/d81f0f74-5831-47b2-8089-3941e400cf31.png"
+    },
+    {
+      "id": "uqu-2431",
+      "universityId": "uq",
+      "name": "UQ Taiko Japanese Drumming Club",
+      "categories": [
+        "Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2431",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/009d5d59-ee27-4d2e-a709-03f5d41fdc3a.png"
+    },
+    {
+      "id": "uqu-6188",
+      "universityId": "uq",
+      "name": "UQ Tamil Society",
+      "categories": [
+        "International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6188",
+      "imageUrl": "https://resources.getqpay.com/images/644631feecc20_.png"
+    },
+    {
+      "id": "uqu-2420",
+      "universityId": "uq",
+      "name": "UQ Thai Students' Association",
+      "categories": [
+        "International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2420",
+      "imageUrl": "https://resources.getqpay.com/images/64084d6c99c2e_.png"
+    },
+    {
+      "id": "uqu-377",
+      "universityId": "uq",
+      "name": "UQ Tourism, Hospitality & Events Society",
+      "categories": [
+        "Faculty - BEL"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=377",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/e81f6283-70dd-4a13-a764-87c50d0dcb3e.png"
+    },
+    {
+      "id": "uqu-7138",
+      "universityId": "uq",
+      "name": "UQ Travellers Club",
+      "categories": [
+        "International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=7138",
+      "imageUrl": "https://resources.getqpay.com/images/64abc73da5770_.png"
+    },
+    {
+      "id": "uqu-601",
+      "universityId": "uq",
+      "name": "UQ Union Surfers Inc",
+      "categories": [
+        "Sporting"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=601",
+      "imageUrl": "https://resources.getqpay.com/images/640f8a0a38742_.png"
+    },
+    {
+      "id": "uqu-2354",
+      "universityId": "uq",
+      "name": "UQ United Nations Student Association",
+      "categories": [
+        "Social Justice"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2354",
+      "imageUrl": "https://resources.getqpay.com/images/63e1a2927627b_.png"
+    },
+    {
+      "id": "uqu-2257",
+      "universityId": "uq",
+      "name": "UQ Vegan Society",
+      "categories": [
+        "Social Justice"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2257",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/76735535-d765-495e-a210-f69a9591f788.png"
+    },
+    {
+      "id": "uqu-1982",
+      "universityId": "uq",
+      "name": "UQ Vietnamese International Student Association",
+      "categories": [
+        "International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1982",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/09152086-088a-42ff-8eb2-414e490d477b.png"
+    },
+    {
+      "id": "uqu-2434",
+      "universityId": "uq",
+      "name": "UQ Wildlife Association",
+      "categories": [
+        "Gatton Based"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2434",
+      "imageUrl": "https://resources.getqpay.com/images/63fc64b90557d_.png"
+    },
+    {
+      "id": "uqu-2268",
+      "universityId": "uq",
+      "name": "UQ Wine and Cheese Club",
+      "categories": [
+        "Hobby"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2268",
+      "imageUrl": "https://resources.getqpay.com/images/63ec094beecf6_.png"
+    },
+    {
+      "id": "uqu-3855",
+      "universityId": "uq",
+      "name": "UQ Women in Business Economics and Law Society",
+      "categories": [
+        "Faculty - BEL"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3855",
+      "imageUrl": "https://resources.getqpay.com/images/65b5ed47b9c98_.png"
+    },
+    {
+      "id": "uqu-1539",
+      "universityId": "uq",
+      "name": "UQ Women in Science Association",
+      "categories": [
+        "Faculty - Science"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1539",
+      "imageUrl": "https://resources.getqpay.com/images/63b4bef04d52d_.png"
+    },
+    {
+      "id": "uqu-12340",
+      "universityId": "uq",
+      "name": "UQ Yacht Club",
+      "categories": [
+        "Hobby"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12340",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/bff18591-e66f-4874-a5f0-38e1756e487f.png"
+    },
+    {
+      "id": "uqu-761",
+      "universityId": "uq",
+      "name": "UQ Yoga and Meditation Club",
+      "categories": [
+        "Sporting"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=761",
+      "imageUrl": "https://resources.getqpay.com/images/63c776c006696_.png"
+    },
+    {
+      "id": "uqu-2269",
+      "universityId": "uq",
+      "name": "Veterinary Technology Association",
+      "categories": [
+        "Gatton Based"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2269",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/8f42e248-36c5-44ad-8ba1-08b080113a9a.png"
+    },
+    {
+      "id": "uqu-2403",
+      "universityId": "uq",
+      "name": "Who UQ",
+      "categories": [
+        "Hobby"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2403",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/f1075088-e0d5-43b6-84ab-0f2f54a1f84a.png"
+    },
+    {
+      "id": "uqu-6387",
+      "universityId": "uq",
+      "name": "Wordsmiths - UQ Writing Society",
+      "categories": [
+        "Faculty - HASS"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6387",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/86fb4b56-4523-4da3-ae73-0413e30f78e0.png"
+    }
+  ]
+}

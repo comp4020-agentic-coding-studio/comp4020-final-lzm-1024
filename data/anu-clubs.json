@@ -1,0 +1,2369 @@
+{
+  "universityId": "anu",
+  "sourceName": "ANUSA clubs directory",
+  "sourceUrl": "https://anusa.com.au/clubs/clubs-list/",
+  "embeddedUrl": "https://campus.hellorubric.com/search?country=AU&state=NSW&type=societies&universityid=1&iframe=true",
+  "retrievedAt": "2026-10-01T06:56:08.371Z",
+  "clubs": [
+    {
+      "id": "anusa-14576",
+      "universityId": "anu",
+      "name": "Amnesty School Group",
+      "categories": [
+        "Volunteer and Community"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14576",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-1524",
+      "universityId": "anu",
+      "name": "Anthropology, Biological Anthropology, Archaeology, Cultural Heritage and Museum Studies",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1524",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_1524.png"
+    },
+    {
+      "id": "anusa-3422",
+      "universityId": "anu",
+      "name": "ANU Actuarial Society",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3422",
+      "imageUrl": "https://resources.getqpay.com/images/63f788d52666e_.png"
+    },
+    {
+      "id": "anusa-22",
+      "universityId": "anu",
+      "name": "ANU AFEC Students' Society",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=22",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_22.png"
+    },
+    {
+      "id": "anusa-10396",
+      "universityId": "anu",
+      "name": "ANU African Cultural Society",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=10396",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/a419d35b-5c95-4fc8-a7be-44be4e0c7b3d.png"
+    },
+    {
+      "id": "anusa-7087",
+      "universityId": "anu",
+      "name": "ANU Agricultural Society",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=7087",
+      "imageUrl": "https://resources.getqpay.com/images/6487e9090a208_.png"
+    },
+    {
+      "id": "anusa-14577",
+      "universityId": "anu",
+      "name": "ANU Amnesty International Society",
+      "categories": [
+        "Volunteer and Community"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14577",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/7f858307-8cc9-4383-941f-24df32380c13.png"
+    },
+    {
+      "id": "anusa-1540",
+      "universityId": "anu",
+      "name": "ANU Anime and Gaming Society",
+      "categories": [
+        "Hobby and Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1540",
+      "imageUrl": "https://resources.hellorubric.com/images/66ea59668029d_.png"
+    },
+    {
+      "id": "anusa-13394",
+      "universityId": "anu",
+      "name": "ANU Artificial Intelligence and Machine Learning Society",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13394",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/a658b931-ce08-416a-b22e-1ad95d8d937e.png"
+    },
+    {
+      "id": "anusa-392",
+      "universityId": "anu",
+      "name": "ANU Arts Revue",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=392",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/3a22cb1f-a195-4be9-9f23-42ea8aedad9d.png"
+    },
+    {
+      "id": "anusa-596",
+      "universityId": "anu",
+      "name": "ANU Association for Defence & Security Studies",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=596",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_596.png"
+    },
+    {
+      "id": "anusa-13105",
+      "universityId": "anu",
+      "name": "ANU Astrologers",
+      "categories": [
+        "Religious"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13105",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/22ec8621-70e7-4f41-a7e8-ac2245d799bd.png"
+    },
+    {
+      "id": "anusa-703",
+      "universityId": "anu",
+      "name": "ANU Astronomy Society",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=703",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_703.png"
+    },
+    {
+      "id": "anusa-6331",
+      "universityId": "anu",
+      "name": "ANU Auslan Club",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6331",
+      "imageUrl": "https://resources.getqpay.com/images/63d9fcadd249c_.png"
+    },
+    {
+      "id": "anusa-10685",
+      "universityId": "anu",
+      "name": "ANU Band Society",
+      "categories": [
+        "Arts and Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=10685",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/6ef7d8be-1f2b-42d6-91f7-7f9aadd76018.png"
+    },
+    {
+      "id": "anusa-6324",
+      "universityId": "anu",
+      "name": "ANU Bangladesh Student Association",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6324",
+      "imageUrl": "https://resources.hellorubric.com/images/66f4e0b4c700a_.png"
+    },
+    {
+      "id": "anusa-10908",
+      "universityId": "anu",
+      "name": "ANU Bhakti Yoga Club",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=10908",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/c0a0e7de-c2fe-40f3-854a-b4b796e912af.png"
+    },
+    {
+      "id": "anusa-6577",
+      "universityId": "anu",
+      "name": "ANU Bible Fellowship",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6577",
+      "imageUrl": "https://resources.getqpay.com/images/63d9f8de226a3_.png"
+    },
+    {
+      "id": "anusa-30",
+      "universityId": "anu",
+      "name": "ANU Biology Society",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=30",
+      "imageUrl": "https://resources.getqpay.com/images/65cc6a1cd7370_.png"
+    },
+    {
+      "id": "anusa-6242",
+      "universityId": "anu",
+      "name": "ANU Board Games Society",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6242",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/4c8f304a-8c7b-4d12-9d95-b1e12920aeb8.png"
+    },
+    {
+      "id": "anusa-14531",
+      "universityId": "anu",
+      "name": "ANU Bridge Club",
+      "categories": [
+        "Hobby and Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14531",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/1166d88b-9442-4963-abb0-dc5321883c21.png"
+    },
+    {
+      "id": "anusa-7184",
+      "universityId": "anu",
+      "name": "ANU Cambodian Students Society",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=7184",
+      "imageUrl": "https://resources.getqpay.com/images/64b7b563c7fd1_.png"
+    },
+    {
+      "id": "anusa-11447",
+      "universityId": "anu",
+      "name": "ANU Car Society",
+      "categories": [
+        "Hobby and Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=11447",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-8876",
+      "universityId": "anu",
+      "name": "ANU Catholic Society",
+      "categories": [
+        "Religious"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=8876",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/65f359c3-9413-4daf-bb87-ecc1f6dc6380.png"
+    },
+    {
+      "id": "anusa-13071",
+      "universityId": "anu",
+      "name": "ANU Cheer and Dance",
+      "categories": [
+        "Sports and Fitness"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13071",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/e9769b62-a38f-4051-ae70-02a42437fd8e.png"
+    },
+    {
+      "id": "anusa-42",
+      "universityId": "anu",
+      "name": "ANU Chemistry Society",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=42",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_42.png"
+    },
+    {
+      "id": "anusa-5002",
+      "universityId": "anu",
+      "name": "ANU Chess Society",
+      "categories": [
+        "Hobby and Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=5002",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/1dc2044c-615e-4f2b-bae4-d031cf7c4fda.png"
+    },
+    {
+      "id": "anusa-15054",
+      "universityId": "anu",
+      "name": "ANU Chinese Language and Arts",
+      "categories": [
+        "Arts and Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15054",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/8e0435ff-aa80-4712-9c5a-872360693fb8.png"
+    },
+    {
+      "id": "anusa-8742",
+      "universityId": "anu",
+      "name": "ANU Chinese Network Association",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=8742",
+      "imageUrl": "https://resources.getqpay.com/images/66a728247806a_.png"
+    },
+    {
+      "id": "anusa-8117",
+      "universityId": "anu",
+      "name": "ANU Chinese Traditional Culture Club",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=8117",
+      "imageUrl": "https://resources.getqpay.com/images/65a62b65c502f_.png"
+    },
+    {
+      "id": "anusa-6316",
+      "universityId": "anu",
+      "name": "ANU Choral Society (SCUNA)",
+      "categories": [
+        "Arts and Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6316",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/99f7000e-5e5e-45aa-8ab2-72c01ff01f47.png"
+    },
+    {
+      "id": "anusa-9016",
+      "universityId": "anu",
+      "name": "ANU Clocktower Society",
+      "categories": [
+        "Hobby and Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=9016",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/18e693bb-654e-4011-9cba-60c4a9e62103.png"
+    },
+    {
+      "id": "anusa-617",
+      "universityId": "anu",
+      "name": "ANU College of Asia and the Pacific Students' Society",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=617",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/41bfedf0-1bc1-4933-9142-4a889b9e45cd.png"
+    },
+    {
+      "id": "anusa-6389",
+      "universityId": "anu",
+      "name": "ANU Communist Party of Australia Club",
+      "categories": [
+        "Political"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6389",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/814ae196-88cb-4f45-b342-b863d890d818.png"
+    },
+    {
+      "id": "anusa-243",
+      "universityId": "anu",
+      "name": "ANU Computer Science Students' Association",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=243",
+      "imageUrl": "https://resources.getqpay.com/images/63c28ac2a9c60_.png"
+    },
+    {
+      "id": "anusa-6629",
+      "universityId": "anu",
+      "name": "ANU Consulting & Banking Society",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6629",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/c9bc077f-dbf0-4493-acf7-4c1c7c3dd677.png"
+    },
+    {
+      "id": "anusa-4808",
+      "universityId": "anu",
+      "name": "ANU Croatian Cultural Society",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4808",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_4808.png"
+    },
+    {
+      "id": "anusa-6329",
+      "universityId": "anu",
+      "name": "ANU Dance Club",
+      "categories": [
+        "Sports and Fitness"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6329",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/e455eb8e-3a98-433d-8749-d7aef6407ca3.png"
+    },
+    {
+      "id": "anusa-10481",
+      "universityId": "anu",
+      "name": "ANU Data Science Community",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=10481",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/1e066672-26f5-4060-a5c7-1b18e33901e8.png"
+    },
+    {
+      "id": "anusa-450",
+      "universityId": "anu",
+      "name": "ANU Debating Society",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=450",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/d264aa6c-4ade-4723-a1a8-8449ba9eef28.png"
+    },
+    {
+      "id": "anusa-3898",
+      "universityId": "anu",
+      "name": "ANU Democracy Society",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3898",
+      "imageUrl": "https://resources.getqpay.com/images/65bc5cc5d94aa_.png"
+    },
+    {
+      "id": "anusa-11284",
+      "universityId": "anu",
+      "name": "ANU Design Society",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=11284",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/c705c499-c716-4080-8673-f15ea0cec036.png"
+    },
+    {
+      "id": "anusa-1418",
+      "universityId": "anu",
+      "name": "ANU Dining Society",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1418",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_1418.png"
+    },
+    {
+      "id": "anusa-10335",
+      "universityId": "anu",
+      "name": "ANU Diplomacy Society",
+      "categories": [
+        "Hobby and Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=10335",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/5a4637c7-b788-4db4-9da3-19f4ed49937d.png"
+    },
+    {
+      "id": "anusa-347",
+      "universityId": "anu",
+      "name": "ANU Earth and Marine Science Society",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=347",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_347.png"
+    },
+    {
+      "id": "anusa-12341",
+      "universityId": "anu",
+      "name": "ANU economics",
+      "categories": [
+        "Hobby and Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12341",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-8109",
+      "universityId": "anu",
+      "name": "ANU Entrepreneurship Club",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=8109",
+      "imageUrl": "https://resources.getqpay.com/images/65b78d92d23f6_.png"
+    },
+    {
+      "id": "anusa-1973",
+      "universityId": "anu",
+      "name": "ANU Esports",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1973",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_1973.png"
+    },
+    {
+      "id": "anusa-14587",
+      "universityId": "anu",
+      "name": "ANU European Studies Association",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14587",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/31ec31ed-86ad-4f9d-8cc4-21505fe97962.png"
+    },
+    {
+      "id": "anusa-348",
+      "universityId": "anu",
+      "name": "ANU Fifty50",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=348",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/c1da3984-165d-4118-9564-083c46059399.png"
+    },
+    {
+      "id": "anusa-6292",
+      "universityId": "anu",
+      "name": "ANU Fighting Games Club",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6292",
+      "imageUrl": "https://resources.getqpay.com/images/66e7b745c1d04_.png"
+    },
+    {
+      "id": "anusa-6805",
+      "universityId": "anu",
+      "name": "ANU Filipino Association",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6805",
+      "imageUrl": "https://resources.getqpay.com/images/63f5991c64959_.png"
+    },
+    {
+      "id": "anusa-6295",
+      "universityId": "anu",
+      "name": "ANU FOCUS",
+      "categories": [
+        "Religious"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6295",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/558ece33-14d2-432c-accb-084874032de3.png"
+    },
+    {
+      "id": "anusa-7589",
+      "universityId": "anu",
+      "name": "ANU FOCUS",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=7589",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-14181",
+      "universityId": "anu",
+      "name": "ANU Food Lovers Society",
+      "categories": [
+        "Hobby and Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14181",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-6325",
+      "universityId": "anu",
+      "name": "ANU Formula Sport",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6325",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/b04e1f46-5d88-4ef0-9b42-877353f316a7.png"
+    },
+    {
+      "id": "anusa-15066",
+      "universityId": "anu",
+      "name": "ANU Francophone Société",
+      "categories": [
+        "Social Club"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15066",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-11148",
+      "universityId": "anu",
+      "name": "ANU Future Women in Business",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=11148",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/6f83f630-6f87-48ad-9967-cf075b71e177.png"
+    },
+    {
+      "id": "anusa-9038",
+      "universityId": "anu",
+      "name": "ANU Gacha Games Society",
+      "categories": [
+        "Hobby and Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=9038",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/c8e72fb9-7fee-4f10-90cc-076fe41dfb69.png"
+    },
+    {
+      "id": "anusa-6333",
+      "universityId": "anu",
+      "name": "ANU German Cultural Society",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6333",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/a8293ff8-a7cd-4e2d-9e40-be904d6f51c5.png"
+    },
+    {
+      "id": "anusa-10838",
+      "universityId": "anu",
+      "name": "ANU Go Club",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=10838",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/43f1794d-f1a8-4192-9084-7d72bed985fe.png"
+    },
+    {
+      "id": "anusa-15858",
+      "universityId": "anu",
+      "name": "ANU Go-Karting Society",
+      "categories": [
+        "Recreational"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15858",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/9a6123f9-0384-4456-921d-ee9192dacf92.png"
+    },
+    {
+      "id": "anusa-10517",
+      "universityId": "anu",
+      "name": "ANU Golden Z Club",
+      "categories": [
+        "Volunteer and Community"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=10517",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/94f9522a-99a7-411b-bb6a-f24bc163ae65.png"
+    },
+    {
+      "id": "anusa-6314",
+      "universityId": "anu",
+      "name": "ANU Greens",
+      "categories": [
+        "Political"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6314",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/5fd3158f-ec0e-49e2-91f7-38df72b15e4d.png"
+    },
+    {
+      "id": "anusa-6970",
+      "universityId": "anu",
+      "name": "ANU Health Students Society",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6970",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/90012b54-c5b2-4d19-ad6c-2b9ad9ae13f4.png"
+    },
+    {
+      "id": "anusa-8903",
+      "universityId": "anu",
+      "name": "ANU Hindu Students Association",
+      "categories": [
+        "Religious"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=8903",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/be321331-63d4-4f64-9dea-87cd3dcd60bc.png"
+    },
+    {
+      "id": "anusa-1799",
+      "universityId": "anu",
+      "name": "ANU History Society",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1799",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/dff2cb79-cf30-4e9a-a593-35335f3a1a3d.png"
+    },
+    {
+      "id": "anusa-4994",
+      "universityId": "anu",
+      "name": "ANU Hong Kong Students Association",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4994",
+      "imageUrl": "https://resources.getqpay.com/images/63eb37253614d_.png"
+    },
+    {
+      "id": "anusa-6319",
+      "universityId": "anu",
+      "name": "ANU Hope on Campus",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6319",
+      "imageUrl": "https://resources.getqpay.com/images/63daf6eb859c1_.png"
+    },
+    {
+      "id": "anusa-3909",
+      "universityId": "anu",
+      "name": "ANU Improv Society",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3909",
+      "imageUrl": "https://resources.getqpay.com/images/63e08ec1e8378_.png"
+    },
+    {
+      "id": "anusa-14793",
+      "universityId": "anu",
+      "name": "ANU Indigenous Cultural Society",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14793",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/51a57527-905a-4861-a5e8-e751e405dae1.png"
+    },
+    {
+      "id": "anusa-669",
+      "universityId": "anu",
+      "name": "ANU International Law Society",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=669",
+      "imageUrl": "https://resources.getqpay.com/images/63da718660802_.png"
+    },
+    {
+      "id": "anusa-439",
+      "universityId": "anu",
+      "name": "ANU International Relations Society",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=439",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_439.png"
+    },
+    {
+      "id": "anusa-8195",
+      "universityId": "anu",
+      "name": "ANU International Students’ Department",
+      "categories": [
+        "Volunteer and Community"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=8195",
+      "imageUrl": "https://resources.getqpay.com/images/65b9012d6aac2_.png"
+    },
+    {
+      "id": "anusa-1945",
+      "universityId": "anu",
+      "name": "ANU Intrepid Landcare",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1945",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/0ba6861e-8865-4c79-be21-d64d09e7e95d.png"
+    },
+    {
+      "id": "anusa-11531",
+      "universityId": "anu",
+      "name": "ANU Investments Club",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=11531",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-5031",
+      "universityId": "anu",
+      "name": "ANU Italian Cultural Society",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=5031",
+      "imageUrl": "https://resources.getqpay.com/images/63d89a8f89778_.png"
+    },
+    {
+      "id": "anusa-1238",
+      "universityId": "anu",
+      "name": "ANU Japan Club",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1238",
+      "imageUrl": "https://resources.getqpay.com/images/651cfe4906254_.png"
+    },
+    {
+      "id": "anusa-8872",
+      "universityId": "anu",
+      "name": "ANU Jazz Society",
+      "categories": [
+        "Hobby and Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=8872",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/f3ff0154-8352-4184-ada8-30ddabd8be44.png"
+    },
+    {
+      "id": "anusa-6296",
+      "universityId": "anu",
+      "name": "ANU Jewish Students Society",
+      "categories": [
+        "Religious"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6296",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-9917",
+      "universityId": "anu",
+      "name": "ANU Karuta Club",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=9917",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/01c4bdd9-c41e-42a0-b55e-84310e0d0565.png"
+    },
+    {
+      "id": "anusa-270",
+      "universityId": "anu",
+      "name": "ANU Korean Pop Culture Club",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=270",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/4f86af2b-9b90-4c58-8be8-10896a1052d2.png"
+    },
+    {
+      "id": "anusa-5032",
+      "universityId": "anu",
+      "name": "ANU Korean Student Society",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=5032",
+      "imageUrl": "https://resources.getqpay.com/images/65b770fc83c0f_.png"
+    },
+    {
+      "id": "anusa-6343",
+      "universityId": "anu",
+      "name": "ANU Labor Club",
+      "categories": [
+        "Political"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6343",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/16e960a7-a455-4c06-a349-884812810ea8.png"
+    },
+    {
+      "id": "anusa-508",
+      "universityId": "anu",
+      "name": "ANU Labor Left",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=508",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_508.png"
+    },
+    {
+      "id": "anusa-8804",
+      "universityId": "anu",
+      "name": "ANU Languages and Linguistics Society",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=8804",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/d730ed65-0753-4609-91ae-b355331960a0.png"
+    },
+    {
+      "id": "anusa-4660",
+      "universityId": "anu",
+      "name": "ANU Latin American Students' Association",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4660",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/af5c1617-178a-4913-8295-e194601e6962.png"
+    },
+    {
+      "id": "anusa-34",
+      "universityId": "anu",
+      "name": "ANU Law Revue",
+      "categories": [
+        "Arts and Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=34",
+      "imageUrl": "https://resources.getqpay.com/images/6535f4b186579_.png"
+    },
+    {
+      "id": "anusa-14648",
+      "universityId": "anu",
+      "name": "ANU Law Students Society",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14648",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-2",
+      "universityId": "anu",
+      "name": "ANU Law Students' Society",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_2.png"
+    },
+    {
+      "id": "anusa-2615",
+      "universityId": "anu",
+      "name": "ANU Liberal Club",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2615",
+      "imageUrl": "https://resources.getqpay.com/images/65b90d9455c61_.png"
+    },
+    {
+      "id": "anusa-6300",
+      "universityId": "anu",
+      "name": "ANU Literature Society",
+      "categories": [
+        "Arts and Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6300",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/1a515b04-512f-4edb-ba2b-812b66de79a4.png"
+    },
+    {
+      "id": "anusa-5035",
+      "universityId": "anu",
+      "name": "ANU Mathematics Society",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=5035",
+      "imageUrl": "https://resources.getqpay.com/images/64d4374ee7497_.png"
+    },
+    {
+      "id": "anusa-15036",
+      "universityId": "anu",
+      "name": "ANU Med Revue",
+      "categories": [
+        "Arts and Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15036",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-10127",
+      "universityId": "anu",
+      "name": "ANU Medical Students' Society",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=10127",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-12309",
+      "universityId": "anu",
+      "name": "ANU Mongolian Society",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12309",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-771",
+      "universityId": "anu",
+      "name": "ANU Musical Theatre Collective",
+      "categories": [
+        "Arts and Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=771",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_771.png"
+    },
+    {
+      "id": "anusa-13472",
+      "universityId": "anu",
+      "name": "ANU Muslim Students Association",
+      "categories": [
+        "Religious"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13472",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/2c33f061-da6f-4800-83e3-3a3ac07753a0.png"
+    },
+    {
+      "id": "anusa-14701",
+      "universityId": "anu",
+      "name": "ANU Nature Observation Society",
+      "categories": [
+        "Hobby and Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14701",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-5036",
+      "universityId": "anu",
+      "name": "ANU Navigators Society",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=5036",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-217",
+      "universityId": "anu",
+      "name": "ANU Netball Club",
+      "categories": [
+        "Sports and Fitness"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=217",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_217.png"
+    },
+    {
+      "id": "anusa-14578",
+      "universityId": "anu",
+      "name": "ANU Nuclear Club",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14578",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-15027",
+      "universityId": "anu",
+      "name": "ANU Nuclear Society",
+      "categories": [
+        "Science and Technology"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15027",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/94ad0e63-a8b9-47f3-9140-378b45fcdbe8.png"
+    },
+    {
+      "id": "anusa-12302",
+      "universityId": "anu",
+      "name": "ANU Pakistan Students’ Association",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12302",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/5ccb251d-2fb3-49e4-a59b-a4994c980700.png"
+    },
+    {
+      "id": "anusa-7948",
+      "universityId": "anu",
+      "name": "ANU Pasifika Student Association",
+      "categories": [
+        "Volunteer and Community"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=7948",
+      "imageUrl": "https://resources.getqpay.com/images/65274255afa93_.png"
+    },
+    {
+      "id": "anusa-10931",
+      "universityId": "anu",
+      "name": "ANU Photograpy and Videography Society",
+      "categories": [
+        "Hobby and Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=10931",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/906032b1-2fd0-4338-9290-3b064cdf29e7.png"
+    },
+    {
+      "id": "anusa-1602",
+      "universityId": "anu",
+      "name": "ANU Physics Society",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1602",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_1602.png"
+    },
+    {
+      "id": "anusa-118",
+      "universityId": "anu",
+      "name": "ANU PPE Society",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=118",
+      "imageUrl": "https://resources.getqpay.com/images/64d8b756d277d_.png"
+    },
+    {
+      "id": "anusa-26",
+      "universityId": "anu",
+      "name": "ANU Psychology Society",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=26",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/b80c2ee3-bf88-40f6-a2d5-ce0222c1b62c.png"
+    },
+    {
+      "id": "anusa-6332",
+      "universityId": "anu",
+      "name": "ANU Quant Traders",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6332",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/ffef2b76-9206-4a79-8f3d-a6d105512ff5.png"
+    },
+    {
+      "id": "anusa-6761",
+      "universityId": "anu",
+      "name": "ANU Quant Traders",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6761",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-15024",
+      "universityId": "anu",
+      "name": "ANU Quantum Technology Society",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15024",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-7078",
+      "universityId": "anu",
+      "name": "ANU Queer Department",
+      "categories": [
+        "Resource Centre"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=7078",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/14e50f48-bb6b-4612-928b-92a6116cc8f8.png"
+    },
+    {
+      "id": "anusa-5307",
+      "universityId": "anu",
+      "name": "ANU Refugee Action Campaign",
+      "categories": [
+        "Volunteer and Community"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=5307",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/f572ff47-f8e4-417e-bcef-4ff5cb496012.png"
+    },
+    {
+      "id": "anusa-4820",
+      "universityId": "anu",
+      "name": "ANU Regional, Rural and Remote Students Society",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4820",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_4820.png"
+    },
+    {
+      "id": "anusa-12021",
+      "universityId": "anu",
+      "name": "ANU Research Seminar Association",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12021",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/6b4029a0-6d20-4739-812b-3ace33dbcbf7.png"
+    },
+    {
+      "id": "anusa-1451",
+      "universityId": "anu",
+      "name": "ANU Roleplaying Society",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1451",
+      "imageUrl": "https://resources.getqpay.com/images/65cdc70eae819_.png"
+    },
+    {
+      "id": "anusa-6306",
+      "universityId": "anu",
+      "name": "ANU Rural Medical Society",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6306",
+      "imageUrl": "https://resources.getqpay.com/images/639bb9d99e153_.png"
+    },
+    {
+      "id": "anusa-14473",
+      "universityId": "anu",
+      "name": "ANU Russian Cultural Society",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14473",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-15063",
+      "universityId": "anu",
+      "name": "ANU RUSSIAN SOCIETY",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15063",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-11572",
+      "universityId": "anu",
+      "name": "ANU School of Art Collective",
+      "categories": [
+        "Arts and Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=11572",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/4df69804-92fb-4a38-98ca-d9d86e48f952.png"
+    },
+    {
+      "id": "anusa-13055",
+      "universityId": "anu",
+      "name": "ANU School of Music Collective",
+      "categories": [
+        "Course Union"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13055",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/4187a7eb-5090-4c1d-8cea-538ba4e4acea.png"
+    },
+    {
+      "id": "anusa-13350",
+      "universityId": "anu",
+      "name": "ANU Science Communication Society",
+      "categories": [
+        "Science and Technology"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13350",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-10",
+      "universityId": "anu",
+      "name": "ANU Science Society",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=10",
+      "imageUrl": "https://resources.getqpay.com/images/63ba9d13a695e_.png"
+    },
+    {
+      "id": "anusa-17091",
+      "universityId": "anu",
+      "name": "ANU Sikh Society",
+      "categories": [
+        "Religious"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=17091",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-49",
+      "universityId": "anu",
+      "name": "ANU Singapore Students' Association",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=49",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/3c091ec7-c0f7-4915-b942-3fc0bcde0a24.png"
+    },
+    {
+      "id": "anusa-11150",
+      "universityId": "anu",
+      "name": "ANU Skate Club",
+      "categories": [
+        "Hobby and Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=11150",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/ea01d6fa-1f96-4b7e-b770-22a5047b860d.png"
+    },
+    {
+      "id": "anusa-4675",
+      "universityId": "anu",
+      "name": "ANU Slavic Society",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4675",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_4675.png"
+    },
+    {
+      "id": "anusa-1199",
+      "universityId": "anu",
+      "name": "ANU Snowsports",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1199",
+      "imageUrl": "https://resources.getqpay.com/images/64255f8b359aa_.png"
+    },
+    {
+      "id": "anusa-305",
+      "universityId": "anu",
+      "name": "ANU Society for Arts and Social Sciences",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=305",
+      "imageUrl": "https://resources.getqpay.com/images/63da29dfc1a0c_.png"
+    },
+    {
+      "id": "anusa-3666",
+      "universityId": "anu",
+      "name": "ANU Society for the United Nations",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3666",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/d51043e6-4b96-4861-aa44-c4cb8acc93e1.png"
+    },
+    {
+      "id": "anusa-6303",
+      "universityId": "anu",
+      "name": "ANU Solar Racing",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6303",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/f7549282-1208-4440-b7d2-94a3209298b0.png"
+    },
+    {
+      "id": "anusa-3951",
+      "universityId": "anu",
+      "name": "ANU Sri Lankan Students' Association",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3951",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_3951.png"
+    },
+    {
+      "id": "anusa-15859",
+      "universityId": "anu",
+      "name": "ANU Students for a Republic",
+      "categories": [
+        "Political"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15859",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-8211",
+      "universityId": "anu",
+      "name": "ANU Swiss Society",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=8211",
+      "imageUrl": "https://resources.getqpay.com/images/669b09c6e4b1c_.png"
+    },
+    {
+      "id": "anusa-1560",
+      "universityId": "anu",
+      "name": "ANU Taiwanese Student Association",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1560",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/1f7e7590-0d36-488f-8cbf-267eb5d77cd4.png"
+    },
+    {
+      "id": "anusa-4663",
+      "universityId": "anu",
+      "name": "ANU Taylor Swift Society",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4663",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_4663.png"
+    },
+    {
+      "id": "anusa-629",
+      "universityId": "anu",
+      "name": "ANU Thai Association",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=629",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_629.png"
+    },
+    {
+      "id": "anusa-6563",
+      "universityId": "anu",
+      "name": "ANU UN Youth Society",
+      "categories": [
+        "Volunteer and Community"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6563",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/9c903407-5565-4b10-a7e0-4acdae16b319.png"
+    },
+    {
+      "id": "anusa-4072",
+      "universityId": "anu",
+      "name": "ANU Undergraduate Research Society",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4072",
+      "imageUrl": "https://resources.getqpay.com/images/64cf52f93e29c_.png"
+    },
+    {
+      "id": "anusa-574",
+      "universityId": "anu",
+      "name": "ANU United Nations Society",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=574",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_574.png"
+    },
+    {
+      "id": "anusa-443",
+      "universityId": "anu",
+      "name": "ANU Vietnamese Students' Association",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=443",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_443.png"
+    },
+    {
+      "id": "anusa-4390",
+      "universityId": "anu",
+      "name": "ANU Women's Department",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4390",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_4390.png"
+    },
+    {
+      "id": "anusa-14650",
+      "universityId": "anu",
+      "name": "ANU Women’s Department",
+      "categories": [
+        "Volunteer and Community"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14650",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-6514",
+      "universityId": "anu",
+      "name": "ANU Women* in STEM Society",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6514",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/39a4ca0e-1297-4fa6-ba17-84a2d2143f47.png"
+    },
+    {
+      "id": "anusa-14575",
+      "universityId": "anu",
+      "name": "ANU Young Independents Project",
+      "categories": [
+        "Political"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14575",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/5a0df726-612e-43ef-af33-f0d4cff08a56.png"
+    },
+    {
+      "id": "anusa-360",
+      "universityId": "anu",
+      "name": "ANU Za Kabuki",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=360",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_360.png"
+    },
+    {
+      "id": "anusa-17183",
+      "universityId": "anu",
+      "name": "archers club",
+      "categories": [
+        "Sports and Fitness"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=17183",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-13999",
+      "universityId": "anu",
+      "name": "Architecture Soicety",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13999",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-8105",
+      "universityId": "anu",
+      "name": "Artist Initiative at ANU",
+      "categories": [
+        "Hobby and Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=8105",
+      "imageUrl": "https://resources.getqpay.com/images/66e7ab1ee36d7_.png"
+    },
+    {
+      "id": "anusa-10409",
+      "universityId": "anu",
+      "name": "Asia-Australia Youth Association",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=10409",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/aeaec194-bc7c-49d9-a1a0-8375c795ea9c.png"
+    },
+    {
+      "id": "anusa-13928",
+      "universityId": "anu",
+      "name": "Asia-Australia Youth Association",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13928",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-234",
+      "universityId": "anu",
+      "name": "Asian Students in Australia Association",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=234",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/ae0c3367-2f28-4327-8faa-dfd2ce6e63e3.png"
+    },
+    {
+      "id": "anusa-12406",
+      "universityId": "anu",
+      "name": "Australia-China youth association",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12406",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-659",
+      "universityId": "anu",
+      "name": "Australia-China Youth Association @ ANU",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=659",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/31e70291-e922-448c-ad46-f7f428e2936b.png"
+    },
+    {
+      "id": "anusa-1",
+      "universityId": "anu",
+      "name": "Australian National University Engineering Students Association",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_1.png"
+    },
+    {
+      "id": "anusa-3327",
+      "universityId": "anu",
+      "name": "Australian National University Indonesian Students' Association",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3327",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_3327.png"
+    },
+    {
+      "id": "anusa-11136",
+      "universityId": "anu",
+      "name": "AUSTRALIAN NATIONAL UNIVERSITY ROBOTICS AND RC CLUB",
+      "categories": [
+        "Hobby and Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=11136",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/40c1db8b-fd9d-4cd0-a6e6-7a5e6d96e543.png"
+    },
+    {
+      "id": "anusa-10852",
+      "universityId": "anu",
+      "name": "Australian University Volunteers",
+      "categories": [
+        "Volunteer and Community"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=10852",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/ed072e28-368b-4049-9c3b-617643a542d9.png"
+    },
+    {
+      "id": "anusa-15973",
+      "universityId": "anu",
+      "name": "Badger & Co",
+      "categories": [
+        "Club Type"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15973",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-14842",
+      "universityId": "anu",
+      "name": "Biomedical Engineering Student Society",
+      "categories": [
+        "Social Club"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14842",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-14815",
+      "universityId": "anu",
+      "name": "Career in ANU",
+      "categories": [
+        "Social Club"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14815",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/3719908c-8d5b-4f7e-bab4-748197fabdf1.png"
+    },
+    {
+      "id": "anusa-12329",
+      "universityId": "anu",
+      "name": "CAROLINA SAENZ",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12329",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-12371",
+      "universityId": "anu",
+      "name": "Cenca el progreso",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12371",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-6290",
+      "universityId": "anu",
+      "name": "Christian Students Uniting",
+      "categories": [
+        "Religious"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6290",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-14543",
+      "universityId": "anu",
+      "name": "Communist Unity Canberra",
+      "categories": [
+        "Political"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14543",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-17133",
+      "universityId": "anu",
+      "name": "CSS Student Commons",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=17133",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/58ce6b82-77f4-41a2-95a2-e6ad58783d28.png"
+    },
+    {
+      "id": "anusa-16450",
+      "universityId": "anu",
+      "name": "Desi Society",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=16450",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-14116",
+      "universityId": "anu",
+      "name": "DJ Electronic Music Club",
+      "categories": [
+        "Club Type"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14116",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-6310",
+      "universityId": "anu",
+      "name": "Effective Altruism ANU",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6310",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-6562",
+      "universityId": "anu",
+      "name": "EKTA - South Asian Students' Association (ANU)",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6562",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/e8e8a333-563b-4b85-86b1-5eb35027cb42.png"
+    },
+    {
+      "id": "anusa-17119",
+      "universityId": "anu",
+      "name": "Engineers Australia UoN Student Ambassadors",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=17119",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-15975",
+      "universityId": "anu",
+      "name": "Exploration Robotics",
+      "categories": [
+        "Science and Technology"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15975",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-9028",
+      "universityId": "anu",
+      "name": "Fellows Oval",
+      "categories": [
+        "Sports and Fitness"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=9028",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-44",
+      "universityId": "anu",
+      "name": "Fenner School Society",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=44",
+      "imageUrl": "https://resources.getqpay.com/images/651ca72c9bf01_.png"
+    },
+    {
+      "id": "anusa-8123",
+      "universityId": "anu",
+      "name": "FMAA ANU",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=8123",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/fb9ec9db-8aae-41d7-846f-f90467254b20.png"
+    },
+    {
+      "id": "anusa-11098",
+      "universityId": "anu",
+      "name": "GBSA(Green Building Student Association)",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=11098",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-9746",
+      "universityId": "anu",
+      "name": "GDG On Campus ANU",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=9746",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/d1c15475-9cb4-47a1-81b8-40fb80415b81.png"
+    },
+    {
+      "id": "anusa-67",
+      "universityId": "anu",
+      "name": "Griffin Hall Australian National University",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=67",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_67.png"
+    },
+    {
+      "id": "anusa-13308",
+      "universityId": "anu",
+      "name": "HOUSE Canada",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13308",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-15889",
+      "universityId": "anu",
+      "name": "I still don't have any community",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15889",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-1654",
+      "universityId": "anu",
+      "name": "Indian Students Association- ANU",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1654",
+      "imageUrl": "https://resources.getqpay.com/images/63d4bab5d4d13_.png"
+    },
+    {
+      "id": "anusa-6400",
+      "universityId": "anu",
+      "name": "International Bible Fellowship",
+      "categories": [
+        "Religious"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6400",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/9bb665d0-2e59-4186-8727-045c2629a307.png"
+    },
+    {
+      "id": "anusa-16259",
+      "universityId": "anu",
+      "name": "Jackline Sarl",
+      "categories": [
+        "Sports and Fitness"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=16259",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-10853",
+      "universityId": "anu",
+      "name": "Japan Matcha Club (JMC)",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=10853",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/eea56613-fcc2-4b59-bdb2-e01ff9375bfc.png"
+    },
+    {
+      "id": "anusa-6294",
+      "universityId": "anu",
+      "name": "Korea Australia Alliance",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6294",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_6294.png"
+    },
+    {
+      "id": "anusa-15009",
+      "universityId": "anu",
+      "name": "Lantern Consulting ANU",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15009",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-15417",
+      "universityId": "anu",
+      "name": "Lantern Consulting ANU",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15417",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-342",
+      "universityId": "anu",
+      "name": "Malaysian Students' Organisation at ANU",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=342",
+      "imageUrl": "https://resources.getqpay.com/images/63c56f4b6fb6a_.png"
+    },
+    {
+      "id": "anusa-13960",
+      "universityId": "anu",
+      "name": "Minorities in Arts and Science: an Intersectionality Collective at ANU",
+      "categories": [
+        "Hobby and Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13960",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/813352a4-5566-404d-9cf7-e6480d78d7d9.png"
+    },
+    {
+      "id": "anusa-14210",
+      "universityId": "anu",
+      "name": "MusicBox Children's Charity",
+      "categories": [
+        "Volunteer and Community"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14210",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-6315",
+      "universityId": "anu",
+      "name": "MySupport ANU",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6315",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-15914",
+      "universityId": "anu",
+      "name": "National University Caving Club",
+      "categories": [
+        "Sports and Fitness"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15914",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/609ca8a3-6356-4bf6-a96c-de61094123e3.png"
+    },
+    {
+      "id": "anusa-1529",
+      "universityId": "anu",
+      "name": "National University Theatre Society",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=1529",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_1529.png"
+    },
+    {
+      "id": "anusa-14853",
+      "universityId": "anu",
+      "name": "Orbis Future Vision Leaders (OFVL)",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14853",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-4483",
+      "universityId": "anu",
+      "name": "Overseas Christian Fellowship",
+      "categories": [
+        "Religious"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4483",
+      "imageUrl": "https://resources.getqpay.com/images/662cd8b0be0a9_.png"
+    },
+    {
+      "id": "anusa-12777",
+      "universityId": "anu",
+      "name": "Pakistan agriculture scientist forum",
+      "categories": [
+        "Science and Technology"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12777",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-13409",
+      "universityId": "anu",
+      "name": "Peruvian Student Association",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13409",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-15451",
+      "universityId": "anu",
+      "name": "PhB Students Society ANU",
+      "categories": [
+        "Social Club"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15451",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-11529",
+      "universityId": "anu",
+      "name": "Phoenix Society ANU",
+      "categories": [
+        "Hobby and Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=11529",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/c3a30b3f-bfb0-48bd-9b79-54173543d09b.png"
+    },
+    {
+      "id": "anusa-8203",
+      "universityId": "anu",
+      "name": "Platypus Affiliated Society ANU",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=8203",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/6fd36b61-df9a-4529-b0a0-cbdeb970cede.png"
+    },
+    {
+      "id": "anusa-11061",
+      "universityId": "anu",
+      "name": "Poka Poka Club",
+      "categories": [
+        "Hobby and Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=11061",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-17171",
+      "universityId": "anu",
+      "name": "Pre-Optometry Club",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=17171",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-16228",
+      "universityId": "anu",
+      "name": "Protien hit",
+      "categories": [
+        "Sports and Fitness"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=16228",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-14996",
+      "universityId": "anu",
+      "name": "qut chess club",
+      "categories": [
+        "Hobby and Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14996",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-6320",
+      "universityId": "anu",
+      "name": "Robogals Canberra",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6320",
+      "imageUrl": "https://resources.getqpay.com/images/639af872185de_.png"
+    },
+    {
+      "id": "anusa-6322",
+      "universityId": "anu",
+      "name": "Rocketry Appreciation Society",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6322",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/7b71394c-0e72-4736-b015-97196331ebf2.png"
+    },
+    {
+      "id": "anusa-4619",
+      "universityId": "anu",
+      "name": "Rubric Team",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4619",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/1f4f6b19-8982-4f68-a524-7fbf0677a33e.png"
+    },
+    {
+      "id": "anusa-3897",
+      "universityId": "anu",
+      "name": "Shakespeare Society ANU",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=3897",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_3897.png"
+    },
+    {
+      "id": "anusa-14934",
+      "universityId": "anu",
+      "name": "Shujie Chen",
+      "categories": [
+        "Volunteer and Community"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14934",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-14117",
+      "universityId": "anu",
+      "name": "Social gathering party",
+      "categories": [
+        "Club Type"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14117",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-4548",
+      "universityId": "anu",
+      "name": "Society for National Security",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4548",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/decf330b-e29c-4d31-879e-10f32c36cfd9.png"
+    },
+    {
+      "id": "anusa-7042",
+      "universityId": "anu",
+      "name": "Solidarity Students ANU",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=7042",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-14666",
+      "universityId": "anu",
+      "name": "ssu yu Liu",
+      "categories": [
+        "Club Type"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14666",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-10115",
+      "universityId": "anu",
+      "name": "Students for Palestine",
+      "categories": [
+        "Political"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=10115",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-14457",
+      "universityId": "anu",
+      "name": "test boolyhole",
+      "categories": [
+        "Course Union"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14457",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-4978",
+      "universityId": "anu",
+      "name": "The ANU Knit&Flix Society",
+      "categories": [
+        "Hobby and Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=4978",
+      "imageUrl": "https://portal.getqpay.com/content/logos/logo_societyid_4978.png"
+    },
+    {
+      "id": "anusa-15135",
+      "universityId": "anu",
+      "name": "The ANU Sanrio Club",
+      "categories": [
+        "Hobby and Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15135",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/790b9443-f5ef-4416-bbf8-416f3b48c70b.png"
+    },
+    {
+      "id": "anusa-6312",
+      "universityId": "anu",
+      "name": "The Australian National University Socialist Alternative Club",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6312",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-14835",
+      "universityId": "anu",
+      "name": "The Creativity Guild",
+      "categories": [
+        "Social Club"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14835",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-14995",
+      "universityId": "anu",
+      "name": "the creatures of ANU",
+      "categories": [
+        "Hobby and Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14995",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/6be7cbb6-1800-47bf-a94b-cef4f4154025.png"
+    },
+    {
+      "id": "anusa-10490",
+      "universityId": "anu",
+      "name": "The Crossroads Students Society",
+      "categories": [
+        "Religious"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=10490",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-7510",
+      "universityId": "anu",
+      "name": "The Housing Collective",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=7510",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/6ac9af06-997f-4cba-a1d9-177e2491664f.png"
+    },
+    {
+      "id": "anusa-12384",
+      "universityId": "anu",
+      "name": "the HSUSC",
+      "categories": [
+        "Medical Science"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12384",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-8855",
+      "universityId": "anu",
+      "name": "The Samuel Griffith Society - ANU Chapter",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=8855",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/26790e3d-af8e-4dfd-9bdb-768312e4dc34.png"
+    },
+    {
+      "id": "anusa-2936",
+      "universityId": "anu",
+      "name": "UniLodge ANU",
+      "categories": [
+        "Other"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=2936",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-10751",
+      "universityId": "anu",
+      "name": "UniSQ Film Club",
+      "categories": [
+        "Hobby and Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=10751",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-14962",
+      "universityId": "anu",
+      "name": "UNSW MLP SOCIETY",
+      "categories": [
+        "Social Club"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14962",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-12283",
+      "universityId": "anu",
+      "name": "UOW Liberal Arts Society",
+      "categories": [
+        "Arts and Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=12283",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-14997",
+      "universityId": "anu",
+      "name": "UQ Furries",
+      "categories": [
+        "Hobby and Special Interest"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14997",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-6326",
+      "universityId": "anu",
+      "name": "Vinnies on Campus",
+      "categories": [
+        "Volunteer and Community"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=6326",
+      "imageUrl": "https://resources.getqpay.com/images/63e1e73bad913_.png"
+    },
+    {
+      "id": "anusa-11589",
+      "universityId": "anu",
+      "name": "Visual Farts Society",
+      "categories": [
+        "Arts and Performance"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=11589",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/5751e0f4-1847-471f-8e92-007dcd797971.png"
+    },
+    {
+      "id": "anusa-8828",
+      "universityId": "anu",
+      "name": "Yay! Community",
+      "categories": [
+        "Cultural and International"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=8828",
+      "imageUrl": "https://resources.getqpay.com/images/6695091e687dc_.png"
+    },
+    {
+      "id": "anusa-14854",
+      "universityId": "anu",
+      "name": "Young Workers Advice Service",
+      "categories": [
+        "Volunteer and Community"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=14854",
+      "imageUrl": ""
+    },
+    {
+      "id": "anusa-15042",
+      "universityId": "anu",
+      "name": "Youth Tech Net ANU Hub",
+      "categories": [
+        "Academic and Professional"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=15042",
+      "imageUrl": "https://resources.hellorubric.com/uploaded_assets/9166a837-8901-4073-bc97-fa1939668cca.png"
+    },
+    {
+      "id": "anusa-13452",
+      "universityId": "anu",
+      "name": "Zora Zhang",
+      "categories": [
+        "Social Club"
+      ],
+      "profileUrl": "https://campus.hellorubric.com/?s=13452",
+      "imageUrl": ""
+    }
+  ]
+}

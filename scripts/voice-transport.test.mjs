@@ -1,0 +1,12 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {createAudioTransport} from '../public/voice-transport.js';
+
+function fixture(){let pc,stops=0;const track={enabled:true,stop(){stops++;}},stream={getAudioTracks:()=>[track],getTracks:()=>[track]},sent=[],received=[],failures=[];let connections=0;
+ class Peer{constructor(){pc=this;this.remoteDescription=null;this.connectionState='new';}addTrack(){}async createOffer(){return {type:'offer',sdp:'caller'};}async createAnswer(){return {type:'answer',sdp:'recipient'};}async setLocalDescription(v){this.localDescription=v;this.onicecandidate({candidate:{toJSON:()=>({candidate:'early local candidate'})}});}async setRemoteDescription(v){this.remoteDescription=v;}async addIceCandidate(v){received.push(v);}close(){this.closed=true;}}
+ const transport=createAudioTransport({stream,iceServers:[],PeerConnection:Peer,onSignal:async value=>sent.push(value),onTrack:()=>{},onConnected:()=>{connections++;},onFailed:e=>failures.push(e)});
+ return {transport,sent,received,failures,track,pc:()=>pc,stops:()=>stops,connections:()=>connections};
+}
+test('caller publishes offer before early local ICE and only negotiates once',async()=>{const f=fixture();await f.transport.offer();await f.transport.offer();assert.deepEqual(f.sent.map(s=>s.description?.type||'ice'),['offer','ice']);f.transport.close();assert.equal(f.stops(),1);});
+test('recipient queues incoming ICE until offer, emits answer and accepts later ICE',async()=>{const f=fixture();await f.transport.receive({candidate:{candidate:'remote early'}});assert.equal(f.received.length,0);await f.transport.receive({description:{type:'offer',sdp:'caller'}});assert.equal(f.received.length,1);assert.equal(f.sent[0].description.type,'answer');await f.transport.receive({candidate:null});assert.equal(f.received.at(-1),null);f.transport.close();});
+test('mute affects the actual audio track; connection signals once; close stops audio and late signals',async()=>{const f=fixture();f.transport.mute(true);assert.equal(f.track.enabled,false);f.transport.mute(false);assert.equal(f.track.enabled,true);f.pc().connectionState='connected';f.pc().onconnectionstatechange();f.pc().onconnectionstatechange();assert.equal(f.connections(),1);f.transport.close();f.transport.close();await f.transport.receive({candidate:{candidate:'too late'}});assert.equal(f.received.length,0);assert.equal(f.stops(),1);assert.equal(f.pc().closed,true);});

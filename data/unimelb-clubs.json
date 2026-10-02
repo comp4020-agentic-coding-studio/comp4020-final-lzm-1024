@@ -1,0 +1,2714 @@
+{
+  "universityId": "unimelb",
+  "sourceName": "UMSU clubs directory",
+  "sourceUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/",
+  "retrievedAt": "2026-10-01T09:17:20.687Z",
+  "clubs": [
+    {
+      "id": "umsu-6029",
+      "universityId": "unimelb",
+      "name": "Accounting Students Association",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "accounting, business, commerce, industry, professional services",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6029/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6037",
+      "universityId": "unimelb",
+      "name": "Actuarial Students' Society",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "accreditation, actuarial, actuarial science, actuarial studies, Actuaries, commerce, economics, finance, insurance",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6037/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6045",
+      "universityId": "unimelb",
+      "name": "Adventist Students on Campus",
+      "categories": [
+        "Spiritual"
+      ],
+      "keywords": "Adventist, Christ, Christian, God",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6045/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6053",
+      "universityId": "unimelb",
+      "name": "Aerospace and Rocket Engineering Society (ARES)",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "aeronautical, aerospace, engineering, rockets",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/test/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10619",
+      "universityId": "unimelb",
+      "name": "Afghan Club",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10619/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6061",
+      "universityId": "unimelb",
+      "name": "Agricultural and Food Sciences Society",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "ag, agricultural, Dookie, Farming, food, food sciences, ICMJ, Meat",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6061/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6069",
+      "universityId": "unimelb",
+      "name": "AIESEC in Melbourne",
+      "categories": [
+        "Community Service"
+      ],
+      "keywords": "AIESEC, exchange, global organisation, leadership, non for profit, SDG, social change, social impact, soft skills, United Nations, young people, youth",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6069/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6077",
+      "universityId": "unimelb",
+      "name": "ALP Club",
+      "categories": [
+        "Political & Activist"
+      ],
+      "keywords": "Albo, ALP, Anthony Albanese, Australian Labor Party, Dan Andrews, Daniel Andrews, Jacinta Allan, Labor, Labor Party, Labour, left-wing, politics, socialism",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6077/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9988",
+      "universityId": "unimelb",
+      "name": "Amnesty International University of Melbourne",
+      "categories": [
+        "Political & Activist"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/amnestyunimelb/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6093",
+      "universityId": "unimelb",
+      "name": "Animal Protection Society (UMAPS)",
+      "categories": [
+        "Political & Activist"
+      ],
+      "keywords": "activism, Animal Protection Society, animal rights, animal welfare, compassion, cruelty free, plant based, vegan, volunteering",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6093/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6101",
+      "universityId": "unimelb",
+      "name": "AniManga Society",
+      "categories": [
+        "Reading, Writing & Watching"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6101/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10809",
+      "universityId": "unimelb",
+      "name": "Anthropology Student Society",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "ant, anthropology, ants, archaeology, classics",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/ants/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6109",
+      "universityId": "unimelb",
+      "name": "Apollo Music Society",
+      "categories": [
+        "Music & Dance"
+      ],
+      "keywords": "A capella, acapella, Apollo, Band, Bands, BASS, Charity, Choir, Composition, Concert, Concerts, Friends, Gigs, Guitar, Health, Jam Sessions, Jazz, Music, Singing, Volunteer, Volunteering",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/apollo/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10522",
+      "universityId": "unimelb",
+      "name": "Arab Student Association",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10522/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9515",
+      "universityId": "unimelb",
+      "name": "Arknights Enthusiast Club",
+      "categories": [
+        "Sports & Games"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9515/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10737",
+      "universityId": "unimelb",
+      "name": "Artificial Intelligence Prototyping Studio",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/aips/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6141",
+      "universityId": "unimelb",
+      "name": "Arts Students Society",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "arts, arts camp, Camp, culture, Faculty of Arts, M-ASS",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6141/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10010",
+      "universityId": "unimelb",
+      "name": "Asia-Australia Youth Association UniMelb",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10010/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6165",
+      "universityId": "unimelb",
+      "name": "Australia-China Youth Association",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "asia, australia, Australian, china, Chinese, Chinese language, Culture, international, language, NGO, volunteer, youth",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6165/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6197",
+      "universityId": "unimelb",
+      "name": "Australian Wall Street",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "business, career planning, employability, Finance, networking, Wall Street",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6197/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10595",
+      "universityId": "unimelb",
+      "name": "AWS Cloud Club",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10595/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6205",
+      "universityId": "unimelb",
+      "name": "Bangladeshi Student Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "Bangla, Bangladesh, Bangladeshi Community, Bangladeshi culture, Bengali, support",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6205/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6213",
+      "universityId": "unimelb",
+      "name": "Banking on Women",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "banking, commerce, finance, financial services, women",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6213/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9526",
+      "universityId": "unimelb",
+      "name": "Beta Alpha Psi – Unimelb Chapter",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "accounting, audit, banking, business, business analytics, careers, commerce, consulting, events, finance, food, information systems, internships, investment, networking, professional, tax, workshops",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9526/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10749",
+      "universityId": "unimelb",
+      "name": "Beyblade Institute (MUBI)",
+      "categories": [
+        "Sports & Games"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10749/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6221",
+      "universityId": "unimelb",
+      "name": "Bhakti Yoga Club",
+      "categories": [
+        "Sports & Games"
+      ],
+      "keywords": "Bhakti, body, mind, soul, vegetarianism, yoga",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6221/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6245",
+      "universityId": "unimelb",
+      "name": "Biomedical Engineering Society",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "biomedical, engineering, medicine, mubes, science",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6245/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6253",
+      "universityId": "unimelb",
+      "name": "Biomedicine Student Society",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "bear, bio, Biomed, biomedicine, medicine, science",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6253/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6261",
+      "universityId": "unimelb",
+      "name": "Biomedicine Students' Orchestra",
+      "categories": [
+        "Music & Dance"
+      ],
+      "keywords": "biomedicine, charity, music, orchestra",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6261/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9627",
+      "universityId": "unimelb",
+      "name": "Blockchain Association",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9627/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6269",
+      "universityId": "unimelb",
+      "name": "Bollywood Club - University of Melbourne",
+      "categories": [
+        "Music & Dance"
+      ],
+      "keywords": "art, Bollywood, culture, dance, films, Indian, movies",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6269/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6277",
+      "universityId": "unimelb",
+      "name": "Book Club",
+      "categories": [
+        "Reading, Writing & Watching"
+      ],
+      "keywords": "authors, books, classics, fiction, literature, reading, writing",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6277/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7999",
+      "universityId": "unimelb",
+      "name": "Bubble Tea Society",
+      "categories": [
+        "Food & Beverage"
+      ],
+      "keywords": "Beverage, Boba, Bubble Tea, Food, Snacks",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7999/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9966",
+      "universityId": "unimelb",
+      "name": "Buddhist Society",
+      "categories": [
+        "Spiritual"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9966/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10450",
+      "universityId": "unimelb",
+      "name": "Business Analytics Students Society",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "bass",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/bass/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-8031",
+      "universityId": "unimelb",
+      "name": "BusinessOne Consulting University of Melbourne",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "Business, Commerce, Entrepreneurship, StartUp",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/8031/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6293",
+      "universityId": "unimelb",
+      "name": "CAINZ",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "business, commerce, current affairs, economics, finance, financial services, networking, research",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6293/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7975",
+      "universityId": "unimelb",
+      "name": "Cambodian Students Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "Cambodia, Culture, Khmer Culture, Social",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7975/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6309",
+      "universityId": "unimelb",
+      "name": "Cantonese Students Association",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "Cantonese, Culture, Language",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6309/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10857",
+      "universityId": "unimelb",
+      "name": "Card & Mind Magic Society",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "card, deck, magic, mind",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10857/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6317",
+      "universityId": "unimelb",
+      "name": "Card Crew",
+      "categories": [
+        "Sports & Games"
+      ],
+      "keywords": "card, card games, cards, games, poker",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6317/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6325",
+      "universityId": "unimelb",
+      "name": "CastOn Charity Group",
+      "categories": [
+        "Community Service"
+      ],
+      "keywords": "craft, crafting, crochet, diy, knit, sew, workshops",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6325/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6333",
+      "universityId": "unimelb",
+      "name": "Catholic Society",
+      "categories": [
+        "Spiritual"
+      ],
+      "keywords": "Catholic, Catholicism, charity, christ, Christian, church, community, faith, friends, hope, reason, religion, spirit, spirituality, welcome",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6333/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6341",
+      "universityId": "unimelb",
+      "name": "Catholics of One Spirit Down Under (COSDU)",
+      "categories": [
+        "Spiritual"
+      ],
+      "keywords": "Catholic, Catholicism, Christian, Church, Faith, Religion, Spiritual, Spiritual Growth",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6341/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10833",
+      "universityId": "unimelb",
+      "name": "Central Asian Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "asia, central, kazakhstan, kyrgyzstan, navruz, tajikistan, turkmenistan, uzbekistan",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10833/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9548",
+      "universityId": "unimelb",
+      "name": "Character-creator and Worldbuilders’ Guild",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "CAWG, creative, drawing, fantasy, oc, tabletop, world, writing",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9548/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-8047",
+      "universityId": "unimelb",
+      "name": "Chariot Journal",
+      "categories": [
+        "Reading, Writing & Watching"
+      ],
+      "keywords": "History, Journal, Publication",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/8047/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6357",
+      "universityId": "unimelb",
+      "name": "Chemical Engineering Students Society",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "biomolecular, chemical, engineer, engineering, STEM",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6357/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10665",
+      "universityId": "unimelb",
+      "name": "Chemistry and Biology Society",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "bio, CABS, chem, science",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/cabs/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6365",
+      "universityId": "unimelb",
+      "name": "Chess Club",
+      "categories": [
+        "Sports & Games"
+      ],
+      "keywords": "chess, games, one for all and all for one, social playing",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6365/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-8015",
+      "universityId": "unimelb",
+      "name": "Chinese Calligraphy Club",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "Art, Calligraphy, Chinese, Culture, Language",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/8015/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6381",
+      "universityId": "unimelb",
+      "name": "Chinese Culture Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "China, Chinese, culture",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6381/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6389",
+      "universityId": "unimelb",
+      "name": "Chinese Debating Group",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "China, Chinese, culture, Debating, language",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6389/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6413",
+      "universityId": "unimelb",
+      "name": "Chinese Music Group",
+      "categories": [
+        "Music & Dance"
+      ],
+      "keywords": "bands, China, Chinese, classical, CMG, connections, gigs, instrument, international, Music, performance, sing, singer",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6413/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6421",
+      "universityId": "unimelb",
+      "name": "Chinese Students and Scholars Association",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "Chinese, connections, cultural, friendships",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/cssaunimelb/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6429",
+      "universityId": "unimelb",
+      "name": "Chocolate Lovers Society",
+      "categories": [
+        "Food & Beverage"
+      ],
+      "keywords": "casual, chocolate, desserts, food, free, freebie, social",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6429/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6445",
+      "universityId": "unimelb",
+      "name": "Christian Union",
+      "categories": [
+        "Spiritual"
+      ],
+      "keywords": "Bible, camp, Christ, Christian, conference, faith, God, nondenominational, religion, worship",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6445/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6461",
+      "universityId": "unimelb",
+      "name": "Civil and Structural Society",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "civil, design, engineer, engineering, science, social, structural",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6461/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6477",
+      "universityId": "unimelb",
+      "name": "Classics and Archaeology Society",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "Ancient Egypt, Ancient Greece, ancient history, Ancient Rome, ancient world, archaeology, board games, classical, classics, history, Latin, mythology, Percy Jackson, trivia",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6477/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6485",
+      "universityId": "unimelb",
+      "name": "Clinical Audiology Students' Association",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "Audiology, Clinical, Health, Science",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6485/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6493",
+      "universityId": "unimelb",
+      "name": "Coffee Appreciation For Enthusiasts",
+      "categories": [
+        "Food & Beverage"
+      ],
+      "keywords": "brewing, brunch, cafe, café, caffeine, coffee, drink, Drinks, Espresso, food, Matcha, Pour over, Specialty, workshop",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/cafe/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6501",
+      "universityId": "unimelb",
+      "name": "Commerce Students Society",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "business, commerce, css, economics, socialise",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6501/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6517",
+      "universityId": "unimelb",
+      "name": "Competitive Programming Club",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "algorithms, atcoder, codeforces, competitive, computer, data structures, hackerrank, icpc, leetcode, programming, science, technology, world finals",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6517/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6525",
+      "universityId": "unimelb",
+      "name": "Computing and Information Systems Students Association",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "cissa, comp, compsci, computers, computing, engineering, Information Systems, IT, science, software, technology",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/cissa/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6533",
+      "universityId": "unimelb",
+      "name": "Consistently Amazing Kitchen Endeavours",
+      "categories": [
+        "Food & Beverage"
+      ],
+      "keywords": "baking, cake, cooking, drink, eating, food, fun, recipe, social",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/cake/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6541",
+      "universityId": "unimelb",
+      "name": "Construction Students Association",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "build, buildings, construct, construction, industry, networking",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6541/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6557",
+      "universityId": "unimelb",
+      "name": "Creative Literature and Writing Society",
+      "categories": [
+        "Reading, Writing & Watching"
+      ],
+      "keywords": "author, claws, creative, creative expression, creatives, discussions, emerging writers, literature, socialising, society, writing",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6557/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9999",
+      "universityId": "unimelb",
+      "name": "Cubing Club",
+      "categories": [
+        "Sports & Games"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9999/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6573",
+      "universityId": "unimelb",
+      "name": "Data Science Students Society (DS Cubed)",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "ai, artificial intelligence, connections, data, data science, machine learning, science, socialising, STEM",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/dscubed/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6581",
+      "universityId": "unimelb",
+      "name": "Debating Society",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "competitive, debate, debating, public speaking, tournaments, training",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/muds/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10677",
+      "universityId": "unimelb",
+      "name": "Defence Equipment Society (DES)",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10677/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6589",
+      "universityId": "unimelb",
+      "name": "Design Student Society (DES)",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "architecture, construction, design, events, industry, networking, property, urban planning",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6589/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10785",
+      "universityId": "unimelb",
+      "name": "Doughnation",
+      "categories": [
+        "Food & Beverage"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10785/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6597",
+      "universityId": "unimelb",
+      "name": "Drawing and Painting Club",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "Anime, Art, Digital, Drawing, Illustration, Manga, Painting, Traditional",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6597/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9638",
+      "universityId": "unimelb",
+      "name": "Drone Aviation and Racing Engineering Society",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "Aviation, Avionics, Competitions, Computing, Digital, Drones, Engineering, Flying, FPV, Gaming, Racing, Research, Technology",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/daresunimelb/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6605",
+      "universityId": "unimelb",
+      "name": "Earth Sciences Students Society",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "atmospheric sciences, earth, engineers, geography, geology, meterology, networking, science, socialising, STEM",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6605/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6613",
+      "universityId": "unimelb",
+      "name": "Economics Student Society of Australia",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "arts, commerce, economics, economy, essa, finance, forums, government, maths, networking, policy, public policy, skills building, statistics",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6613/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6621",
+      "universityId": "unimelb",
+      "name": "Effective Altruism",
+      "categories": [
+        "Community Service"
+      ],
+      "keywords": "altruism, change, charity, effective, empathy, good, impact, networking, projects, social",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6621/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6629",
+      "universityId": "unimelb",
+      "name": "Egyptian Club",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "Arab, Arabic, culture, Egypt, Egyptian, events, food, friendship",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6629/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6637",
+      "universityId": "unimelb",
+      "name": "Electrical Engineering Club",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "arduino, arrp, electrical, engineer, mechatronics, mueec, practical, project, robot, robotics, skills, socialising, STEM, technical, workshop",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/mueec/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6645",
+      "universityId": "unimelb",
+      "name": "Embrace Education",
+      "categories": [
+        "Community Service"
+      ],
+      "keywords": "disadvantaged, diversity, education, equality, inequality, injustice, justice, low socioeconomic, mentors, refugees, support, tutoring",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6645/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7894",
+      "universityId": "unimelb",
+      "name": "Emerging Markets Network",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7894/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6653",
+      "universityId": "unimelb",
+      "name": "Enactus",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "impact, innovation, networking, projects, social change, startups, sustainability",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6653/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6661",
+      "universityId": "unimelb",
+      "name": "Engineering Music Society",
+      "categories": [
+        "Music & Dance"
+      ],
+      "keywords": "bands, choir, concerts, connections, music, performance, rehearsal, socialising",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/ems/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6669",
+      "universityId": "unimelb",
+      "name": "Engineering Students’ Club",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "Club, Eng, Engineering, Science, Social, Society, STEM, Student",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6669/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6685",
+      "universityId": "unimelb",
+      "name": "Engineers Without Borders",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "education, engineer, friends, leadership, rural, skills, STEM, support, training, tutoring, volunteer, workshops",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6685/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6701",
+      "universityId": "unimelb",
+      "name": "Environmental Engineers Society",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "engineering, environment",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6701/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6725",
+      "universityId": "unimelb",
+      "name": "Esports",
+      "categories": [
+        "Sports & Games"
+      ],
+      "keywords": "computer, console, discord, e sport, esa, esport, e-sport, esports, fps, games, gaming, league of legends, lol, melb uni esports, moba, mue, overwatch, PC, umesa, unimelb esport, valorant, video games",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6725/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6733",
+      "universityId": "unimelb",
+      "name": "Eurovision Social Club",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "Arts, Europe, European Studies, Eurovision, Fun, Karaoke, Music",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6733/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10337",
+      "universityId": "unimelb",
+      "name": "Excel Club (MEC)",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10337/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9682",
+      "universityId": "unimelb",
+      "name": "F1 Club",
+      "categories": [
+        "Sports & Games"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9682/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10725",
+      "universityId": "unimelb",
+      "name": "Fanworks and Media Analysis Society (FAMAS)",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10725/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10043",
+      "universityId": "unimelb",
+      "name": "Fashion In Commerce Association (FICA)",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10043/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10701",
+      "universityId": "unimelb",
+      "name": "Fashion Society",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10701/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6749",
+      "universityId": "unimelb",
+      "name": "Filipino Students Association",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "culture, Filipino, Filo, food, Philipines, Philippines",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6749/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6757",
+      "universityId": "unimelb",
+      "name": "Film Society",
+      "categories": [
+        "Reading, Writing & Watching"
+      ],
+      "keywords": "Films, Movies",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/filmsoc/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6765",
+      "universityId": "unimelb",
+      "name": "Filmmakers Collaborative",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "Creative, Filmmaking, Films, Production, Writing",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6765/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6773",
+      "universityId": "unimelb",
+      "name": "Finance Student Association",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "Business, Commerce, Finance",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6773/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6781",
+      "universityId": "unimelb",
+      "name": "Financial Management Association of Australia",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "Business, Commerce, Finance, FMAA, Investment Banking, Management Consulting, Networking",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/fmaa/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6813",
+      "universityId": "unimelb",
+      "name": "French Club",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "Culture, Europe, Fance, food, French, fun, Language, Literature, Travel",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6813/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6821",
+      "universityId": "unimelb",
+      "name": "Friends of Unnatural Llamas (F.O.U.L.)",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "Absurd, Funny, Llamas, Monty Python, Silly",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6821/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7717",
+      "universityId": "unimelb",
+      "name": "Friends of Vets Beyond Borders Student Chapter",
+      "categories": [
+        "Community Service"
+      ],
+      "keywords": "Animal, Beyond Borders, Career, Vet, Veterinary, Volunteer, Welfare",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7717/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10713",
+      "universityId": "unimelb",
+      "name": "Furry Society",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "cosplay, furries, fursona, mufs",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10713/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9460",
+      "universityId": "unimelb",
+      "name": "Future Doctors Society",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "Doctor, Doctors, FDS, Future Docs, Health, Med, Medical, Medicine",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9460/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9180",
+      "universityId": "unimelb",
+      "name": "Game Makers' Club",
+      "categories": [
+        "Sports & Games"
+      ],
+      "keywords": "art, development, game, hobby, music, portfolio, programming, social, team",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/the_game_makers_club/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6837",
+      "universityId": "unimelb",
+      "name": "Geomatics Society",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "careers, geomatics, networking",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/mugs/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-8079",
+      "universityId": "unimelb",
+      "name": "German Club",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "Culture, German, Language",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/8079/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6845",
+      "universityId": "unimelb",
+      "name": "Gleam Up Beauty, Business and Science",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "beauty, business, careers, makeup, science, skincare, workshops",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6845/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9471",
+      "universityId": "unimelb",
+      "name": "Global Affairs Society",
+      "categories": [
+        "Political & Activist"
+      ],
+      "keywords": "career growth, diplomacy, discussion, economics, education, employment, events, global affairs, international relations, law, networking, non-partisan, panel talks, politics, social, student forum",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9471/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9228",
+      "universityId": "unimelb",
+      "name": "Global Consulting Group",
+      "categories": [
+        "Community Service"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/umsu-gcg/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6853",
+      "universityId": "unimelb",
+      "name": "Global Health Society",
+      "categories": [
+        "Community Service"
+      ],
+      "keywords": "education, global, health, social, volunteering",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6853/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9570",
+      "universityId": "unimelb",
+      "name": "Golf Appreciation Society",
+      "categories": [
+        "Sports & Games"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9570/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9312",
+      "universityId": "unimelb",
+      "name": "Google Developer Groups on Campus",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "ai, artificial intelligence, computer science, cs, data science, ds, friends, machine learning, ml, tech, technology",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/gdsc/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6861",
+      "universityId": "unimelb",
+      "name": "Greek Association (MUnGA)",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "culture, educational, european, events, fun, Greece, greek club, hellenic, language, party, social, social club, socialising",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6861/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6869",
+      "universityId": "unimelb",
+      "name": "Greens Club",
+      "categories": [
+        "Political & Activist"
+      ],
+      "keywords": "Community, Environment, Green, Greens, Politics, Social Justice",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6869/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6877",
+      "universityId": "unimelb",
+      "name": "Habitat for Humanity",
+      "categories": [
+        "Community Service"
+      ],
+      "keywords": "charity, community service, fundraising, habitat, projects, Volunteering",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6877/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6885",
+      "universityId": "unimelb",
+      "name": "HackMelbourne",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "Challenges, Codeathon, Coding, Collaboration, Competitions, Creativity, Developers, Hackathons, Hacking, Ideas, Innovation, Problem-solving, Programming, Projects, Prototypes, Solutions, Technology",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/hackmelbourne/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9088",
+      "universityId": "unimelb",
+      "name": "Hanfu Association",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "Apparel, Beauty, Cantonese, Chinese, Chinese Culture, clothes, culture, Han, Hanfu, history",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9088/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6893",
+      "universityId": "unimelb",
+      "name": "Healthy Eating and Nutrition Society",
+      "categories": [
+        "Food & Beverage"
+      ],
+      "keywords": "cooking, eating, food, networking, wellbeing",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/hensunimelb/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9252",
+      "universityId": "unimelb",
+      "name": "Hispanic Culture and Language Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9252/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6901",
+      "universityId": "unimelb",
+      "name": "History Society",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "community, historical, history, networking, socialising, volunteer",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6901/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6909",
+      "universityId": "unimelb",
+      "name": "Hong Kong Students Association",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "friendship, Hong Kong, networking, welfare",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6909/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6917",
+      "universityId": "unimelb",
+      "name": "Indian Club",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "community, connections, friendship, India",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/muic/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9671",
+      "universityId": "unimelb",
+      "name": "Indian Graduate Researchers Society",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9671/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6925",
+      "universityId": "unimelb",
+      "name": "Indian Graduate Students Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "culture, friendship, India, networking, professional",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6925/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6933",
+      "universityId": "unimelb",
+      "name": "Indonesian Students Association",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "Indonesia, networking, socialising",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6933/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6949",
+      "universityId": "unimelb",
+      "name": "Information Security Club (MISC)",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "cybersecurity, cyber-security, discussion, friendships, security, tech, technology",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6949/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6989",
+      "universityId": "unimelb",
+      "name": "International Vietnamese Students at the University of Melbourne",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "culture, language, Vietnam, Vietnamese",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/ivsum/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-6997",
+      "universityId": "unimelb",
+      "name": "International Youth and Students for Social Equality",
+      "categories": [
+        "Political & Activist"
+      ],
+      "keywords": "international, iysse, left, Marxism, revolutionary, socialism, socialist, Trotskyism",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6997/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7013",
+      "universityId": "unimelb",
+      "name": "Interprofessional Education and Practice Health Students Network",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "careers, health, networking",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7013/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7021",
+      "universityId": "unimelb",
+      "name": "Iranian Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "culture, Iran, Iranian, Iranian students, Persian, socializing",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7021/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7029",
+      "universityId": "unimelb",
+      "name": "Islamic Society",
+      "categories": [
+        "Spiritual"
+      ],
+      "keywords": "connections, Islam, muslim, socialising",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/umis/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7037",
+      "universityId": "unimelb",
+      "name": "Italian Social Club",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "culture, food, Italian, music, socialising",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7037/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7045",
+      "universityId": "unimelb",
+      "name": "Japanese Club",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "bunka, events, exchange, exciting, friends, fun, Japan, Japanese, kaiwa, language, new, people, social, socializing",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7045/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10583",
+      "universityId": "unimelb",
+      "name": "Jewellery and Culture Society",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10583/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7053",
+      "universityId": "unimelb",
+      "name": "Jewish Students Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "AUJS, community, friendships, Jew, Jewish, MUJSS, religion",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7053/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7061",
+      "universityId": "unimelb",
+      "name": "Korean Students Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "asia, cultural, culture, friends, friendships, Korea, korean, kpop, language",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/mukss/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7069",
+      "universityId": "unimelb",
+      "name": "Kpop Club",
+      "categories": [
+        "Music & Dance"
+      ],
+      "keywords": "dance, korea, korean, kpop",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7069/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7077",
+      "universityId": "unimelb",
+      "name": "Labor Club",
+      "categories": [
+        "Political & Activist"
+      ],
+      "keywords": "ALP, ALP Club, Australian Labor Party, Australian Labor Party Club, Labor, Labor Club, networking, politics, Unimelb Labor, Unity",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7077/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7085",
+      "universityId": "unimelb",
+      "name": "Language Exchange",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "exchange, language, languages, learning, socialising",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7085/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10797",
+      "universityId": "unimelb",
+      "name": "Lao Student Association",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10797/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7101",
+      "universityId": "unimelb",
+      "name": "Lebanese Students Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "culture, Lebanese",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7101/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7109",
+      "universityId": "unimelb",
+      "name": "Let’s Talk Conversation Group",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "English, food, games, language, socialising",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7109/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7117",
+      "universityId": "unimelb",
+      "name": "Liberal Club",
+      "categories": [
+        "Political & Activist"
+      ],
+      "keywords": "conservative, liberal, networking, political, politics, right wing",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7117/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7125",
+      "universityId": "unimelb",
+      "name": "Linguistics Society",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "academic, arts, faculty, language, languages, linguistics, study",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7125/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10120",
+      "universityId": "unimelb",
+      "name": "Lost & ReFound",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10120/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9336",
+      "universityId": "unimelb",
+      "name": "Macau Students' Association",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "Macanese, Macao, Macau, MSA",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9336/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7133",
+      "universityId": "unimelb",
+      "name": "Macedonian Student Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "balkan, balkan australians, balkan youth, macedonia, macedonian australians, macedonian students, macedonian youth, macedonians, maco, melbourne macedonians, young macedonians",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7133/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7141",
+      "universityId": "unimelb",
+      "name": "Malaysians of Melbourne University",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "connections, culture, experience, integrate, Malaysia, social",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7141/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7149",
+      "universityId": "unimelb",
+      "name": "Mandarin Language Club",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "beginner, Chinese, language, Mandarin, skills building",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7149/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7157",
+      "universityId": "unimelb",
+      "name": "Marketing Intelligence",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "communications, marketing, networking, socialising",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7157/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10559",
+      "universityId": "unimelb",
+      "name": "Matcha Lovers Club",
+      "categories": [
+        "Food & Beverage"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10559/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7173",
+      "universityId": "unimelb",
+      "name": "Mathematics & Statistics Society",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "mathematics, maths, puzzles, statistical, statistics, stats",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/mums/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7181",
+      "universityId": "unimelb",
+      "name": "Mechanical Engineering Student Society",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "design, engineer, engineering, friendship, graduate, mechanical, mechanics, mechatronics, mentoring, MESS, science, social, STEM",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7181/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7205",
+      "universityId": "unimelb",
+      "name": "Melbourne Microfinance Initiative",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "commerce, consulting, finance, financial, impact, networking, social impact",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7205/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10546",
+      "universityId": "unimelb",
+      "name": "Melbourne Sports Business Society",
+      "categories": [
+        "Sports & Games"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/msbs/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9726",
+      "universityId": "unimelb",
+      "name": "Melbourne University Photography Club (MUPC)",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9726/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7229",
+      "universityId": "unimelb",
+      "name": "Melbourne University Racing (MUR)",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "automotive, car, club, electric, electrical, engine, engineer, engineering, f1, fast, formula, formula 1, fsae, motorsports, race, racing, sae, STEM",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/mur/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9715",
+      "universityId": "unimelb",
+      "name": "Model United Nations Society",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9715/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9482",
+      "universityId": "unimelb",
+      "name": "Multi Art and Culture Association",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "Art, Association, Creative, Culture, Inclusive, Multi",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/maac/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7237",
+      "universityId": "unimelb",
+      "name": "Music Students Society",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "composer, Conservatorium, course related, Faculty of Fine Arts and Music, Faculty of Music, fun, MCM, Melbourne Conservatorium of Music, MSS, music, Music Students Society, music theory, socialising",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7237/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7245",
+      "universityId": "unimelb",
+      "name": "Myanmar Students Association",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "Burma, culture, Family, friends, Myanmar",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7245/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10143",
+      "universityId": "unimelb",
+      "name": "Networking for Ecological and Marine Opportunities (NEMO)",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10143/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7943",
+      "universityId": "unimelb",
+      "name": "New Zealand Students Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "Kiwi, New Zealand, NZ, Social Club",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/nzss/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9052",
+      "universityId": "unimelb",
+      "name": "Next Generation Trading Club",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "AI, Artificial Intelligence, Commerce, Finance, Python, Science, Trading",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9052/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10845",
+      "universityId": "unimelb",
+      "name": "North American Student Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "America, Canada, New York, United States, US, USA",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10845/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7253",
+      "universityId": "unimelb",
+      "name": "Nursing Students’ Society",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "healthcare, munss, networking, nurses, nursing, unimelb",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/munss/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-8103",
+      "universityId": "unimelb",
+      "name": "OmniSci Magazine",
+      "categories": [
+        "Reading, Writing & Watching"
+      ],
+      "keywords": "Art, Editor, Illustrator, Journal, Magazine, Publication, Science, Science Writing, Social, Writing",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/8103/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7285",
+      "universityId": "unimelb",
+      "name": "Optometry Students Society",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7285/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7301",
+      "universityId": "unimelb",
+      "name": "Overseas Christian Fellowship (O.C.F)",
+      "categories": [
+        "Spiritual"
+      ],
+      "keywords": "Christ, Christian, Community, Fellowship, Religion",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7301/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7309",
+      "universityId": "unimelb",
+      "name": "Oxfam Group",
+      "categories": [
+        "Community Service"
+      ],
+      "keywords": "advocacy, altruism, charity, community, conferences, donate, fundraising, games, help, network, not-for-profit, oxfam, panels, politics, professional development, service, social, support, talks",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7309/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9660",
+      "universityId": "unimelb",
+      "name": "Pacific Islands Student Association",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "community, indigenous, melanesia, micronesia, pacific, pacific community, pasifika, polynesia",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9660/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7991",
+      "universityId": "unimelb",
+      "name": "Pakistani Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "Culture, Pakistan, Social",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7991/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7317",
+      "universityId": "unimelb",
+      "name": "Philosophy Society",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "discussion, friends, philosophy",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7317/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7325",
+      "universityId": "unimelb",
+      "name": "Physics Students Society",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "art, astronomy, camp, career, chemistry, competition, computer, educational, engineering, food, free, international, lab, mathematics, maths, physics, science, social, society, space, star, student",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/pss/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-8039",
+      "universityId": "unimelb",
+      "name": "Physiotherapy Students' Society",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "Course-related, Physiotherapy, Social",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/8039/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10486",
+      "universityId": "unimelb",
+      "name": "Piano Society",
+      "categories": [
+        "Music & Dance"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10486/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7341",
+      "universityId": "unimelb",
+      "name": "Pirates",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "beer, food, fun, lunch, parrot, pirates, pub, rum, social",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7341/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7349",
+      "universityId": "unimelb",
+      "name": "planetUNI",
+      "categories": [
+        "Spiritual"
+      ],
+      "keywords": "BBQ, church, prayer, social events",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7349/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9559",
+      "universityId": "unimelb",
+      "name": "Pokemon Observation, Knowledge and Evolution Nation (POKEN)",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9559/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7381",
+      "universityId": "unimelb",
+      "name": "Postgraduate Environment Network",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "Career, Climate Action, Climate Change, Climate Policy, environment, Masters of Environment, Network, networking, Office for Environmental Programs, Policy, Postgraduate, Social Issues, sustainability",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/pen/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-8095",
+      "universityId": "unimelb",
+      "name": "Postgraduate Physics Students’ Society",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "Graduate Societies, Masters, Maths, PhD, Physics, Postgraduate, Postrgraduate, PPSS, Science, STEM",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/8095/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9493",
+      "universityId": "unimelb",
+      "name": "Power to Change",
+      "categories": [
+        "Spiritual"
+      ],
+      "keywords": "Bible, Christ, Christian, Christianity, Food, Friend, Friends, Friendship, God, Heaven, Holy Spirit, Jesus, Love, Meaning, P2c, Power to Change, PTC, Purpose, Religion, Spirit, Spirituality, Yesu",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9493/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-8915",
+      "universityId": "unimelb",
+      "name": "Pre-Law Society",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "JD, juris doctor, law, lawyer, mls, mups, prelaw, pre-law, prelaw society",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/8915/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7413",
+      "universityId": "unimelb",
+      "name": "Psychology Association",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "arts, best club, careers, clinical, community, education, health science, medicine, mental health, mupa, networking, neuroscience, psychology, research, science, study sessions, support, workshop",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/mupa/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10534",
+      "universityId": "unimelb",
+      "name": "Punjabi Student Association",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10534/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7967",
+      "universityId": "unimelb",
+      "name": "Quantitative Trading Society",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "Commerce, Computer Science, Engineering, Finance, Mathematics, Maths, Programming, Quant, Quant Trading, Quantitative Trading, Quantitative Trading Society, Science, Trading",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7967/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9537",
+      "universityId": "unimelb",
+      "name": "Quantum Club",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9537/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9276",
+      "universityId": "unimelb",
+      "name": "Queer Commerce Club",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/queercommerceclub/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10438",
+      "universityId": "unimelb",
+      "name": "Radiology and Medical Imaging",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "Biomedical Engineering, Diagnostic Radiology, Medical Imaging, Neuroimaging, Neuroscience, Radiography, Radiology",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/rmiss/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10176",
+      "universityId": "unimelb",
+      "name": "Real Estate Investment Student Association",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10176/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10131",
+      "universityId": "unimelb",
+      "name": "Reels Club",
+      "categories": [
+        "Reading, Writing & Watching"
+      ],
+      "keywords": "content creation, editing, influencer club, marketing club, meme, photography, reels, reels club melbourne, social club, social media club, university club, video, video editing club",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/reels-club/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7902",
+      "universityId": "unimelb",
+      "name": "Responsible Artificial Intelligence Development",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "AI, Artificial Intelligence, Digital, Ethics, Innovation, Media, Regulation, STEM, Technology",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/raid/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7437",
+      "universityId": "unimelb",
+      "name": "Ring of Choir",
+      "categories": [
+        "Music & Dance"
+      ],
+      "keywords": "a capella, a cappella, acapela, acapella, acappella, choir, music, roc, sing, singing, vocal",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7437/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7453",
+      "universityId": "unimelb",
+      "name": "Robogals Melbourne",
+      "categories": [
+        "Community Service"
+      ],
+      "keywords": "networking, robotics, STEM, tutor",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7453/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7951",
+      "universityId": "unimelb",
+      "name": "Robotics, Engineering & Competition Society",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "Competition, Competitive, Electrical, Eng, Engineering, FLL, FRC, Game, Mechanical, Mechatronics, REC, RECS, Robotics, Society, STEM, Strategy, VEX, VEX U",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7951/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10054",
+      "universityId": "unimelb",
+      "name": "Rock and Metal Society (RAMS)",
+      "categories": [
+        "Music & Dance"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10054/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9372",
+      "universityId": "unimelb",
+      "name": "Rotaract Club",
+      "categories": [
+        "Community Service"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9372/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10065",
+      "universityId": "unimelb",
+      "name": "Saudi Students Association at Melbourne University (SAMU)",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10065/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7469",
+      "universityId": "unimelb",
+      "name": "Science Students Society",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "bbq, camp, camps, cool, deals, education, fun, fundraising, oweek, party, science, STEM, student, students",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7469/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7477",
+      "universityId": "unimelb",
+      "name": "Sexpression",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "explore, feminism, power, relationships, sex",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7477/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7485",
+      "universityId": "unimelb",
+      "name": "Singapore Students Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "Singapore, socialising",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7485/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9136",
+      "universityId": "unimelb",
+      "name": "Slavic Languages Club",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "Balkans, Polish, Russian, Slavic Languages, Ukrainian",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9136/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9737",
+      "universityId": "unimelb",
+      "name": "SMART Consumers",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9737/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7509",
+      "universityId": "unimelb",
+      "name": "Social Impact Investment Fund",
+      "categories": [
+        "Community Service"
+      ],
+      "keywords": "commerce, economics, finance, fund, investing, investments, networking, portfolio, shares, social, social impact, stocks",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/siif_melbourne/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7517",
+      "universityId": "unimelb",
+      "name": "Socialist Alternative",
+      "categories": [
+        "Political & Activist"
+      ],
+      "keywords": "activism, marxism, politics, radical, socialist",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7517/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9076",
+      "universityId": "unimelb",
+      "name": "Society for Astronomy at Melbourne University (SAMU)",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "Art, Astro, Astronomy, Astrophysics, Community, Cultural, Culture, Historical, History, Humanities, Science, Space, Stargazing, Stars, Telescope",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/samu/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9977",
+      "universityId": "unimelb",
+      "name": "Society for Transportation Enthusiasts At Melbourne (STEAM)",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9977/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9064",
+      "universityId": "unimelb",
+      "name": "Soil and Plant Society",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "Agriculture, Agroecology, Biology, Botany, Earth, Farm, Farming, Flora, Food, Garden, Horticulture, Melbourne, Nature, Plant, Plants, Regenerative, Science, Soil, Student, Vegetables, Victorian",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/saps/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7541",
+      "universityId": "unimelb",
+      "name": "Speech Pathology Students' Society",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "allied health, education, professional development, speech, talking",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7541/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-8926",
+      "universityId": "unimelb",
+      "name": "Sri Lankan Graduates' Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "Postgraduates, SLGS, Sri Lanka",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/8926/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7549",
+      "universityId": "unimelb",
+      "name": "Sri Lankan Students Association",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "Social, Sri Lanka",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7549/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-8055",
+      "universityId": "unimelb",
+      "name": "StartUp Link Unimelb",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "accounting, AI, Business, commerce, computer, data, economics, Entrepreneurship, fbe, finance, Innovation, Startup, startups, technology",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/8055/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-8937",
+      "universityId": "unimelb",
+      "name": "Statistics and Mathematics Postgraduate Society (StAMPS)",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "Mathematics, Maths, Maths Club, Peer Support, Postgraduate, Statistics, Stats, Study Sessions",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/8937/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7557",
+      "universityId": "unimelb",
+      "name": "Student Exchange Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "abroad, exchange, international students, musex, students",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7557/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10374",
+      "universityId": "unimelb",
+      "name": "Student Institution of Mihoyo Players",
+      "categories": [
+        "Sports & Games"
+      ],
+      "keywords": "Genshin, Honkai, Honkai Impact, Hoyoverse, HSR, Mihoyo, SIMP, Star, Starrail, Zenless, ZZZ",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10374/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9216",
+      "universityId": "unimelb",
+      "name": "Students in Renewable Energy",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "energy, engineering, power, renewable, science",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9216/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10165",
+      "universityId": "unimelb",
+      "name": "Students of Royal Melbourne (STORM)",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10165/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7581",
+      "universityId": "unimelb",
+      "name": "Students' Association of Management and Marketing",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "manage, management, marketing, networking, SAMM, students",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7581/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-8948",
+      "universityId": "unimelb",
+      "name": "Swifties’ Society (Taylor’s Version)",
+      "categories": [
+        "Music & Dance"
+      ],
+      "keywords": "Music, Pop, Swift, Swiftie, Taylor, Taylor Swift",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/8948/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10032",
+      "universityId": "unimelb",
+      "name": "Synthetic Biology Society",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10032/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7621",
+      "universityId": "unimelb",
+      "name": "Tabletop Gaming Society",
+      "categories": [
+        "Sports & Games"
+      ],
+      "keywords": "board, boardgame, card, d20, DampD, dice, dnd, eurogame, games, gaming, gorg, larping, magic, monopoly, mtg, mysterium, new player, roleplaying, rpg, tabletop, tcg, TGS, ttrpg, wargaming, wholesome",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7621/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9192",
+      "universityId": "unimelb",
+      "name": "Tamil Sangam",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "Asia, Culture, Heritage, Hindi, India, Kannada, Language, Malayalam, Malaysia, Maldives, Mauritius, Punjabi, Singapore, Sinhala, Sinhalese, South Asia, South East Asia, Sri Lanka, Tamil, Telugu",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/mutamilsangam/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10109",
+      "universityId": "unimelb",
+      "name": "Tea Table",
+      "categories": [
+        "Food & Beverage"
+      ],
+      "keywords": "Cha, Culture, Table, Tea",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10109/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-8904",
+      "universityId": "unimelb",
+      "name": "Technology Consulting Club (MTech)",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "Commerce, Consulting, Information, Network, Project, Tech, Technology",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/mtech/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7637",
+      "universityId": "unimelb",
+      "name": "TEDxUniMelb",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "Community, Ideas, TED Talk, TEDx",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7637/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10098",
+      "universityId": "unimelb",
+      "name": "Television & Streaming Society",
+      "categories": [
+        "Reading, Writing & Watching"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10098/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7645",
+      "universityId": "unimelb",
+      "name": "Thai Student Association",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "culture, MUTSA, socialising, Thai, thailand, TSA",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7645/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10474",
+      "universityId": "unimelb",
+      "name": "Trivia Club",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10474/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7669",
+      "universityId": "unimelb",
+      "name": "Turkish Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "Community, Friendship, Turkey, Turkish, Türkiye",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7669/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7693",
+      "universityId": "unimelb",
+      "name": "University Network for Investing and Trading (UNIT)",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "finance, Investing, money, stockmarket, Trading",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7693/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7357",
+      "universityId": "unimelb",
+      "name": "Urban Collective",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "architecture, built environment, cities, education, environment, industry, landscape, network, planning, project, social, student, urban design, urban planning",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7357/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9592",
+      "universityId": "unimelb",
+      "name": "VCA Music Theatre Society",
+      "categories": [
+        "Music & Dance"
+      ],
+      "keywords": "Music Theatre",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9592/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-8087",
+      "universityId": "unimelb",
+      "name": "Vegan Club",
+      "categories": [
+        "Food & Beverage"
+      ],
+      "keywords": "Animal Welfare, Environment, Food, Health, Plant Based, Social Justice, Sustainability, Veganism, Welfare, Wellbeing",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/8087/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7701",
+      "universityId": "unimelb",
+      "name": "Very Special Kids Society",
+      "categories": [
+        "Community Service"
+      ],
+      "keywords": "charity, donate, kids, nonprofit, student, volunteer, volunteering",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7701/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7725",
+      "universityId": "unimelb",
+      "name": "Vietnamese Students' Association",
+      "categories": [
+        "Culture & Language"
+      ],
+      "keywords": "Community, Friendship, Vietnam, Vietnamese",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7725/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10761",
+      "universityId": "unimelb",
+      "name": "What YouthThink",
+      "categories": [
+        "Political & Activist"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10761/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7733",
+      "universityId": "unimelb",
+      "name": "Wildlife Conservation Society",
+      "categories": [
+        "Community Service"
+      ],
+      "keywords": "Animals, Conservation, Ecology, Environment, Nature, Volunteer, Wildlife, Zoology",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7733/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7741",
+      "universityId": "unimelb",
+      "name": "Wine Society",
+      "categories": [
+        "Food & Beverage"
+      ],
+      "keywords": "Community, Friendship, Wine",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7741/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7749",
+      "universityId": "unimelb",
+      "name": "Women in Commerce and Politics",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7749/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7757",
+      "universityId": "unimelb",
+      "name": "Women in Economics Students' Society",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "Career, Economics, Networking, Women",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7757/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7765",
+      "universityId": "unimelb",
+      "name": "Women in Technology",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "Career, IT, Networking, Tech, WIT, Women",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/website/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-10821",
+      "universityId": "unimelb",
+      "name": "Women's Outdoor Adventure Club: Backcountry Squatters",
+      "categories": [
+        "Special Interest"
+      ],
+      "keywords": "adventure, camping, country, hiking, nature, outdoor",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10821/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7773",
+      "universityId": "unimelb",
+      "name": "Women* in Science and Engineering (W.I.S.E.)",
+      "categories": [
+        "Course Related"
+      ],
+      "keywords": "career, community, engineering, Non-binary, science, STEM, Women",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/wiseunimelb/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-9603",
+      "universityId": "unimelb",
+      "name": "World of Mahjong Club",
+      "categories": [
+        "Sports & Games"
+      ],
+      "keywords": "asian, competition, game, games, mahjong, strategy",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/9603/",
+      "imageUrl": ""
+    },
+    {
+      "id": "umsu-7789",
+      "universityId": "unimelb",
+      "name": "Youth Charity Society",
+      "categories": [
+        "Community Service"
+      ],
+      "keywords": "charity, community, fundraising, social impact, socialising, volunteer, volunteering",
+      "profileUrl": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/7789/",
+      "imageUrl": ""
+    }
+  ]
+}

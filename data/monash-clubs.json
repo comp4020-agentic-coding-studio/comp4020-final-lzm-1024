@@ -1,0 +1,1148 @@
+{
+  "universityId": "monash",
+  "sourceName": "MSA Clayton clubs directory",
+  "sourceUrl": "https://clubs.msa.monash.edu/joinnow/clubs-and-societies/",
+  "retrievedAt": "2026-10-01T12:16:20.195Z",
+  "clubs": [
+    {
+      "id": "msa-7247",
+      "universityId": "monash",
+      "name": "Accounting Students' Association, Monash (MASA)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7247/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7258",
+      "universityId": "monash",
+      "name": "Actuarial Students Society, Monash (MASS)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7258/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7269",
+      "universityId": "monash",
+      "name": "Advanced Science & Science Scholar Society, Monash (MASS3)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7269/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-6939",
+      "universityId": "monash",
+      "name": "Adventist Students on Campus (ASOC)",
+      "categories": [
+        "Spiritual"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/6939/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7280",
+      "universityId": "monash",
+      "name": "Aerospace & Mechanical Engineering Club, Monash (MAMEC)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7280/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-9165",
+      "universityId": "monash",
+      "name": "Afghanistan Monash Student Society (AMSS)",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/9165/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7291",
+      "universityId": "monash",
+      "name": "Afro Society, Monash (MAfS)",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7291/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-6950",
+      "universityId": "monash",
+      "name": "AIESEC Monash",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/6950/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7302",
+      "universityId": "monash",
+      "name": "ALP (Labor) Club, Monash (ALP)",
+      "categories": [
+        "Political"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7302/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7313",
+      "universityId": "monash",
+      "name": "Anime & Manga Appreciation, Society for (SAMA)",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7313/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-8964",
+      "universityId": "monash",
+      "name": "Arab Society, Monash (MARS)",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/8964/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7324",
+      "universityId": "monash",
+      "name": "Arts Students, Society of (SAS)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7324/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-9257",
+      "universityId": "monash",
+      "name": "Atmospheric, Geological and Environmental Society, Monash (MAGES)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/9257/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-6972",
+      "universityId": "monash",
+      "name": "Australia-China Youth Association Monash (ACYA)",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/6972/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-6983",
+      "universityId": "monash",
+      "name": "Bangladesh Students Association of Monash University (BSAMU)",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/6983/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7335",
+      "universityId": "monash",
+      "name": "Big Band, Monash University",
+      "categories": [
+        "Performing Arts"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7335/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7346",
+      "universityId": "monash",
+      "name": "Biological Society, Monash",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7346/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7357",
+      "universityId": "monash",
+      "name": "Biomed Society Inc, Monash",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7357/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-9058",
+      "universityId": "monash",
+      "name": "Biomedical Engineering Student Society, Monash (MBESS)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/9058/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7368",
+      "universityId": "monash",
+      "name": "Boardgames Society, Monash (MBS)",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7368/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-6994",
+      "universityId": "monash",
+      "name": "Business & Commerce Students Society (BCSS)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/6994/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-8644",
+      "universityId": "monash",
+      "name": "Cambodian Association, Monash (MCA)",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/8644/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7401",
+      "universityId": "monash",
+      "name": "Card Collective, Monash (MCC)",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7401/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7412",
+      "universityId": "monash",
+      "name": "Catholics, Monash",
+      "categories": [
+        "Spiritual"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7412/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7423",
+      "universityId": "monash",
+      "name": "Chemical Engineers, Society for Monash University (SMUCE)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7423/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7434",
+      "universityId": "monash",
+      "name": "Chemistry Students, Society of (SoCS)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7434/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7445",
+      "universityId": "monash",
+      "name": "Chess Club, Monash University",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7445/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7456",
+      "universityId": "monash",
+      "name": "Choral Society, Monash University (MonUCS)",
+      "categories": [
+        "Performing Arts"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7456/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7467",
+      "universityId": "monash",
+      "name": "Christian Union, Monash (CU)",
+      "categories": [
+        "Spiritual"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7467/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7478",
+      "universityId": "monash",
+      "name": "Civil Engineering Students, Association of (ACES)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/acesmonash/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7489",
+      "universityId": "monash",
+      "name": "Coding, Monash Association of (MAC)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7489/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7005",
+      "universityId": "monash",
+      "name": "Computing & Commerce Association (CCA)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7005/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7511",
+      "universityId": "monash",
+      "name": "Creative Writers, Monash",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7511/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-9246",
+      "universityId": "monash",
+      "name": "Criminology Student Association, Monash (MCSA)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/9246/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-9036",
+      "universityId": "monash",
+      "name": "Crochet and Knitting Society, Monash University (MUCKS)",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/9036/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7533",
+      "universityId": "monash",
+      "name": "Cyber Security Club, Monash (MonSec)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7533/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7544",
+      "universityId": "monash",
+      "name": "Debaters Inc., Monash Association of (MAD)",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7544/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7016",
+      "universityId": "monash",
+      "name": "Economics Students' Society of Australia (Monash Clayton) Inc",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7016/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7566",
+      "universityId": "monash",
+      "name": "Education and Teachers' Association, Monash (META)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7566/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-8929",
+      "universityId": "monash",
+      "name": "Effective Altruism Monash University",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/8929/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7577",
+      "universityId": "monash",
+      "name": "Electrical Engineers, Society of Monash (SMEE)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7577/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7588",
+      "universityId": "monash",
+      "name": "Electronic Gaming Association, Monash (MEGA)",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7588/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7027",
+      "universityId": "monash",
+      "name": "Embrace Education Inc.",
+      "categories": [
+        "Social Welfare"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7027/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-9025",
+      "universityId": "monash",
+      "name": "Energy Club, Monash",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/9025/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7599",
+      "universityId": "monash",
+      "name": "Engineering & Pharmaceutical Science Society, Monash (MEPSS)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7599/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7610",
+      "universityId": "monash",
+      "name": "Engineering Students Society, Monash (MESS)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7610/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7621",
+      "universityId": "monash",
+      "name": "Engineers Without Borders Australia, Monash University Chapter (EWB)",
+      "categories": [
+        "Social Welfare"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7621/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7643",
+      "universityId": "monash",
+      "name": "Environmental Engineering Society, Monash University (MEES)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7643/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7236",
+      "universityId": "monash",
+      "name": "Faculty of IT Society (WIRED)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7236/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7038",
+      "universityId": "monash",
+      "name": "Fantasy and Sci-Fi Association (FASA)",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7038/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-9340",
+      "universityId": "monash",
+      "name": "Fashion Association, Monash (MFA)",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/9340/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-9176",
+      "universityId": "monash",
+      "name": "Filipino Association of Monash",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/9176/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7654",
+      "universityId": "monash",
+      "name": "Film Society, Monash (Film)",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7654/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7665",
+      "universityId": "monash",
+      "name": "Financial Management Association of Australia, Monash University Branch (FMAA)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7665/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7676",
+      "universityId": "monash",
+      "name": "French Society, Monash (MFS)",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7676/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-9329",
+      "universityId": "monash",
+      "name": "Game Creators of Monash (GCoM)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/9329/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7687",
+      "universityId": "monash",
+      "name": "German Liechtensteiner Austrian & Swiss Society, Monash University (GLASS)",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7687/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7082",
+      "universityId": "monash",
+      "name": "GLEAM - Queers in STEM",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7082/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7698",
+      "universityId": "monash",
+      "name": "Greens Society, Monash University (MUGS)",
+      "categories": [
+        "Political"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7698/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7709",
+      "universityId": "monash",
+      "name": "Hellenic Students Society Inc., Monash (MHSS)",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7709/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-9279",
+      "universityId": "monash",
+      "name": "Hindu Student Club, Monash (MHSC)",
+      "categories": [
+        "Spiritual"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/9279/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-8940",
+      "universityId": "monash",
+      "name": "Humanities and Social Sciences Club (HASS)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/8940/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7720",
+      "universityId": "monash",
+      "name": "Indian Cultural Society, Monash (MICS)",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7720/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7731",
+      "universityId": "monash",
+      "name": "Indonesian Club, Monash",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7731/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7742",
+      "universityId": "monash",
+      "name": "International Affairs Society, Monash (MIAS)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7742/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7753",
+      "universityId": "monash",
+      "name": "Investing & Trading Monash, University Network for (UNIT)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7753/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7764",
+      "universityId": "monash",
+      "name": "Islamic Society, Monash University (MUIS)",
+      "categories": [
+        "Spiritual"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7764/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7775",
+      "universityId": "monash",
+      "name": "Italian Club, Monash University",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7775/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7786",
+      "universityId": "monash",
+      "name": "Japanese Club, Monash (MJC)",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7786/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7797",
+      "universityId": "monash",
+      "name": "Jewish Students Society, Monash (MonJSS)",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7797/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7093",
+      "universityId": "monash",
+      "name": "Korean Appreciation Student Association (KASA)",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7093/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7104",
+      "universityId": "monash",
+      "name": "Labor Unity Club",
+      "categories": [
+        "Political"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7104/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7819",
+      "universityId": "monash",
+      "name": "Law Students' Society Inc., Monash (LSS)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7819/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7841",
+      "universityId": "monash",
+      "name": "Liberal Club, Monash University (MULC)",
+      "categories": [
+        "Political"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7841/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7115",
+      "universityId": "monash",
+      "name": "Linguistics Society (LingSoc)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7115/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7852",
+      "universityId": "monash",
+      "name": "Mahjong Club, Monash (MM)",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7852/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7863",
+      "universityId": "monash",
+      "name": "Malaysian Students Union, Monash University (MUMSU)",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7863/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7874",
+      "universityId": "monash",
+      "name": "Marketing Students Society, Monash (MMSS)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7874/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7137",
+      "universityId": "monash",
+      "name": "Materials Engineering and Science Society (MatES)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7137/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-9318",
+      "universityId": "monash",
+      "name": "Mauritian Society, Monash (MMS)",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/9318/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7148",
+      "universityId": "monash",
+      "name": "Mechatronics Engineering Clayton Club (MECC)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7148/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7885",
+      "universityId": "monash",
+      "name": "Medical Students Society, Monash University (MUMUS)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7885/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7896",
+      "universityId": "monash",
+      "name": "Medieval Club, Monash (SCA - College of St Monica)",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7896/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-8732",
+      "universityId": "monash",
+      "name": "Monash Hong Kong Student Association Clayton",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/8732/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-9122",
+      "universityId": "monash",
+      "name": "Neurodivergent Minds Society, Monash (MNMS)",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/9122/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7929",
+      "universityId": "monash",
+      "name": "Neuroscience & Psychology Society, Students (SNAPS)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7929/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-9047",
+      "universityId": "monash",
+      "name": "Nursing Students Society, Monash Clayton (NSS)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/9047/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7951",
+      "universityId": "monash",
+      "name": "Nutrition and Dietetics Society, Monash (MNDS)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7951/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7973",
+      "universityId": "monash",
+      "name": "Overseas Christian Fellowship, Monash University (OCF)",
+      "categories": [
+        "Spiritual"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7973/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7159",
+      "universityId": "monash",
+      "name": "Oxfam at Monash",
+      "categories": [
+        "Social Welfare"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7159/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-8743",
+      "universityId": "monash",
+      "name": "Pakistani Association at Monash (PAM)",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/8743/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-8006",
+      "universityId": "monash",
+      "name": "Philharmonic Society, Monash University (MUPS)",
+      "categories": [
+        "Performing Arts"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/8006/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-8017",
+      "universityId": "monash",
+      "name": "Philosophy Society, Monash",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/8017/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-8039",
+      "universityId": "monash",
+      "name": "Physics, Astro & Maths, Society for (SPAM)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/8039/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-9144",
+      "universityId": "monash",
+      "name": "Physiology Society, Monash",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/9144/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-8050",
+      "universityId": "monash",
+      "name": "Power to Change, Monash (PTC)",
+      "categories": [
+        "Spiritual"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/8050/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-8072",
+      "universityId": "monash",
+      "name": "Radiation Students' Society, Monash (MRSS)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/8072/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-9307",
+      "universityId": "monash",
+      "name": "Red Cross Society, Monash",
+      "categories": [
+        "Social Welfare"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/9307/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-8083",
+      "universityId": "monash",
+      "name": "Role Players, Monash University (MURP)",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/8083/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-8094",
+      "universityId": "monash",
+      "name": "Science Society, Monash (MSS)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/8094/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7181",
+      "universityId": "monash",
+      "name": "Singapore Association of Monash (SAM)",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7181/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-8116",
+      "universityId": "monash",
+      "name": "Socio-Economic Engagement & Development, Monash (SEED)",
+      "categories": [
+        "Social Welfare"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/8116/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7192",
+      "universityId": "monash",
+      "name": "Spanish and Latin American Club (SLAC)",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7192/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7203",
+      "universityId": "monash",
+      "name": "Sri Lankan Cultural Club of Monash University (MUSLCC)",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7203/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-9268",
+      "universityId": "monash",
+      "name": "Tamil Language Society, Monash (MTLS)",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/9268/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7214",
+      "universityId": "monash",
+      "name": "Team MED",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7214/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-8754",
+      "universityId": "monash",
+      "name": "Thai Open Community (TOC)",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/8754/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-8655",
+      "universityId": "monash",
+      "name": "Transport Engineers at Monash (TEM)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/8655/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-8127",
+      "universityId": "monash",
+      "name": "Vegan Society, Monash",
+      "categories": [
+        "Special Interest"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/8127/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7225",
+      "universityId": "monash",
+      "name": "Vietnamese Students Association (VSA)",
+      "categories": [
+        "Cultural"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7225/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-8138",
+      "universityId": "monash",
+      "name": "Wildfire Monash University Rural and Indigenous Health Club",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/8138/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-9235",
+      "universityId": "monash",
+      "name": "Women in Business Monash (WIB)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/9235/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-7060",
+      "universityId": "monash",
+      "name": "Women in Engineering at Monash (WEM)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/7060/",
+      "imageUrl": ""
+    },
+    {
+      "id": "msa-9290",
+      "universityId": "monash",
+      "name": "Women in IT Monash (UnITy)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://clubs.msa.monash.edu/organisation/9290/",
+      "imageUrl": ""
+    }
+  ]
+}

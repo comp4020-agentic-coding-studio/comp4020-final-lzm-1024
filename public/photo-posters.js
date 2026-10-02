@@ -1,0 +1,7 @@
+import {escapeHtml as esc} from './ui-utils.js';
+const layouts=new Set(['cover','editorial','frame','arch','split','ticket','sport','magazine']);
+export function photoPoster(p,university,dateText,large=false){
+  const design=p.photoPoster,layout=layouts.has(design.layout)?design.layout:'editorial';
+  const colour=(value,fallback)=>/^#[a-f0-9]{6}$/i.test(value||'')?value:fallback;
+  return `<div class="photographic-poster photo-${layout}${large?' large':''}" style="--photo-bg:${colour(design.palette?.bg,'#172a32')};--photo-fg:${colour(design.palette?.fg,'#ffffff')};--photo-accent:${colour(design.palette?.accent,'#eedda3')}" role="img" aria-label="${esc(p.title)} — TEST EVENT. Illustrative photograph. ${esc(p.location)}"><div class="photo-masthead"><span>${esc(university?.shortName)} / ${esc(p.category)}</span><span class="photo-test-label">TEST EVENT</span></div><div class="photo-scene"><img src="${esc(p.heroImageUrl)}" alt="${esc(design.photoAlt)}" loading="${large?'eager':'lazy'}" decoding="async" width="1400" height="1800"></div><span class="photo-issue" aria-hidden="true">${esc(design.number)} / CAMPUS COLLECTION</span><div class="photo-headline"><p class="photo-series">${esc(design.series)}</p><h2>${esc(p.title)}</h2><p class="photo-deck">${esc(p.subtitle)}</p></div><div class="photo-foot"><strong>${esc(dateText(p.date))}<span>${esc(p.time)}</span></strong><span>${esc(p.location)}</span><small>FICTIONAL ACTIVITY / REAL VENUE / ILLUSTRATIVE PHOTO</small></div></div>`;
+}

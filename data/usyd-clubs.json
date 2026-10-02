@@ -1,0 +1,3085 @@
+{
+  "universityId": "usyd",
+  "sourceName": "USU clubs directory",
+  "sourceUrl": "https://usu.edu.au/clubs/",
+  "retrievedAt": "2026-10-01T09:16:52.565Z",
+  "clubs": [
+    {
+      "id": "usu-kinds",
+      "universityId": "usyd",
+      "name": "(K)INDS society - Kindred Individuals and neurodiverse students",
+      "categories": [
+        "Social Impact & Advocacy"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/kinds",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-180dc",
+      "universityId": "usyd",
+      "name": "180 Degrees Consulting",
+      "categories": [
+        "Professional",
+        "Social Impact & Advocacy"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/180dc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-absoc",
+      "universityId": "usyd",
+      "name": "ABSOC - Sydney University Ahlul-Bayt Society",
+      "categories": [
+        "Faith & Religion"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/absoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-acaiety",
+      "universityId": "usyd",
+      "name": "ACAIETY",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/acaiety",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-aiesec",
+      "universityId": "usyd",
+      "name": "AIESEC in Sydney",
+      "categories": [
+        "Professional",
+        "Social Impact & Advocacy"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/aiesec",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-anthropologysoc",
+      "universityId": "usyd",
+      "name": "Anthropology Society",
+      "categories": [
+        "Academic",
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/anthropologysoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-arabsoc",
+      "universityId": "usyd",
+      "name": "Arab Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/arabsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-archsoc",
+      "universityId": "usyd",
+      "name": "Archaeology Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/archsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-artsncrafts",
+      "universityId": "usyd",
+      "name": "Arts & Crafts Society",
+      "categories": [
+        "Creative Arts & Performance",
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/artsncrafts",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-assyrianstudents",
+      "universityId": "usyd",
+      "name": "Assyrian Students' Association",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/assyrianstudents",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-aujs",
+      "universityId": "usyd",
+      "name": "Australasian Union of Jewish Students - University of Sydney",
+      "categories": [
+        "Faith & Religion"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/aujs",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-acya",
+      "universityId": "usyd",
+      "name": "Australia-China Youth Association University of Sydney",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/acya",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-bananaleaves",
+      "universityId": "usyd",
+      "name": "Banana Leaves",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/bananaleaves",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-barbersoc",
+      "universityId": "usyd",
+      "name": "BarberSoc A Cappella",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/barbersoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-biosoc",
+      "universityId": "usyd",
+      "name": "Biology Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/biosoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-birdsoc",
+      "universityId": "usyd",
+      "name": "Birding Society",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/birdsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-bgs",
+      "universityId": "usyd",
+      "name": "Boardgame Society",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/bgs",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-booksoc",
+      "universityId": "usyd",
+      "name": "Book Society",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/booksoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-bouldersoc",
+      "universityId": "usyd",
+      "name": "BoulderSoc (Social Bouldering Society)",
+      "categories": [
+        "Hobbies & Special Interest",
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/bouldersoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-bisa",
+      "universityId": "usyd",
+      "name": "Business Information Systems Association",
+      "categories": [
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/bisa",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-businessone",
+      "universityId": "usyd",
+      "name": "BusinessOne",
+      "categories": [
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/businessone",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-camdenfarms",
+      "universityId": "usyd",
+      "name": "Camden Farms Student Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/camdenfarms",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-catsoc",
+      "universityId": "usyd",
+      "name": "Cat Society",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/catsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-clss",
+      "universityId": "usyd",
+      "name": "Chinese Law Students Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/clss",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-cpss",
+      "universityId": "usyd",
+      "name": "Chinese Psychology Students Society",
+      "categories": [
+        "Academic",
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/cpss",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-chopsticks",
+      "universityId": "usyd",
+      "name": "Chopsticks",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/chopsticks",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-csu",
+      "universityId": "usyd",
+      "name": "Christian Students Uniting",
+      "categories": [
+        "Faith & Religion"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/csu",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-coffeesoc",
+      "universityId": "usyd",
+      "name": "Coffee Society",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/coffeesoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-coda",
+      "universityId": "usyd",
+      "name": "Combined Dentistry Association",
+      "categories": [
+        "Academic",
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/coda",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-coma",
+      "universityId": "usyd",
+      "name": "Combined Medicine Association",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/coma",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-commstem",
+      "universityId": "usyd",
+      "name": "COMM-STEM",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/commstem",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-csa",
+      "universityId": "usyd",
+      "name": "Conservatorium Students' Association",
+      "categories": [
+        "Academic",
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/csa",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-cutcable",
+      "universityId": "usyd",
+      "name": "Cut Cable",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/cutcable",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-css",
+      "universityId": "usyd",
+      "name": "Cybersecurity Society Sydney",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/css",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-dalyellscholars",
+      "universityId": "usyd",
+      "name": "Dalyell Scholars Association",
+      "categories": [
+        "Academic",
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/dalyellscholars",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-delhi",
+      "universityId": "usyd",
+      "name": "DelhiSoc",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/delhi",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-dbsoc",
+      "universityId": "usyd",
+      "name": "Desserts and Baking Society",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/dbsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-econsoc",
+      "universityId": "usyd",
+      "name": "EconSoc (The Sydney University Economics Society)",
+      "categories": [
+        "Academic",
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/econsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-eausyd",
+      "universityId": "usyd",
+      "name": "Effective Altruism",
+      "categories": [
+        "Social Impact & Advocacy"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/eausyd",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-ekansh",
+      "universityId": "usyd",
+      "name": "Ekansh Indian Cultural Society",
+      "categories": [
+        "Culture & Language",
+        "Faith & Religion"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/ekansh",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-enactus",
+      "universityId": "usyd",
+      "name": "Enactus University of Sydney",
+      "categories": [
+        "Academic",
+        "Professional",
+        "Social Impact & Advocacy"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/enactus",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-eisa",
+      "universityId": "usyd",
+      "name": "Engineering International Students Association (EISA)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/eisa",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-engrevue",
+      "universityId": "usyd",
+      "name": "Engineering Revue Society",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/engrevue",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-ewb",
+      "universityId": "usyd",
+      "name": "Engineers Without Borders",
+      "categories": [
+        "Academic",
+        "Professional",
+        "Social Impact & Advocacy"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/ewb",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-epssu",
+      "universityId": "usyd",
+      "name": "Exercise Physiology & Sport Science Union (EPSSU)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/epssu",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-falundafa",
+      "universityId": "usyd",
+      "name": "Falun Dafa USYD",
+      "categories": [
+        "Faith & Religion"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/falundafa",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-fssusyd",
+      "universityId": "usyd",
+      "name": "Filipino Student Society of the University of Sydney",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/fssusyd",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-ufo",
+      "universityId": "usyd",
+      "name": "Filmmaking Organisation",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/ufo",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-fmaa",
+      "universityId": "usyd",
+      "name": "Financial Management Association of Australia",
+      "categories": [
+        "Academic",
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/fmaa",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-formularacingsoc",
+      "universityId": "usyd",
+      "name": "Formula Racing Society",
+      "categories": [
+        "Hobbies & Special Interest",
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/formularacingsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-fls",
+      "universityId": "usyd",
+      "name": "Fragrance & Lifestyle Society",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/fls",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-frenchsoc",
+      "universityId": "usyd",
+      "name": "French Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/frenchsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-gaiusgracchus",
+      "universityId": "usyd",
+      "name": "Gaius Gracchus: the Classics and Ancient History Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/gaiusgracchus",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-gpstudentsnetwork",
+      "universityId": "usyd",
+      "name": "General Practice Students Network",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/gpstudentsnetwork",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-germansoc",
+      "universityId": "usyd",
+      "name": "German Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/germansoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-goonapp",
+      "universityId": "usyd",
+      "name": "Goon Appreciation Society",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/goonapp",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-gymclub",
+      "universityId": "usyd",
+      "name": "Gym Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/gymclub",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-harc",
+      "universityId": "usyd",
+      "name": "HARC! USYD Historical Arts & Reenactment Club",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/harc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-hissoc",
+      "universityId": "usyd",
+      "name": "History Society",
+      "categories": [
+        "Academic",
+        "Hobbies & Special Interest",
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/hissoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-h20",
+      "universityId": "usyd",
+      "name": "Humanitarian Health Organisation",
+      "categories": [
+        "Social Impact & Advocacy"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/h20",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-icecreamsoc",
+      "universityId": "usyd",
+      "name": "Ice Cream Society",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/icecreamsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-ppia",
+      "universityId": "usyd",
+      "name": "Indonesian Student Association (Perhimpunan Pelajar Indonesia Australia - PPIA University of Sydney)",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/ppia",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-ibussoc",
+      "universityId": "usyd",
+      "name": "International Business Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/ibussoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-jacarandastockmarket",
+      "universityId": "usyd",
+      "name": "Jacaranda Stock Market Society",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/jacarandastockmarket",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-japanesestudentsoc",
+      "universityId": "usyd",
+      "name": "Japanese Student Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/japanesestudentsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-kiwisoc",
+      "universityId": "usyd",
+      "name": "Kiwi Students Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/kiwisoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-kollingpress",
+      "universityId": "usyd",
+      "name": "Kolling Postgraduate Research Student Society (PReSS)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/kollingpress",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-kics",
+      "universityId": "usyd",
+      "name": "Korean International Culture Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/kics",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-klus",
+      "universityId": "usyd",
+      "name": "Korean Law Students at the University of Sydney",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/klus",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-kmhs",
+      "universityId": "usyd",
+      "name": "Korean Medical and Health Society (KMHS)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/kmhs",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-kosta",
+      "universityId": "usyd",
+      "name": "KOSTA (Korean Students in All Nations)",
+      "categories": [
+        "Culture & Language",
+        "Faith & Religion"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/kosta",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-litsoc",
+      "universityId": "usyd",
+      "name": "Literature Society",
+      "categories": [
+        "Academic",
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/litsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-loveyousomatcha",
+      "universityId": "usyd",
+      "name": "LOVEYOUSOMATCHA",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/loveyousomatcha",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-ressoc",
+      "universityId": "usyd",
+      "name": "Mandelbaum House Residents' Society",
+      "categories": [
+        "Social Impact & Advocacy"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/ressoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-mathpostgradsoc",
+      "universityId": "usyd",
+      "name": "Mathematical Postgraduate Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/mathpostgradsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-mugs",
+      "universityId": "usyd",
+      "name": "Mechanical Undergraduate's Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/mugs",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-manda",
+      "universityId": "usyd",
+      "name": "Mergers and Acquisitions Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/manda",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-mongolsociety",
+      "universityId": "usyd",
+      "name": "MONGOL Society at USYD",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/mongolsociety",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-mirage",
+      "universityId": "usyd",
+      "name": "Multidisciplinary Interest in Rural And General health Education (MIRAGE)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/mirage",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-mixsoc",
+      "universityId": "usyd",
+      "name": "Multiracial Intercultural Experience Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/mixsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-muslimsinhealth",
+      "universityId": "usyd",
+      "name": "Muslims in Health Society",
+      "categories": [
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/muslimsinhealth",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-myanmarsoc",
+      "universityId": "usyd",
+      "name": "Myanmar Cultural Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/myanmarsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-nushuculture",
+      "universityId": "usyd",
+      "name": "Nushu Culture & Research Association",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/nushuculture",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-otsoc",
+      "universityId": "usyd",
+      "name": "Occupational Therapy Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/otsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-onecircle",
+      "universityId": "usyd",
+      "name": "One Circle Club",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/onecircle",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-padelclub",
+      "universityId": "usyd",
+      "name": "Padel Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/padelclub",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-paperclips",
+      "universityId": "usyd",
+      "name": "Paperclips - University of Sydney AI Safety Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/paperclips",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-pocrevue",
+      "universityId": "usyd",
+      "name": "People of Colour Revue",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/pocrevue",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-perlerbeadssociety",
+      "universityId": "usyd",
+      "name": "Perler Beads Society",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/perlerbeadssociety",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-poleandaerial",
+      "universityId": "usyd",
+      "name": "Pole and Aerial Society",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/poleandaerial",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-ppesoc",
+      "universityId": "usyd",
+      "name": "Politics, Philosophy, and Economics Society (PPESOC)",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/ppesoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-popsoc",
+      "universityId": "usyd",
+      "name": "Pop Music Performance Society",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/popsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-popss",
+      "universityId": "usyd",
+      "name": "Postgraduate Organisation for Political & Social Sciences",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/popss",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-press",
+      "universityId": "usyd",
+      "name": "Postgraduate Research in Engineering Student Society (PRESS)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/press",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-powertochange",
+      "universityId": "usyd",
+      "name": "Power to Change",
+      "categories": [
+        "Faith & Religion"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/powertochange",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-qoco",
+      "universityId": "usyd",
+      "name": "QOCO: Queers Of Colour",
+      "categories": [
+        "Culture & Language",
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/qoco",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-radsoc",
+      "universityId": "usyd",
+      "name": "RADSOC - Sydney Uni Radiography Society",
+      "categories": [
+        "Academic",
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/radsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-raksoc",
+      "universityId": "usyd",
+      "name": "Random Acts of Kindness",
+      "categories": [
+        "Social Impact & Advocacy"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/raksoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-ref",
+      "universityId": "usyd",
+      "name": "Reformed Evangelical Fellowship",
+      "categories": [
+        "Faith & Religion"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/ref",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-rpahsoc",
+      "universityId": "usyd",
+      "name": "RPAH Medical Student Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/rpahsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-scandisoc",
+      "universityId": "usyd",
+      "name": "Scandinavian & Nordic Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/scandisoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-signsoc",
+      "universityId": "usyd",
+      "name": "Sign Language Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/signsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-singaporestudents",
+      "universityId": "usyd",
+      "name": "Singapore Students' Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/singaporestudents",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-skatesoc",
+      "universityId": "usyd",
+      "name": "Skateboarding Society",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/skatesoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-skillsharing",
+      "universityId": "usyd",
+      "name": "Skill Sharing Club",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/skillsharing",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-scasa",
+      "universityId": "usyd",
+      "name": "Slavic and Central Asian Students Association (SCASA)",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/scasa",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-sms",
+      "universityId": "usyd",
+      "name": "SMS - Sydney Marketing Society",
+      "categories": [
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/sms",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-socialistalternative",
+      "universityId": "usyd",
+      "name": "Socialist Alternative Club",
+      "categories": [
+        "Political"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/socialistalternative",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-sofia",
+      "universityId": "usyd",
+      "name": "SOFIA University of Sydney Orthodox Christian Fellowship",
+      "categories": [
+        "Faith & Religion"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/sofia",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-solidaritystudents",
+      "universityId": "usyd",
+      "name": "Solidarity Student Club",
+      "categories": [
+        "Political",
+        "Social Impact & Advocacy"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/solidaritystudents",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-soulxpress",
+      "universityId": "usyd",
+      "name": "SoulXPress Sydney University Hip Hop Society",
+      "categories": [
+        "Creative Arts & Performance",
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/soulxpress",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-sabs",
+      "universityId": "usyd",
+      "name": "South Asian Business Society",
+      "categories": [
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/sabs",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-seals",
+      "universityId": "usyd",
+      "name": "South East Asian Law Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/seals",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-solaris",
+      "universityId": "usyd",
+      "name": "Spacecraft Operations, Launch, and Aerospace Research Integrated Systems (SOLARIS)",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/solaris",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-sparksoc",
+      "universityId": "usyd",
+      "name": "SparkSoc",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/sparksoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-startuplink",
+      "universityId": "usyd",
+      "name": "Startup Link, University of Sydney",
+      "categories": [
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/startuplink",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-sash",
+      "universityId": "usyd",
+      "name": "Student Association of Speech & Hearing (SASH)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/sash",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-sow",
+      "universityId": "usyd",
+      "name": "Student Outreach to the World (SOW)",
+      "categories": [
+        "Faith & Religion"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/sow",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-urbanismsoc",
+      "universityId": "usyd",
+      "name": "Student Urbanism Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/urbanismsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-suanime",
+      "universityId": "usyd",
+      "name": "SUAnime",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/suanime",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-sds",
+      "universityId": "usyd",
+      "name": "Sustainable Design Society",
+      "categories": [
+        "Social Impact & Advocacy"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/sds",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-sutekh",
+      "universityId": "usyd",
+      "name": "Sutekh - Board Game and Tabletop Society",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/sutekh",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-sass",
+      "universityId": "usyd",
+      "name": "Sydney Arts Students Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/sass",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-scass",
+      "universityId": "usyd",
+      "name": "Sydney College of the Arts Student Society",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/scass",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-scc",
+      "universityId": "usyd",
+      "name": "Sydney Consulting Club",
+      "categories": [
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/scc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-sils",
+      "universityId": "usyd",
+      "name": "Sydney Indian Law Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/sils",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-spaa",
+      "universityId": "usyd",
+      "name": "Sydney Pan-African Association",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/spaa",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-spi",
+      "universityId": "usyd",
+      "name": "Sydney Policy Institute",
+      "categories": [
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/spi",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-suave",
+      "universityId": "usyd",
+      "name": "Sydney UAV Engineering",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/suave",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-barbellclub",
+      "universityId": "usyd",
+      "name": "Sydney Uni Barbell Club",
+      "categories": [
+        "Hobbies & Special Interest",
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/barbellclub",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-sudata",
+      "universityId": "usyd",
+      "name": "Sydney Uni Data Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/sudata",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-moanasoc",
+      "universityId": "usyd",
+      "name": "Sydney Uni Moana Society (SUMS)",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/moanasoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-armeniansoc",
+      "universityId": "usyd",
+      "name": "Sydney University Armenian Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/armeniansoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-suaia",
+      "universityId": "usyd",
+      "name": "Sydney University Artificial Intelligence Association",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/suaia",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-suabe",
+      "universityId": "usyd",
+      "name": "Sydney University Association of Biomedical Engineers",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/suabe",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-suams",
+      "universityId": "usyd",
+      "name": "Sydney University Association of Malaysian Students",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/suams",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-suas",
+      "universityId": "usyd",
+      "name": "Sydney University Astronomy Society",
+      "categories": [
+        "Academic",
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/suas",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-subsa",
+      "universityId": "usyd",
+      "name": "Sydney University Bangladeshi Student Association",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/subsa",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-subski",
+      "universityId": "usyd",
+      "name": "Sydney University Boarders' and Skiers' Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/subski",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-subw",
+      "universityId": "usyd",
+      "name": "Sydney University Bushwalkers",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/subw",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-subaa",
+      "universityId": "usyd",
+      "name": "Sydney University Business Analytics Association",
+      "categories": [
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/subaa",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-calligraphysoc",
+      "universityId": "usyd",
+      "name": "Sydney University Calligraphy Society",
+      "categories": [
+        "Creative Arts & Performance",
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/calligraphysoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-succ",
+      "universityId": "usyd",
+      "name": "Sydney University Captainball Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/succ",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-carclub",
+      "universityId": "usyd",
+      "name": "Sydney University Car Club",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/carclub",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-cathsoc",
+      "universityId": "usyd",
+      "name": "Sydney University Catholic Society",
+      "categories": [
+        "Faith & Religion"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/cathsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-suces",
+      "universityId": "usyd",
+      "name": "Sydney University Chemical Engineering Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/suces",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-sucsa",
+      "universityId": "usyd",
+      "name": "Sydney University Chinese Students Association",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/sucsa",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-suce",
+      "universityId": "usyd",
+      "name": "Sydney University Civil Engineers",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/suce",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-sudental",
+      "universityId": "usyd",
+      "name": "Sydney University Dental Association",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/sudental",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-suda",
+      "universityId": "usyd",
+      "name": "Sydney University Designers' Association",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/suda",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-dipsoc",
+      "universityId": "usyd",
+      "name": "Sydney University Diplomats Society",
+      "categories": [
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/dipsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-sudc",
+      "universityId": "usyd",
+      "name": "Sydney University Dodgeball Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/sudc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-suds",
+      "universityId": "usyd",
+      "name": "Sydney University Dramatic Society",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/suds",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-sueua",
+      "universityId": "usyd",
+      "name": "Sydney University Engineering Undergraduate Association",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/sueua",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-evangelicalunion",
+      "universityId": "usyd",
+      "name": "Sydney University Evangelical Union",
+      "categories": [
+        "Faith & Religion"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/evangelicalunion",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-suede",
+      "universityId": "usyd",
+      "name": "Sydney University Experience Designers",
+      "categories": [
+        "Academic",
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/suede",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-filmsoc",
+      "universityId": "usyd",
+      "name": "Sydney University Film Society",
+      "categories": [
+        "Creative Arts & Performance",
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/filmsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-sugd",
+      "universityId": "usyd",
+      "name": "Sydney University Gastrodiplomacy",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/sugd",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-golfsoc",
+      "universityId": "usyd",
+      "name": "Sydney University Golf Society",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/golfsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-greeksoc",
+      "universityId": "usyd",
+      "name": "Sydney University Greek Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/greeksoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-greensclub",
+      "universityId": "usyd",
+      "name": "Sydney University Greens Club",
+      "categories": [
+        "Political",
+        "Social Impact & Advocacy"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/greensclub",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-suhado",
+      "universityId": "usyd",
+      "name": "Sydney University HADO Club (SUHADO)",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/suhado",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-healthsoc",
+      "universityId": "usyd",
+      "name": "Sydney University HealthSoc",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/healthsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-suiis",
+      "universityId": "usyd",
+      "name": "Sydney University Impact Investing Society",
+      "categories": [
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/suiis",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-italiansoc",
+      "universityId": "usyd",
+      "name": "Sydney University Italian Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/italiansoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-unijam",
+      "universityId": "usyd",
+      "name": "Sydney University Jamming Society",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/unijam",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-jazzsoc",
+      "universityId": "usyd",
+      "name": "Sydney University Jazz Society",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/jazzsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-laborclub",
+      "universityId": "usyd",
+      "name": "Sydney University Labor Club",
+      "categories": [
+        "Hobbies & Special Interest",
+        "Political",
+        "Social Impact & Advocacy"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/laborclub",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-lawrevue",
+      "universityId": "usyd",
+      "name": "Sydney University Law Revue Society",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/lawrevue",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-lawsoc",
+      "universityId": "usyd",
+      "name": "Sydney University Law Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/lawsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-liberalclub",
+      "universityId": "usyd",
+      "name": "Sydney University Liberal Club",
+      "categories": [
+        "Political"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/liberalclub",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-lingsoc",
+      "universityId": "usyd",
+      "name": "Sydney University Linguistics Society",
+      "categories": [
+        "Academic",
+        "Culture & Language",
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/lingsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-madrigalsociety",
+      "universityId": "usyd",
+      "name": "Sydney University Madrigal Society",
+      "categories": [
+        "Creative Arts & Performance",
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/madrigalsociety",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-sumahjong",
+      "universityId": "usyd",
+      "name": "Sydney University Mahjong Society",
+      "categories": [
+        "Hobbies & Special Interest",
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/sumahjong",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-sumba",
+      "universityId": "usyd",
+      "name": "Sydney University Marching Band Association",
+      "categories": [
+        "Creative Arts & Performance",
+        "Hobbies & Special Interest",
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/sumba",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-sumath",
+      "universityId": "usyd",
+      "name": "Sydney University Mathematics Society (SUMS)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/sumath",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-sumo",
+      "universityId": "usyd",
+      "name": "Sydney University Mechatronics Organisation",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/sumo",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-medscisoc",
+      "universityId": "usyd",
+      "name": "Sydney University Medical Science Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/medscisoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-sumedical",
+      "universityId": "usyd",
+      "name": "Sydney University Medical Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/sumedical",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-sumc",
+      "universityId": "usyd",
+      "name": "Sydney University Motorcycle Club ; SU:MC",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/sumc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-madsoc",
+      "universityId": "usyd",
+      "name": "Sydney University Movement and Dance Society",
+      "categories": [
+        "Creative Arts & Performance",
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/madsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-sumusical",
+      "universityId": "usyd",
+      "name": "Sydney University Musical Society (SUMS)",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/sumusical",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-suns",
+      "universityId": "usyd",
+      "name": "Sydney University Nursing Society",
+      "categories": [
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/suns",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-nutritionsoc",
+      "universityId": "usyd",
+      "name": "Sydney University Nutrition Society",
+      "categories": [
+        "Academic",
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/nutritionsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-oztagsoc",
+      "universityId": "usyd",
+      "name": "Sydney University Oztag Society",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/oztagsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-usydpersians",
+      "universityId": "usyd",
+      "name": "Sydney University Persian Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/usydpersians",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-supa",
+      "universityId": "usyd",
+      "name": "Sydney University Pharmacy Association",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/supa",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-photosoc",
+      "universityId": "usyd",
+      "name": "Sydney University Photographic Society",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/photosoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-physiostudents",
+      "universityId": "usyd",
+      "name": "Sydney University Physiotherapy Students",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/physiostudents",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-pianosoc",
+      "universityId": "usyd",
+      "name": "Sydney University Piano Society",
+      "categories": [
+        "Creative Arts & Performance",
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/pianosoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-pickleballclub",
+      "universityId": "usyd",
+      "name": "Sydney University Pickleball Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/pickleballclub",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-pokesoc",
+      "universityId": "usyd",
+      "name": "Sydney University Pokemon Society",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/pokesoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-pmsoc",
+      "universityId": "usyd",
+      "name": "Sydney University Project Management Society",
+      "categories": [
+        "Academic",
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/pmsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-psychsoc",
+      "universityId": "usyd",
+      "name": "Sydney University Psychology Society",
+      "categories": [
+        "Academic",
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/psychsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-quest",
+      "universityId": "usyd",
+      "name": "Sydney University Queer STEM Society (QUEST)",
+      "categories": [
+        "Academic",
+        "Professional",
+        "Social Impact & Advocacy"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/quest",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-surgfm",
+      "universityId": "usyd",
+      "name": "Sydney University Radio Group",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/surgfm",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-radiologysoc",
+      "universityId": "usyd",
+      "name": "Sydney University Radiology Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/radiologysoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-sciencerevue",
+      "universityId": "usyd",
+      "name": "Sydney University Science Revue Society",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/sciencerevue",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-sikhsoc",
+      "universityId": "usyd",
+      "name": "Sydney University Sikh Society",
+      "categories": [
+        "Faith & Religion"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/sikhsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-socialdancing",
+      "universityId": "usyd",
+      "name": "Sydney University Social Dancing Society",
+      "categories": [
+        "Creative Arts & Performance",
+        "Hobbies & Special Interest",
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/socialdancing",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-swssoc",
+      "universityId": "usyd",
+      "name": "Sydney University Social Work Students Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/swssoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-susog",
+      "universityId": "usyd",
+      "name": "Sydney University Society of Gamers",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/susog",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-susmi",
+      "universityId": "usyd",
+      "name": "Sydney University Society of Medical Innovation",
+      "categories": [
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/susmi",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-softsoc",
+      "universityId": "usyd",
+      "name": "Sydney University Software Engineering Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/softsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-suslas",
+      "universityId": "usyd",
+      "name": "Sydney University Spanish and Latin American Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/suslas",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-surgicalsoc",
+      "universityId": "usyd",
+      "name": "Sydney University Surgical Society",
+      "categories": [
+        "Academic",
+        "Hobbies & Special Interest",
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/surgicalsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-suso",
+      "universityId": "usyd",
+      "name": "Sydney University Symphony Orchestra Society",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/suso",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-tamilsangam",
+      "universityId": "usyd",
+      "name": "Sydney University Tamil Sangam",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/tamilsangam",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-suthai",
+      "universityId": "usyd",
+      "name": "Sydney University Thai Students Association",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/suthai",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-tradeunion",
+      "universityId": "usyd",
+      "name": "Sydney University Trade Union Society",
+      "categories": [
+        "Social Impact & Advocacy"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/tradeunion",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-suuns",
+      "universityId": "usyd",
+      "name": "Sydney University United Nations Society",
+      "categories": [
+        "Political"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/suuns",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-vegesoc",
+      "universityId": "usyd",
+      "name": "Sydney University Vegan and Vegetarian Society",
+      "categories": [
+        "Social Impact & Advocacy"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/vegesoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-wildlifesoc",
+      "universityId": "usyd",
+      "name": "Sydney University Wildlife Society",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/wildlifesoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-suwo",
+      "universityId": "usyd",
+      "name": "Sydney University Wind Orchestra",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/suwo",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-womnsrevue",
+      "universityId": "usyd",
+      "name": "Sydney University Wom*ns' Revue Society",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/womnsrevue",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-suwie",
+      "universityId": "usyd",
+      "name": "Sydney University Women in Engineering",
+      "categories": [
+        "Academic",
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/suwie",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-swsc",
+      "universityId": "usyd",
+      "name": "Sydney Women in Strategy & Consulting",
+      "categories": [
+        "Professional",
+        "Social Impact & Advocacy"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/swsc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-tsa",
+      "universityId": "usyd",
+      "name": "Taiwanese Students' Association",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/tsa",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-tedxusydstudents",
+      "universityId": "usyd",
+      "name": "TEDxUSYD Students",
+      "categories": [
+        "Social Impact & Advocacy"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/tedxusydstudents",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-asoc",
+      "universityId": "usyd",
+      "name": "The Accounting Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/asoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-unibodhi",
+      "universityId": "usyd",
+      "name": "The Buddhist Student Association Of Sydney University",
+      "categories": [
+        "Faith & Religion"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/unibodhi",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-countryclub",
+      "universityId": "usyd",
+      "name": "The Country Club",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/countryclub",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-incommensurables",
+      "universityId": "usyd",
+      "name": "The Incommensurables",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/incommensurables",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-mecosoc",
+      "universityId": "usyd",
+      "name": "The Media and Communications Society (Media Society)",
+      "categories": [
+        "Academic",
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/mecosoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-medrevue",
+      "universityId": "usyd",
+      "name": "The Medical Revue Society",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/medrevue",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-alpclub",
+      "universityId": "usyd",
+      "name": "The Sydney University ALP Club",
+      "categories": [
+        "Political"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/alpclub",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-subs",
+      "universityId": "usyd",
+      "name": "The Sydney University Business School Society",
+      "categories": [
+        "Academic",
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/subs",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-ccf",
+      "universityId": "usyd",
+      "name": "The Sydney University Cantonese Christian Fellowship",
+      "categories": [
+        "Faith & Religion"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/ccf",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-djsoc",
+      "universityId": "usyd",
+      "name": "The Sydney University DJ Society",
+      "categories": [
+        "Creative Arts & Performance",
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/djsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-edsoc",
+      "universityId": "usyd",
+      "name": "The Sydney University Education Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/edsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-suicf",
+      "universityId": "usyd",
+      "name": "The Sydney University International Christian Fellowship",
+      "categories": [
+        "Faith & Religion"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/suicf",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-mbs",
+      "universityId": "usyd",
+      "name": "The Sydney University Mandarin Bible Study",
+      "categories": [
+        "Faith & Religion"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/mbs",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-muse",
+      "universityId": "usyd",
+      "name": "The Sydney University Musical Theatre Ensemble",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/muse",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-sumsa",
+      "universityId": "usyd",
+      "name": "The Sydney University Muslim Students' Association",
+      "categories": [
+        "Faith & Religion"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/sumsa",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-poetrysoc",
+      "universityId": "usyd",
+      "name": "The Sydney University Poetry Society",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/poetrysoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-ecopsoc",
+      "universityId": "usyd",
+      "name": "The Sydney University Political Economy Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/ecopsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-queerrevue",
+      "universityId": "usyd",
+      "name": "The Sydney University Queer Revue Society",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/queerrevue",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-speleologicalsoc",
+      "universityId": "usyd",
+      "name": "The Sydney University Speleological Society",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/speleologicalsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-surfsoc",
+      "universityId": "usyd",
+      "name": "The Sydney University Surfing Society",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/surfsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-vetsoc",
+      "universityId": "usyd",
+      "name": "The Sydney University Veterinary Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/vetsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-wissoc",
+      "universityId": "usyd",
+      "name": "The Sydney University Women in Science Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/wissoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-swiftsoc",
+      "universityId": "usyd",
+      "name": "The Taylor Swift Society (USYD's Version)",
+      "categories": [
+        "Creative Arts & Performance",
+        "Hobbies & Special Interest",
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/swiftsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-teasoc",
+      "universityId": "usyd",
+      "name": "The Tea Society",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/teasoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-texasholdemsoc",
+      "universityId": "usyd",
+      "name": "The Texas Hold'em Society",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/texasholdemsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-that70ssoc",
+      "universityId": "usyd",
+      "name": "The University of Sydney '70s Society",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/that70ssoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-agsoc",
+      "universityId": "usyd",
+      "name": "The University of Sydney Agricultural Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/agsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-avbs",
+      "universityId": "usyd",
+      "name": "The University of Sydney Animal and Veterinary Bioscience Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/avbs",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-foodcoop",
+      "universityId": "usyd",
+      "name": "The University of Sydney Food Co-op",
+      "categories": [
+        "Social Impact & Advocacy"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/foodcoop",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-gosoc",
+      "universityId": "usyd",
+      "name": "The University of Sydney Go Society",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/gosoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-now",
+      "universityId": "usyd",
+      "name": "The University of Sydney Network of Women",
+      "categories": [
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/now",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-philsoc",
+      "universityId": "usyd",
+      "name": "The University of Sydney Philosophy Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/philsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-physoc",
+      "universityId": "usyd",
+      "name": "The University of Sydney Physics Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/physoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-psychiatrysoc",
+      "universityId": "usyd",
+      "name": "The University of Sydney Psychiatry Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/psychiatrysoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-quadballclub",
+      "universityId": "usyd",
+      "name": "The University of Sydney Quadball Club",
+      "categories": [
+        "Hobbies & Special Interest",
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/quadballclub",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-statsoc",
+      "universityId": "usyd",
+      "name": "The University of Sydney Statistics Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/statsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-vsa",
+      "universityId": "usyd",
+      "name": "The Vietnamese Students' Association of the University of Sydney",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/vsa",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-uncb",
+      "universityId": "usyd",
+      "name": "University Network for Cryptocurrency and Blockchain",
+      "categories": [
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/uncb",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-unic",
+      "universityId": "usyd",
+      "name": "University Network for Influencers and Creators",
+      "categories": [
+        "Creative Arts & Performance",
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/unic",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-usydyoungvinnies",
+      "universityId": "usyd",
+      "name": "University of Sydney (USYD) Young Vinnies Society",
+      "categories": [
+        "Social Impact & Advocacy"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/usydyoungvinnies",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-usas",
+      "universityId": "usyd",
+      "name": "University of Sydney Afghan Society (USAS)",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/usas",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-chemsoc",
+      "universityId": "usyd",
+      "name": "University of Sydney Chemistry Society",
+      "categories": [
+        "Academic",
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/chemsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-chessclub",
+      "universityId": "usyd",
+      "name": "University of Sydney Chess Club",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/chessclub",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-cds",
+      "universityId": "usyd",
+      "name": "University of Sydney China Development Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/cds",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-chocsoc",
+      "universityId": "usyd",
+      "name": "University of Sydney Chocolate Society",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/chocsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-conclub",
+      "universityId": "usyd",
+      "name": "University of Sydney Conservative Club",
+      "categories": [
+        "Political"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/conclub",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-hksa",
+      "universityId": "usyd",
+      "name": "University of Sydney Hong Kong Student Association",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/hksa",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-uska",
+      "universityId": "usyd",
+      "name": "University of Sydney Korean Association",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/uska",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-paksoc",
+      "universityId": "usyd",
+      "name": "University of Sydney Pakistani Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/paksoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-puzzlesoc",
+      "universityId": "usyd",
+      "name": "University of Sydney Puzzle Society",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/puzzlesoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-usrc",
+      "universityId": "usyd",
+      "name": "University of Sydney Robotics Club",
+      "categories": [
+        "Academic",
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/usrc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-runclub",
+      "universityId": "usyd",
+      "name": "University of Sydney RunClub",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/runclub",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-scisoc",
+      "universityId": "usyd",
+      "name": "University of Sydney Science Society (SciSoc)",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/scisoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-usydslsoc",
+      "universityId": "usyd",
+      "name": "University of Sydney Sri Lankan Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/usydslsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-theology",
+      "universityId": "usyd",
+      "name": "University of Sydney Theology Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/theology",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-usydtm",
+      "universityId": "usyd",
+      "name": "University of Sydney Toastmasters Society",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/usydtm",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-turkishsoc",
+      "universityId": "usyd",
+      "name": "University of Sydney Turkish Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/turkishsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-usues",
+      "universityId": "usyd",
+      "name": "University of Sydney Underwater Explorers",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/usues",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-ussoc",
+      "universityId": "usyd",
+      "name": "US Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/ussoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-fashionrevolution",
+      "universityId": "usyd",
+      "name": "USYD Fashion Revolution Society",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/fashionrevolution",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-foodadventure",
+      "universityId": "usyd",
+      "name": "USYD Food Adventure Society",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/foodadventure",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-fxia",
+      "universityId": "usyd",
+      "name": "USYD Forex Investment Association",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/fxia",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-usydgardeners",
+      "universityId": "usyd",
+      "name": "USYD Gardeners",
+      "categories": [
+        "Hobbies & Special Interest"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/usydgardeners",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-geosoc",
+      "universityId": "usyd",
+      "name": "USYD Geoscience Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/geosoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-issoc",
+      "universityId": "usyd",
+      "name": "USYD Ice Skating Society",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/issoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-japancareernetwork",
+      "universityId": "usyd",
+      "name": "USYD Japan Career Network",
+      "categories": [
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/japancareernetwork",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-unit",
+      "universityId": "usyd",
+      "name": "USYD Network for Investing and Trading",
+      "categories": [
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/unit",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-projecthope",
+      "universityId": "usyd",
+      "name": "USYD Project Hope",
+      "categories": [
+        "Culture & Language",
+        "Hobbies & Special Interest",
+        "Social Impact & Advocacy"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/projecthope",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-reisa",
+      "universityId": "usyd",
+      "name": "USYD Real Estate Investment Student Association (REISA)",
+      "categories": [
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/reisa",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-usydtks",
+      "universityId": "usyd",
+      "name": "USYD Traditional Karate-do society",
+      "categories": [
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/usydtks",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-yogasoc",
+      "universityId": "usyd",
+      "name": "USYD Yoga Society",
+      "categories": [
+        "Creative Arts & Performance",
+        "Hobbies & Special Interest",
+        "Sport & Recreation"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/yogasoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-visus",
+      "universityId": "usyd",
+      "name": "Vietnamese International Students at the University of Sydney",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/visus",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-wasabi",
+      "universityId": "usyd",
+      "name": "WASABI - Japanese Cultural Society",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/wasabi",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-wastefighters",
+      "universityId": "usyd",
+      "name": "Waste Fighters Society",
+      "categories": [
+        "Social Impact & Advocacy"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/wastefighters",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-wshi",
+      "universityId": "usyd",
+      "name": "Western Sydney Health Initiative (WSHI)",
+      "categories": [
+        "Social Impact & Advocacy"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/wshi",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-wamsoc",
+      "universityId": "usyd",
+      "name": "Women and Diverse Genders in Mathematics Society",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/wamsoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-wif",
+      "universityId": "usyd",
+      "name": "Women in Finance",
+      "categories": [
+        "Academic",
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/wif",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-womeninquant",
+      "universityId": "usyd",
+      "name": "Women in Quant Trading",
+      "categories": [
+        "Academic"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/womeninquant",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-wit",
+      "universityId": "usyd",
+      "name": "Women in Technology",
+      "categories": [
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/wit",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-wosoc",
+      "universityId": "usyd",
+      "name": "WOSOC (Sydney University Work and Organisational Studies)",
+      "categories": [
+        "Academic",
+        "Professional"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/wosoc",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-yala",
+      "universityId": "usyd",
+      "name": "Young Australian Lebanese Association",
+      "categories": [
+        "Culture & Language"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/yala",
+      "imageUrl": ""
+    },
+    {
+      "id": "usu-youthmusicmission",
+      "universityId": "usyd",
+      "name": "Youth Music Mission",
+      "categories": [
+        "Creative Arts & Performance"
+      ],
+      "profileUrl": "https://usu.edu.au/clubs/youthmusicmission",
+      "imageUrl": ""
+    }
+  ]
+}

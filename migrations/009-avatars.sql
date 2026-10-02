@@ -1,0 +1,4 @@
+BEGIN;
+ALTER TABLE users ADD COLUMN avatarId TEXT;
+PRAGMA user_version=9;
+COMMIT;
