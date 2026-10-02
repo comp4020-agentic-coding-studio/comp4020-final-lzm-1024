@@ -186,7 +186,7 @@ const server=createServer(async(req,res)=>{
   res.setHeader('content-security-policy',"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data: blob:; media-src 'self' blob:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'");
   try {
     const url=new URL(req.url,'http://localhost'),path=url.pathname,method=req.method;
-    if(/^\/watch(?:\/[a-f0-9-]{36})?$/.test(path))res.setHeader('content-security-policy',"default-src 'self'; script-src 'self' https://www.youtube.com https://s.ytimg.com; style-src 'self' 'unsafe-inline'; img-src 'self' https: data: blob:; media-src 'self' https: blob:; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'");
+    if(/^\/watch(?:\/[a-f0-9-]{36})?$/.test(path))res.setHeader('content-security-policy',"default-src 'self'; script-src 'self' https://www.youtube.com https://s.ytimg.com; style-src 'self' 'unsafe-inline'; img-src 'self' https: data: blob:; media-src 'self' https: blob:; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self' https:; worker-src 'self' blob:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'");
     if(method!=='GET'&&method!=='HEAD')sameOrigin(req);
     if((method==='GET'||method==='HEAD')&&await publicAssets.serve(req,res,path))return;
     if(path==='/api/calls'||path.startsWith('/api/calls/'))return await voiceCalls.handle(req,res,url);

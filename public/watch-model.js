@@ -10,4 +10,4 @@ export function parseMedia(value){
  if(/\.(mp4|webm)$/i.test(url.pathname))return {kind:'file',url:url.href};
  throw Error('Use a YouTube link or a direct .mp4, .webm or .m3u8 link. Website pages cannot be played as video.');
 }
-export function playbackPosition(room,serverTime=Date.now()){return Math.max(0,Math.min(604800,Number(room.position)+(room.playing?Math.max(0,serverTime-Number(room.anchorAt))/1000:0)));}
+export function playbackPosition(room,serverTime=Date.now()){return Math.max(0,Math.min(604800,Number(room.position)+(room.playing&&!room.buffering?Math.max(0,serverTime-Number(room.anchorAt))/1000:0)));}

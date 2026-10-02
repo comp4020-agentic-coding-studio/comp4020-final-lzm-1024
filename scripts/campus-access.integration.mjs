@@ -108,7 +108,7 @@ test('fixed account universities, migration and isolated public chat',{timeout:4
     });
     await t.test('the additive eight-school migration is idempotent and retains old affiliations and new records',async()=>{
       for(const ws of clients)ws.close();await stop();await start();
-      const store=new DatabaseSync(join(dir,'campuswall.sqlite'));assert.equal(store.prepare('PRAGMA user_version').get().user_version,13);assert.equal(store.prepare('SELECT COUNT(*) n FROM universities').get().n,8);assert.equal(store.prepare('SELECT universityId FROM users WHERE id=?').get('legacy-student').universityId,'anu');assert.equal(store.prepare('SELECT COUNT(*) n FROM chat_messages WHERE id=?').get('old-shared').n,1);store.close();
+      const store=new DatabaseSync(join(dir,'campuswall.sqlite'));assert.equal(store.prepare('PRAGMA user_version').get().user_version,14);assert.equal(store.prepare('SELECT COUNT(*) n FROM universities').get().n,8);assert.equal(store.prepare('SELECT universityId FROM users WHERE id=?').get('legacy-student').universityId,'anu');assert.equal(store.prepare('SELECT COUNT(*) n FROM chat_messages WHERE id=?').get('old-shared').n,1);store.close();
       for(const u of newAccounts){assert.equal((await request('/api/auth/me','GET',null,u.cookie)).data.user.universityId,u.universityId);assert.equal((await request(`/api/posters/${u.posterId}`,'GET',null,u.cookie)).status,200);assert.equal((await request(`/api/chat/messages?university=${u.universityId}`)).data.messages.length,1);}
     });
   }finally{for(const ws of clients)ws.terminate();if(child&&child.exitCode===null)await stop();const target=resolve(dir);if(target.startsWith(root+sep)&&target!==root)rmSync(target,{recursive:true,force:true});}

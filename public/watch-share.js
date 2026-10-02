@@ -1,0 +1,15 @@
+import {escapeHtml as esc} from './ui-utils.js';
+
+export function mountRoomShare(root,{roomId,campus,getRoom,toast}){
+ const url=new URL('/watch/'+roomId,location.origin).href;
+ root.innerHTML=`<button type="button" class="watch-share" aria-expanded="false" aria-controls="watch-share-panel">Share room ↗</button><section id="watch-share-panel" class="watch-share-panel" aria-label="Share watch room" hidden><div><strong>Bring your people together.</strong><button type="button" class="quiet" aria-label="Close room sharing">✕</button></div><label>Room link<input type="url" readonly value="${esc(url)}"></label><p class="watch-share-context muted small"></p><div class="watch-share-actions"><button type="button" data-copy-room>Copy link</button>${typeof navigator.share==='function'?'<button type="button" data-share-room>Share on your device ↗</button>':''}</div><p class="watch-share-status small" role="status"></p></section>`;
+ const button=root.querySelector('.watch-share'),panel=root.querySelector('.watch-share-panel'),input=panel.querySelector('input'),status=panel.querySelector('.watch-share-status');let active=true;
+ const close=()=>{panel.hidden=true;button.setAttribute('aria-expanded','false');button.focus();};
+ function update(){const room=getRoom();panel.querySelector('.watch-share-context').textContent=room?.closed?'This room has ended. Create another room to watch together.':room?.inviteOnly?`Invitation only · Friends need an invitation from the host and a signed-in ${campus?.shortName||'same-campus'} account. A link does not grant access.`:`Friends must use a signed-in ${campus?.shortName||'same-campus'} account. After sign-in, this link returns them to the room.`;}
+ button.onclick=()=>{update();panel.hidden=!panel.hidden;button.setAttribute('aria-expanded',String(!panel.hidden));if(!panel.hidden){input.focus();input.select();}};
+ input.onfocus=()=>input.select();panel.querySelector('[aria-label="Close room sharing"]').onclick=close;
+ const escape=event=>{if(event.key==='Escape'&&!panel.hidden){event.preventDefault();close();}};root.addEventListener('keydown',escape);
+ panel.querySelector('[data-copy-room]').onclick=async event=>{const target=event.currentTarget;target.disabled=true;try{if(!navigator.clipboard?.writeText)throw Error('Clipboard unavailable');await navigator.clipboard.writeText(url);if(active){status.textContent='Room link copied.';toast('Room link copied.');}}catch{if(active){status.textContent='Select the link above and copy it with Ctrl+C, Command+C or a long press.';input.focus();input.select();}}finally{if(active)target.disabled=false;}};
+ panel.querySelector('[data-share-room]')?.addEventListener('click',async()=>{try{await navigator.share({title:getRoom()?.title||'CampusWall watch room',url});}catch(error){if(active&&error.name!=='AbortError')status.textContent='Device sharing is unavailable. Copy the room link instead.';}});
+ update();return {update,destroy(){active=false;root.removeEventListener('keydown',escape);}};
+}

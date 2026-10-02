@@ -51,7 +51,7 @@ test('voice signalling permissions, device ownership, session revocation and per
    c=(await req('/api/calls','POST',{conversationId:convo.id,clientId:randomUUID(),device:a.device},a)).data.call;await operation(c,b,'accept');
    const closed=once(wb,'close');await req('/api/auth/logout','POST',{},b);await closed;assert.equal((await signal(c,a,{description:audio})).status,409);assert.equal((await operation(c,b,'hangup')).status,401);
    for(const ws of clients)ws.close();await stop();await start();assert.equal((await req('/api/calls','GET',null,a)).data.call,null);assert.equal((await req('/api/calls/'+c.id,'GET',null,a)).data.call.reason,'server-restarted');
-   const db=new DatabaseSync(join(dir,'campuswall.sqlite'));assert.equal(db.prepare('SELECT COUNT(*) n FROM voice_calls WHERE connectedAt IS NOT NULL').get().n,1);assert.equal(db.prepare('PRAGMA user_version').get().user_version,13);assert.ok(!db.prepare('PRAGMA table_info(voice_calls)').all().some(c=>/sdp|audio|candidate/i.test(c.name)));db.close();
+   const db=new DatabaseSync(join(dir,'campuswall.sqlite'));assert.equal(db.prepare('SELECT COUNT(*) n FROM voice_calls WHERE connectedAt IS NOT NULL').get().n,1);assert.equal(db.prepare('PRAGMA user_version').get().user_version,14);assert.ok(!db.prepare('PRAGMA table_info(voice_calls)').all().some(c=>/sdp|audio|candidate/i.test(c.name)));db.close();
   });
  }finally{for(const ws of clients)ws.terminate();if(child?.exitCode===null)await stop();assert.ok(dir.startsWith(root));rmSync(dir,{recursive:true,force:true});}
 });

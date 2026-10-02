@@ -80,7 +80,7 @@ it('verifies watch room synchronisation, host permissions, live chat/danmaku, on
 }, 35000);
 
 it('keeps embedded host playback running through sync ticks and buffering without granting viewers controls', async () => {
-  const result = await promisify(execFile)(process.execPath, ['--test', '--test-reporter=tap', 'scripts/watch-player.test.mjs'], { timeout: 30000 });
+  const result = await promisify(execFile)(process.execPath, ['--test', '--test-reporter=tap', 'scripts/watch-player.test.mjs', 'scripts/watch-share.test.mjs'], { timeout: 30000 });
   expect(result.stdout).toContain('# fail 0');
 }, 35000);
 

@@ -33,7 +33,7 @@ export function initializeDatabase(db,dataDir,queries,now){
       db.exec('PRAGMA user_version=1; COMMIT;');
     } catch(error) { db.exec('ROLLBACK');throw error; }
   }
-  const migrations=['002-discovery','003-public-chat','004-private-messages','005-account-campus','006-campus-chat','007-eight-campuses','008-games','009-avatars','010-profiles','011-watch','012-community','013-voice-calls'];
+  const migrations=['002-discovery','003-public-chat','004-private-messages','005-account-campus','006-campus-chat','007-eight-campuses','008-games','009-avatars','010-profiles','011-watch','012-community','013-voice-calls','014-watch-buffering'];
   const version=get('PRAGMA user_version').user_version;
   for(const [index,name] of migrations.entries()){
     if(version<index+2)db.exec(readFileSync(new URL(`./migrations/${name}.sql`,import.meta.url),'utf8'));

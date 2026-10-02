@@ -1,0 +1,4 @@
+BEGIN;
+ALTER TABLE watch_rooms ADD COLUMN buffering INTEGER NOT NULL DEFAULT 0;
+PRAGMA user_version=14;
+COMMIT;

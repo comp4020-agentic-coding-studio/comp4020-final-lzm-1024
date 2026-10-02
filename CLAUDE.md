@@ -40,6 +40,7 @@ The product argument is in [README.md](README.md); [docs/CLAIMS.md](docs/CLAIMS.
 ## Media and voice
 
 - Watch-room playback, source changes, host transfer and closure require current room authority. Viewers retain their own sound/fullscreen settings. Synchronisation must not echo programmatic commands as host actions or repeatedly seek during buffering.
+- Host buffering freezes the shared clock while preserving play intent. Permission/presence revisions must not force seeks; drift correction and autoplay retries remain bounded. Share links must offer a manual-copy fallback and explain campus/invitation requirements without granting access.
 - Do not download or proxy supplied video links. Provider restrictions and live delay remain explicit limitations. Grant external playback CSP only to the watch document.
 - Voice calls are audio-only and limited to authenticated private-conversation participants on the same campus. Bind negotiation/control to the selected device/session; another tab must not seize an accepted call.
 - Request microphone capture only after explicit call/answer interaction. Incoming ringing captures nothing. Hangup, cancellation, permission failure, logout, document exit and late permission resolution must release audio tracks.
