@@ -9,7 +9,7 @@ COPY clubs.mjs ./
 COPY messaging.mjs profiles.mjs watch.mjs community.mjs voice-calls.mjs ./
 COPY games.mjs game-engine.mjs ./
 COPY photo-gallery.mjs ./
-COPY database.mjs poster-store.mjs public-assets.mjs initialize-database.mjs ./
+COPY database.mjs poster-store.mjs public-assets.mjs initialize-database.mjs observability.mjs ./
 COPY data/ ./data/
 COPY migrations/ ./migrations/
 COPY public/ ./public/

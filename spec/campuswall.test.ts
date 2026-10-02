@@ -2,6 +2,11 @@ import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { expect, it } from 'vitest';
 
+it('records redacted HTTP/WebSocket actions with stable opaque identity and bounded log output', async () => {
+  const result = await promisify(execFile)(process.execPath, ['--test', '--test-reporter=tap', 'scripts/observability.test.mjs'], { timeout: 30000 });
+  expect(result.stdout).toContain('# fail 0');
+}, 35000);
+
 it('keeps built-in interface text, game prompts and documentation in English', async () => {
   const result = await promisify(execFile)(process.execPath, ['--test', '--test-reporter=tap', 'scripts/english-copy.test.mjs'], { timeout: 10000 });
   expect(result.stdout).toContain('# fail 0');
@@ -58,7 +63,7 @@ it('verifies university email domain locking and existing account compatibility'
 }, 40000);
 
 it('verifies object-based whiteboard sync, cursors, undo guards, image privacy and restart persistence', async () => {
-  const result = await promisify(execFile)(process.execPath, ['--test', '--test-reporter=tap', 'scripts/whiteboard.integration.mjs'], { timeout: 40000 });
+  const result = await promisify(execFile)(process.execPath, ['--test', '--test-reporter=tap', 'scripts/whiteboard.integration.mjs', 'scripts/whiteboard-keyboard.test.mjs'], { timeout: 40000 });
   expect(result.stdout).toContain('# fail 0');
 }, 45000);
 it('verifies avatar upload, live chat photos, emoji insertion and restart persistence', async () => {

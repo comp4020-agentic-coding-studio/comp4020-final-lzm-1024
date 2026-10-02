@@ -1,3 +1,5 @@
+import {performance} from 'node:perf_hooks';
+import {createActionLogger,createLogSink,loadLogKey} from './observability.mjs';
 import {createVoiceCalls} from './voice-calls.mjs';
 import {createCommunity} from './community.mjs';
 import {createWatch} from './watch.mjs';
@@ -29,6 +31,7 @@ const emailUniversities=universities.map(([id,name,shortName])=>({id,name,shortN
 sharp.cache(false); sharp.concurrency(1);
 const uploadDir=join(dataDir,'uploads');let processingImage=false;
 mkdirSync(dataDir, { recursive: true });
+const observation=createActionLogger({key:loadLogKey(dataDir),write:createLogSink(process.stdout)});
 const db = new DatabaseSync(join(dataDir, 'campuswall.sqlite'));
 db.exec('PRAGMA journal_mode=WAL; PRAGMA foreign_keys=ON; PRAGMA busy_timeout=5000;');
 const queries=createQueries(db);
@@ -53,11 +56,11 @@ function validate(field,value) {
   if(field==='heroImageUrl'&&v&&!/^\/media\/[a-f0-9-]{36}$/.test(v)) {try {if(new URL(v).protocol!=='https:') fail(400,'Use an HTTPS image URL');} catch {fail(400,'Use a valid HTTPS image URL');}}
   return v;
 }
-const json=(res,status,data)=>{res.writeHead(status,{'content-type':'application/json; charset=utf-8','cache-control':'no-store'});res.end(JSON.stringify(data));};
+const json=(res,status,data)=>{if(Number.isSafeInteger(data?.version))res.observedRevision=data.version;res.writeHead(status,{'content-type':'application/json; charset=utf-8','cache-control':'no-store'});res.end(JSON.stringify(data));};
 const body=req=>new Promise((resolve,reject)=>{let raw='';req.on('data',b=>{raw+=b;if(Buffer.byteLength(raw)>16000){reject(new Problem(413,'Request is too large'));req.destroy();}});req.on('end',()=>{try{const parsed=JSON.parse(raw||'{}');if(!parsed||typeof parsed!=='object'||Array.isArray(parsed))throw new Error();resolve(parsed);}catch{reject(new Problem(400,'Invalid JSON'));}});req.on('error',reject);});
 const hash=token=>createHash('sha256').update(token).digest('hex');
 function token(req) {return /(?:^|;\s*)campus_session=([a-f0-9]+)/.exec(req.headers.cookie||'')?.[1]||'';}
-function user(req) {return get('SELECT u.id,u.name,u.email,u.username,u.universityId,u.avatarId FROM users u JOIN sessions s ON s.userId=u.id WHERE s.tokenHash=? AND s.expiresAt>?',hash(token(req)),Date.now());}
+function user(req) {const account=get('SELECT u.id,u.name,u.email,u.username,u.universityId,u.avatarId FROM users u JOIN sessions s ON s.userId=u.id WHERE s.tokenHash=? AND s.expiresAt>?',hash(token(req)),Date.now());if(account)req.observedActorId=account.id;return account;}
 function authenticated(req) {return user(req)||fail(401,'Sign in to continue');}
 function campusAccount(req){const u=authenticated(req);if(!u.universityId)fail(409,'Choose your account university to continue');return u;}
 function campusAccess(req,universityId){const u=user(req);if(!u)return;if(!u.universityId)fail(409,'Choose your account university to continue');if(u.universityId!==universityId)fail(403,'Your account can only access its own university');}
@@ -111,7 +114,7 @@ function updateCanvas(p,u,input){
 function sameOrigin(req) {if(!req.headers.origin)return;try{if(new URL(req.headers.origin).host===req.headers.host)return;}catch{}fail(403,'Request origin is not allowed');}
 const attempts=new Map();
 function rateLimit(req) {const key=req.socket.remoteAddress,entry=attempts.get(key)||{n:0,until:Date.now()+60000};if(entry.until<Date.now()){entry.n=0;entry.until=Date.now()+60000;}if(++entry.n>30)fail(429,'Too many attempts. Please wait a minute.');attempts.set(key,entry);}
-function session(res,req,u) {const sessionToken=randomBytes(32).toString('hex');run('INSERT INTO sessions VALUES (?,?,?)',hash(sessionToken),u.id,Date.now()+7*86400000);res.setHeader('set-cookie',`campus_session=${sessionToken}; HttpOnly; SameSite=Lax; Path=/; Max-Age=604800${req.headers['x-forwarded-proto']==='https'?'; Secure':''}`);}
+function session(res,req,u) {req.observedActorId=u.id;const sessionToken=randomBytes(32).toString('hex');run('INSERT INTO sessions VALUES (?,?,?)',hash(sessionToken),u.id,Date.now()+7*86400000);res.setHeader('set-cookie',`campus_session=${sessionToken}; HttpOnly; SameSite=Lax; Path=/; Max-Age=604800${req.headers['x-forwarded-proto']==='https'?'; Secure':''}`);}
 function publicUrl(req,p) {const origin=process.env.PUBLIC_BASE_URL||`${req.headers['x-forwarded-proto']==='https'?'https':'http'}://${req.headers.host}`;return new URL(`/${p.universityId}/posters/${p.slug}`,origin).href;}
 function readImage(req) {
   const limit=5*1024*1024;
@@ -178,6 +181,7 @@ community=createCommunity({db,get,all,run,id,now,fail,string,campusAccount,campu
 const voiceCalls=createVoiceCalls({get,all,run,id,now,fail,body,json,campusAccount,sockets,send,validSocket,sessionHash:req=>hash(token(req))});
 const publicAssets=createPublicAssets();
 const server=createServer(async(req,res)=>{
+  observation.http(req,res);
   res.setHeader('x-content-type-options','nosniff');res.setHeader('referrer-policy','strict-origin-when-cross-origin');
   res.setHeader('content-security-policy',"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data: blob:; media-src 'self' blob:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'");
   try {
@@ -253,7 +257,7 @@ const server=createServer(async(req,res)=>{
       }
       session(res,req,u);return json(res,200,{user:u});
     }
-    if(path==='/api/auth/logout'&&method==='POST') {const sessionHash=hash(token(req));run('DELETE FROM sessions WHERE tokenHash=?',sessionHash);for(const ws of sockets)if(ws.sessionHash===sessionHash)ws.close(4001,'Signed out');res.setHeader('set-cookie','campus_session=; HttpOnly; SameSite=Lax; Path=/; Max-Age=0');return json(res,200,{ok:true});}
+    if(path==='/api/auth/logout'&&method==='POST') {user(req);const sessionHash=hash(token(req));run('DELETE FROM sessions WHERE tokenHash=?',sessionHash);for(const ws of sockets)if(ws.sessionHash===sessionHash)ws.close(4001,'Signed out');res.setHeader('set-cookie','campus_session=; HttpOnly; SameSite=Lax; Path=/; Max-Age=0');return json(res,200,{ok:true});}
     const media=path.match(/^\/media\/([a-f0-9-]{36})$/);
     if(media&&method==='GET') {
       const image=get('SELECT * FROM uploads WHERE id=?',media[1])||fail(404,'Image not found');const p=record(image.posterId),u=user(req);
@@ -335,7 +339,7 @@ const server=createServer(async(req,res)=>{
     const campusPage=campusRoute&&new RegExp(`^/${campusRoute}(?:/(?:posters/[^/]+|clubs))?$`).test(path);
     if(!campusPage&&!/^\/(?:index.html|login|choose-campus|watch(?:\/[a-f0-9-]{36})?|people\/[a-f0-9-]{36}|community(?:\/[A-Za-z0-9_%.-]+){0,2}|messages|games(?:\/[a-f0-9-]{36})?|saved|my-posters|studio\/posters\/[^/]+)?$/.test(path))fail(404,'Page not found');
     await publicAssets.sendPage(req,res);
-  } catch(error) {if(!res.headersSent)json(res,error.status||500,{error:error.status?error.message:'Unable to complete this request'});if(!error.status)console.error(error);}
+  } catch(error) {if(!res.headersSent)json(res,error.status||500,{error:error.status?error.message:'Unable to complete this request'});}
 });
 const wss=new WebSocketServer({noServer:true,maxPayload:16000});
 server.on('upgrade',(req,socket,head)=>{
@@ -347,7 +351,10 @@ server.on('upgrade',(req,socket,head)=>{
     else if(posterId){if(chat||inbox)fail(400,'Invalid room');u=authenticated(req);editor(record(posterId),u);}else{if(wall&&!get('SELECT 1 FROM universities WHERE id=?',wall))fail(400,'Invalid room');if(wall)campusAccess(req,wall);if(!wall&&!chat&&!inbox)fail(400,'Invalid room');if(inbox)u=campusAccount(req);}
     if(chat){chatCampus=wall||url.searchParams.get('university')||user(req)?.universityId;if(!get('SELECT 1 FROM universities WHERE id=?',chatCampus||''))fail(400,'Choose a university');campusAccess(req,chatCampus);u=user(req);}
     wss.handleUpgrade(req,socket,head,ws=>{
-      ws.user=u;ws.sessionHash=hash(token(req));ws.posterId=posterId;ws.wall=wall;ws.chat=chat;ws.chatCampus=chatCampus;ws.inbox=inbox;ws.gameRoom=gameRoom;ws.gameLobby=gameLobby;ws.watchRoom=watchRoom;ws.watchLobby=watchLobby;ws.social=social;ws.callDevice=social&&/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/.test(url.searchParams.get('device')||'')?url.searchParams.get('device'):null;ws.alive=true;sockets.add(ws);if(social)community.presenceChanged(u.id);
+      ws.user=u;ws.sessionHash=hash(token(req));ws.posterId=posterId;ws.wall=wall;ws.chat=chat;ws.chatCampus=chatCampus;ws.inbox=inbox;ws.gameRoom=gameRoom;ws.gameLobby=gameLobby;ws.watchRoom=watchRoom;ws.watchLobby=watchLobby;ws.social=social;ws.callDevice=social&&/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/.test(url.searchParams.get('device')||'')?url.searchParams.get('device'):null;ws.alive=true;sockets.add(ws);
+      const observedChannel=posterId?'whiteboard':watchRoom||watchLobby?'watch':gameRoom||gameLobby?'games':social?'community':inbox?'inbox':chat?'chat':'wall';
+      const observedResource=posterId||watchRoom||gameRoom;
+      observation.websocket(req.observedActorId,observedChannel,observedResource,'connect',null,200);if(social)community.presenceChanged(u.id);
       if(posterId){send(ws,'poster:state',{poster:view(record(posterId),true)});presence(posterId);}
       if(chat)send(ws,'chat:state',{messages:chatHistory(chatCampus),limit:100,universityId:chatCampus});
       if(social)voiceCalls.sync(ws);
@@ -357,25 +364,25 @@ server.on('upgrade',(req,socket,head)=>{
       if(gameRoom)games.broadcast(games.room(gameRoom));
       if(gameLobby)send(ws,'games:list',{rooms:games.list(u)});
       ws.on('pong',()=>{ws.alive=true;});
-      ws.on('message',raw=>{let input;try{
+      ws.on('message',raw=>{let input,status=200,revision;const started=performance.now();try{
         if(!posterId||!validSocket(ws))fail(401,'Sign in to edit');input=JSON.parse(raw.toString());
         if(input.posterId!==posterId)fail(400,'Invalid room');const p=record(posterId);editor(p,u);
         if(input.type==='canvas:cursor'){if(ws.lastCursor&&Date.now()-ws.lastCursor<45)return;ws.lastCursor=Date.now();const cursor=input.cursor;if(cursor!==null&&(!cursor||!Number.isFinite(cursor.x)||!Number.isFinite(cursor.y)||Math.abs(cursor.x)>20000||Math.abs(cursor.y)>20000||cursor.selected!==null&&typeof cursor.selected!=='string'))fail(400,'Invalid cursor');let preview=null;if(cursor?.preview){if(typeof cursor.preview.id!=='string'||!/^[a-zA-Z0-9_-]{1,64}$/.test(cursor.preview.id)||!cursor.preview.props||Object.keys(cursor.preview.props).some(k=>!['x','y','width','height','rotation'].includes(k)))fail(400,'Invalid object preview');preview={id:cursor.preview.id,props:validateProps(cursor.preview.props)};}for(const peer of sockets)if(peer!==ws&&peer.posterId===posterId&&validSocket(peer)&&allowed(p,peer.user))send(peer,'canvas:cursor',{userId:u.id,name:u.name,cursor:cursor?{x:cursor.x,y:cursor.y,selected:cursor.selected?.slice(0,64)||null,preview}:null});return;}
-        if(input.type==='canvas:operation'){updateCanvas(p,u,input);return;}
+        if(input.type==='canvas:operation'){revision=updateCanvas(p,u,input).version;return;}
         if(input.type==='poster:editing') {
           if(input.field!==null&&!Object.hasOwn(fields,input.field))fail(400,'Invalid editing field');
           ws.editingField=input.field;ws.editingUntil=Date.now()+Number(process.env.EDITING_TTL_MS||15000);presence(posterId);return;
         }
-        if(input.type!=='poster:update')fail(400,'Invalid update');update(p,u,input);
-      }catch(error){const p=posterId&&get('SELECT * FROM posters WHERE id=?',posterId);send(ws,'error',{field:input?.field,requestId:input?.requestId,message:error.status?error.message:'Invalid update',status:error.status||400,poster:p&&validSocket(ws)&&allowed(p,u)?view(p,true):undefined});}});
-      ws.on('close',()=>{sockets.delete(ws);if(social)community.presenceChanged(u.id);if(posterId)presence(posterId);if(gameRoom)games.broadcast(games.room(gameRoom));if(watchRoom)watch.broadcast(watch.room(watchRoom));});ws.on('error',()=>ws.close());
+        if(input.type!=='poster:update')fail(400,'Invalid update');revision=update(p,u,input).version;
+      }catch(error){status=error.status||400;const p=posterId&&get('SELECT * FROM posters WHERE id=?',posterId);send(ws,'error',{field:input?.field,requestId:input?.requestId,message:error.status?error.message:'Invalid update',status:error.status||400,poster:p&&validSocket(ws)&&allowed(p,u)?view(p,true):undefined});}finally{observation.websocket(req.observedActorId,observedChannel,observedResource,input?.type,input,status,started,revision);}});
+      ws.on('close',code=>{observation.websocket(req.observedActorId,observedChannel,observedResource,'disconnect',null,code===4003?403:code===4001?401:200);sockets.delete(ws);if(social)community.presenceChanged(u.id);if(posterId)presence(posterId);if(gameRoom)games.broadcast(games.room(gameRoom));if(watchRoom)watch.broadcast(watch.room(watchRoom));});ws.on('error',()=>ws.close());
     });
-  } catch(error){socket.end(`HTTP/1.1 ${error.status||400} Rejected\r\nConnection: close\r\n\r\n`);}
+  } catch(error){observation.record({actorId:req.observedActorId,action:'websocket.connect',transport:'websocket',status:error.status||400});socket.end(`HTTP/1.1 ${error.status||400} Rejected\r\nConnection: close\r\n\r\n`);}
 });
 setInterval(()=>{for(const ws of sockets){if((ws.social||ws.posterId||ws.inbox||ws.gameRoom||ws.gameLobby||ws.watchRoom||ws.watchLobby||ws.chat&&ws.user)&&!validSocket(ws)){ws.close(4001,'Session expired');continue;}if(!ws.alive){ws.terminate();continue;}ws.alive=false;ws.ping();}for(const [k,v] of attempts)if(v.until<Date.now())attempts.delete(k);run('DELETE FROM sessions WHERE expiresAt<?',Date.now());},30000).unref();
-setInterval(()=>{try{voiceCalls.tick();}catch(error){console.error('Unable to update voice call',error.message);}},1000).unref();
-setInterval(()=>{try{community.remind();}catch(error){console.error('Unable to send event reminders',error.message);}},60000).unref();
-setInterval(()=>{try{games.tick();}catch(error){console.error('Unable to update game timer',error.message);}},500).unref();
+setInterval(()=>{try{voiceCalls.tick();}catch(error){observation.record({actorId:'system',action:'calls.tick',status:500});}},1000).unref();
+setInterval(()=>{try{community.remind();}catch(error){observation.record({actorId:'system',action:'community.reminders',status:500});}},60000).unref();
+setInterval(()=>{try{games.tick();}catch(error){observation.record({actorId:'system',action:'games.tick',status:500});}},500).unref();
 setInterval(()=>{const rooms=new Set();for(const ws of sockets)if(ws.editingField&&ws.editingUntil<=Date.now()){ws.editingField=null;rooms.add(ws.posterId);}for(const room of rooms)presence(room);},1000).unref();
 server.listen(Number(process.env.PORT||8080),'0.0.0.0',()=>console.log('CampusWall listening'));
 

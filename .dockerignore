@@ -10,6 +10,7 @@ dist
 .envrc
 mise.local.toml
 *.pem
+**/.observability-key
 .claude
 .local-data
 .test-data

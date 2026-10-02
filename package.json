@@ -5,6 +5,7 @@
   "scripts": {
     "start": "node server.mjs",
     "smoke:deploy": "node scripts/deployment-smoke.mjs",
+    "logs:view": "node scripts/view-action-logs.mjs",
     "benchmark": "node scripts/benchmark-performance.mjs",
     "prepare": "git rev-parse --git-dir >/dev/null 2>&1 && git config core.hooksPath .githooks || true",
     "typecheck": "tsc --noEmit",
