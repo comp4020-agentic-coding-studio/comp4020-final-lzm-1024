@@ -17,7 +17,7 @@ This map distinguishes an enforceable boundary from a claim that needs human jud
 
 ## Claims deliberately not made
 
-No claim is made of verified student identity, official university/club endorsement, universal WebRTC connectivity, frame-exact live synchronisation, complete WCAG compliance, end-to-end encrypted messages or a measured improvement in student belonging. Structured per-action observability for Crit 10 is still a future task.
+No claim is made of verified student identity, official university/club endorsement, universal WebRTC connectivity, frame-exact live synchronisation, complete WCAG compliance, end-to-end encrypted messages or a measured improvement in student belonging. Redacted per-action observability is implemented and tested; the real instruments-only classmate demonstration remains outstanding. See [demo preparation](CRIT10-DEMO.md) and [acceptance evidence](ACCEPTANCE.md).
 
 ## A reproducible human review
 

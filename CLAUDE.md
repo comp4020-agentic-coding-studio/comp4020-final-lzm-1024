@@ -56,7 +56,7 @@ The product argument is in [README.md](README.md); [docs/CLAIMS.md](docs/CLAIMS.
 - All durable changes require additive, data-preserving migration. Keep private uploads permission checked; never copy local databases or credentials into the deployment image or repository.
 - Process and research writing must distinguish observed facts, proposed interpretations and outstanding work. Preserve historical documents as labelled archives; rewrite the current process account rather than append a feature diary.
 - Cite only real commits. Do not invent incremental history, backdate decisions, fabricate student feedback or report future crit demonstrations as completed. Personal reflections require the student to check that interpretations match their own experience; document status labels follow the student's instructions.
-- Structured observability is not yet implemented. Future action logs must use opaque actor identifiers, bounded action/resource classifications and outcome/time, with no secrets, raw URLs/query strings, private text, tickets or negotiation payloads. Tests must prove redaction before claiming Crit 10 readiness.
+- Structured observability is implemented in observability.mjs. Action logs must use opaque actor identifiers, bounded action/resource classifications and outcome/time, with no secrets, raw URLs/query strings, private text, tickets or negotiation payloads. Tests must prove redaction before claiming Crit 10 readiness.
 
 ## English product copy and documentation
 

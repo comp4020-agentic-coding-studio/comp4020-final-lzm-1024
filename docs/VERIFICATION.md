@@ -67,7 +67,7 @@ The photo wall illustrates demonstration content; venue existence and image attr
 
 Evaluate 1920×1080 and 390×844 exactly, not merely a similar desktop width. Test keyboard-only navigation, modal focus, reduced motion, real microphone calls and restricted networks with a configured TURN relay. Run uncoached discovery/collaboration tasks with actual students and record failures. The existing browser records do not establish all of these outcomes.
 
-Crit 10 specifically requires structured per-action server logs and an instruments-only demonstration. Current startup/error console output does not meet that requirement. Logs should use opaque IDs and action/outcome classifications, excluding message text, session secrets, email addresses, tickets, video URLs and SDP/ICE.
+Crit 10 now has redacted per-action logging, an instruments viewer and hostile-input/restart tests. See [demo preparation](CRIT10-DEMO.md). The actual classmate demonstration remains outstanding. [Readiness acceptance](ACCEPTANCE.md) records the two-session rehearsal at the exact viewports; it does not claim exhaustive accessibility or a student study.
 
 Documentation deployed: deployment-01M3Y4HB9FA3QB8YWSZREYFRVX, image sha256:9444e0ca86765506ccf28f23c5c3753af58955f535f0468c4397b81dcbb72b8d. Full live README text matches the local document after normal HTML newline normalisation; the production smoke passed. Browser observation confirmed all four section headings and the complete argument at /readme/. Only README is published by the current image; research/process/reflections and the supporting guide remain repository files for student review. No production fixture data was created. The owned local preview and disposable helper/database files were removed.
 
@@ -78,3 +78,13 @@ TypeScript and all 20 top-level checks passed in 43.85 seconds. The performance 
 Deployed as `deployment-01M3Y8XT8BCM7ERXGZAC0MNHQG`, image `sha256:c61242e8b8e1cebd5b370c83c28767e32f2335d9db4c4cf797bf8dfc5788b957`. The read-only production smoke passed, and six changed public modules/stylesheets matched their local SHA-256 hashes. Live browser observation confirmed 24 ANU photo cards, an active read-only guest chat and deferred editor CSS. The temporary local preview and fixture database were removed. This screenshot records production appearance after deployment; it is not evidence of a whole-page loading-time gain.
 
 ![Production gallery after the performance update](screenshots/performance-production.png)
+
+## Readiness implementation, 3 October 2026
+
+TypeScript and all 21 top-level checks passed in 43.36 seconds against the local preview (`APP_URL=http://localhost:18116`). The first attempted run lacked the correct preview URL and could not start its global setup; the corrected run passed. New coverage includes strict log redaction, bounded collector backpressure, real HTTP/socket outcomes, stable pseudonyms after restart and SVG keyboard selection/focus. Documentation checks passed with all English text and valid local links; PROCESS is 996 words and the research argument remains 768 words. The evidence checker resolves all three real cited commits.
+
+Implementation commit: [7b89037](https://github.com/comp4020-agentic-coding-studio/comp4020-final-lzm-1024/commit/7b89037d6519a36aed08ef1fb37f9a83639233dd). Deployed as `deployment-01M3YFEKP9V07RN4RJJRKA282Q`, image `sha256:fb3b65ed1849c0f9db5cdb4762f763fa2f828313f59c041db573ac4e5fc83cb3`. Fly health checks and the read-only production smoke passed: eight campuses, 192 photographic TEST notices, 1,905 clubs, ten games and protected APIs. The live instruments viewer displayed opaque actors, accepted connections and rejected operations without private content. Browser observation confirmed the updated public wall and guest read-only chat.
+
+The exact viewport and two-session local rehearsal is documented in [ACCEPTANCE](ACCEPTANCE.md), including the keyboard failure found and repaired. This technical evidence does not claim a completed classroom demonstration. The real participants and observations must be recorded after [the instruments-only demo](CRIT10-DEMO.md).
+
+![Production wall after readiness deployment](screenshots/readiness-production.png)

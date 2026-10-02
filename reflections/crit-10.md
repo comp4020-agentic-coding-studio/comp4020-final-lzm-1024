@@ -1,13 +1,13 @@
 # Crit 10 — evidence is more than a green check
 
-> Reflection prepared with AI assistance, 2 October 2026. Structured action logging and the instruments-only classroom demonstration remain outstanding. This file must be revised after that work; it does not claim the crit requirement has been completed.
+> Reflection prepared with AI assistance, 3 October 2026. Technical logging and a local rehearsal are complete. The student confirmed that the real instruments-only classmate demonstration has not occurred; no classroom feedback is claimed here.
 
 ## What was the breakthrough that moved the work forward?
 
-The useful distinction is between a system accepting a command and the intended effect actually happening. Voice signalling can succeed without audio reaching another person. A video room can save a playing state while its embedded player repeatedly pauses. The current tests therefore include decoded synthetic audio in both directions and playback behaviour across repeated synchronisation ticks.
+The breakthrough was separating an accepted server action from its intended effect. The new structured events identify an opaque actor, bounded action, time and outcome, while excluding private messages, credentials and negotiation payloads. Tests check hostile input, rejected requests, bounded buffering and identity continuity after restart. The viewer makes those classifications readable without revealing content.
 
-For Crit 10, the next step is to make accepted and rejected user actions observable through structured server events. Those events should identify an opaque actor, action, time and outcome without including passwords, cookies, message bodies or media negotiation data. The live demonstration will need to show what can be inferred from logs alone and what remains invisible. Existing console errors are not sufficient evidence that this requirement is met.
+The local rehearsal also exposed a limitation of my evidence strategy: a whiteboard object could receive focus, yet Enter did not select it. Socket tests had passed because the shared-state protocol worked. Browser keyboard interaction revealed a different failure. The repair preserves focus through redraws and avoids stealing Space from ordinary buttons. That gives a concrete example of why one green test suite is insufficient.
 
 ## What did this work change about who I want to be as a software developer?
 
-The practice I want to strengthen is making claims that another person can inspect. Tests, logs and screenshots answer different questions; combining them requires explaining their limits. I also need better commit discipline: the current history does not preserve the implementation's incremental development. My next work should leave an actual, reviewable trail as it happens, rather than trying to reconstruct one afterwards. The final reflection should revisit this intention using the completed demonstration and real feedback.
+I want to make claims another person can inspect without overstating them. Logs can establish accepted publication or messaging; they cannot establish that someone understood, enjoyed or even saw the result. The two-session rehearsal is technical preparation, not a substitute for classmates operating the product while I narrate from logs alone. After that demonstration, I need to compare my predictions with their actions and revise this reflection using a real misunderstanding or missed event. Actual new commits preserve this work honestly; they cannot recover the missing earlier development history.
