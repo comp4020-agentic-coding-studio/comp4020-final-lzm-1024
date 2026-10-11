@@ -94,3 +94,17 @@ The exact viewport and two-session local rehearsal is documented in [ACCEPTANCE]
 Implementation: [f8c3ead](https://github.com/comp4020-agentic-coding-studio/comp4020-final-lzm-1024/commit/f8c3eadf4054462b060177ffb98b5223f177d420). TypeScript and all **21 top-level checks passed** in 42.32 seconds against the isolated preview on port 18118. Three old schema assertions initially required version 13; the additive buffering migration advances the database to 14, and the assertions now require that exact version. Existing preservation and permission checks remain. After the final cleanup, the targeted player/share/server run passed **24 nested checks**, which overlap the full-run wrappers.
 
 [Feedback evidence](FEEDBACK.md) records the student's report, the defects established independently, two-session login/invitation sharing, a real 5.055-second MP4 clip, keyboard sharing and exact desktop/phone layout checks. HLS settings are regression-tested configuration; no streaming throughput gain or universal provider availability is claimed. These local disposable accounts do not represent a completed Crit 10 classmate demonstration. Publishing follows the existing main-branch check/deploy workflow; production validation remains read-only.
+
+## Video quality controls, 3 October 2026
+
+TypeScript and all **21 top-level checks passed** in 54.80 seconds against the isolated preview on port 18120. The player wrapper includes **11 quality regressions**, overlapping the top-level total. They verify source-level indices, audio-only exclusion, duplicate resolutions, non-flushing HLS selection and Auto, malformed/stale choices, source replacement, native mute state, independent viewers without room control writes, native/file limitations and YouTube speed restoration without callback loops. No provider quality setter is used for YouTube.
+
+Actual browser checks used one disposable local account and two explicitly named TEST rooms. The official Google for Developers [embedded-player demonstration](https://www.youtube.com/watch?v=M7lc1UVf-VE) exposed 720p, 480p, 360p, 240p, 144p and Auto through the English native settings. Selecting 360p changed both the provider settings and the application's reported resolution. The public [HLS demonstration source](https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8) supplied five video variants. Selecting 480p at 1920×1080 produced actual 480p playback; the video advanced to approximately 23.88 seconds with `paused=false` and ready state 4. At 390×844, selecting 288p produced actual 288p playback at approximately 54.08 seconds. Keyboard Home then Tab restored Auto while playback continued at approximately 79.67 seconds. Neither viewport had horizontal document overflow.
+
+These observations establish available controls and actual variant switching for these sources, not a measured bandwidth gain, universal availability or reproduction of the friend's original stutter. Test users and rooms existed only in the disposable local fixture. No production room data was modified.
+
+![YouTube native quality settings with 360p selected in a local TEST room](screenshots/watch-quality-youtube.png)
+
+![HLS variant selection during actual desktop playback](screenshots/watch-quality-hls-desktop.png)
+
+![Phone HLS quality controls during actual playback](screenshots/watch-quality-hls-mobile.png)
