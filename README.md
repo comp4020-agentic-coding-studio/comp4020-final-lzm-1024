@@ -18,7 +18,7 @@ The limit of this analogy matters. A shared campus service needs authentication 
 
 Friends can edit an invited private whiteboard together, while only its owner publishes a snapshot to the wall. Seeing another person's pointer is useful; knowing which version is saved is essential. The server accepts validated operations, persists them, and then broadcasts the result. Reconnection restores accepted state. Undo checks for intervening edits rather than silently erasing a collaborator's contribution.
 
-Private conversations, groups and audio calls follow explicit membership boundaries. A room link alone grants no private access. Calls request microphone access only when someone calls or answers, and ending the call stops capture. Watch-room hosts control shared playback while viewers retain local sound controls.
+Private conversations, groups and audio/video calls follow explicit membership boundaries. A room link alone grants no private access. Calls request microphone access, plus a camera for video calls, only when someone calls or answers. Ending a call stops capture. Watch-room hosts control shared playback while viewers retain local sound controls.
 
 ## Evidence and remaining judgement
 
@@ -26,4 +26,4 @@ The [rules](CLAUDE.md) and [checks](spec/campuswall.test.ts) enforce campus isol
 
 Whether students feel welcome, understand invitations, or find worthwhile company remains a human judgement. Controlled previews are not evidence of real community adoption. Further evaluation should ask students to discover an activity and collaborate without coaching, including keyboard and slow-connection use.
 
-The current service deliberately avoids advertising, fabricated user activity and verified-university claims. Email verification, password recovery, moderation tools and end-to-end message encryption remain absent. Voice calls can fail on restricted networks without a configured TURN relay; video availability depends on its provider. These limits keep the promises proportionate to what a small, persistent course deployment actually supports.
+The current service deliberately avoids advertising, fabricated user activity and verified-university claims. Email verification, password recovery, moderation tools and end-to-end message encryption remain absent. Private calls can fail on restricted networks without a configured TURN relay; video availability depends on its provider. These limits keep the promises proportionate to what a small, persistent course deployment actually supports.

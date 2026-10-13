@@ -9,6 +9,7 @@ import WebSocket from 'ws';
 import rtc from '@roamhq/wrtc';
 import {createAudioTransport} from '../public/voice-transport.js';
 
+const videoMode=process.argv.includes('--video');
 async function runAudioTest(){
  const root=resolve('.test-data');mkdirSync(root,{recursive:true});const dir=mkdtempSync(join(root,'voice-audio-')),base='http://127.0.0.1:18098';let child;const clients=[];
  async function start(){child=spawn(process.execPath,['server.mjs'],{env:{...process.env,PORT:'18098',DATA_DIR:dir},stdio:'pipe'});let output='';child.stderr.on('data',b=>output+=b);for(let i=0;i<100;i++){try{if((await fetch(base+'/api/health')).ok)return;}catch{}await new Promise(r=>setTimeout(r,40));}throw Error(output);}
@@ -23,23 +24,26 @@ async function runAudioTest(){
  let a,b,x,sydney,convo,c,wa,wb,wx;
 
  try{await start();a=await reg('audio_alex');b=await reg('audio_riley');wa=await socket(a);wb=await socket(b);convo=(await req('/api/messages/conversations','POST',{userId:b.id},a)).data.conversation;
-   const errors=[],transports=[],sinks=[],sources=[new rtc.nonstandard.RTCAudioSource(),new rtc.nonstandard.RTCAudioSource()],audioReceived=[0,0];let currentCall,feed;
+   const errors=[],transports=[],sinks=[],sources=[new rtc.nonstandard.RTCAudioSource(),new rtc.nonstandard.RTCAudioSource()],audioReceived=[0,0],videoReceived=[0,0],blackReceived=[0,0],videoSources=videoMode?[new rtc.nonstandard.RTCVideoSource(),new rtc.nonstandard.RTCVideoSource()]:[];let currentCall,feed,videoFeed;
    // The M106 test binding's Node 24 index getter is unreliable; SDP mid is sufficient.
    class AudioPeer extends rtc.RTCPeerConnection{addIceCandidate(v){return v===null?Promise.resolve():super.addIceCandidate(v);}set onicecandidate(fn){super.onicecandidate=fn?(e=>{const v=e.candidate?.toJSON();fn({candidate:v?{toJSON:()=>({...v,sdpMLineIndex:0})}:null});}):null;}}
    const relay=(ws,index)=>message=>{const v=JSON.parse(message);if(v.type==='call:signal'&&v.callId===currentCall?.id)transports[index].receive(v.signal).catch(e=>errors.push(e));};
    const handlers=[relay(wa,0),relay(wb,1)];wa.on('message',handlers[0]);wb.on('message',handlers[1]);
    try {
     for(const [index,u] of [a,b].entries()){
-     const stream=new rtc.MediaStream([sources[index].createTrack()]);
-     transports.push(createAudioTransport({stream,iceServers:[],PeerConnection:AudioPeer,onSignal:async value=>{const r=await signal(currentCall,u,value);assert.equal(r.status,200,JSON.stringify({...r.data,kind:value.description?'description':'candidate',candidateMeta:value.candidate?{empty:value.candidate.candidate==='',prefix:value.candidate.candidate.startsWith('candidate:'),mid:value.candidate.sdpMid,index:value.candidate.sdpMLineIndex,fragmentType:typeof value.candidate.usernameFragment}:null}));},onConnected:async()=>{const r=await operation(currentCall,u,'connected');assert.equal(r.status,200,JSON.stringify(r.data));},onFailed:e=>errors.push(e),onTrack:e=>{const sink=new rtc.nonstandard.RTCAudioSink(e.track);sinks.push(sink);sink.ondata=v=>{if(v.samples.some(x=>Math.abs(x)>100))audioReceived[index]++;};}}));
+     const stream=new rtc.MediaStream([sources[index].createTrack(),...(videoMode?[videoSources[index].createTrack()]:[])]);
+     transports.push(createAudioTransport({stream,mode:videoMode?'video':'audio',iceServers:[],PeerConnection:AudioPeer,onSignal:async value=>{const r=await signal(currentCall,u,value);assert.equal(r.status,200,JSON.stringify({...r.data,kind:value.description?'description':'candidate',candidateMeta:value.candidate?{empty:value.candidate.candidate==='',prefix:value.candidate.candidate.startsWith('candidate:'),mid:value.candidate.sdpMid,index:value.candidate.sdpMLineIndex,fragmentType:typeof value.candidate.usernameFragment}:null}));},onConnected:async()=>{const r=await operation(currentCall,u,'connected');assert.equal(r.status,200,JSON.stringify(r.data));},onFailed:e=>errors.push(e),onTrack:e=>{if(e.track.kind==='video'){const sink=new rtc.nonstandard.RTCVideoSink(e.track);sinks.push(sink);sink.onframe=({frame})=>{if(frame.width===64&&frame.height===48){if(frame.data[0]>30)videoReceived[index]++;else blackReceived[index]++;}};return;}const sink=new rtc.nonstandard.RTCAudioSink(e.track);sinks.push(sink);sink.ondata=v=>{if(v.samples.some(x=>Math.abs(x)>100))audioReceived[index]++;};}}));
     }
-    currentCall=(await req('/api/calls','POST',{conversationId:convo.id,clientId:randomUUID(),device:a.device},a)).data.call;
+    currentCall=(await req('/api/calls','POST',{conversationId:convo.id,mode:videoMode?'video':'audio',clientId:randomUUID(),device:a.device},a)).data.call;
     assert.equal((await operation(currentCall,b,'accept')).status,200);await transports[0].offer();
+    if(videoMode){const data=new Uint8ClampedArray(64*48*3/2);data.fill(128);let frame=0;videoFeed=setInterval(()=>{data.fill(60+(frame++%100),0,64*48);for(const source of videoSources)source.onFrame({width:64,height:48,data});},100);}
     let phase=0;feed=setInterval(()=>{const samples=new Int16Array(480);for(let j=0;j<480;j++)samples[j]=Math.round(10000*Math.sin(2*Math.PI*440*(phase+j)/48000));phase+=480;for(const source of sources)source.onData({samples,sampleRate:48000,bitsPerSample:16,channelCount:1,numberOfFrames:480});},10);
-    for(let n=0;n<160&&(!audioReceived.every(x=>x>3)||!((await req('/api/calls/'+currentCall.id,'GET',null,a)).data.call.status==='active'));n++){if(errors.length)throw errors[0];await new Promise(r=>setTimeout(r,30));}
-    assert.ok(audioReceived.every(x=>x>3),'Both participants receive decoded non-silent audio');assert.deepEqual(errors,[]);assert.equal((await req('/api/calls/'+currentCall.id,'GET',null,a)).data.call.status,'active');await operation(currentCall,a,'hangup');
-   } finally {clearInterval(feed);wa.off('message',handlers[0]);wb.off('message',handlers[1]);for(const sink of sinks)sink.stop();for(const transport of transports)transport.close();}
+    for(let n=0;n<160&&(!audioReceived.every(x=>x>3)||videoMode&&!videoReceived.every(x=>x>3)||!((await req('/api/calls/'+currentCall.id,'GET',null,a)).data.call.status==='active'));n++){if(errors.length)throw errors[0];await new Promise(r=>setTimeout(r,30));}
+    assert.ok(audioReceived.every(x=>x>3),'Both participants receive decoded non-silent audio');if(videoMode)assert.ok(videoReceived.every(x=>x>3),'Both participants receive decoded changing synthetic video frames');assert.deepEqual(errors,[]);assert.equal((await req('/api/calls/'+currentCall.id,'GET',null,a)).data.call.status,'active');if(videoMode){transports[0].camera(false);for(let n=0;n<80&&blackReceived[1]<2;n++)await new Promise(r=>setTimeout(r,30));assert.ok(blackReceived[1]>=2,'Camera off sends black frames instead of the camera picture');const before=videoReceived[1];transports[0].camera(true);for(let n=0;n<80&&videoReceived[1]<before+2;n++)await new Promise(r=>setTimeout(r,30));assert.ok(videoReceived[1]>=before+2,'Camera can resume without renegotiating');}
+    await operation(currentCall,a,'hangup');
+   } finally {clearInterval(feed);clearInterval(videoFeed);wa.off('message',handlers[0]);wb.off('message',handlers[1]);for(const sink of sinks)sink.stop();for(const transport of transports)transport.close();}
 
+ if(videoMode)console.log('Both real WebRTC peers received decoded synthetic video and audio.');
  console.log('Both real WebRTC peers received decoded synthetic audio; authenticated signalling and hangup passed.');
  }finally{for(const ws of clients)ws.terminate();if(child?.exitCode===null)await stop();assert.ok(dir.startsWith(root));rmSync(dir,{recursive:true,force:true});}
 }

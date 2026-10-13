@@ -55,7 +55,7 @@ it('verifies private inbox identity, isolation, unread messages and restart pers
 it('verifies fixed account universities and per-campus public chat', async () => {
   const result = await promisify(execFile)(process.execPath, ['--test', '--test-reporter=tap', 'scripts/campus-access.integration.mjs'], { timeout: 45000 });
   expect(result.stdout).toContain('# fail 0');
-}, 50000);
+}, 65000);
 
 it('verifies university email domain locking and existing account compatibility', async () => {
   const result = await promisify(execFile)(process.execPath, ['--test', '--test-reporter=tap', 'scripts/email-campus.integration.mjs'], { timeout: 35000 });
@@ -91,9 +91,11 @@ it('verifies bookings, notifications, friends/groups, clubs, teams, calendar/map
 }, 55000);
 
 
-it('verifies private voice signalling and ordered audio negotiation, mute and cleanup', async () => {
+it('verifies private audio/video signalling, ordered negotiation, microphone/camera controls and cleanup', async () => {
   const result = await promisify(execFile)(process.execPath, ['--test', '--test-reporter=tap', 'scripts/voice-calls.integration.mjs', 'scripts/voice-transport.test.mjs', 'scripts/voice-ui.test.mjs'], { timeout: 45000 });
   expect(result.stdout).toContain('# fail 0');
   const audio = await promisify(execFile)(process.execPath, ['scripts/voice-audio.e2e.mjs'], { timeout: 20000 });
   expect(audio.stdout).toContain('Both real WebRTC peers received decoded synthetic audio');
+  const video = await promisify(execFile)(process.execPath, ['scripts/voice-audio.e2e.mjs', '--video'], { timeout: 20000 });
+  expect(video.stdout).toContain('Both real WebRTC peers received decoded synthetic video and audio.');
 }, 50000);

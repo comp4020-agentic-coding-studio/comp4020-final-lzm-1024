@@ -1,4 +1,4 @@
-import {startVoiceCall} from './voice-calls.js';
+import {startVoiceCall,startVideoCall} from './voice-calls.js';
 import {avatar,refreshAvatars,mountEmoji} from './chat-ui.js';
 import {escapeHtml as esc} from './ui-utils.js';
 const drafts=new Map();
@@ -63,8 +63,9 @@ export function mountMessages(root,{user,api,navigate,onAuthExpired,conversation
   function mountRoom(c){
     peer=c.peer;remember(c);
     room.innerHTML=`<div class="dm-room-heading"><a class="dm-back" href="/messages" data-nav aria-label="Back to conversations">←</a>${avatar(peer,"dm-avatar")}<div><h2>${esc(peer.name)}</h2><span>@${esc(peer.username)} · Private conversation</span></div></div><button type="button" class="dm-older" hidden>Load earlier messages ↑</button><div class="dm-log" role="log" aria-label="Private messages" aria-live="polite" aria-relevant="additions" tabindex="0"><p class="dm-empty">Loading messages…</p></div><button type="button" class="dm-new" hidden>New messages ↓</button><form class="dm-compose"><label class="sr-only" for="dm-message">Private message</label><textarea id="dm-message" class="dm-input" rows="2" maxlength="2000" placeholder="Message ${esc(peer.name)}…">${esc(state.body)}</textarea><div><span class="dm-count">${state.body.length}/2000</span><button type="submit" class="primary dm-send" disabled>Send ↗</button></div><p>Enter to send · Shift + Enter for a new line</p><p class="dm-send-error" role="alert"></p></form>`;
-    root.querySelector('.dm-room-heading').insertAdjacentHTML('beforeend',`<button class="dm-call" type="button" aria-label="Voice call ${esc(peer.name)}"><span aria-hidden="true">☎</span> Voice call</button><a class="button dm-play" href="/games?invite=${encodeURIComponent(peer.id)}" data-nav>Play together ↗</a>`);
+    root.querySelector('.dm-room-heading').insertAdjacentHTML('beforeend',`<button class="dm-call" type="button" aria-label="Voice call ${esc(peer.name)}"><span aria-hidden="true">☎</span> Voice call</button><button class="dm-call dm-video-call" type="button" aria-label="Video call ${esc(peer.name)}"><span aria-hidden="true">▣</span> Video call</button><a class="button dm-play" href="/games?invite=${encodeURIComponent(peer.id)}" data-nav>Play together ↗</a>`);
     root.querySelector('.dm-call').onclick=async e=>{e.currentTarget.disabled=true;try{await startVoiceCall(conversationId);}catch(error){roomError(error);}finally{if(active)root.querySelector('.dm-call').disabled=false;}};
+    root.querySelector('.dm-video-call').onclick=async e=>{e.currentTarget.disabled=true;try{await startVideoCall(conversationId);}catch(error){roomError(error);}finally{if(active)root.querySelector('.dm-video-call').disabled=false;}};
     root.querySelector('.dm-new').onclick=bottom;log().onscroll=()=>{if(atBottom())bottom();};
     root.querySelector('.dm-older').onclick=async()=>{
       const button=root.querySelector('.dm-older');button.disabled=true;

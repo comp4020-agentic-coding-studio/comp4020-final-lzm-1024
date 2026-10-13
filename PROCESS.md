@@ -1,6 +1,6 @@
 # CampusWall — process account
 
-> AI-assisted process account, grounded in the working tree and recorded checks across 2–3 October 2026. The student must review the argument and personal attribution before submission. File references show the present implementation; they do not establish when a decision was made.
+> AI-assisted process account, grounded in the working tree and recorded checks across 2–13 October 2026. The student must review the argument and personal attribution before submission. File references show the present implementation; they do not establish when a decision was made.
 
 ## From a feature request to a quality standard
 
@@ -12,7 +12,7 @@ The [README](README.md) defines quality through approachable participation, depe
 
 The course provides one small Fly machine and one persistent volume. Node.js serves HTTP and browser modules, SQLite stores durable records beneath `/data`, and WebSockets deliver room updates. The choice avoids administering a separate database service. SQLite's [appropriate-use guidance](https://www.sqlite.org/whentouse.html) supports embedded application storage, but does not guarantee this application's capacity. Synchronous database calls and a single writer remain constraints; multiple application machines would require a different persistence and broadcast design.
 
-The earlier JSON pilot was inadequate for authenticated ownership, relational membership and concurrent writes. [Additive migrations](migrations/001-campuswall.sql) retain existing data rather than resetting it. [Initialization](initialize-database.mjs) applies fourteen migrations and preserves unassignable legacy drafts as archive records. Password hashes and session-token hashes replace browser-chosen identity. Smaller domain modules make private messaging, games, screenings and voice calls inspectable. [ADR 001](docs/decisions/001-storage-and-deployment.md) records the alternatives and costs of the current stack, retrospectively rather than claiming a contemporaneous decision record.
+The earlier JSON pilot was inadequate for authenticated ownership, relational membership and concurrent writes. [Additive migrations](migrations/001-campuswall.sql) retain existing data rather than resetting it. [Initialization](initialize-database.mjs) applies fifteen migrations and preserves unassignable legacy drafts as archive records. Password hashes and session-token hashes replace browser-chosen identity. Smaller domain modules make private messaging, games, screenings and voice calls inspectable. [ADR 001](docs/decisions/001-storage-and-deployment.md) records the alternatives and costs of the current stack, retrospectively rather than claiming a contemporaneous decision record.
 
 ## The agent workflow and its limits
 
@@ -30,7 +30,7 @@ An embedded YouTube Play action could disagree with the room's saved paused stat
 
 On 3 October, student-relayed friend feedback identified sharing and playback stutter. Inspection found a missing clipboard fallback and buffering time advancing the shared clock. [f8c3ead](https://github.com/comp4020-agentic-coding-studio/comp4020-final-lzm-1024/commit/f8c3eadf4054462b060177ffb98b5223f177d420) records selectable links, access guidance and buffering-aware, bounded correction. [Feedback evidence](docs/FEEDBACK.md) separates mocked regressions from a short two-session clip check; the friend's exact setup and “volting” remain unknown. This is reported feedback, not a completed classmate study.
 
-Voice verification separates signalling from audio. Participant/device checks prevent another tab taking over, while ordered negotiation queues early ICE candidates. A [real WebRTC fixture](scripts/voice-audio.e2e.mjs) exchanges non-silent synthetic audio without recording a person's microphone. UI checks verify permission denial and late cancellation cleanup. TURN remains unconfigured; working signalling cannot establish that every campus firewall permits a call. [ADR 003](docs/decisions/003-media-and-voice.md) makes that limitation explicit.
+Call verification separates signalling from media. Participant/device checks prevent another tab taking over, while ordered negotiation queues early ICE candidates. A [real WebRTC fixture](scripts/voice-audio.e2e.mjs) exchanges synthetic audio and video without capturing personal devices. UI checks verify permission denial and late cancellation cleanup. TURN remains unconfigured; working signalling cannot establish that every campus firewall permits a call. [ADR 003](docs/decisions/003-media-and-voice.md) makes that limitation explicit.
 
 ## Evidence of performance and usability
 

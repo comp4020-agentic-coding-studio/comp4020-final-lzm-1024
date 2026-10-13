@@ -1,7 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {spawn} from 'node:child_process';
-import {mkdtempSync,mkdirSync,rmSync} from 'node:fs';
+import {mkdtempSync,mkdirSync,rmSync,readFileSync} from 'node:fs';
 import {resolve,join} from 'node:path';
 import {once} from 'node:events';
 import {randomUUID} from 'node:crypto';
@@ -30,7 +30,7 @@ test('voice signalling permissions, device ownership, session revocation and per
   });
   await t.test('ringing is private, caller cannot answer, retries do not duplicate and busy calls are rejected',async()=>{
    const input={conversationId:convo.id,clientId:randomUUID(),device:a.device};let r=await req('/api/calls','POST',input,a);assert.equal(r.status,201,JSON.stringify(r.data));c=r.data.call;
-   assert.equal((await req('/api/calls','POST',input,a)).data.call.id,c.id);await wait(wb,e=>e.type==='call:state'&&e.call.id===c.id);
+   assert.equal((await req('/api/calls','POST',input,a)).data.call.id,c.id);assert.equal((await req('/api/calls','POST',{...input,mode:'video'},a)).status,409);await wait(wb,e=>e.type==='call:state'&&e.call.id===c.id);
    assert.equal((await req('/api/calls/'+c.id,'GET',null,x)).status,404);assert.equal((await req('/api/calls','GET',null,x)).data.call,null);assert.ok(!wa.events.some(e=>e.type==='call:signal'));
    assert.equal((await operation(c,a,'accept')).status,403);assert.equal((await req('/api/calls','POST',{...input,clientId:randomUUID()},b)).status,409);
    assert.equal((await signal(c,a,{description:audio})).status,409);
@@ -45,13 +45,44 @@ test('voice signalling permissions, device ownership, session revocation and per
    assert.equal((await signal(c,b,{description:{...audio,type:'answer'}})).status,200);await operation(c,a,'connected');assert.equal((await operation(c,b,'connected')).data.call.status,'active');
    assert.equal((await operation(c,x,'hangup')).status,404);assert.equal((await operation(c,a,'hangup')).data.call.status,'ended');assert.equal((await operation(c,a,'hangup')).status,200);assert.equal((await signal(c,b,{candidate:null})).status,409);
   });
+  await t.test('video mode is explicit, immutable on retry and permits only one audio and one video section',async()=>{
+   assert.equal((await req('/api/calls','POST',{conversationId:convo.id,clientId:randomUUID(),device:a.device,mode:'screen'},a)).status,400);
+   const input={conversationId:convo.id,clientId:randomUUID(),device:a.device,mode:'video'},r=await req('/api/calls','POST',input,a);assert.equal(r.status,201);c=r.data.call;assert.equal(c.mode,'video');assert.equal((await req('/api/calls','POST',input,a)).data.call.id,c.id);assert.equal((await req('/api/calls','POST',{...input,mode:'audio'},a)).status,409);
+   assert.equal((await operation(c,b,'accept')).status,200);
+   const video={...audio,sdp:audio.sdp+'m=video 9 UDP/TLS/RTP/SAVPF 96\r\n'};
+   assert.equal((await signal(c,a,{description:audio})).status,400);
+   assert.equal((await signal(c,a,{description:{...video,sdp:video.sdp+'m=application 9 UDP/DTLS/SCTP webrtc-datachannel\r\n'}})).status,400);
+   assert.equal((await signal(c,a,{description:{...video,sdp:video.sdp+'m=video 9 UDP/TLS/RTP/SAVPF 96\r\n'}})).status,400);
+   assert.equal((await signal(c,a,{description:video})).status,200);
+   assert.equal((await signal(c,b,{description:{...audio,type:'answer'}})).status,400);
+   assert.equal((await signal(c,b,{description:{...video,type:'answer'}})).status,200);
+   await operation(c,a,'connected');assert.equal((await operation(c,b,'connected')).data.call.status,'active');await operation(c,a,'hangup');
+  });
   await t.test('decline persists, session logout prevents delivery and active calls end on restart',async()=>{
    c=(await req('/api/calls','POST',{conversationId:convo.id,clientId:randomUUID(),device:a.device},a)).data.call;
    assert.equal((await operation(c,b,'reject')).data.call.reason,'declined');
    c=(await req('/api/calls','POST',{conversationId:convo.id,clientId:randomUUID(),device:a.device},a)).data.call;await operation(c,b,'accept');
    const closed=once(wb,'close');await req('/api/auth/logout','POST',{},b);await closed;assert.equal((await signal(c,a,{description:audio})).status,409);assert.equal((await operation(c,b,'hangup')).status,401);
    for(const ws of clients)ws.close();await stop();await start();assert.equal((await req('/api/calls','GET',null,a)).data.call,null);assert.equal((await req('/api/calls/'+c.id,'GET',null,a)).data.call.reason,'server-restarted');
-   const db=new DatabaseSync(join(dir,'campuswall.sqlite'));assert.equal(db.prepare('SELECT COUNT(*) n FROM voice_calls WHERE connectedAt IS NOT NULL').get().n,1);assert.equal(db.prepare('PRAGMA user_version').get().user_version,14);assert.ok(!db.prepare('PRAGMA table_info(voice_calls)').all().some(c=>/sdp|audio|candidate/i.test(c.name)));db.close();
+   const db=new DatabaseSync(join(dir,'campuswall.sqlite'));assert.equal(db.prepare('SELECT COUNT(*) n FROM voice_calls WHERE connectedAt IS NOT NULL').get().n,2);assert.equal(db.prepare('PRAGMA user_version').get().user_version,15);assert.equal(db.prepare("SELECT COUNT(*) n FROM voice_calls WHERE mode='video'").get().n,1);assert.ok(!db.prepare('PRAGMA table_info(voice_calls)').all().some(c=>/sdp|audio|candidate/i.test(c.name)));db.close();
   });
  }finally{for(const ws of clients)ws.terminate();if(child?.exitCode===null)await stop();assert.ok(dir.startsWith(root));rmSync(dir,{recursive:true,force:true});}
+});
+
+test('additive video migration preserves old voice lifecycle records as audio',()=>{
+ const db=new DatabaseSync(':memory:');
+ try{
+  db.exec(`CREATE TABLE users(id TEXT PRIMARY KEY);
+   CREATE TABLE conversations(id TEXT PRIMARY KEY);
+   INSERT INTO users VALUES ('old-caller'),('old-callee');
+   INSERT INTO conversations VALUES ('old-conversation');`);
+  db.exec(readFileSync(new URL('../migrations/013-voice-calls.sql',import.meta.url),'utf8'));
+  db.prepare("INSERT INTO voice_calls (id,conversationId,callerId,calleeId,clientId,status,createdAt,reason,endedAt) VALUES (?,?,?,?,?,'ended',?,?,?)").run('old-call','old-conversation','old-caller','old-callee','old-request','2026-10-01','completed','2026-10-01');
+  const old=db.prepare('SELECT * FROM voice_calls').get();
+  db.exec(readFileSync(new URL('../migrations/015-video-calls.sql',import.meta.url),'utf8'));
+  const upgraded=db.prepare('SELECT * FROM voice_calls').get();
+  assert.equal(upgraded.mode,'audio');delete upgraded.mode;assert.deepEqual(upgraded,old);
+  assert.equal(db.prepare('PRAGMA user_version').get().user_version,15);
+  assert.throws(()=>db.prepare('UPDATE voice_calls SET mode=?').run('screen'));
+ }finally{db.close();}
 });

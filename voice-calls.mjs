@@ -1,4 +1,4 @@
-// Audio travels between the participants; this server relays bounded signalling only.
+// Media travels between the participants; this server relays bounded signalling only.
 export function createVoiceCalls({get,all,run,id,now,fail,body,json,campusAccount,sockets,send,validSocket,sessionHash}) {
  const uuid=value=>typeof value==='string'&&/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/.test(value);
  const live=new Map();
@@ -25,16 +25,17 @@ export function createVoiceCalls({get,all,run,id,now,fail,body,json,campusAccoun
   if(path==='/api/calls'&&method==='GET')return json(res,200,{call:current(u),iceServers,relayAvailable:iceServers.some(s=>[s.urls].flat().some(url=>/^turns?:/.test(url)))});
   if(path==='/api/calls'&&method==='POST'){
    const input=await body(req);u=campusAccount(req);const caller=device(req,input,u);
+   const mode=input.mode??'audio';if(!['audio','video'].includes(mode))fail(400,'Invalid call mode');
    if(!uuid(input.clientId)||!uuid(input.conversationId))fail(400,'Invalid call request');
    const conversation=get('SELECT * FROM conversations WHERE id=? AND (user1=? OR user2=?)',input.conversationId,u.id,u.id)||fail(404,'Conversation not found');
    const calleeId=conversation.user1===u.id?conversation.user2:conversation.user1;
    if(get('SELECT universityId FROM users WHERE id=?',calleeId)?.universityId!==u.universityId)fail(403,'Voice calls stay within your university');
    const previous=get('SELECT * FROM voice_calls WHERE callerId=? AND clientId=?',u.id,input.clientId);
-   if(previous){if(previous.conversationId!==input.conversationId)fail(409,'This request already started a different call');return json(res,200,{call:view(previous)});}
+   if(previous){if(previous.conversationId!==input.conversationId||previous.mode!==mode)fail(409,'This request already started a different call');return json(res,200,{call:view(previous)});}
    if(all("SELECT id FROM voice_calls WHERE status<>'ended' AND (callerId IN (?,?) OR calleeId IN (?,?))",u.id,calleeId,u.id,calleeId).length)fail(409,'One of you is already in a call');
    if(!online(calleeId))fail(409,'This person is offline. Try again when they are online.');
    if(get('SELECT COUNT(*) n FROM voice_calls WHERE callerId=? AND createdAt>?',u.id,new Date(Date.now()-60000).toISOString()).n>=5)fail(429,'Please wait before calling again');
-   const callId=id();run("INSERT INTO voice_calls (id,conversationId,callerId,calleeId,clientId,status,createdAt) VALUES (?,?,?,?,?,'ringing',?)",callId,conversation.id,u.id,calleeId,input.clientId,now());
+   const callId=id();run("INSERT INTO voice_calls (id,conversationId,callerId,calleeId,clientId,status,createdAt,mode) VALUES (?,?,?,?,?,'ringing',?,?)",callId,conversation.id,u.id,calleeId,input.clientId,now(),mode);
    live.set(callId,{caller,callee:null,created:Date.now(),deadline:Date.now()+35000,connected:new Set(),offers:0,answers:0,signals:new Map(),offline:new Map()});
    const c=record(callId);broadcast(c);return json(res,201,{call:view(c)});
   }
@@ -56,7 +57,7 @@ export function createVoiceCalls({get,all,run,id,now,fail,body,json,campusAccoun
    if(prior){if(prior!==serial)fail(409,'Conflicting signalling retry');return json(res,200,{ok:true});}
    if(state.signals.size>=320)fail(429,'Too many connection updates');
    const signal=input.signal;
-   if(signal?.description){const s=signal.description;if(typeof s.sdp!=='string'||s.sdp.length>12000||!s.sdp.startsWith('v=0')||!/\bm=audio\s/.test(s.sdp)||/\bm=(video|application)\s/.test(s.sdp))fail(400,'Invalid audio description');if(side==='caller'&&s.type==='offer'&&!state.offers)state.offers++;else if(side==='callee'&&s.type==='answer'&&state.offers&&!state.answers)state.answers++;else fail(409,'Unexpected audio negotiation');}
+   if(signal?.description){const s=signal.description,sections=typeof s.sdp==='string'?[...s.sdp.matchAll(/^m=(\S+)\s/gm)].map(m=>m[1]):[];if(typeof s.sdp!=='string'||s.sdp.length>24000||!s.sdp.startsWith('v=0')||sections.filter(k=>k==='audio').length!==1||sections.filter(k=>k==='video').length!==(c.mode==='video'?1:0)||sections.some(k=>!['audio','video'].includes(k)))fail(400,'Invalid call description');if(side==='caller'&&s.type==='offer'&&!state.offers)state.offers++;else if(side==='callee'&&s.type==='answer'&&state.offers&&!state.answers)state.answers++;else fail(409,'Unexpected call negotiation');}
    else if(signal&&Object.hasOwn(signal,'candidate')){const v=signal.candidate;if(v!==null&&(!v||typeof v.candidate!=='string'||v.candidate.length>2000||!/^candidate:/.test(v.candidate)||v.sdpMid!==null&&v.sdpMid!==undefined&&(typeof v.sdpMid!=='string'||v.sdpMid.length>30)||v.sdpMLineIndex!==null&&v.sdpMLineIndex!==undefined&&(!Number.isInteger(v.sdpMLineIndex)||v.sdpMLineIndex<0||v.sdpMLineIndex>5)||v.usernameFragment!==undefined&&v.usernameFragment!==null&&(typeof v.usernameFragment!=='string'||v.usernameFragment.length>256)))fail(400,'Invalid audio connection candidate');}
    else fail(400,'Invalid audio signal');
    const target=state[side==='caller'?'callee':'caller'];if(!online(target.userId,target.device,target.hash))fail(409,'The other person disconnected');
