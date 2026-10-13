@@ -16,3 +16,57 @@
 
 .player-score:empty{display:none}
 @media(max-width:760px){.game-player{display:grid;grid-template-columns:27px minmax(0,1fr);gap:7px;padding:13px 10px;align-items:center}.game-player strong{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.game-player small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.player-score{grid-column:2;justify-self:start;margin:0;font-size:17px}.game-player-avatar{grid-row:1}.game-player>span:nth-child(2){grid-column:2;grid-row:1}}
+/* Arcade treatment: scoped to games, with slow decorative motion and a persistent pause. */
+.games-page:is(.arcade-lobby,.arcade-room){--arcade-pink:#fb62b6;--arcade-lime:#dbff75;--arcade-violet:#ab91ff;--arcade-dark:#171128}
+.arcade-topline{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px;font-size:12px;font-weight:850;letter-spacing:2px}
+.arcade-effects{flex-shrink:0;font-size:11px;letter-spacing:0;border:1px solid var(--line);border-radius:99px;padding:10px 15px;background:var(--surface);color:var(--ink)}
+.arcade-lobby .games-hero{position:relative;isolation:isolate;overflow:hidden;background:var(--arcade-dark);color:#fff;border:2px solid #ab91ff;border-radius:26px;padding:42px;box-shadow:7px 7px 0 #ab91ff33;background-image:radial-gradient(ellipse at 85% 15%,#7440a866,transparent 55%),linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:auto,32px 32px,32px 32px}
+.arcade-lobby .games-hero::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;background:linear-gradient(110deg,transparent 30%,#ffffff0b 48%,transparent 65%);transform:translateX(-100%);animation:arcade-sweep 9s ease-in-out infinite}
+.arcade-lobby .games-hero .eyebrow{color:var(--arcade-lime)}
+.games-page.arcade-lobby .games-hero h1{font-family:Impact,'Arial Black',sans-serif;font-size:clamp(46px,6.5vw,88px);line-height:.98;letter-spacing:-1.8px;margin:25px 0;text-shadow:3px 3px 0 #6937a2}
+.games-page.arcade-lobby .games-hero h1 em{font-style:normal;color:var(--arcade-lime);text-shadow:3px 3px 0 #6c4fbb;animation:arcade-neon 4s ease-in-out infinite}
+.arcade-lobby .games-hero p{color:#e5dbf4;line-height:1.8}
+.arcade-lobby .games-hero-meta{color:#eee5ff;flex-wrap:wrap}
+.arcade-lobby .games-hero-meta i{background:var(--arcade-lime);box-shadow:0 0 12px #dbff7580}
+.arcade-lobby .hero-game-board{background:#dbff75;border:5px solid #fff;box-shadow:12px 12px 0 #fb62b6,0 0 45px #ab91ff45}
+.arcade-lobby .hero-game-board i{border-color:#17112825}
+.arcade-lobby .hero-game-board b.dark{background:#171128}
+.arcade-lobby .hero-game-note{background:var(--arcade-pink);color:#171128;border:2px solid #fff;padding:13px 18px;border-radius:4px;font:800 13px/1.2 system-ui;box-shadow:5px 5px 0 #171128;transform:rotate(-7deg);animation:arcade-sticker 5s ease-in-out infinite}
+.arcade-lobby .hero-orbit{color:var(--arcade-lime);text-shadow:4px 4px 0 #7440a8}
+.arcade-lobby .orbit-two{color:var(--arcade-pink)}
+.arcade-ticker{overflow:hidden;margin:26px 0 4px;background:var(--arcade-lime);color:#171128;border-block:2px solid #171128;transform:rotate(-.6deg)}
+.arcade-ticker>div{display:flex;width:max-content;animation:arcade-marquee 32s linear infinite}
+.arcade-ticker span{flex-shrink:0;padding:15px 26px;font-size:13px;font-weight:900;letter-spacing:1.5px}
+.arcade-lobby .game-filters button[aria-pressed=true]{background:#171128;color:#dbff75;border-color:#171128;box-shadow:3px 3px 0 #ab91ff}
+.arcade-lobby .game-card{position:relative;isolation:isolate;overflow:hidden;border:2px solid #171128;border-radius:18px;box-shadow:5px 5px 0 #171128;transition:transform .25s,box-shadow .25s;content-visibility:auto;contain-intrinsic-size:auto 390px}
+.arcade-lobby .game-card::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(circle,#17112812 1px,transparent 1px);background-size:9px 9px;opacity:.55}
+.arcade-lobby .game-card.sage{background:#d9f5a2;color:#182b1e}.arcade-lobby .game-card.coral{background:#ffb7d4;color:#401c32}.arcade-lobby .game-card.lavender{background:#d7c9ff;color:#2d2250}.arcade-lobby .game-card.sunshine{background:#ffdf75;color:#3a2a15}.arcade-lobby .game-card.sky{background:#b3e8fa;color:#153449}
+.arcade-lobby .game-card-title{font-family:'Arial Black',system-ui,sans-serif;font-weight:900;letter-spacing:-.8px}
+.arcade-lobby .game-card-tag{font-weight:850}
+.arcade-lobby .game-card-tag b{background:#171128;color:#fff;border-radius:50%;width:29px;height:29px;display:grid;place-items:center}
+.arcade-lobby .game-card-description{color:inherit;opacity:.85}
+.arcade-lobby .game-card-foot{border-color:#17112833;color:inherit}
+.arcade-lobby .game-card-foot b{padding:9px 12px;background:#171128;color:#fff;border-radius:6px;letter-spacing:.5px}
+.arcade-lobby .game-card-art{animation:arcade-art 6s ease-in-out infinite;animation-delay:calc(var(--order)*-.6s)}
+.arcade-lobby .game-card:focus-visible,.arcade-effects:focus-visible{outline:3px solid #6e42c4;outline-offset:5px}
+.arcade-lobby .game-tables-section{border:2px solid var(--line);border-radius:20px;padding:25px;background:var(--surface-soft)}
+.arcade-lobby .game-section-title h2{font-family:'Arial Black',system-ui,sans-serif;font-weight:850;letter-spacing:-1px}
+.arcade-lobby .game-table{border:1px solid var(--line);box-shadow:3px 3px 0 var(--line)}
+.games-page.arcade-room .game-room-title h1{font-family:'Arial Black',system-ui,sans-serif;font-weight:900;letter-spacing:-1px}
+.arcade-room .game-arena{border:2px solid var(--line);box-shadow:5px 5px 0 var(--accent-soft)}
+.arcade-room .game-turn-banner{background:#171128;color:#dbff75;border-radius:10px;font-weight:750}
+.arcade-room .game-versus{font:bold 23px system-ui;color:var(--accent-readable)}
+.arcade-room .game-player.is-turn{outline:2px solid var(--accent);outline-offset:2px}
+.arcade-room .game-result{background:#dbff75;color:#171128}
+.games-page.arcade-still,.games-page.arcade-still *,.games-page.arcade-still *::before,.games-page.arcade-still *::after{animation-play-state:paused!important;transition:none!important}
+@keyframes arcade-neon{0%,100%{text-shadow:3px 3px 0 #6c4fbb,0 0 6px #dbff7520}50%{text-shadow:3px 3px 0 #6c4fbb,0 0 24px #dbff7550}}
+@keyframes arcade-sticker{0%,100%{transform:rotate(-7deg) translateY(0)}50%{transform:rotate(-3deg) translateY(-7px)}}
+@keyframes arcade-sweep{0%,20%{transform:translateX(-100%)}65%,100%{transform:translateX(100%)}}
+@keyframes arcade-marquee{to{transform:translateX(-50%)}}
+@keyframes arcade-art{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-5px) rotate(2deg)}}
+@media(hover:hover){.arcade-lobby .game-card:hover{transform:translate(-2px,-6px) rotate(-.6deg);box-shadow:8px 11px 0 #171128}.arcade-lobby .game-card:hover .game-card-foot b{background:#fff;color:#171128}}
+@media(max-width:760px){.arcade-lobby .games-hero{padding:25px 22px;border-radius:18px}.arcade-topline{font-size:10px;letter-spacing:.6px}.arcade-effects{font-size:10px;padding:9px 11px}.games-page.arcade-lobby .games-hero h1{font-size:clamp(40px,9vw,62px)}.arcade-lobby .games-hero-art{min-height:265px}.arcade-lobby .game-card{padding:16px;box-shadow:3px 3px 0 #171128}.arcade-lobby .game-card-title{font-size:25px}.arcade-lobby .game-card-foot b{font-size:10px}.arcade-lobby .game-tables-section{padding:18px}.arcade-ticker span{padding:12px 20px;font-size:11px}}
+@media(prefers-reduced-motion:reduce){.games-page *::before,.games-page *::after{animation:none!important;transition:none!important}.arcade-lobby .game-card:hover{transform:none}.arcade-lobby .hero-game-note{animation:none}.arcade-ticker>div{animation:none}}
+
+.games-page.arcade-still,.arcade-still .game-card{animation:none!important}
+.arcade-still .game-card:hover{transform:none!important}
