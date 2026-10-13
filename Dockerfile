@@ -6,7 +6,7 @@ RUN corepack enable && corepack prepare pnpm@11.9.0 --activate && pnpm install -
 COPY server.mjs ./
 COPY campus.mjs calendar.mjs ./
 COPY clubs.mjs ./
-COPY messaging.mjs profiles.mjs watch.mjs community.mjs voice-calls.mjs ./
+COPY messaging.mjs profiles.mjs watch.mjs community.mjs voice-calls.mjs translation.mjs ./
 COPY games.mjs game-engine.mjs ./
 COPY photo-gallery.mjs ./
 COPY database.mjs poster-store.mjs public-assets.mjs initialize-database.mjs observability.mjs ./
