@@ -99,3 +99,8 @@ it('verifies private audio/video signalling, ordered negotiation, microphone/cam
   const video = await promisify(execFile)(process.execPath, ['scripts/voice-audio.e2e.mjs', '--video'], { timeout: 20000 });
   expect(video.stdout).toContain('Both real WebRTC peers received decoded synthetic video and audio.');
 }, 50000);
+
+it('localises five interfaces and enforces private message translation permission and redaction', async () => {
+  const result = await promisify(execFile)(process.execPath, ['--test', '--test-reporter=tap', 'scripts/localisation.test.mjs', 'scripts/translation.integration.mjs'], { timeout: 25000 });
+  expect(result.stdout).toContain('# fail 0');
+}, 30000);

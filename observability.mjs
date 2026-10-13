@@ -5,7 +5,7 @@ import {performance} from 'node:perf_hooks';
 
 const uuid=/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i;
 const operations={GET:'read',HEAD:'read',POST:'submit',PATCH:'edit',PUT:'edit',DELETE:'remove'};
-const domains=new Set(['auth','drafts','posters','messages','users','profile','profiles','watch','games','community','chat','saved','clubs','universities']);
+const domains=new Set(['auth','drafts','posters','messages','users','profile','profiles','watch','games','community','chat','saved','clubs','universities','translate']);
 const steps=new Set(['me','login','logout','register','campus','avatar','fields','canvas','publish','unpublish','collaborators','image','comments','save','calendar','qr','search','conversations','messages','read','from-poster','rooms','move','rematch','join','leave','close','source','playback','chat','signal','accept','decline','cancel','mute','hangup','device','claim','friends','groups','teams','events','bookings','notifications','interests','feed','map','settings','check-in','members','invite','requests','notes','screenings','results','status','calls']);
 const pages=new Set(['login','choose-campus','watch','community','messages','games','saved','my-posters','studio','people','readme']);
 const campuses=new Set(['anu','usyd','unsw','unimelb','monash','uq','uwa','adelaide']);

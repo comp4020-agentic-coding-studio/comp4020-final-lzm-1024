@@ -1,3 +1,4 @@
+import {createTranslator,sourceLanguages} from './translation.mjs';
 import {performance} from 'node:perf_hooks';
 import {createActionLogger,createLogSink,loadLogKey} from './observability.mjs';
 import {createVoiceCalls} from './voice-calls.mjs';
@@ -179,6 +180,19 @@ const profiles=createProfiles({get,all,run,body,json,authenticated:campusAccount
 const watch=createWatch({db,get,all,run,id,now,fail,string,campusAccount,body,json,sockets,send,validSocket});
 community=createCommunity({db,get,all,run,id,now,fail,string,campusAccount,campusAccess,body,json,sockets,send,validSocket,watch,posters});
 const voiceCalls=createVoiceCalls({get,all,run,id,now,fail,body,json,campusAccount,sockets,send,validSocket,sessionHash:req=>hash(token(req))});
+const translateMessage=createTranslator();
+function translationMessage(input,u){
+  const messageId=string(input.messageId,100,'Message');
+  let row;
+  if(input.channel==='public')row=get('SELECT body FROM chat_messages WHERE id=? AND universityId=?',messageId,u.universityId);
+  else if(input.channel==='private')row=get('SELECT m.body FROM private_messages m JOIN conversations c ON c.id=m.conversationId JOIN users a ON a.id=c.user1 JOIN users b ON b.id=c.user2 WHERE m.id=? AND (c.user1=? OR c.user2=?) AND a.universityId=? AND b.universityId=?',messageId,u.id,u.id,u.universityId,u.universityId);
+  else if(input.channel==='group')row=get('SELECT m.body FROM group_messages m JOIN group_members gm ON gm.groupId=m.groupId JOIN campus_groups g ON g.id=m.groupId WHERE m.id=? AND gm.userId=? AND g.universityId=?',messageId,u.id,u.universityId);
+  else if(input.channel==='watch'){
+    const message=get('SELECT body,roomId FROM watch_messages WHERE id=?',messageId);
+    if(message){watch.access(watch.room(message.roomId),u,true);row=message;}
+  }else fail(400,'Choose a message channel.');
+  return row||fail(404,'Message not found.');
+}
 const publicAssets=createPublicAssets();
 const server=createServer(async(req,res)=>{
   observation.http(req,res);
@@ -189,6 +203,16 @@ const server=createServer(async(req,res)=>{
     if(/^\/watch(?:\/[a-f0-9-]{36})?$/.test(path))res.setHeader('content-security-policy',"default-src 'self'; script-src 'self' https://www.youtube.com https://s.ytimg.com; style-src 'self' 'unsafe-inline'; img-src 'self' https: data: blob:; media-src 'self' https: blob:; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self' https:; worker-src 'self' blob:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'");
     if(method!=='GET'&&method!=='HEAD')sameOrigin(req);
     if((method==='GET'||method==='HEAD')&&await publicAssets.serve(req,res,path))return;
+    if(path==='/api/translate'){
+      if(method!=='POST')fail(405,'Method not allowed');
+      const u=campusAccount(req),input=await body(req);
+      if(!sourceLanguages.has(input.source))fail(400,'Choose a source language.');
+      const original=translationMessage(input,u);
+      const result=await translateMessage(original.body,input.source,u.id);
+      const current=campusAccount(req);
+      if(current.id!==u.id||translationMessage(input,current).body!==original.body)fail(403,'Message access changed.');
+      return json(res,200,result);
+    }
     if(path==='/api/calls'||path.startsWith('/api/calls/'))return await voiceCalls.handle(req,res,url);
     if(path.startsWith('/api/community/'))return await community.handle(req,res,url);
     if(path.startsWith('/api/watch/'))return await watch.handle(req,res,url);
