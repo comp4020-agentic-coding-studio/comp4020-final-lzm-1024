@@ -59,7 +59,7 @@
 .arcade-room .game-player.is-turn{outline:2px solid var(--accent);outline-offset:2px}
 .arcade-room .game-result{background:#dbff75;color:#171128}
 .games-page.arcade-still,.games-page.arcade-still *,.games-page.arcade-still *::before,.games-page.arcade-still *::after{animation-play-state:paused!important;transition:none!important}
-@keyframes arcade-neon{0%,100%{text-shadow:3px 3px 0 #6c4fbb,0 0 6px #dbff7520}50%{text-shadow:3px 3px 0 #6c4fbb,0 0 24px #dbff7550}}
+@keyframes arcade-neon{0%,100%{opacity:.86}50%{opacity:1}}
 @keyframes arcade-sticker{0%,100%{transform:rotate(-7deg) translateY(0)}50%{transform:rotate(-3deg) translateY(-7px)}}
 @keyframes arcade-sweep{0%,20%{transform:translateX(-100%)}65%,100%{transform:translateX(100%)}}
 @keyframes arcade-marquee{to{transform:translateX(-50%)}}
@@ -170,3 +170,7 @@
 .games-page.arcade-still *,.games-page.arcade-still *::before,.games-page.arcade-still *::after{animation:none!important}
 @media(prefers-reduced-motion:reduce){.arcade-room *,.arcade-room *::before,.arcade-room *::after{animation:none!important;transition:none!important}}
 @media(max-width:760px){.arcade-room .arena-hud{grid-column:1/-1}.arcade-room .arena-hud-values{grid-template-columns:1fr 1fr}.arcade-room .arena-hud-values p{grid-column:1/-1}}
+
+/* Keep decorative work offscreen and in background tabs dormant. */
+.arcade-offscreen .game-card-art,.arcade-offscreen .hero-game-board,.arcade-offscreen .hero-orbit,.arcade-offscreen .hero-game-note,.arcade-offscreen h1 em,.arcade-offscreen .arena-radar,.arcade-offscreen .arena-demo-game,.arcade-offscreen .arena-orbit-token,.arena-equalizer.arcade-offscreen i,.arcade-hidden *,.arcade-hidden *::before,.arcade-hidden *::after{animation-play-state:paused!important}
+.arcade-offscreen::after{animation-play-state:paused!important}

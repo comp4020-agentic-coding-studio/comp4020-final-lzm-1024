@@ -32,11 +32,11 @@ export function createPublicAssets(root=process.cwd()){
   const page=textAsset(readFileSync(join(root,'public','index.html')),'text/html');
   const readme=textAsset(`<!doctype html><meta charset="utf-8"><title>About CampusWall</title><link rel="stylesheet" href="/styles.css"><main class="readme"><a href="/">← CampusWall</a><pre>${escapeHtml(readFileSync(join(root,'README.md'),'utf8'))}</pre></main>`,'text/html');
   assets.set('/readme',readme);assets.set('/readme/',readme);
-  async function send(req,res,asset,{privatePage=false,photo=false}={}){
+  async function send(req,res,asset,{privatePage=false,photo=false,link}={}){
     const selected=asset.variants?encoding(req.headers['accept-encoding']):null;
     const bytes=asset.variants?.[selected||'identity'];
     const etag=`"${asset.hash}-${selected||'identity'}"`;
-    const headers={'content-type':asset.type,'etag':etag,'cache-control':privatePage?'private, no-cache':photo?'public, max-age=86400':'public, no-cache',...(asset.variants?{vary:privatePage?'Accept-Encoding, Cookie':'Accept-Encoding'}:{}),...(selected?{'content-encoding':selected}:{})};
+    const headers={'content-type':asset.type,'etag':etag,'cache-control':privatePage?'private, no-cache':photo?'public, max-age=86400':'public, no-cache',...(asset.variants?{vary:privatePage?'Accept-Encoding, Cookie':'Accept-Encoding'}:{}),...(selected?{'content-encoding':selected}:{}),...(link?{link}:{})};
     if(matches(req.headers['if-none-match'],etag)){res.writeHead(304,headers);res.end();return;}
     res.writeHead(200,{...headers,'content-length':bytes?.length??asset.bytes});
     if(req.method==='HEAD'){res.end();return;}
@@ -46,6 +46,15 @@ export function createPublicAssets(root=process.cwd()){
   }
   return {
     async serve(req,res,path){const asset=assets.get(path);if(!asset)return false;await send(req,res,asset,{photo:path.startsWith('/demo-photos/')});return true;},
-    sendPage:(req,res)=>send(req,res,page,{privatePage:true})
+    sendPage:(req,res)=>{
+      // Start the public module graph while authentication is still loading.
+      // These hints never contain account data and are sent after campus checks.
+      const modules=['app.js','chat-ui.js','event-utils.js','email-utils.js','chat.js','canvas-model.js','poster-design.js','photo-posters.js','ui-utils.js','motion.js'];
+      const path=new URL(req.url,'http://localhost').pathname;
+      const games=path==='/games'||path.startsWith('/games/');
+      if(games)modules.push('games.js','game-catalog.js');
+      const link=modules.map(name=>`</${name}>; rel=modulepreload`).concat(games?['</games.css>; rel=preload; as=style']:[]).join(', ');
+      return send(req,res,page,{privatePage:true,link});
+    }
   };
 }

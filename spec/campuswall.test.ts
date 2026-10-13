@@ -23,7 +23,7 @@ it('keeps motion feedback balanced across failures, concurrent requests and redu
 }, 15000);
 
 it('verifies bounded query reuse, single-query lists, compression and cache permission boundaries', async () => {
-  const result = await promisify(execFile)(process.execPath, ['--test', '--test-reporter=tap', 'scripts/performance.test.mjs', 'scripts/frontend-performance.test.mjs'], { timeout: 20000 });
+  const result = await promisify(execFile)(process.execPath, ['--test', '--test-reporter=tap', 'scripts/performance.test.mjs', 'scripts/frontend-performance.test.mjs', 'scripts/games-ui-performance.test.mjs'], { timeout: 20000 });
   expect(result.stdout).toContain('# fail 0');
 }, 25000);
 

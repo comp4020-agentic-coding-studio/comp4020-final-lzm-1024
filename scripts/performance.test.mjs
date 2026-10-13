@@ -128,6 +128,16 @@ test('compression and conditional static requests preserve account boundaries',{
       const own=await request('/anu',{'accept-encoding':'br',cookie});assert.match(own.headers.get('cache-control'),/private/);assert.match(own.headers.get('vary'),/Cookie/);await own.arrayBuffer();
       const forbidden=await request('/api/posters?university=usyd',{cookie,'if-none-match':validator});assert.equal(forbidden.status,403);assert.equal(forbidden.headers.get('cache-control'),'no-store');await forbidden.arrayBuffer();
     });
+    await t.test('page hints start only public startup modules and route-specific game assets',async()=>{
+      const home=await request('/anu'),game=await request('/games');
+      const homeHints=home.headers.get('link'),gameHints=game.headers.get('link');
+      assert.match(homeHints,/<\/app\.js>; rel=modulepreload/);
+      assert.doesNotMatch(homeHints,/games\.(js|css)|voice-calls|api\//);
+      assert.match(gameHints,/<\/games\.js>; rel=modulepreload/);
+      assert.match(gameHints,/<\/games\.css>; rel=preload; as=style/);
+      assert.match(game.headers.get('cache-control'),/private/);
+      assert.equal(await home.text(),await game.text());
+    });
     await t.test('JSON remains uncached and static path traversal is rejected',async()=>{
       for(const path of ['/api/auth/me','/api/posters?university=anu']){const res=await request(path,{'if-none-match':'*'});assert.equal(res.status,200);assert.equal(res.headers.get('cache-control'),'no-store');assert.equal(res.headers.get('etag'),null);await res.arrayBuffer();}
       assert.equal((await request('/demo-photos/%2e%2e%2fserver.mjs')).status,404);
