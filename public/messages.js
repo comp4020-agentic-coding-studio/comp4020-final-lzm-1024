@@ -1,3 +1,4 @@
+import {fileAttachment,mountFileTransfer} from './file-transfer.js';
 import {addMessageTranslation} from './message-translation.js';
 import {startVoiceCall,startVideoCall} from './voice-calls.js';
 import {avatar,refreshAvatars,mountEmoji} from './chat-ui.js';
@@ -7,7 +8,7 @@ const timeText=value=>new Date(value).toLocaleString('en-AU',{timeZone:'Australi
 
 export function mountMessages(root,{user,api,navigate,onAuthExpired,conversationId}){
   let active=true,connected=false,conversations=new Map(),messages=[],peer=null,loaded=false,hasMore=false,sending=false,searchTimer,searchVersion=0,inboxRevision=0,loading=false,opening=false,readThrough=0,newCount=0;
-  let destroyEmoji;
+  let destroyEmoji,fileTransfer;
   const key=`${user.id}:${conversationId||''}`,state=drafts.get(key)||{body:'',clientId:null};drafts.set(key,state);
   root.innerHTML=`<section class="messages-page"><div class="messages-toolbar"><div><span class="eyebrow">A CONVERSATION OF YOUR OWN</span><h1>Messages<span>↗</span></h1><p>Your username: <strong>@${esc(user.username)}</strong></p></div><span class="dm-connection" role="status">Connecting…</span></div><div class="messages-layout" data-open="${!!conversationId}"><aside class="messages-sidebar"><label class="dm-search-label">Find someone<input type="search" class="dm-search" maxlength="50" aria-label="Search usernames" placeholder="Search a username or display name…" autocomplete="off"></label><p class="dm-search-hint">Enter at least 2 characters.</p><div class="dm-search-results" aria-live="polite"></div><div class="dm-list-heading"><h2>Conversations</h2><button type="button" class="dm-refresh" aria-label="Refresh conversations">↻</button></div><div class="dm-conversations"><p class="dm-empty">Loading conversations…</p></div></aside><section class="dm-room" aria-label="Private conversation"><div class="dm-room-content"><div class="dm-welcome"><span aria-hidden="true">✳</span><h2>A little hello goes a long way.</h2><p>Search for someone to start a private conversation.<br>Messages are visible only to the two of you.</p></div></div></section></div><p class="dm-page-error" role="alert"></p></section>`;
   const search=root.querySelector('.dm-search'),results=root.querySelector('.dm-search-results'),list=root.querySelector('.dm-conversations'),room=root.querySelector('.dm-room-content'),pageError=root.querySelector('.dm-page-error');
@@ -36,7 +37,7 @@ export function mountMessages(root,{user,api,navigate,onAuthExpired,conversation
   };
   const log=()=>root.querySelector('.dm-log');
   const atBottom=()=>!log()||log().scrollHeight-log().scrollTop-log().clientHeight<45;
-  function updateButton(){const button=root.querySelector('.dm-send');if(button)button.disabled=!loaded||!connected||sending||!root.querySelector('.dm-input').value.trim();}
+  function updateButton(){fileTransfer?.update();const button=root.querySelector('.dm-send');if(button)button.disabled=!loaded||!connected||sending||!root.querySelector('.dm-input').value.trim();}
   function markRead(){
     if(!active||!loaded||document.hidden||!document.hasFocus()||!atBottom()||!messages.length)return;
     const through=messages.at(-1).seq;if(through<=readThrough)return;const previous=readThrough;readThrough=through;
@@ -48,7 +49,7 @@ export function mountMessages(root,{user,api,navigate,onAuthExpired,conversation
     const first=!loaded,stick=first||atBottom(),oldHeight=log().scrollHeight,oldTop=log().scrollTop,known=new Set(messages.map(m=>m.id));
     const merged=new Map(messages.map(m=>[m.id,m]));for(const m of incoming)merged.set(m.id,m);messages=[...merged.values()].sort((a,b)=>a.seq-b.seq);
     const visible=new Set([...log().querySelectorAll('[data-message]')].map(node=>node.dataset.message));
-    for(const m of messages){if(visible.has(m.id))continue;const article=document.createElement('article');article.className=`dm-message ${m.authorId===user.id?'own':''}`;article.dataset.message=m.id;article.dataset.seq=m.seq;article.innerHTML=`<div>${avatar(m)}<strong>${m.authorId===user.id?'You':esc(m.author)}</strong><time datetime="${esc(m.createdAt)}">${esc(timeText(m.createdAt))}</time></div><p>${esc(m.body)}</p>`;addMessageTranslation(article,{channel:"private",messageId:m.id});const gameLink=/\/games\/([a-f0-9-]{36})(?![a-f0-9-])/.exec(m.body);if(gameLink){const a=document.createElement('a');a.href='/games/'+gameLink[1];a.className='dm-game-invite';a.dataset.nav='';a.textContent='Join game room ↗';article.append(a);}const next=[...log().querySelectorAll('[data-message]')].find(node=>Number(node.dataset.seq)>m.seq);log().insertBefore(article,next||null);}
+    for(const m of messages){if(visible.has(m.id))continue;const article=document.createElement('article');article.className=`dm-message ${m.authorId===user.id?'own':''}`;article.dataset.message=m.id;article.dataset.seq=m.seq;article.innerHTML=`<div>${avatar(m)}<strong>${m.authorId===user.id?'You':esc(m.author)}</strong><time datetime="${esc(m.createdAt)}">${esc(timeText(m.createdAt))}</time></div><p>${esc(m.body)}</p>`;if(m.attachment){article.querySelector(':scope > p').remove();const link=fileAttachment(m.attachment);if(link)article.append(link);}else addMessageTranslation(article,{channel:"private",messageId:m.id});const gameLink=/\/games\/([a-f0-9-]{36})(?![a-f0-9-])/.exec(m.body);if(gameLink){const a=document.createElement('a');a.href='/games/'+gameLink[1];a.className='dm-game-invite';a.dataset.nav='';a.textContent='Join game room ↗';article.append(a);}const next=[...log().querySelectorAll('[data-message]')].find(node=>Number(node.dataset.seq)>m.seq);log().insertBefore(article,next||null);}
     if(messages.length)log().querySelector('.dm-empty')?.remove();else log().querySelector('.dm-empty').textContent='No messages yet. Say hello to start the conversation.';
     loaded=true;root.querySelector('.dm-older').hidden=!hasMore;updateButton();
     if(older)log().scrollTop=oldTop+log().scrollHeight-oldHeight;
@@ -73,6 +74,7 @@ export function mountMessages(root,{user,api,navigate,onAuthExpired,conversation
       try{const data=await request(`/api/messages/conversations/${conversationId}/messages?before=${messages[0].seq}`);if(active){hasMore=data.hasMore;renderMessages(data.messages,{older:true});}}catch(error){roomError(error);}finally{if(active)button.disabled=false;}
     };
     const input=root.querySelector('.dm-input');destroyEmoji=mountEmoji(root.querySelector('.dm-compose'),input);input.oninput=()=>{state.body=input.value;state.clientId=null;root.querySelector('.dm-count').textContent=`${input.value.length}/2000`;updateButton();};
+    fileTransfer=mountFileTransfer(root.querySelector('.dm-compose'),{conversationId,isReady:()=>active&&connected&&loaded,onAuthExpired,onError:roomError,onMessage(data){if(!active)return;root.querySelector('.dm-send-error').textContent='';remember(data.conversation);renderMessages([data.message]);bottom();}});
     input.onkeydown=event=>{if(event.key==='Enter'&&!event.shiftKey&&!event.isComposing&&event.keyCode!==229){event.preventDefault();if(!root.querySelector('.dm-send').disabled)root.querySelector('.dm-compose').requestSubmit();}};
     root.querySelector('.dm-compose').onsubmit=async event=>{
       event.preventDefault();if(sending||!connected||!loaded||!input.value.trim())return;
@@ -93,6 +95,6 @@ export function mountMessages(root,{user,api,navigate,onAuthExpired,conversation
       if(event.type==='inbox:message'||event.type==='inbox:read'){inboxRevision++;remember(event.conversation);if(event.message&&event.conversation.id===conversationId&&peer){if(loaded)renderMessages([event.message]);else messages.push(event.message);}}
     },
     setConnection(value){if(!active)return;connected=value;root.querySelector('.dm-connection').textContent=value?'Connected':'Reconnecting…';root.querySelector('.dm-connection').dataset.connected=String(value);updateButton();},
-    destroy(){active=false;destroyEmoji?.();clearTimeout(searchTimer);document.removeEventListener('visibilitychange',visibility);window.removeEventListener('focus',visibility);}
+    destroy(){active=false;fileTransfer?.destroy();destroyEmoji?.();clearTimeout(searchTimer);document.removeEventListener('visibilitychange',visibility);window.removeEventListener('focus',visibility);}
   };
 }

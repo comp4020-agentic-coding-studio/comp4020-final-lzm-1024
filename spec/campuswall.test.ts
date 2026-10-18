@@ -48,7 +48,7 @@ it('verifies CampusWall product scenarios with two real WebSocket clients and a 
 }, 55000);
 
 it('verifies private inbox identity, isolation, unread messages and restart persistence', async () => {
-  const result = await promisify(execFile)(process.execPath, ['--test', '--test-reporter=tap', 'scripts/messaging.integration.mjs'], { timeout: 50000 });
+  const result = await promisify(execFile)(process.execPath, ['--test', '--test-reporter=tap', 'scripts/messaging.integration.mjs', 'scripts/message-files.integration.mjs', 'scripts/file-transfer.test.mjs'], { timeout: 50000 });
   expect(result.stdout).toContain('# fail 0');
 }, 55000);
 

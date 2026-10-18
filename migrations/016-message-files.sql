@@ -1,0 +1,10 @@
+BEGIN;
+CREATE TABLE message_files (
+  id TEXT PRIMARY KEY,
+  messageId TEXT NOT NULL UNIQUE REFERENCES private_messages(id) ON DELETE CASCADE,
+  name TEXT NOT NULL,
+  bytes INTEGER NOT NULL CHECK(bytes BETWEEN 1 AND 10485760),
+  digest TEXT NOT NULL
+);
+PRAGMA user_version=16;
+COMMIT;

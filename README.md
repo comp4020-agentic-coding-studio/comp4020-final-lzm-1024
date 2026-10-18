@@ -18,7 +18,7 @@ The limit of this analogy matters. A shared campus service needs authentication 
 
 Friends can edit an invited private whiteboard together, while only its owner publishes a snapshot to the wall. Seeing another person's pointer is useful; knowing which version is saved is essential. The server accepts validated operations, persists them, and then broadcasts the result. Reconnection restores accepted state. Undo checks for intervening edits rather than silently erasing a collaborator's contribution.
 
-Private conversations, groups and audio/video calls follow explicit membership boundaries. A room link alone grants no private access. Calls request microphone access, plus a camera for video calls, only when someone calls or answers. Ending a call stops capture. Watch-room hosts control shared playback while viewers retain local sound controls.
+Private conversations, file transfers, groups and audio/video calls follow explicit membership boundaries. A room link alone grants no private access. Calls request microphone access, plus a camera for video calls, only when someone calls or answers. Ending a call stops capture. Watch-room hosts control shared playback while viewers retain local sound controls.
 
 ## Evidence and remaining judgement
 

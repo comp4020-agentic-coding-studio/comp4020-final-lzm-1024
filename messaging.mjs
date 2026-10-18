@@ -1,3 +1,4 @@
+import {createMessageFiles} from './message-files.mjs';
 // One account inbox, with every HTTP operation and broadcast checked separately.
 export function generatedUsername(name,userId,get){
   const stem=name.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase().replace(/[^a-z0-9]+/g,'_').replace(/^_|_$/g,'').slice(0,12)||'student';
@@ -6,12 +7,15 @@ export function generatedUsername(name,userId,get){
   return value;
 }
 
-export function createMessaging({db,get,all,run,id,now,fail,string,authenticated,body,json,sockets,send,validSocket,campusAccess,notify=()=>{}}){
-  const select='SELECT m.seq,m.id,m.conversationId,m.authorId,m.body,m.createdAt,u.name author,u.username,u.avatarId FROM private_messages m JOIN users u ON u.id=m.authorId';
+export function createMessaging({dataDir,db,get,all,run,id,now,fail,string,authenticated,body,json,sockets,send,validSocket,campusAccess,notify=()=>{}}){
+  const select='SELECT m.seq,m.id,m.conversationId,m.authorId,m.body,m.createdAt,u.name author,u.username,u.avatarId,f.id attachmentId,f.name attachmentName,f.bytes attachmentBytes FROM private_messages m JOIN users u ON u.id=m.authorId LEFT JOIN message_files f ON f.messageId=m.id';
+  function fileMember(conversationId,u){return get('SELECT c.* FROM conversations c JOIN users a ON a.id=c.user1 JOIN users b ON b.id=c.user2 WHERE c.id=? AND (c.user1=? OR c.user2=?) AND a.universityId=? AND b.universityId=?',conversationId,u.id,u.id,u.universityId,u.universityId)||fail(404,'Conversation not found');}
   function member(conversationId,u){return get('SELECT * FROM conversations WHERE id=? AND (user1=? OR user2=?)',conversationId,u.id,u.id)||fail(404,'Conversation not found');}
+  function messageView(row){if(!row)return null;const {attachmentId,attachmentName,attachmentBytes,...message}=row;return {...message,...(attachmentId?{attachment:{id:attachmentId,name:attachmentName,bytes:attachmentBytes}}:{})};}
+  const files=createMessageFiles({dataDir,get,all,id,fail,authenticated,member:fileMember,publish:publishFile});
   function view(c,u){
     const peer=get('SELECT id,name,username,avatarId FROM users WHERE id=?',c.user1===u.id?c.user2:c.user1);
-    const lastMessage=get(`${select} WHERE m.conversationId=? ORDER BY m.seq DESC LIMIT 1`,c.id)||null;
+    const lastMessage=messageView(get(`${select} WHERE m.conversationId=? ORDER BY m.seq DESC LIMIT 1`,c.id));
     const read=c.user1===u.id?c.read1:c.read2;
     const unread=get('SELECT COUNT(*) n FROM private_messages WHERE conversationId=? AND seq>? AND authorId<>?',c.id,read,u.id).n;
     return {id:c.id,peer,lastMessage,unread,updatedAt:c.updatedAt,version:c.version};
@@ -51,6 +55,10 @@ export function createMessaging({db,get,all,run,id,now,fail,string,authenticated
         const input=await body(req);authenticated(req);return json(res,200,{conversation:startConversation(u,string(input.userId,36,'User'))});
       }
     }
+    const download=path.match(/^\/api\/messages\/files\/([a-f0-9-]{36})$/);
+    if(download&&method==='GET')return files.download(req,res,download[1],u);
+    const upload=path.match(/^\/api\/messages\/conversations\/([a-f0-9-]{36})\/files$/);
+    if(upload&&method==='POST'){const result=await files.upload(req,res,upload[1],u);return json(res,result.duplicate?200:201,{message:result.message,conversation:result.conversation});}
     const match=path.match(/^\/api\/messages\/conversations\/([a-f0-9-]{36})(?:\/(messages|read))?$/);
     if(match){
       const conversationId=match[1],action=match[2];let c=member(conversationId,u);
@@ -58,17 +66,17 @@ export function createMessaging({db,get,all,run,id,now,fail,string,authenticated
       if(action==='messages'&&method==='GET'){
         const before=url.searchParams.get('before'),after=url.searchParams.get('after');if(before!==null&&after!==null)fail(400,'Choose one message cursor');
         const value=before??after,rows=all(`${select} WHERE m.conversationId=?${value===null?'':` AND m.seq${after===null?'<':'>'}?`} ORDER BY m.seq ${after===null?'DESC':'ASC'} LIMIT 51`,conversationId,...(value===null?[]:[cursor(value)]));
-        const hasMore=rows.length>50,window=rows.slice(0,50);return json(res,200,{messages:after===null?window.reverse():window,hasMore});
+        const hasMore=rows.length>50,window=rows.slice(0,50);return json(res,200,{messages:(after===null?window.reverse():window).map(messageView),hasMore});
       }
       if(action==='messages'&&method==='POST'){
         const input=await body(req);authenticated(req);c=member(conversationId,u);const text=string(input.body,2000,'Message');if(!text)fail(400,'Write a message first');
         if(typeof input.clientId!=='string'||!/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/.test(input.clientId))fail(400,'Invalid message request');
         const previous=get('SELECT * FROM private_messages WHERE authorId=? AND clientId=?',u.id,input.clientId);
-        if(previous){if(previous.body!==text||previous.conversationId!==conversationId)fail(409,'This request already sent a different message');return json(res,200,{message:get(`${select} WHERE m.id=?`,previous.id),conversation:view(c,u)});}
+        if(previous){if(previous.body!==text||previous.conversationId!==conversationId||get('SELECT 1 FROM message_files WHERE messageId=?',previous.id))fail(409,'This request already sent a different message');return json(res,200,{message:messageView(get(`${select} WHERE m.id=?`,previous.id)),conversation:view(c,u)});}
         if(get('SELECT COUNT(*) n FROM private_messages WHERE authorId=? AND createdAt>?',u.id,new Date(Date.now()-60000).toISOString()).n>=30){res.setHeader('retry-after','60');fail(429,'You’re sending messages quickly. Please wait a minute.');}
         const messageId=id(),time=now();
         db.exec('BEGIN');try{run('INSERT INTO private_messages (id,conversationId,authorId,clientId,body,createdAt) VALUES (?,?,?,?,?,?)',messageId,conversationId,u.id,input.clientId,text,time);run('UPDATE conversations SET updatedAt=?,version=version+1 WHERE id=?',time,conversationId);db.exec('COMMIT');}catch(error){db.exec('ROLLBACK');throw error;}
-        notify(c.user1===u.id?c.user2:c.user1,'message',u.name+' sent you a private message','/messages?conversation='+c.id,'dm:'+messageId);c=member(conversationId,u);const message=get(`${select} WHERE m.id=?`,messageId);broadcast(c,message);return json(res,201,{message,conversation:view(c,u)});
+        notify(c.user1===u.id?c.user2:c.user1,'message',u.name+' sent you a private message','/messages?conversation='+c.id,'dm:'+messageId);c=member(conversationId,u);const message=messageView(get(`${select} WHERE m.id=?`,messageId));broadcast(c,message);return json(res,201,{message,conversation:view(c,u)});
       }
       if(action==='read'&&method==='POST'){
         const input=await body(req);authenticated(req);c=member(conversationId,u);const through=input.throughSeq;
@@ -78,12 +86,24 @@ export function createMessaging({db,get,all,run,id,now,fail,string,authenticated
     }
     fail(405,'This messaging operation is not available');
   }
+  function publishFile(u,conversationId,file){
+    let c=fileMember(conversationId,u);const previous=get('SELECT m.*,f.name,f.bytes,f.digest FROM private_messages m LEFT JOIN message_files f ON f.messageId=m.id WHERE m.authorId=? AND m.clientId=?',u.id,file.clientId);
+    if(previous){if(previous.conversationId!==conversationId||previous.name!==file.name||previous.bytes!==file.bytes||previous.digest!==file.digest)fail(409,'This request already sent a different file');return {duplicate:true,message:messageView(get(`${select} WHERE m.id=?`,previous.id)),conversation:view(c,u)};}
+    if(get('SELECT COUNT(*) n FROM private_messages WHERE authorId=? AND createdAt>?',u.id,new Date(Date.now()-60000).toISOString()).n>=30)fail(429,'Please wait before sending another file');
+    const messageId=id(),time=now();db.exec('BEGIN');try{
+      run('INSERT INTO private_messages (id,conversationId,authorId,clientId,body,createdAt) VALUES (?,?,?,?,?,?)',messageId,conversationId,u.id,file.clientId,'Shared a file',time);
+      run('INSERT INTO message_files VALUES (?,?,?,?,?)',file.id,messageId,file.name,file.bytes,file.digest);
+      run('UPDATE conversations SET updatedAt=?,version=version+1 WHERE id=?',time,conversationId);db.exec('COMMIT');
+    }catch(error){db.exec('ROLLBACK');throw error;}
+    c=member(conversationId,u);const message=messageView(get(`${select} WHERE m.id=?`,messageId));
+    return {duplicate:false,message,conversation:view(c,u),deliver(){broadcast(c,message);notify(c.user1===u.id?c.user2:c.user1,'message',u.name+' shared a file','/messages?conversation='+c.id,'dm:'+messageId);}};
+  }
   function inviteGame(u,peerId,roomId,gameName){
     if(get('SELECT 1 FROM private_messages WHERE authorId=? AND clientId=?',u.id,roomId))return null;
     const cView=startConversation(u,peerId),c=member(cView.id,u);
     if(get('SELECT COUNT(*) n FROM private_messages WHERE authorId=? AND createdAt>?',u.id,new Date(Date.now()-60000).toISOString()).n>=30)fail(429,'Please wait before sending another invitation');
     const messageId=id(),time=now();run('INSERT INTO private_messages (id,conversationId,authorId,clientId,body,createdAt) VALUES (?,?,?,?,?,?)',messageId,c.id,u.id,roomId,`Let’s play ${gameName}! Join my campus game room: /games/${roomId}`,time);run('UPDATE conversations SET updatedAt=?,version=version+1 WHERE id=?',time,c.id);
-    return ()=>broadcast(member(c.id,u),get(`${select} WHERE m.id=?`,messageId));
+    return ()=>broadcast(member(c.id,u),messageView(get(`${select} WHERE m.id=?`,messageId)));
   }
   return {handle,list,inviteGame};
 }

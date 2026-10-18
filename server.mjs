@@ -88,7 +88,7 @@ const chatSelect='SELECT c.seq,c.id,c.body,c.createdAt,c.universityId,u.id autho
 function chatHistory(universityId) {return all(`${chatSelect} WHERE c.universityId=? ORDER BY c.seq DESC LIMIT 100`,universityId).reverse();}
 function broadcastChat(message) {for(const ws of sockets)if(ws.chat&&ws.chatCampus===message.universityId){if(ws.user&&!validSocket(ws)){ws.close(4001,'Session expired');continue;}send(ws,'chat:message',{message});}}
 let community;
-const messaging=createMessaging({db,get,all,run,id,now,fail,string,authenticated:campusAccount,body,json,sockets,send,validSocket,campusAccess,notify:(...args)=>community?.notify(...args)});
+const messaging=createMessaging({dataDir,db,get,all,run,id,now,fail,string,authenticated:campusAccount,body,json,sockets,send,validSocket,campusAccess,notify:(...args)=>community?.notify(...args)});
 const games=createGames({db,get,all,run,id,now,fail,string,campusAccount,body,json,sockets,send,validSocket,messaging,recordGame:(...args)=>community?.recordGame(...args)});
 function update(p,u,input) {
   editor(p,u);
