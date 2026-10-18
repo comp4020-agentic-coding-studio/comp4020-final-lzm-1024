@@ -122,3 +122,20 @@ test('HLS uses a worker and bounded buffers; known live playlists avoid VOD cloc
   instance.events.level(null,{details:{live:false}});assert.equal(player.live,false);
  }finally{player?.destroy();Object.assign(globalThis,previous);dom.window.close();}
 });
+
+
+test('a viewer recovering from buffering can rebuild its buffer before drift correction, while host seeks remain immediate',async()=>{
+ const f=await fixture({host:false});try{
+  f.publish({playing:true,position:20,anchorAt:Date.now()});await f.flush();
+  f.provider.emit(3);await f.advance(12);const seeks=f.provider.seeks.length;
+  f.provider.emit(1);await f.advance(1);
+  assert.equal(f.provider.seeks.length,seeks,'Do not seek immediately after buffering resumes');
+  for(let i=0;i<6;i++)await f.advance();
+  assert.equal(f.provider.seeks.length,seeks,'Allow a stable recovery window');
+  await f.advance(1);assert.equal(f.provider.seeks.length,seeks+1,'Correct persistent drift after recovery');
+  f.provider.emit(3);await f.advance(3);f.provider.emit(1);
+  f.publish({position:100,anchorAt:Date.now()});await f.flush();
+  assert.equal(f.provider.seeks.at(-1),100,'An explicit host jump still takes effect during recovery');
+  assert.equal(f.requests.length,0,'A recovering viewer never publishes room controls');
+ }finally{f.destroy();}
+});
