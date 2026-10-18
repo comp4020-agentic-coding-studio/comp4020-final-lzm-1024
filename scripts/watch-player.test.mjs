@@ -139,3 +139,13 @@ test('a viewer recovering from buffering can rebuild its buffer before drift cor
   assert.equal(f.requests.length,0,'A recovering viewer never publishes room controls');
  }finally{f.destroy();}
 });
+
+
+test('a native host pause during a slow play acknowledgement is retained instead of being overwritten',async()=>{
+ const f=await fixture();try{
+  f.hold();f.provider.emit(1);await f.flush();f.provider.emit(2);await f.flush();
+  assert.equal(f.provider.state,2);await f.release();
+  assert.equal(f.room.playing,false,'The latest host interaction must win after the earlier acknowledgement');
+  assert.equal(f.provider.state,2);assert.deepEqual(f.requests.map(r=>r.action),['play','pause']);
+ }finally{f.destroy();}
+});
