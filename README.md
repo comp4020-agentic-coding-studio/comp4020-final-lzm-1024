@@ -30,4 +30,4 @@ The current service deliberately avoids advertising, fabricated user activity an
 
 The interface offers English, Simplified Chinese, Spanish, French and Japanese, with a browser-saved language preference. Signed-in readers can explicitly translate individual campus, private, group or watch messages into English through MyMemory. Original messages remain unchanged; translation rechecks message permissions and does not store translated text.
 
-The appearance menu offers Light mode, Dark mode and Follow system. It remembers the choice in this browser and follows system changes when selected. Night colours affect the interface, while poster artwork and drawing surfaces keep their original colours.
+Appearance offers Light mode, Dark mode and Follow system, remembers your browser preference, and preserves the original colours of posters and drawings.
