@@ -101,6 +101,6 @@ it('verifies private audio/video signalling, ordered negotiation, microphone/cam
 }, 50000);
 
 it('localises five interfaces and enforces private message translation permission and redaction', async () => {
-  const result = await promisify(execFile)(process.execPath, ['--test', '--test-reporter=tap', 'scripts/localisation.test.mjs', 'scripts/translation.integration.mjs'], { timeout: 25000 });
+  const result = await promisify(execFile)(process.execPath, ['--test', '--test-reporter=tap', 'scripts/localisation.test.mjs', 'scripts/appearance.test.mjs', 'scripts/translation.integration.mjs'], { timeout: 25000 });
   expect(result.stdout).toContain('# fail 0');
 }, 30000);

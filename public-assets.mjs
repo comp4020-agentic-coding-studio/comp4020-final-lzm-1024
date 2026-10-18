@@ -7,7 +7,7 @@ import {campusDetails} from './campus.mjs';
 import {gallery} from './photo-gallery.mjs';
 import {escapeHtml} from './public/ui-utils.js';
 
-const textFiles=['i18n.js','message-translation.js','locales/zh-CN.js','locales/es.js','locales/fr.js','locales/ja.js','voice-calls.js','voice-transport.js','typography.css','community.js','community.css','watch.js','watch-player.js','watch-share.js','watch-model.js','watch.css','profile.js','profile.css','chat-ui.js','app.js','chat.js','messages.js','games.js','game-catalog.js','event-utils.js','email-utils.js','ui-utils.js','motion.js','photo-posters.js','styles.css','games.css','motion.css','photo-posters.css','poster-design.js','designer.js','poster-design.css','designer.css','canvas-model.js','whiteboard.js','whiteboard.css'];
+const textFiles=['appearance.js','appearance.css','theme-init.js','i18n.js','message-translation.js','locales/zh-CN.js','locales/es.js','locales/fr.js','locales/ja.js','voice-calls.js','voice-transport.js','typography.css','community.js','community.css','watch.js','watch-player.js','watch-share.js','watch-model.js','watch.css','profile.js','profile.css','chat-ui.js','app.js','chat.js','messages.js','games.js','game-catalog.js','event-utils.js','email-utils.js','ui-utils.js','motion.js','photo-posters.js','styles.css','games.css','motion.css','photo-posters.css','poster-design.js','designer.js','poster-design.css','designer.css','canvas-model.js','whiteboard.js','whiteboard.css'];
 function encoding(header=''){
   const accepted=new Map(header.split(',').map(value=>{const [name,...options]=value.trim().split(';'),quality=options.find(v=>v.trim().startsWith('q='));return [name.toLowerCase(),quality?Number(quality.trim().slice(2)):1];}));
   const quality=name=>accepted.get(name)??accepted.get('*')??0,br=quality('br'),gzip=quality('gzip');
@@ -30,7 +30,7 @@ export function createPublicAssets(root=process.cwd()){
     assets.set(path,{file,type:path.endsWith('.svg')?'image/svg+xml':path.endsWith('.png')?'image/png':'image/webp',bytes:statSync(file).size,hash:createHash('sha256').update(readFileSync(file)).digest('hex')});
   }
   const page=textAsset(readFileSync(join(root,'public','index.html')),'text/html');
-  const readme=textAsset(`<!doctype html><meta charset="utf-8"><title>About CampusWall</title><link rel="stylesheet" href="/styles.css"><main class="readme"><a href="/">← CampusWall</a><pre>${escapeHtml(readFileSync(join(root,'README.md'),'utf8'))}</pre></main>`,'text/html');
+  const readme=textAsset(`<!doctype html><meta charset="utf-8"><meta name="theme-color" content="#f7f6f2"><title>About CampusWall</title><script src="/theme-init.js"></script><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/appearance.css"><main class="readme"><a href="/">← CampusWall</a><pre>${escapeHtml(readFileSync(join(root,'README.md'),'utf8'))}</pre></main>`,'text/html');
   assets.set('/readme',readme);assets.set('/readme/',readme);
   async function send(req,res,asset,{privatePage=false,photo=false,link}={}){
     const selected=asset.variants?encoding(req.headers['accept-encoding']):null;
@@ -49,7 +49,7 @@ export function createPublicAssets(root=process.cwd()){
     sendPage:(req,res)=>{
       // Start the public module graph while authentication is still loading.
       // These hints never contain account data and are sent after campus checks.
-      const modules=['app.js','chat-ui.js','event-utils.js','email-utils.js','chat.js','canvas-model.js','poster-design.js','photo-posters.js','ui-utils.js','motion.js','i18n.js','message-translation.js'];
+      const modules=['appearance.js','app.js','chat-ui.js','event-utils.js','email-utils.js','chat.js','canvas-model.js','poster-design.js','photo-posters.js','ui-utils.js','motion.js','i18n.js','message-translation.js'];
       const path=new URL(req.url,'http://localhost').pathname;
       const games=path==='/games'||path.startsWith('/games/');
       if(games)modules.push('games.js','game-catalog.js');

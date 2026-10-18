@@ -29,3 +29,5 @@ Whether students feel welcome, understand invitations, or find worthwhile compan
 The current service deliberately avoids advertising, fabricated user activity and verified-university claims. Email verification, password recovery, moderation tools and end-to-end message encryption remain absent. Private calls can fail on restricted networks without a configured TURN relay; video availability depends on its provider. These limits keep the promises proportionate to what a small, persistent course deployment actually supports.
 
 The interface offers English, Simplified Chinese, Spanish, French and Japanese, with a browser-saved language preference. Signed-in readers can explicitly translate individual campus, private, group or watch messages into English through MyMemory. Original messages remain unchanged; translation rechecks message permissions and does not store translated text.
+
+The appearance menu offers Light mode, Dark mode and Follow system. It remembers the choice in this browser and follows system changes when selected. Night colours affect the interface, while poster artwork and drawing surfaces keep their original colours.

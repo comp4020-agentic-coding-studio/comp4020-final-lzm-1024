@@ -1,5 +1,9 @@
 // Static interface catalogue. User-authored content is not translated.
 export default {
+  "Appearance": "Apparence",
+  "Follow system": "Suivre le syst\u00e8me",
+  "Light mode": "Mode clair",
+  "Dark mode": "Mode sombre",
   "Language": "Langue",
   "Interface language": "Langue de l\u2019interface",
   "Campus life": "Vie de campus",

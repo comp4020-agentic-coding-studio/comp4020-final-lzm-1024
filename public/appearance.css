@@ -1,0 +1,35 @@
+/* Interface colours only: poster artwork, photos, boards and drawing canvases
+   retain their original colours so a published design never changes at night. */
+:root{color-scheme:light}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#14181d;--surface:#1c2229;--surface-soft:#232b34;
+  --ink:#edf0f4;--muted:#afb8c5;--line:#3c4653;
+  --accent:#e6b95f;--accent-readable:#f0c978;--accent-soft:#302a20;
+  --green:var(--accent-readable);--yellow:#e8eb95;
+  --primary:var(--accent);--primary-text:#14181d;--primary-hover:#f0c978;
+  --header-bg:#101419;--header-text:#edf0f4;--header-line:#3c4653;
+  --hover:#293440;--focus:var(--accent-readable);
+}
+:root[data-theme="dark"][data-campus="usyd"]{--accent:#ff9b82;--accent-readable:#ffb39f;--accent-soft:#362622;--primary-hover:#ffb39f}
+:root[data-theme="dark"][data-campus="unsw"]{--accent:#efda65;--accent-readable:#efda65;--accent-soft:#302d1e;--primary-hover:#f8e890}
+:root[data-theme="dark"][data-campus="unimelb"],:root[data-theme="dark"][data-campus="monash"]{--accent:#89bff6;--accent-readable:#a7d0fc;--accent-soft:#202e3c;--primary-hover:#a7d0fc}
+:root[data-theme="dark"][data-campus="uq"]{--accent:#c7a0ee;--accent-readable:#d7baf4;--accent-soft:#30253c;--primary-hover:#d7baf4}
+:root[data-theme="dark"][data-campus="adelaide"]{--accent:#8bd6ef;--accent-readable:#a2e0f4;--accent-soft:#20333c;--primary-hover:#a2e0f4}
+.appearance-picker{display:inline-flex;align-items:center;gap:5px;border:1px solid currentColor;border-radius:8px;padding:6px 8px;font:12px system-ui;white-space:nowrap;color:inherit}
+.appearance-picker select{background:transparent;color:inherit;border:0;padding:3px;max-width:128px;font:inherit;cursor:pointer}
+.appearance-picker option{background:var(--surface,var(--paper));color:var(--ink)}
+.appearance-picker select:focus-visible{outline:2px solid var(--focus,var(--green));outline-offset:3px}
+:root[data-theme="dark"] :is(.panel,.poster-card,.wall-cta,.university-grid a,.editor-panel,.comment,.chat-panel,.template-option,.messages-layout,.messages-sidebar,.dm-room-heading,.dm-compose,.profile-card){background:var(--surface);border-color:var(--line);color:var(--ink)}
+:root[data-theme="dark"] :is(input:not([type="color"]):not([type="range"]):not([type="checkbox"]):not([type="radio"]),textarea,select){background-color:var(--surface);color:var(--ink);border-color:var(--line)}
+:root[data-theme="dark"] :is(input,textarea)::placeholder{color:var(--muted);opacity:1}
+:root[data-theme="dark"] :is(.search,.section-label #count,.wall-cta,.template-option.selected,.dm-message,.chat-message,.watch-share-panel,.wb-rail,.wb-stage-wrap){background:var(--surface-soft);color:var(--ink);border-color:var(--line)}
+:root[data-theme="dark"] :is(button,.button):hover{background-color:var(--hover)}
+:root[data-theme="dark"] :is(button.primary,.button.primary){background:var(--primary);color:var(--primary-text);border-color:var(--primary)}
+:root[data-theme="dark"] :is(button.primary,.button.primary):hover{background:var(--primary-hover)}
+:root[data-theme="dark"] .hero h1 em{color:var(--ink)}
+:root[data-theme="dark"] :is(.error,.danger){color:#ffaaa2}
+:root[data-theme="dark"] .language-picker option{background:var(--surface);color:var(--ink)}
+:root[data-theme="dark"] .appearance-picker select,:root[data-theme="dark"] .language-picker select{background:transparent;color:inherit}
+:root[data-theme="dark"][data-campus="monash"] .campus-logo,:root[data-theme="dark"][data-campus="adelaide"] .campus-logo{background:#fff;border-radius:5px;padding:4px}
+@media(max-width:760px){.appearance-picker{font-size:11px;padding:4px 6px}.appearance-picker select{max-width:116px}}

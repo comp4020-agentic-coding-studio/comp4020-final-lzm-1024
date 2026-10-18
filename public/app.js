@@ -1,3 +1,4 @@
+import {installAppearance,mountAppearancePicker} from './appearance.js';
 import {installLanguage} from './i18n.js';
 import {avatar} from './chat-ui.js';
 import { campusToday, dayAfter, eventStatus, formatEventDate } from './event-utils.js';
@@ -8,6 +9,7 @@ import {designedPoster,designValue,designFields} from './poster-design.js';
 import { photoPoster } from './photo-posters.js';
 import {escapeHtml as esc,normaliseSearch,loadStylesheet,createSessionMount} from './ui-utils.js';
 import {installMotion,withRequestMotion,motionFetch,closeDialog} from './motion.js';
+installAppearance();
 installMotion();
 installLanguage();
 const mountVoiceCalls=createSessionMount(()=>import('./voice-calls.js').then(module=>module.mountVoiceCalls));
@@ -40,6 +42,7 @@ function header() {
   $('#header nav').insertAdjacentHTML('afterbegin',`<a href="/community" data-nav>Campus life</a><a href="/watch" data-nav>Watch together</a><a href="/messages" data-nav>Messages</a><details class="nav-more"><summary>Explore</summary><div><a href="/games" data-nav>Games</a>${selected?`<a href="/${selected}/clubs" data-nav>Clubs & societies</a>`:''}${me?'<a href="/saved" data-nav>Saved events</a><a href="/my-posters" data-nav>My posters</a>':''}</div></details>`);
   if(me)$('#header nav').insertAdjacentHTML('beforeend','<a href="/community/notifications" id="community-bell" aria-label="Notifications" data-nav>◉<span id="community-unread" hidden></span></a>');
   mountCommunityHeader({user:me,api,onAuthExpired(){me=null;header();toast('Sign in again to view campus updates.');}}).catch(error=>toast(error.message));
+  mountAppearancePicker();
   if($('#campus'))$('#campus').onchange=e=>{if(e.target.value)navigate(`/${e.target.value}${universities.some(u=>location.pathname===`/${u.slug}/clubs`)?'/clubs'+location.search:''}`);};$('#create').onclick=createPoster;
   if($('#profile'))$('#profile').onclick=()=>navigate('/people/'+me.id);
   if($('#logout'))$('#logout').onclick=async()=>{try{await flush();await mountVoiceCalls({user:null,api,toast,navigate});disconnect();await api('/api/auth/logout','POST');me=null;header();await navigate(`/${selected||''}`);}catch(error){toast(error.message);await route();}};

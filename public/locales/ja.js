@@ -1,5 +1,9 @@
 // Static interface catalogue. User-authored content is not translated.
 export default {
+  "Appearance": "\u8868\u793a\u8a2d\u5b9a",
+  "Follow system": "\u30b7\u30b9\u30c6\u30e0\u306b\u5408\u308f\u305b\u308b",
+  "Light mode": "\u30e9\u30a4\u30c8\u30e2\u30fc\u30c9",
+  "Dark mode": "\u30c0\u30fc\u30af\u30e2\u30fc\u30c9",
   "Language": "\u8a00\u8a9e",
   "Interface language": "\u8868\u793a\u8a00\u8a9e",
   "Campus life": "\u30ad\u30e3\u30f3\u30d1\u30b9\u30e9\u30a4\u30d5",
