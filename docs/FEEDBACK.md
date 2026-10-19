@@ -38,4 +38,4 @@ The student separately clarified that the original YouTube site was smooth while
 
 Possible follow-up work is a short optional introduction, clearer entry labels or a few task links such as finding an event, messaging its organiser and inviting a friend. These are proposals, not implemented or validated improvements. A later session should record the exact feature a person tried to find, the route they took, any help needed and whether the task was completed.
 
-Whether the reported session followed the Crit 10 instruments-only procedure is awaiting clarification. Real website use and a narrator explaining actions from logs alone are separate claims. No log-only narration results are invented here.
+The student confirmed that this was normal website use followed by feedback, not the Crit 10 instruments-only procedure. Real website use and a narrator explaining actions from logs alone are separate claims. The required instruments-only session still needs its own record; no log-only narration results are invented here.

@@ -1,6 +1,6 @@
 # CampusWall — how the project was built
 
-> Written with AI assistance and revised on 19 October 2026. This account uses actual code, tests and commits. The student should check that the reasons given here match their own decisions. The student has reported real classmate use; whether it followed the instruments-only procedure is not yet confirmed.
+> Written with AI assistance and revised on 19 October 2026. This account uses actual code, tests and commits. The student should check that the reasons given here match their own decisions. The student confirmed normal classmate use with feedback, rather than an instruments-only session.
 
 ## What the website is for
 
@@ -56,4 +56,4 @@ The latest full local run passed 22 top-level checks. File-transfer CI and deplo
 
 The initial history recorded too much work at once. Later real commits improve the record but cannot recreate missing earlier steps. Personal devices, restrictive call networks and students' understanding still need direct observation.
 
-The reported classmate feedback is now recorded, but the exact session date, participant count and instruments-only procedure are not confirmed. The [demonstration record](docs/CRIT10-DEMO.md) separates those facts. I still need to compare any explanation from logs with actual actions. Automated clients cannot replace this evidence, and classmates have not yet confirmed that the later playback repairs solved their problem.
+The student confirmed that the reported session was normal website use with feedback, not instruments-only narration. Its exact date and participant count were not supplied. The [demonstration record](docs/CRIT10-DEMO.md) separates those facts. I still need to compare any explanation from logs with actual actions. Automated clients cannot replace this evidence, and classmates have not yet confirmed that the later playback repairs solved their problem.

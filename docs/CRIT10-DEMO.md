@@ -1,12 +1,12 @@
 # Crit 10 — instruments-only demonstration
 
-Updated on 19 October 2026. Technical preparation began on 2–3 October and now includes private file transfer. The student has now reported real classmate use and feedback: YouTube stutter and unfamiliar features that required exploration on a first visit. The actual session date, number of participants and use of the instruments-only procedure have not been confirmed. Local rehearsals and automated clients remain separate evidence.
+Updated on 19 October 2026. Technical preparation began on 2–3 October and now includes private file transfer. The student has now reported real classmate use and feedback: YouTube stutter and unfamiliar features that required exploration on a first visit. The student confirmed this was normal website use followed by feedback, not an instruments-only session. Its exact date and participant count were not supplied. Local rehearsals and automated clients remain separate evidence.
 
 ## What has actually been reported
 
 Classmates used the website and identified playback stutter. They also needed to explore because they did not initially know some features. These are reported observations, not measured task success, timings or participant quotations. No exact feature list was supplied. See [the feedback record](FEEDBACK.md) for the distinction between this report and later automated playback fixes.
 
-The record does not yet establish whether the narrator watched the page or explained actions from logs alone. Confirm that detail before marking the instruments-only requirement complete. If a further session is needed, the procedure below can be used.
+The reported feedback session does not complete the instruments-only requirement. Arrange a separate session with two classmates using the procedure below, then record the narration and compare it with their actual actions.
 
 ## Prepare the instruments
 

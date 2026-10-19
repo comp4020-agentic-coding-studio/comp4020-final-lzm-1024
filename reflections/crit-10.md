@@ -1,6 +1,6 @@
 # Crit 10 — working features still need clear starting points
 
-> Updated with AI assistance on 19 October 2026 using the student's reported classmate feedback. The actual session date, participant count and use of the instruments-only procedure have not been confirmed. No participant quotation or log-only narration result is invented.
+> Updated with AI assistance on 19 October 2026 using the student's reported classmate feedback. The student confirmed normal website use with feedback, not an instruments-only session. Its date and participant count were not supplied. No participant quotation or log-only result is invented.
 
 ## What was the breakthrough that moved the work forward?
 
