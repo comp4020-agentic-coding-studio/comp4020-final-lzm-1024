@@ -1,6 +1,6 @@
 # Crit 10 — classmate feedback and instruments-only preparation
 
-Updated on 19 October 2026. Technical preparation began on 2–3 October and now includes private file transfer. The student has now reported real classmate use and feedback: YouTube stutter and unfamiliar features that required exploration on a first visit. The student confirmed this was normal website use followed by feedback, not an instruments-only session. The participants are the student's friends, Tony and Kevin. The session took place on 14 October 2026. Local rehearsals and automated clients remain separate evidence.
+Updated on 19 October 2026. Technical preparation began on 2–3 October and now includes private file transfer. The student has now reported real classmate use and feedback: YouTube stutter and features that became known only after the developer introduced them. The student confirmed this was normal website use followed by feedback, not an instruments-only session. The participants are the student's friends, Tony and Kevin. The session took place on 14 October 2026. Local rehearsals and automated clients remain separate evidence.
 
 ## Confirmed session details
 
@@ -9,17 +9,17 @@ Updated on 19 October 2026. Technical preparation began on 2–3 October and now
 | Session date | 14 October 2026 |
 | Participants | Two friends: Tony and Kevin |
 | Format | Normal website use followed by feedback |
-| Reported issues | YouTube stutter; some features unfamiliar on a first visit |
-| Exact unclear features | Not yet specified |
+| Reported issues | YouTube stutter; some features were not discovered without an introduction |
+| First-use support | I needed to explain some features before the visitors knew they were available |
 | YouTube retest after the fixes | No participant result supplied yet |
 
 ## What has actually been reported
 
 On 14 October 2026, two of my friends, Tony and Kevin, tried CampusWall and gave feedback. This was normal use of the website, rather than a session where I explained their actions from logs alone.
 
-They reported that YouTube playback inside CampusWall could stutter. They also did not immediately know how to find or use some features because it was their first visit. They needed to explore the website before becoming familiar with those features. No exact list of unclear features or task timings was recorded in the information supplied.
+They reported that YouTube playback inside CampusWall could stutter. I needed to introduce some features before they knew those features were available. Because the website offers many functions, a first-time visitor does not necessarily know what to look for. The difficulty was discovering the available features, rather than simply learning a control after finding it. No task timings or success rate were recorded.
 
-This feedback points to two areas for further checking: reliable shared playback and clear starting points for new users. It does not mean every feature was confusing. Clearer labels or a short optional introduction are possible improvements, but they have not yet been tested with Tony and Kevin.
+This feedback points to two areas for further checking: reliable shared playback and clear starting points that reduce the need for a personal introduction. It does not mean every feature failed or that all exploration was unhelpful. Clearer labels or a short optional introduction are possible improvements, but they have not yet been tested with Tony and Kevin.
 
 The playback changes were checked with automated tests and deployed afterwards. No follow-up result from Tony or Kevin has been supplied, so this record does not claim that they confirmed the problem was solved. See [the feedback record](FEEDBACK.md) for the technical evidence.
 

@@ -167,9 +167,9 @@ The real instruments-only classmate demonstration, personal-device call quality 
 
 ### Reported classmate use, update received 19 October 2026
 
-The student identified two friends, Tony and Kevin, who had used the site and reported YouTube stutter, plus unfamiliar features that required exploration on a first visit. This changes the current record: real classmate feedback exists. Earlier entries saying a classmate demonstration had not been reported describe the information available when those entries were written.
+The student identified two friends, Tony and Kevin, who had used the site and reported YouTube stutter. The student clarified that some features became known only after the developer explained that they were available. This changes the current record: real classmate feedback exists. Earlier entries saying a classmate demonstration had not been reported describe the information available when those entries were written.
 
-The student confirmed normal website use followed by feedback, not instruments-only narration. The session took place on 14 October 2026 with two participants, Tony and Kevin. The exact unfamiliar features were not supplied. No completion rate, timing or log-only narration result is claimed. The [feedback record](FEEDBACK.md) and [demonstration record](CRIT10-DEMO.md) separate reported use, proposed usability changes and the separate instruments-only evidence still needing completion. A classmate retest of the later YouTube fixes has not been reported.
+The student confirmed normal website use followed by feedback, not instruments-only narration. The session took place on 14 October 2026 with two participants, Tony and Kevin. The reported usability issue is discovering available features without a personal introduction. No completion rate, timing or log-only narration result is claimed. The [feedback record](FEEDBACK.md) and [demonstration record](CRIT10-DEMO.md) separate reported use, proposed usability changes and the separate instruments-only evidence still needing completion. A classmate retest of the later YouTube fixes has not been reported.
 
 ### Release checks for the earlier local UI fixes, 19 October 2026
 
