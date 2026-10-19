@@ -1,10 +1,16 @@
-# Crit 10 — instruments-only demonstration
+# Crit 10 — classmate feedback and instruments-only preparation
 
-Updated on 19 October 2026. Technical preparation began on 2–3 October and now includes private file transfer. The student has now reported real classmate use and feedback: YouTube stutter and unfamiliar features that required exploration on a first visit. The student confirmed this was normal website use followed by feedback, not an instruments-only session. Its exact date and participant count were not supplied. Local rehearsals and automated clients remain separate evidence.
+Updated on 19 October 2026. Technical preparation began on 2–3 October and now includes private file transfer. The student has now reported real classmate use and feedback: YouTube stutter and unfamiliar features that required exploration on a first visit. The student confirmed this was normal website use followed by feedback, not an instruments-only session. The participants are the student's friends, Tony and Kevin. The exact session date was not supplied. Local rehearsals and automated clients remain separate evidence.
 
 ## What has actually been reported
 
-Classmates used the website and identified playback stutter. They also needed to explore because they did not initially know some features. These are reported observations, not measured task success, timings or participant quotations. No exact feature list was supplied. See [the feedback record](FEEDBACK.md) for the distinction between this report and later automated playback fixes.
+Two of my friends, Tony and Kevin, tried CampusWall and gave feedback. This was normal use of the website, rather than a session where I explained their actions from logs alone.
+
+They reported that YouTube playback inside CampusWall could stutter. They also did not immediately know how to find or use some features because it was their first visit. They needed to explore the website before becoming familiar with those features. No exact list of unclear features or task timings was recorded in the information supplied.
+
+This feedback points to two areas for further checking: reliable shared playback and clear starting points for new users. It does not mean every feature was confusing. Clearer labels or a short optional introduction are possible improvements, but they have not yet been tested with Tony and Kevin.
+
+The playback changes were checked with automated tests and deployed afterwards. No follow-up result from Tony or Kevin has been supplied, so this record does not claim that they confirmed the problem was solved. See [the feedback record](FEEDBACK.md) for the technical evidence.
 
 The reported feedback session does not complete the instruments-only requirement. Arrange a separate session with two classmates using the procedure below, then record the narration and compare it with their actual actions.
 
@@ -20,7 +26,7 @@ No bodies, names, email addresses, cookies, passwords, search queries, raw paths
 
 ## Conduct the real demonstration
 
-1. Ask two classmates to use distinct accounts or isolated browser sessions. Use clearly labelled TEST content. Do not record private message text or microphone audio.
+1. Invite Tony and Kevin to use distinct accounts or isolated browser sessions. In this proposed session, Tony takes participant A and Kevin takes participant B. Use clearly labelled TEST content. Do not record private message text or microphone audio.
 2. Hide the browser from the narrator. Keep only the live log viewer visible.
 3. Participant A creates a draft, edits event fields, invites B and publishes. Narrate action classifications and accepted revisions; do not guess the title or location.
 4. B changes a whiteboard object; A changes another. Match actors and resource pseudonyms. Try a forbidden publishing request with the invited editor and distinguish rejection from success.

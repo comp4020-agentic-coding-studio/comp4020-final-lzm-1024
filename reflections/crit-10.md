@@ -1,12 +1,12 @@
 # Crit 10 — working features still need clear starting points
 
-> Updated with AI assistance on 19 October 2026 using the student's reported classmate feedback. The student confirmed normal website use with feedback, not an instruments-only session. Its date and participant count were not supplied. No participant quotation or log-only result is invented.
+> Updated with AI assistance on 19 October 2026 using the student's reported classmate feedback. The student confirmed normal website use with feedback, not an instruments-only session. The participants were friends Tony and Kevin; the session date was not supplied. No participant quotation or log-only result is invented.
 
 ## What was the breakthrough that moved the work forward?
 
 The useful breakthrough was separating three questions: does a feature work, can somebody find it, and what can the logs prove?
 
-My classmates tried the website and reported YouTube stutter. Some features were unfamiliar during their first visit, so they needed to explore. This feedback matters because a feature being present does not mean its starting point is clear. However, first-time exploration is not automatically a failure. I need to find out which features caused uncertainty and what help would have made a difference.
+My friends Tony and Kevin tried the website and reported YouTube stutter. Some features were unfamiliar during their first visit, so they needed to explore. This feedback matters because a feature being present does not mean its starting point is clear. However, first-time exploration is not automatically a failure. I need to find out which features caused uncertainty and what help would have made a difference.
 
 The video problem also changed the diagnosis. I had suggested high quality as a possible cause, but later reported that YouTube itself was smooth while CampusWall paused or jumped. The agent reproduced two synchronisation problems and added tests for their fixes. My classmates have not yet reported a retest, so I cannot say they confirmed the problem was solved.
 

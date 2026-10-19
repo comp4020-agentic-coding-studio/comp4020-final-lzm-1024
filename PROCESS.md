@@ -36,7 +36,7 @@ The video report gave a different lesson. Lowering quality seemed a possible ans
 
 The agent reproduced two failures. A viewer could be forced to seek immediately after buffering ended. A host's second playback action could also be lost while an earlier request awaited confirmation. [a404d35](https://github.com/comp4020-agentic-coding-studio/comp4020-final-lzm-1024/commit/a404d35) adds recovery time before automatic drift correction. [4d3396c](https://github.com/comp4020-agentic-coding-studio/comp4020-final-lzm-1024/commit/4d3396c) keeps the latest playback intent. Regression tests failed before these repairs and passed afterwards. This supports those specific fixes, not a promise that all videos are smooth.
 
-The student later clarified that classmates had actually tried the site. They noticed the YouTube stutter and needed to explore because some features were unfamiliar on a first visit. [This feedback](docs/FEEDBACK.md) adds a usability question: are the starting points clear enough? It does not mean all exploration is bad. Clearer labels or a short optional introduction are possible next steps, but neither has been validated by these classmates.
+The student later identified two friends, Tony and Kevin, who had actually tried the site. They noticed the YouTube stutter and needed to explore because some features were unfamiliar on a first visit. [This feedback](docs/FEEDBACK.md) adds a usability question: are the starting points clear enough? It does not mean all exploration is bad. Clearer labels or a short optional introduction are possible next steps, but neither has been validated by these classmates.
 
 ## What Crit 10 adds
 
@@ -56,4 +56,4 @@ The latest full local run passed 22 top-level checks. File-transfer CI and deplo
 
 The initial history recorded too much work at once. Later real commits improve the record but cannot recreate missing earlier steps. Personal devices, restrictive call networks and students' understanding still need direct observation.
 
-The student confirmed that the reported session was normal website use with feedback, not instruments-only narration. Its exact date and participant count were not supplied. The [demonstration record](docs/CRIT10-DEMO.md) separates those facts. I still need to compare any explanation from logs with actual actions. Automated clients cannot replace this evidence, and classmates have not yet confirmed that the later playback repairs solved their problem.
+The student confirmed that the reported session was normal website use with feedback, not instruments-only narration. The participants were Tony and Kevin; its exact date was not supplied. The [demonstration record](docs/CRIT10-DEMO.md) separates those facts. I still need to compare any explanation from logs with actual actions. Automated clients cannot replace this evidence, and classmates have not yet confirmed that the later playback repairs solved their problem.

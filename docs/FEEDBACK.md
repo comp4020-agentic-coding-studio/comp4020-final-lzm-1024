@@ -30,7 +30,7 @@ HLS configuration and YouTube state handling have regression coverage, but this 
 
 ## Classmate feedback reported on 19 October 2026
 
-The student clarified that classmates had actually tried the website. They reported YouTube playback stutter and did not immediately know how to find or use some features on their first visit, so they needed to explore. This is an English summary of the student's report, not a verbatim quotation or direct observation by the agent. The actual session date, participant count and exact features were not supplied.
+The student identified the two participants as friends Tony and Kevin and clarified that they had actually tried the website. They reported YouTube playback stutter and did not immediately know how to find or use some features on their first visit, so they needed to explore. This is an English summary of the student's report, not a verbatim quotation or direct observation by the agent. The actual session date and exact unfamiliar features were not supplied.
 
 This report adds real first-use feedback to the technical record. It does not establish that every feature was confusing, that the tasks failed, or that exploration itself was a problem. The useful question is where exploration helped and where clearer labels or a starting point would have helped more.
 
