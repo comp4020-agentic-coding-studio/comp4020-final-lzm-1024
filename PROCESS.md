@@ -1,6 +1,6 @@
 # CampusWall — how the project was built
 
-> Written with AI assistance and revised on 19 October 2026. This account uses actual code, tests and commits. The student should check that the reasons given here match their own decisions. No completed classmate demonstration has been reported.
+> Written with AI assistance and revised on 19 October 2026. This account uses actual code, tests and commits. The student should check that the reasons given here match their own decisions. The student has reported real classmate use; whether it followed the instruments-only procedure is not yet confirmed.
 
 ## What the website is for
 
@@ -36,6 +36,8 @@ The video report gave a different lesson. Lowering quality seemed a possible ans
 
 The agent reproduced two failures. A viewer could be forced to seek immediately after buffering ended. A host's second playback action could also be lost while an earlier request awaited confirmation. [a404d35](https://github.com/comp4020-agentic-coding-studio/comp4020-final-lzm-1024/commit/a404d35) adds recovery time before automatic drift correction. [4d3396c](https://github.com/comp4020-agentic-coding-studio/comp4020-final-lzm-1024/commit/4d3396c) keeps the latest playback intent. Regression tests failed before these repairs and passed afterwards. This supports those specific fixes, not a promise that all videos are smooth.
 
+The student later clarified that classmates had actually tried the site. They noticed the YouTube stutter and needed to explore because some features were unfamiliar on a first visit. [This feedback](docs/FEEDBACK.md) adds a usability question: are the starting points clear enough? It does not mean all exploration is bad. Clearer labels or a short optional introduction are possible next steps, but neither has been validated by these classmates.
+
 ## What Crit 10 adds
 
 Crit 10 shifts attention from visible features to useful instruments. Structured logs record a stable, hidden actor identifier, action, time and result. They exclude names, passwords, message text and call details. The viewer helps distinguish accepted and rejected requests without revealing private content.
@@ -54,4 +56,4 @@ The latest full local run passed 22 top-level checks. File-transfer CI and deplo
 
 The initial history recorded too much work at once. Later real commits improve the record but cannot recreate missing earlier steps. Personal devices, restrictive call networks and students' understanding still need direct observation.
 
-The [classmate demonstration](docs/CRIT10-DEMO.md) remains to be recorded. Two classmates should operate the site while I explain only its logs. Afterwards, I need to compare that account with their actual actions and report one useful correction. Automated clients and a prepared plan cannot replace that evidence.
+The reported classmate feedback is now recorded, but the exact session date, participant count and instruments-only procedure are not confirmed. The [demonstration record](docs/CRIT10-DEMO.md) separates those facts. I still need to compare any explanation from logs with actual actions. Automated clients cannot replace this evidence, and classmates have not yet confirmed that the later playback repairs solved their problem.

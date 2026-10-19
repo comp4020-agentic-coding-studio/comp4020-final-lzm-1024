@@ -26,4 +26,16 @@ The repair in [f8c3ead](https://github.com/comp4020-agentic-coding-studio/comp40
 
 ## Limits and follow-up
 
-HLS configuration and YouTube state handling have regression coverage, but this run did not benchmark streaming throughput or replay the friend's actual source. The video provider still controls availability, embedding, formats and CORS; user networks and live broadcast delay remain outside the shared clock's guarantees. Device sharing was offered, not sent to an external recipient. No production test accounts, messages or rooms were created. The real Crit 10 instruments-only classmate demonstration remains outstanding.
+HLS configuration and YouTube state handling have regression coverage, but this run did not benchmark streaming throughput or replay the friend's actual source. The video provider still controls availability, embedding, formats and CORS; user networks and live broadcast delay remain outside the shared clock's guarantees. Device sharing was offered, not sent to an external recipient. No production test accounts, messages or rooms were created. At the time of this 3 October entry, no completed instruments-only classmate demonstration had been reported.
+
+## Classmate feedback reported on 19 October 2026
+
+The student clarified that classmates had actually tried the website. They reported YouTube playback stutter and did not immediately know how to find or use some features on their first visit, so they needed to explore. This is an English summary of the student's report, not a verbatim quotation or direct observation by the agent. The actual session date, participant count and exact features were not supplied.
+
+This report adds real first-use feedback to the technical record. It does not establish that every feature was confusing, that the tasks failed, or that exploration itself was a problem. The useful question is where exploration helped and where clearer labels or a starting point would have helped more.
+
+The student separately clarified that the original YouTube site was smooth while CampusWall paused or jumped. Later regressions reproduced two possible contributors: immediate drift correction after buffering and a lost playback action while awaiting a server response. Commits a404d35 and 4d3396c repair those cases. Automated checks and deployment passed, but no classmate retest after those fixes has been reported. Do not describe the user-reported problem as confirmed solved by participants.
+
+Possible follow-up work is a short optional introduction, clearer entry labels or a few task links such as finding an event, messaging its organiser and inviting a friend. These are proposals, not implemented or validated improvements. A later session should record the exact feature a person tried to find, the route they took, any help needed and whether the task was completed.
+
+Whether the reported session followed the Crit 10 instruments-only procedure is awaiting clarification. Real website use and a narrator explaining actions from logs alone are separate claims. No log-only narration results are invented here.

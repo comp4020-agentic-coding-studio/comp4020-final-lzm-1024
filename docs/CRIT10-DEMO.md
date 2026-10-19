@@ -1,6 +1,12 @@
 # Crit 10 — instruments-only demonstration
 
-Updated on 19 October 2026. Technical preparation began on 2–3 October and now includes private file transfer. No completed classmate demonstration has been reported. Local rehearsals and automated clients are not classroom participants.
+Updated on 19 October 2026. Technical preparation began on 2–3 October and now includes private file transfer. The student has now reported real classmate use and feedback: YouTube stutter and unfamiliar features that required exploration on a first visit. The actual session date, number of participants and use of the instruments-only procedure have not been confirmed. Local rehearsals and automated clients remain separate evidence.
+
+## What has actually been reported
+
+Classmates used the website and identified playback stutter. They also needed to explore because they did not initially know some features. These are reported observations, not measured task success, timings or participant quotations. No exact feature list was supplied. See [the feedback record](FEEDBACK.md) for the distinction between this report and later automated playback fixes.
+
+The record does not yet establish whether the narrator watched the page or explained actions from logs alone. Confirm that detail before marking the instruments-only requirement complete. If a further session is needed, the procedure below can be used.
 
 ## Prepare the instruments
 
@@ -41,4 +47,4 @@ Logs prove that the server accepted or rejected an action. Screenshots, decoded 
 
 Upload and download resource identifiers refer to different records: the conversation and the file. Do not claim the logs alone identify which uploaded file a later download concerns. Use the known task order and state this limit. A client-side button click that sends no request will not appear in server logs.
 
-After the real demonstration, record its date and timezone, two anonymous participant labels, the tasks attempted, selected redacted events, the narrator's predictions, the actual actions and one difference that matters. Until then, these are instructions and expected interpretations, not observed classroom results.
+After the real demonstration, record its date and timezone, two anonymous participant labels, the tasks attempted, selected redacted events, the narrator's predictions, the actual actions and one difference that matters. The procedure and table above describe expected interpretations. The reported classmate use is real feedback; it does not by itself supply log-only narration results.

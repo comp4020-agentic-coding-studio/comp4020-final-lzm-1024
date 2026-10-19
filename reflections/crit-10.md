@@ -1,17 +1,17 @@
-# Crit 10 — knowing what a successful request proves
+# Crit 10 — working features still need clear starting points
 
-> Updated with AI assistance on 19 October 2026. This reflection uses recorded development events. No completed instruments-only classmate demonstration has been reported; classroom observations are not claimed.
+> Updated with AI assistance on 19 October 2026 using the student's reported classmate feedback. The actual session date, participant count and use of the instruments-only procedure have not been confirmed. No participant quotation or log-only narration result is invented.
 
 ## What was the breakthrough that moved the work forward?
 
-The useful breakthrough was asking what a successful action actually proves. A green test, a completed upload and a person understanding the result are different things.
+The useful breakthrough was separating three questions: does a feature work, can somebody find it, and what can the logs prove?
 
-The video problem helped make this clear. I had suggested that high YouTube quality might explain the stutter. Later, I reported that the original site was smooth but CampusWall paused or jumped. The agent then reproduced two synchronisation problems instead of treating lower quality as the whole answer. Tests showed that buffering recovery could trigger another seek and that slow responses could overwrite the host's latest action.
+My classmates tried the website and reported YouTube stutter. Some features were unfamiliar during their first visit, so they needed to explore. This feedback matters because a feature being present does not mean its starting point is clear. However, first-time exploration is not automatically a failure. I need to find out which features caused uncertainty and what help would have made a difference.
 
-File sharing raised a similar question. Reaching 100 percent only means the browser sent the bytes. The interface now waits for server confirmation before saying the file was sent. Tests also check logout during upload and retries that must not create duplicate messages.
+The video problem also changed the diagnosis. I had suggested high quality as a possible cause, but later reported that YouTube itself was smooth while CampusWall paused or jumped. The agent reproduced two synchronisation problems and added tests for their fixes. My classmates have not yet reported a retest, so I cannot say they confirmed the problem was solved.
 
 ## What did this work change about who I want to be as a software developer?
 
-I want to explain both my evidence and its limits. Crit 10 logs can distinguish actors and show accepted or rejected requests without exposing private text. They cannot show whether someone understood an invitation or opened a downloaded file.
+I want to check both technical behaviour and first-use understanding. Clearer labels or a short optional introduction are possible next steps, rather than assuming more features will help.
 
-The real classmate demonstration is still needed. I should compare my explanation from logs with what two classmates actually did, then record a misunderstanding or missed action. Until then, the automated checks are technical preparation, not evidence of a completed classroom exercise.
+Crit 10 logs can distinguish actors and accepted or rejected requests without exposing private text. They cannot explain why somebody hesitated. I need to compare any narration from logs with actual actions and ask classmates where they became unsure. That comparison is still to be recorded; the feedback above should not be presented as a completed instruments-only result.

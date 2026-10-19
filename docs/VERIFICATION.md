@@ -164,3 +164,9 @@ The final full local suite passed all 22 top-level checks in 48.45 seconds. Earl
 CI and Fly deployment for 19e2dd9 passed. Read-only live verification confirmed the messages module, file-transfer module and stylesheet matched tested source. Anonymous file upload and download returned 401, and the application health endpoint returned 200. No production account or attachment was created for those checks.
 
 The real instruments-only classmate demonstration, personal-device call quality and universal provider playback remain unverified. Complete [the demonstration record](CRIT10-DEMO.md) from actual observation before describing it as finished.
+
+### Reported classmate use, update received 19 October 2026
+
+The student clarified that classmates had used the site and reported YouTube stutter, plus unfamiliar features that required exploration on a first visit. This changes the current record: real classmate feedback exists. Earlier entries saying a classmate demonstration had not been reported describe the information available when those entries were written.
+
+The session date, participant count, exact unfamiliar features and whether the narrator used only logs have not been confirmed. No completion rate, timing or log-only narration result is claimed. The [feedback record](FEEDBACK.md) and [demonstration record](CRIT10-DEMO.md) separate reported use, proposed usability changes and the instruments-only evidence still needing clarification. A classmate retest of the later YouTube fixes has not been reported.

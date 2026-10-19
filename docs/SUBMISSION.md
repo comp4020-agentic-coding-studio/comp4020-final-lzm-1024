@@ -13,7 +13,7 @@ Checked against the [final-project brief](https://comp.anu.edu.au/courses/comp40
 | [Prompt evidence](PROMPTS.md) and screenshots | Selected real user requests and labelled test captures | Add the student's own reasons and actual disputed/rejected decisions |
 | Live Fly app and `/readme/` | Existing site deployed; rewritten README prepared | See [the measured viewport rehearsal](ACCEPTANCE.md); verify final deployment |
 | Incremental Git history | Initial commit retained; actual baseline and subsequent verified work committed | Commit actual future work as it occurs; never reconstruct a false historical trail |
-| Crit 10 observability | Redacted structured logs, projection viewer and regression tests prepared | Perform the real blind classmate demonstration using [the protocol](CRIT10-DEMO.md) |
+| Crit 10 observability | Redacted structured logs, projection viewer and regression tests prepared | Classmate use is reported; confirm and record whether it followed [the instruments-only protocol](CRIT10-DEMO.md) |
 
 ## Student review questions
 

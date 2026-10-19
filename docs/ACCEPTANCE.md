@@ -32,3 +32,7 @@ Use a disposable data folder, start `server.mjs` with `PORT=18116`, then `node s
 Remaining human evidence: the actual instruments-only classmate demonstration, uncoached usability observations, exhaustive keyboard/screen-reader evaluation and real microphone calls across restrictive networks. [Demo instructions](CRIT10-DEMO.md) specify what to record. These have not been reported as completed.
 
 Selected [redacted local events](readiness-action-events.ndjson) preserve actual rehearsal timestamps, accepted operations and revisions. They exclude the fixture database and log key. Run `Get-Content docs/readiness-action-events.ndjson | pnpm logs:view` in PowerShell to rehearse narration from this recorded trace; use live logs during the real demonstration.
+
+## Classmate feedback update, 19 October 2026
+
+The student has now reported real classmate use: YouTube playback stutter and unfamiliar features that needed exploration on a first visit. The earlier remaining-evidence statement does not mean no classmates have tried the site. Exact tasks, session date, participant count and the use of logs-only narration are not yet confirmed. See [the updated feedback](FEEDBACK.md) and [demonstration record](CRIT10-DEMO.md). The playback fixes have automated and deployment evidence, but no participant retest result has been supplied.
