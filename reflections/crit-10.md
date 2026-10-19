@@ -1,13 +1,17 @@
-# Crit 10 — evidence is more than a green check
+# Crit 10 — knowing what a successful request proves
 
-> Reflection prepared with AI assistance, 3 October 2026. Technical logging and a local rehearsal are complete. The student confirmed that the real instruments-only classmate demonstration has not occurred; no classroom feedback is claimed here.
+> Updated with AI assistance on 19 October 2026. This reflection uses recorded development events. No completed instruments-only classmate demonstration has been reported; classroom observations are not claimed.
 
 ## What was the breakthrough that moved the work forward?
 
-The breakthrough was separating an accepted server action from its intended effect. The new structured events identify an opaque actor, bounded action, time and outcome, while excluding private messages, credentials and negotiation payloads. Tests check hostile input, rejected requests, bounded buffering and identity continuity after restart. The viewer makes those classifications readable without revealing content.
+The useful breakthrough was asking what a successful action actually proves. A green test, a completed upload and a person understanding the result are different things.
 
-The local rehearsal also exposed a limitation of my evidence strategy: a whiteboard object could receive focus, yet Enter did not select it. Socket tests had passed because the shared-state protocol worked. Browser keyboard interaction revealed a different failure. The repair preserves focus through redraws and avoids stealing Space from ordinary buttons. That gives a concrete example of why one green test suite is insufficient.
+The video problem helped make this clear. I had suggested that high YouTube quality might explain the stutter. Later, I reported that the original site was smooth but CampusWall paused or jumped. The agent then reproduced two synchronisation problems instead of treating lower quality as the whole answer. Tests showed that buffering recovery could trigger another seek and that slow responses could overwrite the host's latest action.
+
+File sharing raised a similar question. Reaching 100 percent only means the browser sent the bytes. The interface now waits for server confirmation before saying the file was sent. Tests also check logout during upload and retries that must not create duplicate messages.
 
 ## What did this work change about who I want to be as a software developer?
 
-I want to make claims another person can inspect without overstating them. Logs can establish accepted publication or messaging; they cannot establish that someone understood, enjoyed or even saw the result. The two-session rehearsal is technical preparation, not a substitute for classmates operating the product while I narrate from logs alone. After that demonstration, I need to compare my predictions with their actions and revise this reflection using a real misunderstanding or missed event. Actual new commits preserve this work honestly; they cannot recover the missing earlier development history.
+I want to explain both my evidence and its limits. Crit 10 logs can distinguish actors and show accepted or rejected requests without exposing private text. They cannot show whether someone understood an invitation or opened a downloaded file.
+
+The real classmate demonstration is still needed. I should compare my explanation from logs with what two classmates actually did, then record a misunderstanding or missed action. Until then, the automated checks are technical preparation, not evidence of a completed classroom exercise.

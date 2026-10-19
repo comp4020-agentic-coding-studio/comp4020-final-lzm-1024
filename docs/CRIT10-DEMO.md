@@ -1,6 +1,6 @@
 # Crit 10 — instruments-only demonstration
 
-Technical preparation completed across 2–3 October 2026. The student confirmed that the real classmate demonstration has **not yet taken place**. Local rehearsals and automated clients are not classroom participants.
+Updated on 19 October 2026. Technical preparation began on 2–3 October and now includes private file transfer. No completed classmate demonstration has been reported. Local rehearsals and automated clients are not classroom participants.
 
 ## Prepare the instruments
 
@@ -18,7 +18,7 @@ No bodies, names, email addresses, cookies, passwords, search queries, raw paths
 2. Hide the browser from the narrator. Keep only the live log viewer visible.
 3. Participant A creates a draft, edits event fields, invites B and publishes. Narrate action classifications and accepted revisions; do not guess the title or location.
 4. B changes a whiteboard object; A changes another. Match actors and resource pseudonyms. Try a forbidden publishing request with the invited editor and distinguish rejection from success.
-5. B contacts the organiser and sends a private message. A replies. Infer accepted message actions, not the message content or whether the recipient actually read it.
+5. B contacts the organiser and sends a private message. A replies. Optionally send a small, non-sensitive TEST file and download it from the other account. Infer accepted requests, not message content, file names or whether the recipient opened the download.
 6. Refresh a client, then restart the disposable service. Observe reconnects and stable pseudonyms. Separately inspect the browser to confirm saved content survived.
 7. Compare the narration with what classmates actually did. Record missed actions, ambiguity, latency and any collector drops.
 
@@ -27,3 +27,18 @@ No bodies, names, email addresses, cookies, passwords, search queries, raw paths
 Record the real date, participant count without personal identifiers, task sequence, selected redacted events, narrator predictions, actual observations and one resulting change. Update [Crit 10 reflection](../reflections/crit-10.md) using that experience. This section contains instructions, not a fabricated study result.
 
 Logs prove that the server accepted or rejected an action. Screenshots, decoded audio tests and human observation answer different questions. None alone establishes enjoyment, intelligible microphone calls, universal network connectivity or community benefit.
+
+## How to explain the evidence this week
+
+| Signal | What the narrator may say | What the narrator must not guess |
+| --- | --- | --- |
+| Accepted poster update and revision | The server accepted an edit from this actor | The exact visual result or whether the student liked it |
+| Accepted or rejected private-message request | This actor submitted a message action, with this result | The message text or whether it was understood |
+| messages.files.submit with status 201 | The server accepted a new file message | Its name, contents or the recipient's reaction |
+| messages.files.submit with status 200 | A file request succeeded; it may be an accepted retry | That another distinct file was created |
+| messages.files.read with status 200 | The server completed an authorised download response | That the person opened or read the file |
+| Status 401 or 404 | The request was rejected | A private account's identity or hidden file contents |
+
+Upload and download resource identifiers refer to different records: the conversation and the file. Do not claim the logs alone identify which uploaded file a later download concerns. Use the known task order and state this limit. A client-side button click that sends no request will not appear in server logs.
+
+After the real demonstration, record its date and timezone, two anonymous participant labels, the tasks attempted, selected redacted events, the narrator's predictions, the actual actions and one difference that matters. Until then, these are instructions and expected interpretations, not observed classroom results.
