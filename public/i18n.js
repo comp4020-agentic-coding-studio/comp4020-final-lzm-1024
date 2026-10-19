@@ -1,6 +1,6 @@
 export const languages=[['en','English'],['zh-CN','\u7b80\u4f53\u4e2d\u6587'],['es','Espa\u00f1ol'],['fr','Fran\u00e7ais'],['ja','\u65e5\u672c\u8a9e']];
 const loaders={'zh-CN':()=>import('./locales/zh-CN.js'),es:()=>import('./locales/es.js'),fr:()=>import('./locales/fr.js'),ja:()=>import('./locales/ja.js')};
-let language='en',catalog={},patterns=[],generation=0,installed=false,observer,scheduled=false;
+let language='en',catalog=Object.create(null),patterns=[],generation=0,installed=false,observer,scheduled=false;
 const textSources=new WeakMap(),attributeSources=new WeakMap();
 const ignored='script,style,code,pre,svg,canvas,textarea,[translate="no"],[data-i18n-ignore],.user-avatar,.brand,.poster,.photographic-poster,.canvas-poster,.profile-name h1,.profile-interests,.profile-note p,.profile-note-top a,.dm-person strong,.dm-conversation strong,.dm-room-heading h2,.chat-message-meta strong,.dm-message strong,.watch-message strong,.group-bubble strong,.watch-room-title,.watch-host,.community-group-card h3,.community-club-link strong,.club-card h3,.club-card h2,.club-description,.club-name,.card-meta h3,.poster-card h3,.watch-danmaku,.community-person strong,.community-event h3,.community-event p,.card-author,.detail-info>h1,.location,.game-people strong,.profile-button>span:not(.user-avatar)';
 export const currentLanguage=()=>language;
@@ -19,11 +19,14 @@ export function translate(value){
     if(date){const month=catalog[date[2]]||catalog[date[2].toLowerCase()];if(month)result=trim.replace(date[0],['zh-CN','ja'].includes(language)?month+date[1]+'\u65e5':date[1]+' '+month);}
   }
   if(!result&&trim.includes(' · ')){const pieces=trim.split(' · '),translated=pieces.map(piece=>catalog[piece]||catalog[piece.toLowerCase()]||piece);if(translated.some((piece,i)=>piece!==pieces[i]))result=translated.join(' · ');}
-  return result?value.replace(trim,result):value;
+  return result?value.replace(trim,()=>result):value;
 }
 function skip(element){return !element||element.closest(ignored);}
 function text(node){
   if(skip(node.parentElement))return;
+  // Preserve form data before translating an option's visible label.
+  const option=node.parentElement.closest('option');
+  if(option&&!option.hasAttribute('value'))option.setAttribute('value',option.value);
   const old=textSources.get(node),source=old&&node.nodeValue===old.output?old.source:node.nodeValue,output=translate(source);
   textSources.set(node,{source,output});if(node.nodeValue!==output)node.nodeValue=output;
 }
@@ -59,7 +62,7 @@ export async function setLanguage(next,{persist=true}={}){
   if(!languages.some(([id])=>id===next))next='en';
   const request=++generation,loaded=next==='en'?{}:(await loaders[next]()).default;
   if(request!==generation)return;
-  language=next;catalog={};patterns=[];
+  language=next;catalog=Object.create(null);patterns=[];
   for(const [key,target] of Object.entries(loaded)){
     catalog[key]=target;catalog[key.toLowerCase()]=target;
     if(/\{\d+\}/.test(key))patterns.push({regex:new RegExp('^'+key.split(/\{\d+\}/).map(escaped).join('(.+?)')+'$','i'),target});

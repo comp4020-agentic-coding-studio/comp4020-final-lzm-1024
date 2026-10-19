@@ -1,10 +1,21 @@
 # Crit 10 — classmate feedback and instruments-only preparation
 
-Updated on 19 October 2026. Technical preparation began on 2–3 October and now includes private file transfer. The student has now reported real classmate use and feedback: YouTube stutter and unfamiliar features that required exploration on a first visit. The student confirmed this was normal website use followed by feedback, not an instruments-only session. The participants are the student's friends, Tony and Kevin. The exact session date was not supplied. Local rehearsals and automated clients remain separate evidence.
+Updated on 19 October 2026. Technical preparation began on 2–3 October and now includes private file transfer. The student has now reported real classmate use and feedback: YouTube stutter and unfamiliar features that required exploration on a first visit. The student confirmed this was normal website use followed by feedback, not an instruments-only session. The participants are the student's friends, Tony and Kevin. The session took place on 14 October 2026. Local rehearsals and automated clients remain separate evidence.
+
+## Confirmed session details
+
+| Item | Record |
+| --- | --- |
+| Session date | 14 October 2026 |
+| Participants | Two friends: Tony and Kevin |
+| Format | Normal website use followed by feedback |
+| Reported issues | YouTube stutter; some features unfamiliar on a first visit |
+| Exact unclear features | Not yet specified |
+| YouTube retest after the fixes | No participant result supplied yet |
 
 ## What has actually been reported
 
-Two of my friends, Tony and Kevin, tried CampusWall and gave feedback. This was normal use of the website, rather than a session where I explained their actions from logs alone.
+On 14 October 2026, two of my friends, Tony and Kevin, tried CampusWall and gave feedback. This was normal use of the website, rather than a session where I explained their actions from logs alone.
 
 They reported that YouTube playback inside CampusWall could stutter. They also did not immediately know how to find or use some features because it was their first visit. They needed to explore the website before becoming familiar with those features. No exact list of unclear features or task timings was recorded in the information supplied.
 

@@ -58,3 +58,43 @@ test('provider chunking preserves Unicode, errors stay generic and rate limits a
   const fail=createTranslator({fetchImpl:async()=>Response.json({responseStatus:403,responseDetails:'PRIVATE PROVIDER DETAIL'})});
   await assert.rejects(fail('Synthetic message','es','bob'),e=>e.status===503&&!e.message.includes('PRIVATE'));
 });
+
+
+test('localisation preserves category values, unknown object keys and literal user names',async()=>{
+  const dom=new JSDOM('<main><select name="category"><option>Sport</option><option>Social</option></select></main>',{url:'http://localhost'});
+  const keys=['window','document','CustomEvent','localStorage'],old=new Map(keys.map(k=>[k,Object.getOwnPropertyDescriptor(globalThis,k)]));
+  try{
+    for(const key of keys)Object.defineProperty(globalThis,key,{value:dom.window[key],configurable:true});
+    const select=document.querySelector('select');select.value='Social';
+    for(const [language] of languages){await setLanguage(language);assert.equal(select.value,'Social');assert.deepEqual([...select.options].map(o=>o.value),['Sport','Social']);}
+    await setLanguage('es');assert.notEqual(select.options[0].textContent,'Sport');
+    assert.equal(translate('toString'),'toString');assert.equal(translate('__proto__'),'__proto__');
+    for(const name of ['$&',"$'",'$'+String.fromCharCode(96)])assert.equal(translate('Voice call '+name),translate('Voice call Alice').replace('Alice',()=>name));
+  }finally{await setLanguage('en');dom.window.close();for(const [key,value] of old)if(value)Object.defineProperty(globalThis,key,value);else delete globalThis[key];}
+});
+
+test('new group messages retain existing translation results, focus and message order',async()=>{
+  const dom=new JSDOM('<main id="app"></main>',{url:'http://localhost/community/groups/group-1',pretendToBeVisual:true});
+  const keys=['window','document','location','CustomEvent','Event'],old=new Map(keys.map(k=>[k,Object.getOwnPropertyDescriptor(globalThis,k)]));
+  let view,rows=[{id:'first',seq:2,authorId:'alice',author:'Alice',body:'Hola',createdAt:new Date().toISOString()}];
+  const errors=[];
+  try{
+    for(const key of keys)Object.defineProperty(globalThis,key,{value:dom.window[key],configurable:true});
+    const {mountCommunity}=await import('../public/community.js');
+    view=mountCommunity(document.querySelector('main'),{user:{id:'alice'},campus:{id:'anu',name:'ANU'},path:'/community/groups/group-1',navigate(){},toast:v=>errors.push(v),api:async url=>{
+      if(url.endsWith('/messages'))return {messages:rows};
+      if(url.endsWith('/read'))return {};
+      if(url.endsWith('/groups/group-1'))return {group:{id:'group-1',name:'Friends',members:[{id:'alice',name:'Alice'}],ownerId:'alice'}};
+      throw Error('Unexpected URL '+url);
+    }});
+    await new Promise(r=>setTimeout(r,30));
+    const article=document.querySelector('.group-bubble');assert(article);
+    const result=article.querySelector('.translation-result');result.textContent='Hello';result.hidden=false;
+    const button=article.querySelector('.translate-message');button.focus();
+    rows=[{...rows[0],id:'older',seq:1},...rows,{...rows[0],id:'last',seq:3}];
+    window.dispatchEvent(new CustomEvent('campus:community',{detail:{type:'group:changed',groupId:'group-1'}}));
+    await new Promise(r=>setTimeout(r,160));
+    assert.deepEqual([...document.querySelectorAll('.group-bubble')].map(a=>a.dataset.messageId),['older','first','last']);
+    assert.equal(document.querySelector('[data-message-id="first"]'),article);assert.equal(result.textContent,'Hello');assert.equal(result.hidden,false);assert.equal(document.activeElement,button);assert.deepEqual(errors,[]);
+  }finally{view?.destroy();dom.window.close();for(const [key,value] of old)if(value)Object.defineProperty(globalThis,key,value);else delete globalThis[key];}
+});
