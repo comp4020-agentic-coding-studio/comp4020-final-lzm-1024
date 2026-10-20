@@ -1,5 +1,8 @@
 // Static interface catalogue. User-authored content is not translated.
 export default {
+  "Add an event title in Event details before publishing.": "\u53d1\u5e03\u524d\u8bf7\u5728\u6d3b\u52a8\u8be6\u60c5\u4e2d\u586b\u5199\u6d3b\u52a8\u6807\u9898\u3002",
+  "Add an event date in Event details before publishing.": "\u53d1\u5e03\u524d\u8bf7\u5728\u6d3b\u52a8\u8be6\u60c5\u4e2d\u586b\u5199\u6d3b\u52a8\u65e5\u671f\u3002",
+  "Add an event location in Event details before publishing.": "\u53d1\u5e03\u524d\u8bf7\u5728\u6d3b\u52a8\u8be6\u60c5\u4e2d\u586b\u5199\u6d3b\u52a8\u5730\u70b9\u3002",
   "Shared a file": "\u5206\u4eab\u4e86\u4e00\u4e2a\u6587\u4ef6",
   "Attach file": "\u6dfb\u52a0\u6587\u4ef6",
   "Up to 10 MB per file": "\u6bcf\u4e2a\u6587\u4ef6\u6700\u591a 10 MB",

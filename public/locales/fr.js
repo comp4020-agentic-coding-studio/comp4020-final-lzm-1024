@@ -1,5 +1,8 @@
 // Static interface catalogue. User-authored content is not translated.
 export default {
+  "Add an event title in Event details before publishing.": "Ajoutez le titre dans les d\u00e9tails de l\u2019\u00e9v\u00e9nement avant de publier.",
+  "Add an event date in Event details before publishing.": "Ajoutez la date dans les d\u00e9tails de l\u2019\u00e9v\u00e9nement avant de publier.",
+  "Add an event location in Event details before publishing.": "Ajoutez le lieu dans les d\u00e9tails de l\u2019\u00e9v\u00e9nement avant de publier.",
   "Shared a file": "A partag\u00e9 un fichier",
   "Attach file": "Joindre un fichier",
   "Up to 10 MB per file": "10 Mo maximum par fichier",
