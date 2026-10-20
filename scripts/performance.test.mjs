@@ -95,6 +95,11 @@ test('compression and conditional static requests preserve account boundaries',{
     let ready=false;
     for(let n=0;n<100;n++){try{ready=(await request('/api/health')).ok;if(ready)break;}catch{}if(child.exitCode!==null)throw Error(errors);await new Promise(r=>setTimeout(r,30));}
     assert.ok(ready,errors);
+    await t.test('the complete relative call-module graph is served as JavaScript rather than page fallbacks',async()=>{
+      const queue=['/voice-calls.js'],seen=new Set();
+      while(queue.length){const path=queue.pop();if(seen.has(path))continue;seen.add(path);const response=await request(path);assert.equal(response.status,200,path);assert.match(response.headers.get('content-type'),/^text\/javascript/,path);const source=await response.text();assert.equal(source.replace(/\r\n/g,'\n'),readFileSync(join('public',path.slice(1)),'utf8').replace(/\r\n/g,'\n'),path);for(const match of source.matchAll(/(?:from\s*|import\s*\()['"](\.[^'"]+\.js)['"]/g))queue.push(new URL(match[1],base+path).pathname);}
+      assert.ok(seen.has('/call-media.js'));
+    });
     const source=readFileSync('public/app.js','utf8');let etag;
     await t.test('identity, gzip and Brotli decode to identical source; q=0 is respected',async()=>{
       for(const [accept,expected] of [['identity',null],['gzip','gzip'],['br,gzip','br'],['br;q=0,gzip;q=0',null],['br;q=0.3,gzip;q=0.8','gzip']]){
