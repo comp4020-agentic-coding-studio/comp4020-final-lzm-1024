@@ -54,7 +54,7 @@ export function createVoiceCalls({get,all,run,id,now,fail,body,json,campusAccoun
    if(!state.callee||!['connecting','active'].includes(c.status))fail(409,'Wait for the call to be answered');
    if(!uuid(input.clientId))fail(400,'Invalid signalling request');
    const prior=state.signals.get(input.clientId),serial=JSON.stringify(input.signal);
-   if(prior){if(prior!==serial)fail(409,'Conflicting signalling retry');return json(res,200,{ok:true});}
+   if(prior){if(prior.serial!==serial)fail(409,'Conflicting signalling retry');return json(res,200,{ok:true});}
    if(state.signals.size>=320)fail(429,'Too many connection updates');
    const signal=input.signal;
    const target=state[side==='caller'?'callee':'caller'];if(!online(target.userId,target.device,target.hash))fail(409,'The other person disconnected');
@@ -62,8 +62,8 @@ export function createVoiceCalls({get,all,run,id,now,fail,body,json,campusAccoun
    else if(signal&&Object.hasOwn(signal,'candidate')){const v=signal.candidate;if(v!==null&&(!v||typeof v.candidate!=='string'||v.candidate.length>2000||v.candidate!==''&&!/^candidate:/.test(v.candidate)||v.sdpMid!==null&&v.sdpMid!==undefined&&(typeof v.sdpMid!=='string'||v.sdpMid.length>30)||v.sdpMLineIndex!==null&&v.sdpMLineIndex!==undefined&&(!Number.isInteger(v.sdpMLineIndex)||v.sdpMLineIndex<0||v.sdpMLineIndex>5)||v.usernameFragment!==undefined&&v.usernameFragment!==null&&(typeof v.usernameFragment!=='string'||v.usernameFragment.length>256)))fail(400,'Invalid audio connection candidate');}
    else if(signal?.restart===true&&Object.keys(signal).length===1&&side==='callee'&&state.answers&&state.restartRequests<2)state.restartRequests++;
    else fail(400,'Invalid audio signal');
-   state.signals.set(input.clientId,serial);
-   for(const ws of sockets)if(ws.social&&ws.user?.id===target.userId&&ws.callDevice===target.device&&ws.sessionHash===target.hash&&validSocket(ws))send(ws,'call:signal',{callId:c.id,signal});
+   state.signals.set(input.clientId,{serial,target:{...target}});
+   for(const ws of sockets)if(ws.social&&ws.user?.id===target.userId&&ws.callDevice===target.device&&ws.sessionHash===target.hash&&validSocket(ws))send(ws,'call:signal',{callId:c.id,signalId:input.clientId,signal});
    return json(res,200,{ok:true});
   }
   if(input.action==='accept'){
@@ -84,7 +84,7 @@ export function createVoiceCalls({get,all,run,id,now,fail,body,json,campusAccoun
   }
   fail(400,'Unknown call action');
  }
- function sync(ws){const c=current(ws.user);if(c)send(ws,'call:state',{call:c});}
+ function sync(ws){const c=current(ws.user);if(!c)return;send(ws,'call:state',{call:c});const state=live.get(c.id);if(!state||!validSocket(ws))return;for(const [signalId,entry] of state.signals){const t=entry.target;if(t.userId===ws.user.id&&t.device===ws.callDevice&&t.hash===ws.sessionHash)send(ws,'call:signal',{callId:c.id,signalId,signal:JSON.parse(entry.serial)});}}
  function tick(){for(const [callId,state] of live){const c=record(callId);if(!c||c.status==='ended'){live.delete(callId);continue;}
    if(c.status!=='active'&&Date.now()>state.deadline){finish(c,c.status==='ringing'?'missed':'connection-failed');continue;}
    for(const side of ['caller','callee']){const v=state[side];if(!v)continue;if(online(v.userId,v.device,v.hash)){state.offline.delete(side);continue;}if(!state.offline.has(side))state.offline.set(side,Date.now());if(Date.now()-state.offline.get(side)>20000){finish(c,'disconnected');break;}}

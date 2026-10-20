@@ -30,6 +30,11 @@ export function createAudioTransport({stream,iceServers,onSignal,onTrack,onConne
   else if(pc.connectionState==='disconnected'){onState('reconnecting');if(!disconnectTimer)disconnectTimer=setTimer(()=>{disconnectTimer=null;recover().catch(fail);},4000);}
  };
  return {
+  async diagnostics(){
+   const result={connection:pc.connectionState||'unknown',ice:pc.iceConnectionState||'unknown',negotiation:pc.signalingState||'unknown',relayConfigured:(iceServers||[]).some(s=>[s.urls].flat().some(url=>/^turns?:/.test(url))),networkPath:false,audioBytesReceived:0,videoBytesReceived:0,videoFramesDecoded:0};
+   try{const stats=await pc.getStats();for(const item of stats.values()){if(item.type==='transport'&&item.selectedCandidatePairId)result.networkPath=true;if(item.type==='inbound-rtp'&&!item.isRemote){const kind=item.kind||item.mediaType;if(kind==='audio')result.audioBytesReceived+=Number(item.bytesReceived)||0;if(kind==='video'){result.videoBytesReceived+=Number(item.bytesReceived)||0;result.videoFramesDecoded+=Number(item.framesDecoded)||0;}}}}catch{result.statsUnavailable=true;}
+   return result;
+  },
   async offer(){if(closed||offered)return;offered=true;await pc.setLocalDescription(await pc.createOffer());startSetup();if(!closed)await description();},
   receive(signal){incoming=incoming.then(async()=>{if(closed||failed)return;if(signal.restart){if(offered)await recover();return;}if(signal.description){await pc.setRemoteDescription(signal.description);for(const candidate of early.splice(0))await pc.addIceCandidate(candidate);if(signal.description.type==='offer'){ready=false;await pc.setLocalDescription(await pc.createAnswer());startSetup();if(!closed)await description();}if(!closed)settleRecovery();}else if(Object.hasOwn(signal,'candidate')){if(pc.remoteDescription)await pc.addIceCandidate(signal.candidate);else early.push(signal.candidate);}});incoming.catch(fail);return incoming;},
   mute(value){for(const track of stream.getAudioTracks())track.enabled=!value;},

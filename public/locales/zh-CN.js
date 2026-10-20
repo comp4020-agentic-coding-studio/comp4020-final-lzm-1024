@@ -1,5 +1,10 @@
 // Static interface catalogue. User-authored content is not translated.
 export default {
+  "Resume video": "\u6062\u590d\u89c6\u9891",
+  "Video playback is paused. Tap Resume video.": "\u89c6\u9891\u64ad\u653e\u5df2\u6682\u505c\u3002\u8bf7\u70b9\u51fb\u6062\u590d\u89c6\u9891\u3002",
+  "Connection help": "\u8fde\u63a5\u5e2e\u52a9",
+  "Your camera preview is local. Your friend appears only after the network connects.": "\u6444\u50cf\u5934\u9884\u89c8\u4ec5\u5728\u672c\u673a\u663e\u793a\u3002\u7f51\u7edc\u8fde\u63a5\u6210\u529f\u540e\u624d\u4f1a\u663e\u793a\u597d\u53cb\u753b\u9762\u3002",
+  "Show connection report": "\u663e\u793a\u8fde\u63a5\u62a5\u544a",
   "Your connection is ready. Waiting for your friend\u2026": "\u4f60\u7684\u8fde\u63a5\u5df2\u5c31\u7eea\uff0c\u6b63\u5728\u7b49\u5f85\u597d\u53cb\u2026",
   "Connection interrupted. Reconnecting\u2026": "\u8fde\u63a5\u4e2d\u65ad\uff0c\u6b63\u5728\u91cd\u65b0\u8fde\u63a5\u2026",
   "The call could not reconnect. Try calling again or use another network.": "\u901a\u8bdd\u65e0\u6cd5\u91cd\u65b0\u8fde\u63a5\u3002\u8bf7\u91cd\u65b0\u62e8\u6253\u6216\u66f4\u6362\u7f51\u7edc\u3002",

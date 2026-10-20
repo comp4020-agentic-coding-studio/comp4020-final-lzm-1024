@@ -1,5 +1,10 @@
 // Static interface catalogue. User-authored content is not translated.
 export default {
+  "Resume video": "Reanudar v\u00eddeo",
+  "Video playback is paused. Tap Resume video.": "El v\u00eddeo est\u00e1 en pausa. Pulsa Reanudar v\u00eddeo.",
+  "Connection help": "Ayuda de conexi\u00f3n",
+  "Your camera preview is local. Your friend appears only after the network connects.": "La vista de tu c\u00e1mara es local. Tu amigo aparece cuando se conecta la red.",
+  "Show connection report": "Mostrar informe de conexi\u00f3n",
   "Your connection is ready. Waiting for your friend\u2026": "Tu conexi\u00f3n est\u00e1 lista. Esperando a tu amigo\u2026",
   "Connection interrupted. Reconnecting\u2026": "Conexi\u00f3n interrumpida. Reconectando\u2026",
   "The call could not reconnect. Try calling again or use another network.": "No se pudo reconectar la llamada. Vuelve a llamar o usa otra red.",

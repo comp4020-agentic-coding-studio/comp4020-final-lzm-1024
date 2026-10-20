@@ -39,3 +39,4 @@ html[data-language="zh-CN"] body,html[data-language="ja"] body{font-family:syste
 .dm-message>.message-translation,.watch-message>.message-translation,.chat-message>.message-translation,.group-bubble>.message-translation{display:block;min-width:0}.message-translation .translation-controls{display:block}.message-translation .translation-controls[hidden]{display:none}
 
 .video-call-placeholder[hidden]{display:none}
+.voice-help{order:6;margin-top:14px;border-top:1px solid var(--line);padding-top:12px;font-size:12px;line-height:1.5}.voice-help summary{cursor:pointer;font-weight:600}.voice-help p{color:var(--muted)}.voice-help pre{max-height:220px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;font:11px/1.5 monospace;padding:10px;border-radius:8px;background:var(--surface-soft);user-select:text}.voice-help pre[hidden]{display:none}
