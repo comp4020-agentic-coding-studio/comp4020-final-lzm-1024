@@ -1,5 +1,13 @@
 # Verification record and reproduction
 
+## Call recovery regression, 21 October 2026
+
+The reported symptoms were intermittent connection failure and a connected panel without remote video. Inspection found that the server rejected valid empty ICE end-of-candidates markers, no ICE restart was allowed, and a rejected controller signal queue could block a later call. These are confirmed code defects; they do not establish which defect caused either screenshot. Fly secret names were checked without printing credential values: no TURN configuration was present. The user chose to complete code repairs without adding a relay service.
+
+Regression checks cover bilateral connection acknowledgement and clock gating, bounded recovery from pending setup, valid empty candidates, caller-owned recovery limited to two restarts, recipient recovery requests, unchanged mode/device/session boundaries, short disconnection grace, timer cleanup, bounded signal retry with a stable receipt ID, no retry on expired authentication, recovery status during clock ticks, video placeholder removal after loaded frames, and a later call receiving signals after an earlier failure. The native two-peer fixture checks changed ICE credentials and continued decoded synthetic audio/video after renegotiation, with no retry timer left running. These are local synthetic-media and JSDOM checks, not a real two-phone or cross-campus-network trial. Restrictive-network connectivity remains unverified without TURN.
+
+The handling follows MDN's [ICE candidate event documentation](https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/icecandidate_event), [ICE restart description](https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/restartIce) and [sender encoding parameters](https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/setParameters). Video bitrate limits reduce the encoder budget where supported; no measured improvement in the user's network is claimed.
+
 ## What has actually been checked
 
 On 2 October 2026, the last pre-documentation full run passed TypeScript and **19 top-level Vitest checks**: the two supplied HTTP invariants plus seventeen product wrappers. The wrappers run nested Node test scenarios; counts from earlier development logs use that different level and must not be added to nineteen. The voice wrapper additionally runs real native WebRTC peers with synthetic audio. Final documentation verification results are recorded below after rerunning.

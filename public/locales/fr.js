@@ -1,5 +1,9 @@
 // Static interface catalogue. User-authored content is not translated.
 export default {
+  "Your connection is ready. Waiting for your friend\u2026": "Votre connexion est pr\u00eate. En attente de votre ami\u2026",
+  "Connection interrupted. Reconnecting\u2026": "Connexion interrompue. Reconnexion\u2026",
+  "The call could not reconnect. Try calling again or use another network.": "La reconnexion a \u00e9chou\u00e9. Rappelez ou essayez un autre r\u00e9seau.",
+  "Waiting for your friend\u2019s video\u2026": "En attente de la vid\u00e9o de votre ami\u2026",
   "Add an event title in Event details before publishing.": "Ajoutez le titre dans les d\u00e9tails de l\u2019\u00e9v\u00e9nement avant de publier.",
   "Add an event date in Event details before publishing.": "Ajoutez la date dans les d\u00e9tails de l\u2019\u00e9v\u00e9nement avant de publier.",
   "Add an event location in Event details before publishing.": "Ajoutez le lieu dans les d\u00e9tails de l\u2019\u00e9v\u00e9nement avant de publier.",

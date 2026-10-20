@@ -1,5 +1,9 @@
 // Static interface catalogue. User-authored content is not translated.
 export default {
+  "Your connection is ready. Waiting for your friend\u2026": "\u4f60\u7684\u8fde\u63a5\u5df2\u5c31\u7eea\uff0c\u6b63\u5728\u7b49\u5f85\u597d\u53cb\u2026",
+  "Connection interrupted. Reconnecting\u2026": "\u8fde\u63a5\u4e2d\u65ad\uff0c\u6b63\u5728\u91cd\u65b0\u8fde\u63a5\u2026",
+  "The call could not reconnect. Try calling again or use another network.": "\u901a\u8bdd\u65e0\u6cd5\u91cd\u65b0\u8fde\u63a5\u3002\u8bf7\u91cd\u65b0\u62e8\u6253\u6216\u66f4\u6362\u7f51\u7edc\u3002",
+  "Waiting for your friend\u2019s video\u2026": "\u6b63\u5728\u7b49\u5f85\u597d\u53cb\u7684\u89c6\u9891\u2026",
   "Add an event title in Event details before publishing.": "\u53d1\u5e03\u524d\u8bf7\u5728\u6d3b\u52a8\u8be6\u60c5\u4e2d\u586b\u5199\u6d3b\u52a8\u6807\u9898\u3002",
   "Add an event date in Event details before publishing.": "\u53d1\u5e03\u524d\u8bf7\u5728\u6d3b\u52a8\u8be6\u60c5\u4e2d\u586b\u5199\u6d3b\u52a8\u65e5\u671f\u3002",
   "Add an event location in Event details before publishing.": "\u53d1\u5e03\u524d\u8bf7\u5728\u6d3b\u52a8\u8be6\u60c5\u4e2d\u586b\u5199\u6d3b\u52a8\u5730\u70b9\u3002",

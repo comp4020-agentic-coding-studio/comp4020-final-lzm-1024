@@ -36,7 +36,7 @@ export function createVoiceCalls({get,all,run,id,now,fail,body,json,campusAccoun
    if(!online(calleeId))fail(409,'This person is offline. Try again when they are online.');
    if(get('SELECT COUNT(*) n FROM voice_calls WHERE callerId=? AND createdAt>?',u.id,new Date(Date.now()-60000).toISOString()).n>=5)fail(429,'Please wait before calling again');
    const callId=id();run("INSERT INTO voice_calls (id,conversationId,callerId,calleeId,clientId,status,createdAt,mode) VALUES (?,?,?,?,?,'ringing',?,?)",callId,conversation.id,u.id,calleeId,input.clientId,now(),mode);
-   live.set(callId,{caller,callee:null,created:Date.now(),deadline:Date.now()+35000,connected:new Set(),offers:0,answers:0,signals:new Map(),offline:new Map()});
+   live.set(callId,{caller,callee:null,created:Date.now(),deadline:Date.now()+35000,connected:new Set(),offers:0,answers:0,restartRequests:0,signals:new Map(),offline:new Map()});
    const c=record(callId);broadcast(c);return json(res,201,{call:view(c)});
   }
   const match=path.match(/^\/api\/calls\/([a-f0-9-]{36})(?:\/(signal))?$/);
@@ -57,10 +57,11 @@ export function createVoiceCalls({get,all,run,id,now,fail,body,json,campusAccoun
    if(prior){if(prior!==serial)fail(409,'Conflicting signalling retry');return json(res,200,{ok:true});}
    if(state.signals.size>=320)fail(429,'Too many connection updates');
    const signal=input.signal;
-   if(signal?.description){const s=signal.description,sections=typeof s.sdp==='string'?[...s.sdp.matchAll(/^m=(\S+)\s/gm)].map(m=>m[1]):[];if(typeof s.sdp!=='string'||s.sdp.length>24000||!s.sdp.startsWith('v=0')||sections.filter(k=>k==='audio').length!==1||sections.filter(k=>k==='video').length!==(c.mode==='video'?1:0)||sections.some(k=>!['audio','video'].includes(k)))fail(400,'Invalid call description');if(side==='caller'&&s.type==='offer'&&!state.offers)state.offers++;else if(side==='callee'&&s.type==='answer'&&state.offers&&!state.answers)state.answers++;else fail(409,'Unexpected call negotiation');}
-   else if(signal&&Object.hasOwn(signal,'candidate')){const v=signal.candidate;if(v!==null&&(!v||typeof v.candidate!=='string'||v.candidate.length>2000||!/^candidate:/.test(v.candidate)||v.sdpMid!==null&&v.sdpMid!==undefined&&(typeof v.sdpMid!=='string'||v.sdpMid.length>30)||v.sdpMLineIndex!==null&&v.sdpMLineIndex!==undefined&&(!Number.isInteger(v.sdpMLineIndex)||v.sdpMLineIndex<0||v.sdpMLineIndex>5)||v.usernameFragment!==undefined&&v.usernameFragment!==null&&(typeof v.usernameFragment!=='string'||v.usernameFragment.length>256)))fail(400,'Invalid audio connection candidate');}
-   else fail(400,'Invalid audio signal');
    const target=state[side==='caller'?'callee':'caller'];if(!online(target.userId,target.device,target.hash))fail(409,'The other person disconnected');
+   if(signal?.description){const s=signal.description,sections=typeof s.sdp==='string'?[...s.sdp.matchAll(/^m=(\S+)\s/gm)].map(m=>m[1]):[];if(typeof s.sdp!=='string'||s.sdp.length>24000||!s.sdp.startsWith('v=0')||sections.filter(k=>k==='audio').length!==1||sections.filter(k=>k==='video').length!==(c.mode==='video'?1:0)||sections.some(k=>!['audio','video'].includes(k)))fail(400,'Invalid call description');if(side==='caller'&&s.type==='offer'&&state.offers===state.answers&&state.offers<3)state.offers++;else if(side==='callee'&&s.type==='answer'&&state.offers===state.answers+1)state.answers++;else fail(409,'Unexpected call negotiation');}
+   else if(signal&&Object.hasOwn(signal,'candidate')){const v=signal.candidate;if(v!==null&&(!v||typeof v.candidate!=='string'||v.candidate.length>2000||v.candidate!==''&&!/^candidate:/.test(v.candidate)||v.sdpMid!==null&&v.sdpMid!==undefined&&(typeof v.sdpMid!=='string'||v.sdpMid.length>30)||v.sdpMLineIndex!==null&&v.sdpMLineIndex!==undefined&&(!Number.isInteger(v.sdpMLineIndex)||v.sdpMLineIndex<0||v.sdpMLineIndex>5)||v.usernameFragment!==undefined&&v.usernameFragment!==null&&(typeof v.usernameFragment!=='string'||v.usernameFragment.length>256)))fail(400,'Invalid audio connection candidate');}
+   else if(signal?.restart===true&&Object.keys(signal).length===1&&side==='callee'&&state.answers&&state.restartRequests<2)state.restartRequests++;
+   else fail(400,'Invalid audio signal');
    state.signals.set(input.clientId,serial);
    for(const ws of sockets)if(ws.social&&ws.user?.id===target.userId&&ws.callDevice===target.device&&ws.sessionHash===target.hash&&validSocket(ws))send(ws,'call:signal',{callId:c.id,signal});
    return json(res,200,{ok:true});
@@ -86,7 +87,7 @@ export function createVoiceCalls({get,all,run,id,now,fail,body,json,campusAccoun
  function sync(ws){const c=current(ws.user);if(c)send(ws,'call:state',{call:c});}
  function tick(){for(const [callId,state] of live){const c=record(callId);if(!c||c.status==='ended'){live.delete(callId);continue;}
    if(c.status!=='active'&&Date.now()>state.deadline){finish(c,c.status==='ringing'?'missed':'connection-failed');continue;}
-   for(const side of ['caller','callee']){const v=state[side];if(!v)continue;if(online(v.userId,v.device,v.hash)){state.offline.delete(side);continue;}if(!state.offline.has(side))state.offline.set(side,Date.now());if(Date.now()-state.offline.get(side)>6000){finish(c,'disconnected');break;}}
+   for(const side of ['caller','callee']){const v=state[side];if(!v)continue;if(online(v.userId,v.device,v.hash)){state.offline.delete(side);continue;}if(!state.offline.has(side))state.offline.set(side,Date.now());if(Date.now()-state.offline.get(side)>20000){finish(c,'disconnected');break;}}
   }}
  return {handle,sync,tick};
 }

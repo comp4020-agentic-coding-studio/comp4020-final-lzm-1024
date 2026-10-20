@@ -3,16 +3,16 @@ import assert from 'node:assert/strict';
 import {JSDOM} from 'jsdom';
 import {createVoiceController,voiceDevice} from '../public/voice-calls.js';
 
-function fixture({deny=false,deferred=false}={}){
+function fixture({deny=false,deferred=false,signalHandler,receiveHandler,waitForPeer=false}={}){
  const dom=new JSDOM('<body></body>',{url:'https://campus.example/messages',pretendToBeVisual:true});
  const prior={window:globalThis.window,document:globalThis.document,isSecureContext:globalThis.isSecureContext,CustomEvent:globalThis.CustomEvent};Object.assign(globalThis,{window:dom.window,document:dom.window.document,isSecureContext:true,CustomEvent:dom.window.CustomEvent});
  dom.window.HTMLMediaElement.prototype.pause=function(){};dom.window.HTMLMediaElement.prototype.play=function(){return Promise.resolve();};
  let permissions=0,stopped=0,resolveMic;const requests=[],toasts=[],constraints=[];const audio={kind:'audio',enabled:true,stop:()=>stopped++},video={kind:'video',enabled:true,stop:()=>stopped++};let videoRequested=false;const stream={getTracks:()=>videoRequested?[audio,video]:[audio],getAudioTracks:()=>[audio],getVideoTracks:()=>videoRequested?[video]:[]};
  const user={id:'alex'},peer={id:'riley',name:'Riley',username:'riley'};
  let call={id:'call-id',conversationId:'conversation',callerId:'alex',calleeId:'riley',caller:{id:'alex',name:'Alex'},callee:peer,callerDevice:voiceDevice,calleeDevice:null,status:'ringing'};
- const api=async(path,method='GET',data)=>{requests.push({path,method,data});if(path==='/api/calls'&&method==='GET')return {call:null,iceServers:[]};if(path==='/api/calls'&&method==='POST'){call={...call,mode:data.mode};return {call};}if(data?.action==='accept'){call={...call,status:'connecting',calleeDevice:voiceDevice};return {call};}if(data?.action){call={...call,status:'ended',reason:data.action==='reject'?'declined':'completed'};return {call};}return {call};};
+ const api=async(path,method='GET',data)=>{requests.push({path,method,data});if(path.endsWith('/signal')&&signalHandler)return signalHandler(data);if(path==='/api/calls'&&method==='GET')return {call:null,iceServers:[]};if(path==='/api/calls'&&method==='POST'){call={...call,mode:data.mode,status:'ringing'};return {call};}if(data?.action==='connected'){call={...call,status:waitForPeer?'connecting':'active',connectedAt:waitForPeer?null:new Date().toISOString()};return {call};}if(data?.action==='accept'){call={...call,status:'connecting',calleeDevice:voiceDevice};return {call};}if(data?.action){call={...call,status:'ended',reason:data.action==='reject'?'declined':data.action==='failed'?'connection-failed':'completed'};return {call};}return {call};};
  const media={getUserMedia:async value=>{constraints.push(value);videoRequested=!!value.video;permissions++;if(deny){const e=Error('Denied');e.name='NotAllowedError';throw e;}if(deferred)return new Promise(r=>resolveMic=r);return stream;}};
- let transportOptions,closes=0;const transport={offer:async()=>{},receive:async()=>{},mute:value=>{audio.enabled=!value;},camera:value=>{video.enabled=value;},close:()=>closes++};
+ let transportOptions,closes=0;const transport={offer:async()=>{},receive:async signal=>receiveHandler?.(signal),mute:value=>{audio.enabled=!value;},camera:value=>{video.enabled=value;},close:()=>closes++};
  const client=createVoiceController({user,api,toast:x=>toasts.push(x),navigate:()=>{},media,makeTransport:options=>{transportOptions=options;return transport;}});
  const connected=()=>window.dispatchEvent(new dom.window.CustomEvent('campus:community',{detail:{type:'social:connected'}}));
  return {incoming(){call={...call,mode:'video',callerId:'riley',calleeId:'alex',caller:peer,callee:{id:'alex',name:'Alex'},callerDevice:'other',calleeDevice:null};client.receive(call);},options:()=>transportOptions,client,dom,requests,toasts,call,connected,constraints,video,audio,stream,permissions:()=>permissions,stopped:()=>stopped,resolveMic:()=>resolveMic?.(stream),closes:()=>closes,cleanup(){client.destroy();dom.window.close();Object.assign(globalThis,prior);}};
@@ -30,3 +30,25 @@ test('audio persists across route UI changes but ending the call stops capture a
  test('voice calling still explicitly disables camera capture',async()=>{const f=fixture();try{f.connected();await settle();await f.client.start('conversation');assert.equal(f.constraints[0].video,false);assert.equal(document.querySelector('.video-call-stage').hidden,true);assert.equal(document.querySelector('.voice-camera'),null);}finally{f.cleanup();}});
 
 test('answering a video call captures once, binds both remote tracks, and logout releases all media',async()=>{const f=fixture();try{f.incoming();assert.equal(f.permissions(),0);document.querySelector('.voice-answer').click();await settle();assert.equal(f.permissions(),1);assert.ok(f.constraints[0].video);assert.equal(f.options().mode,'video');f.options().onTrack({track:f.audio,streams:[f.stream]});f.options().onTrack({track:f.video,streams:[f.stream]});assert.equal(document.querySelector('.video-call-remote').srcObject,f.stream);assert.equal(document.querySelector('audio').srcObject,f.stream);f.client.destroy();assert.ok(f.stopped()>=2);assert.equal(document.querySelector('.voice-call-panel'),null);}finally{f.cleanup();}});
+
+test('transient signalling retry reuses its receipt ID; forbidden signals do not retry',async()=>{
+ let attempts=0;const f=fixture({signalHandler:()=>{if(!attempts++)throw Error('Temporary network failure');return {ok:true};}});
+ try{f.connected();await settle();await f.client.start('conversation');await f.options().onSignal({candidate:null});const sent=f.requests.filter(r=>r.path.endsWith('/signal'));assert.equal(sent.length,2);assert.equal(sent[0].data.clientId,sent[1].data.clientId);}finally{f.cleanup();}
+ const denied=fixture({signalHandler:()=>{const e=Error('Session expired');e.status=401;throw e;}});try{denied.connected();await settle();await denied.client.start('conversation');await assert.rejects(denied.options().onSignal({candidate:null}),/Session expired/);assert.equal(denied.requests.filter(r=>r.path.endsWith('/signal')).length,1);}finally{denied.cleanup();}
+});
+test('reconnecting status persists through clock ticks; video placeholder clears only when frames load',async()=>{
+ const f=fixture();try{f.connected();await settle();await f.client.start('conversation','video');f.options().onState('connected');await f.options().onConnected();f.client.receive({...f.call,status:'active',connectedAt:new Date().toISOString()});f.options().onState('reconnecting');await new Promise(r=>setTimeout(r,1050));assert.match(document.querySelector('.voice-call-person [role=status]').textContent,/Reconnecting/);
+ const video=document.querySelector('.video-call-remote'),placeholder=document.querySelector('.video-call-placeholder');assert.equal(placeholder.hidden,false);Object.defineProperty(video,'readyState',{value:2});Object.defineProperty(video,'videoWidth',{value:640});video.dispatchEvent(new f.dom.window.Event('loadeddata'));assert.equal(placeholder.hidden,true);
+ }finally{f.cleanup();}
+});
+test('failed signal processing does not poison the next call queue',async()=>{
+ let count=0;const f=fixture({receiveHandler:()=>{if(++count===1)throw Error('First call failed');}});
+ try{f.connected();await settle();await f.client.start('conversation');const detail={type:'call:signal',callId:f.call.id,signal:{candidate:null}};
+ window.dispatchEvent(new f.dom.window.CustomEvent('campus:community',{detail}));await settle();await settle();assert.equal(count,1);assert.match(document.querySelector('.voice-call-person').textContent,/Call connection failed/);
+ await f.client.start('conversation');window.dispatchEvent(new f.dom.window.CustomEvent('campus:community',{detail}));await settle();assert.equal(count,2);assert.equal(document.querySelector('.voice-call-panel').hidden,false);assert.equal(f.toasts.filter(t=>t==='First call failed').length,1);
+ }finally{f.cleanup();}
+});
+
+test('one-sided connection waits for the peer instead of showing a misleading zero-second connected clock',async()=>{
+ const f=fixture({waitForPeer:true});try{f.connected();await settle();await f.client.start('conversation');f.options().onState('connected');await f.options().onConnected();const status=()=>document.querySelector('.voice-call-person [role=status]').textContent;assert.match(status(),/Waiting for your friend/);assert.doesNotMatch(status(),/Connected/);await new Promise(r=>setTimeout(r,1050));assert.match(status(),/Waiting for your friend/);f.client.receive({...f.call,status:'active',connectedAt:new Date(Date.now()-3000).toISOString()});assert.match(status(),/Connected.*00:03/);}finally{f.cleanup();}
+});
