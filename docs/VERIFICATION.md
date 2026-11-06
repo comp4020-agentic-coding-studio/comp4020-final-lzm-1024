@@ -1,5 +1,11 @@
 # Verification record and reproduction
 
+## Publication celebration, 6 November 2026
+
+The publish flow now shows a Congratulations dialog after the server accepts publication and the poster detail page has opened. A bounded confetti effect clears after about three seconds; closing the dialog or navigating away cancels its cleanup timer. Reduced motion keeps a static success message. Publication requests are guarded against repeated clicks while pending. Existing validation and publishing permissions are unchanged.
+
+JSDOM checks cover the success message, bounded particles, cleanup, dismissal and reduced motion. A disposable local account and clearly labelled test draft were used for browser verification: a missing date produced guidance without celebration; entering a date and publishing opened the success dialog; View my poster revealed the published details; refreshing did not replay the dialog. Desktop and a configured 390×844 dark viewport were inspected, and screenshots were saved outside the repository. No production posters were created or modified for these checks.
+
 ## Beginner recovery guidance, 6 November 2026
 
 Missing event metadata now opens a large, labelled dialog with a reason, numbered instructions and an explicit button to focus the required field. The button does not save values or publish. Missing-field checks on the server remain unchanged. Common editor saving, network, sign-in and device-permission notices explain recovery and stay visible until dismissed; routine feedback pauses its seven-second expiry for pointer or keyboard interaction. Product controls use English by default, with the new help copy in the four existing translated catalogues. Editor-specific translations distinguish saving a draft from saving an event to a personal list.

@@ -20,7 +20,7 @@ export function explainFeedback(message,{kind='info'}={}){
 }
 
 export function createFeedback({node,document:doc=node.ownerDocument,setTimer=setTimeout,clearTimer=clearTimeout}){
- let timer=null,dialog=null,restoreFocus=null,persistent=false,hovering=false;
+ let timer=null,celebrationTimer=null,dialog=null,restoreFocus=null,persistent=false,hovering=false;
  const element=(tag,className,text)=>{const el=doc.createElement(tag);if(className)el.className=className;if(text!==undefined)el.textContent=text;return el;};
  function dismiss(){clearTimer(timer);hovering=false;const focused=node.contains(doc.activeElement);node.classList.remove('show');node.hidden=true;node.replaceChildren();if(focused&&restoreFocus?.isConnected)restoreFocus.focus();}
  function arm(){clearTimer(timer);if(!node.hidden&&!persistent&&!hovering&&!node.contains(doc.activeElement))timer=setTimer(dismiss,7000);}
@@ -34,7 +34,17 @@ export function createFeedback({node,document:doc=node.ownerDocument,setTimer=se
   if(detail.steps.length){body.append(element('strong','feedback-next','What to do next'));const list=element('ol','feedback-steps');for(const step of detail.steps)list.append(element('li','',step));body.append(list);}
   const close=element('button','feedback-dismiss','×');close.type='button';close.setAttribute('aria-label','Dismiss notification');close.onclick=dismiss;node.append(icon,body,close);node.classList.add('show');arm();
  }
- function closeHelp(){if(!dialog)return;const current=dialog;dialog=null;if(current.open)current.close();current.remove();}
+ function closeHelp(){clearTimer(celebrationTimer);celebrationTimer=null;if(!dialog)return;const current=dialog;dialog=null;if(current.open)current.close();current.remove();}
+ function celebrate(){
+  closeHelp();dismiss();const previous=doc.activeElement,current=element('dialog','dialog feedback-dialog publish-celebration');dialog=current;current.setAttribute('aria-labelledby','published-heading');current.setAttribute('aria-describedby','published-description');
+  const icon=element('div','celebration-icon','🎉');icon.setAttribute('aria-hidden','true');const badge=element('span','feedback-help-badge','PUBLISHED SUCCESSFULLY'),heading=element('h2','','Congratulations!');heading.id='published-heading';
+  const message=element('p','celebration-message','Your poster is live!');message.id='published-description';const copy=element('p','feedback-description','Your event is now on your campus wall. Let your friends know!'),button=element('button','primary','View my poster');button.type='button';button.autofocus=true;
+  const close=element('button','feedback-dismiss celebration-dismiss','×');close.type='button';close.setAttribute('aria-label','Close celebration');
+  const finish=()=>{closeHelp();if(previous?.isConnected)previous.focus();};button.onclick=close.onclick=finish;current.addEventListener('keydown',event=>event.stopPropagation());current.addEventListener('cancel',event=>{event.preventDefault();finish();});current.addEventListener('close',()=>{if(dialog===current){clearTimer(celebrationTimer);celebrationTimer=null;dialog=null;}current.remove();});
+  current.append(close,icon,badge,heading,message,copy,button);
+  if(!doc.defaultView?.matchMedia?.('(prefers-reduced-motion: reduce)').matches){const confetti=element('div','publish-confetti');confetti.setAttribute('aria-hidden','true');for(let i=0;i<28;i++){const piece=element('i','');piece.style.setProperty('--x',`${(i*37)%100}%`);piece.style.setProperty('--sway',`${(i%2?1:-1)*(30+(i*11)%80)}px`);piece.style.setProperty('--delay',`${(i%7)*50}ms`);piece.style.setProperty('--colour',['#e9bc59','#60bea2','#b4a1ed','#ed92ac','#79bce8'][i%5]);confetti.append(piece);}current.append(confetti);celebrationTimer=setTimer(()=>{confetti.remove();if(dialog===current)celebrationTimer=null;},3100);}
+  doc.body.append(current);current.showModal();
+ }
  function help(detail,onAction){
   closeHelp();const previous=doc.activeElement,current=element('dialog','dialog feedback-dialog');dialog=current;current.setAttribute('role','alertdialog');current.setAttribute('aria-labelledby','feedback-heading');current.setAttribute('aria-describedby','feedback-description');
   const heading=element('h2','',detail.title);heading.id='feedback-heading';const description=element('p','feedback-description',detail.message);description.id='feedback-description';const list=element('ol','feedback-help-steps');for(const [index,step] of detail.steps.entries()){const item=element('li',''),number=element('span','feedback-step-number',String(index+1));number.setAttribute('aria-hidden','true');item.append(number,element('span','',step));list.append(item);}
@@ -44,5 +54,5 @@ export function createFeedback({node,document:doc=node.ownerDocument,setTimer=se
   go.onclick=()=>finish(true);cancel.onclick=()=>finish(false);current.addEventListener('cancel',event=>{event.preventDefault();finish(false);});current.addEventListener('close',()=>{if(dialog===current)dialog=null;current.remove();});
   actions.append(go,cancel);current.append(badge,heading,description,element('h3','','How to fix it'),list,actions);doc.body.append(current);current.showModal();
  }
- return {show,help,dismiss,closeHelp};
+ return {show,help,celebrate,dismiss,closeHelp};
 }

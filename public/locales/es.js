@@ -1,5 +1,11 @@
 // Static interface catalogue. User-authored content is not translated.
 export default {
+  "PUBLISHED SUCCESSFULLY": "PUBLICADO CORRECTAMENTE",
+  "Congratulations!": "\u00a1Enhorabuena!",
+  "Your poster is live!": "\u00a1Tu cartel ya est\u00e1 publicado!",
+  "Your event is now on your campus wall. Let your friends know!": "Tu evento ya est\u00e1 en el muro de tu campus. \u00a1Av\u00edsales a tus amigos!",
+  "View my poster": "Ver mi cartel",
+  "Close celebration": "Cerrar celebraci\u00f3n",
   "Event title": "T\u00edtulo del evento",
   "Event title *": "T\u00edtulo del evento *",
   "Date *": "Fecha *",

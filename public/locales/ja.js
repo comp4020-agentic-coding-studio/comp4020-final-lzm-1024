@@ -1,5 +1,11 @@
 // Static interface catalogue. User-authored content is not translated.
 export default {
+  "PUBLISHED SUCCESSFULLY": "\u516c\u958b\u3057\u307e\u3057\u305f",
+  "Congratulations!": "\u304a\u3081\u3067\u3068\u3046\u3054\u3056\u3044\u307e\u3059\uff01",
+  "Your poster is live!": "\u30dd\u30b9\u30bf\u30fc\u304c\u516c\u958b\u3055\u308c\u307e\u3057\u305f\uff01",
+  "Your event is now on your campus wall. Let your friends know!": "\u30a4\u30d9\u30f3\u30c8\u304c\u30ad\u30e3\u30f3\u30d1\u30b9\u306e\u63b2\u793a\u677f\u306b\u63b2\u8f09\u3055\u308c\u307e\u3057\u305f\u3002\u53cb\u9054\u306b\u3082\u77e5\u3089\u305b\u307e\u3057\u3087\u3046\uff01",
+  "View my poster": "\u30dd\u30b9\u30bf\u30fc\u3092\u898b\u308b",
+  "Close celebration": "\u304a\u795d\u3044\u3092\u9589\u3058\u308b",
   "Event title": "\u30a4\u30d9\u30f3\u30c8\u540d",
   "Event title *": "\u30a4\u30d9\u30f3\u30c8\u540d *",
   "Date *": "\u65e5\u4ed8 *",

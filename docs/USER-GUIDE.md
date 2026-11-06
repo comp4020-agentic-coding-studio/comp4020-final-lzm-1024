@@ -10,6 +10,8 @@ The project draws on Parimal Satyal's discussion of spaces made by and for ordin
 
 ## Using the wall
 
+After a successful publish, a Congratulations dialog confirms that the poster is live. A brief confetti animation celebrates the result; View my poster or the close button reveals the poster underneath. Opening or refreshing a poster does not replay the celebration. Reduced-motion settings keep the success message without moving confetti.
+
 Important feedback explains what happened and what to do next. If a poster is missing its title, date or location, a large dialog gives numbered steps and a button that takes you to the correct Event details field. Nothing is published by that button. Correct the field, wait for Connected · Saved, then publish again. Keep editing or Escape closes the help without changing the draft. Common saving, network, sign-in and call-permission problems have larger notifications with recovery steps; important notices remain until dismissed. Routine updates disappear after seven seconds, with the timer paused while the notice is being read with the pointer or keyboard.
 
 Before publishing, open **Event details** in the canvas toolbar and fill in the event title, date and location. Text drawn on the canvas does not fill these fields. If a required field is empty, Publish opens Event details and focuses that field. The checklist appears in the same panel. Enter the actual event date; the editor does not guess it from the artwork.

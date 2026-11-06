@@ -9,7 +9,7 @@ test('five catalogues have matching keys, rules and core page controls',async()=
   const catalogues=await Promise.all(['zh-CN','es','fr','ja'].map(id=>import('../public/locales/'+id+'.js').then(x=>x.default)));
   const keys=Object.keys(catalogues[0]).sort();assert(keys.length>=750);
   for(const catalogue of catalogues){assert.deepEqual(Object.keys(catalogue).sort(),keys);for(const [key,value] of Object.entries(catalogue)){assert(value.trim());assert.deepEqual([...key.matchAll(/\{\d+\}/g)].map(x=>x[0]).sort(),[...value.matchAll(/\{\d+\}/g)].map(x=>x[0]).sort());}}
-  for(const [id] of languages){await setLanguage(id);for(const key of ['Games','Messages','Create poster','Canvas size & background','Voice call','Video quality','Translate to English','Event details','Connected · Saved','Add an event date','Go to Date','How to fix it','Keep editing'])assert.equal(translate(key),id==='en'?key:catalogues[languages.findIndex(([language])=>language===id)-1][key]);}
+  for(const [id] of languages){await setLanguage(id);for(const key of ['Games','Messages','Create poster','Canvas size & background','Voice call','Video quality','Translate to English','Event details','Connected · Saved','Add an event date','Go to Date','How to fix it','Keep editing','Congratulations!','PUBLISHED SUCCESSFULLY','View my poster'])assert.equal(translate(key),id==='en'?key:catalogues[languages.findIndex(([language])=>language===id)-1][key]);}
   await setLanguage('en');
 });
 

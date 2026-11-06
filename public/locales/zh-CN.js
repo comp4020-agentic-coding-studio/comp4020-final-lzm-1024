@@ -1,5 +1,11 @@
 // Static interface catalogue. User-authored content is not translated.
 export default {
+  "PUBLISHED SUCCESSFULLY": "\u53d1\u5e03\u6210\u529f",
+  "Congratulations!": "\u606d\u559c\u4f60\uff01",
+  "Your poster is live!": "\u4f60\u7684\u6d77\u62a5\u5df2\u6210\u529f\u53d1\u5e03\uff01",
+  "Your event is now on your campus wall. Let your friends know!": "\u6d3b\u52a8\u5df2\u663e\u793a\u5728\u4f60\u7684\u6821\u56ed\u6d77\u62a5\u5899\uff0c\u5feb\u544a\u8bc9\u597d\u53cb\u5427\uff01",
+  "View my poster": "\u67e5\u770b\u6211\u7684\u6d77\u62a5",
+  "Close celebration": "\u5173\u95ed\u5e86\u795d\u63d0\u793a",
   "Event title": "\u6d3b\u52a8\u6807\u9898",
   "Event title *": "\u6d3b\u52a8\u6807\u9898 *",
   "Date *": "\u65e5\u671f *",
