@@ -6,7 +6,7 @@ export function ensurePublicationDetails(draft,board,notify){
  const prompts={title:'Add an event title in Event details before publishing.',date:'Add an event date in Event details before publishing.',location:'Add an event location in Event details before publishing.'};
  const missing=Object.keys(prompts).find(field=>!String(draft?.[field]||'').trim());
  if(!missing)return true;
- board.openEventDetails(missing);notify(prompts[missing]);return false;
+ board.openEventDetails(missing);notify(prompts[missing],{publicationField:missing});return false;
 }
 export function mountWhiteboard(root,{getDraft,isConnected,send,onPending,toast,flushAll}){
  const legacy=$('.designer-layout',root);legacy.hidden=true;legacy.classList.add('legacy-studio');document.body.classList.add('whiteboard-mode');

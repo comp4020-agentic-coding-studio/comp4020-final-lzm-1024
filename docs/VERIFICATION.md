@@ -1,5 +1,11 @@
 # Verification record and reproduction
 
+## Beginner recovery guidance, 6 November 2026
+
+Missing event metadata now opens a large, labelled dialog with a reason, numbered instructions and an explicit button to focus the required field. The button does not save values or publish. Missing-field checks on the server remain unchanged. Common editor saving, network, sign-in and device-permission notices explain recovery and stay visible until dismissed; routine feedback pauses its seven-second expiry for pointer or keyboard interaction. Product controls use English by default, with the new help copy in the four existing translated catalogues. Editor-specific translations distinguish saving a draft from saving an event to a personal list.
+
+Local JSDOM checks verify persistent warnings, routine expiry, text-only rendering, contextual steps, modal replacement, explicit field-navigation actions, cancellation, focus return and isolation from canvas keyboard shortcuts. HTTP tests follow the app and call import graphs to check that new modules are actually served. A disposable local account and private draft were used for browser inspection: desktop and a configured 390×844 viewport showed the date dialog; Go to Date focused the native date control; the dark phone preview remained readable. A local mobile screenshot was saved outside the repository. These checks do not establish a full accessibility audit or a new student usability study. No production accounts or posters were created for this verification.
+
 ## Call recovery regression, 21 October 2026
 
 Follow-up feedback described both local previews visible while the call remained Connecting. This does not establish that remote media reached either browser. A further confirmed signalling gap was repaired: the server previously restored call state after a signalling socket reconnect but did not replay accepted negotiation messages. Its bounded in-memory receipts now retain the intended device/session and replay signals only to that destination; clients process each receipt once. Tests reconnect the answering socket and recover the original offer, reject delivery to another device, and check client deduplication. No negotiation data is written to the database or logs.

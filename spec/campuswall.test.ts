@@ -18,7 +18,7 @@ it('verifies custom design, live friend collaboration, private snapshots and per
 }, 35000);
 
 it('keeps motion feedback balanced across failures, concurrent requests and reduced-motion dialogs', async () => {
-  const result = await promisify(execFile)(process.execPath, ['--test', '--test-reporter=tap', 'scripts/motion.test.mjs'], { timeout: 10000 });
+  const result = await promisify(execFile)(process.execPath, ['--test', '--test-reporter=tap', 'scripts/motion.test.mjs', 'scripts/feedback.test.mjs'], { timeout: 10000 });
   expect(result.stdout).toContain('# fail 0');
 }, 15000);
 

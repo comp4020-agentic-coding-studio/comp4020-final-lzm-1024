@@ -1,6 +1,7 @@
 import {installAppearance,mountAppearancePicker} from './appearance.js';
 import {installLanguage} from './i18n.js';
 import {avatar} from './chat-ui.js';
+import {createFeedback,publicationHelp} from './feedback.js';
 import { campusToday, dayAfter, eventStatus, formatEventDate } from './event-utils.js';
 import { validEmail, universityFromEmail } from './email-utils.js';
 import { mountChat } from './chat.js';
@@ -17,6 +18,7 @@ const mountCommunityHeader=createSessionMount(()=>import('./community.js').then(
 document.addEventListener('error',event=>{if(event.target.matches?.('.user-avatar img'))event.target.remove();},true);
 const $ = (s,root=document) => root.querySelector(s);
 const app=$('#app');
+const feedback=createFeedback({node:$('#toast')});
 const watchDocument=/^\/watch(?:\/|$)/.test(location.pathname);
 const categories=['Social','Academic','Clubs','Sport','Arts','Career','Other'];
 const templates={minimal:'Minimal event',photo:'Photo event',club:'Club recruitment',seminar:'Academic seminar',social:'Social event'};
@@ -25,7 +27,11 @@ let me=null,universities=[],selected=localStorage.getItem('campuswall-university
 const pending=new Map(),timers=new Map();
 let stopped=false,connected=false,renderedPath=location.pathname+location.search,uploading=false,editingTimer=null,chatPanel=null,messagesPanel=null,gamesPanel=null,watchPanel=null,profilePanel=null,designerPanel=null,whiteboardPanel=null,communityPanel=null,eventPanel=null,watchExtras=null,wallPanel=null;let undoEdits=[],redoEdits=[];
 async function api(path,method='GET',data,{signal}={}) {return withRequestMotion(async()=>{const response=await fetch(path,{method,signal,headers:{'content-type':'application/json'},...(data?{body:JSON.stringify(data)}:{})});const value=await response.json();if(!response.ok){const error=new Error(value.error||'Unable to complete this request');error.status=response.status;throw error;}return value;});}
-function toast(text) {const node=$('#toast');node.textContent=text;node.classList.add('show');clearTimeout(toast.timer);toast.timer=setTimeout(()=>node.classList.remove('show'),5000);}
+function toast(text,options={}) {
+  const match=/Unable to publish: (title|date|location) is missing/.exec(String(text)),field=options.publicationField||match?.[1],help=publicationHelp(field);
+  if(help&&whiteboardPanel){const board=whiteboardPanel,current=routeId;feedback.dismiss();feedback.help(help,()=>{if(current===routeId&&board===whiteboardPanel)board.openEventDetails(field);});return;}
+  feedback.show(text,options);
+}
 function mountHomepageChat() {
   chatPanel?.destroy();
   chatPanel=mountChat($('#campus-chat'),{user:me,university:universities.find(u=>u.id===selected),loginPath:`/login?next=${encodeURIComponent(location.pathname)}`,onAuthExpired(){me=null;header();mountHomepageChat();chatPanel.setConnection(connected);toast('Sign in again to send messages.');}});
@@ -36,16 +42,16 @@ function options(values,current) {return Object.entries(Array.isArray(values)?Ob
 function header() {
   if(me?.universityId){selected=me.universityId;localStorage.setItem('campuswall-university',selected);}
   applyCampusTheme();
-  mountVoiceCalls({user:me,api,toast,navigate}).catch(error=>toast(error.message));
+  mountVoiceCalls({user:me,api,toast,navigate}).catch(error=>toast(error.message,{kind:'error'}));
   const campus=universities.find(u=>u.slug===selected),brand=campus?.logo?`<img class="campus-logo" src="${esc(campus.logo.src)}" width="${campus.logo.width}" height="${campus.logo.height}" alt="${esc(campus.name)} logo" fetchpriority="high"><span class="brand-product">CampusWall</span>`:'<span class="brand-mark">▦</span> CampusWall<span class="brand-dot">.</span>';
   $('#header').innerHTML=`<a class="brand${campus?.logo?' school-brand':''}" href="/${selected||''}" aria-label="${esc(campus?`CampusWall — ${campus.shortName} home`:'CampusWall home')}" data-nav>${brand}</a>${me?`<div class="campus-picker account-campus" aria-label="Account university" title="Your account university is fixed">${esc(universities.find(u=>u.id===me.universityId)?.shortName||'Set your campus')}</div>`:`<label class="campus-picker"><span class="sr-only">Choose university</span><select id="campus"><option value="">Choose campus</option>${universities.map(u=>`<option value="${u.slug}" ${selected===u.slug?'selected':''}>${u.shortName}</option>`).join('')}</select></label>`}<nav>${me?`<button class="quiet profile-button" id="profile" aria-label="My profile">${avatar(me,'',false)}<span data-i18n-ignore>${esc(me.name)}</span></button><button class="quiet" id="logout" title="Sign out">Sign out</button>`:`<a href="/login" data-nav>Sign in</a>`}<button class="primary" id="create">＋ Create poster</button></nav>`;
   $('#header nav').insertAdjacentHTML('afterbegin',`<a href="/community" data-nav>Campus life</a><a href="/watch" data-nav>Watch together</a><a href="/messages" data-nav>Messages</a><details class="nav-more"><summary>Explore</summary><div><a href="/games" data-nav>Games</a>${selected?`<a href="/${selected}/clubs" data-nav>Clubs & societies</a>`:''}${me?'<a href="/saved" data-nav>Saved events</a><a href="/my-posters" data-nav>My posters</a>':''}</div></details>`);
   if(me)$('#header nav').insertAdjacentHTML('beforeend','<a href="/community/notifications" id="community-bell" aria-label="Notifications" data-nav>◉<span id="community-unread" hidden></span></a>');
-  mountCommunityHeader({user:me,api,onAuthExpired(){me=null;header();toast('Sign in again to view campus updates.');}}).catch(error=>toast(error.message));
+  mountCommunityHeader({user:me,api,onAuthExpired(){me=null;header();toast('Sign in again to view campus updates.');}}).catch(error=>toast(error.message,{kind:'error'}));
   mountAppearancePicker();
   if($('#campus'))$('#campus').onchange=e=>{if(e.target.value)navigate(`/${e.target.value}${universities.some(u=>location.pathname===`/${u.slug}/clubs`)?'/clubs'+location.search:''}`);};$('#create').onclick=createPoster;
   if($('#profile'))$('#profile').onclick=()=>navigate('/people/'+me.id);
-  if($('#logout'))$('#logout').onclick=async()=>{try{await flush();await mountVoiceCalls({user:null,api,toast,navigate});disconnect();await api('/api/auth/logout','POST');me=null;header();await navigate(`/${selected||''}`);}catch(error){toast(error.message);await route();}};
+  if($('#logout'))$('#logout').onclick=async()=>{try{await flush();await mountVoiceCalls({user:null,api,toast,navigate});disconnect();await api('/api/auth/logout','POST');me=null;header();await navigate(`/${selected||''}`);}catch(error){toast(error.message,{kind:'error'});await route();}};
 }
 function applyCampusTheme() {
   const university=universities.find(u=>u.slug===selected);
@@ -60,11 +66,11 @@ async function flush() {
   if(!connected)throw new Error('Wait for reconnection before continuing.');
   const start=Date.now();while(pending.size){if(!connected||Date.now()-start>6000)throw new Error('Changes are still saving. Please try again.');await new Promise(resolve=>setTimeout(resolve,40));}
 }
-async function navigate(path,replace=false) {try{await flush();if(/^\/watch(?:\/|$)/.test(path)&&!watchDocument){location[replace?'replace':'assign'](path);return;}history[replace?'replaceState':'pushState']({},'',path);await route();window.scrollTo(0,0);}catch(error){toast(error.message);}}
+async function navigate(path,replace=false) {try{await flush();if(/^\/watch(?:\/|$)/.test(path)&&!watchDocument){location[replace?'replace':'assign'](path);return;}history[replace?'replaceState':'pushState']({},'',path);await route();window.scrollTo(0,0);}catch(error){toast(error.message,{kind:'error'});}}
 function openAvatar(event){const node=event.target.closest?.('[data-profile-user]');if(!node)return;if(event.type==='keydown'&&!['Enter',' '].includes(event.key))return;event.preventDefault();event.stopImmediatePropagation();navigate('/people/'+node.dataset.profileUser);}
 document.addEventListener('click',openAvatar,true);document.addEventListener('keydown',openAvatar,true);
 document.addEventListener('click',event=>{const save=event.target.closest('[data-save]');if(save){toggleSaved(save);return;}const link=event.target.closest('a[data-nav]');if(link&&!event.ctrlKey&&!event.metaKey&&event.button===0){event.preventDefault();navigate(link.getAttribute('href'));}});
-window.addEventListener('popstate',async()=>{try{await flush();await route();}catch(error){history.pushState({},'',renderedPath);toast(error.message);}});
+window.addEventListener('popstate',async()=>{try{await flush();await route();}catch(error){history.pushState({},'',renderedPath);toast(error.message,{kind:'error'});}});
 window.addEventListener('beforeunload',event=>{if(pending.size||uploading){event.preventDefault();event.returnValue='';}});
 function disconnect() {wallPanel?.destroy();wallPanel=null;communityPanel?.destroy();communityPanel=null;eventPanel?.destroy();eventPanel=null;watchExtras?.destroy();watchExtras=null;watchPanel?.destroy();watchPanel=null;profilePanel?.destroy();profilePanel=null;whiteboardPanel?.destroy();whiteboardPanel=null;designerPanel?.destroy();designerPanel=null;chatPanel?.destroy();chatPanel=null;messagesPanel?.destroy();messagesPanel=null;gamesPanel?.destroy();gamesPanel=null;stopped=true;clearTimeout(retry);clearInterval(editingTimer);if(socket){socket.onclose=null;socket.close();socket=null;}connected=false;pending.clear();for(const timer of timers.values())clearTimeout(timer);timers.clear();}
 function live(query,receive,editor=false) {
@@ -108,10 +114,11 @@ async function toggleSaved(button) {
     document.querySelectorAll('[data-save]').forEach(b=>{if(b.dataset.save!==posterId)return;b.dataset.saved=String(result.isSaved);b.classList.toggle('saved',result.isSaved);b.setAttribute('aria-pressed',String(result.isSaved));b.setAttribute('aria-label',`${result.isSaved?'Unsave':'Save'} event`);b.textContent=result.isSaved?'★ Saved':'☆ Save event';});
     toast(result.isSaved?'Saved to your events.':'Event removed from your saved list.');
     if(location.pathname==='/saved'&&!result.isSaved)await route();
-  }catch(error){toast(error.message);}finally{button.disabled=false;}
+  }catch(error){toast(error.message,{kind:'error'});}finally{button.disabled=false;}
 }
 function errorPage(message) {app.innerHTML=`<section class="empty"><span class="eyebrow">LET’S TRY THAT AGAIN</span><h1>${esc(message)}</h1><a class="button" href="/${selected||''}" data-nav>Back to campus wall</a></section>`;}
 async function route() {
+  feedback.closeHelp();
   disconnect();draft=null;renderedPath=location.pathname+location.search;const current=++routeId;const path=location.pathname;
   app.innerHTML='<div class="loading" role="status">Finding your campus moments…</div>';
   try {
@@ -274,7 +281,7 @@ async function detail(p,current) {
     $('.description').insertAdjacentHTML('afterend',`<div class="photo-provenance"><a href="${esc(p.photoPoster.venueSource)}" target="_blank" rel="noopener noreferrer">Venue reference — official university source ↗</a><br>Illustrative photograph by <a href="${esc(p.photoPoster.photoSource)}" target="_blank" rel="noopener noreferrer">${esc(p.photoPoster.credit)} / Pexels ↗</a>, used under the <a href="${esc(p.photoPoster.license)}" target="_blank" rel="noopener noreferrer">Pexels licence</a>. This photo does not show the listed campus venue.</div>`);
   }
   $('#share-poster').insertAdjacentHTML('afterend',contactOrganiser(p));
-  async function loadComments() {try{const list=await api(`/api/posters/${p.id}/comments`);if(current!==routeId)return;$('#comments').innerHTML=list.length?list.map(c=>`<article class="comment"><strong data-i18n-ignore>${esc(c.author)}</strong><time>${new Date(c.createdAt).toLocaleDateString('en-AU')}</time><p>${esc(c.body)}</p></article>`).join(''):'<p class="muted">No comments yet. Start the conversation.</p>';}catch(error){toast(error.message);}}
+  async function loadComments() {try{const list=await api(`/api/posters/${p.id}/comments`);if(current!==routeId)return;$('#comments').innerHTML=list.length?list.map(c=>`<article class="comment"><strong data-i18n-ignore>${esc(c.author)}</strong><time>${new Date(c.createdAt).toLocaleDateString('en-AU')}</time><p>${esc(c.body)}</p></article>`).join(''):'<p class="muted">No comments yet. Start the conversation.</p>';}catch(error){toast(error.message,{kind:'error'});}}
   if($('#comment-form'))$('#comment-form').onsubmit=async event=>{event.preventDefault();const form=event.target;const button=$('button',form);button.disabled=true;try{await api(`/api/posters/${p.id}/comments`,'POST',{body:form.elements.body.value});form.reset();await loadComments();}catch(error){$('.error',form).textContent=error.message;}finally{button.disabled=false;}};
   await loadComments();if(current===routeId)live(`wall=${p.universityId}`,message=>{if(message.type==='wall:changed'){api(`/api/posters/${p.id}`).then(()=>loadComments()).catch(error=>errorPage(error.message));}});
 }
@@ -299,7 +306,7 @@ async function uploadHero(file) {
     if(current!==routeId)return;
     if(result.version>=draft.version){draft=result;for(const [field,entry] of pending)draft[field]=entry.value;syncInputs();preview();}
     uploadedSrc=result.heroImageUrl;$('#upload-message').textContent='Image uploaded and saved. You can choose another to replace it.';toast('Image ready.');
-  }catch(error){toast(error.message);if(current===routeId&&$('#upload-message'))$('#upload-message').textContent=error.message;}
+  }catch(error){toast(error.message,{kind:'error'});if(current===routeId&&$('#upload-message'))$('#upload-message').textContent=error.message;}
   finally{uploading=false;if(current===routeId){if(uploadedSrc)whiteboardPanel?.imageUploaded(uploadedSrc);if($('#image-file'))$('#image-file').value='';setConnection(connected?(pending.size?'Connected · Saving…':'Connected · Saved'):'Reconnecting…');}}
 }
 const fieldNames={title:'event title',subtitle:'subtitle',date:'date',time:'time',location:'location',category:'category',description:'description',template:'template',style:'colour palette',alignment:'alignment',heroImageUrl:'image'};
@@ -334,7 +341,7 @@ async function studio(p) {
   $('#image-file').onblur=()=>sendEditing(null);
   imagePreview();
   editingTimer=setInterval(()=>{if(!connected)return;const field=document.hasFocus()?document.activeElement?.dataset.field:null;sendEditing(field||null);},5000);
-  if(isOwner){$('#collaborators').onclick=()=>manageCollaborators(p.id);$('#publish').onclick=async()=>{try{await flush();if(current!==routeId||!ensurePublicationDetails(draft,whiteboardPanel,toast))return;const result=await api(`/api/drafts/${p.id}/publish`,'POST');toast('Your poster is on the wall.');await navigate(`/${result.universityId}/posters/${result.slug}`);}catch(error){if(current!==routeId)return;const missing=/Unable to publish: (title|date|location) is missing/.exec(error.message);if(missing)whiteboardPanel?.openEventDetails(missing[1]);toast(error.message);}};if($('#unpublish'))$('#unpublish').onclick=async()=>{try{await flush();await api(`/api/drafts/${p.id}/unpublish`,'POST');toast('Poster returned to a private draft.');route();}catch(error){toast(error.message);}};$('#delete').onclick=async()=>{if(!confirm('Delete this poster and its comments permanently?'))return;try{await api(`/api/drafts/${p.id}`,'DELETE');pending.clear();navigate('/my-posters');}catch(error){toast(error.message);}};}
+  if(isOwner){$('#collaborators').onclick=()=>manageCollaborators(p.id);$('#publish').onclick=async()=>{try{await flush();if(current!==routeId||!ensurePublicationDetails(draft,whiteboardPanel,toast))return;const result=await api(`/api/drafts/${p.id}/publish`,'POST');toast('Your poster is on the wall.');await navigate(`/${result.universityId}/posters/${result.slug}`);}catch(error){if(current!==routeId)return;const missing=/Unable to publish: (title|date|location) is missing/.exec(error.message);if(missing)whiteboardPanel?.openEventDetails(missing[1]);toast(error.message,{kind:'error'});}};if($('#unpublish'))$('#unpublish').onclick=async()=>{try{await flush();await api(`/api/drafts/${p.id}/unpublish`,'POST');toast('Poster returned to a private draft.');route();}catch(error){toast(error.message,{kind:'error'});}};$('#delete').onclick=async()=>{if(!confirm('Delete this poster and its comments permanently?'))return;try{await api(`/api/drafts/${p.id}`,'DELETE');pending.clear();navigate('/my-posters');}catch(error){toast(error.message,{kind:'error'});}};}
   readiness();setConnection('Connecting…');
   live(`poster=${p.id}`,message=>{
     if(message.type==='canvas:cursor'){whiteboardPanel?.receive(message);return;}
@@ -346,7 +353,7 @@ async function studio(p) {
       whiteboardPanel?.receive(message);syncInputs();preview();setConnection(pending.size?'Connected · Saving…':'Connected · Saved');
     }
     if(message.type==='presence')editingPresence(message.people);
-    if(message.type==='error'){whiteboardPanel?.receive(message);if(pending.get(message.field)?.requestId===message.requestId){pending.delete(message.field);clearTimeout(timers.get(message.field));timers.delete(message.field);}if(message.poster){draft=message.poster;for(const [field,entry] of pending)draft[field]=entry.value;syncInputs();preview();}toast(message.message);setConnection(connected?(pending.size?'Connected · Saving…':'Connected · Saved'):'Reconnecting…');}
+    if(message.type==='error'){whiteboardPanel?.receive(message);if(pending.get(message.field)?.requestId===message.requestId){pending.delete(message.field);clearTimeout(timers.get(message.field));timers.delete(message.field);}if(message.poster){draft=message.poster;for(const [field,entry] of pending)draft[field]=entry.value;syncInputs();preview();}toast(message.message,{kind:'error'});setConnection(connected?(pending.size?'Connected · Saving…':'Connected · Saved'):'Reconnecting…');}
   },true);
 }
 function setConnection(text) {if(!$('#save-status'))return;whiteboardPanel?.connectionChanged(connected&&!uploading);if(connected&&whiteboardPanel?.hasPending())text='Connected · Saving…';$('#save-status').textContent=uploading&&connected?'Connected · Uploading image…':text;document.querySelectorAll('[data-field]').forEach(input=>input.disabled=!connected||uploading);if($('#image-file'))$('#image-file').disabled=!connected||uploading;if($('#remove-image'))$('#remove-image').disabled=!connected||uploading;if($('#publish'))$('#publish').disabled=!connected||uploading;historyButtons();}
@@ -354,7 +361,7 @@ function syncInputs() {document.querySelectorAll('[data-field]').forEach(input=>
 function preview() {if(!$('#preview'))return;$('#preview').innerHTML=poster(draft,true);$('#version').textContent=`Version ${draft.version}`;$('#poster-status').textContent=draft.status;readiness();imagePreview();}
 function readiness() {const checks=[['title','Event title'],['date','Date'],['location','Location']];$('#readiness').innerHTML=`<h3>Poster readiness</h3>${checks.map(([field,label])=>`<p>${draft[field]?'✓':'○'} ${label}</p>`).join('')}${!draft.time?'<p class="muted">○ Add a time to help people plan.</p>':''}${draft.description.length>500?'<p class="muted">△ A shorter description is easier to scan.</p>':''}${draft.hasUnpublishedChanges?'<p class="muted">Draft changes need republishing.</p>':''}<p class="muted small">${draft.status==='PUBLISHED'?'The wall shows your last published version.':'Only you and invited collaborators can see this draft.'}</p>`;}
 function historyButtons(){if(whiteboardPanel){whiteboardPanel.historyButtons();return;}if($('#studio-undo'))$('#studio-undo').disabled=!connected||uploading||!undoEdits.length;if($('#studio-redo'))$('#studio-redo').disabled=!connected||uploading||!redoEdits.length;}
-async function travelHistory(forward){try{await flush();const source=forward?redoEdits:undoEdits,target=forward?undoEdits:redoEdits,entry=source.at(-1);if(!entry)return;const expected=forward?entry.before:entry.after,replacement=forward?entry.after:entry.before;if(Object.entries(expected).some(([key,value])=>String(draft[key]??designValue(draft,key)??'')!==value)){source.pop();historyButtons();toast('A collaborator changed this field. Their edit has been kept.');return;}source.pop();target.push(entry);queueChanges(Object.entries(replacement).map(([field,value])=>({field,value})),{record:false});}catch(error){toast(error.message);}}
+async function travelHistory(forward){try{await flush();const source=forward?redoEdits:undoEdits,target=forward?undoEdits:redoEdits,entry=source.at(-1);if(!entry)return;const expected=forward?entry.before:entry.after,replacement=forward?entry.after:entry.before;if(Object.entries(expected).some(([key,value])=>String(draft[key]??designValue(draft,key)??'')!==value)){source.pop();historyButtons();toast('A collaborator changed this field. Their edit has been kept.');return;}source.pop();target.push(entry);queueChanges(Object.entries(replacement).map(([field,value])=>({field,value})),{record:false});}catch(error){toast(error.message,{kind:'error'});}}
 function queueField(field,value){queueChanges([{field,value}]);}
 function queueChanges(changes,{immediate=false,record=true}={}){
   if(!connected||uploading)return;
