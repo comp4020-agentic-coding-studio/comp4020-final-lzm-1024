@@ -120,9 +120,39 @@ flyctl deploy --remote-only --ha=false -a comp4020-final-lzm-1024
 
 The public site is [CampusWall](https://comp4020-final-lzm-1024.fly.dev/). Local data and credential files are excluded from the image. The supplied public-repository CI still checks the built image before deployment. `/readme/` publishes this document.
 
+### Operator settings: moderators, backups and the call relay
+
+- **Moderators.** The `MODERATOR_IDS` setting (an `[env]` entry in `fly.toml` or a Fly secret) lists the account ids allowed to review reports, separated by commas. Nobody is a moderator when it is empty. A moderator reviews reports from their own campus only.
+- **Database backups.** The app writes one copy of its SQLite database per day to `/data/backups` and keeps the newest seven. The copies are on the same volume as the database. They protect against a bad change or a bug noticed within a week, not against losing the volume. Fly's daily volume snapshots, kept for five days, remain the protection for the volume and for uploaded images. Set `DATABASE_BACKUPS=off` to stop the copies.
+- **Restoring.** Run `flyctl secrets set RESTORE_FROM=campuswall-YYYY-MM-DD.sqlite -a comp4020-final-lzm-1024`. The machine restarts, and the restore runs once before the database opens. The replaced database is kept beside it as `campuswall.sqlite.before-restore-<time>`. Afterwards, run `flyctl secrets unset RESTORE_FROM`. A marker file stops the same backup from being restored twice. `scripts/backups.integration.mjs` exercises this drill against a disposable database.
+- **Call relay.** No TURN relay is configured. When a call cannot connect, the message says that some networks block direct calls and that CampusWall has no relay server. To add one, create TURN credentials with a provider. Store them as the `VOICE_ICE_SERVERS` secret, a JSON array such as `[{"urls":"stun:stun.l.google.com:19302"},{"urls":"turns:relay.example:443","username":"…","credential":"…"}]`. Then test a call between two different networks before claiming it works.
+
+## Reporting, moderation and account security
+
+**Reporting.** Any signed-in student can report someone else's poster or comment: use **Report this poster** under the campus map link, or **Report** beside a comment. Choose a reason (spam, harassment, inappropriate content, a misleading or fake event, or something else) and optionally add a note of up to 300 characters. The person reported is never told who reported them. One student's repeated reports of the same thing count once until a moderator decides.
+
+**Moderation.** Moderators open **Moderation** from the account menu. Reports are grouped by poster or comment, with the reasons and notes but not the reporters. Moderators have three actions:
+
+- **Take poster down.** The poster leaves the wall and returns to its creator as a private draft. The creator can edit or delete it but cannot publish it again.
+- **Remove comment.** The comment is deleted.
+- **Dismiss.** The reports close without any change.
+
+The author of removed content receives a notification saying that a moderator removed it. Moderators can also act directly on a poster page or comment without waiting for a report. This moderation authority is separate from the creator's own rights: collaborators still cannot publish, unpublish or delete.
+
+**Account & security.** Signed-in students open **Account & security** from the account menu. The page has three tools:
+
+- **Change password.** Requires the current password. Changing it signs out every other device at once.
+- **Recovery code.** CampusWall sends no email, so a recovery code is how a forgotten password is replaced. Creating one requires the current password, and the code is shown once. It works once, and a new code replaces the old one. The server stores only its hash. A student without a code can ask a moderator. The moderator checks in person who they are and then issues a one-time code that lasts 24 hours. Use it under **Forgot your password?** on the sign-in page.
+- **Delete your account.** Requires the password and typing `DELETE`. Deletion permanently removes:
+  - the student's posters, comments, campus chat and club posts, and profile guestbook notes;
+  - their saved events, friendships, follows and blocks;
+  - their notifications, open reports and sign-ins.
+
+  The account row is kept but anonymised as "Deleted account" with the password disabled, so private and group conversations stay readable to the other people in them. The email address can be used for a new account.
+
 ## Scope and limitations
 
-University selection does not verify university membership. The MVP uses registered email/password accounts without email verification, password recovery or outbound invitation emails. Invitations are in-app access grants. Private inbox delivery is live while the Messages page is open; unread messages are retained for the next visit. There are in-app notifications and private friend/event/team groups. Browser push notifications, message attachments, blocking tools and end-to-end encryption are not implemented. Hero images support uploads and external HTTPS links. If no image is supplied, templates use a built-in graphic. Single-machine SQLite and room broadcasting fit the course deployment; scaling to multiple machines would require shared persistence and messaging.
+University selection does not verify university membership. The MVP uses registered email/password accounts without email verification or any outbound email; forgotten passwords are replaced with a one-time recovery code instead. Invitations are in-app access grants. Private inbox delivery is live while the Messages page is open; unread messages are retained for the next visit. There are in-app notifications and private friend/event/team groups. Browser push notifications and end-to-end encryption are not implemented. Hero images support uploads and external HTTPS links. If no image is supplied, templates use a built-in graphic. Single-machine SQLite and room broadcasting fit the course deployment; scaling to multiple machines would require shared persistence and messaging.
 
 An interrupted connection discards unaccepted browser edits with a visible message and reloads the server state. There is no offline editing queue. Real student use is still needed to judge readability and whether groups feel ownership of the posters they make.
 

@@ -19,7 +19,7 @@ test('the editor toolbar shows Delete poster and Unpublish to the creator, outsi
 });
 
 test('the creator sees Delete on their poster page and on My posters cards',()=>{
-  assert.match(app,/\$\{me&&me\.id===p\.ownerId\?`<div class="owner-bar" role="group" aria-label="Your poster"><span>You published this poster\.<\/span><a class="button" href="\/studio\/posters\/\$\{p\.id\}" data-nav>Edit your poster ↗<\/a><button type="button" class="button-danger" id="delete-poster">Delete poster<\/button><\/div>`:''\}<div class="detail-tools">/,'owner bar sits under the title, before the public tools');
+  assert.ok(app.includes('← Back to the wall</a>${me&&me.id===p.ownerId?`<div class="owner-bar" role="group" aria-label="Your poster"><span>You published this poster.</span><a class="button" href="/studio/posters/${p.id}" data-nav>Edit your poster ↗</a><button type="button" class="button-danger" id="delete-poster">Delete poster</button></div>`:\'\'}<section class="poster-detail">'),'owner bar sits above the poster, visible first on a phone');
   assert.match(app,/privateView\?\(me&&me\.id===p\.ownerId\?`<div class="card-tools owner-card-tools">.*data-delete-poster="\$\{esc\(p\.id\)\}">Delete<\/button>/,'only the creator’s cards carry Delete');
   assert.match(app,/\$\('#delete-poster'\)\?\.addEventListener\('click',\(\)=>deletePoster\(p,\(\)=>navigate\(`\/\$\{p\.universityId\}`,true\)\)\);/);
   assert.match(app,/querySelectorAll\('\[data-delete-poster\]'\)\.forEach\(b=>b\.onclick=\(\)=>deletePoster\(/);

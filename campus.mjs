@@ -1,7 +1,7 @@
 // Small optional suggestions, based on the universities' campus directories.
 // Free text stays available: selecting a suggestion is not a room booking.
 export const campusDetails = {
-  anu: { logo:{src:'/logos/anu.svg',width:149,height:52}, locations:['Kambri','Hancock Library','Chifley Library','ANU Sport'], mapUrl:'https://www.anu.edu.au/maps', style:'campus-anu' },
+  anu: { logo:{src:'/logos/anu.svg',width:149,height:52}, locations:['Kambri','Hancock Library','Chifley Library','ANU Sport'], mapUrl:'https://www.anu.edu.au/maps', eventsUrl:'https://www.anu.edu.au/events', style:'campus-anu' },
   usyd: { logo:{src:'/logos/usyd.svg',width:168,height:64}, locations:['Fisher Library','The Great Hall','The Quadrangle','Eastern Avenue'], mapUrl:'https://www.sydney.edu.au/about-us/campuses/campus-locations.html', style:'campus-usyd' },
   unsw: { logo:{src:'/logos/unsw.png',width:330,height:140}, locations:['Scientia Lawn','Roundhouse','Main Library','Library Lawn'], mapUrl:'https://www.unsw.edu.au/about-us/our-story/campuses', style:'campus-unsw' },
   unimelb: { logo:{src:'/logos/unimelb.svg',width:400,height:400}, locations:['South Lawn','Baillieu Library','Arts West','Old Quadrangle'], mapUrl:'https://maps.unimelb.edu.au/', style:'campus-unimelb' },

@@ -335,3 +335,28 @@ nav .quiet{max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:no
 .owner-card-tools>*{flex:1}
 .delete-poster-name{font:600 21px/1.3 Georgia,serif;margin:20px 0 6px;overflow-wrap:anywhere}
 .delete-poster-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end;margin-top:22px}
+/* Account & security, forgotten password, reports and moderation. */
+.account-page{max-width:760px;margin:0 auto;padding:34px 0 20px}
+.account-page h1{font:500 clamp(34px,5vw,52px)/1.08 Georgia,serif;letter-spacing:-1.5px;margin:12px 0 10px}
+.account-page>.panel{margin:22px 0}
+.account-page .form h2{margin-top:0}
+.account-page .form button{justify-self:start;min-height:44px}
+.danger-zone{border-color:#e3b4ae}
+.recovery-code{font:700 22px/1.3 ui-monospace,Consolas,monospace;letter-spacing:2px;padding:12px 14px;border:1px dashed var(--line);border-radius:8px;background:var(--surface-soft,#f0f1e9);overflow-wrap:anywhere;margin:12px 0 6px}
+.forgot-link{font-size:13px;text-decoration:underline;text-underline-offset:3px;justify-self:start}
+.report-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:14px 0}
+.report-link{color:var(--muted);font-size:13px;text-decoration:underline;text-underline-offset:3px;min-height:44px}
+.comment-report{float:right;font-size:11px;color:var(--muted);padding:2px 8px;margin-right:6px}
+.report-reasons{border:0;padding:0;margin:0;display:grid;gap:8px}
+.report-reasons legend{font-weight:650;margin-bottom:8px}
+.report-reason{display:flex!important;grid-auto-flow:column;align-items:center;gap:10px;font-weight:500!important;padding:10px 12px;border:1px solid var(--line);border-radius:8px;cursor:pointer;min-height:44px}
+.report-reason input{width:auto!important}
+.moderation-item{margin:14px 0}
+.moderation-item h2{font:600 21px/1.3 Georgia,serif;margin:10px 0 6px;overflow-wrap:anywhere}
+.moderation-item blockquote{margin:8px 0;padding:8px 12px;border-left:3px solid var(--line);white-space:pre-wrap;overflow-wrap:anywhere}
+.moderation-meta{display:flex;gap:10px;align-items:center;font-size:12px;color:var(--muted)}
+.moderation-reasons{margin:8px 0;padding-left:18px;font-size:13px}
+.moderation-notes p{margin:4px 0;font-size:13px;color:var(--muted);overflow-wrap:anywhere}
+.empty-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:18px}
+.empty-actions>*{min-height:44px}
+.empty-upcoming p{max-width:520px;margin-left:auto;margin-right:auto}

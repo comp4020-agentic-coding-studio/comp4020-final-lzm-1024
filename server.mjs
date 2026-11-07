@@ -6,6 +6,9 @@ import {createCommunity} from './community.mjs';
 import {createWatch} from './watch.mjs';
 import {createProfiles} from './profiles.mjs';
 import {createBlocks} from './blocks.mjs';
+import {createBackups,restoreOnce} from './backups.mjs';
+import {createModeration} from './moderation.mjs';
+import {createAccountSecurity} from './account-security.mjs';
 import { createServer } from 'node:http';
 import { mkdirSync, readFileSync, writeFileSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
@@ -35,12 +38,14 @@ const loadQRCode=async()=>(await import('qrcode')).default;
 const uploadDir=join(dataDir,'uploads');let processingImage=false,readingImages=0;
 mkdirSync(dataDir, { recursive: true });
 const observation=createActionLogger({key:loadLogKey(dataDir),write:createLogSink(process.stdout)});
+restoreOnce(dataDir,process.env.RESTORE_FROM);
 const db = new DatabaseSync(join(dataDir, 'campuswall.sqlite'));
 db.exec('PRAGMA journal_mode=WAL; PRAGMA foreign_keys=ON; PRAGMA busy_timeout=5000;');
 const queries=createQueries(db);
 const {get,all,run}=queries;
 const now = () => new Date().toISOString(), id = () => randomUUID();
 initializeDatabase(db,dataDir,queries,now);
+if(process.env.DATABASE_BACKUPS!=='off')createBackups({db,dataDir}).schedule(Number(process.env.BACKUP_DELAY_MS??60000));
 mkdirSync(uploadDir,{recursive:true});
 class Problem extends Error { constructor(status,message) { super(message);this.status=status; } }
 const fail=(status,message)=>{throw new Problem(status,message);};
@@ -216,6 +221,12 @@ async function uploadAvatar(req){
 const profiles=createProfiles({blocks,get,all,run,body,json,authenticated:campusAccount,campusAccess,string,fail,id,now,notify:(...args)=>community?.notify(...args)});
 const watch=createWatch({db,get,all,run,id,now,fail,string,campusAccount,body,json,sockets,send,validSocket});
 community=createCommunity({blocks,db,get,all,run,id,now,fail,string,campusAccount,campusAccess,body,json,sockets,send,validSocket,watch,posters});
+const accountSecurity=createAccountSecurity({db,get,all,run,now,fail,string,body,json,authenticated,rateLimit,hash,scrypt,randomBytes,timingSafeEqual,session,sockets,token,throttle,loginLocked,noteLoginFailure:email=>bump(loginFailures,email,accountWindow),clearLoginFailures:email=>loginFailures.delete(email),removeFile:file=>rmSync(file,{force:true}),uploadPath:file=>join(uploadDir,file),avatarPath:avatarId=>join(avatarDir,avatarId+'.webp'),onPostersDeleted:campuses=>campuses.forEach(wallChanged)});
+// Moderators are named by account id in the MODERATOR_IDS setting; nobody is a moderator by default.
+const moderation=createModeration({get,all,run,id,now,fail,string,body,json,campusAccount,throttle,issueRecovery:accountSecurity.issueRecovery,moderatorIds:process.env.MODERATOR_IDS||'',
+  removePoster:(p,name)=>{run("UPDATE posters SET status='DRAFT',publicData=NULL,publishedAt=NULL,removedAt=?,removedReason='moderator',updatedAt=?,version=version+1 WHERE id=?",now(),now(),p.id);const saved=record(p.id);community.changedEvent(saved,'unpublish');broadcast(p.id,'poster:updated',{poster:view(saved,true)});wallChanged(p.universityId);community.notify(p.ownerId,'moderation',`A moderator took your poster “${name}” off the wall`,`/studio/posters/${p.id}`,'removed:'+p.id+':'+Date.now());},
+  removeComment:(c,name)=>{run('DELETE FROM comments WHERE id=?',c.id);wallChanged(c.universityId);community.notify(c.authorId,'moderation',`A moderator removed your comment on “${name}”`,`/${c.universityId}/posters/${c.slug}`,'comment-removed:'+c.id);}});
+const signedIn=u=>u&&{...u,isModerator:moderation.isModerator(u.id)};
 const voiceCalls=createVoiceCalls({blocks,get,all,run,id,now,fail,body,json,campusAccount,sockets,send,validSocket,sessionHash:req=>hash(token(req))});
 const translateMessage=createTranslator();
 function translationMessage(input,u){
@@ -255,6 +266,8 @@ const server=createServer(async(req,res)=>{
     if(path.startsWith('/api/watch/'))return await watch.handle(req,res,url);
     if(path.startsWith('/api/profiles/'))return await profiles.handle(req,res,url);
     if(path==='/api/blocks'||path.startsWith('/api/blocks/'))return await blocks.handle(req,res,url);
+    if(path==='/api/reports'||path.startsWith('/api/moderation/'))return await moderation.handle(req,res,url);
+    if(path.startsWith('/api/account/')||path==='/api/auth/recover')return await accountSecurity.handle(req,res,url);
     if(path==='/api/profile/avatar'&&method==='POST')return json(res,200,{user:await uploadAvatar(req)});
     const avatar=path.match(/^\/avatars\/([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})\.webp$/);
     if(avatar&&(method==='GET'||method==='HEAD')){if(!get('SELECT 1 FROM users WHERE avatarId=?',avatar[1]))fail(404,'Avatar not found');const bytes=readFileSync(join(avatarDir,avatar[1]+'.webp'));res.writeHead(200,{'content-type':'image/webp','content-length':bytes.length,'cache-control':'public, max-age=86400'});return res.end(method==='HEAD'?undefined:bytes);}
@@ -268,7 +281,7 @@ const server=createServer(async(req,res)=>{
       campusAccess(req,universityId);
       return json(res,200,clubDirectory(universityId,{q:url.searchParams.get('q')||'',category:url.searchParams.get('category')||'',interest:url.searchParams.get('interest')||''}));
     }
-    if(path==='/api/auth/me')return json(res,200,{user:user(req)||null});
+    if(path==='/api/auth/me')return json(res,200,{user:signedIn(user(req))||null});
     if(path==='/api/auth/university'&&method==='POST'){
       authenticated(req);const input=await body(req),u=authenticated(req),universityId=input.universityId;
       if(!activeCampus(universityId||''))fail(400,'Choose a university');
@@ -320,7 +333,7 @@ const server=createServer(async(req,res)=>{
         const account=get('SELECT * FROM users WHERE email=?',email),[salt,expected]=account?.passwordHash.split(':')||[];
         const key=await scrypt(password,salt||'invalid-account',64);if(!expected||!timingSafeEqual(key,Buffer.from(expected,'hex'))){bump(loginFailures,email,accountWindow);fail(401,'Email or password is incorrect');}loginFailures.delete(email);u={id:account.id,name:account.name,email:account.email,username:account.username,universityId:account.universityId,avatarId:account.avatarId};
       }
-      session(res,req,u);return json(res,200,{user:u});
+      session(res,req,u);return json(res,200,{user:signedIn(u)});
     }
     // Account identity: only the display name and username can change here; email and campus stay fixed.
     if(path==='/api/account'&&method==='PATCH'){
@@ -332,7 +345,7 @@ const server=createServer(async(req,res)=>{
       if(input.username!==undefined){next.username=string(input.username,24,'Username').toLowerCase();if(!/^[a-z0-9_]{3,24}$/.test(next.username))fail(400,'Username must be 3–24 letters, numbers or underscores');if(get('SELECT 1 FROM users WHERE username=? COLLATE NOCASE AND id<>?',next.username,u.id))fail(409,'That username is already taken');}
       try{run('UPDATE users SET name=?,username=? WHERE id=?',next.name,next.username,u.id);}catch{fail(409,'That username is already taken');}
       for(const ws of sockets)if(ws.user?.id===u.id)Object.assign(ws.user,next);
-      return json(res,200,{user:user(req)});
+      return json(res,200,{user:signedIn(user(req))});
     }
     if(path==='/api/auth/logout'&&method==='POST') {user(req);const sessionHash=hash(token(req));run('DELETE FROM sessions WHERE tokenHash=?',sessionHash);for(const ws of sockets)if(ws.sessionHash===sessionHash)ws.close(4001,'Signed out');res.setHeader('set-cookie','campus_session=; HttpOnly; SameSite=Lax; Path=/; Max-Age=0');return json(res,200,{ok:true});}
     const media=path.match(/^\/media\/([a-f0-9-]{36})$/);
@@ -391,7 +404,7 @@ const server=createServer(async(req,res)=>{
     if(path==='/api/drafts') {
       const u=campusAccount(req);
       if(method==='GET')return json(res,200,posters.list({where:'(p.ownerId=? OR EXISTS(SELECT 1 FROM collaborators c WHERE c.posterId=p.id AND c.userId=?)) AND p.universityId=?',params:[u.id,u.id,u.universityId],order:'p.updatedAt DESC',privateView:true}));
-      if(method==='POST'){const input=await body(req),uni=input.universityId;if(!activeCampus(uni||''))fail(400,'Choose a university');campusAccess(req,uni);if(get("SELECT COUNT(*) n FROM posters WHERE ownerId=? AND status='DRAFT'",u.id).n>=50)fail(429,'You have 50 unpublished drafts. Publish or delete some before starting another.');throttle('draft',u.id,20,10*60000,'You are creating drafts quickly. Please wait a few minutes.');const preset=input.preset?designPresets.find(p=>p.id===input.preset):null;if(input.preset&&!preset)fail(400,'Choose a valid design');const {id:ignoredId,name:ignoredName,note:ignoredNote,...presetDesign}=preset||{};const content={...designDefaults,...presetDesign,designVersion:'1',title:validate('title',input.title||''),subtitle:'',date:'',time:'',location:'',description:'',category:'Other',template:validate('template',preset?.template||input.template||'minimal'),style:validate('style',input.style||campusDetails[uni].style),alignment:'left',heroImageUrl:''};const posterId=id();run('INSERT INTO posters VALUES (?,?,?,?,?,?,?,?,?,?,?)',posterId,u.id,uni,`event-${posterId}`,'DRAFT',JSON.stringify(content),null,0,now(),now(),null);return json(res,201,view(record(posterId),true));}
+      if(method==='POST'){const input=await body(req),uni=input.universityId;if(!activeCampus(uni||''))fail(400,'Choose a university');campusAccess(req,uni);if(get("SELECT COUNT(*) n FROM posters WHERE ownerId=? AND status='DRAFT'",u.id).n>=50)fail(429,'You have 50 unpublished drafts. Publish or delete some before starting another.');throttle('draft',u.id,20,10*60000,'You are creating drafts quickly. Please wait a few minutes.');const preset=input.preset?designPresets.find(p=>p.id===input.preset):null;if(input.preset&&!preset)fail(400,'Choose a valid design');const {id:ignoredId,name:ignoredName,note:ignoredNote,...presetDesign}=preset||{};const content={...designDefaults,...presetDesign,designVersion:'1',title:validate('title',input.title||''),subtitle:'',date:'',time:'',location:'',description:'',category:'Other',template:validate('template',preset?.template||input.template||'minimal'),style:validate('style',input.style||campusDetails[uni].style),alignment:'left',heroImageUrl:''};const posterId=id();run('INSERT INTO posters (id,ownerId,universityId,slug,status,content,publicData,version,createdAt,updatedAt,publishedAt) VALUES (?,?,?,?,?,?,?,?,?,?,?)',posterId,u.id,uni,`event-${posterId}`,'DRAFT',JSON.stringify(content),null,0,now(),now(),null);return json(res,201,view(record(posterId),true));}
     }
     const draft=path.match(/^\/api\/drafts\/([^/]+)(?:\/(fields|publish|unpublish|collaborators|image|canvas)(?:\/([^/]+))?)?$/);
     if(draft) {
@@ -403,6 +416,7 @@ const server=createServer(async(req,res)=>{
       if(method==='DELETE'&&!action){owner(p,u);const images=all('SELECT file FROM uploads WHERE posterId=?',p.id);run('DELETE FROM posters WHERE id=?',p.id);for(const image of images)rmSync(join(uploadDir,image.file),{force:true});broadcast(p.id,'deleted',{});wallChanged(p.universityId);return json(res,200,{ok:true});}
       if((action==='publish'||action==='unpublish')&&method==='POST') {
         owner(p,u);const content=JSON.parse(p.content);
+        if(action==='publish'&&p.removedAt)fail(403,'A moderator took this poster off the wall, so it can’t be published again. You can still edit or delete it.');
         if(action==='publish'){for(const field of ['title','date','location'])if(!content[field])fail(400,`Unable to publish: ${field} is missing`);run("UPDATE posters SET status='PUBLISHED',publicData=content,publishedAt=?,updatedAt=?,version=version+1 WHERE id=?",now(),now(),p.id);}
         else run("UPDATE posters SET status='DRAFT',publicData=NULL,publishedAt=NULL,updatedAt=?,version=version+1 WHERE id=?",now(),p.id);
         const saved=record(p.id);community.changedEvent(saved,action);const result=view(saved,true);broadcast(p.id,'poster:updated',{poster:result});wallChanged(p.universityId);return json(res,200,result);
@@ -424,7 +438,7 @@ const server=createServer(async(req,res)=>{
     if(account&&!account.universityId&&path!=='/choose-campus'&&path!=='/login'&&!/\.[a-z]+$/.test(path)) {res.writeHead(302,{location:'/choose-campus','cache-control':'no-store'});return res.end();}
     if(account?.universityId&&isActiveCampus(account.universityId)&&campusRoute&&campusRoute!==account.universityId){res.writeHead(302,{location:`/${account.universityId}${path.endsWith('/clubs')?'/clubs':''}`,'cache-control':'no-store'});return res.end();}
     const campusPage=campusRoute&&new RegExp(`^/${campusRoute}(?:/(?:posters/[^/]+|clubs))?$`).test(path);
-    if(!campusPage&&!/^\/(?:index.html|login|guide|choose-campus|watch(?:\/[a-f0-9-]{36})?|people\/[a-f0-9-]{36}|community(?:\/[A-Za-z0-9_%.-]+){0,2}|messages|games(?:\/[a-f0-9-]{36})?|saved|my-posters|studio\/posters\/[^/]+)?$/.test(path))fail(404,'Page not found');
+    if(!campusPage&&!/^\/(?:index.html|login|guide|choose-campus|watch(?:\/[a-f0-9-]{36})?|people\/[a-f0-9-]{36}|community(?:\/[A-Za-z0-9_%.-]+){0,2}|messages|games(?:\/[a-f0-9-]{36})?|saved|my-posters|account|forgot|moderation|studio\/posters\/[^/]+)?$/.test(path))fail(404,'Page not found');
     await publicAssets.sendPage(req,res);
   } catch(error) {if(!res.headersSent)json(res,error.status||500,{error:error.status?error.message:'Unable to complete this request'});}
 });
