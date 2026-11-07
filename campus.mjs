@@ -16,3 +16,13 @@ for(const [slug] of universities)campusDetails[slug].emailDomains=emailDomains[s
 for(const [slug] of universities){campusDetails[slug].timeZone={unimelb:'Australia/Melbourne',monash:'Australia/Melbourne',uq:'Australia/Brisbane',uwa:'Australia/Perth',adelaide:'Australia/Adelaide'}[slug]||'Australia/Sydney';}
 const palettes={anu:'black & gold',usyd:'charcoal & ochre',unsw:'black & yellow',unimelb:'blue & white',monash:'blue & white',uq:'purple & white',uwa:'navy & gold',adelaide:'navy & sky blue'};
 for(const [slug,,shortName] of universities)campusDetails[slug].paletteLabel=`${shortName} · ${palettes[slug]}`;
+
+// Which universities are open. ACTIVE_CAMPUSES is a comma-separated list of ids
+// (for example "anu"); unset means every university above is open. Closed
+// campuses keep their code, logos, club directories and stored data untouched:
+// they are simply not offered, browsable or joinable until switched back on.
+const requestedCampuses=(process.env.ACTIVE_CAMPUSES||'').split(',').map(id=>id.trim()).filter(Boolean);
+const knownCampuses=universities.map(([id])=>id);
+for(const id of requestedCampuses)if(!knownCampuses.includes(id))throw new Error('ACTIVE_CAMPUSES lists an unknown university: '+id);
+export const activeCampusIds=new Set(requestedCampuses.length?knownCampuses.filter(id=>requestedCampuses.includes(id)):knownCampuses);
+export const isActiveCampus=id=>typeof id==='string'&&activeCampusIds.has(id);

@@ -51,15 +51,18 @@ function interestsFor(club){
   if(!ids.size)ids.add('social');
   return interestGroups.filter(group=>ids.has(group.id)).map(group=>group.id);
 }
-const directories=Object.fromEntries(universities.map(([campus])=>{
+const directories={};
+function loadDirectory(campus){
+  if(Object.hasOwn(directories,campus))return directories[campus];
+  if(!universities.some(([id])=>id===campus))return null;
   const directory=JSON.parse(readFileSync(new URL(`./data/${campus}-clubs.json`,import.meta.url),'utf8'));
   const clubs=directory.clubs.map(club=>({...club,interests:interestsFor(club)}));
   const counts=new Map(interestGroups.map(group=>[group.id,0]));
   for(const club of clubs)for(const interest of club.interests)counts.set(interest,counts.get(interest)+1);
-  return [campus,{clubs,search:new Map(clubs.map(club=>[club.id,normalise(`${club.name} ${club.categories.join(' ')} ${club.keywords||''}`)])),summary:{universityId:campus,source:{name:directory.sourceName,url:directory.sourceUrl},retrievedAt:directory.retrievedAt,total:clubs.length,categories:[...new Set(clubs.flatMap(club=>club.categories))].sort(),interests:interestGroups.map(group=>({...group,count:counts.get(group.id)}))}}];
-}));
+  return directories[campus]={clubs,search:new Map(clubs.map(club=>[club.id,normalise(`${club.name} ${club.categories.join(' ')} ${club.keywords||''}`)])),summary:{universityId:campus,source:{name:directory.sourceName,url:directory.sourceUrl},retrievedAt:directory.retrievedAt,total:clubs.length,categories:[...new Set(clubs.flatMap(club=>club.categories))].sort(),interests:interestGroups.map(group=>({...group,count:counts.get(group.id)}))}};
+}
 export function clubDirectory(universityId,{q='',category='',interest=''}={}) {
-  const directory=directories[universityId];
+  const directory=loadDirectory(universityId);
   if(!directory)return {universityId,source:null,retrievedAt:null,total:0,categories:[],interests:[],clubs:[]};
   const query=normalise(q.slice(0,100));
   return {...directory.summary,clubs:directory.clubs.filter(club=>(!interest||club.interests.includes(interest))&&(!category||club.categories.includes(category))&&(!query||directory.search.get(club.id).includes(query)))};

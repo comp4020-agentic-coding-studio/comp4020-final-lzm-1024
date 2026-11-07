@@ -1,3 +1,4 @@
+import {activeCampusIds,isActiveCampus} from './campus.mjs';
 import {createMessageFiles} from './message-files.mjs';
 // One account inbox, with every HTTP operation and broadcast checked separately.
 export function generatedUsername(name,userId,get){
@@ -7,7 +8,9 @@ export function generatedUsername(name,userId,get){
   return value;
 }
 
-export function createMessaging({dataDir,db,get,all,run,id,now,fail,string,authenticated,body,json,sockets,send,validSocket,campusAccess,notify=()=>{}}){
+// Private messages may cross open campuses, but never reach a university that is switched off.
+const openCampusSql=()=>[...activeCampusIds].map(()=>'?').join(',');
+export function createMessaging({blocks={guard(){},between(){return false;}},dataDir,db,get,all,run,id,now,fail,string,authenticated,body,json,sockets,send,validSocket,campusAccess,notify=()=>{}}){
   const select='SELECT m.seq,m.id,m.conversationId,m.authorId,m.body,m.createdAt,u.name author,u.username,u.avatarId,f.id attachmentId,f.name attachmentName,f.bytes attachmentBytes FROM private_messages m JOIN users u ON u.id=m.authorId LEFT JOIN message_files f ON f.messageId=m.id';
   function fileMember(conversationId,u){return get('SELECT c.* FROM conversations c JOIN users a ON a.id=c.user1 JOIN users b ON b.id=c.user2 WHERE c.id=? AND (c.user1=? OR c.user2=?) AND a.universityId=? AND b.universityId=?',conversationId,u.id,u.id,u.universityId,u.universityId)||fail(404,'Conversation not found');}
   function member(conversationId,u){return get('SELECT * FROM conversations WHERE id=? AND (user1=? OR user2=?)',conversationId,u.id,u.id)||fail(404,'Conversation not found');}
@@ -22,8 +25,8 @@ export function createMessaging({dataDir,db,get,all,run,id,now,fail,string,authe
   }
   function list(u){return all('SELECT * FROM conversations WHERE user1=? OR user2=? ORDER BY updatedAt DESC,id LIMIT 100',u.id,u.id).map(c=>view(c,u));}
   function startConversation(u,userId){
-    const peer=get("SELECT id FROM users WHERE id=? AND passwordHash<>'!disabled'",userId)||fail(404,'This organiser is not available for messages');
-    if(peer.id===u.id)fail(400,'Choose another user to message');const [user1,user2]=[u.id,peer.id].sort();
+    const peer=get(`SELECT id FROM users WHERE id=? AND universityId IN (${openCampusSql()}) AND passwordHash<>'!disabled'`,userId,...activeCampusIds)||fail(404,'This organiser is not available for messages');
+    if(peer.id===u.id)fail(400,'Choose another user to message');blocks.guard(u.id,peer.id);const [user1,user2]=[u.id,peer.id].sort();
     let c=get('SELECT * FROM conversations WHERE user1=? AND user2=?',user1,user2);
     if(!c){
       if(get('SELECT COUNT(*) n FROM conversations WHERE createdBy=? AND createdAt>?',u.id,new Date(Date.now()-60000).toISOString()).n>=20)fail(429,'Please wait before starting another conversation');
@@ -42,7 +45,7 @@ export function createMessaging({dataDir,db,get,all,run,id,now,fail,string,authe
     const path=url.pathname,method=req.method,u=authenticated(req);
     if(path==='/api/users/search'&&method==='GET'){
       const query=string(url.searchParams.get('q')||'',50,'Search').replace(/^@/,'').toLowerCase();
-      return json(res,200,{users:query.length<2?[]:all("SELECT id,name,username,avatarId FROM users WHERE id<>? AND passwordHash<>'!disabled' AND (instr(lower(name),?)>0 OR instr(username,?)>0) ORDER BY CASE WHEN username=? THEN 0 ELSE 1 END,name,id LIMIT 30",u.id,query,query,query)});
+      return json(res,200,{users:query.length<2?[]:all(`SELECT id,name,username,avatarId FROM users WHERE id<>? AND universityId IN (${openCampusSql()}) AND passwordHash<>'!disabled' AND (instr(lower(name),?)>0 OR instr(username,?)>0) ORDER BY CASE WHEN username=? THEN 0 ELSE 1 END,name,id LIMIT 30`,u.id,...activeCampusIds,query,query,query)});
     }
     if(path==='/api/messages/from-poster'&&method==='POST'){
       const input=await body(req);authenticated(req);const posterId=string(input.posterId,100,'Poster');
@@ -58,7 +61,7 @@ export function createMessaging({dataDir,db,get,all,run,id,now,fail,string,authe
     const download=path.match(/^\/api\/messages\/files\/([a-f0-9-]{36})$/);
     if(download&&method==='GET')return files.download(req,res,download[1],u);
     const upload=path.match(/^\/api\/messages\/conversations\/([a-f0-9-]{36})\/files$/);
-    if(upload&&method==='POST'){const result=await files.upload(req,res,upload[1],u);return json(res,result.duplicate?200:201,{message:result.message,conversation:result.conversation});}
+    if(upload&&method==='POST'){const c=member(upload[1],u);blocks.guard(c.user1,c.user2);const result=await files.upload(req,res,upload[1],u);return json(res,result.duplicate?200:201,{message:result.message,conversation:result.conversation});}
     const match=path.match(/^\/api\/messages\/conversations\/([a-f0-9-]{36})(?:\/(messages|read))?$/);
     if(match){
       const conversationId=match[1],action=match[2];let c=member(conversationId,u);
@@ -69,7 +72,7 @@ export function createMessaging({dataDir,db,get,all,run,id,now,fail,string,authe
         const hasMore=rows.length>50,window=rows.slice(0,50);return json(res,200,{messages:(after===null?window.reverse():window).map(messageView),hasMore});
       }
       if(action==='messages'&&method==='POST'){
-        const input=await body(req);authenticated(req);c=member(conversationId,u);const text=string(input.body,2000,'Message');if(!text)fail(400,'Write a message first');
+        const input=await body(req);authenticated(req);c=member(conversationId,u);blocks.guard(c.user1,c.user2);if(!isActiveCampus(get('SELECT universityId FROM users WHERE id=?',c.user1===u.id?c.user2:c.user1)?.universityId))fail(403,'This student’s university is not open on CampusWall right now, so new messages cannot be sent.');const text=string(input.body,2000,'Message');if(!text)fail(400,'Write a message first');
         if(typeof input.clientId!=='string'||!/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/.test(input.clientId))fail(400,'Invalid message request');
         const previous=get('SELECT * FROM private_messages WHERE authorId=? AND clientId=?',u.id,input.clientId);
         if(previous){if(previous.body!==text||previous.conversationId!==conversationId||get('SELECT 1 FROM message_files WHERE messageId=?',previous.id))fail(409,'This request already sent a different message');return json(res,200,{message:messageView(get(`${select} WHERE m.id=?`,previous.id)),conversation:view(c,u)});}

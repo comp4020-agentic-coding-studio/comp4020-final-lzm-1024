@@ -1,0 +1,83 @@
+/* Phone and touch adaptations. Loaded after the shared stylesheets so these
+   floors apply over page styles. Poster artwork is not affected. */
+.nav-toggle{display:none}
+
+/* Touch screens: text fields at 16px or more so iOS does not zoom on focus,
+   and small inline links get a finger-sized hit area. */
+@media (pointer:coarse){
+  input:not([type=checkbox]):not([type=radio]):not([type=range]):not([type=color]):not([type=file]),select,textarea{font-size:max(16px,1em)!important}
+  footer a{display:inline-flex;align-items:center;min-height:44px}
+  .back-link{display:inline-flex;align-items:center;min-height:44px}
+}
+
+/* Narrow screens: the header folds behind a Menu button. The open panel is one
+   plain list: destinations, More's links, actions, then the account section. */
+@media (max-width:860px){
+  #header{flex-wrap:wrap;gap:8px;padding:12px 14px}
+  #header .brand{flex:none;font-size:18px}
+  #header .brand-mark{font-size:26px;margin-right:5px}
+  #header .campus-picker{margin-left:auto;padding-left:0;border-left:0;min-width:0}
+  #header .campus-picker select{min-width:0;max-width:min(150px,calc(100vw - 224px));padding:7px 4px}
+  #header .account-campus{max-width:min(150px,calc(100vw - 224px));overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  #header .school-brand .campus-logo{width:auto;height:36px;max-width:110px;object-fit:contain}
+  #header .school-brand .brand-product{display:none}
+  .nav-toggle{position:relative;display:inline-flex;align-items:center;justify-content:center;flex:none;width:44px;height:44px;padding:0;border:1px solid var(--line);border-radius:10px;color:inherit}
+  .nav-toggle-icon,.nav-toggle-icon::before,.nav-toggle-icon::after{display:block;width:16px;height:2px;border-radius:2px;background:currentColor;transition:transform .2s,background .2s}
+  .nav-toggle-icon{position:relative}
+  .nav-toggle-icon::before,.nav-toggle-icon::after{content:'';position:absolute;left:0}
+  .nav-toggle-icon::before{top:-5px}.nav-toggle-icon::after{top:5px}
+  #header.nav-open .nav-toggle-icon{background:transparent}
+  #header.nav-open .nav-toggle-icon::before{transform:translateY(5px) rotate(45deg)}
+  #header.nav-open .nav-toggle-icon::after{transform:translateY(-5px) rotate(-45deg)}
+  /* Unread notifications stay noticeable while the menu is closed. */
+  #header:has(#community-unread:not([hidden])) .nav-toggle::after{content:'';position:absolute;top:6px;right:6px;width:8px;height:8px;border-radius:50%;background:var(--accent,var(--green))}
+
+  #header nav{display:none}
+  #header.nav-open nav{display:flex;flex-direction:column;align-items:stretch;flex-wrap:nowrap;gap:2px;width:100%;margin:0;padding:8px 0 4px;border-top:1px solid var(--line);font-size:15px}
+  #header.nav-open :is(nav>a,.nav-signin,.nav-more>summary,.nav-more>div a,.menu-signout,.account-head){display:flex;align-items:center;justify-content:flex-start;width:100%;min-height:44px;padding:0 6px;margin:0;border-radius:8px;font-size:15px;color:inherit;background:none}
+  /* Dropdowns open in place as plain sections of the list. */
+  #header.nav-open .nav-more>summary{pointer-events:none;opacity:.7;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;min-height:34px;margin-top:6px}
+  #header.nav-open .nav-more>summary:after{display:none}
+  #header.nav-open .nav-more>div{display:block;position:static;min-width:0;padding:0;border:0;background:transparent;box-shadow:none;color:inherit}
+  #header.nav-open .nav-actions{flex-direction:column;align-items:stretch;gap:2px;margin:8px 0 0;padding-top:8px;border-top:1px solid var(--line)}
+  #header.nav-open #create{min-height:44px;margin:4px 0 6px;font-size:15px}
+  #header.nav-open #community-bell{width:auto;height:44px;padding:0 6px;border:0;border-radius:8px;justify-content:flex-start;gap:10px;font-size:18px}
+  #header.nav-open #community-bell .bell-label{display:inline;font-size:15px;font-weight:550}
+  #header.nav-open #community-unread{position:static;order:2}
+  #header.nav-open nav details.nav-account>summary{display:none}
+  #header.nav-open .account-head{border-bottom:0;gap:10px;min-height:52px}
+  #header.nav-open .account-head small{color:inherit;opacity:.7}
+  #header.nav-open .menu-settings{border-color:var(--line);margin:6px 0;padding:6px 0}
+  #header.nav-open .menu-settings :is(.appearance-picker,.language-picker){min-height:44px;padding:0 6px;color:inherit;font-size:15px}
+  #header.nav-open .menu-settings select{color:inherit}
+  #header.nav-open .menu-settings option{color:var(--ink)}
+}
+/* Readable phone text: card details, chat details and labels never drop below 12px. */
+@media (max-width:760px){
+  .meta-top,.category,.card-meta p,.card-author,.test-card-label,.poster-card:has(.photographic-poster) .meta-top,.poster-card:has(.photographic-poster) .test-card-label{font-size:12px}
+  .category{padding:3px 7px}
+  .card-tools .poster-contact,.card-tools .save-button{font-size:13px;padding:8px 10px}
+  .chat-heading .eyebrow,.chat-connection,.chat-message-meta time,.chat-you,.chat-new,.chat-broadcast-heading,.chat-compose-footer>span,.campus-chat .chat-hint{font-size:12px}
+  .wall-community-shortcuts{font-size:13px;gap:4px 16px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;white-space:nowrap}
+  .category-tabs button,.date-tabs button{font-size:13px}
+  /* Filters scroll sideways in one row each instead of wrapping into a tall block. */
+  .date-tabs{display:none}.date-select{display:block;width:auto;min-height:44px;font-size:14px;padding:8px 12px;flex:0 0 auto}.filter-row{flex-direction:row;align-items:center;gap:10px}.filter-row .search{flex:1;min-width:0}.wall-tagline>span:first-child{display:none}
+  .category-tabs{flex-wrap:nowrap;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:none;max-width:100%}
+  .category-tabs::-webkit-scrollbar{display:none}
+  .category-tabs button,.date-tabs button{flex:0 0 auto;white-space:nowrap}
+  .section-label h2 span,.chat-intro{font-size:12px!important}
+  .event-status,.gallery-note,.gallery-note strong,.chat-intro,.chat-compose-footer a.button,.section-label h2 span,main .eyebrow{font-size:12px}
+  /* Campus life pages: one scrolling row of sections instead of a tall wrapped block. */
+  .community-tabs{flex-wrap:nowrap;justify-content:flex-start;width:auto;gap:8px;margin-top:0;padding:8px 0 14px;border-top:0;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:none}
+  .community-tabs::-webkit-scrollbar{display:none}
+  .community-tabs a{font-size:13px}
+}
+/* Finger-sized controls on touch screens. */
+@media (pointer:coarse){
+  .chat-broadcast-heading button{min-width:44px;min-height:40px;font-size:13px}
+  .category-tabs button,.date-tabs button{min-height:44px}
+  .community-tabs a,.wall-community-shortcuts a{display:inline-flex;align-items:center;min-height:44px}
+  .card-tools .poster-contact,.card-tools .save-button{min-height:44px}
+  .dm-room-heading :is(.dm-call,.dm-play,.dm-block){min-height:44px}
+}
+@media (prefers-reduced-motion:reduce){.nav-toggle-icon,.nav-toggle-icon::before,.nav-toggle-icon::after{transition:none}}

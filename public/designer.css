@@ -12,3 +12,8 @@
 @media(min-width:1050px){.designer-layout .editor-fields{max-height:calc(100dvh - 120px);position:sticky;top:20px;overflow:auto}}
 @media(max-width:1000px){.designer-layout{grid-template-columns:300px minmax(0,1fr);gap:18px}.editor-top .editor-actions{max-width:60%}.editor-top h1{font-size:29px}.designer-template-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:760px){.designer-layout{grid-template-columns:1fr}.designer-layout .studio-stage{grid-row:1}.studio-canvas-shell{padding:18px} .studio-canvas-shell #preview{max-width:320px}.editor-top{align-items:flex-start;flex-direction:column}.editor-top .editor-actions{max-width:100%;justify-content:flex-start}.editor-actions #save-status{flex-basis:100%}.designer-start{padding:22px}.designer-template-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.designer-start h2{font-size:28px}.studio-stage-tools{gap:7px}.designer-layout .editor-fields{position:static}}
+
+/* The create button stays reachable while choosing a template. */
+.designer-start form>.primary{position:sticky;bottom:0;z-index:2;box-shadow:0 -12px 24px var(--surface,#fff)}
+/* Event details stay one click away and show what is still missing. */
+#studio-details.needs-details{border-color:var(--accent,var(--green));color:var(--accent-readable,var(--green));font-weight:650}

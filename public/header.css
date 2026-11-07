@@ -1,0 +1,41 @@
+/* Simple header: brand, campus, two destinations and "More" on the left of the
+   navigation; create, notifications and one account menu on the right. Personal
+   links, appearance, language and sign out live inside the account menu. */
+#header{flex-wrap:nowrap}
+#header nav{flex-wrap:nowrap;gap:4px;min-width:0;font-size:14px}
+#header nav>a,#header nav>.nav-more>summary{display:inline-flex;align-items:center;min-height:38px;padding:0 12px;border-radius:999px;font-weight:550;white-space:nowrap;transition:background .15s}
+#header nav>a:hover,#header nav>.nav-more>summary:hover,#header .nav-actions>a:hover{background:color-mix(in srgb,currentColor 10%,transparent)}
+#header nav>.nav-more>summary{gap:4px}
+#header nav>.nav-more>summary:after{font-size:13px;line-height:1;transform:translateY(-2px)}
+#header .nav-actions{display:flex;align-items:center;gap:8px;margin-left:16px}
+#header .nav-signin{display:inline-flex;align-items:center;min-height:38px;padding:0 12px;border-radius:999px;font-weight:550;white-space:nowrap}
+#header #create{white-space:nowrap;min-height:38px;padding:0 16px}
+#header #community-bell{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%}
+
+/* Account menu: an avatar (or a settings icon for guests) that opens a panel. */
+#header .nav-account>summary{display:inline-flex;align-items:center;gap:6px;min-height:38px;padding:3px;border-radius:999px}
+#header .nav-account>summary:after{display:none}
+#header .nav-account>summary:hover{background:color-mix(in srgb,currentColor 10%,transparent)}
+#header .nav-account .account-name{display:none}
+#header .nav-settings-icon{display:inline-grid;place-items:center;width:32px;height:32px;font-size:17px}
+#header .nav-account>div{left:auto;right:0;min-width:250px;padding:6px}
+#header .nav-more>div a,#header .nav-account .menu-signout{display:flex;align-items:center;justify-content:flex-start;width:100%;min-height:40px;padding:0 12px;border-radius:8px;font-size:14px;font-weight:500;text-align:left}
+#header .nav-account .menu-signout{border:0;background:none;color:var(--ink);cursor:pointer}
+#header .nav-account .menu-signout:hover{background:var(--accent-soft)}
+#header .account-head{display:flex;align-items:center;gap:10px;width:100%;padding:10px 12px 12px;margin-bottom:4px;border:0;border-bottom:1px solid var(--line);border-radius:8px 8px 0 0;background:none;color:var(--ink);text-align:left;cursor:pointer}
+#header .account-head:hover{background:var(--accent-soft)}
+#header .account-head span{display:grid;min-width:0}
+#header .account-head strong{font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#header .account-head small{font-size:12px;color:var(--muted)}
+
+/* Settings sit quietly inside the menu instead of in the bar itself. */
+#header .menu-settings{display:grid;gap:2px;margin:4px 0;padding:4px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+#header .nav-account>div>.menu-settings:only-child{margin:0;border:0}
+#header .menu-settings :is(.appearance-picker,.language-picker){display:flex;width:100%;min-height:40px;padding:0 8px 0 12px;gap:8px;border:0;border-radius:8px;color:var(--ink);font:500 14px system-ui,sans-serif}
+#header .menu-settings :is(.appearance-picker,.language-picker):hover{background:var(--accent-soft)}
+#header .menu-settings select{flex:1;max-width:none;padding:6px 2px;color:var(--ink);background:transparent;cursor:pointer}
+:root[data-theme="dark"] #header .menu-settings select{color:var(--ink)}
+
+@media (prefers-reduced-motion:reduce){#header nav>a,#header nav>.nav-more>summary{transition:none}}
+#header .bell-label{display:none}
+[data-route-focus]:focus{outline:none}

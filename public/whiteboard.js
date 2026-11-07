@@ -1,12 +1,12 @@
 import {escapeHtml as esc} from './ui-utils.js';
-import {seedCanvas,applyCanvasOperation,canvasSvg,objectDefaults,numericProps} from './canvas-model.js';
+import {seedCanvas,applyCanvasOperation,canvasSvg,objectDefaults,numericProps,placeholderTexts} from './canvas-model.js';
 const colours=['#f6df98','#d5e4ff','#f5d3df','#d7eddf','#e4dcfa','#ffffff','#203348','#3454d1'];
 const $=(s,r=document)=>r.querySelector(s);
 export function ensurePublicationDetails(draft,board,notify){
  const prompts={title:'Add an event title in Event details before publishing.',date:'Add an event date in Event details before publishing.',location:'Add an event location in Event details before publishing.'};
- const missing=Object.keys(prompts).find(field=>!String(draft?.[field]||'').trim());
+ const fields=Object.keys(prompts).filter(field=>!String(draft?.[field]||'').trim()),missing=fields[0];
  if(!missing)return true;
- board.openEventDetails(missing);notify(prompts[missing],{publicationField:missing});return false;
+ board.openEventDetails(missing);notify(prompts[missing],{publicationField:missing,publicationFields:fields});return false;
 }
 export function mountWhiteboard(root,{getDraft,isConnected,send,onPending,toast,flushAll}){
  const legacy=$('.designer-layout',root);legacy.hidden=true;legacy.classList.add('legacy-studio');document.body.classList.add('whiteboard-mode');
@@ -32,7 +32,7 @@ export function mountWhiteboard(root,{getDraft,isConnected,send,onPending,toast,
  }
  $('#wb-event-details').onclick=()=>openEventDetails();
  function centre(){const r=stage.getBoundingClientRect();return {x:Math.max(0,(r.width/2-camera.x)/camera.z-150),y:Math.max(0,(r.height/2-camera.y)/camera.z-80)};}
- function add(type,props={}){const o={id:crypto.randomUUID(),type,...objectDefaults,...centre(),...({text:{text:'Your big idea',fill:'#203348',width:500,height:180,fontSize:56},sticky:{text:'Add your thoughts…',fill:'#f6df98',stroke:'#554521',width:280,height:220,fontSize:28},ellipse:{width:200,height:200},arrow:{height:90,strokeWidth:5},line:{height:8,strokeWidth:4},image:{width:480,height:340}}[type]||{}),...props};enqueue({action:'add',object:o});pick(o.id);setTool('select');}
+ function add(type,props={}){const o={id:crypto.randomUUID(),type,...objectDefaults,...centre(),...({text:{text:placeholderTexts[0],fill:'#203348',width:500,height:180,fontSize:56},sticky:{text:placeholderTexts[1],fill:'#f6df98',stroke:'#554521',width:280,height:220,fontSize:28},ellipse:{width:200,height:200},arrow:{height:90,strokeWidth:5},line:{height:8,strokeWidth:4},image:{width:480,height:340}}[type]||{}),...props};enqueue({action:'add',object:o});pick(o.id);setTool('select');}
  shell.querySelectorAll('[data-board-add]').forEach(b=>b.onclick=()=>add(b.dataset.boardAdd));shell.querySelectorAll('[data-board-tool]').forEach(b=>b.onclick=()=>setTool(b.dataset.boardTool));
  shell.querySelectorAll('[data-board-template]').forEach(b=>b.onclick=()=>{const plan=b.dataset.boardTemplate==='planner',names=plan?['TO DO','IN PROGRESS','DONE']:['WHAT IF…','LET’S TRY…','NEXT STEPS'],point=centre();names.forEach((text,i)=>add('sticky',{text,x:point.x+(i-1)*310,y:point.y,fill:colours[i],height:280}));});
  $('#wb-add-image').onclick=()=>{const src=$('[data-field="heroImageUrl"]').value||getDraft().heroImageUrl;if(!src){toast('Upload a photo or enter its HTTPS link first.');return;}add('image',{src});};

@@ -16,3 +16,4 @@ mise.local.toml
 .test-data
 .pnpm-store
 test-results
+.asset-build

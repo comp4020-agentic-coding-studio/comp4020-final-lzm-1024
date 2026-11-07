@@ -1,9 +1,11 @@
-export function publicationHelp(field){
+export function publicationHelp(field,missing=[field]){
  const details={
   title:{title:'Add an event title',message:'Your poster needs an event title before it can appear on the wall.',steps:['Open Event details and enter a name in Event title.','Wait until the editor shows Connected · Saved.','Select Publish again.'],actionLabel:'Go to Event title'},
   date:{title:'Add an event date',message:'Your poster needs an event date so other students know when it happens.',steps:['Open Event details and choose the actual event date in Date.','A date written on the canvas does not fill the Date field.','Wait until the editor shows Connected · Saved, then select Publish again.'],actionLabel:'Go to Date'},
   location:{title:'Add an event location',message:'Your poster needs a location so other students know where to go.',steps:['Open Event details and enter the venue or meeting place in Location.','A location written on the canvas does not fill the Location field.','Wait until the editor shows Connected · Saved, then select Publish again.'],actionLabel:'Go to Location'}
  };
+ const list=[...new Set((missing||[]).filter(name=>details[name]))];
+ if(list.length>1&&details[field])return {title:'Add the missing event details',message:'Your poster needs a few more details before it can appear on the wall.',steps:[...list.map(name=>details[name].steps[0]),'Wait until the editor shows Connected · Saved, then select Publish again.'],actionLabel:details[list[0]].actionLabel};
  return details[field]||null;
 }
 

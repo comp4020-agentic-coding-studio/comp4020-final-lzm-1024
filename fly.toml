@@ -26,6 +26,9 @@ dockerfile = "Dockerfile"
 [env]
 PORT = "8080"
 PUBLIC_BASE_URL = "https://comp4020-final-lzm-1024.fly.dev"
+# Only these universities are open (comma-separated ids from campus.mjs). Remove the
+# line, or list more ids, to reopen the others: their code and data are kept.
+ACTIVE_CAMPUSES = "anu"
 
 [http_service]
 internal_port = 8080

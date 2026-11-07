@@ -27,3 +27,16 @@ export function loadStylesheet(href){
   });
   stylesheets.set(href,promise);return promise;
 }
+
+// A web address people may follow: http(s) only, otherwise ''.
+export function safeUrl(value){try{const url=new URL(String(value||'').trim());return /^https?:$/.test(url.protocol)&&!url.username&&!url.password?url.href:'';}catch{return '';}}
+// Escaped text with http(s) addresses turned into links. Nothing else becomes markup.
+export function linkify(text){
+  return String(text??'').split(/(https?:\/\/[^\s<>"']+)/g).map((part,i)=>{
+    if(i%2===0)return escapeHtml(part);
+    const trail=part.match(/[).,;:!?]+$/)?.[0]||'',raw=trail?part.slice(0,-trail.length):part,href=safeUrl(raw);
+    if(!href)return escapeHtml(part);
+    const label=raw.replace(/^https?:\/\/(www\.)?/,'');
+    return `<a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer nofollow ugc">${escapeHtml(label.length>48?label.slice(0,45)+'…':label)}</a>${escapeHtml(trail)}`;
+  }).join('');
+}

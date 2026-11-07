@@ -7,6 +7,11 @@ it('records redacted HTTP/WebSocket actions with stable opaque identity and boun
   expect(result.stdout).toContain('# fail 0');
 }, 35000);
 
+it('translates every getting-started guide sentence and links only to served routes', async () => {
+  const result = await promisify(execFile)(process.execPath, ['--test', '--test-reporter=tap', 'scripts/guide.test.mjs'], { timeout: 10000 });
+  expect(result.stdout).toContain('# fail 0');
+}, 15000);
+
 it('keeps built-in interface text, game prompts and documentation in English', async () => {
   const result = await promisify(execFile)(process.execPath, ['--test', '--test-reporter=tap', 'scripts/english-copy.test.mjs'], { timeout: 10000 });
   expect(result.stdout).toContain('# fail 0');

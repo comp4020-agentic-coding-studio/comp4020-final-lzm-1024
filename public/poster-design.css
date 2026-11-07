@@ -22,3 +22,17 @@
 .designed-bold .design-image{inset:8% 9% 16%;opacity:.14}.designed-bold .design-copy h2{line-height:.92}.designed-gradient .design-wash{background:radial-gradient(ellipse at 80% 20%,color-mix(in srgb,var(--poster-accent,var(--fg)) 55%,transparent),transparent 60%),linear-gradient(130deg,transparent,color-mix(in srgb,var(--fg) 15%,transparent))}.designed-gradient .design-image{border-radius:50% 50% 8% 8%;opacity:.3}
 @media print{body:has(.studio-stage)>*:not(#app){display:none!important}body:has(.studio-stage) #app{max-width:none;padding:0;margin:0}.editor-top,.editor-fields,.studio-stage-tools,.preview-bar,.presence-panel,.studio-people,.readiness,.owner-tools{display:none!important}.designer-layout{display:block!important}.studio-stage,.studio-canvas-shell{padding:0!important;border:0!important;background:none!important;overflow:visible!important}#preview{width:160mm!important;max-width:160mm!important;margin:auto!important;box-shadow:none!important}.designed-poster{print-color-adjust:exact;-webkit-print-color-adjust:exact}body:has(.studio-stage){background:white!important}}
 .canvas-poster{display:block!important;padding:0!important;background:transparent!important;overflow:hidden}.canvas-poster>.canvas-document{display:block;width:100%;height:100%}
+
+/* Real titles vary: size from --d-fit (set per poster and refined by fitPosters), up to four lines, subtitle up to three. */
+.poster.designed-poster .design-copy h2{font-size:calc(var(--d-titleScale)*.11cqw*var(--d-fit,1));-webkit-line-clamp:4}
+.poster.designed-poster .design-copy p{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
+.designed-poster.fit-tight .design-copy p{display:none}
+/* No photo: the image area shows the category colour and symbol instead of an empty box. */
+.designed-poster.no-image .design-image{background:var(--cat);display:grid;place-items:center}
+.designed-poster.no-image .design-motif:not(.motif-grid){display:none}
+.design-placeholder{font:38cqw/1 Georgia,'Segoe UI Symbol',serif;color:#0000004d}
+.designed-frame.no-image .design-image{padding:0}
+/* When the fitting pass moves copy up, the colour block above it shrinks so the two never overlap. */
+.poster.designed-poster.no-image:is(.fit-moved,.designed-gradient) .design-image{bottom:calc(100% - var(--d-titleY)*1% + 4%)}
+/* Keep the campus label on the dark background, not on a light colour block. */
+.poster.designed-poster.no-image:is(.designed-minimal,.designed-gradient) .design-image{top:13%}

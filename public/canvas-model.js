@@ -55,4 +55,7 @@ export function canvasObjectSvg(o,interactive=false){
  return `<g ${interactive?`data-canvas-item="${o.id}" tabindex="0" role="button" aria-label="${esc(o.type+' '+(o.text||'object').slice(0,60))}"`:''} transform="translate(${o.x} ${o.y}) rotate(${o.rotation} ${w/2} ${h/2})" opacity="${o.opacity}">${interactive?`<rect class="canvas-hit" width="${w}" height="${h}" fill="transparent"/>`:''}${inside}</g>`;
 }
 export function canvasSvg(c,interactive=false){return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${c.width} ${c.height}" width="${c.width}" height="${c.height}" class="canvas-document" role="img" aria-label="Shared canvas design"><rect width="100%" height="100%" fill="${c.background}"/>${c.objects.map(o=>canvasObjectSvg(o,interactive)).join('')}</svg>`;}
+// Starter text the editor adds; untouched, it is not the creator's artwork.
+export const placeholderTexts=['Your big idea','Add your thoughts…'];
+export function blankCanvas(c){return !!c&&!c.objects?.some(o=>!['text','sticky'].includes(o.type)||!['',...placeholderTexts].includes(String(o.text||'').trim()));}
 export function canvasPoster(p,large=false){return `<div class="poster canvas-poster${large?' large':''}" style="aspect-ratio:${p.canvas.width}/${p.canvas.height}" aria-label="${esc(p.title||'Campus design')}">${canvasSvg(p.canvas)}</div>`;}

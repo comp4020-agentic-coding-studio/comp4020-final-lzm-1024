@@ -10,7 +10,7 @@ export function translate(value){
   const trim=value.trim();if(!trim)return value;
   let result=catalog[trim]||catalog[trim.toLowerCase()];
   if(!result){
-    const decoration=/^([★✦✧✳☺☎▣▶♬←→↗↶↷↑↓⌖▤⚠△●○＋+\s]*)(.*?)([↗↑↓✓★✦＋\s]*)$/u.exec(trim);
+    const decoration=/^([★☆✦✧✳☺☎▣▶♬←→↗↙↘↶↷↑↓⌖▤⚠△●○◉◐◎⚙✉♡♜▦＋+—–\s]*)(.*?)([↗↙↘←→↑↓✓★☆✦＋\s]*)$/u.exec(trim);
     if(decoration?.[2]){const middle=catalog[decoration[2]]||catalog[decoration[2].toLowerCase()];if(middle)result=decoration[1]+middle+decoration[3];}
   }
   if(!result)for(const {regex,target} of patterns){const match=regex.exec(trim);if(match){result=target.replace(/\{(\d+)\}/g,(_,i)=>match[Number(i)+1]);break;}}
@@ -49,7 +49,7 @@ function scan(root){
   while(walker.nextNode()){const node=walker.currentNode;if(node.nodeType===3)text(node);else attributes(node);}
 }
 function picker(){
-  const nav=document.querySelector('#header nav');if(!nav||nav.querySelector('.language-picker'))return;
+  const nav=document.querySelector('#header [data-settings]')||document.querySelector('#header nav');if(!nav||nav.querySelector('.language-picker'))return;
   const label=document.createElement('label');label.className='language-picker';label.setAttribute('translate','no');
   label.innerHTML='<span aria-hidden="true">◎</span><select aria-label="Interface language">'+languages.map(([id,name])=>'<option value="'+id+'">'+name+'</option>').join('')+'</select>';
   const select=label.querySelector('select');select.value=language;

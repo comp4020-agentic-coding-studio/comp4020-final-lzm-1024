@@ -1,7 +1,7 @@
 import {gameCatalog} from './public/game-catalog.js';
 import {newGame,moveGame,settleGame,publicGame} from './game-engine.mjs';
 
-export function createGames({db,get,all,run,id,now,fail,string,campusAccount,body,json,sockets,send,validSocket,messaging,recordGame=()=>{}}){
+export function createGames({blocks={guard(){},between(){return false;}},db,get,all,run,id,now,fail,string,campusAccount,body,json,sockets,send,validSocket,messaging,recordGame=()=>{}}){
   const room=id=>get('SELECT * FROM game_rooms WHERE id=?',id)||fail(404,'Game room not found');
   const seat=(r,u)=>r.hostId===u.id?0:r.guestId===u.id?1:-1;
   const identity=userId=>userId?get('SELECT id,name,username FROM users WHERE id=?',userId):null;
@@ -24,7 +24,7 @@ export function createGames({db,get,all,run,id,now,fail,string,campusAccount,bod
         const input=await body(req);u=campusAccount(req);validClient(input);const payload=JSON.stringify({game:input.game,inviteeId:input.inviteeId||null});
         const previous=get('SELECT * FROM game_requests WHERE userId=? AND clientId=?',u.id,input.clientId);if(previous){if(previous.operation!=='create'||previous.payload!==payload)fail(409,'This request already created another room');return json(res,200,{room:view(room(previous.roomId),u)});}
         limit(u);if(!gameCatalog.some(g=>g.id===input.game))fail(400,'Choose an available game');
-        if(input.inviteeId){const peer=get("SELECT id FROM users WHERE id=? AND universityId=? AND passwordHash<>'!disabled'",input.inviteeId,u.universityId);if(!peer||peer.id===u.id)fail(400,'Invite another user from your university');}
+        if(input.inviteeId){const peer=get("SELECT id FROM users WHERE id=? AND universityId=? AND passwordHash<>'!disabled'",input.inviteeId,u.universityId);if(!peer||peer.id===u.id)fail(400,'Invite another user from your university');blocks.guard(u.id,peer.id);}
         if(get("SELECT COUNT(*) n FROM game_rooms WHERE hostId=? AND status IN ('waiting','playing')",u.id).n>=10)fail(429,'Finish or close an existing room before creating another');
         const roomId=id(),time=now();db.exec('BEGIN');try{run('INSERT INTO game_rooms (id,universityId,game,hostId,inviteeId,state,createdAt,updatedAt) VALUES (?,?,?,?,?,?,?,?)',roomId,u.universityId,input.game,u.id,input.inviteeId||null,JSON.stringify(newGame(input.game)),time,time);run('INSERT INTO game_requests VALUES (?,?,?,?,?,?)',u.id,input.clientId,roomId,'create',payload,time);db.exec('COMMIT');}catch(error){db.exec('ROLLBACK');throw error;}
         const r=room(roomId);broadcast(r);return json(res,201,{room:view(r,u)});

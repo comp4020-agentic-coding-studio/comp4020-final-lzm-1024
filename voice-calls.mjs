@@ -1,5 +1,5 @@
 // Media travels between the participants; this server relays bounded signalling only.
-export function createVoiceCalls({get,all,run,id,now,fail,body,json,campusAccount,sockets,send,validSocket,sessionHash}) {
+export function createVoiceCalls({blocks={guard(){},between(){return false;}},get,all,run,id,now,fail,body,json,campusAccount,sockets,send,validSocket,sessionHash}) {
  const uuid=value=>typeof value==='string'&&/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/.test(value);
  const live=new Map();
  run("UPDATE voice_calls SET status='ended',reason='server-restarted',endedAt=? WHERE status<>'ended'",now());
@@ -27,7 +27,7 @@ export function createVoiceCalls({get,all,run,id,now,fail,body,json,campusAccoun
    const input=await body(req);u=campusAccount(req);const caller=device(req,input,u);
    const mode=input.mode??'audio';if(!['audio','video'].includes(mode))fail(400,'Invalid call mode');
    if(!uuid(input.clientId)||!uuid(input.conversationId))fail(400,'Invalid call request');
-   const conversation=get('SELECT * FROM conversations WHERE id=? AND (user1=? OR user2=?)',input.conversationId,u.id,u.id)||fail(404,'Conversation not found');
+   const conversation=get('SELECT * FROM conversations WHERE id=? AND (user1=? OR user2=?)',input.conversationId,u.id,u.id)||fail(404,'Conversation not found');blocks.guard(conversation.user1,conversation.user2);
    const calleeId=conversation.user1===u.id?conversation.user2:conversation.user1;
    if(get('SELECT universityId FROM users WHERE id=?',calleeId)?.universityId!==u.universityId)fail(403,'Voice calls stay within your university');
    const previous=get('SELECT * FROM voice_calls WHERE callerId=? AND clientId=?',u.id,input.clientId);

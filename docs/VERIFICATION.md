@@ -145,6 +145,8 @@ Windows browser inspection was stopped by the Computer Use tool because it could
 
 ### Arcade game interface, 13 October 2026
 
+*Archived: the dark arcade layer described here and in the next entry was removed on 7 November 2026 so games share the CampusWall style; see the games section of the user guide.*
+
 The games lobby now uses a scoped arcade theme: a neon headline, continuously scrolling decorative banner, floating sticker, gently moving game illustrations and high-contrast play buttons. Match pages receive matching headings and turn indicators without changing the boards or game rules. The effects toggle persists locally; paused entrances remain fully visible, and reduced-motion preferences disable decorative animation. The treatment uses slow motion and glow rather than rapid light/dark flashes.
 
 Verification: TypeScript, English-copy checks and document checks passed. The game rules and disposable two-client integration checks passed (28 nested tests). A temporary JSDOM check verified all ten cards, category filtering, search, the guest sign-in dialog, cleanup and the effects preference across remounts. These DOM checks do not verify rendered layout; desktop/phone visual review remains outstanding.

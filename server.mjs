@@ -5,6 +5,7 @@ import {createVoiceCalls} from './voice-calls.mjs';
 import {createCommunity} from './community.mjs';
 import {createWatch} from './watch.mjs';
 import {createProfiles} from './profiles.mjs';
+import {createBlocks} from './blocks.mjs';
 import { createServer } from 'node:http';
 import { mkdirSync, readFileSync, writeFileSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
@@ -12,9 +13,7 @@ import { randomUUID, randomBytes, scrypt as derive, timingSafeEqual, createHash 
 import { promisify } from 'node:util';
 import { DatabaseSync } from 'node:sqlite';
 import { WebSocketServer, WebSocket } from 'ws';
-import sharp from 'sharp';
-import QRCode from 'qrcode';
-import { campusDetails, universities } from './campus.mjs';
+import { campusDetails, universities, isActiveCampus } from './campus.mjs';
 import { validEmail, universityFromEmail } from './public/email-utils.js';
 import { calendarEvent } from './calendar.mjs';
 import { clubDirectory } from './clubs.mjs';
@@ -23,14 +22,17 @@ import { createGames } from './games.mjs';
 import {initializeDatabase} from './initialize-database.mjs';
 import {createQueries} from './database.mjs';
 import {createPosterStore} from './poster-store.mjs';
-import {createPublicAssets} from './public-assets.mjs';
+import {createPublicAssets,encoding} from './public-assets.mjs';
+import {brotliCompress,gzip,constants as zlibConstants} from 'node:zlib';
 import {seedCanvas,applyCanvasOperation,validateProps} from './public/canvas-model.js';
 import {designFields,designChoices,designNumbers,designColours,designDefaults,designPresets} from './public/poster-design.js';
 
 const scrypt = promisify(derive), dataDir = process.env.DATA_DIR || '/data';
 const emailUniversities=universities.map(([id,name,shortName])=>({id,name,shortName,...campusDetails[id]}));
-sharp.cache(false); sharp.concurrency(1);
-const uploadDir=join(dataDir,'uploads');let processingImage=false;
+// Image and QR libraries load on first use, keeping them out of cold starts.
+let sharpModule;const loadSharp=async()=>{if(!sharpModule){sharpModule=(await import('sharp')).default;sharpModule.cache(false);sharpModule.concurrency(1);}return sharpModule;};
+const loadQRCode=async()=>(await import('qrcode')).default;
+const uploadDir=join(dataDir,'uploads');let processingImage=false,readingImages=0;
 mkdirSync(dataDir, { recursive: true });
 const observation=createActionLogger({key:loadLogKey(dataDir),write:createLogSink(process.stdout)});
 const db = new DatabaseSync(join(dataDir, 'campuswall.sqlite'));
@@ -43,7 +45,7 @@ mkdirSync(uploadDir,{recursive:true});
 class Problem extends Error { constructor(status,message) { super(message);this.status=status; } }
 const fail=(status,message)=>{throw new Problem(status,message);};
 const string=(v,max,label)=>{if(typeof v!=='string'||v.length>max) fail(400,`${label} must be text with at most ${max} characters`);return v.trim();};
-const fields={title:100,subtitle:160,date:10,time:5,location:180,description:2000,category:20,template:20,style:20,alignment:10,heroImageUrl:1500,...designFields};
+const fields={title:100,subtitle:160,date:10,time:5,location:180,description:2000,organiser:100,eventUrl:500,category:20,template:20,style:20,alignment:10,heroImageUrl:1500,...designFields};
 const choices={category:['Social','Academic','Clubs','Sport','Arts','Career','Other'],template:['minimal','photo','club','seminar','social'],style:['sunshine','sage','lavender','coral','sky','ink',...Object.values(campusDetails).map(c=>c.style)],alignment:['left','center']};
 function validate(field,value) {
   if(!Object.hasOwn(fields,field)) fail(400,'This field cannot be edited');
@@ -57,14 +59,29 @@ function validate(field,value) {
   if(field==='heroImageUrl'&&v&&!/^\/media\/[a-f0-9-]{36}$/.test(v)) {try {if(new URL(v).protocol!=='https:') fail(400,'Use an HTTPS image URL');} catch {fail(400,'Use a valid HTTPS image URL');}}
   return v;
 }
-const json=(res,status,data)=>{if(Number.isSafeInteger(data?.version))res.observedRevision=data.version;res.writeHead(status,{'content-type':'application/json; charset=utf-8','cache-control':'no-store'});res.end(JSON.stringify(data));};
+// JSON responses over 1 KB are compressed off the main thread (Brotli, else gzip).
+// Nothing is cached: each response is encoded once for the request that asked for it.
+const json=(res,status,data)=>{
+  if(Number.isSafeInteger(data?.version))res.observedRevision=data.version;
+  const body=Buffer.from(JSON.stringify(data)),headers={'content-type':'application/json; charset=utf-8','cache-control':'no-store','vary':'Accept-Encoding'};
+  const selected=body.length>=1024&&res.req?.method!=='HEAD'?encoding(res.req?.headers['accept-encoding']):null;
+  const finish=(bytes,encoded)=>{if(res.headersSent||res.destroyed)return;res.writeHead(status,{...headers,...(encoded?{'content-encoding':encoded}:{}),'content-length':bytes.length});res.end(bytes);};
+  if(!selected)return finish(body,null);
+  const done=(error,bytes)=>error?finish(body,null):finish(bytes,selected);
+  if(selected==='br')brotliCompress(body,{params:{[zlibConstants.BROTLI_PARAM_QUALITY]:4,[zlibConstants.BROTLI_PARAM_MODE]:zlibConstants.BROTLI_MODE_TEXT,[zlibConstants.BROTLI_PARAM_SIZE_HINT]:body.length}},done);
+  else gzip(body,{level:6},done);
+};
 const body=req=>new Promise((resolve,reject)=>{let raw='';req.on('data',b=>{raw+=b;if(Buffer.byteLength(raw)>16000){reject(new Problem(413,'Request is too large'));req.destroy();}});req.on('end',()=>{try{const parsed=JSON.parse(raw||'{}');if(!parsed||typeof parsed!=='object'||Array.isArray(parsed))throw new Error();resolve(parsed);}catch{reject(new Problem(400,'Invalid JSON'));}});req.on('error',reject);});
 const hash=token=>createHash('sha256').update(token).digest('hex');
 function token(req) {return /(?:^|;\s*)campus_session=([a-f0-9]+)/.exec(req.headers.cookie||'')?.[1]||'';}
 function user(req) {const account=get('SELECT u.id,u.name,u.email,u.username,u.universityId,u.avatarId FROM users u JOIN sessions s ON s.userId=u.id WHERE s.tokenHash=? AND s.expiresAt>?',hash(token(req)),Date.now());if(account)req.observedActorId=account.id;return account;}
 function authenticated(req) {return user(req)||fail(401,'Sign in to continue');}
-function campusAccount(req){const u=authenticated(req);if(!u.universityId)fail(409,'Choose your account university to continue');return u;}
-function campusAccess(req,universityId){const u=user(req);if(!u)return;if(!u.universityId)fail(409,'Choose your account university to continue');if(u.universityId!==universityId)fail(403,'Your account can only access its own university');}
+const openCampusNames=()=>universities.filter(([id])=>isActiveCampus(id)).map(([,,shortName])=>shortName).join(', ');
+const closedCampus=()=>fail(403,`Your university is not open on CampusWall right now. CampusWall is currently open to ${openCampusNames()}.`);
+// A university counts only when it exists and is switched on (see ACTIVE_CAMPUSES in campus.mjs).
+const activeCampus=id=>isActiveCampus(id)&&!!get('SELECT 1 FROM universities WHERE id=?',id);
+function campusAccount(req){const u=authenticated(req);if(!u.universityId)fail(409,'Choose your account university to continue');if(!isActiveCampus(u.universityId))closedCampus();return u;}
+function campusAccess(req,universityId){if(!isActiveCampus(universityId))fail(404,'This campus is not available');const u=user(req);if(!u)return;if(u.universityId&&!isActiveCampus(u.universityId))closedCampus();if(!u.universityId)fail(409,'Choose your account university to continue');if(u.universityId!==universityId)fail(403,'Your account can only access its own university');}
 function record(posterId) {return get('SELECT * FROM posters WHERE id=?',posterId)||fail(404,'Poster not found');}
 function allowed(p,u) {return p.ownerId===u.id||!!get('SELECT 1 FROM collaborators WHERE posterId=? AND userId=?',p.id,u.id);}
 function editor(p,u) {if(!u.universityId||u.universityId!==p.universityId||!allowed(p,u))fail(403,'You do not have access to this draft');}
@@ -88,8 +105,9 @@ const chatSelect='SELECT c.seq,c.id,c.body,c.createdAt,c.universityId,u.id autho
 function chatHistory(universityId) {return all(`${chatSelect} WHERE c.universityId=? ORDER BY c.seq DESC LIMIT 100`,universityId).reverse();}
 function broadcastChat(message) {for(const ws of sockets)if(ws.chat&&ws.chatCampus===message.universityId){if(ws.user&&!validSocket(ws)){ws.close(4001,'Session expired');continue;}send(ws,'chat:message',{message});}}
 let community;
-const messaging=createMessaging({dataDir,db,get,all,run,id,now,fail,string,authenticated:campusAccount,body,json,sockets,send,validSocket,campusAccess,notify:(...args)=>community?.notify(...args)});
-const games=createGames({db,get,all,run,id,now,fail,string,campusAccount,body,json,sockets,send,validSocket,messaging,recordGame:(...args)=>community?.recordGame(...args)});
+const blocks=createBlocks({get,all,run,now,fail,json,campusAccount,onBlock:(a,b)=>{const pair=[a,b].sort();run('DELETE FROM friends WHERE user1=? AND user2=?',...pair);community?.friendsChanged(a,b);}});
+const messaging=createMessaging({blocks,dataDir,db,get,all,run,id,now,fail,string,authenticated:campusAccount,body,json,sockets,send,validSocket,campusAccess,notify:(...args)=>community?.notify(...args)});
+const games=createGames({blocks,db,get,all,run,id,now,fail,string,campusAccount,body,json,sockets,send,validSocket,messaging,recordGame:(...args)=>community?.recordGame(...args)});
 function update(p,u,input) {
   editor(p,u);
   if(!Number.isInteger(input.clientVersion)||input.clientVersion<0||input.clientVersion>p.version)fail(400,'Invalid poster version');
@@ -113,8 +131,19 @@ function updateCanvas(p,u,input){
  const result=view(record(p.id),true);broadcast(p.id,'poster:updated',{poster:result,requestId:input.requestId,canvas:true,updatedBy:u.id});return result;
 }
 function sameOrigin(req) {if(!req.headers.origin)return;try{if(new URL(req.headers.origin).host===req.headers.host)return;}catch{}fail(403,'Request origin is not allowed');}
-const attempts=new Map();
-function rateLimit(req) {const key=req.socket.remoteAddress,entry=attempts.get(key)||{n:0,until:Date.now()+60000};if(entry.until<Date.now()){entry.n=0;entry.until=Date.now()+60000;}if(++entry.n>30)fail(429,'Too many attempts. Please wait a minute.');attempts.set(key,entry);}
+// Sign-in throttling. Behind Fly's proxy every socket comes from the proxy, so the
+// visitor address is read from Fly-Client-IP, which the proxy sets itself; the header
+// is ignored elsewhere so local clients cannot choose their own bucket. Failed sign-ins
+// are also counted per account so one address cannot keep guessing a single password.
+const attempts=new Map(),loginFailures=new Map(),trustFlyClientIp=Boolean(process.env.FLY_APP_NAME);
+const ipLimit=30,ipWindow=60000,accountLimit=10,accountWindow=15*60000;
+function clientIp(req) {const fly=trustFlyClientIp&&req.headers['fly-client-ip'];return typeof fly==='string'&&fly&&fly.length<=64?fly:req.socket.remoteAddress;}
+function bump(map,key,windowMs) {const t=Date.now();let entry=map.get(key);if(!entry||entry.until<t){entry={n:0,until:t+windowMs};map.set(key,entry);}return ++entry.n;}
+function rateLimit(req) {if(bump(attempts,clientIp(req),ipWindow)>ipLimit)fail(429,'Too many attempts. Please wait a minute.');}
+// Bounded per-account throttles for actions that notify or probe other students.
+const actionCounts=new Map();
+function throttle(kind,userId,limit,windowMs,message) {if(bump(actionCounts,kind+':'+userId,windowMs)>limit)fail(429,message);}
+function loginLocked(email) {const entry=loginFailures.get(email);return Boolean(entry&&entry.until>=Date.now()&&entry.n>=accountLimit);}
 function session(res,req,u) {req.observedActorId=u.id;const sessionToken=randomBytes(32).toString('hex');run('INSERT INTO sessions VALUES (?,?,?)',hash(sessionToken),u.id,Date.now()+7*86400000);res.setHeader('set-cookie',`campus_session=${sessionToken}; HttpOnly; SameSite=Lax; Path=/; Max-Age=604800${req.headers['x-forwarded-proto']==='https'?'; Secure':''}`);}
 function publicUrl(req,p) {const origin=process.env.PUBLIC_BASE_URL||`${req.headers['x-forwarded-proto']==='https'?'https':'http'}://${req.headers.host}`;return new URL(`/${p.universityId}/posters/${p.slug}`,origin).href;}
 function readImage(req) {
@@ -122,21 +151,28 @@ function readImage(req) {
   return new Promise((resolve,reject)=>{
     let size=0,finished=false;const chunks=[];
     if(Number(req.headers['content-length'])>limit){req.resume();reject(new Problem(413,'Choose an image smaller than 5 MB'));return;}
-    req.on('data',chunk=>{if(finished)return;size+=chunk.length;if(size>limit){finished=true;chunks.length=0;reject(new Problem(413,'Choose an image smaller than 5 MB'));return;}chunks.push(chunk);});
-    req.on('end',()=>{if(!finished)resolve(Buffer.concat(chunks));});req.on('error',reject);
+    if(readingImages>=4){req.resume();reject(new Problem(429,'Several images are uploading. Please try again in a moment.'));return;}
+    // A slow or stalled sender cannot hold an upload slot indefinitely.
+    readingImages++;const done=()=>{if(!finished){finished=true;readingImages--;clearTimeout(timer);}};
+    const timer=setTimeout(()=>{if(finished)return;done();chunks.length=0;reject(new Problem(408,'The image upload took too long. Please try again.'));req.destroy();},Number(process.env.IMAGE_READ_TIMEOUT_MS||30000));timer.unref();
+    req.on('data',chunk=>{if(finished)return;size+=chunk.length;if(size>limit){done();chunks.length=0;reject(new Problem(413,'Choose an image smaller than 5 MB'));return;}chunks.push(chunk);});
+    req.on('end',()=>{if(finished)return;done();resolve(Buffer.concat(chunks));});req.on('error',error=>{if(finished)return;done();reject(error);});req.on('close',()=>{if(finished)return;done();reject(new Problem(400,'The upload was interrupted'));});
   });
 }
 async function uploadImage(req,posterId) {
   const u=authenticated(req);editor(record(posterId),u);
   if(!['image/jpeg','image/png','image/webp'].includes(req.headers['content-type']))fail(400,'Choose a JPEG, PNG or WebP image');
-  if(processingImage)fail(429,'Another image is processing. Please try again in a moment.');
   if(get('SELECT COUNT(*) n FROM uploads WHERE posterId=?',posterId).n>=20)fail(400,'This poster has reached its 20-image limit');
+  if(get('SELECT COALESCE(SUM(bytes),0) n FROM uploads WHERE authorId=?',u.id).n>=25*1024*1024)fail(507,'You have used your 25 MB of poster images. Remove unused drafts or use an HTTPS image link.');
   if(get('SELECT COALESCE(SUM(bytes),0) n FROM uploads').n>=200*1024*1024)fail(507,'Image storage is full. Use an HTTPS image link instead.');
+  // Receive first, then hold the single decoding slot only for the CPU-bound work.
+  const input=await readImage(req);
+  if(processingImage)fail(429,'Another image is processing. Please try again in a moment.');
   processingImage=true;
   try {
-    const input=await readImage(req);let encoded;
+    let encoded;
     try {
-      const image=sharp(input,{limitInputPixels:16_000_000,failOn:'warning'}),metadata=await image.metadata();
+      const image=(await loadSharp())(input,{limitInputPixels:16_000_000,failOn:'warning'}),metadata=await image.metadata();
       if(!['jpeg','png','webp'].includes(metadata.format)||metadata.pages>1)fail(400,'Choose a still JPEG, PNG or WebP image');
       const expected={'image/jpeg':'jpeg','image/png':'png','image/webp':'webp'}[req.headers['content-type']];
       if(metadata.format!==expected)fail(400,'Image content does not match its file type');
@@ -156,11 +192,12 @@ const avatarDir=join(dataDir,'avatars');mkdirSync(avatarDir,{recursive:true});
 async function uploadAvatar(req){
  const u=authenticated(req);
  if(!['image/jpeg','image/png','image/webp'].includes(req.headers['content-type']))fail(400,'Choose a JPEG, PNG or WebP image');
+ const input=await readImage(req);
  if(processingImage)fail(429,'Another image is processing. Please try again in a moment.');
  processingImage=true;
  try{
-  const input=await readImage(req);let encoded;
-  try{const image=sharp(input,{limitInputPixels:16_000_000,failOn:'warning'}),metadata=await image.metadata();
+  let encoded;
+  try{const image=(await loadSharp())(input,{limitInputPixels:16_000_000,failOn:'warning'}),metadata=await image.metadata();
    if(metadata.pages>1||metadata.format!==({'image/jpeg':'jpeg','image/png':'png','image/webp':'webp'}[req.headers['content-type']]))fail(400,'Choose a still image matching its file type');
    encoded=await image.rotate().resize(256,256,{fit:'cover'}).webp({quality:82}).toBuffer();
   }catch(error){if(error.status)throw error;fail(400,'Unable to read this image. Choose a valid image up to 16 megapixels.');}
@@ -176,10 +213,10 @@ async function uploadAvatar(req){
   return person;
  }finally{processingImage=false;}
 }
-const profiles=createProfiles({get,all,run,body,json,authenticated:campusAccount,campusAccess,string,fail,id,now,notify:(...args)=>community?.notify(...args)});
+const profiles=createProfiles({blocks,get,all,run,body,json,authenticated:campusAccount,campusAccess,string,fail,id,now,notify:(...args)=>community?.notify(...args)});
 const watch=createWatch({db,get,all,run,id,now,fail,string,campusAccount,body,json,sockets,send,validSocket});
-community=createCommunity({db,get,all,run,id,now,fail,string,campusAccount,campusAccess,body,json,sockets,send,validSocket,watch,posters});
-const voiceCalls=createVoiceCalls({get,all,run,id,now,fail,body,json,campusAccount,sockets,send,validSocket,sessionHash:req=>hash(token(req))});
+community=createCommunity({blocks,db,get,all,run,id,now,fail,string,campusAccount,campusAccess,body,json,sockets,send,validSocket,watch,posters});
+const voiceCalls=createVoiceCalls({blocks,get,all,run,id,now,fail,body,json,campusAccount,sockets,send,validSocket,sessionHash:req=>hash(token(req))});
 const translateMessage=createTranslator();
 function translationMessage(input,u){
   const messageId=string(input.messageId,100,'Message');
@@ -217,26 +254,28 @@ const server=createServer(async(req,res)=>{
     if(path.startsWith('/api/community/'))return await community.handle(req,res,url);
     if(path.startsWith('/api/watch/'))return await watch.handle(req,res,url);
     if(path.startsWith('/api/profiles/'))return await profiles.handle(req,res,url);
+    if(path==='/api/blocks'||path.startsWith('/api/blocks/'))return await blocks.handle(req,res,url);
     if(path==='/api/profile/avatar'&&method==='POST')return json(res,200,{user:await uploadAvatar(req)});
     const avatar=path.match(/^\/avatars\/([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})\.webp$/);
     if(avatar&&(method==='GET'||method==='HEAD')){if(!get('SELECT 1 FROM users WHERE avatarId=?',avatar[1]))fail(404,'Avatar not found');const bytes=readFileSync(join(avatarDir,avatar[1]+'.webp'));res.writeHead(200,{'content-type':'image/webp','content-length':bytes.length,'cache-control':'public, max-age=86400'});return res.end(method==='HEAD'?undefined:bytes);}
     if(path==='/api/health')return json(res,200,{ok:true});
-    if(path==='/api/universities')return json(res,200,universities.map(([slug])=>({...get('SELECT * FROM universities WHERE id=?',slug),...campusDetails[slug]})));
+    if(path==='/api/universities')return json(res,200,universities.filter(([slug])=>isActiveCampus(slug)).map(([slug])=>({...get('SELECT * FROM universities WHERE id=?',slug),...campusDetails[slug]})));
     if(path.startsWith('/api/games/'))return await games.handle(req,res,url);
     if(path==='/api/users/search'||path.startsWith('/api/messages/'))return await messaging.handle(req,res,url);
     if(path==='/api/clubs'&&method==='GET') {
       const universityId=url.searchParams.get('university');
-      if(!get('SELECT 1 FROM universities WHERE id=?',universityId||''))fail(400,'Choose a university');
+      if(!activeCampus(universityId||''))fail(400,'Choose a university');
       campusAccess(req,universityId);
       return json(res,200,clubDirectory(universityId,{q:url.searchParams.get('q')||'',category:url.searchParams.get('category')||'',interest:url.searchParams.get('interest')||''}));
     }
     if(path==='/api/auth/me')return json(res,200,{user:user(req)||null});
     if(path==='/api/auth/university'&&method==='POST'){
       authenticated(req);const input=await body(req),u=authenticated(req),universityId=input.universityId;
-      if(!get('SELECT 1 FROM universities WHERE id=?',universityId||''))fail(400,'Choose a university');
+      if(!activeCampus(universityId||''))fail(400,'Choose a university');
       if(u.universityId&&u.universityId!==universityId)fail(409,'Your account university is already fixed');
       if(!u.universityId){
         const emailCampus=universityFromEmail(u.email,emailUniversities);
+        if(emailCampus&&!isActiveCampus(emailCampus.id))fail(400,`${emailCampus.shortName} is not open on CampusWall yet. CampusWall is currently open to ${openCampusNames()}.`);
         if(emailCampus&&emailCampus.id!==universityId)fail(400,`Your university email belongs to ${emailCampus.shortName}. Choose that university.`);
         run('UPDATE users SET universityId=? WHERE id=? AND universityId IS NULL',universityId,u.id);
       }
@@ -244,7 +283,7 @@ const server=createServer(async(req,res)=>{
       return json(res,200,{user:current});
     }
     if(path==='/api/chat/messages') {
-      if(method==='GET'){const uni=url.searchParams.get('university')||user(req)?.universityId;if(!get('SELECT 1 FROM universities WHERE id=?',uni||''))fail(400,'Choose a university');campusAccess(req,uni);return json(res,200,{messages:chatHistory(uni),limit:100,universityId:uni});}
+      if(method==='GET'){const uni=url.searchParams.get('university')||user(req)?.universityId;if(!activeCampus(uni||''))fail(400,'Choose a university');campusAccess(req,uni);return json(res,200,{messages:chatHistory(uni),limit:100,universityId:uni});}
       if(method==='POST') {
         campusAccount(req);const input=await body(req),u=campusAccount(req),text=string(input.body,500,'Message');
         if(input.universityId!==undefined&&input.universityId!==u.universityId)fail(403,'You can only send to your own university chat');
@@ -267,8 +306,9 @@ const server=createServer(async(req,res)=>{
       if(path.endsWith('register')) {
         if(!validEmail(email))fail(400,'Enter a valid email');
         const emailCampus=universityFromEmail(email,emailUniversities);
+        if(emailCampus&&!isActiveCampus(emailCampus.id))fail(400,`${emailCampus.shortName} is not open on CampusWall yet. CampusWall is currently open to ${openCampusNames()}.`);
         if(emailCampus&&input.universityId!==undefined&&input.universityId!==emailCampus.id)fail(400,`Your university email belongs to ${emailCampus.shortName}. You cannot register for another university.`);
-        const universityId=emailCampus?.id||input.universityId;if(!get('SELECT 1 FROM universities WHERE id=?',universityId||''))fail(400,'Choose your account university');
+        const universityId=emailCampus?.id||input.universityId;if(!activeCampus(universityId||''))fail(400,'Choose your account university');
         const name=string(input.name,50,'Display name');if(!name)fail(400,'Enter your display name');if(get('SELECT 1 FROM users WHERE email=?',email))fail(409,'An account already uses that email');
         let username=input.username===undefined?'':string(input.username,24,'Username').toLowerCase();if(username&&!/^[a-z0-9_]{3,24}$/.test(username))fail(400,'Username must be 3–24 letters, numbers or underscores');
         if(username&&get('SELECT 1 FROM users WHERE username=? COLLATE NOCASE',username))fail(409,'That username is already taken');
@@ -276,10 +316,23 @@ const server=createServer(async(req,res)=>{
         u.universityId=universityId;
         try{run('INSERT INTO users (id,name,email,passwordHash,createdAt,username,universityId) VALUES (?,?,?,?,?,?,?)',u.id,name,email,`${salt}:${key.toString('hex')}`,now(),username,universityId);}catch{fail(409,'That email or username is already taken');}
       } else {
+        if(loginLocked(email))fail(429,'Too many failed sign-ins for this email. Please wait 15 minutes or try again later.');
         const account=get('SELECT * FROM users WHERE email=?',email),[salt,expected]=account?.passwordHash.split(':')||[];
-        const key=await scrypt(password,salt||'invalid-account',64);if(!expected||!timingSafeEqual(key,Buffer.from(expected,'hex')))fail(401,'Email or password is incorrect');u={id:account.id,name:account.name,email:account.email,username:account.username,universityId:account.universityId,avatarId:account.avatarId};
+        const key=await scrypt(password,salt||'invalid-account',64);if(!expected||!timingSafeEqual(key,Buffer.from(expected,'hex'))){bump(loginFailures,email,accountWindow);fail(401,'Email or password is incorrect');}loginFailures.delete(email);u={id:account.id,name:account.name,email:account.email,username:account.username,universityId:account.universityId,avatarId:account.avatarId};
       }
       session(res,req,u);return json(res,200,{user:u});
+    }
+    // Account identity: only the display name and username can change here; email and campus stay fixed.
+    if(path==='/api/account'&&method==='PATCH'){
+      authenticated(req);const input=await body(req),u=authenticated(req);
+      if(!Object.keys(input).length||Object.keys(input).some(k=>!['name','username'].includes(k)))fail(400,'Only your display name and username can be changed');
+      throttle('account',u.id,10,60*60000,'You have changed your account details several times. Please wait an hour.');
+      const next={name:u.name,username:u.username};
+      if(input.name!==undefined){next.name=string(input.name,50,'Display name');if(!next.name)fail(400,'Enter your display name');}
+      if(input.username!==undefined){next.username=string(input.username,24,'Username').toLowerCase();if(!/^[a-z0-9_]{3,24}$/.test(next.username))fail(400,'Username must be 3–24 letters, numbers or underscores');if(get('SELECT 1 FROM users WHERE username=? COLLATE NOCASE AND id<>?',next.username,u.id))fail(409,'That username is already taken');}
+      try{run('UPDATE users SET name=?,username=? WHERE id=?',next.name,next.username,u.id);}catch{fail(409,'That username is already taken');}
+      for(const ws of sockets)if(ws.user?.id===u.id)Object.assign(ws.user,next);
+      return json(res,200,{user:user(req)});
     }
     if(path==='/api/auth/logout'&&method==='POST') {user(req);const sessionHash=hash(token(req));run('DELETE FROM sessions WHERE tokenHash=?',sessionHash);for(const ws of sockets)if(ws.sessionHash===sessionHash)ws.close(4001,'Signed out');res.setHeader('set-cookie','campus_session=; HttpOnly; SameSite=Lax; Path=/; Max-Age=0');return json(res,200,{ok:true});}
     const media=path.match(/^\/media\/([a-f0-9-]{36})$/);
@@ -295,7 +348,7 @@ const server=createServer(async(req,res)=>{
       return json(res,200,posters.list({join:'JOIN saved_posters saved ON saved.posterId=p.id',where:"saved.userId=? AND p.universityId=? AND p.status='PUBLISHED'",params:[u.id,u.universityId],order:"json_extract(p.publicData,'$.date'),saved.createdAt DESC",viewerId:u.id}));
     }
     if(path==='/api/posters'&&method==='GET') {
-      const uni=url.searchParams.get('university')||universities.find(u=>u[2]===url.searchParams.get('school'))?.[0];if(!get('SELECT 1 FROM universities WHERE slug=?',uni||''))fail(400,'Choose a university');
+      const uni=url.searchParams.get('university')||universities.find(u=>u[2]===url.searchParams.get('school'))?.[0];if(!activeCampus(uni||''))fail(400,'Choose a university');
       campusAccess(req,uni);
       let where="p.status='PUBLISHED' AND p.universityId=?";const params=[uni],category=url.searchParams.get('category');
       if(category){where+=" AND json_extract(p.publicData,'$.category')=?";params.push(category);}
@@ -303,7 +356,7 @@ const server=createServer(async(req,res)=>{
       for(const [param,op] of [['from','>='],['to','<=']])if(url.searchParams.get(param)){where+=` AND json_extract(p.publicData,'$.date')${op}?`;params.push(validate('date',url.searchParams.get(param)));}
       return json(res,200,posters.list({where,params,order:"json_extract(p.publicData,'$.date'),p.publishedAt DESC",viewerId:user(req)?.id}));
     }
-    const pub=path.match(/^\/api\/posters\/([^/]+)(?:\/(comments|save|calendar|qr))?$/);
+    const pub=path.match(/^\/api\/posters\/([^/]+)(?:\/(comments|save|calendar|qr)(?:\/([a-f0-9-]{36}))?)?$/);
     if(pub) {
       const p=get("SELECT * FROM posters WHERE (id=? OR slug=?) AND status='PUBLISHED'",pub[1],pub[1])||fail(404,'Poster not found');
       campusAccess(req,p.universityId);
@@ -318,18 +371,27 @@ const server=createServer(async(req,res)=>{
         res.writeHead(200,{'content-type':'text/calendar; charset=utf-8','content-disposition':`attachment; filename="${p.slug}.ics"`,'cache-control':'no-store'});return res.end(calendarEvent(event,publicUrl(req,p)));
       }
       if(pub[2]==='qr'&&method==='GET') {
-        const svg=await QRCode.toString(publicUrl(req,p),{type:'svg',errorCorrectionLevel:'M',margin:4,width:256});
+        const svg=await (await loadQRCode()).toString(publicUrl(req,p),{type:'svg',errorCorrectionLevel:'M',margin:4,width:256});
         // Publication may have changed while rendering.
         if(record(p.id).status!=='PUBLISHED')fail(404,'Poster not found');
         res.writeHead(200,{'content-type':'image/svg+xml','cache-control':'no-store',...(url.searchParams.get('download')==='1'?{'content-disposition':`attachment; filename="${p.slug}-qr.svg"`}:{})});return res.end(svg);
       }
-      if(pub[2]==='comments'&&method==='GET')return json(res,200,all('SELECT c.id,c.body,c.createdAt,c.updatedAt,u.name author,u.id authorId FROM comments c JOIN users u ON u.id=c.authorId WHERE posterId=? ORDER BY c.createdAt',p.id));
-      if(pub[2]==='comments'&&method==='POST'){const u=authenticated(req),input=await body(req),text=string(input.body,1000,'Comment');if(!text)fail(400,'Write a comment first');const c={id:id(),posterId:p.id,authorId:u.id,author:u.name,body:text,createdAt:now(),updatedAt:now()};run('INSERT INTO comments VALUES (?,?,?,?,?,?)',c.id,p.id,u.id,text,c.createdAt,c.updatedAt);if(u.id!==p.ownerId)community.notify(p.ownerId,'comment',u.name+' commented on your event',`/${p.universityId}/posters/${p.slug}`,'comment:'+c.id);wallChanged(p.universityId);return json(res,201,c);}
+      if(pub[3]&&pub[2]!=='comments')fail(404,'Endpoint not found');
+      // Newest 100 comments, oldest first; ?before=<comment id> pages further back.
+      if(pub[2]==='comments'&&method==='GET'&&!pub[3]){const before=url.searchParams.get('before');let cursor=null;if(before!==null){cursor=get('SELECT rowid seq FROM comments WHERE id=? AND posterId=?',string(before,36,'Cursor'),p.id)?.seq;if(!cursor)fail(400,'Invalid comment cursor');}return json(res,200,all(`SELECT * FROM (SELECT c.rowid seq,c.id,c.body,c.createdAt,c.updatedAt,u.name author,u.id authorId FROM comments c JOIN users u ON u.id=c.authorId WHERE c.posterId=?${cursor?' AND c.rowid<?':''} ORDER BY c.rowid DESC LIMIT 100) ORDER BY seq`,p.id,...(cursor?[cursor]:[])).map(({seq,...c})=>c));}
+      if(pub[2]==='comments'&&method==='DELETE'&&pub[3]){const u=authenticated(req),c=get('SELECT * FROM comments WHERE id=? AND posterId=?',pub[3],p.id)||fail(404,'Comment not found');if(c.authorId!==u.id&&p.ownerId!==u.id)fail(403,'Only the comment author or the poster creator can remove it');run('DELETE FROM comments WHERE id=?',c.id);wallChanged(p.universityId);return json(res,200,{ok:true});}
+      if(pub[2]==='comments'&&method==='POST'&&!pub[3]){const u=authenticated(req),input=await body(req),text=string(input.body,1000,'Comment');if(!text)fail(400,'Write a comment first');
+        if(input.clientId!==undefined&&(typeof input.clientId!=='string'||!/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/.test(input.clientId)))fail(400,'Invalid comment request');
+        // A retried request returns the comment it already created instead of posting twice.
+        const previous=input.clientId&&get('SELECT c.id,c.posterId,c.body,c.createdAt,c.updatedAt,c.authorId,u.name author FROM comments c JOIN users u ON u.id=c.authorId WHERE c.authorId=? AND c.clientId=?',u.id,input.clientId);
+        if(previous){if(previous.posterId!==p.id||previous.body!==text)fail(409,'This request already posted a different comment');return json(res,200,previous);}
+        if(get('SELECT COUNT(*) n FROM comments WHERE authorId=? AND createdAt>?',u.id,new Date(Date.now()-60000).toISOString()).n>=5){res.setHeader('retry-after','60');fail(429,'You’re commenting quickly. Please wait a minute.');}
+        const c={id:id(),posterId:p.id,authorId:u.id,author:u.name,body:text,createdAt:now(),updatedAt:now()};run('INSERT INTO comments (id,posterId,authorId,body,createdAt,updatedAt,clientId) VALUES (?,?,?,?,?,?,?)',c.id,p.id,u.id,text,c.createdAt,c.updatedAt,input.clientId||null);if(u.id!==p.ownerId)community.notify(p.ownerId,'comment',u.name+' commented on your event',`/${p.universityId}/posters/${p.slug}`,'comment:'+c.id);wallChanged(p.universityId);return json(res,201,c);}
     }
     if(path==='/api/drafts') {
       const u=campusAccount(req);
       if(method==='GET')return json(res,200,posters.list({where:'(p.ownerId=? OR EXISTS(SELECT 1 FROM collaborators c WHERE c.posterId=p.id AND c.userId=?)) AND p.universityId=?',params:[u.id,u.id,u.universityId],order:'p.updatedAt DESC',privateView:true}));
-      if(method==='POST'){const input=await body(req),uni=input.universityId;if(!get('SELECT 1 FROM universities WHERE id=?',uni||''))fail(400,'Choose a university');campusAccess(req,uni);const preset=input.preset?designPresets.find(p=>p.id===input.preset):null;if(input.preset&&!preset)fail(400,'Choose a valid design');const {id:ignoredId,name:ignoredName,note:ignoredNote,...presetDesign}=preset||{};const content={...designDefaults,...presetDesign,designVersion:'1',title:validate('title',input.title||''),subtitle:'',date:'',time:'',location:'',description:'',category:'Other',template:validate('template',preset?.template||input.template||'minimal'),style:validate('style',input.style||campusDetails[uni].style),alignment:'left',heroImageUrl:''};const posterId=id();run('INSERT INTO posters VALUES (?,?,?,?,?,?,?,?,?,?,?)',posterId,u.id,uni,`event-${posterId}`,'DRAFT',JSON.stringify(content),null,0,now(),now(),null);return json(res,201,view(record(posterId),true));}
+      if(method==='POST'){const input=await body(req),uni=input.universityId;if(!activeCampus(uni||''))fail(400,'Choose a university');campusAccess(req,uni);if(get("SELECT COUNT(*) n FROM posters WHERE ownerId=? AND status='DRAFT'",u.id).n>=50)fail(429,'You have 50 unpublished drafts. Publish or delete some before starting another.');throttle('draft',u.id,20,10*60000,'You are creating drafts quickly. Please wait a few minutes.');const preset=input.preset?designPresets.find(p=>p.id===input.preset):null;if(input.preset&&!preset)fail(400,'Choose a valid design');const {id:ignoredId,name:ignoredName,note:ignoredNote,...presetDesign}=preset||{};const content={...designDefaults,...presetDesign,designVersion:'1',title:validate('title',input.title||''),subtitle:'',date:'',time:'',location:'',description:'',category:'Other',template:validate('template',preset?.template||input.template||'minimal'),style:validate('style',input.style||campusDetails[uni].style),alignment:'left',heroImageUrl:''};const posterId=id();run('INSERT INTO posters VALUES (?,?,?,?,?,?,?,?,?,?,?)',posterId,u.id,uni,`event-${posterId}`,'DRAFT',JSON.stringify(content),null,0,now(),now(),null);return json(res,201,view(record(posterId),true));}
     }
     const draft=path.match(/^\/api\/drafts\/([^/]+)(?:\/(fields|publish|unpublish|collaborators|image|canvas)(?:\/([^/]+))?)?$/);
     if(draft) {
@@ -351,17 +413,18 @@ const server=createServer(async(req,res)=>{
           const query=string(url.searchParams.get('q')||'',50,'Search').replace(/^@/,'').toLowerCase();
           return json(res,200,{users:query.length<2?[]:all("SELECT id,name,username FROM users WHERE id<>? AND universityId=? AND passwordHash<>'!disabled' AND (instr(lower(name),?)>0 OR instr(username,?)>0) ORDER BY name LIMIT 20",u.id,p.universityId,query,query)});
         }
-        if(method==='GET')return json(res,200,all('SELECT u.id,u.name,u.email,c.role FROM collaborators c JOIN users u ON u.id=c.userId WHERE posterId=?',p.id));
-        if(method==='POST'){const input=await body(req),invited=(input.userId?get('SELECT id,name,username,universityId FROM users WHERE id=? AND passwordHash<>?',string(input.userId,100,'Student'),'!disabled'):get('SELECT id,name,email,universityId FROM users WHERE email=?',string(input.email,254,'Email').toLowerCase()))||fail(404,'Ask your collaborator to register first');if(invited.id===u.id)fail(400,'You already own this poster');if(invited.universityId!==p.universityId)fail(403,'Collaborators must belong to this university');run('INSERT OR IGNORE INTO collaborators VALUES (?,?,?,?)',p.id,invited.id,'EDITOR',now());community.notify(invited.id,'collaboration',u.name+' invited you to design together','/studio/posters/'+p.id,'collab:'+p.id+':'+invited.id);return json(res,201,invited);}
+        if(method==='GET')return json(res,200,all('SELECT u.id,u.name,u.username,c.role FROM collaborators c JOIN users u ON u.id=c.userId WHERE posterId=?',p.id));
+        if(method==='POST'){const input=await body(req);if(!input.userId)throttle('invite-email',u.id,10,60*60000,'You have tried many email invitations. Invite by name or username, or wait an hour.');const invited=(input.userId?get('SELECT id,name,username,universityId FROM users WHERE id=? AND passwordHash<>?',string(input.userId,100,'Student'),'!disabled'):get("SELECT id,name,username,universityId FROM users WHERE email=? AND passwordHash<>'!disabled'",string(input.email,254,'Email').toLowerCase()))||fail(404,'Ask your collaborator to register first');if(invited.id===u.id)fail(400,'You already own this poster');if(invited.universityId!==p.universityId)fail(403,'Collaborators must belong to this university');blocks.guard(u.id,invited.id);delete invited.universityId;run('INSERT OR IGNORE INTO collaborators VALUES (?,?,?,?)',p.id,invited.id,'EDITOR',now());community.notify(invited.id,'collaboration',u.name+' invited you to design together','/studio/posters/'+p.id,'collab:'+p.id+':'+invited.id);return json(res,201,invited);}
         if(method==='DELETE'&&draft[3]){run('DELETE FROM collaborators WHERE posterId=? AND userId=?',p.id,draft[3]);broadcast(p.id,'access:changed',{});presence(p.id);return json(res,200,{ok:true});}
       }
     }
     if(path.startsWith('/api/'))fail(404,'Endpoint not found');if(method!=='GET'&&method!=='HEAD')fail(405,'Method not allowed');
-    const account=user(req),campusRoute=universities.find(([slug])=>slug===path.split('/')[1])?.[0];
+    const account=user(req),firstSegment=path.split('/')[1],campusRoute=universities.find(([slug])=>slug===firstSegment&&isActiveCampus(slug))?.[0];
+    if(universities.some(([slug])=>slug===firstSegment)&&!campusRoute){const home=universities.find(([slug])=>isActiveCampus(slug))[0];res.writeHead(302,{location:`/${home}${path.endsWith('/clubs')?'/clubs':''}`,'cache-control':'no-store'});return res.end();}
     if(account&&!account.universityId&&path!=='/choose-campus'&&path!=='/login'&&!/\.[a-z]+$/.test(path)) {res.writeHead(302,{location:'/choose-campus','cache-control':'no-store'});return res.end();}
-    if(account?.universityId&&campusRoute&&campusRoute!==account.universityId){res.writeHead(302,{location:`/${account.universityId}${path.endsWith('/clubs')?'/clubs':''}`,'cache-control':'no-store'});return res.end();}
+    if(account?.universityId&&isActiveCampus(account.universityId)&&campusRoute&&campusRoute!==account.universityId){res.writeHead(302,{location:`/${account.universityId}${path.endsWith('/clubs')?'/clubs':''}`,'cache-control':'no-store'});return res.end();}
     const campusPage=campusRoute&&new RegExp(`^/${campusRoute}(?:/(?:posters/[^/]+|clubs))?$`).test(path);
-    if(!campusPage&&!/^\/(?:index.html|login|choose-campus|watch(?:\/[a-f0-9-]{36})?|people\/[a-f0-9-]{36}|community(?:\/[A-Za-z0-9_%.-]+){0,2}|messages|games(?:\/[a-f0-9-]{36})?|saved|my-posters|studio\/posters\/[^/]+)?$/.test(path))fail(404,'Page not found');
+    if(!campusPage&&!/^\/(?:index.html|login|guide|choose-campus|watch(?:\/[a-f0-9-]{36})?|people\/[a-f0-9-]{36}|community(?:\/[A-Za-z0-9_%.-]+){0,2}|messages|games(?:\/[a-f0-9-]{36})?|saved|my-posters|studio\/posters\/[^/]+)?$/.test(path))fail(404,'Page not found');
     await publicAssets.sendPage(req,res);
   } catch(error) {if(!res.headersSent)json(res,error.status||500,{error:error.status?error.message:'Unable to complete this request'});}
 });
@@ -372,8 +435,8 @@ server.on('upgrade',(req,socket,head)=>{
     if(social){if(posterId||wall||chat||inbox||gameRoom||gameLobby||watchRoom||watchLobby)fail(400,'Choose one community channel');u=campusAccount(req);}
     else if(watchRoom||watchLobby){if(posterId||wall||chat||inbox||gameRoom||gameLobby||watchRoom&&watchLobby)fail(400,'Invalid watch room');u=campusAccount(req);if(watchRoom)watch.checkCapacity(watch.access(watch.room(watchRoom),u),u);if(watchLobby&&watchLobby!==u.universityId)fail(403,'Watch together on your own university');}
     else if(gameRoom||gameLobby){if(posterId||wall||chat||inbox||gameRoom&&gameLobby)fail(400,'Invalid game room');u=campusAccount(req);if(gameRoom)games.access(games.room(gameRoom),u);if(gameLobby!==null&&gameLobby!==u.universityId)fail(403,'Games stay within your university');}
-    else if(posterId){if(chat||inbox)fail(400,'Invalid room');u=authenticated(req);editor(record(posterId),u);}else{if(wall&&!get('SELECT 1 FROM universities WHERE id=?',wall))fail(400,'Invalid room');if(wall)campusAccess(req,wall);if(!wall&&!chat&&!inbox)fail(400,'Invalid room');if(inbox)u=campusAccount(req);}
-    if(chat){chatCampus=wall||url.searchParams.get('university')||user(req)?.universityId;if(!get('SELECT 1 FROM universities WHERE id=?',chatCampus||''))fail(400,'Choose a university');campusAccess(req,chatCampus);u=user(req);}
+    else if(posterId){if(chat||inbox)fail(400,'Invalid room');u=authenticated(req);editor(record(posterId),u);}else{if(wall&&!activeCampus(wall))fail(400,'Invalid room');if(wall)campusAccess(req,wall);if(!wall&&!chat&&!inbox)fail(400,'Invalid room');if(inbox)u=campusAccount(req);}
+    if(chat){chatCampus=wall||url.searchParams.get('university')||user(req)?.universityId;if(!activeCampus(chatCampus||''))fail(400,'Choose a university');campusAccess(req,chatCampus);u=user(req);}
     wss.handleUpgrade(req,socket,head,ws=>{
       ws.user=u;ws.sessionHash=hash(token(req));ws.posterId=posterId;ws.wall=wall;ws.chat=chat;ws.chatCampus=chatCampus;ws.inbox=inbox;ws.gameRoom=gameRoom;ws.gameLobby=gameLobby;ws.watchRoom=watchRoom;ws.watchLobby=watchLobby;ws.social=social;ws.callDevice=social&&/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/.test(url.searchParams.get('device')||'')?url.searchParams.get('device'):null;ws.alive=true;sockets.add(ws);
       const observedChannel=posterId?'whiteboard':watchRoom||watchLobby?'watch':gameRoom||gameLobby?'games':social?'community':inbox?'inbox':chat?'chat':'wall';
@@ -403,7 +466,7 @@ server.on('upgrade',(req,socket,head)=>{
     });
   } catch(error){observation.record({actorId:req.observedActorId,action:'websocket.connect',transport:'websocket',status:error.status||400});socket.end(`HTTP/1.1 ${error.status||400} Rejected\r\nConnection: close\r\n\r\n`);}
 });
-setInterval(()=>{for(const ws of sockets){if((ws.social||ws.posterId||ws.inbox||ws.gameRoom||ws.gameLobby||ws.watchRoom||ws.watchLobby||ws.chat&&ws.user)&&!validSocket(ws)){ws.close(4001,'Session expired');continue;}if(!ws.alive){ws.terminate();continue;}ws.alive=false;ws.ping();}for(const [k,v] of attempts)if(v.until<Date.now())attempts.delete(k);run('DELETE FROM sessions WHERE expiresAt<?',Date.now());},30000).unref();
+setInterval(()=>{for(const ws of sockets){if((ws.social||ws.posterId||ws.inbox||ws.gameRoom||ws.gameLobby||ws.watchRoom||ws.watchLobby||ws.chat&&ws.user)&&!validSocket(ws)){ws.close(4001,'Session expired');continue;}if(!ws.alive){ws.terminate();continue;}ws.alive=false;ws.ping();}for(const map of [attempts,loginFailures,actionCounts])for(const [k,v] of map)if(v.until<Date.now())map.delete(k);run('DELETE FROM sessions WHERE expiresAt<?',Date.now());},30000).unref();
 setInterval(()=>{try{voiceCalls.tick();}catch(error){observation.record({actorId:'system',action:'calls.tick',status:500});}},1000).unref();
 setInterval(()=>{try{community.remind();}catch(error){observation.record({actorId:'system',action:'community.reminders',status:500});}},60000).unref();
 setInterval(()=>{try{games.tick();}catch(error){observation.record({actorId:'system',action:'games.tick',status:500});}},500).unref();

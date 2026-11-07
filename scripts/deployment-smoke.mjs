@@ -1,9 +1,16 @@
 import assert from 'node:assert/strict';
 import WebSocket from 'ws';
 import { once } from 'node:events';
+import { readFileSync } from 'node:fs';
 
 const base=process.env.APP_URL;
 if(!base)throw new Error('Set APP_URL to the deployed CampusWall URL');
+// The deployed campus set comes from fly.toml's ACTIVE_CAMPUSES (unset = all eight),
+// so this check fails if the deployment opens more or fewer campuses than configured.
+const allCampusIds=['anu','usyd','unsw','unimelb','monash','uq','uwa','adelaide'];
+const configured=/^ACTIVE_CAMPUSES\s*=\s*"([^"]*)"/m.exec(readFileSync(new URL('../fly.toml',import.meta.url),'utf8'))?.[1];
+const expectedCampusIds=configured?allCampusIds.filter(id=>configured.split(',').map(v=>v.trim()).includes(id)):allCampusIds;
+const closedCampusIds=allCampusIds.filter(id=>!expectedCampusIds.includes(id));
 for(const path of ['/','/readme/','/anu','/anu/clubs','/saved','/messages','/games','/watch','/app.js','/chat.js','/messages.js','/games.js','/game-catalog.js','/event-utils.js','/email-utils.js','/ui-utils.js','/styles.css','/games.css','/api/health']){
   const response=await fetch(new URL(path,base));assert.equal(response.status,200,path);
   assert.doesNotMatch(await response.text(),/\p{Script=Han}/u,`${path} built-in copy`);
@@ -26,14 +33,14 @@ const games=await (await fetch(new URL('/api/games/catalog',base))).json();asser
 assert.doesNotMatch(JSON.stringify(games),/\p{Script=Han}/u,'English game catalog');assert.ok(games.games.every(game=>!Object.hasOwn(game,'zh')));
 for(const path of ['/api/games/rooms','/api/games/players?q=student'])assert.equal((await fetch(new URL(path,base))).status,401);
 assert.equal((await fetch(new URL('/api/games/rooms',base),{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({game:'gomoku',clientId:'00000000-0000-0000-0000-000000000000'})})).status,401);
-assert.equal(campuses.length,8);assert.ok(campuses.every(c=>c.locations.length>0&&c.mapUrl.startsWith('https://')&&c.style===`campus-${c.slug}`&&c.timeZone.startsWith('Australia/')));
+assert.deepEqual(campuses.map(c=>c.id),expectedCampusIds);assert.ok(campuses.every(c=>c.locations.length>0&&c.mapUrl.startsWith('https://')&&c.style===`campus-${c.slug}`&&c.timeZone.startsWith('Australia/')));
 assert.ok(campuses.every(c=>Array.isArray(c.emailDomains)&&c.emailDomains.length>0));assert.ok(campuses.find(c=>c.id==='anu').emailDomains.includes('anu.edu.au'));
 // Rejected requests must fail before creating an account; never seed production users.
 const rejectedRegistration=await fetch(new URL('/api/auth/register',base),{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({email:'domain-lock-check@anu.edu.au',name:'Domain check',password:'unused-check-password',universityId:'usyd'})});
 assert.equal(rejectedRegistration.status,400);assert.match((await rejectedRegistration.json()).error,/university email belongs to ANU/);assert.equal(rejectedRegistration.headers.get('set-cookie'),null);
 for(const campus of campuses){const logo=await fetch(new URL(campus.logo.src,base));assert.equal(logo.status,200);assert.match(logo.headers.get('content-type'),/^image\/(svg\+xml|png)/);assert.ok((await logo.arrayBuffer()).byteLength>1000);}
 const directory=await (await fetch(new URL('/api/clubs?university=anu',base))).json();assert.equal(directory.total,236);assert.equal(directory.clubs.length,236);assert.equal(directory.categories.length,16);assert.equal(directory.source.url,'https://anusa.com.au/clubs/clubs-list/');
-for(const [campus,total,categories,origin] of [['usyd',301,9,'https://usu.edu.au'],['unsw',458,16,'https://campus.hellorubric.com'],['unimelb',246,10,'https://umsu.unimelb.edu.au'],['monash',114,7,'https://clubs.msa.monash.edu'],['uq',221,14,'https://campus.hellorubric.com'],['uwa',160,23,'https://www.uwastudentguild.com'],['adelaide',169,4,'https://www.ausaadelaide.com.au']]){
+for(const [campus,total,categories,origin] of [['usyd',301,9,'https://usu.edu.au'],['unsw',458,16,'https://campus.hellorubric.com'],['unimelb',246,10,'https://umsu.unimelb.edu.au'],['monash',114,7,'https://clubs.msa.monash.edu'],['uq',221,14,'https://campus.hellorubric.com'],['uwa',160,23,'https://www.uwastudentguild.com'],['adelaide',169,4,'https://www.ausaadelaide.com.au']].filter(([campus])=>expectedCampusIds.includes(campus))){
   assert.equal((await fetch(new URL(`/${campus}/clubs`,base))).status,200);
   const directory=await(await fetch(new URL(`/api/clubs?university=${campus}`,base))).json();assert.equal(directory.total,total);assert.equal(directory.clubs.length,total);assert.equal(directory.categories.length,categories);assert.ok(directory.clubs.every(c=>c.universityId===campus&&new URL(c.profileUrl).origin===origin));
   assert.equal(directory.interests.length,11);assert.ok(directory.clubs.every(c=>c.interests.length>0));const tech=await(await fetch(new URL(`/api/clubs?university=${campus}&interest=tech`,base))).json();assert.ok(tech.clubs.length>0&&tech.clubs.every(c=>c.interests.includes('tech')));
@@ -42,6 +49,11 @@ for(const {id:university} of campuses){
   const chat=await (await fetch(new URL(`/api/chat/messages?university=${university}`,base))).json();assert.equal(chat.universityId,university);assert.equal(chat.limit,100);assert.ok(Array.isArray(chat.messages));assert.ok(chat.messages.length<=100);assert.ok(chat.messages.every(message=>message.universityId===university&&message.author&&message.body&&!message.email));
 }
 assert.equal((await fetch(new URL('/api/chat/messages',base))).status,400);
+// Closed campuses keep their data but are not reachable: pages lead to an open campus, APIs refuse.
+for(const campus of closedCampusIds){
+  const page=await fetch(new URL('/'+campus,base),{redirect:'manual'});assert.equal(page.status,302,campus);assert.equal(page.headers.get('location'),'/'+expectedCampusIds[0]);await page.arrayBuffer();
+  for(const path of [`/api/posters?university=${campus}`,`/api/clubs?university=${campus}`,`/api/chat/messages?university=${campus}`]){const r=await fetch(new URL(path,base));assert.equal(r.status,400,path);await r.arrayBuffer();}
+}
 assert.equal((await fetch(new URL('/api/auth/university',base),{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({universityId:'anu'})})).status,401);
 assert.equal((await fetch(new URL('/api/chat/messages',base),{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({body:'Anonymous smoke check',clientId:'00000000-0000-0000-0000-000000000000'})})).status,401);
 assert.equal((await fetch(new URL('/api/calls',base))).status,401);
@@ -82,4 +94,4 @@ const rejected=await new Promise((resolve,reject)=>{privateWs.on('unexpected-res
 assert.equal(rejected,401);
 const inboxUrl=new URL('/ws?inbox=1',base);inboxUrl.protocol=socketUrl.protocol;const inboxWs=new WebSocket(inboxUrl,{headers:{origin:new URL(base).origin},handshakeTimeout:15000});
 const inboxRejected=await new Promise((resolve,reject)=>{inboxWs.on('unexpected-response',(_req,res)=>{res.resume();inboxWs.terminate();resolve(res.statusCode);});inboxWs.on('error',error=>{if(inboxWs.readyState!==WebSocket.CLOSED)reject(error);});});assert.equal(inboxRejected,401);
-console.log('Deployment verified: 24 photographic test notices per campus (192 total), all 24 local photo assets and calendar test labels, ten games, eight campus walls/logos/chat channels, 1,905 clubs, private messaging, calendar/QR exports and protected APIs.');
+console.log(`Deployment verified: ${expectedCampusIds.length} open campus${expectedCampusIds.length===1?'':'es'} (${expectedCampusIds.join(', ')}) with 24 photographic test notices each (${expectedCampusIds.length*24} total), all 24 local photo assets and calendar test labels, ten games, campus walls/logos/chat channels and club directories for each open campus, ${closedCampusIds.length} closed campus${closedCampusIds.length===1?'':'es'} hidden, private messaging, calendar/QR exports and protected APIs.`);

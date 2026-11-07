@@ -26,3 +26,6 @@ mise.local.toml
 .test-data/
 .pnpm-store/
 test-results/
+
+# production asset build output (scripts/build-assets.mjs); built inside the image
+.asset-build/

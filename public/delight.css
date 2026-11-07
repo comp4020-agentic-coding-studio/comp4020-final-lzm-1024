@@ -1,0 +1,66 @@
+/* Warm, optional motion for the campus wall. Slow, soft and never flashing;
+   paused by the Effects control, off screen, in background tabs and for reduced motion. */
+.delight-greeting{display:flex;align-items:center;gap:8px;margin:0 0 6px;font-size:15px;font-weight:600;color:var(--accent-readable,var(--green))}
+.delight-greeting-icon{display:inline-block;font-size:24px;line-height:1}
+.delight-toggle{display:inline-flex;align-items:center;min-height:36px;margin-left:14px;padding:0 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface,#fff);color:var(--ink);font-size:12px}
+.delight-stage{position:relative;isolation:isolate}
+.delight-sky{position:absolute;inset:-14px -10px 0;overflow:hidden;pointer-events:none;z-index:-1}
+.delight-sky span{position:absolute;bottom:-30px;left:var(--x);font-size:var(--size);line-height:1;opacity:0}
+.delight-parade{position:absolute;left:0;right:0;bottom:-16px;height:30px;overflow:hidden;pointer-events:none;container-type:inline-size;font-size:22px;line-height:30px}
+.delight-track{position:absolute;left:0;top:0;display:flex;gap:6px;transform:translateX(100cqw)}
+.delight-track span{display:inline-block;transform-origin:50% 90%}
+.delight-track span+span{font-size:16px}
+.delight-particle{position:fixed;z-index:1200;pointer-events:none;font-size:18px;line-height:1;translate:-50% -50%}
+.delight-mascot-holder{position:relative;background:#fff6dc!important;overflow:visible;cursor:pointer;touch-action:manipulation}
+.delight-mascot{width:86%;height:86%;overflow:visible}
+.delight-bubble{position:absolute;left:50%;bottom:calc(100% + 6px);translate:-50% 0;padding:5px 10px;border-radius:12px;background:#fff;border:1px solid var(--line);color:var(--ink);font:600 13px/1.2 system-ui,sans-serif;white-space:nowrap;opacity:0;scale:.6;pointer-events:none;transition:opacity .25s ease,scale .3s cubic-bezier(.34,1.56,.64,1)}
+.delight-hello .delight-bubble{opacity:1;scale:1}
+.delight-hand,.delight-eyes,.delight-leaf{transform-box:fill-box}
+.delight-hand{transform-origin:0% 100%}.delight-eyes{transform-origin:center}.delight-leaf{transform-origin:0% 100%}
+
+/* Motion runs only while effects are on. */
+.delight-on .delight-sky span{animation:delight-drift var(--time) linear infinite;animation-delay:var(--delay)}
+.delight-on .delight-greeting-icon{animation:delight-bob 3.2s ease-in-out infinite}
+.delight-on .wall-hero h1{animation:delight-rise .9s cubic-bezier(.22,1,.36,1) both}
+.delight-on .wall-hero .hero-star{animation:delight-twinkle 5s ease-in-out infinite}
+.delight-on .delight-eyes{animation:delight-blink 4.6s infinite}
+.delight-on .delight-hand{animation:delight-wave 1.1s ease-in-out 3 .6s}
+.delight-on .delight-hello .delight-hand{animation:delight-wave .55s ease-in-out 3}
+.delight-on .delight-leaf{animation:delight-sway 3.4s ease-in-out infinite}
+.delight-on .delight-mascot{animation:delight-breathe 3.4s ease-in-out infinite}
+.delight-on .guide-banner .button.primary{animation:delight-glow 2.4s ease-in-out 3 1.2s}
+.delight-on .delight-parade.walking .delight-track{animation:delight-walk 16s linear forwards}
+.delight-on .delight-parade.walking .delight-track span{animation:delight-waddle .5s ease-in-out infinite}
+.delight-on .delight-parade.walking .delight-track span:nth-child(2n){animation-delay:-.25s}
+.delight-on .delight-particle{animation:delight-burst .9s cubic-bezier(.22,1,.36,1) forwards}
+.delight-on .delight-jelly{animation:delight-jelly .45s ease-out}
+.delight-on .delight-pop{animation:delight-pop .4s ease-out}
+.delight-on .poster-card:active{scale:.985;transition:scale .15s ease}
+.delight-on .empty-art i{animation:delight-snooze 3s ease-in-out infinite}
+.delight-on .empty-art i:nth-child(2){animation-delay:1s}.delight-on .empty-art i:nth-child(3){animation-delay:2s}
+.empty-art{display:block;position:relative;width:max-content;margin:0 auto 8px;font-size:42px;line-height:1}
+.empty-art i{position:absolute;top:-6px;right:-14px;font:italic 700 14px/1 system-ui;color:var(--accent-readable,var(--green));opacity:0}
+
+/* Paused, off screen, background tab or reduced motion: everything rests. */
+.delight-paused :is(.delight-sky span,.delight-greeting-icon,.delight-eyes,.delight-leaf,.delight-mascot,.hero-star,.empty-art i,.delight-track,.delight-track span){animation-play-state:paused!important}
+.delight-still :is(.delight-sky,.delight-parade){display:none}
+.delight-still .delight-particle{display:none}
+@media(prefers-reduced-motion:reduce){.delight-sky,.delight-parade,.delight-particle{display:none!important}.delight-on *,.delight-on *::before,.delight-on *::after{animation:none!important;transition:none!important}}
+
+@keyframes delight-drift{0%{opacity:0;transform:translate(0,0) rotate(0)}12%{opacity:.55}50%{transform:translate(var(--sway),-140px) rotate(25deg)}88%{opacity:.4}100%{opacity:0;transform:translate(0,-290px) rotate(-10deg)}}
+@keyframes delight-bob{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-4px) rotate(6deg)}}
+@keyframes delight-rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes delight-twinkle{0%,100%{transform:rotate(15deg) scale(1)}50%{transform:rotate(45deg) scale(1.12)}}
+@keyframes delight-blink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
+@keyframes delight-wave{0%,100%{transform:rotate(0)}50%{transform:rotate(-28deg) translateY(-3px)}}
+@keyframes delight-sway{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(8deg)}}
+@keyframes delight-breathe{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-2px) scale(1.03)}}
+@keyframes delight-glow{0%,100%{box-shadow:0 0 0 0 color-mix(in srgb,var(--accent,#be830e) 0%,transparent)}50%{box-shadow:0 0 0 8px color-mix(in srgb,var(--accent,#be830e) 22%,transparent)}}
+@keyframes delight-walk{from{transform:translateX(100cqw)}to{transform:translateX(-100%)}}
+@keyframes delight-waddle{0%,100%{transform:rotate(-7deg) translateY(0)}50%{transform:rotate(7deg) translateY(-2px)}}
+@keyframes delight-burst{0%{opacity:1;transform:translate(0,0) scale(.4)}70%{opacity:1}100%{opacity:0;transform:translate(var(--dx),var(--dy)) scale(1.1)}}
+@keyframes delight-jelly{0%{scale:1}30%{scale:.92}60%{scale:1.06}100%{scale:1}}
+@keyframes delight-pop{0%{scale:1}40%{scale:1.3}100%{scale:1}}
+@keyframes delight-snooze{0%{opacity:0;transform:translate(0,0) scale(.7)}30%{opacity:1}100%{opacity:0;transform:translate(14px,-26px) scale(1.2)}}
+
+@media(max-width:760px){.delight-greeting{font-size:14px}.delight-greeting-icon{font-size:20px}.delight-toggle{min-height:44px;margin:8px 0 0}.delight-parade{font-size:18px}.delight-bubble{font-size:12px}}

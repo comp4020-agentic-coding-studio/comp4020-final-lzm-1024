@@ -1,5 +1,5 @@
 // Public personal pages; editable fields and guestbook authors are server-scoped.
-export function createProfiles({get,all,run,body,json,authenticated,campusAccess,string,fail,id,now,notify=()=>{}}){
+export function createProfiles({blocks={guard(){},between(){return false;}},get,all,run,body,json,authenticated,campusAccess,string,fail,id,now,notify=()=>{}}){
  const select='SELECT n.seq,n.id,n.profileId,n.authorId,n.body,n.createdAt,u.name author,u.username,u.avatarId FROM profile_notes n JOIN users u ON u.id=n.authorId';
  function profile(profileId,req){const p=get("SELECT id,name,username,universityId,avatarId,bio,headline,interests,createdAt FROM users WHERE id=? AND passwordHash<>'!disabled'",profileId)||fail(404,'Profile not found');campusAccess(req,p.universityId);return p;}
  return {async handle(req,res,url){
@@ -17,7 +17,7 @@ export function createProfiles({get,all,run,body,json,authenticated,campusAccess
    const updates=Object.keys(input).map(k=>[k,string(input[k],limits[k],k)]);run(`UPDATE users SET ${updates.map(([k])=>k+'=?').join(',')} WHERE id=?`,...updates.map(([,v])=>v),u.id);return json(res,200,{profile:profile(profileId,req)});
   }
   if(method==='POST'&&match[2]&&!match[3]){
-   if(u.universityId!==p.universityId)fail(403,'Leave notes on your own campus');const text=string(input.body,600,'Note');if(!text)fail(400,'Write a note first');if(typeof input.clientId!=='string'||!/^[a-f0-9-]{36}$/.test(input.clientId))fail(400,'Invalid note request');
+   if(u.universityId!==p.universityId)fail(403,'Leave notes on your own campus');blocks.guard(u.id,p.id);const text=string(input.body,600,'Note');if(!text)fail(400,'Write a note first');if(typeof input.clientId!=='string'||!/^[a-f0-9-]{36}$/.test(input.clientId))fail(400,'Invalid note request');
    const previous=get('SELECT * FROM profile_notes WHERE authorId=? AND clientId=?',u.id,input.clientId);if(previous){if(previous.profileId!==profileId||previous.body!==text||previous.removedAt)fail(409,'This request already submitted a different note');return json(res,200,{note:get(`${select} WHERE n.id=?`,previous.id)});}
    if(get('SELECT COUNT(*) n FROM profile_notes WHERE authorId=? AND createdAt>?',u.id,new Date(Date.now()-60000).toISOString()).n>=10)fail(429,'Please wait a minute before leaving more notes');
    const noteId=id();run('INSERT INTO profile_notes (id,profileId,authorId,clientId,body,createdAt) VALUES (?,?,?,?,?,?)',noteId,p.id,u.id,input.clientId,text,now());if(u.id!==p.id)notify(p.id,'profile',u.name+' left a note on your profile','/people/'+p.id,'profile-note:'+noteId);return json(res,201,{note:get(`${select} WHERE n.id=?`,noteId)});

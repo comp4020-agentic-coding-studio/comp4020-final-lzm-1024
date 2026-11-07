@@ -1,4 +1,4 @@
-import {readFileSync,statSync,createReadStream} from 'node:fs';
+import {readFileSync,statSync,createReadStream,existsSync} from 'node:fs';
 import {join} from 'node:path';
 import {createHash} from 'node:crypto';
 import {brotliCompressSync,gzipSync,constants} from 'node:zlib';
@@ -7,29 +7,48 @@ import {campusDetails} from './campus.mjs';
 import {gallery} from './photo-gallery.mjs';
 import {escapeHtml} from './public/ui-utils.js';
 
-const textFiles=['feedback.js','file-transfer.js','file-transfer.css','appearance.js','appearance.css','theme-init.js','i18n.js','message-translation.js','locales/zh-CN.js','locales/es.js','locales/fr.js','locales/ja.js','voice-calls.js','voice-transport.js','call-media.js','typography.css','community.js','community.css','watch.js','watch-player.js','watch-share.js','watch-model.js','watch.css','profile.js','profile.css','chat-ui.js','app.js','chat.js','messages.js','games.js','game-catalog.js','event-utils.js','email-utils.js','ui-utils.js','motion.js','photo-posters.js','styles.css','games.css','motion.css','photo-posters.css','poster-design.js','designer.js','poster-design.css','designer.css','canvas-model.js','whiteboard.js','whiteboard.css'];
-function encoding(header=''){
+const textFiles=['delight.js','delight.css','guide.js','guide.css','header.css','mobile.css','feedback.js','file-transfer.js','file-transfer.css','appearance.js','appearance.css','theme-init.js','i18n.js','message-translation.js','locales/zh-CN.js','locales/es.js','locales/fr.js','locales/ja.js','voice-calls.js','voice-transport.js','call-media.js','typography.css','community.js','community.css','watch.js','watch-player.js','watch-share.js','watch-model.js','watch.css','profile.js','profile.css','chat-ui.js','app.js','chat.js','messages.js','games.js','game-catalog.js','event-utils.js','email-utils.js','ui-utils.js','motion.js','photo-posters.js','styles.css','games.css','motion.css','photo-posters.css','poster-design.js','designer.js','poster-design.css','designer.css','canvas-model.js','whiteboard.js','whiteboard.css'];
+export function encoding(header=''){
   const accepted=new Map(header.split(',').map(value=>{const [name,...options]=value.trim().split(';'),quality=options.find(v=>v.trim().startsWith('q='));return [name.toLowerCase(),quality?Number(quality.trim().slice(2)):1];}));
   const quality=name=>accepted.get(name)??accepted.get('*')??0,br=quality('br'),gzip=quality('gzip');
   return br>0&&br>=gzip?'br':gzip>0?'gzip':null;
 }
 function matches(header,etag){return typeof header==='string'&&header.split(',').some(value=>value.trim()==='*'||value.trim().replace(/^W\//,'')===etag);}
 
-export function createPublicAssets(root=process.cwd()){
-  const assets=new Map();
+// With PUBLIC_ASSET_DIR (set in the deployment image), minified files and their
+// pre-built Brotli/gzip variants from scripts/build-assets.mjs replace the source
+// files, so nothing is compressed at startup. Without it, source files are served.
+function builtAssets(dir){
+  if(!dir||!existsSync(join(dir,'manifest.json')))return new Map();
+  const {files,images={}}=JSON.parse(readFileSync(join(dir,'manifest.json'),'utf8')),built=new Map();built.images=images;
+  for(const [path,entry] of Object.entries(files)){
+    const file=join(dir,'files',path.slice(1));
+    built.set(path,{type:`${entry.type}; charset=utf-8`,variants:{identity:readFileSync(file),gzip:readFileSync(file+'.gz'),br:readFileSync(file+'.br')},hash:entry.hash});
+  }
+  return built;
+}
+// Without a build, a card-sized photo URL is answered with the original photo.
+const cardPhotoOriginal=path=>/^\/demo-photos\/[a-z0-9-]+-720\.webp$/.test(path)?path.replace(/-720\.webp$/,'.webp'):null;
+export function createPublicAssets(root=process.cwd(),{builtDir=process.env.PUBLIC_ASSET_DIR}={}){
+  const assets=new Map(),built=builtAssets(builtDir);
   function textAsset(content,type){
     const raw=Buffer.from(content);
     return {type:`${type}; charset=utf-8`,variants:{identity:raw,gzip:gzipSync(raw),br:brotliCompressSync(raw,{params:{[constants.BROTLI_PARAM_QUALITY]:5}})},hash:createHash('sha256').update(raw).digest('hex')};
   }
-  for(const name of textFiles)assets.set('/'+name,textAsset(readFileSync(join(root,'public',name)),name.endsWith('.css')?'text/css':'text/javascript'));
-  assets.set('/vendor/leaflet.js',textAsset(readFileSync(join(root,'node_modules/leaflet/dist/leaflet.js')),'text/javascript'));
-  assets.set('/vendor/leaflet.css',textAsset(readFileSync(join(root,'node_modules/leaflet/dist/leaflet.css')),'text/css'));
-  assets.set('/vendor/hls.min.js',textAsset(readFileSync(join(root,'node_modules/hls.js/dist/hls.min.js')),'text/javascript'));
+  for(const name of textFiles)assets.set('/'+name,built.get('/'+name)||textAsset(readFileSync(join(root,'public',name)),name.endsWith('.css')?'text/css':'text/javascript'));
+  assets.set('/vendor/leaflet.js',built.get('/vendor/leaflet.js')||textAsset(readFileSync(join(root,'node_modules/leaflet/dist/leaflet.js')),'text/javascript'));
+  assets.set('/vendor/leaflet.css',built.get('/vendor/leaflet.css')||textAsset(readFileSync(join(root,'node_modules/leaflet/dist/leaflet.css')),'text/css'));
+  assets.set('/vendor/hls.min.js',built.get('/vendor/hls.min.js')||textAsset(readFileSync(join(root,'node_modules/hls.js/dist/hls.min.js')),'text/javascript'));
+  for(const event of gallery.events){
+    const path=`/demo-photos/${event.key}-720.webp`,known=built.images?.[path];
+    if(known?.built)assets.set(path,{file:join(builtDir,'files',path.slice(1)),type:'image/webp',bytes:known.bytes,hash:known.hash});
+  }
   for(const path of [...Object.values(campusDetails).map(c=>c.logo.src),...gallery.events.map(event=>`/demo-photos/${event.key}.webp`)]){
     const file=join(root,'public',path.slice(1));
-    assets.set(path,{file,type:path.endsWith('.svg')?'image/svg+xml':path.endsWith('.png')?'image/png':'image/webp',bytes:statSync(file).size,hash:createHash('sha256').update(readFileSync(file)).digest('hex')});
+    const known=built.images?.[path];
+    assets.set(path,{file,type:path.endsWith('.svg')?'image/svg+xml':path.endsWith('.png')?'image/png':'image/webp',bytes:known?.bytes??statSync(file).size,hash:known?.hash??createHash('sha256').update(readFileSync(file)).digest('hex')});
   }
-  const page=textAsset(readFileSync(join(root,'public','index.html')),'text/html');
+  const page=built.get('/index.html')||textAsset(readFileSync(join(root,'public','index.html')),'text/html');
   const readme=textAsset(`<!doctype html><meta charset="utf-8"><meta name="theme-color" content="#f7f6f2"><title>About CampusWall</title><script src="/theme-init.js"></script><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/appearance.css"><main class="readme"><a href="/">← CampusWall</a><pre>${escapeHtml(readFileSync(join(root,'README.md'),'utf8'))}</pre></main>`,'text/html');
   assets.set('/readme',readme);assets.set('/readme/',readme);
   async function send(req,res,asset,{privatePage=false,photo=false,link}={}){
@@ -45,7 +64,7 @@ export function createPublicAssets(root=process.cwd()){
     try{await pipeline(createReadStream(asset.file),res);}catch(error){if(!res.destroyed)res.destroy(error);}
   }
   return {
-    async serve(req,res,path){const asset=assets.get(path);if(!asset)return false;await send(req,res,asset,{photo:path.startsWith('/demo-photos/')});return true;},
+    async serve(req,res,path){const asset=assets.get(path)||assets.get(cardPhotoOriginal(path));if(!asset)return false;await send(req,res,asset,{photo:path.startsWith('/demo-photos/')});return true;},
     sendPage:(req,res)=>{
       // Start the public module graph while authentication is still loading.
       // These hints never contain account data and are sent after campus checks.

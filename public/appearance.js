@@ -14,7 +14,7 @@ export function setAppearance(value){
   apply();
 }
 export function mountAppearancePicker(){
-  const nav=document.querySelector('#header nav');if(!nav||nav.querySelector('.appearance-picker'))return;
+  const nav=document.querySelector('#header [data-settings]')||document.querySelector('#header nav');if(!nav||nav.querySelector('.appearance-picker'))return;
   const label=document.createElement('label');label.className='appearance-picker';
   label.innerHTML='<span aria-hidden="true">◐</span><select aria-label="Appearance"><option value="system">Follow system</option><option value="light">Light mode</option><option value="dark">Dark mode</option></select>';
   const select=label.querySelector('select');select.value=preference;select.onchange=()=>setAppearance(select.value);nav.append(label);
