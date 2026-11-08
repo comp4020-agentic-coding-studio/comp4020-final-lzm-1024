@@ -51,9 +51,8 @@ test('the header bar stays short: settings and account links live in one menu',a
   const app=readFileSync('public/app.js','utf8'),nav=/\$\('#header nav'\)\.innerHTML=`([^`]*(?:`[^`]*`[^`]*)*)`;/.exec(app)?.[1];
   assert.ok(nav,'header navigation markup is found');
   const topLevel=nav.replace(/<details[^]*?<\/details>/g,'').replace(/<span class="nav-actions">[^]*$/,'');
-  assert.deepEqual([...topLevel.matchAll(/>([^<>]+)<\/a>/g)].map(m=>m[1]),['Campus life','Messages'],'only two direct destinations');
-  assert.match(nav,/<summary>More<\/summary>/);assert.doesNotMatch(app,/<summary>Explore<\/summary>/);
-  for(const link of ['/watch','/games','/guide'])assert.match(nav,new RegExp(`<details class="nav-more"><summary>More</summary><div>[^]*href="${link}"`),link+' sits under More');
+  assert.deepEqual([...topLevel.matchAll(/>([^<>]+)<\/a>/g)].map(m=>m[1]),['Campus life','Messages','Watch together','Games','Clubs & societies','Getting started'],'every destination is a direct link');
+  assert.doesNotMatch(nav,/<summary>More<\/summary>/);assert.doesNotMatch(app,/<summary>Explore<\/summary>/);
   assert.match(app,/class="nav-more nav-account"><summary aria-label="Account and settings">[^]*id="profile"[^]*href="\/my-posters"[^]*href="\/saved"[^]*data-settings[^]*id="logout"/,'account menu holds profile, posters, saved, settings and sign out');
   assert.match(app,/<summary aria-label="Settings">[^]*data-settings/,'guests get the same settings in a menu');
   for(const file of ['public/appearance.js','public/i18n.js'])assert.match(readFileSync(file,'utf8'),/querySelector\('#header \[data-settings\]'\)\|\|document\.querySelector\('#header nav'\)/,file+' mounts inside the menu');
