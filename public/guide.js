@@ -20,6 +20,12 @@ export const quickStart=[
   ['Save it or ask','Save an event, add it to your calendar, or press Message organiser to ask a question.'],
   ['Make your own','Press Create poster, invite friends to edit with you, then publish it when it is ready.']
 ];
+// While only one campus is open the home page and sign-up choose it for you, so these
+// steps name it instead ({0} is the campus short name, translated as a pattern).
+export const singleCampusStart={
+  0:['Start on the {0} wall','CampusWall is open to {0} for now, so the home page takes you straight to its event wall. You can browse without an account.'],
+  2:['Create an account','Sign up with your name, email and a password. Your account belongs to {0}, the only campus open for now.']
+};
 
 export const access=[
   ['Browse posters and clubs',true],
@@ -80,7 +86,7 @@ const fixed=['NEW HERE? START WITH THIS','Find your way','around campus.','Campu
 export function guideStrings(){
   const out=new Set(fixed);
   for(const [,label] of goals)out.add(label);
-  for(const [t,d] of quickStart){out.add(t);out.add(d);}
+  for(const [t,d] of [...quickStart,...Object.values(singleCampusStart)]){out.add(t);out.add(d);}
   for(const [label] of access)out.add(label);
   for(const s of sections){out.add(s.eyebrow);out.add(s.title);out.add(s.intro);for(const f of s.features){out.add(f.name);out.add(f.what);f.where.forEach(w=>out.add(w));f.steps.forEach(x=>out.add(x));if(f.tip)out.add(f.tip);}}
   for(const [q,a] of faq){out.add(q);out.add(a);}
@@ -100,7 +106,11 @@ function feature(f,slug){
   </article>`;
 }
 
-export function mountGuide(root,{user,campus}={}){
+export function quickStartFor(campus,single){
+  return quickStart.map((step,i)=>single&&campus?.shortName&&singleCampusStart[i]?singleCampusStart[i].map(text=>text.replace('{0}',campus.shortName)):step);
+}
+
+export function mountGuide(root,{user,campus,single=false}={}){
   const slug=campus?.slug||campus?.id||'';
   const toc=[['start','Quick start'],['access','What needs an account?'],...sections.map(s=>[s.id,s.title]),['help','Common questions']];
   root.innerHTML=`<div class="guide-page" id="guide-top">
@@ -117,7 +127,7 @@ export function mountGuide(root,{user,campus}={}){
     <div class="guide-content">
       <section class="guide-section" id="start" aria-labelledby="start-title">
         <span class="eyebrow">QUICK START</span><h2 id="start-title">Your first five minutes</h2>
-        <ol class="guide-quick">${quickStart.map(([t,d],i)=>`<li><span class="guide-step-number" aria-hidden="true">0${i+1}</span><div><h3>${esc(t)}</h3><p>${esc(d)}</p></div></li>`).join('')}</ol>
+        <ol class="guide-quick">${quickStartFor(campus,single).map(([t,d],i)=>`<li><span class="guide-step-number" aria-hidden="true">0${i+1}</span><div><h3>${esc(t)}</h3><p>${esc(d)}</p></div></li>`).join('')}</ol>
       </section>
       <section class="guide-section" id="access" aria-labelledby="access-title">
         <h2 id="access-title">What needs an account?</h2>

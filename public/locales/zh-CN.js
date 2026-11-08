@@ -1,5 +1,8 @@
 // Static interface catalogue. User-authored content is not translated.
 export default {
+  "Start on the {0} wall": "\u4ece {0} \u6d77\u62a5\u5899\u5f00\u59cb",
+  "CampusWall is open to {0} for now, so the home page takes you straight to its event wall. You can browse without an account.": "CampusWall \u76ee\u524d\u53ea\u5bf9 {0} \u5f00\u653e\uff0c\u6253\u5f00\u9996\u9875\u5c31\u4f1a\u76f4\u63a5\u8fdb\u5165\u5b83\u7684\u6d3b\u52a8\u6d77\u62a5\u5899\u3002\u4e0d\u7528\u6ce8\u518c\u8d26\u53f7\u4e5f\u80fd\u6d4f\u89c8\u3002",
+  "Sign up with your name, email and a password. Your account belongs to {0}, the only campus open for now.": "\u586b\u5199\u540d\u5b57\u3001\u90ae\u7bb1\u548c\u5bc6\u7801\u5c31\u80fd\u6ce8\u518c\u3002\u4f60\u7684\u8d26\u53f7\u5c5e\u4e8e {0}\uff0c\u8fd9\u662f\u76ee\u524d\u552f\u4e00\u5f00\u653e\u7684\u6821\u56ed\u3002",
   "CampusWall can\u2019t be reached right now. Check your connection, then try again.": "\u6682\u65f6\u8fde\u4e0d\u4e0a CampusWall\u3002\u8bf7\u68c0\u67e5\u7f51\u7edc\u8fde\u63a5\uff0c\u7136\u540e\u518d\u8bd5\u4e00\u6b21\u3002",
   "Try again": "\u518d\u8bd5\u4e00\u6b21",
   "Hi! We were dreaming about campus.": "\u55e8\uff01\u6211\u4eec\u521a\u521a\u4e00\u8d77\u68a6\u89c1\u6821\u56ed\u4e86\u3002",

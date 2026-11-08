@@ -1,5 +1,8 @@
 // Static interface catalogue. User-authored content is not translated.
 export default {
+  "Start on the {0} wall": "Commencez par le mur de {0}",
+  "CampusWall is open to {0} for now, so the home page takes you straight to its event wall. You can browse without an account.": "CampusWall n\u2019est ouvert qu\u2019\u00e0 {0} pour le moment : la page d\u2019accueil vous m\u00e8ne directement \u00e0 son mur d\u2019\u00e9v\u00e9nements. Vous pouvez parcourir le site sans compte.",
+  "Sign up with your name, email and a password. Your account belongs to {0}, the only campus open for now.": "Inscrivez-vous avec votre nom, votre e-mail et un mot de passe. Votre compte appartient \u00e0 {0}, le seul campus ouvert pour le moment.",
   "CampusWall can\u2019t be reached right now. Check your connection, then try again.": "Impossible de joindre CampusWall pour le moment. V\u00e9rifiez votre connexion, puis r\u00e9essayez.",
   "Try again": "R\u00e9essayer",
   "Hi! We were dreaming about campus.": "Coucou ! Nous r\u00eavions du campus.",
