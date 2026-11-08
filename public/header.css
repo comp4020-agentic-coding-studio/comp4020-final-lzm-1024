@@ -36,6 +36,12 @@
 #header .menu-settings select{flex:1;max-width:none;padding:6px 2px;color:var(--ink);background:transparent;cursor:pointer}
 :root[data-theme="dark"] #header .menu-settings select{color:var(--ink)}
 
+/* The robot and its puppy doze in the bar on every page; robot.js draws them into this
+   reserved space. The wall hides them because its hero has the larger pair. */
+#header .header-buddy{position:relative;flex:none;width:96px;height:56px;margin-left:4px;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+body:has(.wall-robot) #header .header-buddy{visibility:hidden}
+@media (max-width:760px){#header .brand{order:-2}#header .header-buddy{order:-1;width:80px;height:46px;margin-left:8px}}
+
 @media (prefers-reduced-motion:reduce){#header nav>a,#header nav>.nav-more>summary{transition:none}}
 #header .bell-label{display:none}
 [data-route-focus]:focus{outline:none}

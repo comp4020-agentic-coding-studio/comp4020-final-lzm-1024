@@ -33,6 +33,20 @@ export function robotScene(mood='dream',{loop=false}={}){
   return `<span class="robot-scene ${loop?'robot-loop':'robot-once'}${dreaming?' robot-sleeping':''}" data-mood="${dreaming?'dream':'cheer'}" aria-hidden="true">${dogSvg}<span class="robot-figure">${bubble}${robotSvg}${extras}</span></span>`;
 }
 
+// The header's small pair, on every page: they doze briefly after the header renders,
+// then rest; a tap wakes them to wave and wag. The wall's Effects setting keeps them still.
+export async function mountBuddy(slot){
+  if(!slot)return;await fillRobots(slot.parentElement);
+  const scene=slot.querySelector('.robot-scene');if(!scene||!slot.isConnected)return;
+  let still=false,timer;try{still=localStorage.getItem('campuswall:arcade-effects')==='off';}catch{}
+  scene.classList.toggle('robot-still',still);
+  slot.insertAdjacentHTML('beforeend','<span class="robot-say">Hi! We were dreaming about campus.</span>');
+  slot.addEventListener('pointerdown',()=>{
+    scene.classList.remove('robot-sleeping');slot.classList.add('robot-awake');clearTimeout(timer);
+    timer=setTimeout(()=>{scene.classList.add('robot-sleeping');slot.classList.remove('robot-awake');},2800);
+  });
+}
+
 // Fills every [data-robot] placeholder in root once its styles have loaded, so the
 // drawing never appears unstyled. Placeholders may hold a fallback such as an emoji.
 export async function fillRobots(root,{loop=false}={}){

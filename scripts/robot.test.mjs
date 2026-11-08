@@ -57,6 +57,26 @@ test('on the wall the robot moves only under the Effects control; elsewhere brie
   assert.doesNotMatch(css,/@keyframes robot-[a-z-]+\{[^}]*(?:filter:brightness|background-color)/,'no flashing');
 });
 
+test('every page shows the pair in the header: brief doze, tap to wake, still when Effects are off',async()=>{
+  const app=read('public/app.js'),header=read('public/header.css');
+  assert.ok(app.includes('<span class="header-buddy" data-robot="dream" aria-hidden="true"></span><button type="button" class="quiet nav-toggle"'),'drawn by the shared header, so every page has it');
+  assert.ok(app.includes("import('./robot.js').then(m=>m.mountBuddy($('#header .header-buddy'))).catch(()=>{});"),'loaded lazily after the header');
+  assert.match(header,/#header \.header-buddy\{position:relative;flex:none;width:96px;height:56px;/,'space is reserved so the bar does not shift');
+  assert.ok(header.includes('body:has(.wall-robot) #header .header-buddy{visibility:hidden}'),'the wall shows only its larger pair');
+  const dom=new JSDOM('<header><span class="header-buddy" data-robot="dream" aria-hidden="true"></span></header>',{url:'http://localhost/'});
+  for(const key of ['document','localStorage'])globalThis[key]=dom.window[key];
+  try{
+    for(const stored of [null,'off']){
+      if(stored)localStorage.setItem('campuswall:arcade-effects',stored);
+      const slot=document.querySelector('.header-buddy');slot.removeAttribute('data-robot-ready');slot.innerHTML='';
+      const {mountBuddy}=await import('../public/robot.js'),mounting=mountBuddy(slot);document.head.querySelector('link[href="/robot.css"]')?.onload?.();await mounting;
+      const scene=slot.querySelector('.robot-scene');assert.ok(scene.classList.contains('robot-once'),'brief, not endless');assert.equal(scene.classList.contains('robot-still'),stored==='off');
+      assert.equal(slot.querySelector('.robot-say').textContent,'Hi! We were dreaming about campus.');
+    }
+  }finally{delete globalThis.document;delete globalThis.localStorage;dom.window.close();}
+  assert.ok(css.includes('.robot-still *{animation:none!important}'));
+});
+
 test('the wall, empty lists, error pages and publication show the robot; its greeting is translated',async()=>{
   const delight=read('public/delight.js'),app=read('public/app.js'),assets=read('public-assets.mjs');
   assert.ok(delight.includes("robot.className='wall-robot';robot.setAttribute('aria-hidden','true');"));

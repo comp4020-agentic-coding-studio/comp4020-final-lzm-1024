@@ -54,6 +54,10 @@
   .robot-once.robot-sleeping .robot-z{animation:robot-z 1.8s ease-out 2}
   .robot-once .robot-z:nth-of-type(2){animation-delay:.6s}.robot-once .robot-z:nth-of-type(3){animation-delay:1.2s}
   .robot-once .robot-dream{animation:robot-pop .6s cubic-bezier(.2,1.3,.4,1) .3s both}
+  .robot-once[data-mood="dream"]:not(.robot-sleeping) .robot-body{animation:robot-hop .5s ease-out 2}
+  .robot-once[data-mood="dream"]:not(.robot-sleeping) .robot-arm-right{animation:robot-wave-right 2.2s ease-in-out}
+  .robot-once[data-mood="dream"]:not(.robot-sleeping) .robot-dog{animation:robot-hop .5s ease-out .15s 2}
+  .robot-once[data-mood="dream"]:not(.robot-sleeping) .robot-dog-tail{animation:robot-wag .4s ease-in-out 6}
   .robot-once[data-mood="cheer"] .robot-body{animation:robot-hop .6s ease-out .35s 3}
   .robot-once[data-mood="cheer"] .robot-arm-right{animation:robot-wave-right 2.2s ease-in-out .35s}
   .robot-once[data-mood="cheer"] .robot-arm-left{animation:robot-wave-left 2.2s ease-in-out .35s}
@@ -65,6 +69,13 @@
   .robot-once .robot-spark:nth-of-type(2){animation-delay:.9s;--dx:-36%}.robot-once .robot-spark:nth-of-type(3){animation-delay:1.3s;--dx:40%}
 }
 @media(prefers-reduced-motion:reduce){.robot-scene *{animation:none!important;transition:none!important}}
+.robot-still *{animation:none!important}
+
+/* The header's pair on every page: no dream bubble, and the greeting appears below the bar. */
+.header-buddy .robot-scene{--robot-size:48px}
+.header-buddy .robot-dream{display:none}
+.header-buddy .robot-z{color:#f3c75f}
+.header-buddy .robot-say{z-index:30;left:0;right:auto;top:calc(100% + 8px);border-radius:4px 14px 14px 14px;transform-origin:0 0}
 
 /* The wall hero's pair: tap them and they wake up to say hello. */
 .wall-robot{position:relative;display:flex;justify-content:flex-end;align-self:flex-end;width:max-content;margin:-14px 0 2px auto;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
@@ -83,7 +94,9 @@
   .wall-robot .robot-scene{--robot-size:44px}
   .wall-hero.delight-stage .delight-greeting{padding-right:88px}
   .wall-robot .robot-dream{display:none}
-  .robot-say{top:auto;bottom:-6px;max-width:190px;font-size:12px}
+  .wall-robot .robot-say{top:auto;bottom:-6px;max-width:190px;font-size:12px}
+  .header-buddy .robot-scene{--robot-size:40px}
+  .header-buddy .robot-say{max-width:200px;font-size:12px}
 }
 
 @keyframes robot-breathe{0%,100%{transform:translateY(0) scale(1,1)}50%{transform:translateY(-1.5px) scale(1.012,1.03)}}
