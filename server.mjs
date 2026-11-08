@@ -25,7 +25,7 @@ import { createGames } from './games.mjs';
 import {initializeDatabase} from './initialize-database.mjs';
 import {createQueries} from './database.mjs';
 import {createPosterStore} from './poster-store.mjs';
-import {createPublicAssets,encoding} from './public-assets.mjs';
+import {createPublicAssets,encoding,posterShareTags} from './public-assets.mjs';
 import {brotliCompress,gzip,constants as zlibConstants} from 'node:zlib';
 import {seedCanvas,applyCanvasOperation,validateProps} from './public/canvas-model.js';
 import {designFields,designChoices,designNumbers,designColours,designDefaults,designPresets} from './public/poster-design.js';
@@ -245,6 +245,8 @@ const publicAssets=createPublicAssets();
 const server=createServer(async(req,res)=>{
   observation.http(req,res);
   res.setHeader('x-content-type-options','nosniff');res.setHeader('referrer-policy','strict-origin-when-cross-origin');
+  // Fly's proxy terminates TLS and reports it here; browsers then skip plain http for a year.
+  if(req.headers['x-forwarded-proto']==='https')res.setHeader('strict-transport-security','max-age=31536000');
   res.setHeader('content-security-policy',"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data: blob:; media-src 'self' blob:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'");
   try {
     const url=new URL(req.url,'http://localhost'),path=url.pathname,method=req.method;
@@ -439,7 +441,14 @@ const server=createServer(async(req,res)=>{
     if(account?.universityId&&isActiveCampus(account.universityId)&&campusRoute&&campusRoute!==account.universityId){res.writeHead(302,{location:`/${account.universityId}${path.endsWith('/clubs')?'/clubs':''}`,'cache-control':'no-store'});return res.end();}
     const campusPage=campusRoute&&new RegExp(`^/${campusRoute}(?:/(?:posters/[^/]+|clubs))?$`).test(path);
     if(!campusPage&&!/^\/(?:index.html|login|guide|choose-campus|watch(?:\/[a-f0-9-]{36})?|people\/[a-f0-9-]{36}|community(?:\/[A-Za-z0-9_%.-]+){0,2}|messages|games(?:\/[a-f0-9-]{36})?|saved|my-posters|account|forgot|moderation|studio\/posters\/[^/]+)?$/.test(path))fail(404,'Page not found');
-    await publicAssets.sendPage(req,res);
+    // A published poster's page names the poster for link previews, once the campus checks pass.
+    const sharedPoster=campusPage&&path.match(/^\/[^/]+\/posters\/([^/]+)$/);let share;
+    if(sharedPoster){
+      let visible=true;try{campusAccess(req,campusRoute);}catch{visible=false;}
+      const p=visible&&get("SELECT universityId,slug,publicData FROM posters WHERE (id=? OR slug=?) AND universityId=? AND status='PUBLISHED'",sharedPoster[1],sharedPoster[1],campusRoute);
+      if(p){const link=publicUrl(req,p);share=posterShareTags(JSON.parse(p.publicData),link,new URL(link).origin);}
+    }
+    await publicAssets.sendPage(req,res,share);
   } catch(error) {if(!res.headersSent)json(res,error.status||500,{error:error.status?error.message:'Unable to complete this request'});}
 });
 const wss=new WebSocketServer({noServer:true,maxPayload:16000});

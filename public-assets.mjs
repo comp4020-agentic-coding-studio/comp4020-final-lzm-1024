@@ -29,7 +29,30 @@ function builtAssets(dir){
 }
 // Without a build, a card-sized photo URL is answered with the original photo.
 const cardPhotoOriginal=path=>/^\/demo-photos\/[a-z0-9-]+-720\.webp$/.test(path)?path.replace(/-720\.webp$/,'.webp'):null;
-export function createPublicAssets(root=process.cwd(),{builtDir=process.env.PUBLIC_ASSET_DIR}={}){
+// Site icons, regenerated from icon.svg by scripts/make-icons.mjs.
+export const siteIcons=['/icon.svg','/icon-192.png','/icon-512.png','/apple-touch-icon.png','/favicon.ico'];
+const imageType=path=>path.endsWith('.svg')?'image/svg+xml':path.endsWith('.png')?'image/png':path.endsWith('.ico')?'image/x-icon':'image/webp';
+const siteTitle='CampusWall — Your campus, at a glance',siteDescription='Your campus, at a glance. Discover events and create campus posters together.';
+const clip=(text,limit)=>text.length>limit?text.slice(0,limit-1).trimEnd()+'…':text;
+const metaTag=(attribute,name,content)=>`<meta ${attribute}="${name}" content="${escapeHtml(content)}">`;
+const previewTags=({title,description,url,image,alt,large})=>[
+  metaTag('property','og:type','website'),metaTag('property','og:site_name','CampusWall'),metaTag('property','og:title',title),metaTag('property','og:description',description),
+  ...(url?[metaTag('property','og:url',url)]:[]),metaTag('property','og:image',image),metaTag('property','og:image:alt',alt),metaTag('name','twitter:card',large?'summary_large_image':'summary')
+].join('');
+// Link previews (Messenger, WhatsApp, Discord, Slack, iMessage) read the page HTML
+// without running app.js, so a published poster's own page carries its title, date,
+// venue and image. Test notices keep their TEST label and disclosure here as well.
+export function posterShareTags(poster,url,origin){
+  const isTest=!!poster.isTest,title=(isTest?'[TEST] ':'')+(String(poster.title||'').trim()||'Campus event');
+  const when=/^\d{4}-\d{2}-\d{2}$/.test(poster.date||'')?new Date(poster.date+'T00:00:00Z').toLocaleDateString('en-AU',{weekday:'short',day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}):'';
+  const text=String(poster.description||'').replace(/\s+/g,' ').trim();
+  const description=clip(isTest?(text.startsWith('TEST EVENT')?text:'TEST EVENT — Fictional, not a real event. '+text):[[when,poster.time,poster.location].filter(Boolean).join(' · '),text].filter(Boolean).join(' — '),200)||siteDescription;
+  const hero=String(poster.heroImageUrl||''),demo=/^\/demo-photos\/([a-z0-9-]+)\.webp$/.exec(hero);
+  const image=demo?`${origin}/demo-photos/${demo[1]}-720.webp`:/^\/media\/[a-f0-9-]{36}$/.test(hero)?origin+hero:/^https:\/\/\S+$/.test(hero)?hero:null;
+  const alt=image?String(poster.photoPoster?.photoAlt||`Poster image for ${title}`):'CampusWall';
+  return {title:`${title} · CampusWall`,description,tags:previewTags({title,description,url,image:image||`${origin}/icon-512.png`,alt,large:!!image})};
+}
+export function createPublicAssets(root=process.cwd(),{builtDir=process.env.PUBLIC_ASSET_DIR,baseUrl=process.env.PUBLIC_BASE_URL}={}){
   const assets=new Map(),built=builtAssets(builtDir);
   function textAsset(content,type){
     const raw=Buffer.from(content);
@@ -43,13 +66,19 @@ export function createPublicAssets(root=process.cwd(),{builtDir=process.env.PUBL
     const path=`/demo-photos/${event.key}-720.webp`,known=built.images?.[path];
     if(known?.built)assets.set(path,{file:join(builtDir,'files',path.slice(1)),type:'image/webp',bytes:known.bytes,hash:known.hash});
   }
-  for(const path of [...Object.values(campusDetails).map(c=>c.logo.src),...gallery.events.map(event=>`/demo-photos/${event.key}.webp`)]){
+  for(const path of [...Object.values(campusDetails).map(c=>c.logo.src),...gallery.events.map(event=>`/demo-photos/${event.key}.webp`),...siteIcons]){
     const file=join(root,'public',path.slice(1));
     const known=built.images?.[path];
-    assets.set(path,{file,type:path.endsWith('.svg')?'image/svg+xml':path.endsWith('.png')?'image/png':'image/webp',bytes:known?.bytes??statSync(file).size,hash:known?.hash??createHash('sha256').update(readFileSync(file)).digest('hex')});
+    assets.set(path,{file,type:imageType(path),bytes:known?.bytes??statSync(file).size,hash:known?.hash??createHash('sha256').update(readFileSync(file)).digest('hex')});
   }
-  const page=built.get('/index.html')||textAsset(readFileSync(join(root,'public','index.html')),'text/html');
-  const readme=textAsset(`<!doctype html><meta charset="utf-8"><meta name="theme-color" content="#f7f6f2"><title>About CampusWall</title><script src="/theme-init.js"></script><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/appearance.css"><main class="readme"><a href="/">← CampusWall</a><pre>${escapeHtml(readFileSync(join(root,'README.md'),'utf8'))}</pre></main>`,'text/html');
+  const shell=built.get('/index.html')||textAsset(readFileSync(join(root,'public','index.html')),'text/html');
+  // Sets the page title and description and adds preview tags to the shared page shell.
+  const withPreview=({title,description,tags})=>textAsset(shell.variants.identity.toString('utf8')
+    .replace(/<title>[^<]*<\/title>/,()=>`<title>${escapeHtml(title)}</title>`)
+    .replace(/<meta name="description" content="[^"]*">/,()=>`${metaTag('name','description',description)}${tags}`),'text/html');
+  // Preview images must be absolute URLs, so the site-wide tags need the deployed address.
+  const page=baseUrl?withPreview({title:siteTitle,description:siteDescription,tags:previewTags({title:siteTitle,description:siteDescription,url:new URL('/',baseUrl).href,image:new URL('/icon-512.png',baseUrl).href,alt:'CampusWall'})}):shell;
+  const readme=textAsset(`<!doctype html><meta charset="utf-8"><meta name="theme-color" content="#f7f6f2"><title>About CampusWall</title><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icon.svg" type="image/svg+xml"><script src="/theme-init.js"></script><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/appearance.css"><main class="readme"><a href="/">← CampusWall</a><pre>${escapeHtml(readFileSync(join(root,'README.md'),'utf8'))}</pre></main>`,'text/html');
   assets.set('/readme',readme);assets.set('/readme/',readme);
   async function send(req,res,asset,{privatePage=false,photo=false,link}={}){
     const selected=asset.variants?encoding(req.headers['accept-encoding']):null;
@@ -65,7 +94,9 @@ export function createPublicAssets(root=process.cwd(),{builtDir=process.env.PUBL
   }
   return {
     async serve(req,res,path){const asset=assets.get(path)||assets.get(cardPhotoOriginal(path));if(!asset)return false;await send(req,res,asset,{photo:path.startsWith('/demo-photos/')});return true;},
-    sendPage:(req,res)=>{
+    // `share` is a published poster's preview from posterShareTags; the server passes it
+    // only after the visitor's campus checks, and it never contains account data.
+    sendPage:(req,res,share)=>{
       // Start the public module graph while authentication is still loading.
       // These hints never contain account data and are sent after campus checks.
       const modules=['appearance.js','app.js','chat-ui.js','event-utils.js','email-utils.js','chat.js','canvas-model.js','poster-design.js','photo-posters.js','ui-utils.js','motion.js','i18n.js','message-translation.js'];
@@ -73,7 +104,7 @@ export function createPublicAssets(root=process.cwd(),{builtDir=process.env.PUBL
       const games=path==='/games'||path.startsWith('/games/');
       if(games)modules.push('games.js','game-catalog.js');
       const link=modules.map(name=>`</${name}>; rel=modulepreload`).concat(games?['</games.css>; rel=preload; as=style']:[]).join(', ');
-      return send(req,res,page,{privatePage:true,link});
+      return send(req,res,share?withPreview(share):page,{privatePage:true,link});
     }
   };
 }
