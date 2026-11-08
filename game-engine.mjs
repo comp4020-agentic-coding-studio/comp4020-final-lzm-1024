@@ -83,6 +83,7 @@ export function moveGame(game,state,player,a,now=Date.now()){
 }
 export function publicGame(game,s,player){
   const result={turn:s.turn,finished:s.finished,winner:s.winner,notice:s.notice,moves:s.moves,lastMove:s.lastMove};
+  if(Number.isInteger(s.endedBy))result.endedBy=s.endedBy;
   if(s.scores)result.scores=s.scores;
   if(s.board){result.board=s.board;result.winningCells=s.winningCells||[];if(game==='reversi'){result.legal=legalReversi(s,s.turn);result.scores=[s.board.filter(x=>x===1).length,s.board.filter(x=>x===2).length];}}
   if(game==='rps')Object.assign(result,{ownChoice:s.choices[player],chosen:s.choices.map(x=>x!==null),rounds:s.rounds});

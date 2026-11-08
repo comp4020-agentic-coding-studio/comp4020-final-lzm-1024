@@ -25,6 +25,47 @@ test('real two-player campus games',{timeout:45000},async t=>{
   function editState(r,change){const store=new DatabaseSync(join(dir,'campuswall.sqlite')),s=JSON.parse(store.prepare('SELECT state FROM game_rooms WHERE id=?').get(r.id).state);change(s);store.prepare('UPDATE game_rooms SET state=? WHERE id=?').run(JSON.stringify(s),r.id);store.close();}
   try{
     await start();a=await register('Games Alice','anu');b=await register('Games Bob','anu');third=await register('Games Charlie','anu');foreign=await register('Games Sydney','usyd');
+    await t.test('forgotten rooms can be exited without IDs, including private and playing rooms',async()=>{
+      const path='/api/games/rooms/leave-active';
+      assert.equal((await req(path,'POST',{clientId:randomUUID()})).status,401);
+      const waiting=await create('gomoku',b.id),playingRoom=await playing(await create('tictactoe'));
+      const resumed=await req('/api/games/rooms/active?game=tictactoe','GET',null,a);
+      assert.equal(resumed.data.room.id,playingRoom.id);assert.equal(resumed.data.room.status,'playing');
+      assert.equal((await req('/api/games/rooms/active?game=tictactoe','GET',null,third)).data.room,null);
+      assert.equal((await req('/api/games/rooms/active?game=tictactoe','GET',null,foreign)).data.room,null);
+      const other=(await req('/api/games/rooms','POST',{game:'gomoku',clientId:randomUUID()},third)).data.room;
+      const guest=(await req('/api/games/rooms','POST',{game:'gomoku',clientId:randomUUID()},b)).data.room;
+      await op(guest,'join',a);
+      assert.equal((await req(path,'POST',{clientId:'invalid'},a)).status,400);
+      const result=await req(path,'POST',{clientId:randomUUID()},a);
+      assert.equal(result.status,200);assert.equal(result.data.left,3);
+      assert.equal((await req('/api/games/rooms/'+waiting.id,'GET',null,a)).data.room.status,'cancelled');
+      const ended=(await req('/api/games/rooms/'+playingRoom.id,'GET',null,b)).data.room;
+      assert.equal(ended.status,'finished');assert.equal(ended.state.winner,1);
+      const released=(await req('/api/games/rooms/'+guest.id,'GET',null,b)).data.room;
+      assert.equal(released.status,'cancelled');assert.equal(released.state.endedBy,1);
+      assert.equal((await req('/api/games/rooms/'+other.id,'GET',null,third)).data.room.status,'waiting');
+      assert.equal((await req(path,'POST',{clientId:randomUUID()},a)).data.left,0);
+      assert.equal((await req('/api/games/rooms/active?game=tictactoe','GET',null,a)).data.room,null);
+      const fresh=await create('gomoku');await op(fresh,'leave',a);
+      await op(other,'leave',third);
+    });
+    await t.test('either player force-exiting ends the match for both live clients',async()=>{
+      for(const leaver of [a,b]){
+        const r=await playing(await create('gomoku'));
+        const host=await socket('game='+r.id,a),guest=await socket('game='+r.id,b);
+        await wait(host,'game:state');await wait(guest,'game:state');
+        const response=await req('/api/games/rooms/leave-active','POST',{clientId:randomUUID()},leaver);
+        assert.equal(response.status,200);
+        const updates=await Promise.all([wait(host,'game:state',m=>m.room.status==='finished'),wait(guest,'game:state',m=>m.room.status==='finished')]);
+        for(const {room:ended} of updates){assert.equal(ended.state.finished,true);assert.equal(ended.state.endedBy,leaver===a?0:1);}
+        await op(updates[0].room,'move',a,{index:0},409);
+        await op(updates[1].room,'rematch',b,undefined,409);
+        assert.equal((await req('/api/games/rooms/active?game=gomoku','GET',null,a)).data.room,null);
+        assert.equal((await req('/api/games/rooms/active?game=gomoku','GET',null,b)).data.room,null);
+        host.close();guest.close();
+      }
+    });
     await t.test('ten guest-readable games, protected rooms, scoped user search and campus checks',async()=>{
       const catalog=(await req('/api/games/catalog')).data.games;assert.equal(catalog.length,10);assert.equal(new Set(catalog.map(g=>g.id)).size,10);
       for(const path of ['/games','/games.js','/game-catalog.js','/games.css'])assert.equal((await fetch(base+path)).status,200);

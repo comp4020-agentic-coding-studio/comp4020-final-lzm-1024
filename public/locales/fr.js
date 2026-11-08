@@ -1,5 +1,11 @@
 // Static interface catalogue. User-authored content is not translated.
 export default {
+  "You left. This match has ended.": "Vous avez quitt\u00e9 la partie. Elle est termin\u00e9e.",
+  "Your opponent left. This match has ended.": "Votre adversaire est parti. La partie est termin\u00e9e.",
+  "A player left. This table is closed.": "Un joueur est parti. Cette table est ferm\u00e9e.",
+  "A player left. This match has ended.": "Un joueur est parti. La partie est termin\u00e9e.",
+  "A player left. Create a new table to play again.": "Un joueur est parti. Cr\u00e9ez une nouvelle table pour rejouer.",
+
   "Ready to play?": "Pr\u00eat \u00e0 jouer ?",
   "Time to respond": "Temps pour r\u00e9pondre",
   "This prompt closes after 60 seconds. Find the invitation later in Notifications.": "Cette fen\u00eatre se ferme apr\u00e8s 60 secondes. Retrouvez ensuite l\u2019invitation dans les notifications.",
@@ -227,6 +233,11 @@ export default {
   "Choose an available game": "Choisissez un jeu disponible",
   "Invite another user from your university": "Invitez un autre utilisateur de votre universit\u00e9",
   "Finish or close an existing room before creating another": "Terminez ou fermez une salle existante avant d\u2019en cr\u00e9er une autre",
+  "Leave all unfinished rooms": "Quitter toutes les salles non termin\u00e9es",
+  "Resume previous game": "Reprendre la partie pr\u00e9c\u00e9dente",
+  "Cannot find your previous room? Exit here. Active matches count as a resignation.": "Vous ne retrouvez pas votre salle pr\u00e9c\u00e9dente\u00a0? Quittez ici. Les parties en cours comptent comme un abandon.",
+  "Leaving unfinished rooms\u2026": "Sortie des salles non termin\u00e9es\u2026",
+  "Previous rooms exited. You can create a table now.": "Vous avez quitt\u00e9 les salles pr\u00e9c\u00e9dentes. Vous pouvez cr\u00e9er une table maintenant.",
   "Game endpoint not found": "Point d\u2019acc\u00e8s du jeu introuvable",
   "Game operation not available": "Cette op\u00e9ration de jeu n\u2019est pas disponible",
   "This request already performed another action": "Cette requ\u00eate a d\u00e9j\u00e0 effectu\u00e9 une autre action",
@@ -881,7 +892,7 @@ export default {
   "Match status": "\u00c9tat de la partie",
   "Your artwork was blank, so the wall shows a cover made from your event details.": "Votre visuel \u00e9tait vide : le mur affiche donc une couverture cr\u00e9\u00e9e \u00e0 partir des d\u00e9tails de votre \u00e9v\u00e9nement.",
   "Recently on campus": "R\u00e9cemment sur le campus",
-  "{0} · CAMPUS GAMES": "{0} \u00b7 JEUX DU CAMPUS",
+  "{0} \u00b7 CAMPUS GAMES": "{0} \u00b7 JEUX DU CAMPUS",
   "Play together,": "Jouez ensemble,",
   "right on campus.": "sur le campus.",
   "Ten two-player games in real time. Challenge a campus friend or take an open seat.": "Dix jeux \u00e0 deux en temps r\u00e9el. D\u00e9fiez un ami du campus ou prenez une place libre.",

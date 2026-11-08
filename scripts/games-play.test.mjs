@@ -30,6 +30,18 @@ async function withRoom(room,api,run){
 const alice={id:'a',name:'Alice',username:'alice',universityId:'anu'},bob={id:'b',name:'Bob',username:'bob',universityId:'anu'};
 const base={id:'room',version:5,serverTime:Date.now(),matchNumber:1,players:[alice,bob],player:0,online:[true,true],ready:[true,true],rematch:[false,false],invitee:null};
 
+test('opponent force-exit ends the live board and removes rematch controls',async()=>{
+  const room={...base,game:'gomoku',status:'playing',state:publicGame('gomoku',newGame('gomoku'),0)};
+  await withRoom(room,null,async(root,socket)=>{
+    assert([...root.querySelectorAll('.board-cell')].some(cell=>!cell.disabled));
+    socket.onmessage({data:JSON.stringify({type:'game:state',room:{...room,version:6,status:'finished',state:{...room.state,finished:true,winner:0,endedBy:1,notice:'A player left. This match has ended.'}}})});
+    assert.match(root.querySelector('.game-turn-banner').textContent,/Your opponent left/);
+    assert([...root.querySelectorAll('.board-cell')].every(cell=>cell.disabled));
+    assert.equal(root.querySelector('[data-operation=rematch]'),null);
+    assert(root.querySelector('.game-controls a[href="/games"]'));
+  });
+});
+
 test('chess move history numbers each white move, also once older moves scroll away',async()=>{
   let s=newGame('chess');
   for(const [player,from,to] of [[0,'f2','f3'],[1,'e7','e5'],[0,'g2','g4'],[1,'d8','h4']])s=moveGame('chess',s,player,{from,to});

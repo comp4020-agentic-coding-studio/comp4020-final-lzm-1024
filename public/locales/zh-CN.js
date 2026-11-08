@@ -1,5 +1,11 @@
 // Static interface catalogue. User-authored content is not translated.
 export default {
+  "You left. This match has ended.": "\u4f60\u5df2\u9000\u51fa\uff0c\u672c\u5c40\u5df2\u7ed3\u675f\u3002",
+  "Your opponent left. This match has ended.": "\u5bf9\u65b9\u5df2\u9000\u51fa\uff0c\u672c\u5c40\u5df2\u7ed3\u675f\u3002",
+  "A player left. This table is closed.": "\u6709\u73a9\u5bb6\u9000\u51fa\uff0c\u623f\u95f4\u5df2\u5173\u95ed\u3002",
+  "A player left. This match has ended.": "\u6709\u73a9\u5bb6\u9000\u51fa\uff0c\u672c\u5c40\u5df2\u7ed3\u675f\u3002",
+  "A player left. Create a new table to play again.": "\u6709\u73a9\u5bb6\u9000\u51fa\uff0c\u8bf7\u521b\u5efa\u65b0\u623f\u95f4\u518d\u73a9\u3002",
+
   "Ready to play?": "\u51c6\u5907\u597d\u5f00\u59cb\u6e38\u620f\u4e86\u5417\uff1f",
   "Time to respond": "\u56de\u5e94\u5269\u4f59\u65f6\u95f4",
   "This prompt closes after 60 seconds. Find the invitation later in Notifications.": "\u6b64\u63d0\u793a\u5c06\u572860\u79d2\u540e\u5173\u95ed\u3002\u4e4b\u540e\u53ef\u5728\u901a\u77e5\u4e2d\u627e\u5230\u9080\u8bf7\u3002",
@@ -227,6 +233,11 @@ export default {
   "Choose an available game": "\u8bf7\u9009\u62e9\u53ef\u7528\u7684\u6e38\u620f",
   "Invite another user from your university": "\u8bf7\u9080\u8bf7\u672c\u6821\u7684\u5176\u4ed6\u7528\u6237",
   "Finish or close an existing room before creating another": "\u8bf7\u5148\u7ed3\u675f\u6216\u5173\u95ed\u4e00\u4e2a\u73b0\u6709\u623f\u95f4\u518d\u521b\u5efa",
+  "Leave all unfinished rooms": "\u9000\u51fa\u6240\u6709\u672a\u7ed3\u675f\u7684\u623f\u95f4",
+  "Resume previous game": "\u8fd4\u56de\u4e4b\u524d\u7684\u5bf9\u5c40",
+  "Cannot find your previous room? Exit here. Active matches count as a resignation.": "\u627e\u4e0d\u5230\u4e4b\u524d\u7684\u623f\u95f4\uff1f\u70b9\u6b64\u76f4\u63a5\u9000\u51fa\u3002\u6b63\u5728\u8fdb\u884c\u7684\u5bf9\u5c40\u5c06\u89c6\u4e3a\u8ba4\u8f93\u3002",
+  "Leaving unfinished rooms\u2026": "\u6b63\u5728\u9000\u51fa\u623f\u95f4\u2026",
+  "Previous rooms exited. You can create a table now.": "\u5df2\u9000\u51fa\u4e4b\u524d\u7684\u623f\u95f4\uff0c\u73b0\u5728\u53ef\u4ee5\u521b\u5efa\u65b0\u623f\u95f4\u3002",
   "Game endpoint not found": "\u627e\u4e0d\u5230\u6e38\u620f\u63a5\u53e3",
   "Game operation not available": "\u6b64\u6e38\u620f\u64cd\u4f5c\u4e0d\u53ef\u7528",
   "This request already performed another action": "\u8fd9\u4e2a\u8bf7\u6c42\u5df2\u7ecf\u6267\u884c\u8fc7\u53e6\u4e00\u4e2a\u64cd\u4f5c",
@@ -881,7 +892,7 @@ export default {
   "Match status": "\u6bd4\u8d5b\u72b6\u6001",
   "Your artwork was blank, so the wall shows a cover made from your event details.": "\u4f60\u7684\u753b\u5e03\u662f\u7a7a\u767d\u7684\uff0c\u6240\u4ee5\u6d77\u62a5\u5899\u4f1a\u7528\u4f60\u586b\u5199\u7684\u6d3b\u52a8\u4fe1\u606f\u751f\u6210\u5c01\u9762\u3002",
   "Recently on campus": "\u6821\u56ed\u8fd1\u671f\u6d3b\u52a8",
-  "{0} · CAMPUS GAMES": "{0} \u00b7 \u6821\u56ed\u6e38\u620f",
+  "{0} \u00b7 CAMPUS GAMES": "{0} \u00b7 \u6821\u56ed\u6e38\u620f",
   "Play together,": "\u4e00\u8d77\u73a9\uff0c",
   "right on campus.": "\u5c31\u5728\u6821\u56ed\u91cc\u3002",
   "Ten two-player games in real time. Challenge a campus friend or take an open seat.": "\u5341\u6b3e\u5b9e\u65f6\u53cc\u4eba\u6e38\u620f\u3002\u5411\u6821\u56ed\u597d\u53cb\u53d1\u8d77\u6311\u6218\uff0c\u6216\u52a0\u5165\u4e00\u4e2a\u7a7a\u4f4d\u3002",

@@ -1,5 +1,11 @@
 // Static interface catalogue. User-authored content is not translated.
 export default {
+  "You left. This match has ended.": "Has salido. La partida ha terminado.",
+  "Your opponent left. This match has ended.": "Tu oponente ha salido. La partida ha terminado.",
+  "A player left. This table is closed.": "Un jugador ha salido. Esta mesa est\u00e1 cerrada.",
+  "A player left. This match has ended.": "Un jugador ha salido. La partida ha terminado.",
+  "A player left. Create a new table to play again.": "Un jugador ha salido. Crea una mesa nueva para volver a jugar.",
+
   "Ready to play?": "\u00bfListo para jugar?",
   "Time to respond": "Tiempo para responder",
   "This prompt closes after 60 seconds. Find the invitation later in Notifications.": "Este aviso se cierra despu\u00e9s de 60 segundos. La invitaci\u00f3n seguir\u00e1 en Notificaciones.",
@@ -227,6 +233,11 @@ export default {
   "Choose an available game": "Elige un juego disponible",
   "Invite another user from your university": "Invita a otra persona de tu universidad",
   "Finish or close an existing room before creating another": "Termina o cierra una sala existente antes de crear otra",
+  "Leave all unfinished rooms": "Salir de todas las salas sin terminar",
+  "Resume previous game": "Reanudar partida anterior",
+  "Cannot find your previous room? Exit here. Active matches count as a resignation.": "\u00bfNo encuentras tu sala anterior? Sal aqu\u00ed. Las partidas en curso cuentan como abandono.",
+  "Leaving unfinished rooms\u2026": "Saliendo de las salas sin terminar\u2026",
+  "Previous rooms exited. You can create a table now.": "Has salido de las salas anteriores. Ya puedes crear una mesa.",
   "Game endpoint not found": "No se encontr\u00f3 el recurso del juego",
   "Game operation not available": "Esta operaci\u00f3n de juego no est\u00e1 disponible",
   "This request already performed another action": "Esta solicitud ya realiz\u00f3 otra acci\u00f3n",
@@ -881,7 +892,7 @@ export default {
   "Match status": "Estado de la partida",
   "Your artwork was blank, so the wall shows a cover made from your event details.": "Tu dise\u00f1o estaba en blanco, as\u00ed que el muro muestra una portada creada con los datos de tu evento.",
   "Recently on campus": "Recientemente en el campus",
-  "{0} · CAMPUS GAMES": "{0} \u00b7 JUEGOS DEL CAMPUS",
+  "{0} \u00b7 CAMPUS GAMES": "{0} \u00b7 JUEGOS DEL CAMPUS",
   "Play together,": "Juega en compa\u00f1\u00eda,",
   "right on campus.": "en el campus.",
   "Ten two-player games in real time. Challenge a campus friend or take an open seat.": "Diez juegos para dos en tiempo real. Reta a alguien del campus o ocupa un asiento libre.",

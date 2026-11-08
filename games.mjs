@@ -21,6 +21,26 @@ export function createGames({blocks={guard(){},between(){return false;}},db,get,
     // Who is in the games area right now: same campus, not blocked, never emails.
     if(path==='/api/games/online'&&method==='GET'){const here=new Set();for(const ws of sockets){const p=ws.user;if(!p||p.id===u.id||p.universityId!==u.universityId||!(ws.gameLobby||ws.gameRoom)||ws.readyState!==1||here.has(p.id)||!validSocket(ws)||blocks.between(u.id,p.id))continue;here.add(p.id);}
       const people=[...here].slice(0,60).map(identity).filter(Boolean).map(p=>({...p,playing:!!get("SELECT 1 FROM game_rooms WHERE status='playing' AND (hostId=? OR guestId=?)",p.id,p.id)})).sort((a,b)=>a.playing-b.playing||a.name.localeCompare(b.name)).slice(0,30);return json(res,200,{users:people});}
+    if(path==='/api/games/rooms/active'&&method==='GET'){
+      const game=url.searchParams.get('game');
+      if(!gameCatalog.some(g=>g.id===game))fail(400,'Choose an available game');
+      const candidates=all("SELECT * FROM game_rooms WHERE universityId=? AND (hostId=? OR guestId=?) AND game=? AND status IN ('waiting','playing') ORDER BY updatedAt DESC",u.universityId,u.id,u.id,game);
+      for(const candidate of candidates){const current=tickOne(candidate);if(['waiting','playing'].includes(current.status))return json(res,200,{room:view(current,u)});}
+      return json(res,200,{room:null});
+    }
+    // Recover forgotten rooms without needing their IDs or the lobby's limited list.
+    if(path==='/api/games/rooms/leave-active'&&method==='POST'){
+      const input=await body(req);u=campusAccount(req);validClient(input);limit(u);
+      const previous=all("SELECT * FROM game_rooms WHERE universityId=? AND (hostId=? OR guestId=?) AND status IN ('waiting','playing')",u.universityId,u.id,u.id);
+      for(const r of previous){
+        const state=JSON.parse(r.state),player=seat(r,u);let changes={};
+        state.endedBy=player;changes={ready1:0,ready2:0,rematch1:0,rematch2:0};
+        if(r.status==='waiting'){changes.status='cancelled';state.notice='A player left. This table is closed.';}
+        else{state.finished=true;state.winner=1-player;state.notice='A player left. This match has ended.';}
+        broadcast(persist(r,state,changes));
+      }
+      return json(res,200,{left:previous.length});
+    }
     if(path==='/api/games/rooms'){
       if(method==='GET')return json(res,200,{rooms:list(u)});
       if(method==='POST'){
@@ -55,11 +75,12 @@ export function createGames({blocks={guard(){},between(){return false;}},db,get,
       }else if(operation==='move'){
         if(r.status!=='playing')fail(409,'Both players must be ready first');state=moveGame(r.game,state,player,input.action);
       }else if(operation==='rematch'){
+        if(Number.isInteger(state.endedBy))fail(409,'A player left. Create a new table to play again.');
         if(r.status!=='finished'||!r.guestId)fail(409,'Finish this match first');changes[player===0?'rematch1':'rematch2']=1;
         if(player===0?r.rematch2:r.rematch1){state=newGame(r.game);changes={status:'waiting',ready1:0,ready2:0,rematch1:0,rematch2:0,matchNumber:r.matchNumber+1};}
       }else if(operation==='leave'){
         if(r.status==='waiting'){if(player===0)changes.status='cancelled';else changes={guestId:null,ready1:0,ready2:0};}
-        else if(r.status==='playing'){state.finished=true;state.winner=1-player;state.notice='Opponent resigned.';}else fail(409,'This room is already closed');
+        else if(r.status==='playing'){state.finished=true;state.winner=1-player;state.endedBy=player;state.notice='A player left. This match has ended.';changes={ready1:0,ready2:0,rematch1:0,rematch2:0};}else fail(409,'This room is already closed');
       }else if(operation==='invite'){
         if(player!==0||r.status!=='waiting'||r.guestId)fail(400,'Invite someone while your table is waiting for a second player');
         if(input.userId){const peer=get("SELECT id FROM users WHERE id=? AND universityId=? AND passwordHash<>'!disabled'",String(input.userId),u.universityId);if(!peer||peer.id===u.id)fail(400,'Invite another user from your university');blocks.guard(u.id,peer.id);changes.inviteeId=peer.id;}
