@@ -58,6 +58,15 @@ Signing in on the production site was outside the agent's permitted actions, so 
 
 The guide named a choice that no longer existed. The quick start now names the single open campus, and returns to the general wording if more campuses open (`ef546c6`).
 
+## The student's stated reasons
+
+These reasons come from the student's own messages in the working conversation of 6–8 November 2026, translated from Chinese; the student said their thinking for these decisions is recorded there. They are restated, not extended.
+
+- Entry 6: the student asked for an answer "that is true and does not deceive me", wanting verified problems rather than reassurance, and kept deleting their own test posters for themselves.
+- Entry 7: the student said they like the film and first described the site as internal and not public; after being shown that the site and repository are public, they chose the original puppy rather than pursuing the film's characters.
+- Entry 8: the student wanted the site tested as real use, specifically two people playing games and messaging each other, and every part of the site checked; they then asked for all nine findings to be fixed, and later for the wider translation gap to be closed.
+- Entry 9: the student noticed from the page itself that the copy described a choice that no longer existed.
+
 ## Attribution boundary
 
 The human selected these goals and corrections; the agent performed substantial implementation, test authoring, browser checks and this documentation drafting. Do not present the interpretation here as proof of the student's private thought process or an independent user study. Record disagreements, rejected approaches and actual next decisions when they occur, with real commit citations.
