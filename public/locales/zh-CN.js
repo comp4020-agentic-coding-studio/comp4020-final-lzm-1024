@@ -1,5 +1,6 @@
 // Static interface catalogue. User-authored content is not translated.
 export default {
+  "Hi! I was dreaming about campus.": "\u55e8\uff01\u6211\u521a\u521a\u68a6\u89c1\u6821\u56ed\u4e86\u3002",
   "Event details \u00b7 {0} to add": "\u6d3b\u52a8\u8be6\u60c5 \u00b7 \u8fd8\u5dee {0} \u9879",
   "ACCOUNT & SECURITY": "\u8d26\u53f7\u4e0e\u5b89\u5168",
   "Account & security": "\u8d26\u53f7\u4e0e\u5b89\u5168",

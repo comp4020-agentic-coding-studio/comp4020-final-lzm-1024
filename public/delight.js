@@ -1,8 +1,10 @@
 // Warm, optional motion for the campus wall: a friendly greeting, a waving
-// mascot, drifting petals, a little duck parade and small celebrations.
-// Everything here is decoration. It is hidden from assistive technology, never
-// blocks input, and stops for reduced-motion preferences, the Effects pause
-// control (shared with Games), background tabs and an off-screen hero.
+// mascot, a dreaming robot, drifting petals, a little duck parade and small
+// celebrations. Everything here is decoration. It is hidden from assistive
+// technology, never blocks input, and stops for reduced-motion preferences, the
+// Effects pause control (shared with Games), background tabs and an off-screen hero.
+import {fillRobots,robotScene} from './robot.js';
+import {loadStylesheet} from './ui-utils.js';
 const KEY='campuswall:arcade-effects';
 const PETALS=['♥','✿','✦','❀','★','●'],COLOURS=['#f2a7b8','#f3c75f','#9fd3ae','#9ccbec','#cfb2ee','#ffb98f'];
 const MAX_PARTICLES=40;
@@ -17,7 +19,7 @@ export const mascotSvg='<svg class="delight-mascot" viewBox="0 0 120 120" aria-h
 
 export function mountDelight(root){
   const hero=root.querySelector('.wall-hero');if(!hero)return {celebrate(){},destroy(){}};
-  const reduce=matchMedia('(prefers-reduced-motion: reduce)'),cleanups=[];let on=true,visible=true,paradeTimer=null,helloTimer=null;
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)'),cleanups=[];let on=true,visible=true,paradeTimer=null,helloTimer=null,robotTimer=null,destroyed=false;
   try{on=localStorage.getItem(KEY)!=='off';}catch{}
   const allowed=()=>on&&!reduce.matches&&!document.hidden,active=()=>allowed()&&visible;
   const listen=(target,type,handler,options)=>{target.addEventListener(type,handler,options);cleanups.push(()=>target.removeEventListener(type,handler,options));};
@@ -37,6 +39,20 @@ export function mountDelight(root){
   const mark=root.querySelector('.guide-banner-mark');
   if(mark){mark.classList.add('delight-mascot-holder');mark.innerHTML=`${mascotSvg}<span class="delight-bubble">Hi there!</span>`;
     listen(mark,'pointerdown',()=>{if(!allowed())return;mark.classList.remove('delight-hello');void mark.offsetWidth;mark.classList.add('delight-hello');clearTimeout(helloTimer);helloTimer=setTimeout(()=>mark.classList.remove('delight-hello'),1800);burst(mark,'♥');});}
+
+  // A little robot sleeps above the tagline, dreaming of the city at dusk, the
+  // seaside, friends and posters. A tap wakes it to wave hello; then it dozes off.
+  const robot=document.createElement('span');robot.className='wall-robot';robot.setAttribute('aria-hidden','true');
+  loadStylesheet('/robot.css').then(()=>{if(destroyed)return;robot.innerHTML=`${robotScene('dream',{loop:true})}<span class="robot-say">Hi! I was dreaming about campus.</span>`;(hero.querySelector('.wall-tagline')||hero).prepend(robot);}).catch(()=>{});
+  listen(robot,'pointerdown',()=>{
+    const scene=robot.querySelector('.robot-scene');if(!scene||!allowed())return;
+    scene.classList.remove('robot-sleeping');robot.classList.add('robot-awake');burst(robot.querySelector('.robot'),'♥',undefined,undefined,5);
+    clearTimeout(robotTimer);robotTimer=setTimeout(()=>{scene.classList.add('robot-sleeping');robot.classList.remove('robot-awake');},2800);
+  });
+  // The empty wall's placeholder becomes the same dreaming robot.
+  const results=root.querySelector('#results');
+  const dreamSlots=()=>{if(!destroyed&&results.querySelector('[data-robot]:not([data-robot-ready])'))fillRobots(results,{loop:true}).catch(()=>{});};
+  if(results&&'MutationObserver' in window){const observer=new MutationObserver(dreamSlots);observer.observe(results,{childList:true});cleanups.push(()=>observer.disconnect());dreamSlots();}
 
   // One shared pause control; hidden when the system asks for reduced motion.
   const toggle=document.createElement('button');toggle.type='button';toggle.className='delight-toggle';
@@ -64,7 +80,7 @@ export function mountDelight(root){
       p.addEventListener('animationend',()=>p.remove(),{once:true});document.body.append(p);setTimeout(()=>p.remove(),1500);
     }
   }
-  listen(hero,'pointerdown',event=>{if(event.target.closest('a,button,input,select,textarea'))return;burst(hero,null,event.clientX,event.clientY,6);});
+  listen(hero,'pointerdown',event=>{if(event.target.closest('a,button,input,select,textarea,.wall-robot'))return;burst(hero,null,event.clientX,event.clientY,6);});
 
   // Filters answer a tap with a small bounce; the poster count pops when it changes.
   const controls=root.querySelector('.wall-controls');
@@ -76,6 +92,6 @@ export function mountDelight(root){
   return {
     // Called only after the server has accepted a save.
     celebrate(button){burst(button,'♥',undefined,undefined,9);},
-    destroy(){clearTimeout(paradeTimer);clearTimeout(helloTimer);for(const cleanup of cleanups)cleanup();document.querySelectorAll('.delight-particle').forEach(p=>p.remove());root.classList.remove('delight-on','delight-still','delight-paused');}
+    destroy(){destroyed=true;clearTimeout(paradeTimer);clearTimeout(helloTimer);clearTimeout(robotTimer);robot.remove();for(const cleanup of cleanups)cleanup();document.querySelectorAll('.delight-particle').forEach(p=>p.remove());root.classList.remove('delight-on','delight-still','delight-paused');}
   };
 }

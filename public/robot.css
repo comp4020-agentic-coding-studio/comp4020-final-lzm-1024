@@ -1,0 +1,83 @@
+/* CampusWall's robot. Slow, soft and never flashing. On the wall (.robot-loop) it moves
+   only while the Effects control is on; elsewhere (.robot-once) it plays for under five
+   seconds and rests. Reduced-motion preferences keep it still everywhere. */
+.robot-scene{position:relative;display:inline-block;width:var(--robot-size,84px);aspect-ratio:100/112;line-height:0;vertical-align:bottom;pointer-events:none}
+.robot-scene .robot{display:block;width:100%;height:100%;overflow:visible}
+.robot-scene svg *{transform-box:fill-box}
+.robot-body{transform-origin:50% 100%}
+.robot-arm{transform-origin:50% 12%}
+.robot-bulb,.robot-heart,.robot-windows rect{transform-origin:center}
+.robot-sleeping .robot-eyes-open,.robot-scene:not(.robot-sleeping) .robot-eyes-shut{opacity:0}
+.robot-dream{position:absolute;right:68%;bottom:66%;width:112%;height:auto;overflow:visible;transform-origin:85% 95%;transition:opacity .3s ease,scale .3s ease}
+.robot-cloud{fill:#fffdf8;stroke:#c9cbc0;stroke-width:2}
+.robot-dream-frame{opacity:0}.robot-dream-frame:first-of-type{opacity:1}
+.robot-z,.robot-spark{position:absolute;opacity:0;font:italic 700 calc(var(--robot-size,84px)*.17)/1 system-ui,sans-serif;color:var(--accent-readable,var(--green,#335747))}
+.robot-z{right:4%;top:10%}
+.robot-spark{left:44%;top:32%;font-style:normal;color:#e86a6a}
+.robot-spark:nth-of-type(2){color:#d9a520}
+.robot-scene:not(.robot-sleeping) :is(.robot-dream,.robot-z){opacity:0;scale:.7}
+
+/* The wall: moves only while Effects are on, and rests when paused or off screen. */
+.delight-on .robot-loop .robot-body{animation:robot-breathe 3.6s ease-in-out infinite}
+.delight-on .robot-loop .robot-bulb{animation:robot-glow 3.6s ease-in-out infinite}
+.delight-on .robot-loop .robot-dream{animation:robot-float 4.8s ease-in-out infinite}
+.delight-on .robot-loop .robot-dream-frame{animation:robot-dream 16s ease-in-out infinite}
+.delight-on .robot-loop .robot-dream-frame:nth-of-type(2){animation-delay:-12s}
+.delight-on .robot-loop .robot-dream-frame:nth-of-type(3){animation-delay:-8s}
+.delight-on .robot-loop .robot-dream-frame:nth-of-type(4){animation-delay:-4s}
+.delight-on .robot-loop .robot-windows rect{animation:robot-twinkle 2.8s ease-in-out infinite}
+.delight-on .robot-loop .robot-windows rect:nth-child(3n+1){animation-delay:-.9s}
+.delight-on .robot-loop .robot-windows rect:nth-child(3n+2){animation-delay:-1.8s}
+.delight-on .robot-loop.robot-sleeping .robot-z{animation:robot-z 3.6s ease-out infinite}
+.delight-on .robot-loop .robot-z:nth-of-type(2){animation-delay:1.2s}
+.delight-on .robot-loop .robot-z:nth-of-type(3){animation-delay:2.4s}
+.delight-on .robot-loop:not(.robot-sleeping) .robot-body{animation:robot-hop .5s ease-out 2}
+.delight-on .robot-loop:not(.robot-sleeping) .robot-arm-right{animation:robot-wave-right 2.2s ease-in-out}
+.delight-paused .robot-loop *{animation-play-state:paused!important}
+
+/* Elsewhere: a short performance, then stillness. */
+@media(prefers-reduced-motion:no-preference){
+  .robot-once.robot-sleeping .robot-body{animation:robot-breathe 2.4s ease-in-out 2}
+  .robot-once.robot-sleeping .robot-z{animation:robot-z 1.8s ease-out 2}
+  .robot-once .robot-z:nth-of-type(2){animation-delay:.6s}.robot-once .robot-z:nth-of-type(3){animation-delay:1.2s}
+  .robot-once .robot-dream{animation:robot-pop .6s cubic-bezier(.2,1.3,.4,1) .3s both}
+  .robot-once[data-mood="cheer"] .robot-body{animation:robot-hop .6s ease-out .35s 3}
+  .robot-once[data-mood="cheer"] .robot-arm-right{animation:robot-wave-right 2.2s ease-in-out .35s}
+  .robot-once[data-mood="cheer"] .robot-arm-left{animation:robot-wave-left 2.2s ease-in-out .35s}
+  .robot-once[data-mood="cheer"] .robot-heart{animation:robot-beat .6s ease-in-out .35s 3}
+  .robot-once[data-mood="cheer"] .robot-spark{animation:robot-spark 1.4s ease-out .5s both}
+  .robot-once .robot-spark:nth-of-type(2){animation-delay:.9s;--dx:-36%}.robot-once .robot-spark:nth-of-type(3){animation-delay:1.3s;--dx:40%}
+}
+@media(prefers-reduced-motion:reduce){.robot-scene *{animation:none!important;transition:none!important}}
+
+/* The wall hero's robot: tap it and it wakes up to say hello. */
+.wall-robot{position:relative;display:flex;justify-content:flex-end;align-self:flex-end;width:max-content;margin:-14px 0 2px auto;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.wall-robot .robot-scene{--robot-size:72px}
+.wall-robot .robot-dream{width:122%;right:88%;bottom:30%}
+.robot-say{position:absolute;z-index:1;right:calc(100% + 8px);top:10px;width:max-content;max-width:220px;padding:6px 11px;border:1px solid var(--line);border-radius:14px 14px 4px 14px;background:var(--surface,#fff);color:var(--ink);font:600 13px/1.3 system-ui,sans-serif;white-space:normal;opacity:0;scale:.7;transform-origin:100% 100%;pointer-events:none;transition:opacity .25s ease,scale .3s cubic-bezier(.34,1.56,.64,1)}
+.robot-awake .robot-say{opacity:1;scale:1}
+.empty-art .robot-scene{--robot-size:92px;margin-top:52px}
+.empty .empty-art[data-robot-ready]{font-size:0}
+.celebration-icon[data-robot-ready]{background:none;width:auto;height:auto;font-size:0}
+.celebration-icon .robot-scene{--robot-size:96px}
+
+@media(max-width:760px){
+  .wall-robot{position:absolute;top:8px;right:0;margin:0}
+  .wall-robot .robot-scene{--robot-size:50px}
+  .wall-hero.delight-stage .delight-greeting{padding-right:60px}
+  .wall-robot .robot-dream{display:none}
+  .robot-say{top:auto;bottom:-6px;max-width:190px;font-size:12px}
+}
+
+@keyframes robot-breathe{0%,100%{transform:translateY(0) scale(1,1)}50%{transform:translateY(-1.5px) scale(1.012,1.03)}}
+@keyframes robot-glow{0%,100%{opacity:.7;transform:scale(1)}50%{opacity:1;transform:scale(1.15)}}
+@keyframes robot-float{0%,100%{translate:0 0}50%{translate:0 -3px}}
+@keyframes robot-dream{0%{opacity:0}4%,23%{opacity:1}27%,100%{opacity:0}}
+@keyframes robot-twinkle{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes robot-z{0%{opacity:0;transform:translate(0,0) scale(.7)}25%{opacity:1}100%{opacity:0;transform:translate(70%,-160%) scale(1.25)}}
+@keyframes robot-hop{0%,100%{transform:translateY(0)}40%{transform:translateY(-12%) scale(1,1.03)}70%{transform:translateY(0) scale(1.03,.97)}}
+@keyframes robot-wave-right{0%,100%{transform:rotate(0)}12%,37%,62%,87%{transform:rotate(-140deg)}25%,50%,75%{transform:rotate(-165deg)}}
+@keyframes robot-wave-left{0%,100%{transform:rotate(0)}12%,37%,62%,87%{transform:rotate(140deg)}25%,50%,75%{transform:rotate(165deg)}}
+@keyframes robot-beat{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
+@keyframes robot-spark{0%{opacity:0;transform:translate(0,0) scale(.6)}20%{opacity:1}100%{opacity:0;transform:translate(var(--dx,0),-260%) scale(1.2)}}
+@keyframes robot-pop{from{opacity:0;scale:.5}to{opacity:1;scale:1}}

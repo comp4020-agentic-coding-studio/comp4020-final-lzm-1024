@@ -61,7 +61,7 @@
   .wall-community-shortcuts{font-size:13px;gap:4px 16px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;white-space:nowrap}
   .category-tabs button,.date-tabs button{font-size:13px}
   /* Filters scroll sideways in one row each instead of wrapping into a tall block. */
-  .date-tabs{display:none}.date-select{display:block;width:auto;min-height:44px;font-size:14px;padding:8px 12px;flex:0 0 auto}.filter-row{flex-direction:row;align-items:center;gap:10px}.filter-row .search{flex:1;min-width:0}.wall-tagline>span:first-child{display:none}
+  .date-tabs{display:none}.date-select{display:block;width:auto;min-height:44px;font-size:14px;padding:8px 12px;flex:0 0 auto}.filter-row{flex-direction:row;align-items:center;gap:10px}.filter-row .search{flex:1;min-width:0}.wall-tagline>span:not(.wall-robot){display:none}
   .category-tabs{flex-wrap:nowrap;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:none;max-width:100%}
   .category-tabs::-webkit-scrollbar{display:none}
   .category-tabs button,.date-tabs button{flex:0 0 auto;white-space:nowrap}

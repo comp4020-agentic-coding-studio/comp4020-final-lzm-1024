@@ -36,13 +36,10 @@
 .delight-on .delight-jelly{animation:delight-jelly .45s ease-out}
 .delight-on .delight-pop{animation:delight-pop .4s ease-out}
 .delight-on .poster-card:active{scale:.985;transition:scale .15s ease}
-.delight-on .empty-art i{animation:delight-snooze 3s ease-in-out infinite}
-.delight-on .empty-art i:nth-child(2){animation-delay:1s}.delight-on .empty-art i:nth-child(3){animation-delay:2s}
 .empty-art{display:block;position:relative;width:max-content;margin:0 auto 8px;font-size:42px;line-height:1}
-.empty-art i{position:absolute;top:-6px;right:-14px;font:italic 700 14px/1 system-ui;color:var(--accent-readable,var(--green));opacity:0}
 
 /* Paused, off screen, background tab or reduced motion: everything rests. */
-.delight-paused :is(.delight-sky span,.delight-greeting-icon,.delight-eyes,.delight-leaf,.delight-mascot,.hero-star,.empty-art i,.delight-track,.delight-track span){animation-play-state:paused!important}
+.delight-paused :is(.delight-sky span,.delight-greeting-icon,.delight-eyes,.delight-leaf,.delight-mascot,.hero-star,.delight-track,.delight-track span){animation-play-state:paused!important}
 .delight-still :is(.delight-sky,.delight-parade){display:none}
 .delight-still .delight-particle{display:none}
 @media(prefers-reduced-motion:reduce){.delight-sky,.delight-parade,.delight-particle{display:none!important}.delight-on *,.delight-on *::before,.delight-on *::after{animation:none!important;transition:none!important}}
@@ -61,6 +58,5 @@
 @keyframes delight-burst{0%{opacity:1;transform:translate(0,0) scale(.4)}70%{opacity:1}100%{opacity:0;transform:translate(var(--dx),var(--dy)) scale(1.1)}}
 @keyframes delight-jelly{0%{scale:1}30%{scale:.92}60%{scale:1.06}100%{scale:1}}
 @keyframes delight-pop{0%{scale:1}40%{scale:1.3}100%{scale:1}}
-@keyframes delight-snooze{0%{opacity:0;transform:translate(0,0) scale(.7)}30%{opacity:1}100%{opacity:0;transform:translate(14px,-26px) scale(1.2)}}
 
 @media(max-width:760px){.delight-greeting{font-size:14px}.delight-greeting-icon{font-size:20px}.delight-toggle{min-height:44px;margin:8px 0 0}.delight-parade{font-size:18px}.delight-bubble{font-size:12px}}

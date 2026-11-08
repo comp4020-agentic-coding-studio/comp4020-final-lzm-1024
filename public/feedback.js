@@ -39,13 +39,15 @@ export function createFeedback({node,document:doc=node.ownerDocument,setTimer=se
  function closeHelp(){clearTimer(celebrationTimer);celebrationTimer=null;if(!dialog)return;const current=dialog;dialog=null;if(current.open)current.close();current.remove();}
  function celebrate(){
   closeHelp();dismiss();const previous=doc.activeElement,current=element('dialog','dialog feedback-dialog publish-celebration');dialog=current;current.setAttribute('aria-labelledby','published-heading');current.setAttribute('aria-describedby','published-description');
-  const icon=element('div','celebration-icon','🎉');icon.setAttribute('aria-hidden','true');const badge=element('span','feedback-help-badge','PUBLISHED SUCCESSFULLY'),heading=element('h2','','Congratulations!');heading.id='published-heading';
+  const icon=element('div','celebration-icon','🎉');icon.setAttribute('aria-hidden','true');icon.dataset.robot='cheer';const badge=element('span','feedback-help-badge','PUBLISHED SUCCESSFULLY'),heading=element('h2','','Congratulations!');heading.id='published-heading';
   const message=element('p','celebration-message','Your poster is live!');message.id='published-description';const copy=element('p','feedback-description','Your event is now on your campus wall. Let your friends know!'),button=element('button','primary','View my poster');button.type='button';button.autofocus=true;
   const close=element('button','feedback-dismiss celebration-dismiss','×');close.type='button';close.setAttribute('aria-label','Close celebration');
   const finish=()=>{closeHelp();if(previous?.isConnected)previous.focus();};button.onclick=close.onclick=finish;current.addEventListener('keydown',event=>event.stopPropagation());current.addEventListener('cancel',event=>{event.preventDefault();finish();});current.addEventListener('close',()=>{if(dialog===current){clearTimer(celebrationTimer);celebrationTimer=null;dialog=null;}current.remove();});
   current.append(close,icon,badge,heading,message,copy,button);
   if(!doc.defaultView?.matchMedia?.('(prefers-reduced-motion: reduce)').matches){const confetti=element('div','publish-confetti');confetti.setAttribute('aria-hidden','true');for(let i=0;i<28;i++){const piece=element('i','');piece.style.setProperty('--x',`${(i*37)%100}%`);piece.style.setProperty('--sway',`${(i%2?1:-1)*(30+(i*11)%80)}px`);piece.style.setProperty('--delay',`${(i%7)*50}ms`);piece.style.setProperty('--colour',['#e9bc59','#60bea2','#b4a1ed','#ed92ac','#79bce8'][i%5]);confetti.append(piece);}current.append(confetti);celebrationTimer=setTimer(()=>{confetti.remove();if(dialog===current)celebrationTimer=null;},3100);}
   doc.body.append(current);current.showModal();
+  // The robot replaces the 🎉 once its drawing and styles load; the emoji stays if they cannot.
+  import('./robot.js').then(robot=>robot.fillRobots(current)).catch(()=>{});
  }
  function help(detail,onAction){
   closeHelp();const previous=doc.activeElement,current=element('dialog','dialog feedback-dialog');dialog=current;current.setAttribute('role','alertdialog');current.setAttribute('aria-labelledby','feedback-heading');current.setAttribute('aria-describedby','feedback-description');
