@@ -1,5 +1,7 @@
 // Static interface catalogue. User-authored content is not translated.
 export default {
+  "CampusWall can\u2019t be reached right now. Check your connection, then try again.": "Ahora mismo no se puede conectar con CampusWall. Revisa tu conexi\u00f3n y vuelve a intentarlo.",
+  "Try again": "Reintentar",
   "Hi! We were dreaming about campus.": "\u00a1Hola! Est\u00e1bamos so\u00f1ando con el campus.",
   "Event details \u00b7 {0} to add": "Detalles del evento \u00b7 faltan {0}",
   "ACCOUNT & SECURITY": "CUENTA Y SEGURIDAD",

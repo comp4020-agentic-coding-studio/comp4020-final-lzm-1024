@@ -1,5 +1,7 @@
 // Static interface catalogue. User-authored content is not translated.
 export default {
+  "CampusWall can\u2019t be reached right now. Check your connection, then try again.": "\u4eca\u306f CampusWall \u306b\u63a5\u7d9a\u3067\u304d\u307e\u305b\u3093\u3002\u63a5\u7d9a\u3092\u78ba\u8a8d\u3057\u3066\u304b\u3089\u3001\u3082\u3046\u4e00\u5ea6\u304a\u8a66\u3057\u304f\u3060\u3055\u3044\u3002",
+  "Try again": "\u3082\u3046\u4e00\u5ea6\u8a66\u3059",
   "Hi! We were dreaming about campus.": "\u3084\u3042\uff01\u3075\u305f\u308a\u3067\u30ad\u30e3\u30f3\u30d1\u30b9\u306e\u5922\u3092\u898b\u3066\u305f\u3088\u3002",
   "Event details \u00b7 {0} to add": "\u30a4\u30d9\u30f3\u30c8\u8a73\u7d30 \u00b7 \u3042\u3068 {0} \u9805\u76ee",
   "ACCOUNT & SECURITY": "\u30a2\u30ab\u30a6\u30f3\u30c8\u3068\u30bb\u30ad\u30e5\u30ea\u30c6\u30a3",

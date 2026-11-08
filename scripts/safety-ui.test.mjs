@@ -45,6 +45,17 @@ test('an empty upcoming wall invites a real event and links the university calen
   assert.match(read('campus.mjs'),/anu: \{.*eventsUrl:'https:\/\/www\.anu\.edu\.au\/events'/);
 });
 
+test('a lost connection is explained in words with a retry, and the guide link is a real button',async()=>{
+  // Found in the browser: with the server unreachable the wall printed the browser's raw "Failed to fetch".
+  assert.ok(app.includes("catch(error){if(error.name==='AbortError')throw error;const offline=new Error('CampusWall can’t be reached right now. Check your connection, then try again.');offline.network=true;throw offline;}"));
+  assert.ok(app.includes('const value=await response.json().catch(()=>null);if(!response.ok||!value)'),'a proxy error page is not shown as a JSON parse error');
+  assert.ok(app.includes('<div class="load-error" role="alert"><p class="error">${esc(error.message)}</p><button type="button" data-retry>Try again</button></div>`;$(\'[data-retry]\').onclick=load;'));
+  assert.ok(app.includes("window.addEventListener('online',load);")&&app.includes("window.removeEventListener('online',load);"),'reconnecting reloads the wall, and leaving the wall stops listening');
+  assert.ok(app.includes('const guideLink=\'<a href="/guide" data-nav class="button primary wall-guide-link">Getting started ↗</a>\';'));
+  assert.match(read('public/styles.css'),/\.wall-tagline \.wall-guide-link\{display:inline-flex;min-height:44px;/);
+  for(const language of ['zh-CN','es','fr','ja']){const catalogue=(await import(`../public/locales/${language}.js`)).default;for(const label of ['CampusWall can’t be reached right now. Check your connection, then try again.','Try again'])assert.ok(catalogue[label],`${language}: ${label}`);}
+});
+
 test('a failed call explains the missing relay; the phone editor toolbar is an even grid',async()=>{
   assert.ok(voice.includes("const config=await request('');relayAvailable=!!config.relayAvailable;"));
   assert.ok(voice.includes('if(!relayAvailable&&noRelay[status])status=noRelay[status];'));
