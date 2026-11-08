@@ -7,7 +7,7 @@ const drafts=new Map();
 const timeText=value=>new Date(value).toLocaleString(dateLocale(),{timeZone:'Australia/Sydney',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'});
 
 export function mountMessages(root,{user,api,navigate,onAuthExpired,conversationId}){
-  let active=true,connected=false,conversations=new Map(),messages=[],peer=null,loaded=false,hasMore=false,sending=false,searchTimer,searchVersion=0,inboxRevision=0,loading=false,opening=false,readThrough=0,newCount=0;
+  let blockedPeer=false,active=true,connected=false,conversations=new Map(),messages=[],peer=null,loaded=false,hasMore=false,sending=false,searchTimer,searchVersion=0,inboxRevision=0,loading=false,opening=false,readThrough=0,newCount=0;
   let destroyEmoji,fileTransfer;
   const key=`${user.id}:${conversationId||''}`,state=drafts.get(key)||{body:'',clientId:null};drafts.set(key,state);
   root.innerHTML=`<section class="messages-page"><div class="messages-toolbar"><div><span class="eyebrow">A CONVERSATION OF YOUR OWN</span><h1>Messages<span>↗</span></h1><p>Your username: <strong>@${esc(user.username)}</strong></p></div><span class="dm-connection" role="status">Connecting…</span></div><div class="messages-layout" data-open="${!!conversationId}"><aside class="messages-sidebar"><label class="dm-search-label">Find someone<input type="search" class="dm-search" maxlength="50" aria-label="Search usernames" placeholder="Name or @username" autocomplete="off"></label><p class="dm-search-hint">Enter at least 2 characters.</p><div class="dm-search-results" aria-live="polite"></div><div class="dm-list-heading"><h2>Conversations</h2><button type="button" class="dm-refresh" aria-label="Refresh conversations">↻</button></div><div class="dm-conversations"><p class="dm-empty">Loading conversations…</p></div></aside><section class="dm-room" aria-label="Private conversation"><div class="dm-room-content"><div class="dm-welcome"><span aria-hidden="true">✳</span><h2>A little hello goes a long way.</h2><p>Search for someone to start a private conversation.<br>Messages are visible only to the two of you.</p></div></div></section></div><p class="dm-page-error" role="alert"></p></section>`;
@@ -37,7 +37,7 @@ export function mountMessages(root,{user,api,navigate,onAuthExpired,conversation
   };
   const log=()=>root.querySelector('.dm-log');
   const atBottom=()=>!log()||log().scrollHeight-log().scrollTop-log().clientHeight<45;
-  function updateButton(){fileTransfer?.update();const button=root.querySelector('.dm-send');if(button)button.disabled=!loaded||!connected||sending||!root.querySelector('.dm-input').value.trim();}
+  function updateButton(){fileTransfer?.update();const button=root.querySelector('.dm-send');if(button)button.disabled=!loaded||!connected||sending||blockedPeer||!root.querySelector('.dm-input').value.trim();}
   function markRead(){
     if(!active||!loaded||document.hidden||!document.hasFocus()||!atBottom()||!messages.length)return;
     const through=messages.at(-1).seq;if(through<=readThrough)return;const previous=readThrough;readThrough=through;
@@ -63,13 +63,15 @@ export function mountMessages(root,{user,api,navigate,onAuthExpired,conversation
     }catch(error){roomError(error);}finally{loading=false;}
   }
   function mountRoom(c){
-    peer=c.peer;remember(c);
+    peer=c.peer;blockedPeer=false;remember(c);
     room.innerHTML=`<div class="dm-room-heading"><a class="dm-back" href="/messages" data-nav aria-label="Back to conversations">←</a>${avatar(peer,"dm-avatar")}<div><h2 data-i18n-ignore>${esc(peer.name)}</h2><span>@${esc(peer.username)} · Private conversation</span></div></div><button type="button" class="dm-older" hidden>Load earlier messages ↑</button><div class="dm-log" role="log" aria-label="Private messages" aria-live="polite" aria-relevant="additions" tabindex="0"><p class="dm-empty">Loading messages…</p></div><button type="button" class="dm-new" hidden>New messages ↓</button><form class="dm-compose"><label class="sr-only" for="dm-message">Private message</label><textarea id="dm-message" class="dm-input" rows="2" maxlength="2000" placeholder="Message ${esc(peer.name)}…">${esc(state.body)}</textarea><div><span class="dm-count">${state.body.length}/2000</span><button type="submit" class="primary dm-send" disabled>Send ↗</button></div><p>Enter to send · Shift + Enter for a new line</p><p class="dm-send-error" role="alert"></p></form>`;
     root.querySelector('.dm-room-heading').insertAdjacentHTML('beforeend',`<button class="dm-call" type="button" aria-label="Voice call ${esc(peer.name)}"><span aria-hidden="true">☎</span> Voice call</button><button class="dm-call dm-video-call" type="button" aria-label="Video call ${esc(peer.name)}"><span aria-hidden="true">▣</span> Video call</button><a class="button dm-play" href="/games?invite=${encodeURIComponent(peer.id)}" data-nav>Play together ↗</a><button class="quiet dm-block" type="button">Block</button>`);
     // Block from the conversation itself; the other student is not told.
-    root.querySelector('.dm-block').onclick=async e=>{const button=e.currentTarget;if(!await confirmAction(blockPrompt))return;button.disabled=true;try{await api('/api/blocks/'+peer.id,'POST',{});if(!active)return;button.textContent='Blocked';const input=root.querySelector('.dm-input');if(input){input.disabled=true;input.placeholder='You blocked this student. Unblock them from their profile to message again.';}root.querySelector('.dm-compose [type=submit]')?.setAttribute('disabled','');}catch(error){if(active){button.disabled=false;roomError(error);}}};
-    root.querySelector('.dm-call').onclick=async e=>{e.currentTarget.disabled=true;try{await startVoiceCall(conversationId);}catch(error){roomError(error);}finally{if(active)root.querySelector('.dm-call').disabled=false;}};
-    root.querySelector('.dm-video-call').onclick=async e=>{e.currentTarget.disabled=true;try{await startVideoCall(conversationId);}catch(error){roomError(error);}finally{if(active)root.querySelector('.dm-video-call').disabled=false;}};
+    const drawBlocked=blocked=>{blockedPeer=blocked;const button=root.querySelector('.dm-block'),input=root.querySelector('.dm-input');if(!button)return;button.textContent=blocked?'Unblock':'Block';button.setAttribute('aria-pressed',String(blocked));root.querySelectorAll('.dm-call').forEach(call=>{call.disabled=blocked;});root.querySelector('.dm-play').hidden=blocked;if(input){input.disabled=blocked;input.placeholder=blocked?'You blocked this student. Unblock them to message again.':`Message ${peer.name}…`;}updateButton();};
+    root.querySelector('.dm-block').onclick=async e=>{const button=e.currentTarget,undo=blockedPeer;if(!undo&&!await confirmAction(blockPrompt))return;button.disabled=true;try{await api('/api/blocks/'+peer.id,undo?'DELETE':'POST',{});if(active)drawBlocked(!undo);}catch(error){if(active)roomError(error);}finally{if(active)button.disabled=false;}};
+    api('/api/blocks').then(data=>{if(active&&data.blocked.some(b=>b.id===peer.id))drawBlocked(true);}).catch(()=>{});
+    root.querySelector('.dm-call').onclick=async e=>{e.currentTarget.disabled=true;try{await startVoiceCall(conversationId);}catch(error){roomError(error);}finally{if(active)root.querySelector('.dm-call').disabled=blockedPeer;}};
+    root.querySelector('.dm-video-call').onclick=async e=>{e.currentTarget.disabled=true;try{await startVideoCall(conversationId);}catch(error){roomError(error);}finally{if(active)root.querySelector('.dm-video-call').disabled=blockedPeer;}};
     root.querySelector('.dm-new').onclick=bottom;log().onscroll=()=>{if(atBottom())bottom();};
     root.querySelector('.dm-older').onclick=async()=>{
       const button=root.querySelector('.dm-older');button.disabled=true;
@@ -82,7 +84,7 @@ export function mountMessages(root,{user,api,navigate,onAuthExpired,conversation
       event.preventDefault();if(sending||!connected||!loaded||!input.value.trim())return;
       sending=true;input.disabled=true;updateButton();const text=input.value,clientId=state.clientId ||= crypto.randomUUID();root.querySelector('.dm-send-error').textContent='';
       try{const data=await request(`/api/messages/conversations/${conversationId}/messages`,'POST',{body:text,clientId});if(state.clientId===clientId){state.body='';state.clientId=null;}if(!active)return;remember(data.conversation);renderMessages([data.message]);input.value='';root.querySelector('.dm-count').textContent='0/2000';bottom();}
-      catch(error){roomError(error);}finally{sending=false;if(active){input.disabled=false;updateButton();}}
+      catch(error){roomError(error);}finally{sending=false;if(active){input.disabled=blockedPeer;updateButton();}}
     };
   }
   const visibility=()=>markRead();document.addEventListener('visibilitychange',visibility);window.addEventListener('focus',visibility);

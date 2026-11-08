@@ -1,5 +1,14 @@
 // Static interface catalogue. User-authored content is not translated.
 export default {
+  "Blocked students": "\u5df2\u5c4f\u853d\u7684\u540c\u5b66",
+  "You and a blocked student can\u2019t message, call, befriend or invite each other. They aren\u2019t told.": "\u4f60\u548c\u88ab\u5c4f\u853d\u7684\u540c\u5b66\u4e0d\u80fd\u4e92\u76f8\u53d1\u6d88\u606f\u3001\u901a\u8bdd\u3001\u52a0\u597d\u53cb\u6216\u9080\u8bf7\uff0c\u5bf9\u65b9\u4e0d\u4f1a\u6536\u5230\u901a\u77e5\u3002",
+  "You haven\u2019t blocked anyone.": "\u4f60\u8fd8\u6ca1\u6709\u5c4f\u853d\u4efb\u4f55\u4eba\u3002",
+  "Your blocked list couldn\u2019t be loaded. Try again in a moment.": "\u5c4f\u853d\u540d\u5355\u52a0\u8f7d\u5931\u8d25\uff0c\u8bf7\u7a0d\u540e\u518d\u8bd5\u3002",
+  "Friend requests stay within your campus. Friends can see when you\u2019re online. Anyone at your university can also see you while you\u2019re on the games pages.": "\u597d\u53cb\u8bf7\u6c42\u4ec5\u9650\u672c\u6821\u3002\u597d\u53cb\u53ef\u4ee5\u770b\u5230\u4f60\u662f\u5426\u5728\u7ebf\uff1b\u4f60\u5728\u6e38\u620f\u9875\u9762\u65f6\uff0c\u540c\u6821\u4efb\u4f55\u4eba\u4e5f\u80fd\u770b\u5230\u4f60\u3002",
+  "Back to table": "\u56de\u5230\u724c\u684c",
+  "While you\u2019re on the games pages, students at your university can see your name and invite you to a table.": "\u4f60\u5728\u6e38\u620f\u9875\u9762\u65f6\uff0c\u540c\u6821\u540c\u5b66\u53ef\u4ee5\u770b\u5230\u4f60\u7684\u540d\u5b57\uff0c\u5e76\u9080\u8bf7\u4f60\u52a0\u5165\u724c\u684c\u3002",
+  "You blocked this student. Unblock them to message again.": "\u4f60\u5df2\u5c4f\u853d\u8fd9\u4f4d\u540c\u5b66\u3002\u89e3\u9664\u5c4f\u853d\u540e\u624d\u80fd\u7ee7\u7eed\u53d1\u6d88\u606f\u3002",
+  "This message already looks like English, so there\u2019s nothing to translate.": "\u8fd9\u6761\u6d88\u606f\u770b\u8d77\u6765\u5df2\u7ecf\u662f\u82f1\u6587\u4e86\uff0c\u4e0d\u9700\u8981\u7ffb\u8bd1\u3002",
   "You left. This match has ended.": "\u4f60\u5df2\u9000\u51fa\uff0c\u672c\u5c40\u5df2\u7ed3\u675f\u3002",
   "Your opponent left. This match has ended.": "\u5bf9\u65b9\u5df2\u9000\u51fa\uff0c\u672c\u5c40\u5df2\u7ed3\u675f\u3002",
   "A player left. This table is closed.": "\u6709\u73a9\u5bb6\u9000\u51fa\uff0c\u623f\u95f4\u5df2\u5173\u95ed\u3002",
@@ -1909,7 +1918,6 @@ export default {
   "Accept friend request": "\u63a5\u53d7\u597d\u53cb\u8bf7\u6c42",
   "A space for your people.": "\u5c5e\u4e8e\u4f19\u4f34\u7684\u7a7a\u95f4\u3002",
   "Create a group with friends. Event and team conversations appear here automatically.": "\u4e0e\u597d\u53cb\u521b\u5efa\u7fa4\u7ec4\uff0c\u6d3b\u52a8\u548c\u961f\u4f0d\u4f1a\u8bdd\u4f1a\u81ea\u52a8\u663e\u793a\u5728\u8fd9\u91cc\u3002",
-  "Friend requests stay within your campus. Only friends see your online status.": "\u597d\u53cb\u8bf7\u6c42\u4ec5\u9650\u672c\u6821\uff0c\u53ea\u6709\u597d\u53cb\u53ef\u67e5\u770b\u4f60\u7684\u5728\u7ebf\u72b6\u6001\u3002",
   "Follow a club to join its student discussion and hear about linked activities.": "\u5173\u6ce8\u793e\u56e2\uff0c\u53c2\u4e0e\u5b66\u751f\u8ba8\u8bba\u5e76\u4e86\u89e3\u5173\u8054\u6d3b\u52a8\u3002",
   "Please wait a minute before sending more messages": "\u8bf7\u7a0d\u7b49\u4e00\u5206\u949f\u518d\u53d1\u9001\u6d88\u606f",
   "Choose a source language.": "\u8bf7\u9009\u62e9\u539f\u6587\u8bed\u8a00\u3002",
@@ -2344,5 +2352,4 @@ export default {
   "Add the missing event details": "\u8865\u5168\u6d3b\u52a8\u4fe1\u606f",
   "Your poster needs a few more details before it can appear on the wall.": "\u4f60\u7684\u6d77\u62a5\u8fd8\u7f3a\u5c11\u4e00\u4e9b\u4fe1\u606f\uff0c\u8865\u5168\u540e\u624d\u80fd\u53d1\u5e03\u5230\u6d77\u62a5\u5899\u3002",
   "Blocked": "\u5df2\u62c9\u9ed1",
-  "You blocked this student. Unblock them from their profile to message again.": "\u4f60\u5df2\u62c9\u9ed1\u8fd9\u4f4d\u540c\u5b66\u3002\u5982\u9700\u518d\u6b21\u53d1\u6d88\u606f\uff0c\u8bf7\u5148\u5728\u5bf9\u65b9\u4e3b\u9875\u53d6\u6d88\u62c9\u9ed1\u3002"
 };

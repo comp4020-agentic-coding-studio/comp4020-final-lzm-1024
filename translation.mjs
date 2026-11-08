@@ -26,6 +26,7 @@ export function createTranslator({fetchImpl=fetch,now=Date.now}={}){
           const chunks=[];let size=0;
           try{while(true){const {done,value}=await reader.read();if(done)break;size+=value.byteLength;if(size>128000){await reader.cancel();throw Error('Invalid result');}chunks.push(value);}}finally{reader.releaseLock();}
           const data=JSON.parse(Buffer.concat(chunks.map(chunk=>Buffer.from(chunk))).toString('utf8'));
+          if(/distinct languages/i.test(String(data.responseData?.translatedText)))throw Object.assign(Error('This message already looks like English, so there’s nothing to translate.'),{status:422,reportable:true});
           if(Number(data.responseStatus)!==200||data.quotaFinished||typeof data.responseData?.translatedText!=='string')throw Error('Unavailable');
           output[index]=data.responseData.translatedText;
           if(output[index].length>6000)throw Error('Invalid result');
@@ -34,7 +35,7 @@ export function createTranslator({fetchImpl=fetch,now=Date.now}={}){
       const translatedText=output.join(' ');
       if(translatedText.length>12000)throw Error('Invalid result');
       return {translatedText,provider:'MyMemory',target:'en'};
-    }catch{throw Object.assign(Error('Translation is temporarily unavailable. Please try again later.'),{status:503});}
+    }catch(error){if(error.reportable)throw error;throw Object.assign(Error('Translation is temporarily unavailable. Please try again later.'),{status:503});}
     finally{controller.abort();concurrent--;}
   };
 }

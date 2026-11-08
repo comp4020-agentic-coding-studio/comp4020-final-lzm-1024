@@ -119,7 +119,7 @@ function update(p,u,input) {
   if(p.version-input.clientVersion>100)fail(409,'This draft changed elsewhere; reconnect to load the latest version');
   const value=validate(input.field,input.value),content=JSON.parse(p.content);content[input.field]=value;
   if(Object.hasOwn(designFields,input.field))content.designVersion='1';
-  if(content.canvas){const bindings={title:['base-title',value],subtitle:['base-subtitle',value],location:['base-where',value],date:['base-when',[value,content.time].filter(Boolean).join(' · ')],time:['base-when',[content.date,value].filter(Boolean).join(' · ')]};const binding=bindings[input.field];if(binding){const object=content.canvas.objects.find(o=>o.id===binding[0]);if(object)object.text=binding[1];}}
+  if(content.canvas){const bindings={category:['base-campus',`${p.universityId.toUpperCase()} / ${String(value).toUpperCase()}`],title:['base-title',value],subtitle:['base-subtitle',value],location:['base-where',value],date:['base-when',[value,content.time].filter(Boolean).join(' · ')],time:['base-when',[content.date,value].filter(Boolean).join(' · ')]};const binding=bindings[input.field];if(binding){const object=content.canvas.objects.find(o=>o.id===binding[0]);if(object)object.text=binding[1];}}
   if(input.field==='heroImageUrl'&&value.startsWith('/media/')&&!get('SELECT 1 FROM uploads WHERE id=? AND posterId=?',value.slice(7),p.id))fail(400,'This image does not belong to this poster');
   run('UPDATE posters SET content=?,version=version+1,updatedAt=? WHERE id=?',JSON.stringify(content),now(),p.id);
   const result=view(record(p.id),true);broadcast(p.id,'poster:updated',{poster:result,field:input.field,updatedBy:u.id,requestId:input.requestId});return result;

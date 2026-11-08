@@ -83,3 +83,5 @@
 @media (prefers-reduced-motion:reduce){.nav-toggle-icon,.nav-toggle-icon::before,.nav-toggle-icon::after{transition:none}}
 /* Phone editor toolbar: an even two-column grid instead of ragged wrapping; Publish spans the width. */
 @media (max-width:760px){.whiteboard-mode .editor-top .editor-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;width:100%}.whiteboard-mode .editor-actions #save-status{grid-column:1/-1;margin:0}.whiteboard-mode .editor-actions>button,.whiteboard-mode .editor-actions>.category{width:100%;min-height:44px;justify-content:center}.whiteboard-mode .editor-actions #publish{grid-column:1/-1}}
+
+.blocked-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid var(--line)}.blocked-row:last-child{border-bottom:0}.blocked-row a{min-width:0;overflow-wrap:anywhere}.blocked-row small{color:var(--muted)}

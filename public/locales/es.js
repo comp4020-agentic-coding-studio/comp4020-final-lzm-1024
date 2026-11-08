@@ -1,5 +1,14 @@
 // Static interface catalogue. User-authored content is not translated.
 export default {
+  "Blocked students": "Estudiantes bloqueados",
+  "You and a blocked student can\u2019t message, call, befriend or invite each other. They aren\u2019t told.": "T\u00fa y un estudiante bloqueado no pod\u00e9is enviaros mensajes, llamaros, a\u00f1adiros como amigos ni invitaros. No se le avisa.",
+  "You haven\u2019t blocked anyone.": "No has bloqueado a nadie.",
+  "Your blocked list couldn\u2019t be loaded. Try again in a moment.": "No se pudo cargar tu lista de bloqueados. Int\u00e9ntalo de nuevo en un momento.",
+  "Friend requests stay within your campus. Friends can see when you\u2019re online. Anyone at your university can also see you while you\u2019re on the games pages.": "Las solicitudes son del mismo campus. Tus amigos ven si est\u00e1s conectado. Cualquier persona de tu universidad tambi\u00e9n puede verte mientras est\u00e1s en las p\u00e1ginas de juegos.",
+  "Back to table": "Volver a la mesa",
+  "While you\u2019re on the games pages, students at your university can see your name and invite you to a table.": "Mientras est\u00e1s en las p\u00e1ginas de juegos, los estudiantes de tu universidad pueden ver tu nombre e invitarte a una mesa.",
+  "You blocked this student. Unblock them to message again.": "Has bloqueado a este estudiante. Desbloqu\u00e9alo para volver a escribirle.",
+  "This message already looks like English, so there\u2019s nothing to translate.": "Este mensaje ya parece estar en ingl\u00e9s, as\u00ed que no hay nada que traducir.",
   "You left. This match has ended.": "Has salido. La partida ha terminado.",
   "Your opponent left. This match has ended.": "Tu oponente ha salido. La partida ha terminado.",
   "A player left. This table is closed.": "Un jugador ha salido. Esta mesa est\u00e1 cerrada.",
@@ -1909,7 +1918,6 @@ export default {
   "Accept friend request": "Aceptar solicitud de amistad",
   "A space for your people.": "Un espacio para tu gente.",
   "Create a group with friends. Event and team conversations appear here automatically.": "Crea un grupo con amigos. Los chats de eventos y equipos aparecen aqu\u00ed.",
-  "Friend requests stay within your campus. Only friends see your online status.": "Las solicitudes son del mismo campus. Solo tus amigos ven si est\u00e1s conectado.",
   "Follow a club to join its student discussion and hear about linked activities.": "Sigue un club para conversar y conocer sus actividades.",
   "Please wait a minute before sending more messages": "Espera un minuto antes de enviar m\u00e1s mensajes",
   "Choose a source language.": "Elige el idioma de origen.",
@@ -2344,5 +2352,4 @@ export default {
   "Add the missing event details": "A\u00f1ade los datos que faltan del evento",
   "Your poster needs a few more details before it can appear on the wall.": "A tu cartel le faltan algunos datos antes de poder aparecer en el muro.",
   "Blocked": "Bloqueado",
-  "You blocked this student. Unblock them from their profile to message again.": "Has bloqueado a este estudiante. Desbloqu\u00e9alo desde su perfil para volver a escribirle."
 };

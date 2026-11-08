@@ -41,3 +41,5 @@
 .invite-person>span{display:grid;min-width:0}.invite-person strong{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.invite-person small{color:var(--muted);font-size:12px}.invite-person em{font-style:normal}
 .invite-person button{flex:none;min-height:40px;padding:8px 16px}
 .game-room-recovery{display:grid;gap:8px;margin-bottom:16px}.game-room-recovery p{margin:0;line-height:1.6}.game-leave-active{min-height:44px;width:100%;border:1px solid var(--line);background:var(--surface-soft);color:var(--accent-readable);border-radius:8px;padding:10px 16px}.game-recovery-status{font-size:13px}
+
+.game-presence-note{margin:-6px 0 14px}

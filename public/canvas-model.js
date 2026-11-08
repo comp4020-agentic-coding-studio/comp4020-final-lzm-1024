@@ -31,6 +31,18 @@ export function seedCanvas(p){
  add('base-where','text',{x:80,y:1120,width:720,height:50,text:p.location||'Your campus, your place',fontSize:21,fill:p.heroImageUrl&&d.layout==='cover'?'#ffffff':fg});
  return {width:900,height:1200,background:bg,objects,receipts:[]};
 }
+// The operation that reverses op. Its guard compares against the values stored after op,
+// which can differ from what was sent (coordinates are rounded), so only a real change by
+// someone else counts as a conflict.
+export function canvasInverse(op,before,after){
+ const was=before.objects.find(o=>o.id===op.id),now=after.objects.find(o=>o.id===(op.id||op.object?.id));
+ if(op.action==='add')return {action:'delete',id:op.object.id,expected:now};
+ if(op.action==='delete')return {action:'add',object:was};
+ if(op.action==='patch'){const keys=Object.keys(op.props);return {action:'patch',id:op.id,props:Object.fromEntries(keys.map(k=>[k,was[k]])),expected:Object.fromEntries(keys.map(k=>[k,now[k]]))};}
+ if(op.action==='reorder')return {action:'reorder',id:op.id,position:'at',index:before.objects.findIndex(o=>o.id===op.id),expectedIndex:after.objects.findIndex(o=>o.id===op.id)};
+ if(op.action==='settings'){const keys=Object.keys(op.props);return {action:'settings',props:Object.fromEntries(keys.map(k=>[k,before[k]])),expected:Object.fromEntries(keys.map(k=>[k,after[k]]))};}
+ return null;
+}
 export function applyCanvasOperation(canvas,input){
  const c=structuredClone(canvas);if(!input||typeof input!=='object')error('Invalid canvas operation');const action=input.action;
  if(action==='settings'){const props=input.props;if(!props||Object.keys(props).some(k=>!['width','height','background'].includes(k)))error('Invalid canvas settings');for(const [k,v] of Object.entries(props)){if(k==='background'){if(!/^#[a-f0-9]{6}$/i.test(v))error('Choose a background colour');}else if(!Number.isInteger(v)||v<320||v>8000)error('Canvas size must be between 320 and 8000');if(input.expected&&JSON.stringify(c[k])!==JSON.stringify(input.expected[k]))error('A friend changed this setting; their edit has been kept',409);c[k]=v;}return c;}
@@ -44,6 +56,16 @@ export function applyCanvasOperation(canvas,input){
 }
 const fonts={serif:'Georgia,serif',sans:'Arial,sans-serif',display:'Arial Black,Arial,sans-serif',mono:'Courier New,monospace'};
 function textLines(o){const capacity=Math.max(1,o.width/o.fontSize),lines=[],weight=ch=>ch.codePointAt(0)>=0x2e80?1:/\s/.test(ch)?.32:.56;for(const paragraph of o.text.split('\n')){let line='',used=0;for(const word of paragraph.split(/(\s+)/)){const chars=Array.from(word),size=chars.reduce((n,ch)=>n+weight(ch),0);if(used+size>capacity&&line&&size<=capacity){lines.push(line.trimEnd());line='';used=0;}for(const ch of chars){const width=weight(ch);if(used+width>capacity&&line){lines.push(line.trimEnd());line='';used=0;}if(!line&&/\s/.test(ch))continue;line+=ch;used+=width;}}lines.push(line);}return lines.slice(0,80);}
+// Dates are stored as YYYY-MM-DD; artwork shows them the way people read them.
+const artMonths=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const artDate=text=>text.replace(/^(\d{4})-(\d{2})-(\d{2})(?=$| )/,(whole,year,month,day)=>artMonths[Number(month)-1]?`${Number(day)} ${artMonths[Number(month)-1]} ${year}`:whole);
+// What the artwork shows. Untouched starter text stays visible only inside the editor, so it
+// is never part of a published poster or an export, and the stored board is left unchanged.
+export function canvasDisplayText(o,interactive=false){
+ const text=String(o.text??'');
+ if(!interactive&&placeholderTexts.includes(text.trim()))return '';
+ return o.id==='base-when'?artDate(text):text;
+}
 export function canvasObjectSvg(o,interactive=false){
  const w=o.width,h=o.height,stroke=`stroke="${o.stroke}" stroke-width="${o.strokeWidth}"`,fill=`fill="${o.fill}"`;let inside='';
  if(o.type==='rect'||o.type==='sticky')inside=`<rect width="${w}" height="${h}" rx="${o.type==='sticky'?8:3}" ${fill} ${stroke}/>`;
@@ -51,7 +73,7 @@ export function canvasObjectSvg(o,interactive=false){
  if(o.type==='line'||o.type==='arrow'){inside=`<path d="M 0 0 L ${w} ${h}" fill="none" ${stroke}/>`;if(o.type==='arrow')inside+=`<path d="M ${w-25} ${h} L ${w} ${h} L ${w} ${h-25}" fill="none" ${stroke}/>`;}
  if(o.type==='image'&&o.src)inside=`<image href="${esc(o.src)}" width="${w}" height="${h}" preserveAspectRatio="${o.fit==='cover'?'xMidYMid slice':'xMidYMid meet'}"/>`;
  if(o.type==='path')inside=`<path d="${o.points.map((p,i)=>`${i?'L':'M'} ${p[0]} ${p[1]}`).join(' ')}" fill="none" ${stroke} stroke-linecap="round" stroke-linejoin="round" transform="scale(${w/Math.max(1,...o.points.map(p=>p[0]))} ${h/Math.max(1,...o.points.map(p=>p[1]))})" vector-effect="non-scaling-stroke"/>`;
- if(o.type==='text'||o.type==='sticky'){const inset=o.type==='sticky'?18:0;inside+=`<text x="${o.align==='center'?w/2:o.align==='right'?w-inset:inset}" y="${o.fontSize+inset}" fill="${o.type==='sticky'?o.stroke:o.fill}" font-size="${o.fontSize}" font-family="${fonts[o.fontFamily]}" font-weight="${o.fontFamily==='display'?900:500}" text-anchor="${o.align==='center'?'middle':o.align==='right'?'end':'start'}">${textLines(o).map((line,i)=>`<tspan x="${o.align==='center'?w/2:o.align==='right'?w-inset:inset}" dy="${i?o.fontSize*1.22:0}">${esc(line)}</tspan>`).join('')}</text>`;}
+ if(o.type==='text'||o.type==='sticky'){const inset=o.type==='sticky'?18:0;inside+=`<text x="${o.align==='center'?w/2:o.align==='right'?w-inset:inset}" y="${o.fontSize+inset}" fill="${o.type==='sticky'?o.stroke:o.fill}" font-size="${o.fontSize}" font-family="${fonts[o.fontFamily]}" font-weight="${o.fontFamily==='display'?900:500}" text-anchor="${o.align==='center'?'middle':o.align==='right'?'end':'start'}">${textLines({...o,text:canvasDisplayText(o,interactive)}).map((line,i)=>`<tspan x="${o.align==='center'?w/2:o.align==='right'?w-inset:inset}" dy="${i?o.fontSize*1.22:0}">${esc(line)}</tspan>`).join('')}</text>`;}
  return `<g ${interactive?`data-canvas-item="${o.id}" tabindex="0" role="button" aria-label="${esc(o.type+' '+(o.text||'object').slice(0,60))}"`:''} transform="translate(${o.x} ${o.y}) rotate(${o.rotation} ${w/2} ${h/2})" opacity="${o.opacity}">${interactive?`<rect class="canvas-hit" width="${w}" height="${h}" fill="transparent"/>`:''}${inside}</g>`;
 }
 export function canvasSvg(c,interactive=false){return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${c.width} ${c.height}" width="${c.width}" height="${c.height}" class="canvas-document" role="img" aria-label="Shared canvas design"><rect width="100%" height="100%" fill="${c.background}"/>${c.objects.map(o=>canvasObjectSvg(o,interactive)).join('')}</svg>`;}

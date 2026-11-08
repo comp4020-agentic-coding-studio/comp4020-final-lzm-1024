@@ -7,6 +7,7 @@ export function mountAccount(root,{user,api,toast,onSignedOut}){
   root.innerHTML=`<section class="account-page"><span class="eyebrow">ACCOUNT &amp; SECURITY</span><h1>Keep your account yours.</h1><p class="muted">Signed in as <strong data-i18n-ignore>${esc(user.name)}</strong> <span data-i18n-ignore>@${esc(user.username||'')}</span> · <span data-i18n-ignore>${esc(user.email||'')}</span></p>
   <form class="panel form" id="password-form"><h2>Change password</h2><label>Current password<input name="currentPassword" type="password" autocomplete="current-password" maxlength="128" required></label><label>New password<input name="newPassword" type="password" autocomplete="new-password" minlength="8" maxlength="128" required></label><label>Repeat new password<input name="repeat" type="password" autocomplete="new-password" minlength="8" maxlength="128" required></label><p class="muted small">Other devices are signed out when your password changes.</p><p class="error" role="alert"></p><button class="primary">Change password</button></form>
   <form class="panel form" id="recovery-form"><h2>Recovery code</h2><p class="muted" id="recovery-status">Checking…</p><p class="muted small">CampusWall doesn’t send email. If you forget your password, a recovery code lets you choose a new one. Each code works once, and creating a new code replaces the old one.</p><label>Current password<input name="password" type="password" autocomplete="current-password" maxlength="128" required></label><p class="error" role="alert"></p><button class="primary">Create a recovery code</button><div id="recovery-code" aria-live="polite"></div></form>
+  <section class="panel form blocked-panel"><h2>Blocked students</h2><p class="muted small">You and a blocked student can’t message, call, befriend or invite each other. They aren’t told.</p><div id="blocked-list"><p class="muted">Checking…</p></div></section>
   <form class="panel form danger-zone" id="delete-form"><h2>Delete your account</h2><p>This permanently deletes your posters, comments, campus chat and club posts, saved events, friends, follows and notifications, and signs you out everywhere. Messages you sent in private or group conversations stay there for the other people, shown as “Deleted account”. This can’t be undone.</p><label>Current password<input name="password" type="password" autocomplete="current-password" maxlength="128" required></label><label>Type DELETE to confirm<input name="confirm" autocomplete="off" maxlength="10" required pattern="DELETE" placeholder="DELETE"></label><p class="error" role="alert"></p><button class="button-danger">Delete my account permanently</button></form></section>`;
   const form=id=>root.querySelector(id),error=(f,message)=>{f.querySelector('.error').textContent=message;};
   async function submit(f,work){const button=f.querySelector('button');button.disabled=true;error(f,'');try{await work();}catch(e){if(active)error(f,e.message);}finally{if(active)button.disabled=false;}}
@@ -16,7 +17,15 @@ export function mountAccount(root,{user,api,toast,onSignedOut}){
     form('#recovery-code').innerHTML=`<p class="recovery-code" data-i18n-ignore>${esc(code)}</p><p class="small">Save this code now, somewhere other than this device. It won’t be shown again.</p><button type="button" id="copy-code">Copy code</button>`;
     form('#copy-code').onclick=async()=>{try{await navigator.clipboard.writeText(code);toast('Code copied.');}catch{toast('Select the code and copy it.');}};status();});};
   form('#delete-form').onsubmit=e=>{e.preventDefault();const f=e.target;submit(f,async()=>{if(f.elements.confirm.value!=='DELETE')throw Error('Type DELETE to confirm');await api('/api/account/delete','POST',{password:f.elements.password.value,confirm:'DELETE'});active=false;await onSignedOut();toast('Your account has been deleted.');});};
-  status();
+  async function blocked(){
+    const list=form('#blocked-list');
+    try{
+      const data=await api('/api/blocks');if(!active)return;
+      list.innerHTML=data.blocked.length?data.blocked.map(b=>`<div class="blocked-row"><a href="/people/${esc(b.id)}" data-nav><strong data-i18n-ignore>${esc(b.name)}</strong> <small data-i18n-ignore>@${esc(b.username||'')}</small></a><button type="button" data-unblock="${esc(b.id)}">Unblock</button></div>`).join(''):'<p class="muted">You haven’t blocked anyone.</p>';
+      list.querySelectorAll('[data-unblock]').forEach(button=>button.onclick=async()=>{button.disabled=true;try{await api('/api/blocks/'+button.dataset.unblock,'DELETE',{});if(active){toast('Student unblocked.');await blocked();}}catch(e){if(active){button.disabled=false;toast(e.message);}}});
+    }catch{if(active)list.innerHTML='<p class="muted">Your blocked list couldn’t be loaded. Try again in a moment.</p>';}
+  }
+  status();blocked();
   return {destroy(){active=false;}};
 }
 
