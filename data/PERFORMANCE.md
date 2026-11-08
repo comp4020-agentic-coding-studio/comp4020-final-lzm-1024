@@ -1,5 +1,7 @@
 # CampusWall refactoring and performance evidence
 
+Historical evidence: the measurements and multi-campus production checks below describe the deployment at the time of those checks. The current public service opens ANU only; earlier totals are not current availability claims.
+
 Measured on 2 October 2026 using Node 24 on the local Windows development host. The benchmark starts its own server and temporary SQLite database, adds 1,000 synthetic ANU posters alongside the 24 test posters, warms each route three times and measures 20 sequential HTTP requests through the complete response body. It removes only its temporary fixture. It never connects to production or modifies the Fly volume.
 
 | Measurement | Before | After |

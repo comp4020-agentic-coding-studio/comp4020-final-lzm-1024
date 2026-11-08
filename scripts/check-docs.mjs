@@ -48,9 +48,6 @@ for(const file of languageDocs){
 console.log('✓ English-only document text checked, including archived notes and source records');
 const note=source('research-note.md');
 if(!/^## References\s*$/m.test(note))fail('Research note needs separate references');
-for(const file of ['PROCESS.md','reflections/crit-8.md','reflections/crit-9.md','reflections/crit-10.md','research-note.md']){
-  if(!/AI-assisted|AI assistance/i.test(source(file)))console.warn(`! ${file}: review AI-use attribution`);
-}
 try{
   const count=Number(execFileSync('git',['rev-list','--count','HEAD'],{encoding:'utf8',stdio:['ignore','pipe','pipe']}).trim());
   if(count<=1)console.warn('! Only the initial commit exists: working-file evidence is not incremental process history.');

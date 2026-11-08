@@ -17,21 +17,30 @@ const empty=(title,copy='')=>`<div class="community-empty"><span>✳</span><h2>$
 const person=(p,actions='')=>`<div class="community-person">${avatar(p)}<div><strong data-i18n-ignore>${esc(p.name||p.author)}</strong><small>@${esc(p.username||'campus member')}</small></div>${actions}</div>`;
 const eventCard=p=>`<a class="community-event" href="${esc(p.href||`/${p.universityId}/posters/${p.slug}`)}" data-nav>${p.heroImageUrl?`<img src="${esc(p.heroImageUrl)}" alt="" loading="lazy">`:'<span class="community-event-art">✳</span>'}<div><small>${esc(p.category||'Campus event')}${p.isTest?' · TEST EVENT':''}</small><h3 data-i18n-ignore>${esc(p.title)}</h3><p>${esc(p.date||'')} ${esc(p.time||'')} · ${esc(p.location||'')}</p></div><span>↗</span></a>`;
 let headerState=null,leafletPromise;
-// A live game invitation on any page: join now or later from Notifications.
-let inviteTimer;
+// A live invitation is prominent on every page, but never accepts on timeout.
+let activeInvite=null;
+function clearGameInvite(){activeInvite?.close();}
 function gameInvite({roomId,gameName,host}){
  if(!/^[a-f0-9-]{36}$/.test(roomId||'')||location.pathname==='/games/'+roomId)return;
- document.querySelector('.game-invite-toast')?.remove();clearTimeout(inviteTimer);
- const card=document.createElement('div');card.className='game-invite-toast';card.setAttribute('role','alert');
- card.innerHTML=`<p><strong data-i18n-ignore>${esc(host?.name||'A campus friend')}</strong> <span>invited you to play</span> <strong>${esc(gameName||'a game')}</strong></p><div><a class="button primary" href="/games/${roomId}" data-nav>Join ↗</a><button type="button">Not now</button></div>`;
- const close=()=>{clearTimeout(inviteTimer);card.remove();};card.querySelector('button').onclick=close;card.querySelector('a').addEventListener('click',()=>setTimeout(close));
- document.body.append(card);inviteTimer=setTimeout(close,60000);
+ if(activeInvite?.roomId===roomId)return;
+ clearGameInvite();
+ const previousFocus=document.activeElement,deadline=Date.now()+60000;
+ const card=document.createElement('dialog');card.className='game-invite-dialog';
+ card.setAttribute('aria-labelledby','game-invite-title');card.setAttribute('aria-describedby','game-invite-description');
+ card.innerHTML=`<span class="game-invite-icon" aria-hidden="true">✦</span><span class="eyebrow">Game invitation</span><h2 id="game-invite-title">Ready to play?</h2><p id="game-invite-description"><strong data-i18n-ignore>${esc(host?.name||'A campus friend')}</strong> <span>invited you to play</span> <strong>${esc(gameName||'a game')}</strong></p><div class="game-invite-clock"><span>Time to respond</span><strong data-invite-count translate="no" data-i18n-ignore>01:00</strong></div><progress max="60" value="60" aria-label="Time to respond"></progress><p class="game-invite-hint">This prompt closes after 60 seconds. Find the invitation later in Notifications.</p><div class="game-invite-actions"><a class="button primary" href="/games/${roomId}" data-nav>Join ↗</a><button type="button">Not now</button></div>`;
+ let timer=null,closed=false;
+ const close=()=>{if(closed)return;closed=true;clearInterval(timer);if(activeInvite?.card===card)activeInvite=null;if(card.open)card.close();card.remove();if(previousFocus?.isConnected&&(!document.activeElement||document.activeElement===document.body||document.activeElement===card))previousFocus.focus();};
+ const tick=()=>{const seconds=Math.max(0,Math.ceil((deadline-Date.now())/1000));if(!seconds){close();return;}card.querySelector('[data-invite-count]').textContent=`${String(Math.floor(seconds/60)).padStart(2,'0')}:${String(seconds%60).padStart(2,'0')}`;card.querySelector('progress').value=seconds;};
+ card.querySelector('button').onclick=close;
+ card.querySelector('a').addEventListener('click',event=>{tick();if(closed){event.preventDefault();return;}close();});
+ card.addEventListener('cancel',event=>{event.preventDefault();close();});card.addEventListener('close',close);
+ document.body.append(card);activeInvite={roomId,card,close};card.showModal();card.querySelector('button').focus();timer=setInterval(tick,250);
 }
 export function mountCommunityHeader({user,api,onAuthExpired}){
  if(headerState?.id===user?.id){headerState?.refresh();return;}headerState?.destroy();headerState=null;if(!user)return;
  let active=true,socket,retry;const refresh=async()=>{try{const data=await api('/api/community/notifications');if(!active)return;const badge=document.querySelector('#community-unread');if(badge){badge.textContent=data.unread?String(Math.min(data.unread,99)):'';badge.hidden=!data.unread;}const bell=document.querySelector('#community-bell');bell?.setAttribute('aria-label',`Notifications${data.unread?' · '+data.unread+' unread':''}`);}catch(e){if(active&&e.status===401)onAuthExpired?.();}};
  const connect=()=>{if(!active)return;socket=new WebSocket(`${location.protocol==='https:'?'wss:':'ws:'}//${location.host}/ws?social=1&device=${voiceDevice}`);socket.onopen=()=>{window.dispatchEvent(new CustomEvent('campus:community',{detail:{type:'social:connected'}}));refresh();};socket.onmessage=e=>{if(!active)return;const value=JSON.parse(e.data);if(value.type==='notification:changed'||value.type==='community:changed')refresh();if(value.type==='game:invite')gameInvite(value);window.dispatchEvent(new CustomEvent('campus:community',{detail:value}));};socket.onclose=e=>{window.dispatchEvent(new CustomEvent('campus:community',{detail:{type:'social:disconnected'}}));if(!active)return;if(e.code===4001){onAuthExpired?.();return;}retry=setTimeout(connect,2000);};socket.onerror=()=>socket.close();};
- const visibility=()=>{if(!document.hidden)refresh();};document.addEventListener('visibilitychange',visibility);connect();headerState={id:user.id,refresh,destroy(){active=false;document.querySelector('.game-invite-toast')?.remove();clearTimeout(retry);socket?.close();document.removeEventListener('visibilitychange',visibility);}};
+ const visibility=()=>{if(!document.hidden)refresh();};document.addEventListener('visibilitychange',visibility);connect();headerState={id:user.id,refresh,destroy(){active=false;clearGameInvite();clearTimeout(retry);socket?.close();document.removeEventListener('visibilitychange',visibility);}};
 }
 async function leaflet(){await loadStylesheet('/vendor/leaflet.css');leafletPromise||=new Promise((resolve,reject)=>{if(window.L)return resolve(window.L);const script=document.createElement('script');script.src='/vendor/leaflet.js';script.onload=()=>resolve(window.L);script.onerror=()=>{leafletPromise=null;reject(Error('Map could not load. Please try again.'));};document.head.append(script);});return leafletPromise;}
 

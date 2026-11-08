@@ -1,5 +1,9 @@
 # Verification record and reproduction
 
+Current tutorial evidence, updated 8 November 2026: the student confirms a Week 11 instruments-only session with Group 3 and four participants. Website links, posters, video rooms and games were tried; language and video problems appeared. Specific log excerpts and narration comparisons remain unavailable. Earlier outstanding-demo statements below describe the information available at that time. See [the updated record](CRIT10-DEMO.md).
+
+Current deployment scope, 8 November 2026: ANU only. Earlier entries reporting eight campuses, 192 TEST notices or 1,905 clubs describe historical checks before the scope was narrowed. They do not describe what a visitor can access today.
+
 ## Interface translation sweep, 8 November 2026
 
 A source scan (`scripts/i18n-coverage.mjs`, using the lookup rules of `public/i18n.js`) found about 670 interface strings that the four catalogues did not cover, mostly server error messages shown in toasts, game and call messages, editor labels and page eyebrows. They were translated in commit `2a55b14`. `scripts/i18n-coverage.test.mjs` now fails if any language misses a scanned string and checks that `{0}` placeholders survive; deliberate English (TEST disclosures and starter text inside artwork, whiteboard templates, technical tokens) is listed with reasons. Run-time text assembled from values is outside that test: a page-by-page browser scan in Simplified Chinese (signed in and as a guest) found six such patterns, which were added. Twenty-six pages were then checked in French at 375 px with no horizontal overflow. The translations were written by the agent and have not been reviewed by native speakers.

@@ -1,5 +1,7 @@
 # Photographic test poster collection
 
+Current scope: visitors can access the ANU collection only. Venue references for other universities below document retained source data, not available public events.
+
 Collected on 2 October 2026. The machine-readable [manifest](photo-gallery.json) contains 24 original CampusWall compositions, the exact photographer credit and source page for every image, and the official source for each campus venue.
 
 ## Photos and licence

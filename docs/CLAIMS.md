@@ -22,7 +22,7 @@ This map distinguishes an enforceable boundary from a claim that needs human jud
 
 ## Claims deliberately not made
 
-No claim is made of verified email ownership, native-quality translation, use of film characters (the robot and puppy are original drawings), verified student identity, official university/club endorsement, universal WebRTC connectivity, frame-exact live synchronisation, complete WCAG compliance, end-to-end encrypted messages or a measured improvement in student belonging. Redacted per-action observability is implemented and tested; real classmate feedback from normal website use has been reported, while the instruments-only procedure remains to be completed and recorded. See [demo preparation](CRIT10-DEMO.md) and [acceptance evidence](ACCEPTANCE.md).
+No claim is made of verified email ownership, native-quality translation, use of film characters (the robot and puppy are original drawings), verified student identity, official university/club endorsement, universal WebRTC connectivity, frame-exact live synchronisation, complete WCAG compliance, end-to-end encrypted messages or a measured improvement in student belonging. Redacted per-action observability is implemented and tested; normal-use feedback and a separate Week 11 instruments-only tutorial with Group 3 have been reported. Four people took part in the tutorial, sharing links, posters and video rooms and testing games; language and video problems appeared. Specific log excerpts and narration comparisons have not been supplied. See [demo preparation](CRIT10-DEMO.md) and [acceptance evidence](ACCEPTANCE.md).
 
 ## A reproducible human review
 

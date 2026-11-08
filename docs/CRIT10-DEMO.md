@@ -1,6 +1,25 @@
-# Crit 10 — classmate feedback and instruments-only preparation
+# Crit 10 — classmate feedback and tutorial demonstration
 
-Updated on 19 October 2026. Technical preparation began on 2–3 October and now includes private file transfer. The student has now reported real classmate use and feedback: YouTube stutter and features that became known only after the developer introduced them. The student confirmed this was normal website use followed by feedback, not an instruments-only session. The participants are the student's friends, Tony and Kevin. The session took place on 14 October 2026. Local rehearsals and automated clients remain separate evidence.
+Updated on 8 November 2026. Two separate sessions have now been reported: normal website use by Tony and Kevin on 14 October, and a completed instruments-only demonstration with Group 3 during the Week 11 tutorial. Four people took part in the tutorial session. Local rehearsals and automated clients remain separate evidence.
+
+## Week 11 tutorial: Group 3
+
+During the Week 11 tutorial, I demonstrated CampusWall with Group 3. Four people took part. We shared the website link, posters and video rooms, and tested games. The website had language and video problems during the session.
+
+I confirmed that this was a completed instruments-only demonstration, separate from the earlier normal-use feedback. However, I have not supplied the exact date or time, the deployed commit, individual log events, or examples of what I correctly or incorrectly inferred from the logs. This record therefore establishes the reported session and activities, not the accuracy of my narration or successful completion of every task. Sharing a link does not by itself prove that another person opened it or obtained access.
+
+| Item | Confirmed record |
+| --- | --- |
+| Session | Week 11 tutorial; exact date and time not supplied |
+| Participants | Group 3; four people took part |
+| Format | Student-confirmed completed instruments-only demonstration |
+| Activities | Sharing the website link, posters and video rooms; testing games |
+| Problems reported | Language and video problems; exact symptoms not supplied |
+| Actor identification and narration accuracy | No specific example supplied |
+| Preserved logs | Not supplied for this account |
+| Follow-up verification | No participant result supplied confirming these problems were resolved |
+
+The practical lesson is to check the visible experience as well as server activity. Language problems can make an otherwise working feature difficult to use, and an accepted video action does not prove smooth playback. Later playback and translation repairs have separate technical evidence in [verification](VERIFICATION.md); no specific fix is attributed to this tutorial without a supporting record.
 
 ## Confirmed session details
 
@@ -19,11 +38,11 @@ On 14 October 2026, two of my friends, Tony and Kevin, tried CampusWall and gave
 
 They reported that YouTube playback inside CampusWall could stutter. I needed to introduce some features before they knew those features were available. Because the website offers many functions, a first-time visitor does not necessarily know what to look for. The difficulty was discovering the available features, rather than simply learning a control after finding it. No task timings or success rate were recorded.
 
-This feedback points to two areas for further checking: reliable shared playback and clear starting points that reduce the need for a personal introduction. It does not mean every feature failed or that all exploration was unhelpful. Clearer labels or a short optional introduction are possible improvements, but they have not yet been tested with Tony and Kevin.
+This feedback points to two areas for further checking: reliable shared playback and clear starting points that reduce the need for a personal introduction. It does not mean every feature failed or that all exploration was unhelpful. A welcome banner and Getting started guide are now implemented, as recorded in [the November feedback update](FEEDBACK.md#implemented-first-use-responses-8-november-2026), but have not been retested with Tony and Kevin.
 
 The playback changes were checked with automated tests and deployed afterwards. No follow-up result from Tony or Kevin has been supplied, so this record does not claim that they confirmed the problem was solved. See [the feedback record](FEEDBACK.md) for the technical evidence.
 
-The reported feedback session does not complete the instruments-only requirement. Arrange a separate session with two classmates using the procedure below, then record the narration and compare it with their actual actions.
+The October feedback session was not the instruments-only demonstration. The separately reported Week 11 tutorial is recorded above. The procedure below is retained for reproducing the exercise and collecting more detailed evidence.
 
 ## Prepare the instruments
 
@@ -35,7 +54,7 @@ HTTP API completions, rejected requests, page requests, whiteboard operations an
 
 No bodies, names, email addresses, cookies, passwords, search queries, raw paths, URLs, tickets, SDP or ICE are logged. The viewer projects only recognised fields and action names. `node --test scripts/observability.test.mjs` checks hostile input, rejection, backpressure, real HTTP/socket actions and restart identity.
 
-## Conduct the real demonstration
+## Procedure for a repeat demonstration
 
 1. Invite Tony and Kevin to use distinct accounts or isolated browser sessions. In this proposed session, Tony takes participant A and Kevin takes participant B. Use clearly labelled TEST content. Do not record private message text or microphone audio.
 2. Hide the browser from the narrator. Keep only the live log viewer visible.
@@ -45,7 +64,27 @@ No bodies, names, email addresses, cookies, passwords, search queries, raw paths
 6. Refresh a client, then restart the disposable service. Observe reconnects and stable pseudonyms. Separately inspect the browser to confirm saved content survived.
 7. Compare the narration with what classmates actually did. Record missed actions, ambiguity, latency and any collector drops.
 
-## Record after the class
+## Details to add if recoverable
+
+The Week 11 session is confirmed by the student. The tables below identify details not yet supplied; they are not additional observations or a claim that the session did not happen. Use original notes or genuine recollection if available. Leave unknown details unknown. For a repeat session, record its own actual date rather than backdating it.
+
+| Session detail | Recorded value |
+| --- | --- |
+| Actual date, time and timezone | Not recorded |
+| Deployed commit and environment | Not recorded |
+| Participant count and group | Four people; Group 3 |
+| Viewport and network conditions | Not recorded |
+| Instruments-only format | Confirmed by the student; individual narration examples not supplied |
+
+| Task | Selected redacted event and actor | Narration made before revealing the browser | Actual action confirmed afterwards | Match, ambiguity or missed action |
+| --- | --- | --- | --- | --- |
+| Create and edit a private TEST draft | Not recorded | Not recorded | Not recorded | Not recorded |
+| Invite the other participant and co-edit | Not recorded | Not recorded | Not recorded | Not recorded |
+| Publish as owner; reject collaborator publication | Not recorded | Not recorded | Not recorded | Not recorded |
+| Exchange private messages | Not recorded | Not recorded | Not recorded | Not recorded |
+| Refresh and check saved state | Not recorded | Not recorded | Not recorded | Not recorded |
+
+Afterwards, record one consequential discrepancy, what it reveals about the logs or interface, and the resulting change with its real commit link. If no change is justified, explain why. Record any YouTube retest separately with the source, devices, network, observed pauses or jumps and participant feedback; do not infer playback quality from an accepted command.
 
 Record the real date, participant count without personal identifiers, task sequence, selected redacted events, narrator predictions, actual observations and one resulting change. Update [Crit 10 reflection](../reflections/crit-10.md) using that experience. This section contains instructions, not a fabricated study result.
 
@@ -64,4 +103,4 @@ Logs prove that the server accepted or rejected an action. Screenshots, decoded 
 
 Upload and download resource identifiers refer to different records: the conversation and the file. Do not claim the logs alone identify which uploaded file a later download concerns. Use the known task order and state this limit. A client-side button click that sends no request will not appear in server logs.
 
-After the real demonstration, record its date and timezone, two anonymous participant labels, the tasks attempted, selected redacted events, the narrator's predictions, the actual actions and one difference that matters. The procedure and table above describe expected interpretations. The reported classmate use is real feedback; it does not by itself supply log-only narration results.
+A fuller account would include the date and timezone, anonymous actor labels, selected redacted events, the narrator's predictions, actual actions and one consequential difference. The tutorial activities above are reported experience; the procedure and interpretation table are guidance, not reconstructed logs or measured narration results.

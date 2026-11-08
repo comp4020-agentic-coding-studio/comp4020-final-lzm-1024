@@ -1,5 +1,7 @@
 # University email routing
 
+Current scope: the public deployment opens ANU only. The other domain mappings below are retained source references from earlier multi-campus development; they do not enable registration at closed universities.
+
 Checked 1 October 2026. `campus.mjs` contains explicit accepted university domains and student aliases. University root domains also route to their university, including staff addresses; this does not distinguish students from staff or verify ownership of a mailbox. Unknown domains retain the existing manual school choice. Substrings and unlisted subdomains do not automatically match.
 
 - ANU: `anu.edu.au`, documented by [ANU ID and password](https://services.anu.edu.au/information-technology/id-and-password).

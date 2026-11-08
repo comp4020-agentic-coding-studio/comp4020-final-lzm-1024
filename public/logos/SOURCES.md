@@ -1,5 +1,7 @@
 # University logo sources
 
+Current scope: the public deployment uses the ANU logo. Other entries below preserve attribution for assets retained from earlier development; they do not indicate available campus pages.
+
 Retrieved 1 October 2026, copied without redrawing or recolouring. These identify the selected campus; CampusWall remains a student project and does not verify university affiliation.
 
 - ANU: `anu.svg` is the white/gold logo used by the [ANU website](https://www.anu.edu.au/) footer. Asset: https://d1blp3aor2iuhp.cloudfront.net/images/logos/logo-ANU.svg

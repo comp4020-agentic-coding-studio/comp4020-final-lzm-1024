@@ -36,6 +36,16 @@ This report adds real first-use feedback to the technical record. It does not es
 
 The student separately clarified that the original YouTube site was smooth while CampusWall paused or jumped. Later regressions reproduced two possible contributors: immediate drift correction after buffering and a lost playback action while awaiting a server response. Commits a404d35 and 4d3396c repair those cases. Automated checks and deployment passed, but no classmate retest after those fixes has been reported. Do not describe the user-reported problem as confirmed solved by participants.
 
-Possible follow-up work is a short optional introduction, clearer entry labels or a few task links such as finding an event, messaging its organiser and inviting a friend. These are proposals, not implemented or validated improvements. A later session should record the exact feature a person tried to find, the route they took, any help needed and whether the task was completed.
+At the time of the October report, possible follow-up work included a short optional introduction, clearer entry labels and starting tasks. The November implementation update below records which responses were later built. A later participant session should record the exact feature a person tried to find, the route they took, any help needed and whether the task was completed.
 
 The student confirmed that this was normal website use followed by feedback, not the Crit 10 instruments-only procedure. Real website use and a narrator explaining actions from logs alone are separate claims. The required instruments-only session still needs its own record; no log-only narration results are invented here.
+
+## Implemented first-use responses, 8 November 2026
+
+The wall now offers a New here? banner, a public Getting started guide and a persistent guide entry after the banner is dismissed. The guide groups features by the visitor's goal and explains where to find their controls. [7e4769e](https://github.com/comp4020-agentic-coding-studio/comp4020-final-lzm-1024/commit/7e4769e) makes the returning-visitor guide entry a button and adds connection-loss guidance. [ef546c6](https://github.com/comp4020-agentic-coding-studio/comp4020-final-lzm-1024/commit/ef546c6) corrects its first step to name ANU, the one currently open campus. Missing publication fields also receive numbered recovery instructions, recorded in [verification](VERIFICATION.md).
+
+These changes address the reported discovery problem in the interface. They do not establish that students now discover features without help: no follow-up observation from Tony or Kevin has been supplied. The next check should ask a visitor to find an event, contact its organiser and locate shared editing without spoken instructions, recording any help needed rather than assuming success.
+
+## Week 11 tutorial account, reported on 8 November 2026
+
+The student now confirms a separate, completed instruments-only demonstration during the Week 11 tutorial with Group 3. Four people took part. Activities included sharing the website link, posters and video rooms, and testing games. Language and video problems appeared. The exact date, individual log events, narration comparisons and a participant retest result have not been supplied. This updates the earlier statement that no instruments-only session had been reported; it does not convert the 14 October normal-use feedback or local rehearsals into that demonstration. See [the tutorial record](CRIT10-DEMO.md).

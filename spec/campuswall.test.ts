@@ -38,7 +38,7 @@ it('verifies 24 photo test posters per campus, migration preservation, assets an
 }, 20000);
 
 it('verifies the complete rules and hidden information of ten games', async () => {
-  const result = await promisify(execFile)(process.execPath, ['--test', '--test-reporter=tap', 'scripts/games-rules.test.mjs'], { timeout: 15000 });
+  const result = await promisify(execFile)(process.execPath, ['--test', '--test-reporter=tap', 'scripts/games-rules.test.mjs', 'scripts/game-invitation.test.mjs'], { timeout: 15000 });
   expect(result.stdout).toContain('# fail 0');
 }, 20000);
 

@@ -1,5 +1,9 @@
 // Static interface catalogue. User-authored content is not translated.
 export default {
+  "Ready to play?": "Pr\u00eat \u00e0 jouer ?",
+  "Time to respond": "Temps pour r\u00e9pondre",
+  "This prompt closes after 60 seconds. Find the invitation later in Notifications.": "Cette fen\u00eatre se ferme apr\u00e8s 60 secondes. Retrouvez ensuite l\u2019invitation dans les notifications.",
+
   "Game invitation": "Invitation \u00e0 jouer",
   "A campus friend": "Un ami du campus",
   "Not now": "Pas maintenant",

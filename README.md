@@ -4,9 +4,15 @@
 
 ## A notice should lead somewhere
 
-CampusWall is a campus noticeboard for students who want to discover an activity, find somebody to join them, and organise something together. Eight Australian universities have separate walls, club directories and conversations. Its central journey is simple: read a notice, contact its organiser, then make a shared plan. Games and screening rooms offer smaller ways to spend time together when organising an event feels like too much commitment.
+CampusWall helps students discover activities, contact organisers and make shared plans. The current public service is for ANU, with its own wall, clubs and conversations. Games and screening rooms provide smaller ways to spend time together.
 
 Good here means that participation is approachable, shared work is dependable, and the interface tells the truth about what has happened. Those qualities matter more than the number of features. A beautiful poster that loses a friend's edits, or a lively chat populated with invented students, would fail this definition.
+
+## Try it with a friend
+
+1. [Browse ANU's wall](https://comp4020-final-lzm-1024.fly.dev/anu) without signing in. Photographic TEST events are fictional.
+2. Open two separate browser profiles. On [Sign in](https://comp4020-final-lzm-1024.fly.dev/login), choose Create an account and register two accounts at ANU. Use distinct email addresses; university domains fix the campus, but do not verify student status.
+3. Publish a TEST poster with a title, date and location. From the other account, choose Message organiser, or invite that account to edit the private draft. Watch changes arrive without refreshing. [Getting started](https://comp4020-final-lzm-1024.fly.dev/guide) explains the controls.
 
 ## Participation without manufactured popularity
 
@@ -26,8 +32,6 @@ The [rules](CLAUDE.md) and [checks](spec/campuswall.test.ts) enforce campus isol
 
 Whether students feel welcome, understand invitations, or find worthwhile company remains a human judgement. Controlled previews are not evidence of real community adoption. Further evaluation should ask students to discover an activity and collaborate without coaching, including keyboard and slow-connection use.
 
-The current service deliberately avoids advertising, fabricated user activity and verified-university claims. Email verification, password recovery, moderation tools and end-to-end message encryption remain absent. Private calls can fail on restricted networks without a configured TURN relay; video availability depends on its provider. These limits keep the promises proportionate to what a small, persistent course deployment actually supports.
+The service avoids advertising and fabricated user activity. Single-use recovery codes support password recovery; basic reporting and campus moderation are available. Email verification and end-to-end message encryption remain absent. Calls can fail on restricted networks without TURN; video availability depends on its provider.
 
-The interface offers English, Simplified Chinese, Spanish, French and Japanese, with a browser-saved language preference. Signed-in readers can explicitly translate individual campus, private, group or watch messages into English through MyMemory. Original messages remain unchanged; translation rechecks message permissions and does not store translated text.
-
-Appearance offers Light mode, Dark mode and Follow system, remembers your browser preference, and preserves the original colours of posters and drawings.
+Five interface languages and light, dark or system appearance are available. Optional message translation sends one authorised message to MyMemory after an explicit click.

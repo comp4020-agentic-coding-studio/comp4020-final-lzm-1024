@@ -1,5 +1,9 @@
 // Static interface catalogue. User-authored content is not translated.
 export default {
+  "Ready to play?": "\u51c6\u5907\u597d\u5f00\u59cb\u6e38\u620f\u4e86\u5417\uff1f",
+  "Time to respond": "\u56de\u5e94\u5269\u4f59\u65f6\u95f4",
+  "This prompt closes after 60 seconds. Find the invitation later in Notifications.": "\u6b64\u63d0\u793a\u5c06\u572860\u79d2\u540e\u5173\u95ed\u3002\u4e4b\u540e\u53ef\u5728\u901a\u77e5\u4e2d\u627e\u5230\u9080\u8bf7\u3002",
+
   "Game invitation": "\u6e38\u620f\u9080\u8bf7",
   "A campus friend": "\u4e00\u4f4d\u6821\u56ed\u597d\u53cb",
   "Not now": "\u7a0d\u540e\u518d\u8bf4",
