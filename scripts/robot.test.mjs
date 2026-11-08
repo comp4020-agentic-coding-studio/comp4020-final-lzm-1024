@@ -16,6 +16,7 @@ test('scenes are hidden from assistive technology and each dream bubble has its 
   assert.deepEqual(scenes.map(s=>s.className),['robot-scene robot-once robot-sleeping','robot-scene robot-loop robot-sleeping','robot-scene robot-once']);
   assert.equal(scenes[0].querySelectorAll('.robot-dream-frame').length,4,'city at dusk, seaside, heart, poster');
   assert.equal(scenes[2].querySelector('.robot-dream'),null,'cheering has no dream bubble');
+  for(const scene of scenes){assert.ok(scene.querySelector(':scope>.robot-dog+.robot-figure>.robot'),'the puppy sits beside the robot');assert.equal(scene.querySelectorAll('.robot-dog .robot-eyes-open,.robot-dog .robot-eyes-shut').length,2,'the puppy sleeps and wakes with it');}
   const clips=[...dom.window.document.querySelectorAll('clipPath')].map(c=>c.id);assert.equal(new Set(clips).size,clips.length);
   for(const scene of scenes)assert.equal(scene.querySelector('[style]'),null,'no inline styles (CSP)');
 });
@@ -32,6 +33,8 @@ test('placeholders fill once, only after the stylesheet loads, and keep their fa
   const feedback=read('public/feedback.js');
   assert.ok(feedback.includes("element('div','celebration-icon','🎉');icon.setAttribute('aria-hidden','true');icon.dataset.robot='cheer';"),'the 🎉 stays as the fallback');
   assert.ok(feedback.includes("import('./robot.js').then(robot=>robot.fillRobots(current)).catch(()=>{});"));
+  // Found in the browser: as position:relative the modal sat at the top of the document, off screen once the page was scrolled.
+  assert.ok(read('public/typography.css').includes('.publish-celebration{position:fixed;'),'the celebration stays in view however far the page is scrolled');
 });
 
 test('on the wall the robot moves only under the Effects control; elsewhere briefly; never for reduced motion',()=>{
@@ -63,5 +66,6 @@ test('the wall, empty lists, error pages and publication show the robot; its gre
   assert.ok(!app.includes('🐈'));assert.ok(app.includes("import('./robot.js').then(m=>m.fillRobots(app)).catch(()=>{});"));
   for(const file of ['robot.js','robot.css'])assert.ok(assets.includes(`'${file}'`),`${file} is served`);
   assert.ok(read('public/mobile.css').includes('.wall-tagline>span:not(.wall-robot){display:none}'),'the phone layout hides the tagline text, not the robot');
-  for(const language of ['zh-CN','es','fr','ja'])assert.ok((await import(`../public/locales/${language}.js`)).default['Hi! I was dreaming about campus.'],language);
+  assert.ok(delight.includes('<span class="robot-say">Hi! We were dreaming about campus.</span>'));
+  for(const language of ['zh-CN','es','fr','ja']){const catalogue=(await import(`../public/locales/${language}.js`)).default;assert.ok(catalogue['Hi! We were dreaming about campus.'],language);assert.equal(catalogue['Hi! I was dreaming about campus.'],undefined,'the old greeting is gone');}
 });

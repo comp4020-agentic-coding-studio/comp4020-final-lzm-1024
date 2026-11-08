@@ -40,10 +40,10 @@ export function mountDelight(root){
   if(mark){mark.classList.add('delight-mascot-holder');mark.innerHTML=`${mascotSvg}<span class="delight-bubble">Hi there!</span>`;
     listen(mark,'pointerdown',()=>{if(!allowed())return;mark.classList.remove('delight-hello');void mark.offsetWidth;mark.classList.add('delight-hello');clearTimeout(helloTimer);helloTimer=setTimeout(()=>mark.classList.remove('delight-hello'),1800);burst(mark,'♥');});}
 
-  // A little robot sleeps above the tagline, dreaming of the city at dusk, the
-  // seaside, friends and posters. A tap wakes it to wave hello; then it dozes off.
+  // A little robot and its puppy sleep above the tagline, dreaming of the city at
+  // dusk, the seaside, friends and posters. A tap wakes them to say hello; then they doze off.
   const robot=document.createElement('span');robot.className='wall-robot';robot.setAttribute('aria-hidden','true');
-  loadStylesheet('/robot.css').then(()=>{if(destroyed)return;robot.innerHTML=`${robotScene('dream',{loop:true})}<span class="robot-say">Hi! I was dreaming about campus.</span>`;(hero.querySelector('.wall-tagline')||hero).prepend(robot);}).catch(()=>{});
+  loadStylesheet('/robot.css').then(()=>{if(destroyed)return;robot.innerHTML=`${robotScene('dream',{loop:true})}<span class="robot-say">Hi! We were dreaming about campus.</span>`;(hero.querySelector('.wall-tagline')||hero).prepend(robot);}).catch(()=>{});
   listen(robot,'pointerdown',()=>{
     const scene=robot.querySelector('.robot-scene');if(!scene||!allowed())return;
     scene.classList.remove('robot-sleeping');robot.classList.add('robot-awake');burst(robot.querySelector('.robot'),'♥',undefined,undefined,5);
