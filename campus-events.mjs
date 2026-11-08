@@ -39,7 +39,7 @@ export function seedCampusEvents(db,{dataDir=new URL('./data/',import.meta.url),
         const id=stableId(campus,event.url),content=JSON.stringify(importedContent(event,source,index));listed.add(id);
         const existing=get('SELECT id,ownerId,status,publicData,removedAt FROM posters WHERE id=?',id);
         if(!existing){
-          const base=`${campus}-calendar-${event.url.split('/').pop()}`.slice(0,90),slug=get('SELECT 1 FROM posters WHERE slug=?',base)?`${base}-${id.slice(0,8)}`:base;
+          const base=`${campus}-calendar-${event.url.split('/').pop()}`.slice(0,90).replace(/-+$/,''),slug=get('SELECT 1 FROM posters WHERE slug=?',base)?`${base}-${id.slice(0,8)}`:base;
           run('INSERT INTO posters (id,ownerId,universityId,slug,status,content,publicData,version,createdAt,updatedAt,publishedAt) VALUES (?,?,?,?,?,?,?,?,?,?,?)',id,account.id,campus,slug,'PUBLISHED',content,content,0,timestamp,timestamp,timestamp);
         }else if(existing.ownerId===account.id&&!existing.removedAt&&(existing.status!=='PUBLISHED'||existing.publicData!==content)){
           // A refreshed snapshot updates the listing in place, keeping comments and saves.

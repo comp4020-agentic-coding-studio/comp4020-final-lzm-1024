@@ -1,7 +1,7 @@
 // Static interface catalogue. User-authored content is not translated.
 export default {
   "Calendar listing": "\u65e5\u5386\u6d3b\u52a8",
-  "Listed from {0}": "\u6765\u81ea{0}",
+  "Listed from {0}": "\u6765\u81ea {0}",
   "SOURCE": "\u6765\u6e90",
   "Retrieved {0}": "\u83b7\u53d6\u4e8e {0}",
   "Listed from a public university calendar. CampusWall and its students did not organise this event: check the official page for changes, cost and registration.": "\u672c\u6d3b\u52a8\u6765\u81ea\u5927\u5b66\u516c\u5f00\u6d3b\u52a8\u65e5\u5386\u3002CampusWall \u53ca\u5176\u5b66\u751f\u5e76\u672a\u7ec4\u7ec7\u6b64\u6d3b\u52a8\uff1a\u53d8\u66f4\u3001\u8d39\u7528\u548c\u62a5\u540d\u8bf7\u4ee5\u5b98\u65b9\u9875\u9762\u4e3a\u51c6\u3002",

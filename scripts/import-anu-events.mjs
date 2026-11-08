@@ -9,6 +9,8 @@ import {writeFileSync,renameSync} from 'node:fs';
 
 const base='https://www.anu.edu.au',days=Number(process.argv[2]||60);
 const headers={'user-agent':'CampusWall-importer/1.0 (ANU student course project; one request at a time)'};
+// Shorten at a word boundary with an ellipsis, never mid-word.
+const clip=(value,max)=>value.length<=max?value:value.slice(0,max).replace(/\s+\S*$/,'').replace(/[\s,:;–—-]+$/,'')+'…';
 const pause=ms=>new Promise(r=>setTimeout(r,ms));
 const decode=s=>s.replace(/&amp;/g,'&').replace(/&#039;|&#39;|&apos;/g,'’').replace(/&quot;/g,'"').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&nbsp;/g,' ').replace(/&ndash;/g,'–').replace(/&mdash;/g,'—');
 const text=html=>decode(html.replace(/<script[\s\S]*?<\/script>/g,'').replace(/<[^>]+>/g,' ')).replace(/\s+/g,' ').trim();
@@ -65,8 +67,8 @@ for(const [path,listing] of wanted){
   const section=label=>{const i=html.indexOf(`>${label}<`);if(i<0)return '';const after=text(html.slice(i+1,i+1500)).replace(new RegExp(`^${label}\\s*`),'');return after.split(/\s(?:Date and Times|Location|Speakers?|Contacts?|Register|Event series|Cost|Accessibility|Share)\b/)[0].trim();};
   const when=section('Date and Times'),[startText,endText='']=when.split(' - ');
   const start=parseTime(startText)||listing.start,end=parseTime(endText);
-  const title=(meta('og:title')||listing.title).slice(0,100);
-  let summary=meta('description').replace(/\s+/g,' ').replace(/([.!?])([A-Z])/g,'$1 $2');if(summary.length>280)summary=summary.slice(0,279).replace(/\s+\S*$/,'')+'…';
+  const title=clip(meta('og:title')||listing.title,99);
+  const summary=clip(meta('description').replace(/\s+/g,' ').replace(/([.!?])([A-Z])/g,'$1 $2'),279);
   const location=section('Location').replace(/\s*,\s*/g,', ').slice(0,180);
   // The calendar sometimes lists one session twice (same time, place and kind, or same title).
   const kind=category(`${title} ${summary}`);
