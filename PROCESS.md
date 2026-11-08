@@ -1,6 +1,6 @@
 # CampusWall — how the project was built
 
-> Written with AI assistance and revised on 19 October 2026. This account uses actual code, tests and commits. The student should check that the reasons given here match their own decisions. The student confirmed normal classmate use with feedback, rather than an instruments-only session.
+> Written with AI assistance and revised on 8 November 2026. This account uses actual code, tests and commits. The student should check that the reasons given here match their own decisions. The student confirmed normal classmate use with feedback, rather than an instruments-only session.
 
 ## What the website is for
 
@@ -10,9 +10,9 @@ The [README](README.md) explains what good means: easy participation, reliable s
 
 ## Why these tools were used
 
-The course provides a small Fly machine and persistent storage. Node.js runs the server. SQLite keeps records under /data. WebSockets let the server send changes to other browsers without a reload. This avoids managing a separate database service, but writes happen in one place and busy work can delay other requests.
+The course provides a small Fly machine and persistent storage. Node.js runs the server. SQLite keeps records under /data. WebSockets let the server send changes to other browsers without a reload. This avoids a separate database service, but writes happen in one place and busy work can delay other requests.
 
-SQLite's [guidance](https://www.sqlite.org/whentouse.html) explains when this setup makes sense; it does not prove how many students CampusWall can support. [ADR 001](docs/decisions/001-storage-and-deployment.md) records the choice. Sixteen migrations now change the database structure while preserving existing records. Large private attachments stream to disk instead of being collected in server memory.
+SQLite's [guidance](https://www.sqlite.org/whentouse.html) explains when this setup makes sense; it does not prove how many students CampusWall can support. [ADR 001](docs/decisions/001-storage-and-deployment.md) records the choice. Nineteen migrations now change the database structure while preserving existing records.
 
 ## How the AI work was guided
 
@@ -20,40 +20,38 @@ Requests became more specific as problems appeared: school colours, contact butt
 
 Anthropic's [guidance on agents](https://www.anthropic.com/engineering/building-effective-agents) supports simple workflows with clear feedback. Here, tests and observed failures supplied that feedback. However, the same AI often wrote code and tests, so both could share a mistake. I needed to ask what each check actually established.
 
-Language settings made this boundary concrete. Translating interface labels stays in the browser. Translating a private message sends one authorised message to an outside service after an explicit click. The user agreed to that service. Access is checked again before its result is returned. A language preference must not silently share private conversations.
+Language settings made this boundary concrete. Interface labels are translated in the browser. Translating a private message sends one authorised message to an outside service after an explicit click, and access is checked again before the result returns. A language preference must not silently share private conversations.
 
 ## The shared-state decision
 
 Sending a complete whiteboard after each change would be simple, but an old copy could erase a friend's new work. The chosen approach sends small actions, such as moving an object or changing its colour. The server checks and saves each action before sharing it.
 
-Different properties can keep both changes. For the same property, the accepted server order decides the result. Undo checks for later changes rather than silently removing a collaborator's edit. [ADR 002](docs/decisions/002-shared-state.md) explains the trade-off: this version does not promise to combine work made offline. [Two-client tests](scripts/whiteboard.integration.mjs) check concurrent actions, retries, lost access and restart recovery.
+Different properties keep both changes. For the same property, the accepted server order decides the result. Undo checks for later changes rather than silently removing a collaborator's edit. [ADR 002](docs/decisions/002-shared-state.md) explains the trade-off: this version does not promise to combine work made offline. [Two-client tests](scripts/whiteboard.integration.mjs) check concurrent actions, retries, lost access and restart recovery.
 
-## A report that changed the diagnosis
+## Reports that changed the diagnosis
 
-One earlier problem allowed a signed-in ANU user to switch campuses and post elsewhere. Hiding the menu was insufficient. Server requests and live connections needed campus checks. [Campus tests](scripts/campus-access.integration.mjs) now exercise those boundaries.
+One earlier problem allowed a signed-in ANU user to switch campuses and post elsewhere. Hiding the menu was insufficient; server requests and live connections needed campus checks, which [campus tests](scripts/campus-access.integration.mjs) now exercise.
 
-The video report gave a different lesson. Lowering quality seemed a possible answer, but the later clarification was more useful: YouTube itself was smooth while CampusWall paused or jumped. This narrowed the investigation towards room synchronisation. It did not prove that every user's network was healthy.
+The video report gave a different lesson. YouTube itself was smooth while CampusWall paused or jumped, which narrowed the investigation towards room synchronisation. [a404d35](https://github.com/comp4020-agentic-coding-studio/comp4020-final-lzm-1024/commit/a404d35) adds recovery time before automatic drift correction and [4d3396c](https://github.com/comp4020-agentic-coding-studio/comp4020-final-lzm-1024/commit/4d3396c) keeps the latest playback intent. Regression tests failed before these repairs and passed afterwards. This supports those fixes, not a promise that all videos are smooth.
 
-The agent reproduced two failures. A viewer could be forced to seek immediately after buffering ended. A host's second playback action could also be lost while an earlier request awaited confirmation. [a404d35](https://github.com/comp4020-agentic-coding-studio/comp4020-final-lzm-1024/commit/a404d35) adds recovery time before automatic drift correction. [4d3396c](https://github.com/comp4020-agentic-coding-studio/comp4020-final-lzm-1024/commit/4d3396c) keeps the latest playback intent. Regression tests failed before these repairs and passed afterwards. This supports those specific fixes, not a promise that all videos are smooth.
+Two friends, Tony and Kevin, tried the site on 14 October 2026. They noticed the stutter, and I had to introduce some features before they knew those features existed. [This feedback](docs/FEEDBACK.md) raised a clearer question: can a first-time visitor discover features without the developer? A large feature set needs clear starting points, not just working controls.
 
-The student later identified two friends, Tony and Kevin, who tried the site on 14 October 2026. They noticed the YouTube stutter. The student also had to introduce some features before the visitors knew those features were available. [This feedback](docs/FEEDBACK.md) raises a clearer question: can a first-time visitor discover the available features without an explanation from the developer? A large feature set needs clear starting points, not just working controls. Clearer labels or a short optional introduction are possible next steps, but neither has been validated by these classmates.
+## Instruments for Crit 10
 
-## What Crit 10 adds
-
-Crit 10 shifts attention from visible features to useful instruments. Structured logs record a stable, hidden actor identifier, action, time and result. They exclude names, passwords, message text and call details. The viewer helps distinguish accepted and rejected requests without revealing private content.
-
-The important check is not that a log line exists. Two accounts must stay distinguishable, and a rejected request must not look successful. Sensitive details should stay absent even when someone sends hostile input. The observability tests check those conditions, including restart behaviour. This gives me something concrete to explain during the demonstration.
-
-File transfer made this distinction useful. An upload reaching 100 percent does not mean its message was saved. [19e2dd9](https://github.com/comp4020-agentic-coding-studio/comp4020-final-lzm-1024/commit/19e2dd9) waits for server confirmation, checks access again after upload and prevents duplicate messages on retry. Tests cover an unrelated account, logout during upload, storage limits and restart recovery. A successful download request still cannot prove that its recipient opened or understood the file.
+Structured logs record a hidden actor identifier, action, time and result, excluding names, passwords, message text and call details. The important check is not that a log line exists: two accounts must stay distinguishable, a rejected request must not look successful, and sensitive details must stay absent under hostile input. File transfer showed why. An upload reaching 100 percent does not mean its message was saved; [19e2dd9](https://github.com/comp4020-agentic-coding-studio/comp4020-final-lzm-1024/commit/19e2dd9) waits for server confirmation and rechecks access.
 
 ## A failure that changed verification
 
-Earlier translation work passed local tests but its deployment container could not start. Dockerfile omitted the new translation module, which existed in the local folder. [4a3da46](https://github.com/comp4020-agentic-coding-studio/comp4020-final-lzm-1024/commit/4a3da46) fixed the copied files. Deployment had been blocked, preserving the working site. Local correctness did not establish packaging correctness.
+Earlier translation work passed local tests but its container could not start, because the Dockerfile omitted the new module. [4a3da46](https://github.com/comp4020-agentic-coding-studio/comp4020-final-lzm-1024/commit/4a3da46) fixed the copied files; a test now compares the Dockerfile with the server's modules. Local correctness did not establish packaging correctness.
 
-The latest full local run passed 22 top-level checks. File-transfer CI and deployment also passed, and live assets matched the tested files. [Verification](docs/VERIFICATION.md) separates these results from browser checks and human evidence. Earlier blocked browser reviews remain gaps; later appearance and attachment previews do not establish complete game or accessibility coverage.
+## Trust, a declined request and two-person testing
+
+In November I asked for an honest list of problems. The answer showed that the site had no way to report harmful content, recover an account or restore a backup. [b5755cf](https://github.com/comp4020-agentic-coding-studio/comp4020-final-lzm-1024/commit/b5755cf) added these. Moderation became a separate, named authority rather than a wider creator role, and recovery uses codes because the site sends no email. [ADR 004](docs/decisions/004-trust-and-recovery.md) records the costs: no email verification and backups on the same volume.
+
+I then asked for the Robot Dreams characters. The agent declined because the site and repository are public, and offered original characters; I chose an original robot and puppy. This is recorded as a disputed decision in the prompt record.
+
+Finally, I asked for thorough testing with two people. Because production accounts were off limits, two browser sessions used a local copy with a disposable database. Real-time messages, three games, co-editing, moderation and account recovery worked, but the round found nine problems that existing tests had missed, including raw game identifiers, wrong plurals and untranslated text. [4dd2184](https://github.com/comp4020-agentic-coding-studio/comp4020-final-lzm-1024/commit/4dd2184) fixed them. A wider scan then found about 670 untranslated strings, fixed in [2a55b14](https://github.com/comp4020-agentic-coding-studio/comp4020-final-lzm-1024/commit/2a55b14) with a coverage test. Passing checks had measured whether features worked, not whether a student could read them.
 
 ## What still needs a person
 
-The initial history recorded too much work at once. Later real commits improve the record but cannot recreate missing earlier steps. Personal devices, restrictive call networks and students' understanding still need direct observation.
-
-The student confirmed that the reported session was normal website use with feedback, not instruments-only narration. The session took place on 14 October 2026 with two participants, Tony and Kevin. The [demonstration record](docs/CRIT10-DEMO.md) separates those facts. I still need to compare any explanation from logs with actual actions. Automated clients cannot replace this evidence, and classmates have not yet confirmed that the later playback repairs solved their problem.
+The initial history recorded too much work at once; later commits cannot recreate missing steps. Personal devices, restrictive call networks, translation quality and students' understanding still need direct observation. Classmates have not confirmed that the playback repairs or the newer features solved their problems, and the [demonstration record](docs/CRIT10-DEMO.md) separates reported use from the instruments-only session still to be completed.
