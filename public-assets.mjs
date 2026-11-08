@@ -3,16 +3,17 @@ import {join} from 'node:path';
 import {createHash} from 'node:crypto';
 import {brotliCompressSync,gzipSync,constants} from 'node:zlib';
 import {pipeline} from 'node:stream/promises';
-import {campusDetails} from './campus.mjs';
+import {campusDetails,universities,isActiveCampus} from './campus.mjs';
 import {gallery} from './photo-gallery.mjs';
 import {escapeHtml} from './public/ui-utils.js';
 
-const textFiles=['robot.js','robot.css','collaborators.js','account.js','moderation.js','delight.js','delight.css','guide.js','guide.css','header.css','mobile.css','feedback.js','file-transfer.js','file-transfer.css','appearance.js','appearance.css','theme-init.js','i18n.js','message-translation.js','locales/zh-CN.js','locales/es.js','locales/fr.js','locales/ja.js','voice-calls.js','voice-transport.js','call-media.js','typography.css','community.js','community.css','watch.js','watch-player.js','watch-share.js','watch-model.js','watch.css','profile.js','profile.css','chat-ui.js','app.js','chat.js','messages.js','games.js','game-catalog.js','event-utils.js','email-utils.js','ui-utils.js','motion.js','photo-posters.js','styles.css','games.css','motion.css','photo-posters.css','poster-design.js','designer.js','poster-design.css','designer.css','canvas-model.js','whiteboard.js','whiteboard.css'];
+const textFiles=['early.js','robot.js','robot.css','collaborators.js','account.js','moderation.js','delight.js','delight.css','guide.js','guide.css','header.css','mobile.css','feedback.js','file-transfer.js','file-transfer.css','appearance.js','appearance.css','theme-init.js','i18n.js','message-translation.js','locales/zh-CN.js','locales/es.js','locales/fr.js','locales/ja.js','voice-calls.js','voice-transport.js','call-media.js','typography.css','community.js','community.css','watch.js','watch-player.js','watch-share.js','watch-model.js','watch.css','profile.js','profile.css','chat-ui.js','app.js','chat.js','messages.js','games.js','game-catalog.js','event-utils.js','email-utils.js','ui-utils.js','motion.js','photo-posters.js','styles.css','games.css','motion.css','photo-posters.css','poster-design.js','designer.js','poster-design.css','designer.css','canvas-model.js','whiteboard.js','whiteboard.css'];
 export function encoding(header=''){
   const accepted=new Map(header.split(',').map(value=>{const [name,...options]=value.trim().split(';'),quality=options.find(v=>v.trim().startsWith('q='));return [name.toLowerCase(),quality?Number(quality.trim().slice(2)):1];}));
   const quality=name=>accepted.get(name)??accepted.get('*')??0,br=quality('br'),gzip=quality('gzip');
   return br>0&&br>=gzip?'br':gzip>0?'gzip':null;
 }
+const versionLength=12;
 function matches(header,etag){return typeof header==='string'&&header.split(',').some(value=>value.trim()==='*'||value.trim().replace(/^W\//,'')===etag);}
 
 // With PUBLIC_ASSET_DIR (set in the deployment image), minified files and their
@@ -73,18 +74,38 @@ export function createPublicAssets(root=process.cwd(),{builtDir=process.env.PUBL
   }
   const shell=built.get('/index.html')||textAsset(readFileSync(join(root,'public','index.html')),'text/html');
   // Sets the page title and description and adds preview tags to the shared page shell.
-  const withPreview=({title,description,tags})=>textAsset(shell.variants.identity.toString('utf8')
+  // Content-versioned addresses let browsers keep public files without asking again, so a
+  // repeat visit skips those requests. The import map also versions relative imports inside
+  // modules, and each file's address depends only on its own content. A deployment changes
+  // this revalidated page, which then names the new files. A browser that ignores import
+  // maps uses the plain addresses, which still revalidate.
+  const versionOf=path=>`${path}?v=${assets.get(path).hash.slice(0,versionLength)}`;
+  const importMap=JSON.stringify({imports:Object.fromEntries([...assets].filter(([path,asset])=>asset.variants&&/\.(?:js|css)$/.test(path)&&!path.startsWith('/vendor/')).map(([path])=>[path,versionOf(path)]))});
+  const importMapScript=`<script type="importmap">${importMap}</script>`;
+  const campuses=Object.fromEntries(universities.map(([id])=>id).filter(isActiveCampus).map(id=>[id,campusDetails[id].timeZone]));
+  // The import map must come before anything that can start a module, so preload hints are
+  // links in the page rather than Link headers, which some browsers treat as module loads.
+  const startupModules=['appearance.js','app.js','chat-ui.js','event-utils.js','email-utils.js','chat.js','canvas-model.js','poster-design.js','photo-posters.js','ui-utils.js','motion.js','i18n.js','message-translation.js','feedback.js','robot.js'];
+  const hints=({modules=[],styles=[]})=>[...startupModules,...modules].map(name=>`<link rel="modulepreload" href="${versionOf('/'+name)}">`).concat(['robot.css',...styles].map(name=>`<link rel="preload" as="style" href="${versionOf('/'+name)}">`)).join('');
+  const shellFor=extra=>shell.variants.identity.toString('utf8')
+    .replace(/(href|src)="(\/[^"?]+\.(?:css|js))"/g,(match,attribute,path)=>assets.get(path)?.variants?`${attribute}="${versionOf(path)}"`:match)
+    .replace('<script src=',()=>`${metaTag('name','campuswall-campuses',JSON.stringify(campuses))}${importMapScript}<script async src="${versionOf('/early.js')}"></script><script src=`)
+    .replace('</head>',()=>`${hints(extra)}</head>`);
+  const shells={base:shellFor({}),wall:shellFor({modules:['delight.js'],styles:['delight.css']}),games:shellFor({modules:['games.js','game-catalog.js'],styles:['games.css']})};
+  const withPreview=({title,description,tags},html=shells.base)=>textAsset(html
     .replace(/<title>[^<]*<\/title>/,()=>`<title>${escapeHtml(title)}</title>`)
     .replace(/<meta name="description" content="[^"]*">/,()=>`${metaTag('name','description',description)}${tags}`),'text/html');
   // Preview images must be absolute URLs, so the site-wide tags need the deployed address.
-  const page=baseUrl?withPreview({title:siteTitle,description:siteDescription,tags:previewTags({title:siteTitle,description:siteDescription,url:new URL('/',baseUrl).href,image:new URL('/icon-512.png',baseUrl).href,alt:'CampusWall'})}):shell;
+  const siteTags=baseUrl?{title:siteTitle,description:siteDescription,tags:previewTags({title:siteTitle,description:siteDescription,url:new URL('/',baseUrl).href,image:new URL('/icon-512.png',baseUrl).href,alt:'CampusWall'})}:null;
+  const pages=Object.fromEntries(Object.entries(shells).map(([name,html])=>[name,siteTags?withPreview(siteTags,html):textAsset(html,'text/html')]));
+  const campusPaths=new Set(Object.keys(campuses).map(id=>'/'+id));
   const readme=textAsset(`<!doctype html><meta charset="utf-8"><meta name="theme-color" content="#f7f6f2"><title>About CampusWall</title><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icon.svg" type="image/svg+xml"><script src="/theme-init.js"></script><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/appearance.css"><main class="readme"><a href="/">← CampusWall</a><pre>${escapeHtml(readFileSync(join(root,'README.md'),'utf8'))}</pre></main>`,'text/html');
   assets.set('/readme',readme);assets.set('/readme/',readme);
-  async function send(req,res,asset,{privatePage=false,photo=false,link,status=200}={}){
+  async function send(req,res,asset,{privatePage=false,photo=false,longCache=false,status=200}={}){
     const selected=asset.variants?encoding(req.headers['accept-encoding']):null;
     const bytes=asset.variants?.[selected||'identity'];
     const etag=`"${asset.hash}-${selected||'identity'}"`;
-    const headers={'content-type':asset.type,'etag':etag,'cache-control':privatePage?'private, no-cache':photo?'public, max-age=86400':'public, no-cache',...(asset.variants?{vary:privatePage?'Accept-Encoding, Cookie':'Accept-Encoding'}:{}),...(selected?{'content-encoding':selected}:{}),...(link?{link}:{})};
+    const headers={'content-type':asset.type,'etag':etag,'cache-control':privatePage?'private, no-cache':longCache?'public, max-age=31536000, immutable':photo?'public, max-age=86400':'public, no-cache',...(asset.variants?{vary:privatePage?'Accept-Encoding, Cookie':'Accept-Encoding'}:{}),...(selected?{'content-encoding':selected}:{})};
     if(status===200&&matches(req.headers['if-none-match'],etag)){res.writeHead(304,headers);res.end();return;}
     res.writeHead(status,{...headers,'content-length':bytes?.length??asset.bytes});
     if(req.method==='HEAD'){res.end();return;}
@@ -93,18 +114,19 @@ export function createPublicAssets(root=process.cwd(),{builtDir=process.env.PUBL
     try{await pipeline(createReadStream(asset.file),res);}catch(error){if(!res.destroyed)res.destroy(error);}
   }
   return {
-    async serve(req,res,path){const asset=assets.get(path)||assets.get(cardPhotoOriginal(path));if(!asset)return false;await send(req,res,asset,{photo:path.startsWith('/demo-photos/')});return true;},
+    // The content security policy allows exactly this inline import map and no other inline script.
+    importMapHash:`'sha256-${createHash('sha256').update(importMap).digest('base64')}'`,
+    async serve(req,res,path){const asset=assets.get(path)||assets.get(cardPhotoOriginal(path));if(!asset)return false;// Only the address of this exact content may be kept long-term; an outdated one gets the
+      // current file, revalidated, so it can never be stored under the wrong version.
+      const version=new URL(req.url,'http://localhost').searchParams.get('v');
+      await send(req,res,asset,{photo:path.startsWith('/demo-photos/'),longCache:!!asset.variants&&version===asset.hash.slice(0,versionLength)});return true;},
     // `share` is a published poster's preview from posterShareTags; the server passes it
     // only after the visitor's campus checks, and it never contains account data.
     sendPage:(req,res,share,status=200)=>{
-      // Start the public module graph while authentication is still loading.
-      // These hints never contain account data and are sent after campus checks.
-      const modules=['appearance.js','app.js','chat-ui.js','event-utils.js','email-utils.js','chat.js','canvas-model.js','poster-design.js','photo-posters.js','ui-utils.js','motion.js','i18n.js','message-translation.js'];
-      const path=new URL(req.url,'http://localhost').pathname;
-      const games=path==='/games'||path.startsWith('/games/');
-      if(games)modules.push('games.js','game-catalog.js');
-      const link=modules.map(name=>`</${name}>; rel=modulepreload`).concat(games?['</games.css>; rel=preload; as=style']:[]).join(', ');
-      return send(req,res,share?withPreview(share):page,{privatePage:true,link,status});
+      // The page's preload hints name public startup files only, never account data.
+      const path=new URL(req.url,'http://localhost').pathname.replace(/(.)\/$/,'$1');
+      const name=path==='/games'||path.startsWith('/games/')?'games':path==='/'||campusPaths.has(path)?'wall':'base';
+      return send(req,res,share?withPreview(share):pages[name],{privatePage:true,status});
     }
   };
 }

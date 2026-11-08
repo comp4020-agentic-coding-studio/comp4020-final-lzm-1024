@@ -38,7 +38,7 @@ test('poster pages carry their own link preview, and only once published',{timeo
       assert.equal(meta(r.data,'og:url'),`${site}/anu/posters/${p.slug}`);
       assert.equal(meta(r.data,'og:image'),`${site}/icon-512.png`,'no photo: the site icon');assert.equal(meta(r.data,'twitter:card'),'summary');
       assert.equal(r.data.match(/property="og:title"/g).length,1,'the generic tags are replaced, not duplicated');
-      assert.ok(r.data.includes('<script type="module" src="/app.js"></script>'),'still the app page');
+      assert.match(r.data,/<script type="module" src="\/app\.js\?v=[a-f0-9]{12}"><\/script>/,'still the app page');
       assert.equal((await req(`/anu/posters/${p.id}`)).data.includes('Kambri Cultural Centre'),true,'the id link previews too');
     });
     await t.test('a visitor from another campus is redirected before any poster preview',async()=>{

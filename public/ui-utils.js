@@ -36,10 +36,16 @@ export function createSessionMount(load){
 }
 
 const stylesheets=new Map();
+// The page's import map also lists each stylesheet's long-cached address.
+let versions;
+function versioned(href){
+  if(!versions)try{versions=JSON.parse(document.querySelector('script[type="importmap"]').textContent).imports;}catch{versions={};}
+  return versions[href]||href;
+}
 export function loadStylesheet(href){
   if(stylesheets.has(href))return stylesheets.get(href);
   const promise=new Promise((resolve,reject)=>{
-    const link=document.createElement('link');link.rel='stylesheet';link.href=href;
+    const link=document.createElement('link');link.rel='stylesheet';link.href=versioned(href);
     link.onload=()=>resolve();
     link.onerror=()=>{link.remove();stylesheets.delete(href);reject(new Error('Unable to load page styles. Please try again.'));};
     document.head.append(link);

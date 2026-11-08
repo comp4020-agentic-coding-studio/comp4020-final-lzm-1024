@@ -47,3 +47,26 @@ Rapid filtering aborts the older read request. Leaving the wall aborts its in-fl
 The same 1,000-notice HTTP benchmark was also repeated: full-wall median was 14.77 ms before and 16.87 ms afterwards, with the same 684,661-byte response size. This small loopback sample does not establish an HTTP speed gain; no such gain is claimed. The main script grew by 526 uncompressed bytes to support guarded loading/cancellation, while its eagerly loaded dependency set became smaller. Raw HTTP observations are in [second-pass HTTP results](performance-speed-results.json). Full TypeScript and all 20 top-level regression checks passed in 43.85 seconds; these remain distinct from nested Node test counts.
 
 The update was deployed successfully to the existing Fly.io app as `deployment-01M3Y8XT8BCM7ERXGZAC0MNHQG`, image `sha256:c61242e8b8e1cebd5b370c83c28767e32f2335d9db4c4cf797bf8dfc5788b957`. Read-only production smoke checks passed for all eight campuses, 192 photographic test notices, ten games, 1,905 clubs, protected APIs and exports. Hash comparisons confirmed the deployed app, event helpers, session helpers, community module and both canvas stylesheets match the verified local source. Browser review confirmed the live ANU gallery and chat, English-only visible copy and five common stylesheets without editor CSS. The owned preview process and disposable local account/board database were removed. [Production gallery screenshot](../docs/screenshots/performance-production.png).
+
+## Third optimisation pass: repeat visits and first requests
+
+Measured on 9 November 2026 in a desktop browser on a 16-core Windows host. No phone or throttled-network measurement has been made.
+
+Before this pass, a repeat visit to the live ANU wall made 33 requests. Static files were revalidated on every visit, and most answered 304. Poster data was requested only after the module graph, `/api/universities` and `/api/auth/me` had finished: it was requested 316 ms into the page load.
+
+| Repeat visit to the wall | Before (live, HTTP/2) | After (local production build) |
+| --- | ---: | ---: |
+| Static files needing a network request | 29 of 29 | 1 of 31 (the campus logo) |
+| Poster data complete, after the page HTML arrived | about 267 ms | 33 ms |
+
+The two columns use different environments: the local run has no real network delay, so its 33 ms does not predict the live figure. Only the request counts compare directly.
+
+Changes:
+
+- The page carries an import map that gives each public module and stylesheet an address containing its content hash. Those exact addresses are served as `public, max-age=31536000, immutable`. The plain addresses, and any address with an outdated hash, still answer `public, no-cache`. A browser that ignores import maps therefore keeps the earlier behaviour.
+- Each file's address depends only on its own content, and the revalidated page names the current files, so a deployment reaches returning visitors on their next page load. API responses and pages are unaffected. Vendor libraries, logos and icons keep their existing caching.
+- The content security policy allows the import map by its SHA-256 hash and allows no other inline script.
+- `early.js` starts `/api/universities`, `/api/auth/me` and, on the wall, the first poster request while the modules load. `app.js` uses each response at most once during the first page load and then discards the rest, so this is not a cache of session or permission results.
+- Preload hints moved from `Link` headers into the page, after the import map, and now include `feedback.js`, `robot.js`, `robot.css` and the wall's `delight` files.
+
+`scripts/benchmark-performance.mjs` exits early on this host with an unsettled top-level await, so the earlier wall benchmark was not repeated in this pass.

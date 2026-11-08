@@ -135,13 +135,37 @@ test('compression and conditional static requests preserve account boundaries',{
     });
     await t.test('page hints start only public startup modules and route-specific game assets',async()=>{
       const home=await request('/anu'),game=await request('/games');
-      const homeHints=home.headers.get('link'),gameHints=game.headers.get('link');
-      assert.match(homeHints,/<\/app\.js>; rel=modulepreload/);
-      assert.doesNotMatch(homeHints,/games\.(js|css)|voice-calls|api\//);
-      assert.match(gameHints,/<\/games\.js>; rel=modulepreload/);
-      assert.match(gameHints,/<\/games\.css>; rel=preload; as=style/);
+      const homeHtml=await home.text(),gameHtml=await game.text(),hint=html=>[...html.matchAll(/<link rel="(?:modulepreload|preload)"[^>]*>/g)].map(m=>m[0]).join(' ');
+      assert.match(hint(homeHtml),/rel="modulepreload" href="\/app\.js\?v=[a-f0-9]{12}"/);
+      assert.match(hint(homeHtml),/rel="modulepreload" href="\/feedback\.js\?v=/,'a statically imported module is not left for a later round trip');
+      assert.match(hint(homeHtml),/rel="modulepreload" href="\/delight\.js\?v=/,'the wall also starts its own module');
+      assert.doesNotMatch(hint(homeHtml),/games\.(js|css)|voice-calls|api\//);
+      assert.match(hint(gameHtml),/rel="modulepreload" href="\/games\.js\?v=/);
+      assert.match(hint(gameHtml),/rel="preload" as="style" href="\/games\.css\?v=/);
+      assert.doesNotMatch(hint(gameHtml),/delight/);
       assert.match(game.headers.get('cache-control'),/private/);
-      assert.equal(await home.text(),await game.text());
+      assert.equal(home.headers.get('link'),null,'module hints in a header could start before the import map');
+      assert.ok(homeHtml.indexOf('type="importmap"')<homeHtml.search(/rel="modulepreload"|type="module"/),'the import map comes first');
+    });
+    await t.test('versioned public files are kept long-term, and only under their exact content',async()=>{
+      const html=await(await request('/anu')).text(),response=await request('/anu'),map=JSON.parse(/<script type="importmap">([^<]*)<\/script>/.exec(html)[1]).imports;
+      await response.text();
+      for(const path of Object.keys(map))assert.match(path,/^\/[a-zA-Z0-9/_-]+(?:\.[a-zA-Z0-9-]+)*\.(?:js|css)$/,'only public text files are listed');
+      assert.ok(map['/app.js']&&map['/styles.css']&&map['/locales/zh-CN.js'],'modules, stylesheets and locales are listed');
+      const plain=await request('/app.js',{'accept-encoding':'identity'}),body=await plain.arrayBuffer();assert.equal(plain.headers.get('cache-control'),'public, no-cache','the plain address still revalidates');
+      assert.equal(map['/app.js'],'/app.js?v='+createHash('sha256').update(Buffer.from(body)).digest('hex').slice(0,12),'the version comes from the served content');
+      const kept=await request(map['/app.js'],{'accept-encoding':'identity'});assert.equal(kept.headers.get('cache-control'),'public, max-age=31536000, immutable');assert.deepEqual(await kept.arrayBuffer(),body);
+      const stale=await request('/app.js?v=000000000000',{'accept-encoding':'identity'});assert.equal(stale.headers.get('cache-control'),'public, no-cache','an outdated address is never stored long-term');assert.deepEqual(await stale.arrayBuffer(),body);
+      const css=await request(map['/styles.css']);assert.equal(css.headers.get('cache-control'),'public, max-age=31536000, immutable');await css.arrayBuffer();
+      for(const name of ['app.js','styles.css','theme-init.js','early.js'])assert.ok(html.includes(`="/${name}?v=`),name+' is requested at its versioned address');
+      const api=await request('/api/universities?v='+map['/app.js'].slice(-12));assert.equal(api.headers.get('cache-control'),'no-store','a version never makes API data cacheable');await api.arrayBuffer();
+      const guide=await request('/guide?v=abc');assert.match(guide.headers.get('cache-control'),/private, no-cache/);await guide.arrayBuffer();
+    });
+    await t.test('the content security policy allows the import map and no other inline script',async()=>{
+      const response=await request('/anu'),html=await response.text(),policy=response.headers.get('content-security-policy'),inline=[...html.matchAll(/<script(?![^>]*\bsrc=)[^>]*>([^<]*)<\/script>/g)].map(m=>m[1]);
+      assert.equal(inline.length,1,'the import map is the only inline script');
+      assert.match(policy,new RegExp("script-src 'self' 'sha256-"+createHash('sha256').update(inline[0]).digest('base64').replace(/[+/]/g,c=>'\\'+c)+"';"));
+      assert.doesNotMatch(policy,/script-src[^;]*unsafe-inline/);
     });
     await t.test('JSON remains uncached and static path traversal is rejected',async()=>{
       for(const path of ['/api/auth/me','/api/posters?university=anu']){const res=await request(path,{'if-none-match':'*'});assert.equal(res.status,200);assert.equal(res.headers.get('cache-control'),'no-store');assert.equal(res.headers.get('etag'),null);await res.arrayBuffer();}

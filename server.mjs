@@ -249,10 +249,10 @@ const server=createServer(async(req,res)=>{
   res.setHeader('x-content-type-options','nosniff');res.setHeader('referrer-policy','strict-origin-when-cross-origin');
   // Fly's proxy terminates TLS and reports it here; browsers then skip plain http for a year.
   if(req.headers['x-forwarded-proto']==='https')res.setHeader('strict-transport-security','max-age=31536000');
-  res.setHeader('content-security-policy',"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data: blob:; media-src 'self' blob:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'");
+  res.setHeader('content-security-policy',`default-src 'self'; script-src 'self' ${publicAssets.importMapHash}; style-src 'self' 'unsafe-inline'; img-src 'self' https: data: blob:; media-src 'self' blob:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'`);
   try {
     const url=new URL(req.url,'http://localhost'),path=url.pathname,method=req.method;
-    if(/^\/watch(?:\/[a-f0-9-]{36})?$/.test(path))res.setHeader('content-security-policy',"default-src 'self'; script-src 'self' https://www.youtube.com https://s.ytimg.com; style-src 'self' 'unsafe-inline'; img-src 'self' https: data: blob:; media-src 'self' https: blob:; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self' https:; worker-src 'self' blob:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'");
+    if(/^\/watch(?:\/[a-f0-9-]{36})?$/.test(path))res.setHeader('content-security-policy',`default-src 'self'; script-src 'self' ${publicAssets.importMapHash} https://www.youtube.com https://s.ytimg.com; style-src 'self' 'unsafe-inline'; img-src 'self' https: data: blob:; media-src 'self' https: blob:; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self' https:; worker-src 'self' blob:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'`);
     if(method!=='GET'&&method!=='HEAD')sameOrigin(req);
     if((method==='GET'||method==='HEAD')&&await publicAssets.serve(req,res,path))return;
     if(path==='/api/translate'){

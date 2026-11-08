@@ -25,7 +25,7 @@ test('poster link aliases, 404 poster pages and friend requests without an id',{
       assert.equal((await req(`/api/posters/photography-walk-anu/calendar`)).status,200,'sub-resources follow the alias too');
     });
     await t.test('a poster page that does not exist answers 404 but still serves the app',async()=>{
-      const page=await req('/anu/posters/no-such-poster');assert.equal(page.status,404);assert.ok(page.data.includes('<script type="module" src="/app.js"></script>'));
+      const page=await req('/anu/posters/no-such-poster');assert.equal(page.status,404);assert.match(page.data,/<script type="module" src="\/app\.js\?v=[a-f0-9]{12}"><\/script>/);
       assert.equal((await req('/anu')).status,200,'other pages are unchanged');
     });
     await t.test('a friend request without an id is refused, not a server error',async()=>{
