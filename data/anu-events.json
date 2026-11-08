@@ -1,0 +1,232 @@
+{
+ "universityId": "anu",
+ "sourceName": "ANU events calendar",
+ "sourceUrl": "https://www.anu.edu.au/events/calendar",
+ "retrievedAt": "2026-11-08T12:04:12.293Z",
+ "window": {
+  "from": "2026-11-08",
+  "to": "2027-01-07"
+ },
+ "events": [
+  {
+   "url": "https://www.anu.edu.au/events/nurse-or-not-the-voluntary-aid-detachment-and-australian-army-medical-womens-service-during-the",
+   "title": "‘Nurse or not? The Voluntary Aid Detachment and Australian Army Medical Women’s Service during the S",
+   "date": "2026-11-09",
+   "time": "17:30",
+   "endDate": "2026-11-09",
+   "endTime": "18:30",
+   "location": "Hedley Bull Building, Boardroom 2.54, Level 2 Acton, ACT, 2601",
+   "summary": "War Studies Seminar SeriesSome 8500 women served in the Australian Army with the Voluntary Aid Detachment (VAD) and then the Australian Army Medical Women’s Service (AAMWS) during the Second World War. Their story has often been omitted from histories of Australia in the war,…",
+   "category": "Academic"
+  },
+  {
+   "url": "https://www.anu.edu.au/events/meet-the-author-richard-glover",
+   "title": "Meet the author - Richard Glover",
+   "date": "2026-11-09",
+   "time": "18:00",
+   "endDate": "2026-11-09",
+   "endTime": "19:00",
+   "location": "Cinema, 153 Tangney Road Acton Canberra, ACT, 2601",
+   "summary": "Richard Glover will be in conversation with Karen Viggers on his new book How To Ruin A Child , a journey into the alarming, hilarious and ever-changing advice given to Australian parents.",
+   "category": "Arts"
+  },
+  {
+   "url": "https://www.anu.edu.au/events/book-launch-spies-and-other-pigeons",
+   "title": "Book Launch - Spies and Other Pigeons",
+   "date": "2026-11-10",
+   "time": "16:00",
+   "endDate": "2026-11-10",
+   "endTime": "17:30",
+   "location": "Lecture Theatre 2 (HB2), Hedley Bull Building, 130 Garran Rd Acton ACT 2601 Acton, ACT, 2601",
+   "summary": "Join us to celebrate the launch of Spies and Other Pigeons, authored by Associate Professor Muhammad Kavesh, Director of the ANU South Asia Research Institute.",
+   "category": "Arts"
+  },
+  {
+   "url": "https://www.anu.edu.au/events/explore-postgraduate-study-at-cass",
+   "title": "Explore Postgraduate Study at CASS",
+   "date": "2026-11-10",
+   "time": "17:00",
+   "endDate": "2026-11-10",
+   "endTime": "17:50",
+   "location": "Join the virtual session",
+   "summary": "Tuesday 10 November | 5:00–5:50 pm AEDT | Online | Thinking about postgraduate study at ANU? Join us to explore your options, hear from academics and students, and get your questions answered. Whether you’re exploring postgraduate study, holding a CASS offer, or a current ANU…",
+   "category": "Career"
+  },
+  {
+   "url": "https://www.anu.edu.au/events/empirical-extinction-risk",
+   "title": "Empirical extinction risk",
+   "date": "2026-11-10",
+   "time": "18:00",
+   "endDate": "2026-11-10",
+   "endTime": "19:00",
+   "location": "Molonglo Theatre, Crawford School of Public Policy, ANU Acton, ACT, 2601",
+   "summary": "How do we measure the risk of species extinction, and how can this information guide environmental policy and investment decisions? For over four decades, the IUCN has assessed the conservation status of thousands of species, categorising them from Least Concern to Critically…",
+   "category": "Academic"
+  },
+  {
+   "url": "https://www.anu.edu.au/events/cybernetics-showcase",
+   "title": "Cybernetics Showcase",
+   "date": "2026-11-11",
+   "time": "11:00",
+   "endDate": "2026-11-11",
+   "endTime": "17:00",
+   "location": "Level 2 and 3 Birch Building Acton, ACT, 2601",
+   "summary": "Join us for the Cybernetics Showcase, a day of discovery, experimentation and celebration as we open the doors of the ANU School of Cybernetics. Explore interactive prototypes, emerging research, creative technologies and unexpected encounters with artificial intelligence. Meet…",
+   "category": "Academic"
+  },
+  {
+   "url": "https://www.anu.edu.au/events/pure-water-perspectives-on-agent-orange-and-ecological-violence",
+   "title": "‘Pure Water’: Perspectives on Agent Orange and Ecological Violence",
+   "date": "2026-11-12",
+   "time": "10:00",
+   "endDate": "2026-11-13",
+   "endTime": "16:00",
+   "location": "Hedley Bull Atrium and Lecture Theatre 1 Acton, ACT, 2601",
+   "summary": "Pure Water is an exhibition and roundtable program hosted by the Coral Bell School of Asia Pacific Affairs on 12–13 November 2026. It marks 65 years since the United States began spraying Agent Orange and other herbicides in Vietnam in 1961, during the Second Indochina War.…",
+   "category": "Arts"
+  },
+  {
+   "url": "https://www.anu.edu.au/events/re-open-the-social-sciences",
+   "title": "Re-open the social sciences?",
+   "date": "2026-11-17",
+   "time": "11:00",
+   "endDate": "2026-11-17",
+   "endTime": "12:30",
+   "location": "Boardroom 2.54, Hedley Bull Building Acton, ACT, 2601",
+   "summary": "A 30th anniversary roundtable on the Open the Social Sciences report. What is the future of interdisciplinary research? Is it limited or liberated by institutional structures and processes?",
+   "category": "Academic"
+  },
+  {
+   "url": "https://www.anu.edu.au/events/international-law-before-the-high-court-how-the-high-court-has-responded-and-contributed-to-issues",
+   "title": "International law before the High Court: How the High Court has responded and contributed to issues ",
+   "date": "2026-11-17",
+   "time": "17:30",
+   "endDate": "2026-11-17",
+   "endTime": "19:00",
+   "location": "ANU Law School Moot Court, 5 Fellows Rd Acton, ACT, 2601",
+   "summary": "Hosted by the Centre for International and Public Law at the ANU Law School.",
+   "category": "Academic"
+  },
+  {
+   "url": "https://www.anu.edu.au/events/meet-the-author-john-birmingham",
+   "title": "Meet the author - John Birmingham",
+   "date": "2026-11-18",
+   "time": "18:00",
+   "endDate": "2026-11-18",
+   "endTime": "19:00",
+   "location": "Tangney Rd Cinema, Cultural Centre Kambri (ANU Building 153) Acton, ACT, 2601",
+   "summary": "John Birmingham will be in conversation with Mark Kenny on his new Quarterly Essay, Another Country: The rise and rise of One Nation.",
+   "category": "Arts"
+  },
+  {
+   "url": "https://www.anu.edu.au/events/science-art-film-minority-report-0",
+   "title": "Science. Art. Film.: Minority Report",
+   "date": "2026-11-18",
+   "time": "18:00",
+   "endDate": "2026-11-18",
+   "endTime": "21:00",
+   "location": "1 McCoy Circuit Acton, ACT, 2601",
+   "summary": "The Science. Art. Film. series uncovers the wacky, weird and wonderful facets of science and art in films, with post-screening discussions featuring artists and ANU scholars. In collaboration with ANU and the Australian National Centre for the Public Awareness of Science.",
+   "category": "Arts"
+  },
+  {
+   "url": "https://www.anu.edu.au/events/china-update-2026-chinas-decarbonisation-strategy-objectives-and-the-pathway-to-a-low-carbon",
+   "title": "China Update 2026 – China’s decarbonisation: strategy, objectives and the pathway to a low-carbon ec",
+   "date": "2026-11-19",
+   "time": "09:00",
+   "endDate": "2026-11-20",
+   "endTime": "17:35",
+   "location": "Molonglo Theatre, Crawford School of Public Policy, ANU Acton, ACT, 2601",
+   "summary": "The program is now available. View the full program here for details on the sessions and speakers.",
+   "category": "Academic"
+  },
+  {
+   "url": "https://www.anu.edu.au/events/across-the-plateau-film-screening",
+   "title": "Across the Plateau – Film Screening",
+   "date": "2026-11-21",
+   "time": "17:00",
+   "endDate": "2026-11-21",
+   "endTime": "18:45",
+   "location": "Kambri Cinema Lowitja O’Donoghue Cultural Centre (Building 153) Acton, ACT, 2600",
+   "summary": "This thrilling documentary chronicles a group of determined long-distance cyclists from Guangzhou, China attempting an unprecedented physical feat: traversing the vast Tibetan Plateau entirely on pushbikes. Spanning more than 3,100 kilometres, this monumental Himalayan…",
+   "category": "Arts"
+  },
+  {
+   "url": "https://www.anu.edu.au/events/south-asia-forum",
+   "title": "South Asia Forum",
+   "date": "2026-11-23",
+   "time": "09:00",
+   "endDate": "2026-11-23",
+   "endTime": "18:00",
+   "location": "Molongo Theatre, Crawford School of Public Policy, ANU (Online) 132 Lennox Crossing Acton, ACT, 2601",
+   "summary": "The South Asia Forum and K. R. Narayanan Oration 2026, organised by the Australia South Asia Research Centre (ASARC) at The Australian National University, will bring together leading academics, policymakers and practitioners from Australia and South Asia for a full day of…",
+   "category": "Academic"
+  },
+  {
+   "url": "https://www.anu.edu.au/events/caste-in-australia-lived-experiences-and-the-struggle-for-dignity-equality-and-respect",
+   "title": "Caste in Australia: Lived experiences and the struggle for dignity, equality and respect",
+   "date": "2026-11-23",
+   "time": "14:00",
+   "endDate": "2026-11-23",
+   "endTime": "16:00",
+   "location": "Lecture Theatre 2 (HB2), Hedley Bull Building, 130 Garran Rd ACTON, ACT, 2601",
+   "summary": "This panel brings together researchers and community advocates to examine how caste operates within the Australian context.",
+   "category": "Academic"
+  },
+  {
+   "url": "https://www.anu.edu.au/events/meet-the-author-kirsten-banks",
+   "title": "Meet the author - Kirsten Banks",
+   "date": "2026-11-23",
+   "time": "18:00",
+   "endDate": "2026-11-23",
+   "endTime": "19:00",
+   "location": "Cinema, 153 Tangney Road Acton Canberra, ACT, 2601",
+   "summary": "Astrophysicist and Wiradjuri woman, Dr Kirsten Banks will be in conversation with Brian Schmidt on her new book Lost in Space: Curiously Cosmic Stories, a compelling journey through our spectacular universe with a renowned science communicator and a fresh dynamic voice who…",
+   "category": "Arts"
+  },
+  {
+   "url": "https://www.anu.edu.au/events/meet-the-author-anna-downes",
+   "title": "Meet the author - Anna Downes",
+   "date": "2026-11-25",
+   "time": "18:00",
+   "endDate": "2026-11-25",
+   "endTime": "19:00",
+   "location": "Cinema. Lowitja O’Donoghue Cultural Centre. ANU 153 Tangney Road Canberra, ACT, 2601",
+   "summary": "International bestselling author, Anna Downes will be in conversation with Chris Hammer on her new book Dark Days Hotel, a deliciously dark and twisty thriller about health, wealth and our dangerous obsession with the two.",
+   "category": "Arts"
+  },
+  {
+   "url": "https://www.anu.edu.au/events/meet-the-author-waleed-aly",
+   "title": "Meet the author - Waleed Aly",
+   "date": "2026-11-30",
+   "time": "18:00",
+   "endDate": "2026-11-30",
+   "endTime": "19:00",
+   "location": "Tangney Rd Cinema, Cultural Centre Kambri (ANU Building 153) Acton, ACT, 2601",
+   "summary": "Walkley award winner, Waleed Aly , will be in conversation with Frank Bongiorno on Waleed’s new book Reasoning with Chaos. Dispatches from disorder, a guide to finding sense in these times of uncertainty from one of Australia’s greatest communicators and thinkers.",
+   "category": "Arts"
+  },
+  {
+   "url": "https://www.anu.edu.au/events/the-us-iran-conflict-and-its-socio-economic-and-political-consequences-for-asia-and-the-pacific",
+   "title": "The US-Iran conflict and its socio-economic and political consequences for Asia and the Pacific - Wh",
+   "date": "2026-12-02",
+   "time": "09:00",
+   "endDate": "2026-12-02",
+   "endTime": "10:30",
+   "location": "Join the virtual session",
+   "summary": "As part of the Public Policy Frontiers series, Professor Jeffrey Sachs of Columbia University will deliver a talk on the US-Iran conflict and its socio-economic and political consequences for Asia and the Pacific - What the future holds.",
+   "category": "Academic"
+  },
+  {
+   "url": "https://www.anu.edu.au/events/silenced-film-screening",
+   "title": "Silenced – Film Screening",
+   "date": "2026-12-10",
+   "time": "19:30",
+   "endDate": "2026-12-10",
+   "endTime": "21:15",
+   "location": "Kambri Cinema Lowitja O’Donoghue Cultural Centre (Building 153) Acton, ACT, 2600",
+   "summary": "In the wake of the global #MeToo movement, prominent international human rights lawyer – and ANU alumna – Jennifer Robinson leads a relentless legal battle against the weaponisation of defamation laws designed to silence victim-survivors of sexual violence.",
+   "category": "Arts"
+  }
+ ]
+}

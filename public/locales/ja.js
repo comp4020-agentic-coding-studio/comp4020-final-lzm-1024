@@ -1,5 +1,10 @@
 // Static interface catalogue. User-authored content is not translated.
 export default {
+  "Calendar listing": "\u516c\u5f0f\u30ab\u30ec\u30f3\u30c0\u30fc",
+  "Listed from {0}": "{0}\u3088\u308a",
+  "SOURCE": "\u60c5\u5831\u6e90",
+  "Retrieved {0}": "{0} \u306b\u53d6\u5f97",
+  "Listed from a public university calendar. CampusWall and its students did not organise this event: check the official page for changes, cost and registration.": "\u5927\u5b66\u306e\u516c\u958b\u30a4\u30d9\u30f3\u30c8\u30ab\u30ec\u30f3\u30c0\u30fc\u304b\u3089\u63b2\u8f09\u3057\u3066\u3044\u307e\u3059\u3002CampusWall \u3068\u305d\u306e\u5b66\u751f\u306f\u3053\u306e\u30a4\u30d9\u30f3\u30c8\u3092\u4e3b\u50ac\u3057\u3066\u3044\u307e\u305b\u3093\u3002\u5909\u66f4\u3001\u8cbb\u7528\u3001\u7533\u3057\u8fbc\u307f\u306f\u516c\u5f0f\u30da\u30fc\u30b8\u3092\u3054\u78ba\u8a8d\u304f\u3060\u3055\u3044\u3002",
   "One vote per person per video.": "1\u672c\u306e\u52d5\u753b\u306b\u3064\u304d1\u4eba1\u7968\u3067\u3059\u3002",
   "ROUND {0} / {1} \u00b7 GUESSER": "\u30e9\u30a6\u30f3\u30c9 {0}/{1} \u00b7 \u56de\u7b54\u8005",
   "ROUND {0} / {1} \u00b7 ARTIST": "\u30e9\u30a6\u30f3\u30c9 {0}/{1} \u00b7 \u63cf\u304d\u624b",

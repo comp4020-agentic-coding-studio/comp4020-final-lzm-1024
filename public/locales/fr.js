@@ -1,5 +1,10 @@
 // Static interface catalogue. User-authored content is not translated.
 export default {
+  "Calendar listing": "Agenda officiel",
+  "Listed from {0}": "Depuis {0}",
+  "SOURCE": "SOURCE",
+  "Retrieved {0}": "R\u00e9cup\u00e9r\u00e9 le {0}",
+  "Listed from a public university calendar. CampusWall and its students did not organise this event: check the official page for changes, cost and registration.": "Repris d\u2019un agenda public de l\u2019universit\u00e9. CampusWall et ses \u00e9tudiants n\u2019organisent pas cet \u00e9v\u00e9nement : consultez la page officielle pour les changements, le prix et l\u2019inscription.",
   "One vote per person per video.": "Un vote par personne et par vid\u00e9o.",
   "ROUND {0} / {1} \u00b7 GUESSER": "MANCHE {0} / {1} \u00b7 DEVINE",
   "ROUND {0} / {1} \u00b7 ARTIST": "MANCHE {0} / {1} \u00b7 ARTISTE",

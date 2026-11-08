@@ -72,7 +72,7 @@ test('dates follow the interface language, and the test-collection label can be 
     document.documentElement.lang='en-AU';assert.equal(dateLocale(),'en-AU');assert.equal(formatEventDate('2026-11-15'),'15 Nov');
   }finally{delete globalThis.document;dom.window.close();}
   for(const file of ['app.js','chat.js','messages.js','profile.js','watch.js','community.js','event-utils.js'])assert.doesNotMatch(read('public/'+file),/'en-AU'/,file);
-  assert.ok(app.includes('<div class="card-author${p.isTest?\' card-author-test\':\'\'}">'));assert.ok(read('public/i18n.js').includes('.card-author:not(.card-author-test)'));
+  assert.ok(app.includes(`<div class="card-author\${p.isTest?' card-author-test':p.imported?' card-author-imported':''}">`));assert.ok(read('public/i18n.js').includes('.card-author:not(.card-author-test):not(.card-author-imported)'));
 });
 
 test('every new label is translated in all four catalogues',async()=>{

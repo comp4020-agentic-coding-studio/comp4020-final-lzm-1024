@@ -3,6 +3,7 @@ import {join} from 'node:path';
 import {universities} from './campus.mjs';
 import {generatedUsername} from './messaging.mjs';
 import {seedPhotoGallery} from './photo-gallery.mjs';
+import {seedCampusEvents} from './campus-events.mjs';
 
 // Keep legacy imports and additive upgrades isolated from request handling.
 // Only the photo gallery seeds fresh installs; existing poster IDs stay intact.
@@ -39,5 +40,6 @@ export function initializeDatabase(db,dataDir,queries,now){
     if(version<index+2)db.exec(readFileSync(new URL(`./migrations/${name}.sql`,import.meta.url),'utf8'));
   }
   seedPhotoGallery(db);
+  seedCampusEvents(db);
   for(const account of all("SELECT id,name FROM users WHERE username IS NULL AND passwordHash<>'!disabled'"))run('UPDATE users SET username=? WHERE id=?',generatedUsername(account.name,account.id,get),account.id);
 }

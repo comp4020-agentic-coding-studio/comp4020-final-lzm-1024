@@ -115,3 +115,4 @@
 @keyframes robot-sway{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}
 @keyframes robot-wag{0%,100%{transform:rotate(-14deg)}50%{transform:rotate(20deg)}}
 @keyframes robot-flop{0%,100%{transform:rotate(0)}50%{transform:rotate(-14deg)}}
+.imported-note{border-left:3px solid var(--accent,var(--green));background:var(--accent-soft,#eef1e6);padding:10px 14px;border-radius:0 6px 6px 0;font-size:13px;margin:0 0 8px}

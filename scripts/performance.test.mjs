@@ -120,7 +120,7 @@ test('compression and conditional static requests preserve account boundaries',{
       assert.equal(head.status,200);assert.equal(head.headers.get('content-length'),get.headers.get('content-length'));assert.equal(head.headers.get('etag'),get.headers.get('etag'));assert.equal((await head.arrayBuffer()).byteLength,0);await get.arrayBuffer();
     });
     await t.test('streamed photo bytes match the file and can be conditionally reused',async()=>{
-      const posters=await(await request('/api/posters?university=anu')).json(),path=posters[0].heroImageUrl;
+      const posters=await(await request('/api/posters?university=anu')).json(),path=posters.find(p=>p.heroImageUrl).heroImageUrl;
       const res=await request(path),bytes=Buffer.from(await res.arrayBuffer());assert.deepEqual(bytes,readFileSync(join('public',path.slice(1))));assert.equal(res.headers.get('cache-control'),'public, max-age=86400');
       assert.equal((await request(path,{'if-none-match':res.headers.get('etag')})).status,304);
     });

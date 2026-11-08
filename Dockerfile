@@ -18,7 +18,7 @@ COPY campus.mjs calendar.mjs ./
 COPY clubs.mjs ./
 COPY blocks.mjs moderation.mjs account-security.mjs backups.mjs message-files.mjs messaging.mjs profiles.mjs watch.mjs community.mjs voice-calls.mjs translation.mjs ./
 COPY games.mjs game-engine.mjs ./
-COPY photo-gallery.mjs ./
+COPY photo-gallery.mjs campus-events.mjs ./
 COPY database.mjs poster-store.mjs public-assets.mjs initialize-database.mjs observability.mjs ./
 COPY data/ ./data/
 COPY migrations/ ./migrations/
