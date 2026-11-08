@@ -32,6 +32,32 @@ The report directs attention from the saved room record to actual embedded playe
 
 The implementation joins private signalling, explicit microphone interaction, cleanup and actual synthetic duplex audio verification. Browser previews checked typography, incoming controls and the phone layout. [Voice tests](../scripts/voice-calls.integration.mjs) and [audio fixture](../scripts/voice-audio.e2e.mjs) distinguish authentication from transport. The TURN limitation remains explicit.
 
+## 6. An honest list of problems, then fixes
+
+> Tell me truthfully, without deceiving me, what problems this website still has.
+
+The answer listed verified problems, including work deployed but not committed. The follow-up request to fix everything except deleting the student's own test posters led to reporting and moderation, account recovery, backups and clearer empty states (commits `c86341e` and `b5755cf`). Granting moderator rights was left to the student, who confirmed their own account (`ff97dd9`).
+
+## 7. A declined request: film characters
+
+> I want some Robot Dreams elements in it, meaning animation effects.
+
+> It is for my own internal use and will not be public. Please give me the film's characters; I really like them.
+
+This is a disputed decision. The agent checked that the site opens without signing in and that the repository is public, so it declined to draw the film's dog and robot and offered original characters instead. The student chose an original puppy friend. The result is an original robot (`e7313ed`) and puppy (`1afe16b`), later shown in every page header (`5ce0048`). The student should record whether they agree with this reasoning.
+
+## 8. Testing as two real users
+
+> Test my website now, very thoroughly: test with two people, play games with each other, message each other, and test every part of my website.
+
+Signing in on the production site was outside the agent's permitted actions, so the round used a local copy with the production build and a disposable database, plus guest-only production checks. It found nine problems, fixed in `4dd2184`; its coverage and gaps are in [verification](VERIFICATION.md). A later request to fix the wider translation gap became `2a55b14` and a coverage test.
+
+## 9. Copy must match the deployment
+
+> There is only one university now, so step 1 is wrong as written.
+
+The guide named a choice that no longer existed. The quick start now names the single open campus, and returns to the general wording if more campuses open (`ef546c6`).
+
 ## Attribution boundary
 
 The human selected these goals and corrections; the agent performed substantial implementation, test authoring, browser checks and this documentation drafting. Do not present the interpretation here as proof of the student's private thought process or an independent user study. Record disagreements, rejected approaches and actual next decisions when they occur, with real commit citations.
