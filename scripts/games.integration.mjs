@@ -72,6 +72,29 @@ test('real two-player campus games',{timeout:45000},async t=>{
     await t.test('gomoku, connect four, reversi and chess accept legal moves with authoritative boards',async()=>{
       for(const [game,action,verify] of [['gomoku',{index:112},s=>s.board[112]===1],['connect4',{column:3},s=>s.board[38]===1],['reversi',{index:19},s=>s.board[27]===1],['chess',{from:'e2',to:'e4'},s=>s.board[36]?.type==='p'&&s.history[0]==='e4']]){let r=await playing(await create(game));r=await op(r,'move',a,action);assert.ok(verify(r.state),game);assert.equal(r.state.turn,1);if(game==='chess')persisted=r;else await op(r,'leave',a);}
     });
+    await t.test('the host invites someone from the games room: seat held, live notice, message only on request',async()=>{
+      let r=await create('gomoku');
+      assert.equal((await req('/api/games/online')).status,401,'guests cannot see who is playing');
+      const lobby=await socket('games=anu',b),social=await socket('social=1',b);await wait(lobby,'games:list');
+      const online=(await req('/api/games/online','GET',null,a)).data.users;
+      assert.ok(online.some(p=>p.id===b.id),'Bob is in the games area');assert.ok(!online.some(p=>p.id===a.id||p.id===foreign.id),'never yourself or another campus');assert.ok(online.every(p=>!p.email&&Object.keys(p).sort().join()==='id,name,playing,username'));
+      assert.equal((await req(`/api/games/rooms/${r.id}/invite`,'POST',{...input(r),userId:foreign.id},a)).status,400,'only your own university');
+      await op(r,'invite',b,undefined,403);
+      const body={...input(r),userId:b.id,message:false},first=await req(`/api/games/rooms/${r.id}/invite`,'POST',body,a);assert.equal(first.status,200,JSON.stringify(first.data));r=first.data.room;
+      assert.equal(r.invitee.id,b.id);assert.equal((await req(`/api/games/rooms/${r.id}/invite`,'POST',body,a)).status,200,'a retried invitation is deduplicated');
+      const live=await wait(social,'game:invite');assert.equal(live.roomId,r.id);assert.equal(live.host.id,a.id);assert.equal(live.gameName,'Gomoku');
+      assert.ok((await req('/api/community/notifications','GET',null,b)).data.notifications.some(n=>n.kind==='game'&&n.href===`/games/${r.id}`));
+      const store=new DatabaseSync(join(dir,'campuswall.sqlite')),dms=()=>store.prepare("SELECT COUNT(*) n FROM private_messages WHERE authorId=? AND clientId LIKE ?").get(a.id,r.id+'%').n;
+      assert.equal(dms(),0,'no message unless the host asks');
+      assert.equal((await req('/api/games/rooms/'+r.id,'GET',null,third)).status,404,'the held seat is hidden from others');
+      assert.ok(!(await req('/api/games/rooms','GET',null,third)).data.rooms.some(x=>x.id===r.id));
+      r=(await req(`/api/games/rooms/${r.id}/invite`,'POST',{...input(r),userId:third.id,message:true},a)).data.room;assert.equal(r.invitee.id,third.id,'inviting someone else moves the held seat');
+      assert.equal(dms(),1,'asked for a message: one is sent');store.close();
+      assert.equal((await req('/api/games/rooms/'+r.id,'GET',null,b)).status,404,'the earlier invitee no longer holds the seat');
+      r=await op(r,'join',third);assert.equal(r.players[1].id,third.id);
+      assert.equal((await req(`/api/games/rooms/${r.id}/invite`,'POST',{...input(r),userId:b.id},a)).status,400,'no invitations once the seat is taken');
+      await op(r,'leave',a);lobby.close();social.close();
+    });
     await t.test('rooms and exact board history persist across restart; logout closes private live access',async()=>{
       for(const ws of clients)ws.close();await stop();await start();let r=(await req('/api/games/rooms/'+persisted.id,'GET',null,a)).data.room;assert.equal(r.status,'playing');assert.deepEqual(r.state.history,['e4']);assert.equal(r.state.board[36].type,'p');const ws=await socket('game='+r.id,b);await wait(ws,'game:state');const closed=once(ws,'close');await req('/api/auth/logout','POST',{},b);r=await op(r,'move',b,{from:'e7',to:'e5'},401);persisted=(await req('/api/games/rooms/'+persisted.id,'GET',null,a)).data.room;await op(persisted,'leave',a);assert.equal((await closed)[0],4001);assert.equal(await rejectSocket('games=anu',b),401);const store=new DatabaseSync(join(dir,'campuswall.sqlite'));assert.equal(store.prepare('PRAGMA user_version').get().user_version,19);store.close();
     });

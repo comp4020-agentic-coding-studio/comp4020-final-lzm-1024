@@ -4,7 +4,7 @@ import {formatCampusDateTime} from './event-utils.js';
 import {escapeHtml as esc,loadStylesheet,safeUrl,dateLocale} from './ui-utils.js';
 import {gameCatalog} from './game-catalog.js';
 // Readable, translatable names for the short ids the server stores.
-const kindLabels={friend:'Friends',message:'New message',group:'Group chat',event:'Event update',reminder:'Event reminder',club:'Club update',team:'Team update',screening:'Screening',profile:'Profile note',moderation:'Moderation',comment:'New comment',collaboration:'Poster invitation'};
+const kindLabels={game:'Game invitation',friend:'Friends',message:'New message',group:'Group chat',event:'Event update',reminder:'Event reminder',club:'Club update',team:'Team update',screening:'Screening',profile:'Profile note',moderation:'Moderation',comment:'New comment',collaboration:'Poster invitation'};
 const groupLabels={manual:'Friends group',event:'Event chat',team:'Team chat'};
 const gameName=id=>gameCatalog.find(g=>g.id===id)?.name||id;
 const memberCount=n=>n===1?'1 member':`${n} members`;
@@ -17,11 +17,21 @@ const empty=(title,copy='')=>`<div class="community-empty"><span>✳</span><h2>$
 const person=(p,actions='')=>`<div class="community-person">${avatar(p)}<div><strong data-i18n-ignore>${esc(p.name||p.author)}</strong><small>@${esc(p.username||'campus member')}</small></div>${actions}</div>`;
 const eventCard=p=>`<a class="community-event" href="${esc(p.href||`/${p.universityId}/posters/${p.slug}`)}" data-nav>${p.heroImageUrl?`<img src="${esc(p.heroImageUrl)}" alt="" loading="lazy">`:'<span class="community-event-art">✳</span>'}<div><small>${esc(p.category||'Campus event')}${p.isTest?' · TEST EVENT':''}</small><h3 data-i18n-ignore>${esc(p.title)}</h3><p>${esc(p.date||'')} ${esc(p.time||'')} · ${esc(p.location||'')}</p></div><span>↗</span></a>`;
 let headerState=null,leafletPromise;
+// A live game invitation on any page: join now or later from Notifications.
+let inviteTimer;
+function gameInvite({roomId,gameName,host}){
+ if(!/^[a-f0-9-]{36}$/.test(roomId||'')||location.pathname==='/games/'+roomId)return;
+ document.querySelector('.game-invite-toast')?.remove();clearTimeout(inviteTimer);
+ const card=document.createElement('div');card.className='game-invite-toast';card.setAttribute('role','alert');
+ card.innerHTML=`<p><strong data-i18n-ignore>${esc(host?.name||'A campus friend')}</strong> <span>invited you to play</span> <strong>${esc(gameName||'a game')}</strong></p><div><a class="button primary" href="/games/${roomId}" data-nav>Join ↗</a><button type="button">Not now</button></div>`;
+ const close=()=>{clearTimeout(inviteTimer);card.remove();};card.querySelector('button').onclick=close;card.querySelector('a').addEventListener('click',()=>setTimeout(close));
+ document.body.append(card);inviteTimer=setTimeout(close,60000);
+}
 export function mountCommunityHeader({user,api,onAuthExpired}){
  if(headerState?.id===user?.id){headerState?.refresh();return;}headerState?.destroy();headerState=null;if(!user)return;
  let active=true,socket,retry;const refresh=async()=>{try{const data=await api('/api/community/notifications');if(!active)return;const badge=document.querySelector('#community-unread');if(badge){badge.textContent=data.unread?String(Math.min(data.unread,99)):'';badge.hidden=!data.unread;}const bell=document.querySelector('#community-bell');bell?.setAttribute('aria-label',`Notifications${data.unread?' · '+data.unread+' unread':''}`);}catch(e){if(active&&e.status===401)onAuthExpired?.();}};
- const connect=()=>{if(!active)return;socket=new WebSocket(`${location.protocol==='https:'?'wss:':'ws:'}//${location.host}/ws?social=1&device=${voiceDevice}`);socket.onopen=()=>{window.dispatchEvent(new CustomEvent('campus:community',{detail:{type:'social:connected'}}));refresh();};socket.onmessage=e=>{if(!active)return;const value=JSON.parse(e.data);if(value.type==='notification:changed'||value.type==='community:changed')refresh();window.dispatchEvent(new CustomEvent('campus:community',{detail:value}));};socket.onclose=e=>{window.dispatchEvent(new CustomEvent('campus:community',{detail:{type:'social:disconnected'}}));if(!active)return;if(e.code===4001){onAuthExpired?.();return;}retry=setTimeout(connect,2000);};socket.onerror=()=>socket.close();};
- const visibility=()=>{if(!document.hidden)refresh();};document.addEventListener('visibilitychange',visibility);connect();headerState={id:user.id,refresh,destroy(){active=false;clearTimeout(retry);socket?.close();document.removeEventListener('visibilitychange',visibility);}};
+ const connect=()=>{if(!active)return;socket=new WebSocket(`${location.protocol==='https:'?'wss:':'ws:'}//${location.host}/ws?social=1&device=${voiceDevice}`);socket.onopen=()=>{window.dispatchEvent(new CustomEvent('campus:community',{detail:{type:'social:connected'}}));refresh();};socket.onmessage=e=>{if(!active)return;const value=JSON.parse(e.data);if(value.type==='notification:changed'||value.type==='community:changed')refresh();if(value.type==='game:invite')gameInvite(value);window.dispatchEvent(new CustomEvent('campus:community',{detail:value}));};socket.onclose=e=>{window.dispatchEvent(new CustomEvent('campus:community',{detail:{type:'social:disconnected'}}));if(!active)return;if(e.code===4001){onAuthExpired?.();return;}retry=setTimeout(connect,2000);};socket.onerror=()=>socket.close();};
+ const visibility=()=>{if(!document.hidden)refresh();};document.addEventListener('visibilitychange',visibility);connect();headerState={id:user.id,refresh,destroy(){active=false;document.querySelector('.game-invite-toast')?.remove();clearTimeout(retry);socket?.close();document.removeEventListener('visibilitychange',visibility);}};
 }
 async function leaflet(){await loadStylesheet('/vendor/leaflet.css');leafletPromise||=new Promise((resolve,reject)=>{if(window.L)return resolve(window.L);const script=document.createElement('script');script.src='/vendor/leaflet.js';script.onload=()=>resolve(window.L);script.onerror=()=>{leafletPromise=null;reject(Error('Map could not load. Please try again.'));};document.head.append(script);});return leafletPromise;}
 

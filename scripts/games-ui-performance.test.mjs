@@ -25,7 +25,8 @@ test('game snapshots preserve focused controls, avoid duplicate HTTP and suspend
     const ready=root.querySelector('[data-operation=ready]'),hud=root.querySelector('.arena-hud-values>div'),player=root.querySelector('.game-player');
     ready.focus();
     for(let i=0;i<20;i++)Socket.instance.onmessage({data:JSON.stringify({type:'game:state',room})});
-    assert.equal(requests.length,1,'socket opening does not refetch the HTTP snapshot');
+    assert.equal(requests.filter(p=>p.startsWith('/api/games/rooms')).length,1,'socket opening does not refetch the HTTP snapshot');
+    assert.equal(requests.filter(p=>p==='/api/games/online').length,1,'the host invite list loads once, not on every identical snapshot');assert.equal(requests.length,2);
     assert.equal(root.querySelector('[data-operation=ready]'),ready);
     assert.equal(document.activeElement,ready);
     assert.equal(root.querySelector('.arena-hud-values>div'),hud);

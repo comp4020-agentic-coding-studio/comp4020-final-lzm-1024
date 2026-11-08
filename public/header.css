@@ -45,3 +45,6 @@ body:has(.wall-robot) #header .header-buddy{visibility:hidden}
 @media (prefers-reduced-motion:reduce){#header nav>a,#header nav>.nav-more>summary{transition:none}}
 #header .bell-label{display:none}
 [data-route-focus]:focus{outline:none}
+.game-invite-toast{position:fixed;z-index:60;right:16px;bottom:16px;width:min(360px,calc(100vw - 32px));padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:var(--paper);color:var(--ink);box-shadow:0 14px 34px #0003}
+.game-invite-toast p{margin:0 0 12px;font-size:14px;line-height:1.45}.game-invite-toast div{display:flex;gap:10px}.game-invite-toast .button,.game-invite-toast button{min-height:42px}
+@media (prefers-reduced-motion:no-preference){.game-invite-toast{animation:invite-in .3s ease-out}@keyframes invite-in{from{opacity:0;transform:translateY(12px)}}}

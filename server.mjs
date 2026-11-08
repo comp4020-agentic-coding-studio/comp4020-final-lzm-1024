@@ -112,7 +112,7 @@ function broadcastChat(message) {for(const ws of sockets)if(ws.chat&&ws.chatCamp
 let community;
 const blocks=createBlocks({get,all,run,now,fail,json,campusAccount,onBlock:(a,b)=>{const pair=[a,b].sort();run('DELETE FROM friends WHERE user1=? AND user2=?',...pair);community?.friendsChanged(a,b);}});
 const messaging=createMessaging({blocks,dataDir,db,get,all,run,id,now,fail,string,authenticated:campusAccount,body,json,sockets,send,validSocket,campusAccess,notify:(...args)=>community?.notify(...args)});
-const games=createGames({blocks,db,get,all,run,id,now,fail,string,campusAccount,body,json,sockets,send,validSocket,messaging,recordGame:(...args)=>community?.recordGame(...args)});
+const games=createGames({blocks,db,get,all,run,id,now,fail,string,campusAccount,body,json,sockets,send,validSocket,messaging,recordGame:(...args)=>community?.recordGame(...args),notify:(...args)=>community?.notify(...args),emit:(...args)=>community?.emit(...args)});
 function update(p,u,input) {
   editor(p,u);
   if(!Number.isInteger(input.clientVersion)||input.clientVersion<0||input.clientVersion>p.version)fail(400,'Invalid poster version');

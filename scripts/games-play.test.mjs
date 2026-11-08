@@ -44,15 +44,26 @@ test('chess move history numbers each white move, also once older moves scroll a
   });
 });
 
-test('an invitation is sent once per click session and the button confirms it',async()=>{
-  let room={...base,game:'connect4',status:'waiting',ready:[false,false],players:[alice,null],invitee:bob,state:null};const calls=[];
-  await withRoom(room,async(path,method)=>{calls.push(`${method||'GET'} ${path}`);if(path.endsWith('/invite'))room={...room,version:room.version+1};return {room};},async root=>{
-    const button=root.querySelector('[data-operation=invite]');assert.equal(button.textContent,'Send invitation in Messages ↗');
+test('the host invites someone in the games room once, and a message only when asked',async()=>{
+  let room={...base,game:'connect4',status:'waiting',ready:[false,false],players:[alice,null],invitee:null,state:null};const calls=[];
+  await withRoom(room,async(path,method,data)=>{calls.push({path,method:method||'GET',data});if(path==='/api/games/online')return {users:[{...bob,playing:false}]};if(path.endsWith('/invite'))room={...room,version:room.version+1,invitee:bob};return {room};},async root=>{
+    await new Promise(r=>setTimeout(r,0));
+    assert.equal(root.querySelector('[data-operation=invite]'),null,'the old Messages-only button is gone');
+    const panel=root.querySelector('.game-invite-panel');assert.ok(panel,'the host sees the invite panel while the seat is empty');
+    const button=panel.querySelector('.invite-online [data-invite-id="b"]');assert.equal(button.textContent,'Invite');
     button.click();await new Promise(r=>setTimeout(r,0));
-    const sent=root.querySelector('[data-operation=invite]');assert.equal(sent.textContent,'Invitation sent ✓');assert.equal(sent.disabled,true);
+    const invites=calls.filter(c=>c.path.endsWith('/invite'));assert.equal(invites.length,1);
+    assert.equal(invites[0].data.userId,'b');assert.equal(invites[0].data.message,false,'no message unless the host asks for one');
+    const sent=root.querySelector('.game-invite-panel [data-invite-id="b"]');assert.equal(sent.textContent,'Invited ✓');assert.equal(sent.disabled,true);
     sent.click();await new Promise(r=>setTimeout(r,0));
-    assert.equal(calls.filter(c=>c.endsWith('/invite')).length,1);
-    assert.match(root.querySelector('.game-error').textContent,/Invitation sent\. Your friend can open it in Messages\./);
+    assert.equal(calls.filter(c=>c.path.endsWith('/invite')).length,1,'a held seat is not re-sent by a second click');
+    assert.match(root.querySelector('.invite-status').textContent,/Invited Bob/);
+  });
+});
+
+test('guests and seated opponents never see the invite panel',async()=>{
+  await withRoom({...base,game:'connect4',status:'waiting',ready:[false,false],player:1,state:null},async(path)=>path==='/api/games/online'?{users:[]}:{room:{...base,game:'connect4',status:'waiting',ready:[false,false],player:1,state:null}},async root=>{
+    await new Promise(r=>setTimeout(r,0));assert.equal(root.querySelector('.game-invite-panel'),null);
   });
 });
 

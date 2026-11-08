@@ -102,10 +102,11 @@ export function createMessaging({blocks={guard(){},between(){return false;}},dat
     return {duplicate:false,message,conversation:view(c,u),deliver(){broadcast(c,message);notify(c.user1===u.id?c.user2:c.user1,'message',u.name+' shared a file','/messages?conversation='+c.id,'dm:'+messageId);}};
   }
   function inviteGame(u,peerId,roomId,gameName){
-    if(get('SELECT 1 FROM private_messages WHERE authorId=? AND clientId=?',u.id,roomId))return null;
+    // One invitation message per room and invited student.
+    const key=`${roomId}:${peerId}`;if(get('SELECT 1 FROM private_messages WHERE authorId=? AND clientId=?',u.id,key))return null;
     const cView=startConversation(u,peerId),c=member(cView.id,u);
     if(get('SELECT COUNT(*) n FROM private_messages WHERE authorId=? AND createdAt>?',u.id,new Date(Date.now()-60000).toISOString()).n>=30)fail(429,'Please wait before sending another invitation');
-    const messageId=id(),time=now();run('INSERT INTO private_messages (id,conversationId,authorId,clientId,body,createdAt) VALUES (?,?,?,?,?,?)',messageId,c.id,u.id,roomId,`Let’s play ${gameName}! Join my campus game room: /games/${roomId}`,time);run('UPDATE conversations SET updatedAt=?,version=version+1 WHERE id=?',time,c.id);
+    const messageId=id(),time=now();run('INSERT INTO private_messages (id,conversationId,authorId,clientId,body,createdAt) VALUES (?,?,?,?,?,?)',messageId,c.id,u.id,key,`Let’s play ${gameName}! Join my campus game room: /games/${roomId}`,time);run('UPDATE conversations SET updatedAt=?,version=version+1 WHERE id=?',time,c.id);
     return ()=>broadcast(member(c.id,u),messageView(get(`${select} WHERE m.id=?`,messageId)));
   }
   return {handle,list,inviteGame};

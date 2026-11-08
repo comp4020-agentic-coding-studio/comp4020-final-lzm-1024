@@ -31,3 +31,12 @@
 /* Keep decorative work offscreen and in background tabs dormant. */
 .arcade-offscreen .game-card-art,.arcade-offscreen .hero-game-board,.arcade-offscreen .hero-orbit,.arcade-offscreen .waiting-art i,.arcade-hidden *,.arcade-hidden *::before,.arcade-hidden *::after{animation-play-state:paused!important}
 .arcade-offscreen::after{animation-play-state:paused!important}
+.game-invite-panel{margin:6px auto 0;max-width:560px;text-align:left;border:1px solid var(--line);border-radius:16px;padding:18px;background:var(--surface,transparent)}
+.game-invite-panel .invite-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px}
+.game-invite-panel h3{margin:0;font-size:17px}.game-invite-panel h4{margin:14px 0 4px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+.game-invite-panel .invite-message{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;cursor:pointer}.game-invite-panel .invite-message input{width:18px;height:18px}
+.game-invite-panel .invite-status{margin:8px 0 0;font-size:13px;color:var(--accent-readable,var(--green))}.game-invite-panel .invite-status:empty{display:none}
+.game-invite-panel .invite-search{display:grid;gap:6px;margin-top:14px;font-size:12px;font-weight:600}.game-invite-panel .invite-search input{width:100%;border:1px solid var(--line);border-radius:10px;padding:11px 12px;background:transparent;color:inherit;font-size:16px}
+.invite-person{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--line)}.invite-person:last-child{border-bottom:0}
+.invite-person>span{display:grid;min-width:0}.invite-person strong{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.invite-person small{color:var(--muted);font-size:12px}.invite-person em{font-style:normal}
+.invite-person button{flex:none;min-height:40px;padding:8px 16px}
