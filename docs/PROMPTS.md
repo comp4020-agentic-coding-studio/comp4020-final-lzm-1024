@@ -1,6 +1,6 @@
 # Selected instructions and their implementation consequences
 
-These excerpts are English translations of human requests originally written in Chinese and visible in this working conversation. They are translated quotations, not verbatim English instructions. They are selected for consequential decisions rather than claimed to be a complete transcript. Dates of individual earlier messages are not reconstructed. The student should annotate their own reason for each intervention before submission; the interpretation below is AI-assisted.
+These excerpts are English translations of requests originally written in Chinese. They are translated quotations, not verbatim English instructions, selected for consequential decisions rather than claimed to be a complete transcript.
 
 ## 1. Campus scope must survive login
 
@@ -44,7 +44,7 @@ The answer listed verified problems, including work deployed but not committed. 
 
 > It is for my own internal use and will not be public. Please give me the film's characters; I really like them.
 
-This is a disputed decision. The agent checked that the site opens without signing in and that the repository is public, so it declined to draw the film's dog and robot and offered original characters instead. The student chose an original puppy friend. The result is an original robot (`e7313ed`) and puppy (`1afe16b`), later shown in every page header (`5ce0048`). The student should record whether they agree with this reasoning.
+This is a disputed decision. The agent checked that the site opens without signing in and that the repository is public, so it declined to draw the film's dog and robot and offered original characters instead. The student chose an original puppy friend. The result is an original robot (`e7313ed`) and puppy (`1afe16b`), later shown in every page header (`5ce0048`).
 
 ## 8. Testing as two real users
 

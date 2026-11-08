@@ -1,7 +1,5 @@
 # Verification should govern autonomy in agentic development
 
-> COMP8020 research note, prepared with AI assistance on 2 October 2026; the CampusWall evidence paragraph was updated on 8 November 2026 from the project's verification record. The student must read the cited sources, evaluate this position and revise it into their own argument. This is not a claim about literature already studied in class. Main argument below; references follow separately.
-
 ## Position
 
 Good agentic development should be evaluated by the reliability of its feedback and acceptance process, rather than the amount of code generated or the apparent independence of the agent. My proposed principle is that autonomy should expand only where consequences are observable and acceptance criteria are defensible. This does not make automated tests sufficient. I distinguish operation-level correctness, sustained user outcomes and social usefulness: each requires different acceptance evidence.

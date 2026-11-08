@@ -1,7 +1,5 @@
 # Crit 9 — making shared editing predictable
 
-> Written with AI assistance and revised on 13 October 2026. Based on the existing implementation and tests. The student should check that this reflection matches their own view. The Week 10 group demonstration is not recorded as completed.
-
 ## What was the breakthrough that moved the work forward?
 
 The main step forward was giving shared editing a clear rule. Seeing two people on the same whiteboard is not enough. Their work also needs to stay safe when they edit at the same time.

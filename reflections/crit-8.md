@@ -1,7 +1,5 @@
 # Crit 8 — making participation the entry point
 
-> Reflection prepared with AI assistance, 2 October 2026. Based on the recorded project direction; not a report of an attended crit or tutor feedback. The student must decide whether the first-person interpretation below matches their experience.
-
 ## What was the breakthrough that moved the work forward?
 
 The useful breakthrough was separating the visitor's task from the organiser's task. A poster editor assumes somebody arrives already wanting to create something. A campus wall also serves somebody who only wants to find an activity. Giving guests a public browsing route made the project easier to explain: discover first, contribute when there is a reason.

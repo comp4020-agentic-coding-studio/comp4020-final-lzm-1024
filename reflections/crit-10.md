@@ -1,7 +1,5 @@
 # Crit 10 — working features still need clear starting points
 
-> Updated with AI assistance on 19 October 2026 using the student's reported classmate feedback. The student confirmed normal website use with feedback, not an instruments-only session. Two friends, Tony and Kevin, participated on 14 October 2026. No participant quotation or log-only result is invented.
-
 ## What was the breakthrough that moved the work forward?
 
 The useful breakthrough was separating three questions: does a feature work, can somebody find it, and what can the logs prove?

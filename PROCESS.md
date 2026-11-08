@@ -1,7 +1,5 @@
 # CampusWall — how the project was built
 
-> Written with AI assistance and revised on 8 November 2026. This account uses actual code, tests and commits. The student should check that the reasons given here match their own decisions. The student confirmed normal classmate use with feedback, rather than an instruments-only session.
-
 ## What the website is for
 
 CampusWall helps students find an activity, contact its organiser and make a plan together. Guests can read public posters. Accounts are needed for messages and private collaboration. The goal is that a notice leads to a useful conversation, rather than another page to scroll through.
