@@ -1,6 +1,25 @@
 const entities={'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'};
 export const escapeHtml=value=>String(value??'').replace(/[&<>"']/g,character=>entities[character]);
 export const normaliseSearch=value=>String(value).normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase();
+// Dates and times follow the interface language; English stays Australian English.
+const dateLocales={'zh-CN':'zh-CN',es:'es-ES',fr:'fr-FR',ja:'ja-JP'};
+export const dateLocale=()=>dateLocales[globalThis.document?.documentElement?.lang]||'en-AU';
+
+export const blockPrompt={title:'Block this student?',message:'You will not be able to message, call, befriend or invite each other. They will not be told.',confirm:'Block'};
+// A translated replacement for window.confirm, whose prompt cannot be translated or
+// styled. Cancel has focus first; Escape or Cancel resolve false, only the action true.
+export function confirmAction({title,message,confirm,cancel='Cancel'}){
+  return new Promise(resolve=>{
+    const node=document.createElement('dialog');node.className='dialog confirm-dialog';node.setAttribute('aria-labelledby','confirm-action-title');
+    node.innerHTML=`<div class="dialog-heading"><h2 id="confirm-action-title">${escapeHtml(title)}</h2></div><p>${escapeHtml(message)}</p><div class="confirm-actions"><button type="button" data-cancel autofocus>${escapeHtml(cancel)}</button><button type="button" class="button-danger" data-confirm>${escapeHtml(confirm)}</button></div>`;
+    // Buttons answer at once; Escape (or any other close) counts as Cancel.
+    let done=false;const finish=answer=>{if(done)return;done=true;if(node.open)node.close();node.remove();resolve(answer);};
+    node.querySelector('[data-cancel]').onclick=()=>finish(false);
+    node.querySelector('[data-confirm]').onclick=()=>finish(true);
+    node.addEventListener('close',()=>finish(false));
+    document.body.append(node);node.showModal();
+  });
+}
 
 // Load account services only for a signed-in user. A late import must never
 // recreate a service for an account that has already signed out or changed.

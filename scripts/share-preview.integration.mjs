@@ -22,8 +22,8 @@ test('poster pages carry their own link preview, and only once published',{timeo
     for(const [field,value] of Object.entries({date:future,time:'18:30',location:'Kambri Cultural Centre',description:'Bring an instrument or just listen.'})){const r=await req(`/api/drafts/${p.id}/fields`,'PATCH',{field,value,clientVersion:p.version},creator);assert.equal(r.status,200,JSON.stringify(r.data));p=r.data;}
     const page=`/anu/posters/${p.slug}`;
 
-    await t.test('a draft poster page shows only the generic preview',async()=>{
-      const r=await req(page);assert.equal(r.status,200);
+    await t.test('a draft poster page shows only the generic preview, as a 404',async()=>{
+      const r=await req(page);assert.equal(r.status,404,'not published: not found, though the app still explains it');
       assert.equal(meta(r.data,'og:title'),'CampusWall — Your campus, at a glance');assert.ok(!r.data.includes('Jazz'),'no draft content in the HTML');
       assert.equal(meta(r.data,'og:image'),`${site}/icon-512.png`,'site-wide preview image is absolute');
     });

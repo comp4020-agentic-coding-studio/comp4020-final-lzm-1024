@@ -150,6 +150,8 @@ const actionCounts=new Map();
 function throttle(kind,userId,limit,windowMs,message) {if(bump(actionCounts,kind+':'+userId,windowMs)>limit)fail(429,message);}
 function loginLocked(email) {const entry=loginFailures.get(email);return Boolean(entry&&entry.until>=Date.now()&&entry.n>=accountLimit);}
 function session(res,req,u) {req.observedActorId=u.id;const sessionToken=randomBytes(32).toString('hex');run('INSERT INTO sessions VALUES (?,?,?)',hash(sessionToken),u.id,Date.now()+7*86400000);res.setHeader('set-cookie',`campus_session=${sessionToken}; HttpOnly; SameSite=Lax; Path=/; Max-Age=604800${req.headers['x-forwarded-proto']==='https'?'; Secure':''}`);}
+// A poster is found by id, current link or an older link kept in poster_slug_aliases.
+const posterLink='(id=? OR slug=? OR id=(SELECT posterId FROM poster_slug_aliases WHERE slug=?))';
 function publicUrl(req,p) {const origin=process.env.PUBLIC_BASE_URL||`${req.headers['x-forwarded-proto']==='https'?'https':'http'}://${req.headers.host}`;return new URL(`/${p.universityId}/posters/${p.slug}`,origin).href;}
 function readImage(req) {
   const limit=5*1024*1024;
@@ -373,7 +375,7 @@ const server=createServer(async(req,res)=>{
     }
     const pub=path.match(/^\/api\/posters\/([^/]+)(?:\/(comments|save|calendar|qr)(?:\/([a-f0-9-]{36}))?)?$/);
     if(pub) {
-      const p=get("SELECT * FROM posters WHERE (id=? OR slug=?) AND status='PUBLISHED'",pub[1],pub[1])||fail(404,'Poster not found');
+      const p=get(`SELECT * FROM posters WHERE ${posterLink} AND status='PUBLISHED'`,pub[1],pub[1],pub[1])||fail(404,'Poster not found');
       campusAccess(req,p.universityId);
       if(method==='GET'&&!pub[2]){const visitor=user(req);if(visitor&&visitor.id!==p.ownerId)run('INSERT OR IGNORE INTO event_views VALUES (?,?,?)',p.id,visitor.id,now().slice(0,10));return json(res,200,view(p,false,visitor?.id));}
       if(pub[2]==='save'&&(method==='POST'||method==='DELETE')) {
@@ -442,13 +444,15 @@ const server=createServer(async(req,res)=>{
     const campusPage=campusRoute&&new RegExp(`^/${campusRoute}(?:/(?:posters/[^/]+|clubs))?$`).test(path);
     if(!campusPage&&!/^\/(?:index.html|login|guide|choose-campus|watch(?:\/[a-f0-9-]{36})?|people\/[a-f0-9-]{36}|community(?:\/[A-Za-z0-9_%.-]+){0,2}|messages|games(?:\/[a-f0-9-]{36})?|saved|my-posters|account|forgot|moderation|studio\/posters\/[^/]+)?$/.test(path))fail(404,'Page not found');
     // A published poster's page names the poster for link previews, once the campus checks pass.
-    const sharedPoster=campusPage&&path.match(/^\/[^/]+\/posters\/([^/]+)$/);let share;
+    // A poster that is not published there answers 404 (the app still explains it).
+    const sharedPoster=campusPage&&path.match(/^\/[^/]+\/posters\/([^/]+)$/);let share,status=200;
     if(sharedPoster){
       let visible=true;try{campusAccess(req,campusRoute);}catch{visible=false;}
-      const p=visible&&get("SELECT universityId,slug,publicData FROM posters WHERE (id=? OR slug=?) AND universityId=? AND status='PUBLISHED'",sharedPoster[1],sharedPoster[1],campusRoute);
+      const p=visible&&get(`SELECT universityId,slug,publicData FROM posters WHERE ${posterLink} AND universityId=? AND status='PUBLISHED'`,sharedPoster[1],sharedPoster[1],sharedPoster[1],campusRoute);
       if(p){const link=publicUrl(req,p);share=posterShareTags(JSON.parse(p.publicData),link,new URL(link).origin);}
+      else if(visible)status=404;
     }
-    await publicAssets.sendPage(req,res,share);
+    await publicAssets.sendPage(req,res,share,status);
   } catch(error) {if(!res.headersSent)json(res,error.status||500,{error:error.status?error.message:'Unable to complete this request'});}
 });
 const wss=new WebSocketServer({noServer:true,maxPayload:16000});

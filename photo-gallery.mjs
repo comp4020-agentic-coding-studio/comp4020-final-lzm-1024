@@ -33,6 +33,7 @@ export function seedPhotoGallery(db,date=new Date()){
       }
       if(changed)run('UPDATE posters SET content=?,publicData=?,version=version+1,updatedAt=? WHERE id=?',JSON.stringify(draft),JSON.stringify(published),timestamp,row.id);
     }
+    const aliases=!!get("SELECT 1 FROM sqlite_master WHERE type='table' AND name='poster_slug_aliases'");
     const seeded=new Set(all("SELECT json_extract(publicData,'$.photoPoster.seedKey') seedKey FROM posters WHERE ownerId='campus-team' AND json_extract(publicData,'$.photoPoster.seedKey') IS NOT NULL").map(p=>p.seedKey));
     for(const [campus,name] of universities){
       if(!campuses.has(campus))continue;
@@ -45,7 +46,11 @@ export function seedPhotoGallery(db,date=new Date()){
         const content={title:event.title,subtitle:event.subtitle,date:dayAfter(start,index+1),time:event.time,location:`${venue.name} · ${venue.campus}`,description:`${testNotice}\n\n${event.description}`,category:event.category,template:'photo',style:'ink',alignment:'left',heroImageUrl:`/demo-photos/${event.key}.webp`,isTest:true,photoPoster};
         const encoded=JSON.stringify(content);
         const original=index<6?get("SELECT * FROM posters WHERE universityId=? AND ownerId='campus-team' AND status='PUBLISHED' AND json_extract(publicData,'$.title')=? AND json_extract(publicData,'$.description')=? AND COALESCE(json_extract(publicData,'$.heroImageUrl'),'')=''",campus,originals[index],originalDescription):null;
-        if(original)run('UPDATE posters SET content=?,publicData=?,version=version+1,updatedAt=? WHERE id=?',encoded,encoded,timestamp,original.id);
+        if(original){
+          run('UPDATE posters SET content=?,publicData=?,version=version+1,updatedAt=? WHERE id=?',encoded,encoded,timestamp,original.id);
+          // The upgraded sample takes its design's link; the old link stays as an alias (migration 019).
+          if(aliases&&!get('SELECT 1 FROM posters WHERE slug=?',key)){run('INSERT OR IGNORE INTO poster_slug_aliases (slug,posterId,createdAt) VALUES (?,?,?)',original.slug,original.id,timestamp);run('UPDATE posters SET slug=? WHERE id=?',key,original.id);}
+        }
         else run('INSERT OR IGNORE INTO posters (id,ownerId,universityId,slug,status,content,publicData,version,createdAt,updatedAt,publishedAt) VALUES (?,?,?,?,?,?,?,?,?,?,?)',stableId(campus,event.key),'campus-team',campus,key,'PUBLISHED',encoded,encoded,0,timestamp,timestamp,timestamp);
       }
     }

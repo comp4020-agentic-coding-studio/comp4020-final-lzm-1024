@@ -1,6 +1,6 @@
 import {addMessageTranslation} from './message-translation.js';
 import {avatar,refreshAvatars,mountEmoji} from './chat-ui.js';
-import {escapeHtml as escape} from './ui-utils.js';
+import {escapeHtml as escape,dateLocale} from './ui-utils.js';
 import {motionFetch} from './motion.js';
 const drafts=new Map();
 const campusBroadcasts=[
@@ -67,8 +67,8 @@ export function mountChat(root,{user,university,loginPath,onAuthExpired}) {
     for(const message of messages){
       if(known.has(message.id))continue;additions++;
       const article=document.createElement('article');article.className=`chat-message${user?.id===message.authorId?' own':''}`;article.dataset.id=message.id;article.dataset.seq=message.seq;
-      const date=new Date(message.createdAt),time=date.toLocaleTimeString('en-AU',{timeZone:'Australia/Sydney',hour:'2-digit',minute:'2-digit'}),full=date.toLocaleString('en-AU',{timeZone:'Australia/Sydney'});
-      article.innerHTML=`<div class="chat-message-meta">${avatar(message)}<strong>${escape(message.author)}</strong>${user?.id===message.authorId?'<span class="chat-you">you</span>':''}<time datetime="${escape(message.createdAt)}" title="${escape(full)}">${escape(date.toLocaleDateString('en-AU',{timeZone:'Australia/Sydney',day:'numeric',month:'short'}))} · ${escape(time)}</time></div><p translate="no">${escape(message.body)}</p>`;
+      const date=new Date(message.createdAt),time=date.toLocaleTimeString(dateLocale(),{timeZone:'Australia/Sydney',hour:'2-digit',minute:'2-digit'}),full=date.toLocaleString(dateLocale(),{timeZone:'Australia/Sydney'});
+      article.innerHTML=`<div class="chat-message-meta">${avatar(message)}<strong>${escape(message.author)}</strong>${user?.id===message.authorId?'<span class="chat-you">you</span>':''}<time datetime="${escape(message.createdAt)}" title="${escape(full)}">${escape(date.toLocaleDateString(dateLocale(),{timeZone:'Australia/Sydney',day:'numeric',month:'short'}))} · ${escape(time)}</time></div><p translate="no">${escape(message.body)}</p>`;
       if(user)addMessageTranslation(article,{channel:"public",messageId:message.id});
       const next=[...log.querySelectorAll('article')].find(node=>Number(node.dataset.seq)>message.seq);log.insertBefore(article,next||null);
     }

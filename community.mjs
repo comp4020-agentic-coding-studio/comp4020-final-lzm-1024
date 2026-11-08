@@ -7,7 +7,8 @@ import {safeUrl} from './public/ui-utils.js';
 
 export function createCommunity({blocks={guard(){},between(){return false;}},db,get,all,run,id,now,fail,string,campusAccount,campusAccess,body,json,sockets,send,validSocket,watch,posters}){
  const person=userId=>get("SELECT id,name,username,avatarId FROM users WHERE id=? AND passwordHash<>'!disabled'",userId);
- const peer=(userId,u)=>get("SELECT id,name,username,avatarId FROM users WHERE id=? AND universityId=? AND passwordHash<>'!disabled'",userId,u.universityId)||fail(404,'Student not found on your campus');
+ // A missing or malformed id is "not found", never a database error.
+ const peer=(userId,u)=>(typeof userId==='string'&&userId&&get("SELECT id,name,username,avatarId FROM users WHERE id=? AND universityId=? AND passwordHash<>'!disabled'",userId,u.universityId))||fail(404,'Student not found on your campus');
  const text=(value,max,label)=>{const v=string(value,max,label);if(!v)fail(400,'Enter '+label.toLowerCase());return v;};
  const integer=(value,min,max,label)=>{if(!Number.isInteger(value)||value<min||value>max)fail(400,`${label} must be between ${min} and ${max}`);return value;};
  const future=value=>{if(typeof value!=='string'||!Number.isFinite(Date.parse(value))||Date.parse(value)<=Date.now()||Date.parse(value)>Date.now()+366*86400000)fail(400,'Choose a future date within one year');return new Date(value).toISOString();};

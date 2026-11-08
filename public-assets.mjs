@@ -80,13 +80,13 @@ export function createPublicAssets(root=process.cwd(),{builtDir=process.env.PUBL
   const page=baseUrl?withPreview({title:siteTitle,description:siteDescription,tags:previewTags({title:siteTitle,description:siteDescription,url:new URL('/',baseUrl).href,image:new URL('/icon-512.png',baseUrl).href,alt:'CampusWall'})}):shell;
   const readme=textAsset(`<!doctype html><meta charset="utf-8"><meta name="theme-color" content="#f7f6f2"><title>About CampusWall</title><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icon.svg" type="image/svg+xml"><script src="/theme-init.js"></script><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/appearance.css"><main class="readme"><a href="/">← CampusWall</a><pre>${escapeHtml(readFileSync(join(root,'README.md'),'utf8'))}</pre></main>`,'text/html');
   assets.set('/readme',readme);assets.set('/readme/',readme);
-  async function send(req,res,asset,{privatePage=false,photo=false,link}={}){
+  async function send(req,res,asset,{privatePage=false,photo=false,link,status=200}={}){
     const selected=asset.variants?encoding(req.headers['accept-encoding']):null;
     const bytes=asset.variants?.[selected||'identity'];
     const etag=`"${asset.hash}-${selected||'identity'}"`;
     const headers={'content-type':asset.type,'etag':etag,'cache-control':privatePage?'private, no-cache':photo?'public, max-age=86400':'public, no-cache',...(asset.variants?{vary:privatePage?'Accept-Encoding, Cookie':'Accept-Encoding'}:{}),...(selected?{'content-encoding':selected}:{}),...(link?{link}:{})};
-    if(matches(req.headers['if-none-match'],etag)){res.writeHead(304,headers);res.end();return;}
-    res.writeHead(200,{...headers,'content-length':bytes?.length??asset.bytes});
+    if(status===200&&matches(req.headers['if-none-match'],etag)){res.writeHead(304,headers);res.end();return;}
+    res.writeHead(status,{...headers,'content-length':bytes?.length??asset.bytes});
     if(req.method==='HEAD'){res.end();return;}
     if(bytes){res.end(bytes);return;}
     // Photos stay off the JS heap and filesystem reads do not block live chat.
@@ -96,7 +96,7 @@ export function createPublicAssets(root=process.cwd(),{builtDir=process.env.PUBL
     async serve(req,res,path){const asset=assets.get(path)||assets.get(cardPhotoOriginal(path));if(!asset)return false;await send(req,res,asset,{photo:path.startsWith('/demo-photos/')});return true;},
     // `share` is a published poster's preview from posterShareTags; the server passes it
     // only after the visitor's campus checks, and it never contains account data.
-    sendPage:(req,res,share)=>{
+    sendPage:(req,res,share,status=200)=>{
       // Start the public module graph while authentication is still loading.
       // These hints never contain account data and are sent after campus checks.
       const modules=['appearance.js','app.js','chat-ui.js','event-utils.js','email-utils.js','chat.js','canvas-model.js','poster-design.js','photo-posters.js','ui-utils.js','motion.js','i18n.js','message-translation.js'];
@@ -104,7 +104,7 @@ export function createPublicAssets(root=process.cwd(),{builtDir=process.env.PUBL
       const games=path==='/games'||path.startsWith('/games/');
       if(games)modules.push('games.js','game-catalog.js');
       const link=modules.map(name=>`</${name}>; rel=modulepreload`).concat(games?['</games.css>; rel=preload; as=style']:[]).join(', ');
-      return send(req,res,share?withPreview(share):page,{privatePage:true,link});
+      return send(req,res,share?withPreview(share):page,{privatePage:true,link,status});
     }
   };
 }
